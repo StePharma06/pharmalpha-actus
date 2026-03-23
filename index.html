@@ -51,13 +51,11 @@ body {
 }
 .caduceus-bg svg {
   position: absolute;
-  opacity: 0;
-  animation: caduceusFall linear infinite;
 }
 @keyframes caduceusFall {
   0% { transform: translateY(-40px) rotate(0deg); opacity: 0; }
-  5% { opacity: 1; }
-  90% { opacity: 1; }
+  8% { opacity: 0.06; }
+  85% { opacity: 0.06; }
   100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
 }
 
@@ -1488,13 +1486,10 @@ setTimeout(showNewsletter, 8000);
     const wrapper = document.createElement('div');
     wrapper.innerHTML = CADUCEUS_SVG;
     const svg = wrapper.firstChild;
-    const size = 18 + Math.random() * 14;
+    const size = 20 + Math.random() * 16;
     const left = 2 + Math.random() * 96;
-    const duration = 12 + Math.random() * 10;
-    const delay = Math.random() * 2;
-    const opacity = 0.04 + Math.random() * 0.04;
-    svg.style.cssText = 'position:absolute;width:' + size + 'px;height:' + size + 'px;left:' + left + '%;color:#f97316;opacity:0;animation:caduceusFall ' + duration + 's linear ' + delay + 's 1;';
-    svg.style.setProperty('--max-opacity', opacity);
+    const duration = 14 + Math.random() * 10;
+    svg.style.cssText = 'position:absolute;top:-40px;width:' + size + 'px;height:' + size + 'px;left:' + left + '%;color:#f97316;animation:caduceusFall ' + duration + 's linear forwards;';
     container.appendChild(svg);
     svg.addEventListener('animationend', function() {
       svg.remove();
@@ -1502,14 +1497,8 @@ setTimeout(showNewsletter, 8000);
     });
   }
 
-  // Remplacer l'animation CSS opacity par JS pour controler l'opacite max
-  const style = document.createElement('style');
-  style.textContent = '@keyframes caduceusFall { 0% { transform: translateY(-40px) rotate(0deg); opacity: 0; } 5% { opacity: var(--max-opacity, 0.06); } 90% { opacity: var(--max-opacity, 0.06); } 100% { transform: translateY(110vh) rotate(360deg); opacity: 0; } }';
-  document.head.appendChild(style);
-
   setInterval(spawnCaduceus, 3000);
-  // En creer quelques-uns au demarrage avec des delais varies
-  for (let i = 0; i < 4; i++) setTimeout(spawnCaduceus, i * 800);
+  for (let i = 0; i < 4; i++) setTimeout(spawnCaduceus, i * 700);
 })();
 </script>
 </body>
