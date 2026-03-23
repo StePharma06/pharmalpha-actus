@@ -8,17 +8,21 @@ import json
 import os
 import re
 import sys
+import time
+import urllib.request
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import anthropic
 import feedparser
+from openai import OpenAI
 
 
 SCRIPT_DIR = Path(__file__).parent
 ROOT_DIR = SCRIPT_DIR.parent
 INDEX_HTML = ROOT_DIR / "index.html"
 FEEDS_JSON = SCRIPT_DIR / "rss_feeds.json"
+ASSETS_DIR = ROOT_DIR / "assets"
 
 MAX_ARTICLES_TOTAL = 30  # Garder max 30 articles dans la page
 MAX_AGE_DAYS = 7  # Chercher les articles des 7 derniers jours
@@ -138,6 +142,72 @@ Reponds UNIQUEMENT en JSON valide, format :
     return []
 
 
+CAT_STYLE = {
+    "pharma_france": "French pharmacy, blue white red tones",
+    "pharma_monde": "global pharmaceutical, blue tones, world map",
+    "sante": "healthcare, medical, green and white tones",
+    "lsv": "educational, curious, purple and warm tones",
+}
+
+
+def generate_article_image(article_id, titre, categorie):
+    """Generate a DALL-E image for an article. Returns relative path or empty string."""
+    openai_key = os.environ.get("OPENAI_API_KEY", "")
+    if not openai_key:
+        print("    [SKIP] OPENAI_API_KEY non definie")
+        return ""
+
+    ASSETS_DIR.mkdir(exist_ok=True)
+    img_name = f"img_{article_id}.png"
+    img_path = ASSETS_DIR / img_name
+
+    if img_path.exists():
+        return f"assets/{img_name}"
+
+    style_hint = CAT_STYLE.get(categorie, "pharmacy, healthcare")
+    prompt = (
+        f"Editorial illustration for a pharmacy news article titled '{titre}'. "
+        f"Style: {style_hint}. Clean modern digital art, no text, no logos, "
+        f"no watermarks, 16:9 landscape format."
+    )
+
+    try:
+        client = OpenAI(api_key=openai_key)
+        response = client.images.generate(
+            model="dall-e-3",
+            prompt=prompt,
+            size="1792x1024",
+            quality="standard",
+            n=1,
+        )
+        url = response.data[0].url
+        urllib.request.urlretrieve(url, str(img_path))
+        print(f"    [IMG] {img_name} genere")
+        return f"assets/{img_name}"
+    except Exception as e:
+        print(f"    [IMG-ERR] {e}")
+        # Retry once after 65s if rate limited
+        if "429" in str(e):
+            print("    [IMG] Attente 65s (rate limit)...")
+            time.sleep(65)
+            try:
+                client = OpenAI(api_key=openai_key)
+                response = client.images.generate(
+                    model="dall-e-3",
+                    prompt=prompt,
+                    size="1792x1024",
+                    quality="standard",
+                    n=1,
+                )
+                url = response.data[0].url
+                urllib.request.urlretrieve(url, str(img_path))
+                print(f"    [IMG] {img_name} genere (retry)")
+                return f"assets/{img_name}"
+            except Exception as e2:
+                print(f"    [IMG-ERR] Retry echoue: {e2}")
+        return ""
+
+
 def update_index_html(new_articles):
     """Insert new articles into index.html's ARTICLES array."""
     html = INDEX_HTML.read_text(encoding="utf-8")
@@ -179,6 +249,14 @@ def update_index_html(new_articles):
             "badge_label": a.get("badge_label", "Sante"),
         }
 
+        # Generer image DALL-E
+        print(f"  [{i+1}/{len(new_articles)}] {vals['titre'][:50]}...")
+        img_url = generate_article_image(
+            article_id, a.get("titre", ""), vals["categorie"]
+        )
+        if i < len(new_articles) - 1 and img_url:
+            time.sleep(62)  # Rate limit DALL-E: 1 img/min
+
         entry = (
             '  {\n'
             '    id: "' + vals["id"] + '",\n'
@@ -192,7 +270,7 @@ def update_index_html(new_articles):
             '    source_url: "' + vals["source_url"] + '",\n'
             '    tiktok_url: "",\n'
             '    badge_label: "' + vals["badge_label"] + '",\n'
-            '    image_url: ""\n'
+            '    image_url: "' + img_url + '"\n'
             '  }'
         )
         new_js_entries.append(entry)
