@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pharm'Alpha - Actualites Pharma & Sante</title>
 <meta name="description" content="L'essentiel de l'actu pharma, chaque semaine. Par un pharmacien.">
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit" async defer></script>
 <style>
 :root {
   --bg: #ffffff;
@@ -120,6 +120,71 @@ body {
   color: var(--text-muted);
   font-size: 16px;
   margin-top: 4px;
+}
+.hero-nl {
+  margin-top: 16px;
+  max-width: 520px;
+}
+.hero-nl-label {
+  font-size: 13px;
+  color: var(--text-dim);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.hero-nl-label svg { width: 16px; height: 16px; flex-shrink: 0; }
+.hero-nl-row {
+  display: flex;
+  gap: 8px;
+}
+.hero-nl input {
+  flex: 1;
+  padding: 10px 16px;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+  background: var(--white);
+}
+.hero-nl input:focus { border-color: var(--orange); }
+.hero-nl input::placeholder { color: var(--text-dim); }
+.hero-nl button {
+  padding: 10px 20px;
+  border-radius: 100px;
+  border: none;
+  background: var(--orange);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+.hero-nl button:hover { background: var(--orange-hover); }
+.hero-nl button:disabled { opacity: 0.6; cursor: not-allowed; }
+.hero-nl-captcha {
+  margin-top: 8px;
+}
+.hero-nl-msg {
+  font-size: 13px;
+  margin-top: 6px;
+  display: none;
+}
+.hero-nl-msg.success { color: var(--green); display: block; }
+.hero-nl-msg.error { color: #dc2626; display: block; }
+.hero-nl-privacy {
+  font-size: 11px;
+  color: var(--text-dim);
+  margin-top: 6px;
+}
+@media (max-width: 480px) {
+  .hero-nl-row { flex-direction: column; }
+  .hero-nl button { width: 100%; }
+  .hero-nl-captcha { transform: scale(0.85); transform-origin: left; }
 }
 
 /* === FILTERS === */
@@ -745,6 +810,21 @@ body {
 <section class="hero">
   <h1>Actualites <span>Pharma & Sante</span></h1>
   <p>Chaque jour, 5 minutes pour 6 actus et histoires "Le Saviez-Vous" sur la pharmacie et la sante.</p>
+  <div class="hero-nl" id="hero-nl">
+    <p class="hero-nl-label">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,7 12,13 2,7"/></svg>
+      Recois les actus chaque jour par mail :
+    </p>
+    <form onsubmit="submitHeroNL(event)">
+      <div class="hero-nl-row">
+        <input type="email" id="hero-nl-email" placeholder="ton@email.com" required>
+        <button type="submit" id="hero-nl-btn">S'abonner</button>
+      </div>
+      <div class="hero-nl-captcha"><div id="hero-recaptcha"></div></div>
+    </form>
+    <div class="hero-nl-msg" id="hero-nl-msg"></div>
+    <p class="hero-nl-privacy">Pas de spam. Desabonnement en 1 clic.</p>
+  </div>
 </section>
 
 <!-- FILTERS -->
@@ -816,7 +896,7 @@ body {
       <div class="nl-form-row">
         <input type="email" id="nl-email" placeholder="ton@email.com" required>
       </div>
-      <div class="nl-captcha"><div class="g-recaptcha" data-sitekey="6Lf08pQsAAAAAKfFTEA9pfm7hsrl1xy58rk4gnfk" data-theme="light"></div></div>
+      <div class="nl-captcha"><div id="popup-recaptcha"></div></div>
       <button type="submit" id="nl-btn">S'abonner</button>
     </form>
     <div class="nl-msg" id="nl-msg"></div>
@@ -1237,18 +1317,37 @@ if (window.location.hash) {
 renderArticles();
 
 // ============================================================
-// NEWSLETTER POPUP (Brevo)
+// NEWSLETTER (Brevo) — formulaire hero + popup
 // ============================================================
-// CONFIGURATION : Remplacer par ton URL de formulaire Brevo
 const BREVO_FORM_URL = 'https://d62a61bf.sibforms.com/serve/MUIFABdrcLOgXvWIMTQmdKonNYSBSpG_-4LzQgb5KXKLX0PpNal4KBNqBfYfg-A45xyqA87TyS4cM4rArjkuU6IY0l0N7bMckzLEXgJNeMsijK0ute2LJh3MfkWG6UythgtFBJpK3tALlzYC-Qq1zopesAGpa-gCOlpHqDGc2_r4DfgZwncDe-CtQr8cV_2Hb6aIBYx_uzNSjLbsRw==';
-
+const RECAPTCHA_SITEKEY = '6Lf08pQsAAAAAKfFTEA9pfm7hsrl1xy58rk4gnfk';
 const NL_KEY = 'pharmalpha_nl';
 const NL_DISMISS_KEY = 'pharmalpha_nl_dismiss';
 
+// Widget IDs reCAPTCHA (attribues au chargement)
+let heroWidgetId = null;
+let popupWidgetId = null;
+
+// Rendu explicite des 2 widgets reCAPTCHA
+function onRecaptchaLoad() {
+  heroWidgetId = grecaptcha.render('hero-recaptcha', {
+    sitekey: RECAPTCHA_SITEKEY,
+    theme: 'light'
+  });
+  popupWidgetId = grecaptcha.render('popup-recaptcha', {
+    sitekey: RECAPTCHA_SITEKEY,
+    theme: 'light'
+  });
+}
+
+// Masquer le formulaire hero si deja abonne
+if (localStorage.getItem(NL_KEY) === 'subscribed') {
+  document.getElementById('hero-nl').style.display = 'none';
+}
+
+// --- POPUP ---
 function shouldShowNewsletter() {
-  // Ne pas montrer si deja abonne
   if (localStorage.getItem(NL_KEY) === 'subscribed') return false;
-  // Ne pas montrer si ferme il y a moins de 7 jours
   const dismissed = localStorage.getItem(NL_DISMISS_KEY);
   if (dismissed && Date.now() - parseInt(dismissed) < 7 * 24 * 60 * 60 * 1000) return false;
   return true;
@@ -1266,58 +1365,64 @@ function closeNewsletter() {
   localStorage.setItem(NL_DISMISS_KEY, Date.now().toString());
 }
 
-// Fermer en cliquant a l'exterieur
 document.getElementById('nl-overlay').addEventListener('click', function(e) {
   if (e.target === this) closeNewsletter();
 });
 
-async function submitNewsletter(e) {
-  e.preventDefault();
-  const email = document.getElementById('nl-email').value.trim();
-  const btn = document.getElementById('nl-btn');
-  const msg = document.getElementById('nl-msg');
-
-  if (!email) return;
-
-  // Verifier le reCAPTCHA
-  const captchaResponse = grecaptcha.getResponse();
+// --- Soumission generique Brevo ---
+async function submitToBrevo(email, btn, msg, widgetId, onSuccess) {
+  const captchaResponse = grecaptcha.getResponse(widgetId);
   if (!captchaResponse) {
     msg.textContent = 'Coche la case "Je ne suis pas un robot" pour continuer.';
-    msg.className = 'nl-msg error';
+    msg.className = msg.className.replace(/ ?(success|error)/g, '') + ' error';
     return;
   }
-
   btn.disabled = true;
   btn.textContent = 'Envoi...';
-  msg.className = 'nl-msg';
-
-  if (!BREVO_FORM_URL) {
-    // Mode test : pas encore configure Brevo
-    msg.textContent = 'Merci ! Tu recevras les actus tres bientot.';
-    msg.className = 'nl-msg success';
-    localStorage.setItem(NL_KEY, 'subscribed');
-    setTimeout(closeNewsletter, 2500);
-    return;
-  }
+  msg.className = msg.className.replace(/ ?(success|error)/g, '');
 
   try {
     const formData = new FormData();
     formData.append('EMAIL', email);
-    const resp = await fetch(BREVO_FORM_URL, {
-      method: 'POST',
-      body: formData,
-      mode: 'no-cors'
-    });
-    msg.textContent = 'Merci ! Verifie ta boite mail pour confirmer ton inscription.';
-    msg.className = 'nl-msg success';
+    await fetch(BREVO_FORM_URL, { method: 'POST', body: formData, mode: 'no-cors' });
+    msg.textContent = 'Merci ! Verifie ta boite mail pour confirmer.';
+    msg.className = msg.className.replace(/ ?(success|error)/g, '') + ' success';
     localStorage.setItem(NL_KEY, 'subscribed');
-    setTimeout(closeNewsletter, 3000);
+    document.getElementById('hero-nl').style.display = 'none';
+    if (onSuccess) onSuccess();
   } catch (err) {
     msg.textContent = 'Erreur. Reessaie dans quelques instants.';
-    msg.className = 'nl-msg error';
+    msg.className = msg.className.replace(/ ?(success|error)/g, '') + ' error';
     btn.disabled = false;
     btn.textContent = "S'abonner";
   }
+}
+
+// Formulaire POPUP
+async function submitNewsletter(e) {
+  e.preventDefault();
+  const email = document.getElementById('nl-email').value.trim();
+  if (!email) return;
+  await submitToBrevo(
+    email,
+    document.getElementById('nl-btn'),
+    document.getElementById('nl-msg'),
+    popupWidgetId,
+    () => setTimeout(closeNewsletter, 3000)
+  );
+}
+
+// Formulaire HERO
+async function submitHeroNL(e) {
+  e.preventDefault();
+  const email = document.getElementById('hero-nl-email').value.trim();
+  if (!email) return;
+  await submitToBrevo(
+    email,
+    document.getElementById('hero-nl-btn'),
+    document.getElementById('hero-nl-msg'),
+    heroWidgetId
+  );
 }
 
 // Afficher le popup apres 8 secondes
