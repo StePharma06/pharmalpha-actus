@@ -131,6 +131,11 @@ body {
 .hero-nl {
   margin-top: 16px;
   max-width: 520px;
+  background: var(--orange-light);
+  border: 1px solid #fed7aa;
+  border-left: 3px solid var(--orange);
+  border-radius: var(--radius-sm);
+  padding: 14px 18px;
 }
 .hero-nl-label {
   font-size: 13px;
@@ -191,11 +196,6 @@ body {
 }
 .hero-nl-msg.success { color: var(--green); display: block; }
 .hero-nl-msg.error { color: #dc2626; display: block; }
-.hero-nl-privacy {
-  font-size: 11px;
-  color: var(--text-dim);
-  margin-top: 6px;
-}
 @media (max-width: 480px) {
   .hero-nl-row { flex-direction: column; }
   .hero-nl button { width: 100%; }
@@ -846,7 +846,6 @@ body {
       <div class="hero-nl-captcha"><div id="hero-recaptcha"></div></div>
     </form>
     <div class="hero-nl-msg" id="hero-nl-msg"></div>
-    <p class="hero-nl-privacy">Pas de spam. Desabonnement en 1 clic.</p>
   </div>
 </section>
 
