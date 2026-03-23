@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pharm'Alpha - Actualites Pharma & Sante</title>
+<meta name="description" content="L'essentiel de l'actu pharma, chaque semaine. Par un pharmacien.">
+<style>
+:root {
+  --bg: #ffffff;
+  --bg-alt: #f8f8f8;
+  --bg-card: #ffffff;
+  --bg-card-hover: #fafafa;
+  --border: #e5e5e5;
+  --border-light: #f0f0f0;
+  --text: #1a1a1a;
+  --text-secondary: #555;
+  --text-muted: #888;
+  --text-dim: #aaa;
+  --orange: #f97316;
+  --orange-light: #fff7ed;
+  --orange-hover: #ea580c;
+  --black: #1a1a1a;
+  --blue: #2563eb;
+  --blue-light: #eff6ff;
+  --green: #16a34a;
+  --green-light: #f0fdf4;
+  --purple: #7c3aed;
+  --purple-light: #f5f3ff;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-lg: 0 10px 40px rgba(0,0,0,0.08);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: var(--bg-alt);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* === HEADER === */
+.header {
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.logo-area img {
+  height: 42px;
+  width: auto;
+}
+.logo-area .logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+.logo-area .logo-name {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--black);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+.logo-area .logo-sub {
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.header-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 7px 14px;
+  border-radius: 100px;
+  border: 1px solid var(--border);
+  transition: all 0.2s;
+}
+.header-link:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+  background: var(--orange-light);
+}
+.header-link svg { width:16px; height:16px; flex-shrink:0; }
+.btn-share-site {
+  background: var(--orange);
+  color: #fff;
+  border: 1px solid var(--orange);
+  font-weight: 600;
+}
+.btn-share-site:hover {
+  background: var(--orange-hover);
+  border-color: var(--orange-hover);
+  color: #fff;
+}
+
+/* === HERO === */
+.hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px 24px;
+}
+.hero h1 {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: var(--black);
+}
+.hero h1 span { color: var(--orange); }
+.hero p {
+  color: var(--text-muted);
+  font-size: 16px;
+  margin-top: 4px;
+}
+
+/* === FILTERS === */
+.filters {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+.filter-btn {
+  padding: 7px 16px;
+  border-radius: 100px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+.filter-btn:hover { border-color: var(--text-muted); color: var(--text); }
+.filter-btn.active {
+  background: var(--black);
+  border-color: var(--black);
+  color: #fff;
+  font-weight: 600;
+}
+.search-box {
+  margin-left: auto;
+  position: relative;
+}
+.search-box input {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 7px 14px 7px 36px;
+  color: var(--text);
+  font-size: 13px;
+  width: 220px;
+  font-family: inherit;
+  transition: all 0.2s;
+  outline: none;
+}
+.search-box input:focus { border-color: var(--orange); width: 280px; }
+.search-box input::placeholder { color: var(--text-dim); }
+.search-box svg {
+  position: absolute; left: 12px; top: 50%; transform: translateY(-50%);
+  width: 15px; height: 15px; color: var(--text-dim);
+}
+
+/* === STATS === */
+.stats-bar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px 16px;
+  display: flex;
+  gap: 20px;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+.stats-bar strong { color: var(--orange); font-weight: 600; }
+
+/* === GRID === */
+.grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px 48px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 16px;
+}
+
+/* === CARD === */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all 0.2s;
+  box-shadow: var(--shadow);
+}
+.card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+  border-color: var(--border);
+}
+.card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.badge {
+  padding: 3px 10px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+.badge-pharma_france { background: var(--orange-light); color: var(--orange); }
+.badge-pharma_monde { background: var(--blue-light); color: var(--blue); }
+.badge-sante { background: var(--green-light); color: var(--green); }
+.badge-lsv { background: var(--purple-light); color: var(--purple); }
+.card-date { font-size: 12px; color: var(--text-dim); }
+.card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--black);
+}
+.card-resume {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.card-actions {
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-light);
+}
+.card-actions-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.btn-read-more {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--orange);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 0;
+  font-family: inherit;
+  transition: color 0.15s;
+}
+.btn-read-more:hover { color: var(--orange-hover); }
+.btn-share {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 5px 12px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.15s;
+}
+.btn-share:hover { border-color: var(--orange); color: var(--orange); }
+.btn-share svg { width: 13px; height: 13px; }
+.card-source {
+  margin-top: 6px;
+}
+.card-source a {
+  font-size: 12px;
+  color: var(--text-dim);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.card-source a:hover { color: var(--orange); text-decoration: underline; }
+
+/* === SHARE DROPDOWN === */
+.share-menu {
+  position: absolute;
+  right: 0;
+  top: 110%;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-lg);
+  padding: 6px;
+  min-width: 180px;
+  z-index: 50;
+  display: none;
+}
+.share-menu.show { display: block; }
+.share-menu a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 13px;
+  transition: background 0.1s;
+}
+.share-menu a:hover { background: var(--bg-alt); }
+.share-menu a svg { width: 16px; height: 16px; color: var(--text-muted); }
+.share-wrap { position: relative; }
+
+/* === MODAL (Article complet) === */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(4px);
+  z-index: 200;
+  display: none;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-y: auto;
+  padding: 40px 16px;
+}
+.modal-overlay.show { display: flex; }
+.modal {
+  background: var(--bg);
+  border-radius: 16px;
+  max-width: 720px;
+  width: 100%;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.15);
+  animation: modalIn 0.25s ease-out;
+}
+@keyframes modalIn {
+  from { opacity:0; transform: translateY(20px); }
+  to { opacity:1; transform: translateY(0); }
+}
+.modal-header {
+  padding: 24px 28px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.modal-back {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-muted);
+  font-size: 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 6px 0;
+  transition: color 0.15s;
+}
+.modal-back:hover { color: var(--text); }
+.modal-back svg { width:18px; height:18px; }
+.modal-body {
+  padding: 20px 28px 32px;
+}
+.modal-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.modal-body h2 {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.3;
+  color: var(--black);
+  margin-bottom: 16px;
+}
+.modal-img {
+  width: 100%;
+  height: 240px;
+  border-radius: var(--radius);
+  margin-bottom: 20px;
+  object-fit: cover;
+  display: none;
+}
+.modal-img.has-src { display: block; }
+.modal-text {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  white-space: pre-wrap;
+}
+.modal-footer {
+  padding: 16px 28px 24px;
+  border-top: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.modal-source a {
+  font-size: 13px;
+  color: var(--orange);
+  text-decoration: none;
+  font-weight: 500;
+}
+.modal-source a:hover { text-decoration: underline; }
+.modal-share-row {
+  display: flex;
+  gap: 8px;
+}
+.modal-share-row a, .modal-share-row button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 14px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.15s;
+}
+.modal-share-row a:hover, .modal-share-row button:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+}
+.modal-share-row svg { width: 14px; height: 14px; }
+
+/* === EMPTY STATE === */
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 80px 24px;
+  color: var(--text-dim);
+}
+
+/* === FOOTER === */
+.footer {
+  border-top: 1px solid var(--border);
+  background: var(--bg);
+  padding: 28px 24px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+.footer a { color: var(--orange); text-decoration: none; font-weight: 500; }
+.footer a:hover { text-decoration: underline; }
+
+/* === TOAST === */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(80px);
+  background: var(--black);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 500;
+  z-index: 300;
+  opacity: 0;
+  transition: all 0.3s;
+  pointer-events: none;
+}
+.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 24px; }
+  .grid { grid-template-columns: 1fr; }
+  .filters { flex-direction: column; align-items: stretch; }
+  .search-box { margin-left: 0; }
+  .search-box input, .search-box input:focus { width: 100%; }
+  .header-inner { gap: 10px; }
+  .header-right { flex-wrap: wrap; }
+  .modal-body { padding: 16px 20px 24px; }
+  .modal-body h2 { font-size: 20px; }
+  .modal-footer { padding: 12px 20px 20px; }
+}
+@media (max-width: 420px) {
+  .hero { padding: 28px 16px 16px; }
+  .filters, .grid, .stats-bar { padding-left: 16px; padding-right: 16px; }
+  .card { padding: 16px; }
+}
+
+/* === ANIMATION === */
+.card { animation: fadeUp 0.3s ease-out both; }
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <div class="logo-area">
+      <img src="assets/logo_pharmalpha.png" alt="Pharm'Alpha">
+      <div class="logo-text">
+        <span class="logo-name">Pharm'Alpha</span>
+        <span class="logo-sub">Consulting</span>
+      </div>
+    </div>
+    <div class="header-right">
+      <a href="https://www.tiktok.com/@pharmalpha" target="_blank" class="header-link">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.73a8.19 8.19 0 004.76 1.52V6.79a4.84 4.84 0 01-1-.1z"/></svg>
+        TikTok
+      </a>
+      <a href="https://www.linkedin.com/in/stephen-robert/" target="_blank" class="header-link">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a>
+      <button class="header-link btn-share-site" onclick="shareSite()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+        Partager
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Actualites <span>Pharma & Sante</span></h1>
+  <p>L'essentiel de l'actu pharma, chaque semaine.</p>
+</section>
+
+<!-- FILTERS -->
+<section class="filters">
+  <button class="filter-btn active" data-filter="all">Toutes</button>
+  <button class="filter-btn" data-filter="pharma_france">Pharma France</button>
+  <button class="filter-btn" data-filter="pharma_monde">Pharma Monde</button>
+  <button class="filter-btn" data-filter="sante">Sante</button>
+  <button class="filter-btn" data-filter="lsv">Le Saviez-Vous</button>
+  <div class="search-box">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    <input type="text" id="search" placeholder="Rechercher...">
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <span id="stats-count"></span>
+  <span>Derniere mise a jour : <strong id="stats-date"></strong></span>
+</div>
+
+<!-- GRID -->
+<div class="grid" id="grid"></div>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal">
+    <div class="modal-header">
+      <button class="modal-back" onclick="closeModal()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+        Retour
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-badge-row">
+        <span class="badge" id="modal-badge"></span>
+        <span class="card-date" id="modal-date"></span>
+      </div>
+      <h2 id="modal-title"></h2>
+      <img class="modal-img" id="modal-img" src="" alt="">
+      <div class="modal-text" id="modal-text"></div>
+    </div>
+    <div class="modal-footer">
+      <div class="modal-source" id="modal-source"></div>
+      <div class="modal-share-row" id="modal-share"></div>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>Pharm'Alpha &mdash; L'actu pharma par un pharmacien &nbsp;|&nbsp;
+    <a href="https://www.tiktok.com/@pharmalpha" target="_blank">TikTok</a> &nbsp;&bull;&nbsp;
+    <a href="https://www.linkedin.com/in/stephen-robert/" target="_blank">LinkedIn</a>
+  </p>
+</footer>
+
+<script>
+// ============================================================
+// DONNEES ARTICLES
+// Mis a jour automatiquement par n8n chaque semaine
+// ============================================================
+const ARTICLES = [
+  {
+    id: "actu_2026_w12_1",
+    date: "2026-03-23",
+    type: "actu",
+    categorie: "pharma_france",
+    titre: "Municipales 2026 : les deserts medicaux au coeur du scrutin",
+    resume: "En 25 ans, la France est passee de 25 000 a 19 000 pharmacies. Le Senat vote une loi pour les petites communes. Les candidats s'engagent.",
+    full_text: "Les municipales 2026, c'est ce week-end. Premier tour dimanche 15 mars, et LA question qui revient partout : les deserts medicaux.\n\nEn 25 ans, la France est passee de 25 000 a 19 000 pharmacies. Une baisse spectaculaire qui touche surtout les zones rurales et les petites communes.\n\nLe Senat a vote une loi pour permettre l'ouverture de pharmacies dans les petites communes de moins de 2 500 habitants. Une mesure attendue par de nombreux elus locaux qui voient leur dernier commerce de sante disparaitre.\n\nLes maires veulent agir. Dans plusieurs communes, la fermeture de la pharmacie a ete un sujet central de campagne. Les candidats promettent des mesures incitatives : aides a l'installation, locaux municipaux mis a disposition, partenariats avec les maisons de sante.\n\nOn verra si ces engagements tiennent apres le second tour dimanche prochain. Mais une chose est sure : la pharmacie d'officine est devenue un enjeu politique majeur.",
+    source: "Public Senat / Le Moniteur",
+    source_url: "https://www.publicsenat.fr",
+    tiktok_url: "",
+    badge_label: "Pharma France",
+    image_url: ""
+  },
+  {
+    id: "actu_2026_w12_2",
+    date: "2026-03-23",
+    type: "actu",
+    categorie: "pharma_france",
+    titre: "Nouveau code de deontologie des pharmaciens : ce qui change",
+    resume: "Premiere refonte depuis 1995. Le pharmacien peut communiquer publiquement sur la sante. Renforcement de la lutte contre le charlatanisme.",
+    full_text: "Le nouveau code de deontologie des pharmaciens est entre en vigueur le 6 mars 2026. C'est la premiere refonte depuis 1995, soit plus de 30 ans.\n\nCe qui change concretement :\n\n1. Communication publique : Le pharmacien peut desormais communiquer publiquement sur des sujets de sante, a condition de rester factuel et de ne pas faire de publicite deguisee. C'est une revolution pour la profession qui etait jusqu'ici tres encadree dans sa prise de parole.\n\n2. Independance professionnelle : Le code renforce l'independance du pharmacien face aux pressions commerciales, notamment dans les groupements et les chaines.\n\n3. Lutte contre le charlatanisme : De nouvelles dispositions ciblent specifiquement la vente de produits aux allegations therapeutiques non prouvees. Le pharmacien a desormais une obligation active de mise en garde.\n\n4. Lutte contre les violences : Le pharmacien est reconnu comme acteur de premier plan dans le reperage et l'accompagnement des victimes de violences conjugales et familiales.\n\nUne vraie modernisation qui ancre le pharmacien dans son role de professionnel de sante de premier recours.",
+    source: "CNOP / Legifrance",
+    source_url: "https://www.ordre.pharmacien.fr",
+    tiktok_url: "",
+    badge_label: "Pharma France",
+    image_url: ""
+  },
+  {
+    id: "actu_2026_w12_3",
+    date: "2026-03-23",
+    type: "actu",
+    categorie: "pharma_france",
+    titre: "ANSM : un fast-track pour les essais cliniques en France",
+    resume: "Autorisations en 14 jours au lieu de plusieurs mois. La France veut devenir leader europeen de la recherche clinique.",
+    full_text: "L'ANSM lance son dispositif fast-track pour les essais cliniques. Depuis le 16 mars 2026, les promoteurs peuvent deposer des demandes d'evaluation acceleree.\n\nResultat attendu : des autorisations en 14 jours au lieu de plusieurs mois. C'est un changement considerable pour l'ecosysteme de la recherche clinique en France.\n\nL'objectif est clair : faire de la France un leader europeen de la recherche clinique. Jusqu'ici, la France accusait un retard important par rapport au Royaume-Uni, a l'Allemagne et aux Pays-Bas en termes de delais d'autorisation.\n\nCe dispositif concerne dans un premier temps les essais de phase I et II, ainsi que les essais sur les medicaments de therapie innovante (MTI). Les essais de phase III suivront d'ici la fin de l'annee.\n\nPour les pharmaciens hospitaliers, c'est une bonne nouvelle : plus d'essais cliniques signifie plus d'activite dans les PUI et une meilleure attractivite de la pharmacie hospitaliere.\n\nPour les patients, c'est surtout un acces plus rapide aux traitements innovants.",
+    source: "ANSM",
+    source_url: "https://ansm.sante.fr",
+    tiktok_url: "",
+    badge_label: "Pharma France",
+    image_url: ""
+  },
+  {
+    id: "actu_2026_w12_4",
+    date: "2026-03-23",
+    type: "actu",
+    categorie: "sante",
+    titre: "Mars Bleu : les kits de depistage gratuits arrivent en pharmacie",
+    resume: "47 000 cas de cancer colorectal par an, 17 000 deces. Moins de 30% de depistage. Nouveaux kits gratuits depuis le 15 mars.",
+    full_text: "C'est Mars Bleu, le mois du depistage du cancer colorectal. Les chiffres sont alarmants.\n\n47 000 nouveaux cas par an en France. 17 000 deces. C'est le deuxieme cancer le plus meurtrier. Et pourtant, moins de 30% des personnes concernees (50-74 ans) se font depister.\n\nDepuis le 15 mars 2026, les nouveaux kits de depistage sont disponibles en pharmacie. Ils sont gratuits, sans ordonnance, et le resultat est obtenu en quelques jours.\n\nNouveaute cette annee : les infirmiers peuvent egalement remettre les kits, elargissant ainsi les points de distribution. Les sages-femmes aussi, pour les femmes de plus de 50 ans.\n\nLe test est simple : un prelevement de selles a domicile, envoye par courrier au laboratoire. En cas de resultat positif (environ 4% des cas), une coloscopie est prescrite.\n\nDetecte tot, le cancer colorectal se guerit dans 9 cas sur 10. C'est pourquoi le depistage est si crucial.\n\nEn tant que pharmacien, c'est le moment de sensibiliser vos patients. Parlez-en a chaque personne de plus de 50 ans qui entre dans votre officine.",
+    source: "VIDAL / INCa",
+    source_url: "https://www.vidal.fr",
+    tiktok_url: "",
+    badge_label: "Sante",
+    image_url: ""
+  },
+  {
+    id: "actu_2026_w12_5",
+    date: "2026-03-23",
+    type: "actu",
+    categorie: "pharma_france",
+    titre: "PharmagoraPlus 2026 : IA, e-ordonnance et nouveau modele economique",
+    resume: "12 000+ professionnels reunis a Paris. IA en officine, carte Vitale numerique et crise du modele economique au programme.",
+    full_text: "PharmagoraPlus 2026 s'est tenu les 14 et 15 mars a Paris Porte de Versailles. Plus de 12 000 professionnels reunis pour le plus grand salon de la pharmacie en France.\n\nLes grands sujets de cette edition :\n\n1. Intelligence artificielle en officine : Plusieurs startups ont presente des solutions d'IA pour l'aide a la dispensation, la detection d'interactions medicamenteuses et l'optimisation des stocks. L'IA arrive concretement au comptoir.\n\n2. E-ordonnance : Le deploiement de l'ordonnance numerique s'accelere. Objectif 100% dematerialise d'ici fin 2027. Les editeurs de logiciels ont presente leurs solutions de lecture et d'integration.\n\n3. Carte Vitale numerique : Apres les experimentations dans plusieurs departements, le deploiement national est confirme pour 2027. La carte physique ne disparaitra pas mais deviendra secondaire.\n\n4. Modele economique : Le sujet le plus debattu. Face a la baisse des marges sur le medicament et la hausse des charges, quel avenir pour l'officine ? Les intervenants ont plaide pour une revalorisation des actes pharmaceutiques et un elargissement des missions.\n\nUn salon riche qui confirme que la pharmacie est en pleine mutation.",
+    source: "PharmagoraPlus",
+    source_url: "https://www.pharmagoraplus.com",
+    tiktok_url: "",
+    badge_label: "Pharma France",
+    image_url: ""
+  },
+  {
+    id: "lsv_1",
+    date: "2026-03-22",
+    type: "lsv",
+    categorie: "lsv",
+    titre: "Le saviez-vous ? L'aspirine est nee dans l'ecorce d'un saule",
+    resume: "Il y a 3 500 ans, les Egyptiens utilisaient l'ecorce de saule. En 1897, un chimiste synthetise le principe actif pour soulager son pere.",
+    full_text: "L'aspirine, le medicament le plus consomme au monde, est nee dans l'ecorce d'un arbre.\n\nOn remonte a l'Egypte antique, il y a 3 500 ans. Les medecins de l'epoque prescrivaient deja des decoctions d'ecorce de saule blanc pour soulager la douleur et la fievre. Pendant des siecles, ce remede est reste un secret de guerisseurs.\n\nEt puis, en 1897, un chimiste allemand de chez Bayer, Felix Hoffmann, reussit a synthetiser l'acide acetylsalicylique, une version pure et stable du principe actif du saule.\n\nPourquoi ? Parce que son propre pere souffrait de rhumatismes terribles et ne supportait plus les traitements de l'epoque.\n\nDeux ans plus tard, en 1899, Bayer commercialise l'Aspirine avec un grand A. C'est le tout premier medicament vendu sous forme de comprime dans l'histoire.\n\nAujourd'hui, on en consomme 40 000 tonnes par an dans le monde. Tout ca grace a un fils qui voulait soulager son pere. L'amour filial, le meilleur moteur de l'innovation.",
+    source: "Pharm'Alpha",
+    source_url: "",
+    tiktok_url: "",
+    badge_label: "Le Saviez-Vous",
+    image_url: ""
+  },
+  {
+    id: "lsv_2",
+    date: "2026-03-22",
+    type: "lsv",
+    categorie: "lsv",
+    titre: "Le saviez-vous ? La croix verte de pharmacie cache une histoire",
+    resume: "Avant les annees 1980, c'etait une croix rouge. Le droit international a impose le changement. Le vert symbolise les plantes medicinales.",
+    full_text: "La croix verte lumineuse qui clignote devant chaque pharmacie, vous la voyez tous les jours. Mais savez-vous pourquoi elle est verte, et pas rouge, bleue ou blanche ?\n\nPendant des siecles, le symbole de la pharmacie, c'etait le caducee, le serpent enroule autour d'une coupe. Mais dans les annees 1980, il y a eu un vrai probleme : les gens confondaient les pharmacies avec les hopitaux et la Croix-Rouge.\n\nOr, la Croix-Rouge est un embleme protege par les Conventions de Geneve, c'est du droit international. Alors les pharmaciens ont du changer.\n\nLe vert s'est impose naturellement : c'est la couleur de la nature, de la sante, du vegetal, des plantes medicinales qui sont le berceau de la pharmacie.\n\nEn France, c'est un arrete de 1984 qui a officialise la croix verte. Depuis, chaque pharmacie doit l'afficher.\n\nEt la temperature qui s'affiche dessus ? C'est juste un bonus, un petit service offert aux passants. Maintenant, vous ne la regarderez plus jamais pareil.",
+    source: "Pharm'Alpha",
+    source_url: "",
+    tiktok_url: "",
+    badge_label: "Le Saviez-Vous",
+    image_url: ""
+  },
+  {
+    id: "lsv_3",
+    date: "2026-03-19",
+    type: "lsv",
+    categorie: "lsv",
+    titre: "Le saviez-vous ? La penicilline est nee d'une erreur de labo",
+    resume: "En 1928, Fleming oublie de ranger ses boites de Petri. A son retour, une moisissure a tue toutes les bacteries. 200 millions de vies sauvees.",
+    full_text: "Le medicament qui a sauve le plus de vies dans l'histoire de l'humanite est ne d'un oubli.\n\nOn est en septembre 1928, a l'hopital St Mary de Londres. Alexander Fleming, bacteriologiste un peu desordonne, part en vacances et oublie de ranger ses boites de Petri.\n\nA son retour, il decouvre qu'une moisissure verdatre a contamine l'une de ses cultures de staphylocoques. Normalement, ca part a la poubelle.\n\nSauf que Fleming remarque un truc incroyable : autour de la moisissure, les bacteries sont mortes. Un cercle parfait, sans vie. Cette moisissure, c'est le Penicillium notatum. Il vient d'inventer les antibiotiques.\n\nMais attention, il faudra encore 12 ans et le travail acharne de Florey et Chain pour transformer cette decouverte en medicament utilisable.\n\nLa penicilline sera produite en masse juste a temps pour le Debarquement de 1944, sauvant des milliers de soldats.\n\nOn estime aujourd'hui qu'elle a sauve plus de 200 millions de vies. Tout ca grace a un scientifique qui ne rangeait pas son labo.",
+    source: "Pharm'Alpha",
+    source_url: "",
+    tiktok_url: "",
+    badge_label: "Le Saviez-Vous",
+    image_url: ""
+  },
+  {
+    id: "lsv_4",
+    date: "2026-03-19",
+    type: "lsv",
+    categorie: "lsv",
+    titre: "Le saviez-vous ? Le paracetamol peut detruire votre foie",
+    resume: "Doliprane, Efferalgan, Dafalgan : meme molecule. Au-dela de 4g/jour, votre foie ne suit plus. 1ere cause d'insuffisance hepatique en France.",
+    full_text: "Le paracetamol, le medicament que tout le monde a dans sa pharmacie, que vous prenez sans y reflechir pour un mal de tete, est aussi la premiere cause d'insuffisance hepatique aigue en France.\n\nChaque annee, il est responsable de plus de cas de greffe du foie que l'alcool.\n\nLe probleme, c'est qu'il est tellement banal qu'on ne le respecte plus. Un Doliprane par-ci, un Efferalgan par-la, un Dafalgan le soir. Mais tous les trois contiennent la meme molecule : du paracetamol.\n\nEt si vous depassez 3 a 4 grammes par jour, votre foie ne suit plus. Il ne peut plus eliminer le metabolite toxique qui s'accumule.\n\nEt le pire, c'est que les premiers symptomes d'un surdosage sont silencieux. Vous vous sentez bien pendant 24 a 48 heures. Puis votre foie lache.\n\nC'est pourquoi votre pharmacien vous pose toujours la question : vous prenez deja autre chose ? Ce n'est pas de la curiosite, c'est de la prevention.\n\nRespectez toujours les doses. Quatre grammes par jour max, et pas un de plus.",
+    source: "Pharm'Alpha",
+    source_url: "",
+    tiktok_url: "",
+    badge_label: "Le Saviez-Vous",
+    image_url: ""
+  },
+  {
+    id: "lsv_5",
+    date: "2026-03-15",
+    type: "lsv",
+    categorie: "lsv",
+    titre: "Le saviez-vous ? Votre pharmacien peut prescrire depuis 2024",
+    resume: "Angine, cystite : test rapide, diagnostic et antibiotique directement en pharmacie. Sans RDV. 21 000 pharmacies sur tout le territoire.",
+    full_text: "Depuis 2024, votre pharmacien peut prescrire et delivrer directement certains medicaments, sans que vous ayez besoin de voir un medecin. C'est une petite revolution dans le systeme de sante francais.\n\nConcretement, pour une angine ou une cystite, votre pharmacien peut realiser un test rapide directement au comptoir, poser le diagnostic et vous delivrer un antibiotique si necessaire. Sans rendez-vous, sans salle d'attente, sans delai.\n\nPourquoi ce changement ? Parce que la France manque de medecins. Plus de 6 millions de Francais n'ont pas de medecin traitant. Les urgences sont saturees.\n\nEt pendant ce temps, il y a 21 000 pharmacies reparties sur tout le territoire, y compris dans les zones les plus rurales. Le pharmacien est souvent le seul professionnel de sante accessible en moins de 10 minutes.\n\nVaccinations, depistages, renouvellement d'ordonnances, prevention : son role ne cesse de s'elargir.\n\nLe pharmacien n'est plus seulement celui qui vous donne une boite. C'est un professionnel de sante de premier recours. Et ca, ca change tout pour l'acces aux soins.",
+    source: "Pharm'Alpha",
+    source_url: "",
+    tiktok_url: "",
+    badge_label: "Le Saviez-Vous",
+    image_url: ""
+  }
+];
+
+// ============================================================
+// ICONS SVG
+// ============================================================
+const ICONS = {
+  share: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>',
+  whatsapp: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>',
+  email: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,7 12,13 2,7"/></svg>',
+  copy: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>'
+};
+
+// ============================================================
+// RENDERING
+// ============================================================
+const grid = document.getElementById('grid');
+const searchInput = document.getElementById('search');
+let currentFilter = 'all';
+
+const BADGE_CLASSES = {
+  pharma_france: 'badge-pharma_france',
+  pharma_monde: 'badge-pharma_monde',
+  sante: 'badge-sante',
+  lsv: 'badge-lsv'
+};
+
+function formatDate(dateStr) {
+  const d = new Date(dateStr);
+  return d.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+}
+
+function renderArticles() {
+  const query = searchInput.value.toLowerCase().trim();
+  let filtered = ARTICLES;
+  if (currentFilter !== 'all') filtered = filtered.filter(a => a.categorie === currentFilter);
+  if (query) filtered = filtered.filter(a =>
+    a.titre.toLowerCase().includes(query) || a.resume.toLowerCase().includes(query)
+  );
+  filtered.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+  document.getElementById('stats-count').innerHTML = `<strong>${filtered.length}</strong> article${filtered.length > 1 ? 's' : ''}`;
+  if (ARTICLES.length > 0) {
+    const latest = ARTICLES.reduce((a, b) => new Date(a.date) > new Date(b.date) ? a : b);
+    document.getElementById('stats-date').textContent = formatDate(latest.date);
+  }
+
+  if (filtered.length === 0) {
+    grid.innerHTML = '<div class="empty-state"><p>Aucun article ne correspond a votre recherche.</p></div>';
+    return;
+  }
+
+  grid.innerHTML = filtered.map((a, i) => {
+    const sourceLink = a.source_url
+      ? `<span class="card-source">Source : <a href="${a.source_url}" target="_blank">${a.source} &rarr;</a></span>`
+      : `<span class="card-source">Source : ${a.source}</span>`;
+
+    return `
+      <article class="card" style="animation-delay:${i * 0.04}s">
+        <div class="card-top">
+          <span class="badge ${BADGE_CLASSES[a.categorie] || ''}">${a.badge_label}</span>
+          <span class="card-date">${formatDate(a.date)}</span>
+        </div>
+        <h3>${a.titre}</h3>
+        <p class="card-resume">${a.resume}</p>
+        <div class="card-actions">
+          <div class="card-actions-row">
+            <button class="btn-read-more" onclick="openModal('${a.id}')">En savoir plus &rarr;</button>
+            <button class="btn-share" onclick="shareArticle('${a.id}', event)">
+              ${ICONS.share} Partager
+            </button>
+          </div>
+          ${sourceLink}
+        </div>
+      </article>`;
+  }).join('');
+}
+
+// ============================================================
+// MODAL
+// ============================================================
+function openModal(id) {
+  const a = ARTICLES.find(x => x.id === id);
+  if (!a) return;
+  document.getElementById('modal-badge').className = `badge ${BADGE_CLASSES[a.categorie] || ''}`;
+  document.getElementById('modal-badge').textContent = a.badge_label;
+  document.getElementById('modal-date').textContent = formatDate(a.date);
+  document.getElementById('modal-title').textContent = a.titre;
+  document.getElementById('modal-text').textContent = a.full_text || a.resume;
+
+  const img = document.getElementById('modal-img');
+  if (a.image_url) { img.src = a.image_url; img.classList.add('has-src'); }
+  else { img.src = ''; img.classList.remove('has-src'); }
+
+  // Source
+  const src = document.getElementById('modal-source');
+  src.innerHTML = a.source_url
+    ? `Source : <a href="${a.source_url}" target="_blank">${a.source} &rarr;</a>`
+    : `Source : ${a.source}`;
+
+  // Share buttons
+  const url = window.location.href + '#' + a.id;
+  const text = a.titre + ' - Pharm\'Alpha';
+  document.getElementById('modal-share').innerHTML = `
+    <a href="https://wa.me/?text=${encodeURIComponent(text + ' ' + url)}" target="_blank">${ICONS.whatsapp} WhatsApp</a>
+    <a href="mailto:?subject=${encodeURIComponent(text)}&body=${encodeURIComponent(a.resume + '\n\n' + url)}">${ICONS.email} Email</a>
+    <button onclick="copyLink('${url}')">${ICONS.copy} Copier</button>
+  `;
+
+  document.getElementById('modal-overlay').classList.add('show');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('modal-overlay').classList.remove('show');
+  document.body.style.overflow = '';
+}
+document.getElementById('modal-overlay').addEventListener('click', e => {
+  if (e.target === e.currentTarget) closeModal();
+});
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+// ============================================================
+// SHARE
+// ============================================================
+function shareArticle(id, event) {
+  event.stopPropagation();
+  const a = ARTICLES.find(x => x.id === id);
+  if (!a) return;
+  const url = window.location.href.split('#')[0] + '#' + a.id;
+  const text = a.titre + ' - Pharm\'Alpha';
+
+  if (navigator.share) {
+    navigator.share({ title: text, text: a.resume, url: url }).catch(() => {});
+  } else {
+    // Fallback : copier le lien
+    copyLink(url);
+  }
+}
+
+function shareSite() {
+  const url = window.location.href.split('#')[0];
+  const text = 'Pharm\'Alpha - Actualites Pharma & Sante';
+  if (navigator.share) {
+    navigator.share({ title: text, text: 'L\'essentiel de l\'actu pharma, chaque semaine.', url: url }).catch(() => {});
+  } else {
+    copyLink(url);
+  }
+}
+
+function copyLink(url) {
+  navigator.clipboard.writeText(url).then(() => showToast('Lien copie !')).catch(() => {});
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2500);
+}
+
+// ============================================================
+// FILTERS & INIT
+// ============================================================
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentFilter = btn.dataset.filter;
+    renderArticles();
+  });
+});
+searchInput.addEventListener('input', renderArticles);
+
+// Check hash for deep-link to article
+if (window.location.hash) {
+  const id = window.location.hash.slice(1);
+  setTimeout(() => openModal(id), 300);
+}
+
+renderArticles();
+</script>
+</body>
+</html>
