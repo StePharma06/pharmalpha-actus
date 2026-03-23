@@ -86,7 +86,7 @@ body {
   gap: 12px;
 }
 .logo-area img {
-  height: 38px;
+  height: 52px;
   width: auto;
 }
 .header-right {
@@ -567,13 +567,31 @@ body {
 }
 .modal-img {
   width: 100%;
-  height: 240px;
+  height: 200px;
   border-radius: var(--radius);
   margin-bottom: 20px;
   object-fit: cover;
-  display: none;
+  display: block;
 }
-.modal-img.has-src { display: block; }
+.modal-visual {
+  width: 100%;
+  height: 200px;
+  border-radius: var(--radius);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-visual svg {
+  width: 64px;
+  height: 64px;
+  opacity: 0.5;
+  color: #fff;
+}
+.modal-visual.cat-pharma_france { background: linear-gradient(135deg, #f97316 0%, #ea580c 100%); }
+.modal-visual.cat-pharma_monde { background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%); }
+.modal-visual.cat-sante { background: linear-gradient(135deg, #16a34a 0%, #15803d 100%); }
+.modal-visual.cat-lsv { background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%); }
 .modal-text {
   font-size: 15px;
   line-height: 1.75;
@@ -907,7 +925,7 @@ body {
         <span class="card-date" id="modal-date"></span>
       </div>
       <h2 id="modal-title"></h2>
-      <img class="modal-img" id="modal-img" src="" alt="">
+      <div id="modal-img-wrap"></div>
       <div class="modal-text" id="modal-text"></div>
     </div>
     <div class="modal-footer">
@@ -1261,9 +1279,20 @@ function openModal(id) {
   document.getElementById('modal-title').textContent = a.titre;
   document.getElementById('modal-text').textContent = a.full_text || a.resume;
 
-  const img = document.getElementById('modal-img');
-  if (a.image_url) { img.src = a.image_url; img.classList.add('has-src'); }
-  else { img.src = ''; img.classList.remove('has-src'); }
+  // Image ou visuel par defaut
+  const imgWrap = document.getElementById('modal-img-wrap');
+  const CAT_ICONS = {
+    pharma_france: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>',
+    pharma_monde: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>',
+    sante: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>',
+    lsv: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>'
+  };
+  if (a.image_url) {
+    imgWrap.innerHTML = '<img class="modal-img" src="' + a.image_url + '" alt="">';
+  } else {
+    const cat = a.categorie || 'pharma_france';
+    imgWrap.innerHTML = '<div class="modal-visual cat-' + cat + '">' + (CAT_ICONS[cat] || CAT_ICONS.pharma_france) + '</div>';
+  }
 
   // Source
   const src = document.getElementById('modal-source');
