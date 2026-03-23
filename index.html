@@ -49,14 +49,18 @@ body {
   z-index: 0;
   overflow: hidden;
 }
-.caduceus-bg svg {
+.caduceus-bg img {
   position: absolute;
+  top: -60px;
 }
 @keyframes caduceusFall {
-  0% { transform: translateY(-40px); opacity: 0; }
-  8% { opacity: 0.6; }
-  85% { opacity: 0.6; }
-  100% { transform: translateY(110vh); opacity: 0; }
+  0% { transform: translateY(-60px) rotate(0deg); opacity: 0; }
+  8% { opacity: 0.12; }
+  85% { opacity: 0.12; }
+  100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+}
+@media (max-width: 1300px) {
+  .caduceus-bg { display: none; }
 }
 
 /* === HEADER === */
@@ -1476,30 +1480,35 @@ setTimeout(showNewsletter, 8000);
 // ============================================================
 (function() {
   const container = document.getElementById('caduceus-bg');
-  // Caducee pharmacien : coupe d'Hygie + serpent
-  const CADUCEUS_SVG = '<svg viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M50 118 C50 118 50 55 50 55 C50 55 50 118 50 118Z" stroke="currentColor" stroke-width="4" fill="none"/><path d="M25 42 C25 42 20 40 20 40 L50 40 L80 40 C80 40 75 42 75 42 L75 48 C75 48 62 52 50 55 C38 52 25 48 25 48 Z" /><path d="M30 40 C30 30 38 22 50 22 C62 22 70 30 70 40" fill="none" stroke="currentColor" stroke-width="3"/><path d="M55 22 C55 16 52 10 48 8 C46 6 48 4 50 4 C54 4 56 8 55 12 C54 16 50 18 50 22" /><path d="M42 55 C38 58 34 56 34 52 C34 48 38 45 42 48 C46 51 42 58 38 62 C34 66 30 64 30 60 C30 56 34 52 38 56 C42 60 38 68 34 72 C30 76 26 74 26 70 C26 66 30 62 34 66 C38 70 34 78 30 82 C26 86 22 84 22 80 C22 76 26 72 30 76 C34 80 28 88 24 92 C20 96 18 98 18 102"/></svg>';
   const MAX_ON_SCREEN = 8;
   let count = 0;
+
+  // Zones laterales : gauche (0-12%) et droite (88-100%)
+  function randomSideLeft() {
+    return Math.random() < 0.5
+      ? Math.random() * 12
+      : 88 + Math.random() * 12;
+  }
 
   function spawnCaduceus() {
     if (count >= MAX_ON_SCREEN) return;
     count++;
-    const wrapper = document.createElement('div');
-    wrapper.innerHTML = CADUCEUS_SVG;
-    const svg = wrapper.firstChild;
-    const size = 20 + Math.random() * 16;
-    const left = 2 + Math.random() * 96;
+    const img = document.createElement('img');
+    img.src = 'caducee-pharmacien.png';
+    img.alt = '';
+    const size = 28 + Math.random() * 20;
+    const left = randomSideLeft();
     const duration = 14 + Math.random() * 10;
-    svg.style.cssText = 'position:absolute;top:-40px;width:' + size + 'px;height:' + size + 'px;left:' + left + '%;color:#f97316;animation:caduceusFall ' + duration + 's linear forwards;';
-    container.appendChild(svg);
-    svg.addEventListener('animationend', function() {
-      svg.remove();
+    img.style.cssText = 'position:absolute;top:-60px;width:' + size + 'px;height:auto;left:' + left + '%;animation:caduceusFall ' + duration + 's linear forwards;';
+    container.appendChild(img);
+    img.addEventListener('animationend', function() {
+      img.remove();
       count--;
     });
   }
 
   setInterval(spawnCaduceus, 3000);
-  for (let i = 0; i < 4; i++) setTimeout(spawnCaduceus, i * 700);
+  for (let i = 0; i < 5; i++) setTimeout(spawnCaduceus, i * 600);
 })();
 </script>
 </body>
