@@ -36,16 +36,29 @@
 * { margin:0; padding:0; box-sizing:border-box; }
 body {
   font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-  background: var(--black);
+  background: var(--bg-alt);
   color: var(--text);
   line-height: 1.6;
+  overflow-x: hidden;
 }
-.page-wrap {
-  max-width: 1200px;
-  margin: 0 auto;
-  background: var(--bg-alt);
-  min-height: 100vh;
-  box-shadow: 0 0 40px rgba(0,0,0,0.3);
+.caduceus-bg {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+.caduceus-bg svg {
+  position: absolute;
+  opacity: 0;
+  animation: caduceusFall linear infinite;
+}
+@keyframes caduceusFall {
+  0% { transform: translateY(-40px) rotate(0deg); opacity: 0; }
+  5% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
 }
 
 /* === HEADER === */
@@ -804,7 +817,7 @@ body {
 </style>
 </head>
 <body>
-<div class="page-wrap">
+<div class="caduceus-bg" id="caduceus-bg"></div>
 
 <!-- HEADER -->
 <header class="header">
@@ -933,7 +946,6 @@ body {
     <a href="https://www.linkedin.com/in/stephen-robert/" target="_blank">LinkedIn</a>
   </p>
 </footer>
-</div><!-- /page-wrap -->
 
 <script>
 // ============================================================
@@ -1460,6 +1472,45 @@ async function submitHeroNL(e) {
 
 // Afficher le popup apres 8 secondes
 setTimeout(showNewsletter, 8000);
+
+// ============================================================
+// CADUCEES TOMBANTS (fond anime)
+// ============================================================
+(function() {
+  const container = document.getElementById('caduceus-bg');
+  const CADUCEUS_SVG = '<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="32" y1="8" x2="32" y2="56" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="32" cy="8" r="4" stroke="currentColor" stroke-width="2"/><path d="M22 18c0-4 4-7 10-7s10 3 10 7-4 6-10 8c-6 2-10 4-10 8s4 7 10 7 10-3 10-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M42 18c0-4-4-7-10-7s-10 3-10 7 4 6 10 8c6 2 10 4 10 8s-4 7-10 7-10-3-10-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M26 52h12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M28 56h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
+  const MAX_ON_SCREEN = 8;
+  let count = 0;
+
+  function spawnCaduceus() {
+    if (count >= MAX_ON_SCREEN) return;
+    count++;
+    const wrapper = document.createElement('div');
+    wrapper.innerHTML = CADUCEUS_SVG;
+    const svg = wrapper.firstChild;
+    const size = 18 + Math.random() * 14;
+    const left = 2 + Math.random() * 96;
+    const duration = 12 + Math.random() * 10;
+    const delay = Math.random() * 2;
+    const opacity = 0.04 + Math.random() * 0.04;
+    svg.style.cssText = 'position:absolute;width:' + size + 'px;height:' + size + 'px;left:' + left + '%;color:#f97316;opacity:0;animation:caduceusFall ' + duration + 's linear ' + delay + 's 1;';
+    svg.style.setProperty('--max-opacity', opacity);
+    container.appendChild(svg);
+    svg.addEventListener('animationend', function() {
+      svg.remove();
+      count--;
+    });
+  }
+
+  // Remplacer l'animation CSS opacity par JS pour controler l'opacite max
+  const style = document.createElement('style');
+  style.textContent = '@keyframes caduceusFall { 0% { transform: translateY(-40px) rotate(0deg); opacity: 0; } 5% { opacity: var(--max-opacity, 0.06); } 90% { opacity: var(--max-opacity, 0.06); } 100% { transform: translateY(110vh) rotate(360deg); opacity: 0; } }';
+  document.head.appendChild(style);
+
+  setInterval(spawnCaduceus, 3000);
+  // En creer quelques-uns au demarrage avec des delais varies
+  for (let i = 0; i < 4; i++) setTimeout(spawnCaduceus, i * 800);
+})();
 </script>
 </body>
 </html>
