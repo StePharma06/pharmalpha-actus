@@ -166,20 +166,35 @@ def update_index_html(new_articles):
         def esc(s):
             return s.replace("\\", "\\\\").replace('"', '\\"').replace("\n", "\\n")
 
-        entry = f"""  {{
-    id: "{article_id}",
-    date: "{a.get('date', today)}",
-    type: "actu",
-    categorie: "{a.get('categorie', 'sante')}",
-    titre: "{esc(a.get('titre', ''))}",
-    resume: "{esc(a.get('resume', ''))}",
-    full_text: "{esc(a.get('full_text', a.get('resume', '')))}",
-    source: "{esc(a.get('source', 'Pharm\\'Alpha'))}",
-    source_url: "{a.get('source_url', '')}",
-    tiktok_url: "",
-    badge_label: "{a.get('badge_label', 'Sante')}",
-    image_url: ""
-  }}"""
+        default_source = "Pharm'Alpha"
+        vals = {
+            "id": article_id,
+            "date": a.get("date", today),
+            "categorie": a.get("categorie", "sante"),
+            "titre": esc(a.get("titre", "")),
+            "resume": esc(a.get("resume", "")),
+            "full_text": esc(a.get("full_text", a.get("resume", ""))),
+            "source": esc(a.get("source", default_source)),
+            "source_url": a.get("source_url", ""),
+            "badge_label": a.get("badge_label", "Sante"),
+        }
+
+        entry = (
+            '  {\n'
+            '    id: "' + vals["id"] + '",\n'
+            '    date: "' + vals["date"] + '",\n'
+            '    type: "actu",\n'
+            '    categorie: "' + vals["categorie"] + '",\n'
+            '    titre: "' + vals["titre"] + '",\n'
+            '    resume: "' + vals["resume"] + '",\n'
+            '    full_text: "' + vals["full_text"] + '",\n'
+            '    source: "' + vals["source"] + '",\n'
+            '    source_url: "' + vals["source_url"] + '",\n'
+            '    tiktok_url: "",\n'
+            '    badge_label: "' + vals["badge_label"] + '",\n'
+            '    image_url: ""\n'
+            '  }'
+        )
         new_js_entries.append(entry)
 
     if not new_js_entries:
