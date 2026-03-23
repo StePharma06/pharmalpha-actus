@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pharm'Alpha - Actualites Pharma & Sante</title>
 <meta name="description" content="L'essentiel de l'actu pharma, chaque semaine. Par un pharmacien.">
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <style>
 :root {
   --bg: #ffffff;
@@ -654,6 +655,11 @@ body {
 }
 .nl-form {
   display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.nl-form-row {
+  display: flex;
   gap: 8px;
 }
 .nl-form input {
@@ -686,6 +692,11 @@ body {
   opacity: 0.6;
   cursor: not-allowed;
 }
+.nl-captcha {
+  display: flex;
+  justify-content: center;
+  margin: 4px 0;
+}
 .nl-msg {
   font-size: 13px;
   margin-top: 12px;
@@ -700,8 +711,8 @@ body {
 }
 @media (max-width: 480px) {
   .nl-popup { padding: 28px 20px; }
-  .nl-form { flex-direction: column; }
   .nl-form button { width: 100%; }
+  .nl-captcha { transform: scale(0.85); transform-origin: center; }
 }
 </style>
 </head>
@@ -802,7 +813,10 @@ body {
     <h3>Ne rate aucune actu !</h3>
     <p>Recois chaque jour les actus pharma & sante directement dans ta boite mail. Gratuit, sans spam.</p>
     <form class="nl-form" id="nl-form" onsubmit="submitNewsletter(event)">
-      <input type="email" id="nl-email" placeholder="ton@email.com" required>
+      <div class="nl-form-row">
+        <input type="email" id="nl-email" placeholder="ton@email.com" required>
+      </div>
+      <div class="nl-captcha"><div class="g-recaptcha" data-sitekey="6Lf08pQsAAAAAKfFTEA9pfm7hsrl1xy58rk4gnfk" data-theme="light"></div></div>
       <button type="submit" id="nl-btn">S'abonner</button>
     </form>
     <div class="nl-msg" id="nl-msg"></div>
@@ -1264,6 +1278,14 @@ async function submitNewsletter(e) {
   const msg = document.getElementById('nl-msg');
 
   if (!email) return;
+
+  // Verifier le reCAPTCHA
+  const captchaResponse = grecaptcha.getResponse();
+  if (!captchaResponse) {
+    msg.textContent = 'Coche la case "Je ne suis pas un robot" pour continuer.';
+    msg.className = 'nl-msg error';
+    return;
+  }
 
   btn.disabled = true;
   btn.textContent = 'Envoi...';
