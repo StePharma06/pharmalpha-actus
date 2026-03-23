@@ -169,6 +169,23 @@ body {
   color: #fff;
   font-weight: 600;
 }
+.filter-btn-lsv {
+  background: var(--orange);
+  border-color: var(--orange);
+  color: #fff;
+  font-weight: 600;
+}
+.filter-btn-lsv:hover {
+  background: var(--orange-hover);
+  border-color: var(--orange-hover);
+  color: #fff;
+}
+.filter-btn-lsv.active {
+  background: var(--orange-hover);
+  border-color: var(--orange-hover);
+  color: #fff;
+  box-shadow: 0 0 0 3px rgba(249,115,22,0.25);
+}
 .search-box {
   margin-left: auto;
   position: relative;
@@ -212,6 +229,68 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   gap: 16px;
+}
+
+/* === SECTION TITLES === */
+.section-title {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* === LIST VIEW (anciens articles) === */
+.list-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px 48px;
+}
+.list-section-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-light);
+  margin-bottom: 8px;
+}
+.list-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-light);
+  transition: background 0.15s;
+  cursor: pointer;
+}
+.list-item:hover { background: var(--bg); margin: 0 -12px; padding: 12px 12px; border-radius: var(--radius-sm); }
+.list-item-date {
+  font-size: 12px;
+  color: var(--text-dim);
+  min-width: 70px;
+  flex-shrink: 0;
+}
+.list-item-badge { flex-shrink: 0; }
+.list-item-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  flex: 1;
+  line-height: 1.35;
+}
+.list-item-arrow {
+  color: var(--text-dim);
+  font-size: 16px;
+  flex-shrink: 0;
+}
+@media (max-width: 768px) {
+  .list-item { flex-wrap: wrap; gap: 6px; }
+  .list-item-date { min-width: auto; }
 }
 
 /* === CARD === */
@@ -573,7 +652,7 @@ body {
   <button class="filter-btn" data-filter="pharma_france">Pharma France</button>
   <button class="filter-btn" data-filter="pharma_monde">Pharma Monde</button>
   <button class="filter-btn" data-filter="sante">Sante</button>
-  <button class="filter-btn" data-filter="lsv">Le Saviez-Vous</button>
+  <button class="filter-btn filter-btn-lsv" data-filter="lsv">Le Saviez-Vous</button>
   <div class="search-box">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
     <input type="text" id="search" placeholder="Rechercher...">
@@ -586,8 +665,14 @@ body {
   <span>Derniere mise a jour : <strong id="stats-date"></strong></span>
 </div>
 
-<!-- GRID -->
+<!-- GRID (6 dernieres actus en cards) -->
 <div class="grid" id="grid"></div>
+
+<!-- LIST (anciens articles) -->
+<div class="list-section" id="list-section" style="display:none;">
+  <div class="list-section-title">Articles precedents</div>
+  <div id="list"></div>
+</div>
 
 <!-- MODAL -->
 <div class="modal-overlay" id="modal-overlay">
@@ -844,50 +929,85 @@ function formatDate(dateStr) {
   return d.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
 }
 
+const CARDS_COUNT = 6; // Nombre de cards affichees en grille
+
+function renderCard(a, i) {
+  const sourceLink = a.source_url
+    ? `<span class="card-source">Source : <a href="${a.source_url}" target="_blank">${a.source} &rarr;</a></span>`
+    : `<span class="card-source">Source : ${a.source}</span>`;
+  return `
+    <article class="card" style="animation-delay:${i * 0.04}s">
+      <div class="card-top">
+        <span class="badge ${BADGE_CLASSES[a.categorie] || ''}">${a.badge_label}</span>
+        <span class="card-date">${formatDate(a.date)}</span>
+      </div>
+      <h3>${a.titre}</h3>
+      <p class="card-resume">${a.resume}</p>
+      <div class="card-actions">
+        <div class="card-actions-row">
+          <button class="btn-read-more" onclick="openModal('${a.id}')">En savoir plus &rarr;</button>
+          <button class="btn-share" onclick="shareArticle('${a.id}', event)">
+            ${ICONS.share} Partager
+          </button>
+        </div>
+        ${sourceLink}
+      </div>
+    </article>`;
+}
+
+function renderListItem(a) {
+  const shortDate = new Date(a.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'short' });
+  return `
+    <div class="list-item" onclick="openModal('${a.id}')">
+      <span class="list-item-date">${shortDate}</span>
+      <span class="badge list-item-badge ${BADGE_CLASSES[a.categorie] || ''}">${a.badge_label}</span>
+      <span class="list-item-title">${a.titre}</span>
+      <span class="list-item-arrow">&rarr;</span>
+    </div>`;
+}
+
 function renderArticles() {
   const query = searchInput.value.toLowerCase().trim();
+  const listSection = document.getElementById('list-section');
+  const listEl = document.getElementById('list');
+
+  // Filtrage : par defaut, on exclut les LSV sauf si on clique sur l'onglet LSV
   let filtered = ARTICLES;
-  if (currentFilter !== 'all') filtered = filtered.filter(a => a.categorie === currentFilter);
+  if (currentFilter === 'all') {
+    filtered = filtered.filter(a => a.categorie !== 'lsv');
+  } else {
+    filtered = filtered.filter(a => a.categorie === currentFilter);
+  }
   if (query) filtered = filtered.filter(a =>
     a.titre.toLowerCase().includes(query) || a.resume.toLowerCase().includes(query)
   );
   filtered.sort((a, b) => new Date(b.date) - new Date(a.date));
 
+  // Stats
   document.getElementById('stats-count').innerHTML = `<strong>${filtered.length}</strong> article${filtered.length > 1 ? 's' : ''}`;
   if (ARTICLES.length > 0) {
-    const latest = ARTICLES.reduce((a, b) => new Date(a.date) > new Date(b.date) ? a : b);
+    const latest = ARTICLES.filter(a => a.categorie !== 'lsv').reduce((a, b) => new Date(a.date) > new Date(b.date) ? a : b, ARTICLES[0]);
     document.getElementById('stats-date').textContent = formatDate(latest.date);
   }
 
   if (filtered.length === 0) {
     grid.innerHTML = '<div class="empty-state"><p>Aucun article ne correspond a votre recherche.</p></div>';
+    listSection.style.display = 'none';
     return;
   }
 
-  grid.innerHTML = filtered.map((a, i) => {
-    const sourceLink = a.source_url
-      ? `<span class="card-source">Source : <a href="${a.source_url}" target="_blank">${a.source} &rarr;</a></span>`
-      : `<span class="card-source">Source : ${a.source}</span>`;
+  // Cards : les 6 premiers
+  const cards = filtered.slice(0, CARDS_COUNT);
+  grid.innerHTML = cards.map((a, i) => renderCard(a, i)).join('');
 
-    return `
-      <article class="card" style="animation-delay:${i * 0.04}s">
-        <div class="card-top">
-          <span class="badge ${BADGE_CLASSES[a.categorie] || ''}">${a.badge_label}</span>
-          <span class="card-date">${formatDate(a.date)}</span>
-        </div>
-        <h3>${a.titre}</h3>
-        <p class="card-resume">${a.resume}</p>
-        <div class="card-actions">
-          <div class="card-actions-row">
-            <button class="btn-read-more" onclick="openModal('${a.id}')">En savoir plus &rarr;</button>
-            <button class="btn-share" onclick="shareArticle('${a.id}', event)">
-              ${ICONS.share} Partager
-            </button>
-          </div>
-          ${sourceLink}
-        </div>
-      </article>`;
-  }).join('');
+  // Liste : les anciens (apres les 6 premiers)
+  const older = filtered.slice(CARDS_COUNT);
+  if (older.length > 0) {
+    listSection.style.display = 'block';
+    listEl.innerHTML = older.map(a => renderListItem(a)).join('');
+  } else {
+    listSection.style.display = 'none';
+  }
 }
 
 // ============================================================
