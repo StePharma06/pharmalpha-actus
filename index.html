@@ -590,6 +590,119 @@ body {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* === NEWSLETTER POPUP === */
+.nl-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(4px);
+  z-index: 500;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+.nl-overlay.show { display: flex; }
+.nl-popup {
+  background: var(--bg);
+  border-radius: 20px;
+  max-width: 440px;
+  width: 100%;
+  padding: 36px 32px;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.2);
+  text-align: center;
+  position: relative;
+  animation: modalIn 0.3s ease-out;
+}
+.nl-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-dim);
+  padding: 4px;
+  line-height: 1;
+  font-size: 22px;
+  transition: color 0.15s;
+}
+.nl-close:hover { color: var(--text); }
+.nl-icon {
+  width: 56px;
+  height: 56px;
+  background: var(--orange-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+.nl-icon svg { width: 28px; height: 28px; color: var(--orange); }
+.nl-popup h3 {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--black);
+  margin-bottom: 8px;
+}
+.nl-popup p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.nl-form {
+  display: flex;
+  gap: 8px;
+}
+.nl-form input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.nl-form input:focus { border-color: var(--orange); }
+.nl-form input::placeholder { color: var(--text-dim); }
+.nl-form button {
+  padding: 12px 24px;
+  border-radius: 100px;
+  border: none;
+  background: var(--orange);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+.nl-form button:hover { background: var(--orange-hover); }
+.nl-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.nl-msg {
+  font-size: 13px;
+  margin-top: 12px;
+  display: none;
+}
+.nl-msg.success { color: var(--green); display: block; }
+.nl-msg.error { color: #dc2626; display: block; }
+.nl-privacy {
+  font-size: 11px;
+  color: var(--text-dim);
+  margin-top: 14px;
+}
+@media (max-width: 480px) {
+  .nl-popup { padding: 28px 20px; }
+  .nl-form { flex-direction: column; }
+  .nl-form button { width: 100%; }
+}
 </style>
 </head>
 <body>
@@ -678,6 +791,24 @@ body {
 
 <!-- TOAST -->
 <div class="toast" id="toast"></div>
+
+<!-- NEWSLETTER POPUP -->
+<div class="nl-overlay" id="nl-overlay">
+  <div class="nl-popup">
+    <button class="nl-close" onclick="closeNewsletter()" aria-label="Fermer">&times;</button>
+    <div class="nl-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,7 12,13 2,7"/></svg>
+    </div>
+    <h3>Ne rate aucune actu !</h3>
+    <p>Recois chaque jour les actus pharma & sante directement dans ta boite mail. Gratuit, sans spam.</p>
+    <form class="nl-form" id="nl-form" onsubmit="submitNewsletter(event)">
+      <input type="email" id="nl-email" placeholder="ton@email.com" required>
+      <button type="submit" id="nl-btn">S'abonner</button>
+    </form>
+    <div class="nl-msg" id="nl-msg"></div>
+    <p class="nl-privacy">Tes donnees restent privees. Desabonnement en 1 clic.</p>
+  </div>
+</div>
 
 <!-- FOOTER -->
 <footer class="footer">
@@ -1090,6 +1221,85 @@ if (window.location.hash) {
 }
 
 renderArticles();
+
+// ============================================================
+// NEWSLETTER POPUP (Brevo)
+// ============================================================
+// CONFIGURATION : Remplacer par ton URL de formulaire Brevo
+const BREVO_FORM_URL = ''; // Ex: https://sibforms.com/serve/xxxxx
+
+const NL_KEY = 'pharmalpha_nl';
+const NL_DISMISS_KEY = 'pharmalpha_nl_dismiss';
+
+function shouldShowNewsletter() {
+  // Ne pas montrer si deja abonne
+  if (localStorage.getItem(NL_KEY) === 'subscribed') return false;
+  // Ne pas montrer si ferme il y a moins de 7 jours
+  const dismissed = localStorage.getItem(NL_DISMISS_KEY);
+  if (dismissed && Date.now() - parseInt(dismissed) < 7 * 24 * 60 * 60 * 1000) return false;
+  return true;
+}
+
+function showNewsletter() {
+  if (!shouldShowNewsletter()) return;
+  document.getElementById('nl-overlay').classList.add('show');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeNewsletter() {
+  document.getElementById('nl-overlay').classList.remove('show');
+  document.body.style.overflow = '';
+  localStorage.setItem(NL_DISMISS_KEY, Date.now().toString());
+}
+
+// Fermer en cliquant a l'exterieur
+document.getElementById('nl-overlay').addEventListener('click', function(e) {
+  if (e.target === this) closeNewsletter();
+});
+
+async function submitNewsletter(e) {
+  e.preventDefault();
+  const email = document.getElementById('nl-email').value.trim();
+  const btn = document.getElementById('nl-btn');
+  const msg = document.getElementById('nl-msg');
+
+  if (!email) return;
+
+  btn.disabled = true;
+  btn.textContent = 'Envoi...';
+  msg.className = 'nl-msg';
+
+  if (!BREVO_FORM_URL) {
+    // Mode test : pas encore configure Brevo
+    msg.textContent = 'Merci ! Tu recevras les actus tres bientot.';
+    msg.className = 'nl-msg success';
+    localStorage.setItem(NL_KEY, 'subscribed');
+    setTimeout(closeNewsletter, 2500);
+    return;
+  }
+
+  try {
+    const formData = new FormData();
+    formData.append('EMAIL', email);
+    const resp = await fetch(BREVO_FORM_URL, {
+      method: 'POST',
+      body: formData,
+      mode: 'no-cors'
+    });
+    msg.textContent = 'Merci ! Verifie ta boite mail pour confirmer ton inscription.';
+    msg.className = 'nl-msg success';
+    localStorage.setItem(NL_KEY, 'subscribed');
+    setTimeout(closeNewsletter, 3000);
+  } catch (err) {
+    msg.textContent = 'Erreur. Reessaie dans quelques instants.';
+    msg.className = 'nl-msg error';
+    btn.disabled = false;
+    btn.textContent = "S'abonner";
+  }
+}
+
+// Afficher le popup apres 8 secondes
+setTimeout(showNewsletter, 8000);
 </script>
 </body>
 </html>
