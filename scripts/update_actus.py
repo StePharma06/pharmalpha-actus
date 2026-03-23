@@ -150,7 +150,36 @@ CAT_STYLE = {
 }
 
 
-def generate_article_image(article_id, titre, categorie):
+def make_image_prompt(titre, resume, categorie):
+    """Use Claude to generate a specific DALL-E prompt for an article."""
+    try:
+        claude = anthropic.Anthropic()
+        resp = claude.messages.create(
+            model="claude-haiku-3-20240307",
+            max_tokens=300,
+            messages=[{"role": "user", "content": (
+                f"Generate a DALL-E image prompt for this pharmacy news article.\n"
+                f"Title: {titre}\nSummary: {resume}\nCategory: {categorie}\n\n"
+                f"Rules:\n"
+                f"- Describe a specific, concrete scene that illustrates this exact article\n"
+                f"- Photorealistic editorial photography style\n"
+                f"- Include specific visual details (objects, setting, lighting)\n"
+                f"- NO text, NO logos, NO watermarks in the image\n"
+                f"- 16:9 landscape format\n"
+                f"- Reply ONLY with the prompt, nothing else"
+            )}]
+        )
+        return resp.content[0].text.strip()
+    except Exception as e:
+        print(f"    [PROMPT-ERR] {e}")
+        style_hint = CAT_STYLE.get(categorie, "pharmacy, healthcare")
+        return (
+            f"Editorial photo for article: {titre}. "
+            f"Style: {style_hint}. Photorealistic, no text, no logos."
+        )
+
+
+def generate_article_image(article_id, titre, categorie, resume=""):
     """Generate a DALL-E image for an article. Returns relative path or empty string."""
     openai_key = os.environ.get("OPENAI_API_KEY", "")
     if not openai_key:
@@ -164,12 +193,7 @@ def generate_article_image(article_id, titre, categorie):
     if img_path.exists():
         return f"assets/{img_name}"
 
-    style_hint = CAT_STYLE.get(categorie, "pharmacy, healthcare")
-    prompt = (
-        f"Editorial illustration for a pharmacy news article titled '{titre}'. "
-        f"Style: {style_hint}. Clean modern digital art, no text, no logos, "
-        f"no watermarks, 16:9 landscape format."
-    )
+    prompt = make_image_prompt(titre, resume, categorie)
 
     try:
         client = OpenAI(api_key=openai_key)
@@ -252,7 +276,8 @@ def update_index_html(new_articles):
         # Generer image DALL-E
         print(f"  [{i+1}/{len(new_articles)}] {vals['titre'][:50]}...")
         img_url = generate_article_image(
-            article_id, a.get("titre", ""), vals["categorie"]
+            article_id, a.get("titre", ""), vals["categorie"],
+            resume=a.get("resume", "")
         )
         if i < len(new_articles) - 1 and img_url:
             time.sleep(62)  # Rate limit DALL-E: 1 img/min
