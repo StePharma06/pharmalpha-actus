@@ -168,6 +168,14 @@ body {
 .hero-nl button:disabled { opacity: 0.6; cursor: not-allowed; }
 .hero-nl-captcha {
   margin-top: 8px;
+  display: none;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease;
+}
+.hero-nl-captcha.visible {
+  display: block;
+  max-height: 100px;
 }
 .hero-nl-msg {
   font-size: 13px;
@@ -758,9 +766,16 @@ body {
   cursor: not-allowed;
 }
 .nl-captcha {
-  display: flex;
+  display: none;
   justify-content: center;
   margin: 4px 0;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease;
+}
+.nl-captcha.visible {
+  display: flex;
+  max-height: 100px;
 }
 .nl-msg {
   font-size: 13px;
@@ -1369,8 +1384,16 @@ document.getElementById('nl-overlay').addEventListener('click', function(e) {
   if (e.target === this) closeNewsletter();
 });
 
-// --- Soumission generique Brevo ---
-async function submitToBrevo(email, btn, msg, widgetId, onSuccess) {
+// --- Soumission generique Brevo (captcha revele au 1er clic) ---
+async function submitToBrevo(email, btn, msg, widgetId, captchaEl, onSuccess) {
+  // 1er clic : reveler le captcha
+  if (!captchaEl.classList.contains('visible')) {
+    captchaEl.classList.add('visible');
+    msg.textContent = 'Coche la case ci-dessous puis clique a nouveau.';
+    msg.className = msg.className.replace(/ ?(success|error)/g, '') + ' error';
+    return;
+  }
+  // 2e clic : verifier le captcha
   const captchaResponse = grecaptcha.getResponse(widgetId);
   if (!captchaResponse) {
     msg.textContent = 'Coche la case "Je ne suis pas un robot" pour continuer.';
@@ -1408,6 +1431,7 @@ async function submitNewsletter(e) {
     document.getElementById('nl-btn'),
     document.getElementById('nl-msg'),
     popupWidgetId,
+    document.querySelector('.nl-captcha'),
     () => setTimeout(closeNewsletter, 3000)
   );
 }
@@ -1421,7 +1445,8 @@ async function submitHeroNL(e) {
     email,
     document.getElementById('hero-nl-btn'),
     document.getElementById('hero-nl-msg'),
-    heroWidgetId
+    heroWidgetId,
+    document.querySelector('.hero-nl-captcha')
   );
 }
 
