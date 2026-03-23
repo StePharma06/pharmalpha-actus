@@ -596,9 +596,22 @@ body {
 .modal-visual.cat-lsv { background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%); }
 .modal-text {
   font-size: 15px;
-  line-height: 1.75;
+  line-height: 1.8;
   color: var(--text-secondary);
-  white-space: pre-wrap;
+}
+.modal-text p {
+  margin: 0 0 14px 0;
+}
+.modal-text p:last-child {
+  margin-bottom: 0;
+}
+.modal-text strong {
+  color: var(--black);
+  font-weight: 700;
+}
+.modal-text em {
+  color: var(--text-muted);
+  font-style: italic;
 }
 .modal-footer {
   padding: 16px 28px 24px;
@@ -986,7 +999,7 @@ const ARTICLES = [
     categorie: "pharma_france",
     titre: "Biosimilaires : 2026, l'année de la substitution réussie ?",
     resume: "Les nouvelles mesures de la loi de financement de la Sécurité sociale visent à accélérer la substitution des biosimilaires en officine. Ces médicaments représentent des enjeux économiques majeurs pour les pharmaciens et le système de santé.",
-    full_text: "Les médicaments biosimilaires prennent enfin leur envol en France. Après des années de développement timide, la loi de financement de la Sécurité sociale 2026 introduit de nouvelles mesures pour encourager leur substitution en officine. Ces copies de médicaments biologiques, qui coûtent 20 à 40% moins cher que les originaux, représentent un enjeu économique considérable. Pour les pharmaciens, c'est l'opportunité de jouer un rôle clé dans l'optimisation des dépenses de santé tout en conservant leurs marges. Cependant, les volumes restent encore modestes et la substitution nécessite une formation spécifique. Les patients peuvent parfois être réticents, craignant une baisse d'efficacité. Pourtant, les biosimilaires offrent la même qualité thérapeutique que les médicaments de référence. Les nouvelles mesures prévoient notamment des incitations financières pour les pharmaciens qui substituent et une meilleure information des prescripteurs. Cette évolution pourrait générer des économies importantes pour l'Assurance maladie tout en développant une nouvelle source de revenus pour les officines.",
+    full_text: "Les médicaments biosimilaires prennent enfin leur envol en France. Après des années de développement timide, la loi de financement de la Sécurité sociale 2026 introduit de nouvelles mesures pour encourager leur substitution en officine.\n\nCes copies de médicaments biologiques coûtent 20 à 40% moins cher que les originaux. Un enjeu économique considérable. Pour les pharmaciens, c'est l'opportunité de jouer un rôle clé dans l'optimisation des dépenses de santé tout en conservant leurs marges.\n\nCependant, les volumes restent encore modestes et la substitution nécessite une formation spécifique. Les patients peuvent parfois être réticents, craignant une baisse d'efficacité. Pourtant, les biosimilaires offrent la même qualité thérapeutique que les médicaments de référence.\n\nLes nouvelles mesures prévoient notamment des incitations financières pour les pharmaciens qui substituent et une meilleure information des prescripteurs. Cette évolution pourrait générer des économies importantes pour l'Assurance maladie tout en développant une nouvelle source de revenus pour les officines.",
     source: "Le Moniteur des Pharmacies",
     source_url: "https://www.lemoniteurdespharmacies.fr/business/marches/medicaments-biosimilaires-2026-vers-une-substitution-reussie",
     tiktok_url: "",
@@ -1000,7 +1013,7 @@ const ARTICLES = [
     categorie: "pharma_monde",
     titre: "Inde : générique de l'Ozempic à 13€, révolution ou mirage ?",
     resume: "Les brevets d'Ozempic et Wegovy expirent en Inde, ouvrant la voie à plus de 40 génériques. Certains annoncent des prix défiants toute concurrence, mais cette révolution tarifaire restera-t-elle cantonnée au marché indien ?",
-    full_text: "L'Inde s'apprête à bouleverser le marché des anti-diabétiques et anti-obésité. Avec l'expiration des brevets de Novo Nordisk sur la sémaglutide (Ozempic et Wegovy), plus de 40 laboratoires indiens s'apprêtent à lancer leurs versions génériques. L'un d'eux promet un prix révolutionnaire : 1 290 roupies (13,79€) par mois pour les doses de démarrage, soit une fraction du coût européen. Cette guerre des prix pourrait transformer l'accès aux traitements de l'obésité, un marché en explosion mondiale. Cependant, ces tarifs attractifs concernent pour l'instant uniquement le marché indien. Les laboratoires devront obtenir des autorisations dans chaque pays pour commercialiser leurs génériques. En Europe, les brevets de Novo Nordisk restent protégés jusqu'en 2031 minimum. Cette situation illustre les disparités mondiales d'accès aux médicaments innovants et pose la question de l'équité thérapeutique. Pour les pharmaciens français, c'est un aperçu de ce qui pourrait arriver dans quelques années quand les brevets tomberont en Europe.",
+    full_text: "L'Inde s'apprête à bouleverser le marché des anti-diabétiques et anti-obésité. Avec l'expiration des brevets de Novo Nordisk sur la sémaglutide (Ozempic et Wegovy), plus de 40 laboratoires indiens s'apprêtent à lancer leurs versions génériques.\n\nL'un d'eux promet un prix révolutionnaire : 1 290 roupies (13,79€) par mois pour les doses de démarrage, soit une fraction du coût européen. Cette guerre des prix pourrait transformer l'accès aux traitements de l'obésité, un marché en explosion mondiale.\n\nCependant, ces tarifs attractifs concernent pour l'instant uniquement le marché indien. Les laboratoires devront obtenir des autorisations dans chaque pays pour commercialiser leurs génériques. En Europe, les brevets de Novo Nordisk restent protégés jusqu'en 2031 minimum.\n\nCette situation illustre les disparités mondiales d'accès aux médicaments innovants et pose la question de l'équité thérapeutique. Pour les pharmaciens français, c'est un aperçu de ce qui pourrait arriver dans quelques années quand les brevets tomberont en Europe.",
     source: "FiercePharma",
     source_url: "https://www.fiercepharma.com/pharma/novos-semaglutide-losing-patent-protection-indian-drugmakers-set-launch-their-generics",
     tiktok_url: "",
@@ -1014,7 +1027,7 @@ const ARTICLES = [
     categorie: "sante",
     titre: "Méningite : l'épidémie anglaise fait 34 cas, la France touchée",
     resume: "L'épidémie de méningite qui frappe l'Angleterre s'étend avec 34 cas recensés. Une salariée d'Orano à La Hague est décédée d'une méningite, mais aucun lien n'est établi avec l'épidémie britannique.",
-    full_text: "La méningite fait son retour sur le devant de la scène sanitaire européenne. En Angleterre, l'épidémie qui a débuté dans une discothèque de Canterbury compte désormais 34 cas et a causé deux décès. Les autorités britanniques ont lancé une vaste campagne de vaccination dans le Kent, avec plus de 5 800 vaccins déjà administrés. En parallèle, la France connaît un cas tragique : une salariée de l'entreprise nucléaire Orano à La Hague est décédée d'une méningite. Cinquante collègues cas contacts ont été placés sous surveillance, mais la direction précise qu'aucun lien n'a été établi avec l'épidémie anglaise. Cette situation rappelle la gravité de cette infection qui peut tuer en quelques heures. Pour les pharmaciens, c'est l'occasion de rappeler l'importance de la vaccination méningococcique, notamment chez les jeunes adultes. Les symptômes - fièvre, maux de tête intenses, raideur de nuque, éruption cutanée - nécessitent une prise en charge d'urgence. La proximité géographique avec l'Angleterre impose une vigilance renforcée.",
+    full_text: "La méningite fait son retour sur le devant de la scène sanitaire européenne.\n\nEn Angleterre, l'épidémie qui a débuté dans une discothèque de Canterbury compte désormais 34 cas et a causé deux décès. Les autorités britanniques ont lancé une vaste campagne de vaccination dans le Kent, avec plus de 5 800 vaccins déjà administrés.\n\nEn parallèle, la France connaît un cas tragique : une salariée de l'entreprise nucléaire Orano à La Hague est décédée d'une méningite. Cinquante collègues cas contacts ont été placés sous surveillance, mais la direction précise qu'aucun lien n'a été établi avec l'épidémie anglaise.\n\nCette situation rappelle la gravité de cette infection qui peut tuer en quelques heures. Pour les pharmaciens, c'est l'occasion de rappeler l'importance de la vaccination méningococcique, notamment chez les jeunes adultes.\n\nLes symptômes — fièvre, maux de tête intenses, raideur de nuque, éruption cutanée — nécessitent une prise en charge d'urgence. La proximité géographique avec l'Angleterre impose une vigilance renforcée.",
     source: "Le Monde",
     source_url: "https://www.lemonde.fr/international/article/2026/03/21/epidemie-de-meningites-en-angleterre-le-nombre-de-cas-repertories-monte-a-34_6673262_3210.html",
     tiktok_url: "",
@@ -1283,7 +1296,8 @@ function openModal(id) {
   document.getElementById('modal-badge').textContent = a.badge_label;
   document.getElementById('modal-date').textContent = formatDate(a.date);
   document.getElementById('modal-title').textContent = a.titre;
-  document.getElementById('modal-text').textContent = a.full_text || a.resume;
+  const rawText = a.full_text || a.resume;
+  document.getElementById('modal-text').innerHTML = rawText.split('\n\n').map(p => '<p>' + p.replace(/\n/g, '<br>') + '</p>').join('');
 
   // Image ou visuel par defaut
   const imgWrap = document.getElementById('modal-img-wrap');

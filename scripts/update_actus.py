@@ -108,9 +108,11 @@ Criteres de selection :
 Pour chaque article selectionne, genere :
 - un titre accrocheur (max 80 caracteres)
 - un resume de 2-3 phrases (informatif, factuel, engageant)
-- un texte complet de 150-250 mots (style journalistique accessible, tutoiement OK)
+- un texte complet de 150-250 mots structure en PLUSIEURS PARAGRAPHES separes par \\n\\n (4-5 paragraphes). Style journalistique accessible, phrases courtes et percutantes, tutoiement OK. Chaque paragraphe = une idee. Utilise des chiffres, des faits concrets. Commence par une accroche forte. Termine par l'impact pour le pharmacien ou le patient.
 - la categorie : "pharma_france", "pharma_monde" ou "sante"
 - le badge_label correspondant : "Pharma France", "Pharma Monde" ou "Sante"
+
+IMPORTANT pour full_text : le texte sera affiche en HTML avec des paragraphes <p>. Utilise \\n\\n pour separer chaque paragraphe. Ne fais PAS un bloc de texte continu.
 
 Reponds UNIQUEMENT en JSON valide, format :
 [
