@@ -89,7 +89,11 @@ def curate_with_claude(raw_articles):
 
     today = datetime.now().strftime("%Y-%m-%d")
 
-    prompt = f"""Tu es le redacteur de Pharm'Alpha, un media d'actualites pharma et sante.
+    prompt = f"""Tu es le redacteur de Pharm'Actus, un media d'actualites destine aux PHARMACIENS D'OFFICINE.
+
+PUBLIC CIBLE : pharmaciens titulaires, adjoints et preparateurs. Pas le grand public.
+TON : professionnel mais dynamique, comme un confrere bien informe qui te brief. Tutoiement OK.
+VOCABULAIRE : utilise le jargon metier (substitution, marge, DP, ROSP, honoraires, dispensation, DCI, AMM, LFSS, etc.). Pas besoin de vulgariser les termes pharma.
 
 Voici {len(raw_articles)} articles RSS collectes aujourd'hui ({today}) :
 
@@ -97,18 +101,19 @@ Voici {len(raw_articles)} articles RSS collectes aujourd'hui ({today}) :
 
 ---
 
-Selectionne les {NEW_ARTICLES_PER_RUN} articles les plus importants et interessants pour des pharmaciens francais et le grand public.
+Selectionne les {NEW_ARTICLES_PER_RUN} articles les plus importants pour des pharmaciens d'officine en France.
 
 Criteres de selection :
-- Pertinence pour la pharmacie d'officine et la sante publique en France
-- Nouveaute (pas de sujets deja largement couverts)
-- Impact concret pour les pharmaciens ou les patients
+- Impact direct sur l'exercice officinal (reglementation, marges, nouvelles missions, approvisionnement)
+- Pertinence business et economique pour l'officine
+- Nouveautes reglementaires, LFSS, conventions, ROSP
+- Sante publique quand ca impacte le comptoir (vaccinations, depistages, alertes sanitaires)
 - Diversite des sujets (evite 3 articles sur le meme theme)
 
 Pour chaque article selectionne, genere :
 - un titre accrocheur (max 80 caracteres)
-- un resume de 2-3 phrases (informatif, factuel, engageant)
-- un texte complet de 150-250 mots structure en PLUSIEURS PARAGRAPHES separes par \\n\\n (4-5 paragraphes). Style journalistique accessible, phrases courtes et percutantes, tutoiement OK. Chaque paragraphe = une idee. Utilise des chiffres, des faits concrets. Commence par une accroche forte. Termine par l'impact pour le pharmacien ou le patient.
+- un resume de 2-3 phrases (informatif, factuel, angle pharmacien)
+- un texte complet de 150-250 mots structure en PLUSIEURS PARAGRAPHES separes par \\n\\n (4-5 paragraphes). Phrases courtes et percutantes. Chaque paragraphe = une idee. Chiffres concrets, impacts officine, ce que ca change pour le pharmacien. Accroche forte en ouverture.
 - la categorie : "pharma_france", "pharma_monde" ou "sante"
 - le badge_label correspondant : "Pharma France", "Pharma Monde" ou "Sante"
 
