@@ -1431,7 +1431,6 @@ async function submitToBrevo(email, btn, msg, widgetId, captchaEl, onSuccess) {
     formData.append('EMAIL', email);
     formData.append('email_address_check', '');
     formData.append('locale', 'fr');
-    formData.append('g-recaptcha-response', captchaResponse);
     await fetch(BREVO_FORM_URL, { method: 'POST', body: formData, mode: 'no-cors' });
     msg.textContent = 'Merci ! Verifie ta boite mail pour confirmer.';
     msg.className = msg.className.replace(/ ?(success|error)/g, '') + ' success';
