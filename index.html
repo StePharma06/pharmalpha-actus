@@ -302,7 +302,7 @@ body {
 .grid {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 24px 48px;
+  padding: 0 24px 16px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   gap: 16px;
@@ -312,12 +312,15 @@ body {
 .section-title {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 24px 12px;
+  padding: 24px 24px 12px;
   font-size: 14px;
   font-weight: 600;
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.5px;
+}
+.section-title:first-child {
+  padding-top: 0;
 }
 
 /* === LIST VIEW (anciens articles) === */
@@ -920,14 +923,8 @@ body {
   <span>Dernière mise à jour : <strong id="stats-date"></strong></span>
 </div>
 
-<!-- GRID (6 dernieres actus en cards) -->
-<div class="grid" id="grid"></div>
-
-<!-- LIST (anciens articles) -->
-<div class="list-section" id="list-section" style="display:none;">
-  <div class="list-section-title">Articles precedents</div>
-  <div id="list"></div>
-</div>
+<!-- ARTICLES (groupes par date) -->
+<div id="articles-container"></div>
 
 <!-- MODAL -->
 <div class="modal-overlay" id="modal-overlay">
@@ -1273,7 +1270,6 @@ const ICONS = {
 // ============================================================
 // RENDERING
 // ============================================================
-const grid = document.getElementById('grid');
 const searchInput = document.getElementById('search');
 let currentFilter = 'all';
 
@@ -1328,8 +1324,6 @@ function renderListItem(a) {
 
 function renderArticles() {
   const query = searchInput.value.toLowerCase().trim();
-  const listSection = document.getElementById('list-section');
-  const listEl = document.getElementById('list');
 
   // Filtrage : par defaut, on exclut les LSV sauf si on clique sur l'onglet LSV
   let filtered = ARTICLES;
@@ -1350,24 +1344,40 @@ function renderArticles() {
     document.getElementById('stats-date').textContent = formatDate(latest.date);
   }
 
+  const container = document.getElementById('articles-container');
+
   if (filtered.length === 0) {
-    grid.innerHTML = '<div class="empty-state"><p>Aucun article ne correspond a votre recherche.</p></div>';
-    listSection.style.display = 'none';
+    container.innerHTML = '<div class="empty-state"><p>Aucun article ne correspond à votre recherche.</p></div>';
     return;
   }
 
-  // Cards : les 6 premiers
-  const cards = filtered.slice(0, CARDS_COUNT);
-  grid.innerHTML = cards.map((a, i) => renderCard(a, i)).join('');
+  // Grouper par Aujourd'hui / Hier / Précédemment
+  const now = new Date();
+  const todayStr = now.toISOString().slice(0, 10);
+  const yesterday = new Date(now);
+  yesterday.setDate(yesterday.getDate() - 1);
+  const yesterdayStr = yesterday.toISOString().slice(0, 10);
 
-  // Liste : les anciens (apres les 6 premiers)
-  const older = filtered.slice(CARDS_COUNT);
-  if (older.length > 0) {
-    listSection.style.display = 'block';
-    listEl.innerHTML = older.map(a => renderListItem(a)).join('');
-  } else {
-    listSection.style.display = 'none';
-  }
+  const groups = { today: [], yesterday: [], older: [] };
+  filtered.forEach(a => {
+    if (a.date === todayStr) groups.today.push(a);
+    else if (a.date === yesterdayStr) groups.yesterday.push(a);
+    else groups.older.push(a);
+  });
+
+  const labels = { today: "Aujourd'hui", yesterday: "Hier", older: "Précédemment" };
+  let html = '';
+  let cardIdx = 0;
+
+  ['today', 'yesterday', 'older'].forEach(key => {
+    if (groups[key].length === 0) return;
+    html += `<div class="section-title">${labels[key]}</div>`;
+    html += '<div class="grid">';
+    html += groups[key].map(a => renderCard(a, cardIdx++)).join('');
+    html += '</div>';
+  });
+
+  container.innerHTML = html;
 }
 
 // ============================================================
