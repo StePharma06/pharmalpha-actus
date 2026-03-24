@@ -270,7 +270,7 @@ def update_index_html(new_articles):
         default_source = "Pharm'Alpha"
         vals = {
             "id": article_id,
-            "date": a.get("date", today),
+            "date": today,
             "categorie": a.get("categorie", "sante"),
             "titre": esc(a.get("titre", "")),
             "resume": esc(a.get("resume", "")),
