@@ -162,7 +162,7 @@ def make_image_prompt(titre, resume, categorie):
     try:
         claude = anthropic.Anthropic()
         resp = claude.messages.create(
-            model="claude-haiku-3-20240307",
+            model="claude-haiku-4-5-20251001",
             max_tokens=300,
             messages=[{"role": "user", "content": (
                 f"Generate a DALL-E image prompt for this pharmacy news article.\n"
