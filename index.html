@@ -1369,13 +1369,20 @@ function renderArticles() {
   let html = '';
   let cardIdx = 0;
 
-  ['today', 'yesterday', 'older'].forEach(key => {
+  ['today', 'yesterday'].forEach(key => {
     if (groups[key].length === 0) return;
     html += `<div class="section-title">${labels[key]}</div>`;
     html += '<div class="grid">';
     html += groups[key].map(a => renderCard(a, cardIdx++)).join('');
     html += '</div>';
   });
+
+  if (groups.older.length > 0) {
+    html += `<div class="section-title">${labels.older}</div>`;
+    html += '<div class="list-section">';
+    html += groups.older.map(a => renderListItem(a)).join('');
+    html += '</div>';
+  }
 
   container.innerHTML = html;
 }
