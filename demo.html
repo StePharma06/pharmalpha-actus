@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pharm'Actus - Pipeline Demo</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0f172a; color: #e2e8f0; min-height: 100vh; }
+.header { background: #1e293b; padding: 20px 40px; display: flex; align-items: center; gap: 16px; border-bottom: 1px solid #334155; }
+.header img { height: 40px; }
+.header h1 { font-size: 20px; color: #f97316; }
+.header span { font-size: 13px; color: #94a3b8; }
+.container { max-width: 900px; margin: 40px auto; padding: 0 24px; }
+h2 { font-size: 24px; margin-bottom: 24px; color: #fff; text-align: center; }
+.pipeline { display: flex; flex-direction: column; gap: 0; }
+.step { background: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 20px 24px; opacity: 0.3; transform: translateY(10px); transition: all 0.5s ease; }
+.step.active { opacity: 1; transform: translateY(0); border-color: #f97316; }
+.step.done { opacity: 1; transform: translateY(0); border-color: #22c55e; }
+.step-header { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+.step-num { width: 32px; height: 32px; border-radius: 50%; background: #334155; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; }
+.step.active .step-num { background: #f97316; color: #fff; }
+.step.done .step-num { background: #22c55e; color: #fff; }
+.step-title { font-weight: 600; font-size: 16px; }
+.step-detail { color: #94a3b8; font-size: 14px; margin-left: 44px; line-height: 1.6; }
+.step-detail code { background: #334155; padding: 2px 6px; border-radius: 4px; font-size: 13px; color: #fbbf24; }
+.arrow { text-align: center; padding: 6px 0; color: #475569; font-size: 20px; }
+.article-preview { background: #1e293b; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; border-left: 3px solid #f97316; }
+.article-preview .badge { background: #f97316; color: #fff; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 600; }
+.article-preview h3 { margin-top: 8px; font-size: 16px; }
+.article-preview p { color: #94a3b8; font-size: 13px; margin-top: 6px; }
+.progress { height: 4px; background: #334155; border-radius: 2px; margin-top: 12px; margin-left: 44px; overflow: hidden; display: none; }
+.step.active .progress { display: block; }
+.progress-bar { height: 100%; background: #f97316; border-radius: 2px; width: 0%; transition: width 1.5s ease; }
+.status { text-align: center; margin-top: 32px; padding: 20px; border-radius: 12px; display: none; }
+.status.success { display: block; background: #14532d; border: 1px solid #22c55e; }
+.status.success h3 { color: #22c55e; font-size: 18px; }
+.status.success p { color: #86efac; font-size: 14px; margin-top: 4px; }
+.btn { display: block; margin: 32px auto 0; padding: 14px 32px; background: #f97316; color: #fff; border: none; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; }
+.btn:hover { background: #ea580c; }
+.tiktok-mock { display: none; margin-top: 20px; text-align: center; }
+.tiktok-mock .phone { width: 240px; height: 420px; background: #000; border-radius: 24px; margin: 0 auto; padding: 16px; border: 2px solid #333; display: flex; flex-direction: column; }
+.phone-header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 8px; }
+.phone-header span { font-size: 11px; color: #fff; }
+.phone-video { flex: 1; background: linear-gradient(135deg, #1e293b, #0f172a); border-radius: 8px; display: flex; align-items: center; justify-content: center; position: relative; }
+.phone-video .play-icon { font-size: 40px; opacity: 0.6; }
+.phone-video .overlay-text { position: absolute; bottom: 12px; left: 12px; right: 12px; text-align: left; }
+.phone-video .overlay-text .title { font-size: 11px; font-weight: 700; color: #fff; }
+.phone-video .overlay-text .author { font-size: 10px; color: #ccc; margin-top: 2px; }
+.phone-sidebar { display: flex; flex-direction: column; align-items: center; gap: 10px; padding-top: 12px; }
+.phone-sidebar span { font-size: 9px; color: #aaa; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <img src="assets/logo_pharmalpha_wide.png" alt="Logo">
+  <div>
+    <h1>Pipeline TikTok - Demo</h1>
+    <span>Automated pharmacy news video publishing</span>
+  </div>
+</div>
+
+<div class="container">
+  <h2>Publication automatique vers TikTok</h2>
+
+  <div class="article-preview">
+    <span class="badge">Pharma France</span>
+    <h3>Biosimilaires : la LFSS 2026 change la donne en officine</h3>
+    <p>La LFSS 2026 elargit le droit de substitution des biosimilaires et introduit un interessement financier pour les officines.</p>
+  </div>
+
+  <div class="pipeline" id="pipeline">
+    <div class="step" id="step1">
+      <div class="step-header">
+        <div class="step-num">1</div>
+        <div class="step-title">Curation des articles (Claude API)</div>
+      </div>
+      <div class="step-detail">
+        Selection des 3 actus les plus pertinentes via <code>claude-sonnet</code><br>
+        Generation du script video adapte au format TikTok
+      </div>
+      <div class="progress"><div class="progress-bar" id="pb1"></div></div>
+    </div>
+    <div class="arrow">&#8595;</div>
+
+    <div class="step" id="step2">
+      <div class="step-header">
+        <div class="step-num">2</div>
+        <div class="step-title">Voix off (ElevenLabs API)</div>
+      </div>
+      <div class="step-detail">
+        Clone vocal du pharmacien via <code>ElevenLabs TTS</code><br>
+        Voice ID: <code>KIyasN9xQV0jNBAovEeb</code>
+      </div>
+      <div class="progress"><div class="progress-bar" id="pb2"></div></div>
+    </div>
+    <div class="arrow">&#8595;</div>
+
+    <div class="step" id="step3">
+      <div class="step-header">
+        <div class="step-num">3</div>
+        <div class="step-title">Image (DALL-E API)</div>
+      </div>
+      <div class="step-detail">
+        Generation d'une image editoriale via <code>dall-e-3</code><br>
+        Prompt contextuel genere par Claude Haiku
+      </div>
+      <div class="progress"><div class="progress-bar" id="pb3"></div></div>
+    </div>
+    <div class="arrow">&#8595;</div>
+
+    <div class="step" id="step4">
+      <div class="step-header">
+        <div class="step-num">4</div>
+        <div class="step-title">Assemblage video (Creatomate API)</div>
+      </div>
+      <div class="step-detail">
+        Template faceless : image + sous-titres + voix off<br>
+        Rendu en <code>1080x1920</code> (format TikTok 9:16)
+      </div>
+      <div class="progress"><div class="progress-bar" id="pb4"></div></div>
+    </div>
+    <div class="arrow">&#8595;</div>
+
+    <div class="step" id="step5">
+      <div class="step-header">
+        <div class="step-num">5</div>
+        <div class="step-title">Publication TikTok (Content Posting API)</div>
+      </div>
+      <div class="step-detail">
+        Upload via <code>video.upload</code> + publication via <code>video.publish</code><br>
+        Scopes : video.upload, video.publish
+      </div>
+      <div class="progress"><div class="progress-bar" id="pb5"></div></div>
+    </div>
+  </div>
+
+  <button class="btn" id="startBtn" onclick="startDemo()">Lancer la demo</button>
+
+  <div class="status success" id="successMsg">
+    <h3>Video publiee avec succes sur TikTok</h3>
+    <p>@pharmalpha - Biosimilaires : la LFSS 2026 change la donne en officine</p>
+  </div>
+
+  <div class="tiktok-mock" id="tiktokMock">
+    <div class="phone">
+      <div class="phone-header">
+        <span>Pour toi</span>
+        <span>Suivre</span>
+      </div>
+      <div class="phone-video">
+        <div class="play-icon">&#9654;</div>
+        <div class="overlay-text">
+          <div class="title">Biosimilaires : la LFSS 2026 change la donne en officine</div>
+          <div class="author">@pharmalpha</div>
+        </div>
+      </div>
+      <div class="phone-sidebar">
+        <span>&#10084; 142</span>
+        <span>&#128172; 23</span>
+        <span>&#8618; 8</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function startDemo() {
+  document.getElementById('startBtn').style.display = 'none';
+  const steps = [1,2,3,4,5];
+  let i = 0;
+
+  function runStep() {
+    if (i >= steps.length) {
+      document.getElementById('successMsg').style.display = 'block';
+      document.getElementById('tiktokMock').style.display = 'block';
+      return;
+    }
+    const n = steps[i];
+    const el = document.getElementById('step' + n);
+    // Mark previous as done
+    if (i > 0) {
+      document.getElementById('step' + steps[i-1]).classList.remove('active');
+      document.getElementById('step' + steps[i-1]).classList.add('done');
+      document.getElementById('step' + steps[i-1]).querySelector('.step-num').textContent = '✓';
+    }
+    el.classList.add('active');
+    const pb = document.getElementById('pb' + n);
+    setTimeout(() => { pb.style.width = '100%'; }, 100);
+    i++;
+    setTimeout(runStep, 2000);
+  }
+  runStep();
+}
+</script>
+</body>
+</html>
