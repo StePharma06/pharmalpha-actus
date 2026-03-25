@@ -433,7 +433,7 @@ def build_newsletter_html(articles):
   <tr><td style="padding:{pad} 32px 0;">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
       <tr><td><span style="display:inline-block;background:{bg};color:{fg};font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.4px;">{a.get("badge_label","")}</span></td></tr>
-      <tr><td style="padding-top:10px;"><a href="https://stepharma06.github.io/pharmalpha-actus/" style="font-size:18px;font-weight:700;color:#1a1a1a;text-decoration:none;line-height:1.35;">{a.get("titre","")}</a></td></tr>
+      <tr><td style="padding-top:10px;"><a href="https://actus.pharmalpha.fr/" style="font-size:18px;font-weight:700;color:#1a1a1a;text-decoration:none;line-height:1.35;">{a.get("titre","")}</a></td></tr>
       <tr><td style="padding-top:8px;"><p style="margin:0;font-size:14px;color:#555;line-height:1.6;">{a.get("resume","")}</p></td></tr>
       <tr><td style="padding-top:10px;"><span style="font-size:12px;color:#888;">Source : {a.get("source","")}</span></td></tr>
     </table>
@@ -448,7 +448,7 @@ def build_newsletter_html(articles):
       <tr><td style="padding:20px 24px;">
         <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
           <tr><td><span style="display:inline-block;background:#ede9fe;color:#7c3aed;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.4px;">Le Saviez-Vous</span></td></tr>
-          <tr><td style="padding-top:12px;"><a href="https://stepharma06.github.io/pharmalpha-actus/" style="font-size:18px;font-weight:700;color:#1a1a1a;text-decoration:none;line-height:1.35;">{lsv.get("titre","")}</a></td></tr>
+          <tr><td style="padding-top:12px;"><a href="https://actus.pharmalpha.fr/" style="font-size:18px;font-weight:700;color:#1a1a1a;text-decoration:none;line-height:1.35;">{lsv.get("titre","")}</a></td></tr>
           <tr><td style="padding-top:8px;"><p style="margin:0;font-size:14px;color:#555;line-height:1.6;">{lsv.get("resume","")}</p></td></tr>
         </table>
       </td></tr>
@@ -481,7 +481,7 @@ def build_newsletter_html(articles):
   <tr><td style="padding:28px 32px 0;" align="center">
     <table role="presentation" cellpadding="0" cellspacing="0"><tr>
       <td style="background:#f97316;border-radius:8px;">
-        <a href="https://stepharma06.github.io/pharmalpha-actus/" style="display:inline-block;padding:14px 32px;color:#ffffff;font-size:15px;font-weight:700;text-decoration:none;letter-spacing:0.3px;">Lire les articles complets &rarr;</a>
+        <a href="https://actus.pharmalpha.fr/" style="display:inline-block;padding:14px 32px;color:#ffffff;font-size:15px;font-weight:700;text-decoration:none;letter-spacing:0.3px;">Lire les articles complets &rarr;</a>
       </td>
     </tr></table>
   </td></tr>
@@ -494,9 +494,9 @@ def build_newsletter_html(articles):
       </p>
       <p style="margin:0;font-size:11px;color:#aaa;line-height:1.5;">
         Tu re&ccedil;ois cet email car tu t'es inscrit(e) sur
-        <a href="https://stepharma06.github.io/pharmalpha-actus/" style="color:#888;">Pharm'Actus</a>.<br>
+        <a href="https://actus.pharmalpha.fr/" style="color:#888;">Pharm'Actus</a>.<br>
         <a href="{{{{ unsubscribe }}}}" style="color:#888;">Se d&eacute;sinscrire</a> &bull;
-        <a href="https://stepharma06.github.io/pharmalpha-actus/" style="color:#888;">Voir en ligne</a>
+        <a href="https://actus.pharmalpha.fr/" style="color:#888;">Voir en ligne</a>
       </p>
     </div>
   </td></tr>
