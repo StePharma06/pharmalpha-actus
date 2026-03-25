@@ -391,12 +391,25 @@ body {
   background: var(--bg-card);
   border: 1px solid var(--border-light);
   border-radius: var(--radius);
-  padding: 22px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+.card-body {
+  padding: 18px 22px 22px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  transition: all 0.2s;
-  box-shadow: var(--shadow);
+  flex: 1;
 }
 .card:hover {
   box-shadow: var(--shadow-lg);
@@ -1014,7 +1027,7 @@ const ARTICLES = [
     source_url: "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/egalisation-des-marges-sur-les-vaccins-antigrippaux-une-premiere-bataille-gagnee-mais",
     tiktok_url: "",
     badge_label: "Pharma France",
-    image_url: ""
+    image_url: "assets/img_actu_2026_03_25_1_b.jpg"
   },
   {
     id: "actu_2026_03_25_2_b",
@@ -1028,7 +1041,7 @@ const ARTICLES = [
     source_url: "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/aide-a-mourir-de-la-necessite-de-clarifier-la-place-du-pharmacien",
     tiktok_url: "",
     badge_label: "Pharma France",
-    image_url: ""
+    image_url: "assets/img_actu_2026_03_25_2_b.jpg"
   },
   {
     id: "actu_2026_03_25_3_b",
@@ -1042,7 +1055,7 @@ const ARTICLES = [
     source_url: "http://www.lequotidiendupharmacien.fr/le-conseil-detat-saisi-sur-la-question-des-penuries-de-psychotropes",
     tiktok_url: "",
     badge_label: "Pharma France",
-    image_url: ""
+    image_url: "assets/img_actu_2026_03_25_3_b.jpg"
   },
   {
     id: "lsv_2026_03_25",
@@ -1051,140 +1064,70 @@ const ARTICLES = [
     categorie: "lsv",
     titre: "Le saviez-vous ? Quand la morphine était vendue en pharmacie sans ordonnance",
     resume: "Tu croyais que les opioïdes c'était hyper réglementé depuis toujours ? Figure-toi que jusqu'aux années 1920, tu pouvais acheter de la morphine comme du paracétamol aujourd'hui. Spoiler alert : ça a créé un vrai problème de santé publique.",
-    full_text: "Imagine un peu. Début du XXe siècle, tu entres dans une pharmacie parisienne ou new-yorkaise. Le pharmacien te propose de la morphine en flacon, de l'opium en poudre, de la codéine en sirop pour la toux. Zéro ordonnance, zéro question. C'était juste... un produit de base du comptoir, comme l'aspirine.\n\nLa morphine, découverte en 1805 par le pharmacien allemand Friedrich Sertürner, était devenue LA molécule miracle. Douleurs ? Morphine. Insomnie ? Morphine. Diarrhée ? Morphine aussi, tiens. Les labos l'ajoutaient partout : toniques, sirops, pommades. C'était le remède universel. Et puis il y a eu les guerres. Les soldats blessés recevaient de la morphine en masse. Certains sont revenus... dépendants. Très dépendants.\n\nLe truc fou ? Personne ne parlait de dépendance à l'époque. On appelait ça une « habitude ». Les médecins prescrivaient, les pharmaciens vendaient, les gens consommaient. Jusqu'à ce qu'on réalise qu'on avait créé une génération entière de dépendants.\n\nC'est pour ça qu'en 1920-1930, les gouvernements ont dit : stop. Fini la vente libre. La morphine devient un médicament strictement réglementé. Les États-Unis passent le Harrison Narcotic Tax Act en 1914. La France emboîte le pas. Et nous, pharmaciens, on devient les gardiens d'une frontière très claire entre « produit de vente libre » et « médicament dangereux ».\n\nAujourd'hui au comptoir, quand un patient te demande un tramadol ou de la codéine, tu sais exactement pourquoi tu dois demander une ordonnance. C'est pas juste de la bureaucratie. C'est le fruit d'une leçon coûteuse du siècle dernier.",
+    full_text: "Imagine un peu. Début du XXe siècle, tu entres dans une pharmacie parisienne ou new-yorkaise. Le pharmacien te propose de la morphine en flacon, de l'opium en poudre, de la codéine en sirop pour la toux. Zéro ordonnance, zéro question. C'était juste... un produit de base du comptoir, comme l'aspirine.\n\nLa morphine, découverte en 1805 par le pharmacien allemand Friedrich Sertürner, était devenue LA molécule miracle. Douleurs ? Morphine. Insomnie ? Morphine. Diarrhée ? Morphine aussi, tiens. Les labos l'ajoutaient partout : toniques, sirops, pommades. C'était le remède universel. Et puis il y a eu les guerres. Les soldats blessés recevaient de la morphine en masse. Certains sont revenus... dépendants. Très dépendants.\n\nLe truc fou ? Personne ne parlait de dépendance à l'époque. On appelait ça une \" habitude \". Les médecins prescrivaient, les pharmaciens vendaient, les gens consommaient. Jusqu'à ce qu'on réalise qu'on avait créé une génération entière de dépendants.\n\nC'est pour ça qu'en 1920-1930, les gouvernements ont dit : stop. Fini la vente libre. La morphine devient un médicament strictement réglementé. Les États-Unis passent le Harrison Narcotic Tax Act en 1914. La France emboîte le pas. Et nous, pharmaciens, on devient les gardiens d'une frontière très claire entre \" produit de vente libre \" et \" médicament dangereux \".\n\nAujourd'hui au comptoir, quand un patient te demande un tramadol ou de la codéine, tu sais exactement pourquoi tu dois demander une ordonnance. C'est pas juste de la bureaucratie. C'est le fruit d'une leçon coûteuse du siècle dernier.",
     source: "Pharm'Alpha",
     source_url: "",
     tiktok_url: "",
     badge_label: "Le Saviez-Vous",
-    image_url: ""
-  },
-{
-    id: "actu_2026_03_25_1",
-    date: "2026-03-25",
-    type: "actu",
-    categorie: "pharma_france",
-    titre: "Pharmacies allemandes en grève : alerte pour l'économie officinale",
-    resume: "En Allemagne, l'honoraire de dispensation reste bloqué à 8,35 euros depuis 2013 malgré 65% d'inflation des coûts. Une situation qui fait écho aux difficultés économiques croissantes des pharmaciens français.",
-    full_text: "Outre-Rhin, la profession tire la sonnette d'alarme. Les pharmaciens allemands voient leurs honoraires de dispensation gelés à 8,35 euros par boîte depuis plus de 13 ans, alors que leurs coûts d'exploitation ont explosé de 65%.\n\nCette situation interpelle directement nos confrères français qui font face aux mêmes pressions économiques. L'association ADOP confirme d'ailleurs une hausse des appels de pharmaciens en détresse financière, signe que le modèle économique officinal français tangue aussi.\n\nLe gouvernement allemand avait pourtant promis de porter cet honoraire à 9,50 euros dans son contrat de coalition. Une promesse non tenue qui pousse les syndicats à la grève, réclamant des mesures d'urgence pour sauver un réseau officinal en péril.\n\nCette crise allemande préfigure-t-elle l'avenir français ? Avec la pression constante sur nos marges et la multiplication des missions non rémunérées, notre modèle économique pourrait suivre la même trajectoire si rien n'est fait rapidement.",
-    source: "Le Moniteur des Pharmacies",
-    source_url: "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/pharmacies-allemandes-en-greve-un-avertissement-pour-leconomie-officinale-francaise",
-    tiktok_url: "",
-    badge_label: "Pharma France",
-    image_url: "assets/img_actu_2026_03_25_1.png"
+    image_url: "assets/img_lsv_2026_03_25.jpg"
   },
   {
-    id: "actu_2026_03_25_2",
-    date: "2026-03-25",
-    type: "actu",
-    categorie: "pharma_france",
-    titre: "Vaccins méningocoques : remboursement élargi aux enfants 2020-2024",
-    resume: "Nimenrix, Menveo et Bexsero sont désormais remboursables pour le rattrapage vaccinal des enfants nés entre 2020 et 2024. Menquadfi rejoint également cette liste temporaire.",
-    full_text: "Excellente nouvelle pour tes patients et ton CA vaccination ! L'Assurance maladie vient d'élargir le remboursement des vaccins antiméningococciques pour rattraper la population non concernée par l'obligation vaccinale.\n\nConcrètement, tu peux désormais facturer Nimenrix, Menveo (ACWY) et Bexsero (B) aux enfants nés en 2020, 2021, 2022, 2023 et 2024. Menquadfi obtient aussi son remboursement temporaire sur cette même tranche d'âge.\n\nCette extension de prise en charge corrige enfin le décalage entre les recommandations HAS et la réalité du terrain. Plus besoin d'expliquer aux parents pourquoi leur enfant de 4 ans n'était pas remboursé alors que les plus jeunes l'étaient.\n\nOpportunité business à saisir : ces vaccins représentent un potentiel de plusieurs centaines d'euros par enfant. Pense à relancer tes patients concernés et à informer les parents sur cette nouvelle prise en charge temporaire.",
-    source: "Le Quotidien du Pharmacien",
-    source_url: "http://www.lequotidiendupharmacien.fr/exercice-pro/vaccins-meningococciques-b-et-acwy-tous-rembourses-pour-les-enfants-nes-entre-2020-et-2024",
-    tiktok_url: "",
-    badge_label: "Pharma France",
-    image_url: "assets/img_actu_2026_03_25_2.png"
-  },
-  {
-    id: "actu_2026_03_25_3",
-    date: "2026-03-25",
-    type: "actu",
-    categorie: "pharma_france",
-    titre: "Alerte DPC : vols d'identifiants, l'Ordre met en garde",
-    resume: "Des sociétés frauduleuses usurpent l'identité d'organismes de formation pour voler les identifiants de comptes DPC des pharmaciens. L'Ordre alerte sur ces pratiques bien rodées.",
-    full_text: "Attention aux arnaques DPC ! L'Ordre national vient d'alerter sur une recrudescence de fraudes visant directement nos comptes de développement professionnel continu.\n\nLe modus operandi est bien huilé : des sociétés se font passer pour des organismes de formation légitimes et te contactent pour récupérer tes identifiants ANDPC. Une fois en possession de tes codes, elles s'inscrivent à ta place à des formations fictives.\n\nLes conséquences sont lourdes pour toi : obligation DPC non respectée, budget formation détourné, et potentiels problèmes avec l'Ordre. Sans compter que tu te retrouves privé de tes droits réels à la formation.\n\nRègle d'or : ne communique jamais tes identifiants par téléphone ou mail. Connecte-toi toujours directement sur le site officiel ANDPC. En cas de doute, contacte directement l'organisme de formation par ses canaux officiels.",
-    source: "Le Moniteur des Pharmacies",
-    source_url: "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/lordre-alerte-sur-des-vols-didentifiants-de-compte-de-dpc",
-    tiktok_url: "",
-    badge_label: "Pharma France",
-    image_url: "assets/img_actu_2026_03_25_3.png"
-  },
-{
     id: "actu_2026_03_24_1",
     date: "2026-03-24",
     type: "actu",
     categorie: "pharma_france",
-    titre: "Problèmes économiques : les pharmaciens de plus en plus fragiles",
-    resume: "L'ADOP reçoit de plus en plus d'appels de confrères en proie à des difficultés économiques. Cette tendance marquante révèle une fragilisation croissante de la profession. La plateforme d'écoute est disponible 7j/7 pour accompagner les pharmaciens en détresse.",
-    full_text: "Alerte sur le moral des pharmaciens : l'association ADOP (Aide et dispositif d'orientation des pharmaciens) enregistre une hausse significative des appels liés aux problèmes économiques. Cette ligne d'écoute spécialisée pour les pharmaciens constate une évolution préoccupante des motifs de contact.\n\nLa crise économique frappe de plein fouet les officines. Entre la pression sur les marges, les tensions d'approvisionnement et l'évolution des habitudes de consommation, de nombreux confrères se retrouvent en difficulté financière. Ces problèmes économiques pèsent directement sur leur santé mentale.\n\nL'ADOP propose un accompagnement gratuit et confidentiel, 7 jours sur 7. Les pharmaciens titulaires, adjoints et préparateurs peuvent y trouver une oreille attentive et des conseils adaptés à leur situation professionnelle spécifique.\n\nCette tendance révélée lors du salon PharmagoraPlus témoigne d'une profession sous tension. Face à la multiplication des défis économiques, l'entraide professionnelle devient cruciale pour préserver l'équilibre du réseau officinal français.",
+    titre: "Pharmaciens en galère : l'ADOP tire la sonnette d'alarme",
+    resume: "L'ADOP croule sous les appels de pharmaciens en difficulté financière. Le moral de la profession est au plus bas. Si tu te sens isolé, tu n'es pas seul — et il existe des solutions.",
+    full_text: "Ça fait mal à lire, mais il faut en parler. L'ADOP — la ligne d'écoute dédiée aux pharmaciens — voit les appels exploser. Et le motif principal ? L'argent.\n\nPression sur les marges, charges qui grimpent, approvisionnement en dents de scie... Le cocktail est toxique. Et quand les finances flanchent, le moral suit. C'est mécanique.\n\nSi tu te reconnais là-dedans, sache que tu n'es pas seul. L'ADOP propose un accompagnement gratuit et confidentiel, 7j/7. Que tu sois titulaire, adjoint ou préparateur, tu peux appeler et trouver une oreille qui comprend ta réalité.\n\nCe constat, révélé à PharmagoraPlus, c'est un signal fort. La profession souffre. Et la première étape pour s'en sortir, c'est d'en parler.",
     source: "Le Quotidien du Pharmacien",
     source_url: "http://www.lequotidiendupharmacien.fr/exercice-pro/les-problemes-economiques-pesent-de-plus-en-plus-sur-le-moral-des-pharmaciens",
     tiktok_url: "",
     badge_label: "Pharma France",
-    image_url: "assets/img_actu_2026_03_24_1.png"
+    image_url: "assets/img_actu_2026_03_24_1.jpg"
   },
   {
     id: "actu_2026_03_24_2",
     date: "2026-03-24",
     type: "actu",
     categorie: "pharma_france",
-    titre: "Nimenrix, Menveo, Bexsero : remboursement élargi dès maintenant",
-    resume: "Les vaccins anti-méningocoques Nimenrix, Menveo et Bexsero sont désormais remboursables pour le rattrapage vaccinal des enfants nés entre 2020 et 2022. Cette population échappait jusqu'ici à l'obligation vaccinale entrée en vigueur en 2023.",
-    full_text: "Bonne nouvelle pour le rattrapage vaccinal : l'Assurance maladie étend la prise en charge des vaccins anti-méningocoques à une population jusqu'ici oubliée. Les enfants nés en 2020, 2021 et 2022 peuvent désormais bénéficier du remboursement.\n\nCette mesure concerne trois spécialités clés de ton stock vaccinal : Nimenrix et Menveo (méningocoques A, C, W, Y) et Bexsero (méningocoque B). Ces enfants n'étaient pas concernés par l'obligation vaccinale mise en place pour les nourrissons nés à partir de 2023.\n\nConcrètement, tu peux dès maintenant facturer ces vaccins à l'Assurance maladie pour cette tranche d'âge spécifique. Pense à vérifier les dates de naissance sur les ordonnances pour t'assurer de l'éligibilité.\n\nCette extension de prise en charge s'inscrit dans la stratégie de protection contre les infections invasives à méningocoques. Une opportunité à saisir pour rattraper ces cohortes et renforcer la couverture vaccinale de ta patientèle pédiatrique.",
+    titre: "Vaccins méningo : remboursement élargi, c'est maintenant !",
+    resume: "Nimenrix, Menveo et Bexsero sont remboursés pour les enfants nés entre 2020 et 2022. Si t'as des parents qui hésitaient à cause du prix, c'est le moment de les relancer.",
+    full_text: "L'Assurance maladie vient d'élargir le remboursement des vaccins anti-méningocoques. Et ça concerne une tranche d'âge qu'on avait un peu oubliée.\n\nConcrètement : les enfants nés en 2020, 2021 et 2022 peuvent maintenant se faire vacciner avec Nimenrix, Menveo (ACWY) et Bexsero (B) avec prise en charge. Ces gamins n'étaient pas concernés par l'obligation vaccinale de 2023. Un trou dans la raquette, corrigé.\n\nAu comptoir, ça change quoi ? Tu peux facturer directement. Vérifie bien la date de naissance sur l'ordonnance et c'est parti.\n\nEt surtout : pense à relancer les parents concernés. Beaucoup ont zappé la vaccination parce que c'était pas remboursé. Maintenant, il n'y a plus d'excuse.",
     source: "Le Quotidien du Pharmacien",
-    source_url: "http://www.lequotidiendupharmacien.fr/medicament-parapharmacie/nimenrix-menveo-et-bexsero-remboursables-chez-les-enfants-nes-depuis-2020",
+    source_url: "http://www.lequotidiendupharmacien.fr/exercice-pro/vaccins-meningococciques-b-et-acwy-tous-rembourses-pour-les-enfants-nes-entre-2020-et-2024",
     tiktok_url: "",
     badge_label: "Pharma France",
-    image_url: "assets/img_actu_2026_03_24_2.png"
+    image_url: "assets/img_actu_2026_03_24_2.jpg"
   },
   {
     id: "actu_2026_03_24_3",
     date: "2026-03-24",
     type: "actu",
     categorie: "sante",
-    titre: "Méningite : alerte en Angleterre, un cas mortel en France",
-    resume: "Une épidémie de méningite touche l'Angleterre avec 34 cas et 2 décès. En France, un cas mortel est survenu chez une salariée d'Orano à La Hague, sans lien établi avec l'épidémie britannique. Une surveillance renforcée est mise en place.",
-    full_text: "L'actualité méningite s'emballe : l'Angleterre fait face à une épidémie inhabituelle avec 34 cas recensés, dont 2 mortels. L'épicentre se situe dans le Kent, autour d'une discothèque de Canterbury, déclenchant une vaste campagne de vaccination préventive.\n\nEn France, la vigilance est de mise après le décès d'une salariée d'Orano à La Hague (Manche). L'entreprise a identifié une cinquantaine de cas contacts et renforcé ses mesures sanitaires. Aucun lien n'est établi avec l'épidémie britannique selon la direction.\n\nLa méningite bactérienne constitue la forme la plus dangereuse selon l'OMS, particulièrement chez les jeunes. Les symptômes associent fièvre, maux de tête intenses, raideur de nuque et parfois éruption cutanée.\n\nReste vigilant sur les demandes de conseils concernant ces symptômes. En cas de suspicion, orientation immédiate vers les urgences. La rapidité du diagnostic et du traitement antibiotique conditionne le pronostic de cette infection redoutable.",
+    titre: "Méningite : ça chauffe en Angleterre, vigilance au comptoir",
+    resume: "34 cas en Angleterre, 2 décès, un mort en France à La Hague. L'épidémie est surveillée de près. Prépare-toi aux questions des patients et vérifie tes stocks de vaccins.",
+    full_text: "L'Angleterre fait face à une épidémie de méningite sérieuse : 34 cas, 2 décès. L'épicentre ? Canterbury, une discothèque. Les Anglais vaccinent à tour de bras dans le Kent.\n\nEn France, on n'est pas directement touchés, mais un décès à La Hague (salariée d'Orano) a mis tout le monde en alerte. 50 cas contacts sous surveillance. Pas de lien avec l'épisode anglais, mais la proximité géographique impose la prudence.\n\nCe que ça change pour toi : les patients vont poser des questions. Les parents vont flipper. Les demandes de vaccination vont augmenter, surtout chez les 16-24 ans.\n\nLes signaux d'alerte à connaître : fièvre brutale, céphalées intenses, raideur de nuque, purpura. Si un patient te décrit ça, c'est urgence absolue. Orientation immédiate aux urgences, pas de tergiversation.",
     source: "France Info Sante",
-    source_url: "https://www.franceinfo.fr/sante/maladie/meningite/meningite-grand-danger-pour-les-plus-jeunes_7889306.html#xtor=RSS-3-%5Bgeneral%5D",
+    source_url: "https://www.franceinfo.fr/sante/maladie/meningite/meningite-grand-danger-pour-les-plus-jeunes_7889306.html",
     tiktok_url: "",
     badge_label: "Sante",
-    image_url: "assets/img_actu_2026_03_24_3.png"
-  },
-{
-    id: "actu_2026_03_23_1_b",
-    date: "2026-03-23",
-    type: "actu",
-    categorie: "pharma_france",
-    titre: "Biosimilaires : 2026, l'année de la substitution en officine ?",
-    resume: "Malgré des mesures incitatives dans la loi de financement 2026, la substitution des biosimilaires reste timide en officine. Les pharmaciens peuvent désormais jouer un rôle clé dans cette révolution thérapeutique qui représente des enjeux économiques majeurs.",
-    full_text: "Les biosimilaires peinent encore à décoller dans les officines françaises. Pourtant, ces médicaments équivalents aux biomédicaments de référence représentent un enjeu économique colossal pour l'Assurance maladie.\n\nLa loi de financement de la Sécurité sociale 2026 a introduit de nouvelles mesures pour encourager leur substitution. Les pharmaciens disposent désormais d'outils renforcés pour proposer ces alternatives moins coûteuses, notamment dans des domaines thérapeutiques comme la rhumatologie ou la dermatologie.\n\nMais les volumes restent modestes comparés au potentiel. Les réticences des patients et parfois des prescripteurs freinent encore l'adoption de ces traitements. La formation et l'information restent cruciales pour lever les appréhensions.\n\nLes biosimilaires peuvent générer des économies substantielles tout en maintenant la même efficacité thérapeutique. Pour les pharmaciens, c'est aussi une opportunité de valoriser leur rôle de conseil et d'accompagnement.\n\nL'année 2026 pourrait marquer un tournant si les professionnels s'emparent pleinement de ces nouveaux leviers réglementaires. L'enjeu est double : optimiser les dépenses de santé tout en garantissant un accès équitable aux innovations thérapeutiques.",
-    source: "Le Moniteur des Pharmacies",
-    source_url: "https://www.lemoniteurdespharmacies.fr/business/marches/medicaments-biosimilaires-2026-vers-une-substitution-reussie",
-    tiktok_url: "",
-    badge_label: "Pharma France",
-    image_url: "assets/img_actu_2026_03_23_1_b.png"
+    image_url: "assets/img_actu_2026_03_24_3.jpg"
   },
   {
-    id: "actu_2026_03_23_2_b",
-    date: "2026-03-23",
-    type: "actu",
-    categorie: "pharma_monde",
-    titre: "17 grands labos suppriment 22 000 emplois face au mur des brevets",
-    resume: "Les géants pharmaceutiques ont massivement réduit leurs effectifs en 2025, avec plus de 22 000 suppressions d'emplois. En cause : un mur de brevets de 300 milliards de dollars qui menace leurs revenus futurs.",
-    full_text: "L'industrie pharmaceutique traverse une période de turbulences sans précédent. En 2025, dix-sept grands laboratoires ont supprimé collectivement plus de 22 000 emplois, selon une analyse de FiercePharma.\n\nCette hémorragie s'explique par l'approche du fameux \"patent cliff\" : un mur de brevets représentant 300 milliards de dollars de chiffre d'affaires qui va tomber dans le domaine public. Des blockbusters perdront leur exclusivité, ouvrant la voie aux génériques et biosimilaires.\n\nLes laboratoires anticipent cette chute de revenus en réduisant drastiquement leurs coûts. Recherche et développement, marketing, production : tous les secteurs sont touchés par ces restructurations massives.\n\nCette situation pourrait paradoxalement profiter aux systèmes de santé européens. L'arrivée de versions génériques de médicaments coûteux permettra des économies substantielles sur les budgets médicaments.\n\nPour les pharmaciens, ces bouleversements industriels annoncent une période de transition. Il faudra accompagner patients et prescripteurs vers ces nouvelles alternatives thérapeutiques moins onéreuses mais tout aussi efficaces.",
-    source: "FiercePharma",
-    source_url: "https://www.fiercepharma.com/pharma/large-pharma-companies-reduced-headcount-over-22000-2025-300b-patent-cliff-looms",
+    id: "lsv_1",
+    date: "2026-03-24",
+    type: "lsv",
+    categorie: "lsv",
+    titre: "Le saviez-vous ? De l'écorce de saule à l'acide acétylsalicylique",
+    resume: "3 500 ans d'histoire pharmacologique. Du saule blanc des Égyptiens à la synthèse de Hoffmann en 1897 : retour sur la naissance du premier médicament industriel.",
+    full_text: "L'acide acétylsalicylique, qu'on dispense chaque jour au comptoir, a 3 500 ans d'histoire pharmacologique derrière lui.\n\nTout commence avec le saule blanc (Salix alba). Les Égyptiens utilisaient déjà des décoctions d'écorce comme antipyrétique et antalgique. Le principe actif, la salicine, est un glucoside qui sera isolé en 1829 par Pierre-Joseph Leroux, pharmacien français.\n\nEn 1853, Charles Frédéric Gerhardt (chimiste alsacien) réalise la première acétylation de l'acide salicylique. Mais c'est Felix Hoffmann, chimiste chez Bayer, qui stabilise la synthèse en 1897. Motivation : son père souffrait de polyarthrite rhumatoïde et ne tolérait plus le salicylate de sodium (trop gastrotoxique).\n\n1899 : Bayer commercialise l'Aspirine. Premier médicament industriel sous forme de comprimé. Le nom vient du \"a\" d'acétyl et de \"spir\" pour Spiraea (la reine-des-prés, autre source de salicylés).\n\nAujourd'hui, 40 000 tonnes/an dans le monde. Et on découvre encore de nouvelles indications : au-delà de l'analgésie et l'antiagrégation plaquettaire, des études explorent son rôle en prévention du cancer colorectal. Une molécule qu'on n'a pas fini d'étudier.",
+    source: "Pharm'Alpha",
+    source_url: "",
     tiktok_url: "",
-    badge_label: "Pharma Monde",
-    image_url: "assets/img_actu_2026_03_23_2_b.png"
+    badge_label: "Le Saviez-Vous",
+    image_url: "assets/img_lsv_1.jpg"
   },
   {
-    id: "actu_2026_03_23_3_b",
-    date: "2026-03-23",
-    type: "actu",
-    categorie: "sante",
-    titre: "Épidémie de méningite : 34 cas confirmés en Angleterre",
-    resume: "Une épidémie de méningite frappe l'Angleterre avec 34 cas recensés et 2 décès. Une vaste campagne de vaccination est déployée. En France, un cas mortel sans lien établi inquiète à Cherbourg.",
-    full_text: "L'alerte sanitaire monte d'un cran outre-Manche. L'épidémie de méningite qui sévit en Angleterre depuis plusieurs semaines a désormais touché 34 personnes, causant deux décès.\n\nL'épicentre se situe dans le Kent, notamment autour de Canterbury, où une discothèque semble être à l'origine de la contamination. Les autorités britanniques ont lancé une campagne de vaccination massive, avec déjà près de 6 000 doses administrées.\n\nEn France, les autorités restent vigilantes après le décès d'une salariée d'Orano à Cherbourg. Bien qu'aucun lien ne soit établi avec l'épidémie anglaise, une cinquantaine de cas contacts ont été placés sous surveillance préventive.\n\nLa méningite bactérienne constitue une urgence médicale absolue. Les symptômes - fièvre, maux de tête violents, raideur de nuque - nécessitent une prise en charge immédiate. Le taux de mortalité peut atteindre 10 à 15%.\n\nPour les pharmaciens, cette situation rappelle l'importance de la vigilance face aux premiers signes. Orienter rapidement vers les urgences peut sauver des vies dans cette pathologie où chaque heure compte.",
-    source: "Le Monde Sante",
-    source_url: "https://www.lemonde.fr/international/article/2026/03/21/epidemie-de-meningites-en-angleterre-le-nombre-de-cas-repertories-monte-a-34_6673262_3210.html",
-    tiktok_url: "",
-    badge_label: "Sante",
-    image_url: "assets/img_actu_2026_03_23_3_b.png"
-  },
-{
     id: "actu_2026_03_23_1",
     date: "2026-03-23",
     type: "actu",
@@ -1196,7 +1139,7 @@ const ARTICLES = [
     source_url: "https://www.lemoniteurdespharmacies.fr/business/marches/medicaments-biosimilaires-2026-vers-une-substitution-reussie",
     tiktok_url: "",
     badge_label: "Pharma France",
-    image_url: "assets/img_actu_2026_03_23_1.png"
+    image_url: "assets/img_actu_2026_03_23_1.jpg"
   },
   {
     id: "actu_2026_03_23_2",
@@ -1210,7 +1153,7 @@ const ARTICLES = [
     source_url: "https://www.fiercepharma.com/pharma/novos-semaglutide-losing-patent-protection-indian-drugmakers-set-launch-their-generics",
     tiktok_url: "",
     badge_label: "Pharma Monde",
-    image_url: "assets/img_actu_2026_03_23_2.png"
+    image_url: "assets/img_actu_2026_03_23_2.jpg"
   },
   {
     id: "actu_2026_03_23_3",
@@ -1224,109 +1167,67 @@ const ARTICLES = [
     source_url: "https://www.lemonde.fr/international/article/2026/03/21/epidemie-de-meningites-en-angleterre-le-nombre-de-cas-repertories-monte-a-34_6673262_3210.html",
     tiktok_url: "",
     badge_label: "Sante",
-    image_url: "assets/img_actu_2026_03_23_3.png"
-  },
-{
-    id: "actu_2026_w12_1",
-    date: "2026-03-23",
-    type: "actu",
-    categorie: "pharma_france",
-    titre: "Municipales 2026 : les déserts médicaux au cœur du scrutin",
-    resume: "En 25 ans, la France est passée de 25 000 à 19 000 pharmacies. Le Sénat vote une loi pour les petites communes. Les candidats s'engagent.",
-    full_text: "Les municipales 2026, c'est ce week-end. Premier tour dimanche 15 mars, et LA question qui revient partout : les déserts médicaux.\n\nEn 25 ans, la France est passée de 25 000 à 19 000 pharmacies. Une baisse spectaculaire qui touche surtout les zones rurales et les petites communes.\n\nLe Sénat a voté une loi pour permettre l'ouverture de pharmacies dans les petites communes de moins de 2 500 habitants. Une mesure attendue par de nombreux élus locaux qui voient leur dernier commerce de santé disparaître.\n\nLes maires veulent agir. Dans plusieurs communes, la fermeture de la pharmacie a été un sujet central de campagne. Les candidats promettent des mesures incitatives : aides à l'installation, locaux municipaux mis à disposition, partenariats avec les maisons de santé.\n\nOn verra si ces engagements tiennent après le second tour dimanche prochain. Mais une chose est sûre : la pharmacie d'officine est devenue un enjeu politique majeur.",
-    source: "Public Senat / Le Moniteur",
-    source_url: "https://www.publicsenat.fr",
-    tiktok_url: "",
-    badge_label: "Pharma France",
-    image_url: "assets/img_actu_2026_w12_1.png"
-  },
-  {
-    id: "actu_2026_w12_2",
-    date: "2026-03-23",
-    type: "actu",
-    categorie: "pharma_france",
-    titre: "Nouveau code de déontologie des pharmaciens : ce qui change",
-    resume: "Première refonte depuis 1995. Le pharmacien peut communiquer publiquement sur la santé. Renforcement de la lutte contre le charlatanisme.",
-    full_text: "Le nouveau code de déontologie des pharmaciens est entré en vigueur le 6 mars 2026. C'est la première refonte depuis 1995, soit plus de 30 ans.\n\nCe qui change concrètement :\n\n1. Communication publique : Le pharmacien peut désormais communiquer publiquement sur des sujets de santé, à condition de rester factuel et de ne pas faire de publicité déguisée. C'est une révolution pour la profession qui était jusqu'ici très encadrée dans sa prise de parole.\n\n2. Indépendance professionnelle : Le code renforce l'indépendance du pharmacien face aux pressions commerciales, notamment dans les groupements et les chaînes.\n\n3. Lutte contre le charlatanisme : De nouvelles dispositions ciblent spécifiquement la vente de produits aux allégations thérapeutiques non prouvées. Le pharmacien a désormais une obligation active de mise en garde.\n\n4. Lutte contre les violences : Le pharmacien est reconnu comme acteur de premier plan dans le repérage et l'accompagnement des victimes de violences conjugales et familiales.\n\nUne vraie modernisation qui ancre le pharmacien dans son rôle de professionnel de santé de premier recours.",
-    source: "CNOP / Legifrance",
-    source_url: "https://www.ordre.pharmacien.fr",
-    tiktok_url: "",
-    badge_label: "Pharma France",
-    image_url: "assets/img_actu_2026_w12_2.png"
-  },
-  {
-    id: "actu_2026_w12_3",
-    date: "2026-03-23",
-    type: "actu",
-    categorie: "pharma_france",
-    titre: "ANSM : un fast-track pour les essais cliniques en France",
-    resume: "Autorisations en 14 jours au lieu de plusieurs mois. La France veut devenir leader européen de la recherche clinique.",
-    full_text: "L'ANSM lance son dispositif fast-track pour les essais cliniques. Depuis le 16 mars 2026, les promoteurs peuvent déposer des demandes d'évaluation accélérée.\n\nRésultat attendu : des autorisations en 14 jours au lieu de plusieurs mois. C'est un changement considérable pour l'écosystème de la recherche clinique en France.\n\nL'objectif est clair : faire de la France un leader européen de la recherche clinique. Jusqu'ici, la France accusait un retard important par rapport au Royaume-Uni, à l'Allemagne et aux Pays-Bas en termes de délais d'autorisation.\n\nCe dispositif concerne dans un premier temps les essais de phase I et II, ainsi que les essais sur les médicaments de thérapie innovante (MTI). Les essais de phase III suivront d'ici la fin de l'année.\n\nPour les pharmaciens hospitaliers, c'est une bonne nouvelle : plus d'essais cliniques signifie plus d'activité dans les PUI et une meilleure attractivité de la pharmacie hospitalière.\n\nPour les patients, c'est surtout un accès plus rapide aux traitements innovants.",
-    source: "ANSM",
-    source_url: "https://ansm.sante.fr",
-    tiktok_url: "",
-    badge_label: "Pharma France",
-    image_url: "assets/img_actu_2026_w12_3.png"
-  },
-  {
-    id: "actu_2026_w12_4",
-    date: "2026-03-23",
-    type: "actu",
-    categorie: "sante",
-    titre: "Mars Bleu : les kits de dépistage gratuits arrivent en pharmacie",
-    resume: "47 000 cas de cancer colorectal par an, 17 000 décès. Moins de 30% de dépistage. Nouveaux kits gratuits depuis le 15 mars.",
-    full_text: "C'est Mars Bleu, le mois du dépistage du cancer colorectal. Les chiffres sont alarmants.\n\n47 000 nouveaux cas par an en France. 17 000 décès. C'est le deuxième cancer le plus meurtrier. Et pourtant, moins de 30% des personnes concernées (50-74 ans) se font dépister.\n\nDepuis le 15 mars 2026, les nouveaux kits de dépistage sont disponibles en pharmacie. Ils sont gratuits, sans ordonnance, et le résultat est obtenu en quelques jours.\n\nNouveauté cette année : les infirmiers peuvent également remettre les kits, élargissant ainsi les points de distribution. Les sages-femmes aussi, pour les femmes de plus de 50 ans.\n\nLe test est simple : un prélèvement de selles à domicile, envoyé par courrier au laboratoire. En cas de résultat positif (environ 4% des cas), une coloscopie est prescrite.\n\nDétecté tôt, le cancer colorectal se guérit dans 9 cas sur 10. C'est pourquoi le dépistage est si crucial.\n\nEn tant que pharmacien, c'est le moment de sensibiliser vos patients. Parlez-en à chaque personne de plus de 50 ans qui entre dans votre officine.",
-    source: "VIDAL / INCa",
-    source_url: "https://www.vidal.fr",
-    tiktok_url: "",
-    badge_label: "Sante",
-    image_url: "assets/img_actu_2026_w12_4.png"
-  },
-  {
-    id: "actu_2026_w12_5",
-    date: "2026-03-23",
-    type: "actu",
-    categorie: "pharma_france",
-    titre: "PharmagoraPlus 2026 : IA, e-ordonnance et nouveau modèle économique",
-    resume: "12 000+ professionnels réunis à Paris. IA en officine, carte Vitale numérique et crise du modèle économique au programme.",
-    full_text: "PharmagoraPlus 2026 s'est tenu les 14 et 15 mars à Paris Porte de Versailles. Plus de 12 000 professionnels réunis pour le plus grand salon de la pharmacie en France.\n\nLes grands sujets de cette édition :\n\n1. Intelligence artificielle en officine : Plusieurs startups ont présenté des solutions d'IA pour l'aide à la dispensation, la détection d'interactions médicamenteuses et l'optimisation des stocks. L'IA arrive concrètement au comptoir.\n\n2. E-ordonnance : Le déploiement de l'ordonnance numérique s'accélère. Objectif 100% dématérialisé d'ici fin 2027. Les éditeurs de logiciels ont présenté leurs solutions de lecture et d'intégration.\n\n3. Carte Vitale numérique : Après les expérimentations dans plusieurs départements, le déploiement national est confirmé pour 2027. La carte physique ne disparaîtra pas mais deviendra secondaire.\n\n4. Modèle économique : Le sujet le plus débattu. Face à la baisse des marges sur le médicament et la hausse des charges, quel avenir pour l'officine ? Les intervenants ont plaidé pour une revalorisation des actes pharmaceutiques et un élargissement des missions.\n\nUn salon riche qui confirme que la pharmacie est en pleine mutation.",
-    source: "PharmagoraPlus",
-    source_url: "https://www.pharmagoraplus.com",
-    tiktok_url: "",
-    badge_label: "Pharma France",
-    image_url: "assets/img_actu_2026_w12_5.png"
-  },
-  {
-    id: "lsv_1",
-    date: "2026-03-22",
-    type: "lsv",
-    categorie: "lsv",
-    titre: "Le saviez-vous ? De l'écorce de saule à l'acide acétylsalicylique",
-    resume: "3 500 ans d'histoire pharmacologique. Du saule blanc des Égyptiens à la synthèse de Hoffmann en 1897 : retour sur la naissance du premier médicament industriel.",
-    full_text: "L'acide acétylsalicylique, qu'on dispense chaque jour au comptoir, a 3 500 ans d'histoire pharmacologique derrière lui.\n\nTout commence avec le saule blanc (Salix alba). Les Égyptiens utilisaient déjà des décoctions d'écorce comme antipyrétique et antalgique. Le principe actif, la salicine, est un glucoside qui sera isolé en 1829 par Pierre-Joseph Leroux, pharmacien français.\n\nEn 1853, Charles Frédéric Gerhardt (chimiste alsacien) réalise la première acétylation de l'acide salicylique. Mais c'est Felix Hoffmann, chimiste chez Bayer, qui stabilise la synthèse en 1897. Motivation : son père souffrait de polyarthrite rhumatoïde et ne tolérait plus le salicylate de sodium (trop gastrotoxique).\n\n1899 : Bayer commercialise l'Aspirine. Premier médicament industriel sous forme de comprimé. Le nom vient du \\\"a\\\" d'acétyl et de \\\"spir\\\" pour Spiraea (la reine-des-prés, autre source de salicylés).\n\nAujourd'hui, 40 000 tonnes/an dans le monde. Et on découvre encore de nouvelles indications : au-delà de l'analgésie et l'antiagrégation plaquettaire, des études explorent son rôle en prévention du cancer colorectal. Une molécule qu'on n'a pas fini d'étudier.",
-    source: "Pharm'Alpha",
-    source_url: "",
-    tiktok_url: "",
-    badge_label: "Le Saviez-Vous",
-    image_url: "assets/img_lsv_1.png"
+    image_url: "assets/img_actu_2026_03_23_3.jpg"
   },
   {
     id: "lsv_2",
-    date: "2026-03-22",
+    date: "2026-03-23",
     type: "lsv",
     categorie: "lsv",
     titre: "Le saviez-vous ? La croix verte, une obligation réglementaire depuis 1984",
     resume: "Du caducée à la croix verte : pourquoi le droit international a imposé le changement. Ce que dit le CSP sur l'enseigne officinale.",
-    full_text: "La croix verte, tu la vois clignoter devant ton officine chaque jour. Mais connais-tu le cadre réglementaire derrière ce symbole ?\n\nHistoriquement, la pharmacie utilisait la croix rouge. Problème : les Conventions de Genève de 1949 réservent la croix rouge au Comité international de la Croix-Rouge et aux services de santé des armées. Son usage par les pharmacies était donc illégal au regard du droit international humanitaire.\n\nL'arrêté du 24 juillet 1984 a tranché : la croix verte équilatérale lumineuse devient le signe distinctif obligatoire des officines en France. Le caducée (coupe d'Hygie et serpent d'Asclépios) reste le symbole de la profession mais n'est pas obligatoire en façade.\n\nLe CSP (art. R5125-38 et suivants) encadre strictement l'enseigne : seule la dénomination \\\"Pharmacie\\\" et la croix verte sont autorisées. Pas de publicité, pas de nom commercial fantaisiste.\n\nPoint pratique : la croix verte avec affichage température/heure n'a aucune obligation légale d'exactitude, mais c'est devenu un réflexe pour les passants. Certaines ARS ont rappelé à l'ordre des officines dont la croix affichait des températures délirantes.\n\nUn symbole banal en apparence, mais qui engage ta responsabilité professionnelle.",
+    full_text: "La croix verte, tu la vois clignoter devant ton officine chaque jour. Mais connais-tu le cadre réglementaire derrière ce symbole ?\n\nHistoriquement, la pharmacie utilisait la croix rouge. Problème : les Conventions de Genève de 1949 réservent la croix rouge au Comité international de la Croix-Rouge et aux services de santé des armées. Son usage par les pharmacies était donc illégal au regard du droit international humanitaire.\n\nL'arrêté du 24 juillet 1984 a tranché : la croix verte équilatérale lumineuse devient le signe distinctif obligatoire des officines en France. Le caducée (coupe d'Hygie et serpent d'Asclépios) reste le symbole de la profession mais n'est pas obligatoire en façade.\n\nLe CSP (art. R5125-38 et suivants) encadre strictement l'enseigne : seule la dénomination \"Pharmacie\" et la croix verte sont autorisées. Pas de publicité, pas de nom commercial fantaisiste.\n\nPoint pratique : la croix verte avec affichage température/heure n'a aucune obligation légale d'exactitude, mais c'est devenu un réflexe pour les passants. Certaines ARS ont rappelé à l'ordre des officines dont la croix affichait des températures délirantes.\n\nUn symbole banal en apparence, mais qui engage ta responsabilité professionnelle.",
     source: "Pharm'Alpha",
     source_url: "",
     tiktok_url: "",
     badge_label: "Le Saviez-Vous",
-    image_url: "assets/img_lsv_2.png"
+    image_url: "assets/img_lsv_2.jpg"
+  },
+  {
+    id: "actu_2026_w12_1",
+    date: "2026-03-22",
+    type: "actu",
+    categorie: "pharma_france",
+    titre: "Municipales 2026 : les déserts médicaux au coeur du scrutin",
+    resume: "De 25 000 à 19 000 pharmacies en 25 ans. Le Sénat vote une loi pour les petites communes. Les candidats promettent, on verra bien si ça tient...",
+    full_text: "Les municipales 2026, c'est ce week-end. Premier tour dimanche 15 mars, et LA question qui revient partout dans les campagnes : les déserts médicaux.\n\nEn 25 ans, on est passés de 25 000 à 19 000 pharmacies en France. 6 000 officines disparues. Et ce sont les zones rurales qui trinquent en premier.\n\nLe Sénat a voté une loi pour permettre l'ouverture de pharmacies dans les communes de moins de 2 500 habitants. Les maires s'en emparent : locaux municipaux mis à disposition, aides à l'installation, partenariats avec les maisons de santé.\n\nEst-ce que ça va changer quelque chose ? On verra après le second tour. Mais une chose est sûre : la pharmacie d'officine est devenue un argument électoral. Si ça peut servir à sauver quelques officines, tant mieux.",
+    source: "Public Senat / Le Moniteur",
+    source_url: "https://www.publicsenat.fr",
+    tiktok_url: "",
+    badge_label: "Pharma France",
+    image_url: "assets/img_actu_2026_w12_1.jpg"
+  },
+  {
+    id: "actu_2026_w12_2",
+    date: "2026-03-22",
+    type: "actu",
+    categorie: "pharma_france",
+    titre: "Code de déontologie : la refonte qui change tout (ou presque)",
+    resume: "Première mise à jour depuis 1995 ! Tu peux enfin communiquer publiquement sur la santé. Et le charlatanisme, c'est officiellement dans le viseur.",
+    full_text: "Le code de déontologie des pharmaciens vient de faire peau neuve. Première refonte depuis 1995 — oui, 30 ans. Autant dire qu'il était temps.\n\nCe qui change pour toi concrètement :\n\nCommunication publique : tu peux désormais parler de santé publiquement. Réseaux sociaux, médias, conférences. À condition de rester factuel et de ne pas faire de pub déguisée. C'est une petite révolution pour nous qui étions muselés.\n\nIndépendance : le code renforce ta protection face aux pressions commerciales. Groupements, chaînes, tu gardes ton libre arbitre professionnel.\n\nCharlatanisme : nouvelles dispositions contre la vente de produits aux allégations bidon. Tu as maintenant une obligation active de mise en garde.\n\nViolences : tu es officiellement reconnu comme acteur de premier plan pour le repérage des victimes de violences conjugales et familiales.\n\nBref, un code modernisé qui ancre le pharmacien dans son rôle de professionnel de santé de premier recours. Il était temps.",
+    source: "CNOP / Legifrance",
+    source_url: "https://www.ordre.pharmacien.fr",
+    tiktok_url: "",
+    badge_label: "Pharma France",
+    image_url: "assets/img_actu_2026_w12_2.jpg"
+  },
+  {
+    id: "actu_2026_w12_3",
+    date: "2026-03-22",
+    type: "actu",
+    categorie: "pharma_france",
+    titre: "ANSM : essais cliniques en 14 jours, la France accélère enfin",
+    resume: "L'ANSM lance un fast-track pour les essais cliniques : 14 jours au lieu de plusieurs mois. L'objectif : faire de la France un leader européen de la recherche.",
+    full_text: "L'ANSM vient de lancer son dispositif fast-track pour les essais cliniques. Depuis le 16 mars, les autorisations peuvent tomber en 14 jours. Contre plusieurs mois avant.\n\nPourquoi c'est important ? La France était à la traîne face au UK, l'Allemagne et les Pays-Bas en termes de délais. Résultat : les labos allaient tester leurs molécules ailleurs. Pas ouf pour l'écosystème de recherche français.\n\nPour l'instant, ça concerne les essais de phase I et II, plus les médicaments de thérapie innovante. La phase III suivra d'ici la fin de l'année.\n\nPour les pharmaciens hospitaliers, c'est une bonne nouvelle : plus d'essais cliniques = plus d'activité dans les PUI. Et pour les patients, un accès plus rapide aux traitements innovants.\n\nOn croise les doigts pour que ça se concrétise vraiment et que ce ne soit pas qu'un effet d'annonce.",
+    source: "ANSM",
+    source_url: "https://ansm.sante.fr",
+    tiktok_url: "",
+    badge_label: "Pharma France",
+    image_url: "assets/img_actu_2026_w12_3.jpg"
   },
   {
     id: "lsv_3",
-    date: "2026-03-19",
+    date: "2026-03-22",
     type: "lsv",
     categorie: "lsv",
     titre: "Le saviez-vous ? De la contamination accidentelle aux bêta-lactamines",
@@ -1336,11 +1237,39 @@ const ARTICLES = [
     source_url: "",
     tiktok_url: "",
     badge_label: "Le Saviez-Vous",
-    image_url: "assets/img_lsv_3.png"
+    image_url: "assets/img_lsv_3.jpg"
+  },
+  {
+    id: "actu_2026_w12_4",
+    date: "2026-03-21",
+    type: "actu",
+    categorie: "sante",
+    titre: "Mars Bleu : tes kits de dépistage gratuits sont arrivés",
+    resume: "47 000 cas de cancer colorectal par an, 17 000 décès. Moins de 30% de dépistage. Les nouveaux kits gratuits sont en pharmacie. À toi de jouer.",
+    full_text: "C'est Mars Bleu, le mois du dépistage du cancer colorectal. Et les chiffres sont flippants.\n\n47 000 nouveaux cas par an. 17 000 décès. Deuxième cancer le plus meurtrier en France. Et pourtant, moins de 30% des 50-74 ans se font dépister. Moins d'un sur trois.\n\nLes nouveaux kits sont dispos dans ton officine depuis le 15 mars. Gratuits, sans ordonnance, résultat en quelques jours. Un prélèvement de selles à domicile, envoi par courrier, et voilà.\n\nDétecté tôt, ce cancer se guérit dans 9 cas sur 10. Neuf sur dix. Si c'est pas un argument de poids au comptoir, je sais pas ce qu'il te faut.\n\nChaque patient de plus de 50 ans qui entre chez toi, c'est une occasion de lui en parler. Ça prend 30 secondes. Et ça peut littéralement sauver une vie.",
+    source: "VIDAL / INCa",
+    source_url: "https://www.vidal.fr",
+    tiktok_url: "",
+    badge_label: "Sante",
+    image_url: "assets/img_actu_2026_w12_4.jpg"
+  },
+  {
+    id: "actu_2026_w12_5",
+    date: "2026-03-21",
+    type: "actu",
+    categorie: "pharma_france",
+    titre: "PharmagoraPlus 2026 : IA, e-ordonnance et crise du modèle",
+    resume: "12 000 pharmaciens à Paris. Les sujets chauds : l'IA au comptoir, l'ordonnance numérique, la carte Vitale dématérialisée et... la survie économique de l'officine.",
+    full_text: "PharmagoraPlus 2026, c'était les 14 et 15 mars à Porte de Versailles. Plus de 12 000 professionnels réunis. Voici ce qu'il fallait retenir.\n\nL'IA débarque au comptoir. Plusieurs startups ont montré des outils d'aide à la dispensation, détection d'interactions, optimisation des stocks. C'est plus du gadget, c'est du concret.\n\nL'e-ordonnance s'accélère. Objectif : 100% dématérialisé d'ici fin 2027. Les éditeurs de logiciels ont montré leurs solutions. Fini le papier griffonné illisible ? On y croit.\n\nCarte Vitale numérique. Après les expérimentations dans plusieurs départements, le déploiement national est confirmé pour 2027. La carte physique ne disparaîtra pas, mais deviendra secondaire.\n\nEt LE sujet qui fâche : le modèle économique. Marges en baisse, charges en hausse. Quel avenir pour l'officine ? Les intervenants ont plaidé pour une revalorisation des actes. On attend de voir.\n\nBref, un salon qui confirme que notre métier est en pleine mutation. Le train est en marche, autant être dedans.",
+    source: "PharmagoraPlus",
+    source_url: "https://www.pharmagoraplus.com",
+    tiktok_url: "",
+    badge_label: "Pharma France",
+    image_url: "assets/img_actu_2026_w12_5.jpg"
   },
   {
     id: "lsv_4",
-    date: "2026-03-19",
+    date: "2026-03-21",
     type: "lsv",
     categorie: "lsv",
     titre: "Le saviez-vous ? Le NAPQI, métabolite tueur du paracétamol",
@@ -1350,11 +1279,11 @@ const ARTICLES = [
     source_url: "",
     tiktok_url: "",
     badge_label: "Le Saviez-Vous",
-    image_url: "assets/img_lsv_4.png"
+    image_url: "assets/img_lsv_4.jpg"
   },
   {
     id: "lsv_5",
-    date: "2026-03-15",
+    date: "2026-03-20",
     type: "lsv",
     categorie: "lsv",
     titre: "Le saviez-vous ? Angine et cystite : la prescription pharmaceutique en pratique",
@@ -1364,7 +1293,7 @@ const ARTICLES = [
     source_url: "",
     tiktok_url: "",
     badge_label: "Le Saviez-Vous",
-    image_url: "assets/img_lsv_5.png"
+    image_url: "assets/img_lsv_5.jpg"
   }
 ];
 
@@ -1402,22 +1331,28 @@ function renderCard(a, i) {
   const sourceLink = a.source_url
     ? `<span class="card-source">Source : <a href="${a.source_url}" target="_blank">${a.source} &rarr;</a></span>`
     : `<span class="card-source">Source : ${a.source}</span>`;
+  const imgHtml = a.image_url
+    ? `<img class="card-img" src="${a.image_url}" alt="" loading="lazy">`
+    : '';
   return `
     <article class="card" style="animation-delay:${i * 0.04}s">
-      <div class="card-top">
-        <span class="badge ${BADGE_CLASSES[a.categorie] || ''}">${a.badge_label}</span>
-        <span class="card-date">${formatDate(a.date)}</span>
-      </div>
-      <h3>${a.titre}</h3>
-      <p class="card-resume">${a.resume}</p>
-      <div class="card-actions">
-        <div class="card-actions-row">
-          <button class="btn-read-more" onclick="openModal('${a.id}')">En savoir plus &rarr;</button>
-          <button class="btn-share" onclick="shareArticle('${a.id}', event)">
-            ${ICONS.share} Partager
-          </button>
+      ${imgHtml}
+      <div class="card-body">
+        <div class="card-top">
+          <span class="badge ${BADGE_CLASSES[a.categorie] || ''}">${a.badge_label}</span>
+          <span class="card-date">${formatDate(a.date)}</span>
         </div>
-        ${sourceLink}
+        <h3>${a.titre}</h3>
+        <p class="card-resume">${a.resume}</p>
+        <div class="card-actions">
+          <div class="card-actions-row">
+            <button class="btn-read-more" onclick="openModal('${a.id}')">En savoir plus &rarr;</button>
+            <button class="btn-share" onclick="shareArticle('${a.id}', event)">
+              ${ICONS.share} Partager
+            </button>
+          </div>
+          ${sourceLink}
+        </div>
       </div>
     </article>`;
 }
