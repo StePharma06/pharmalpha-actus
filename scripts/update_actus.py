@@ -309,6 +309,7 @@ def update_index_html(new_articles):
 
     existing_block = match.group(1)
     existing_ids = set(re.findall(r'id:\s*"([^"]+)"', existing_block))
+    existing_urls = set(re.findall(r'source_url:\s*"([^"]+)"', existing_block))
 
     today = datetime.now().strftime("%Y-%m-%d")
     ASSETS_DIR.mkdir(exist_ok=True)
@@ -317,13 +318,19 @@ def update_index_html(new_articles):
     actu_idx = 0
 
     for a in new_articles:
+        # Skip if same source URL already exists (avoid duplicates)
+        src_url = a.get("source_url", "")
+        if src_url and src_url in existing_urls:
+            print(f"  [SKIP] Doublon source_url: {a.get('titre', '')[:50]}...")
+            continue
+
         is_lsv = a.get("categorie") == "lsv"
         if is_lsv:
             article_id = f"lsv_{today.replace('-', '_')}"
         else:
             actu_idx += 1
             article_id = f"actu_{today.replace('-', '_')}_{actu_idx}"
-        if article_id in existing_ids:
+        while article_id in existing_ids:
             article_id += "_b"
 
         def esc(s):
