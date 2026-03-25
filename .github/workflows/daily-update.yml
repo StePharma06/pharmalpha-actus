@@ -29,12 +29,12 @@ jobs:
           python-version: '3.12'
 
       - name: Install dependencies
-        run: pip install anthropic feedparser openai
+        run: pip install anthropic feedparser
 
-      - name: Fetch RSS, curate articles & generate images
+      - name: Fetch RSS, curate articles, generate LSV & fetch photos
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
         run: python scripts/update_actus.py
 
       - name: Commit & push if changed

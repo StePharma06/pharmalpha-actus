@@ -1,21 +1,19 @@
 #!/usr/bin/env python3
 """
-Pharm'Alpha - Mise a jour quotidienne des actualites
-Fetch RSS feeds → Claude API curate & resume → Update index.html
+Pharm'Actus - Mise a jour quotidienne
+Fetch RSS → Claude curate (ton Stephen) → Pexels photos → Le Saviez-Vous → Update index.html
 """
 
 import json
 import os
 import re
-import sys
-import time
+import urllib.parse
 import urllib.request
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import anthropic
 import feedparser
-from openai import OpenAI
 
 
 SCRIPT_DIR = Path(__file__).parent
@@ -24,10 +22,12 @@ INDEX_HTML = ROOT_DIR / "index.html"
 FEEDS_JSON = SCRIPT_DIR / "rss_feeds.json"
 ASSETS_DIR = ROOT_DIR / "assets"
 
-MAX_ARTICLES_TOTAL = 30  # Garder max 30 articles dans la page
-MAX_AGE_DAYS = 7  # Chercher les articles des 7 derniers jours
-NEW_ARTICLES_PER_RUN = 3  # Nombre d'articles a ajouter par jour
+MAX_ARTICLES_TOTAL = 50
+MAX_AGE_DAYS = 7
+NEW_ARTICLES_PER_RUN = 3
 
+
+# ── RSS ──────────────────────────────────────────────────────────────
 
 def fetch_rss_articles():
     """Fetch articles from all RSS feeds."""
@@ -41,7 +41,6 @@ def fetch_rss_articles():
         try:
             feed = feedparser.parse(feed_cfg["url"])
             for entry in feed.entries[:15]:
-                # Parse date
                 published = None
                 for date_field in ("published_parsed", "updated_parsed"):
                     if hasattr(entry, date_field) and getattr(entry, date_field):
@@ -50,17 +49,12 @@ def fetch_rss_articles():
                             mktime(getattr(entry, date_field)), tz=timezone.utc
                         )
                         break
-
                 if published and published < cutoff:
                     continue
 
                 title = getattr(entry, "title", "").strip()
-                summary = getattr(entry, "summary", "").strip()
+                summary = re.sub(r"<[^>]+>", "", getattr(entry, "summary", "").strip())[:500]
                 link = getattr(entry, "link", "")
-
-                # Nettoyer le HTML du summary
-                summary = re.sub(r"<[^>]+>", "", summary)
-                summary = summary[:500]
 
                 if title:
                     articles.append({
@@ -78,57 +72,69 @@ def fetch_rss_articles():
     return articles
 
 
+# ── CLAUDE : curation des actus (ton Stephen) ───────────────────────
+
 def curate_with_claude(raw_articles):
-    """Use Claude API to select and curate the best articles."""
+    """Select and rewrite the best articles with Stephen's personal tone."""
     client = anthropic.Anthropic()
 
     articles_text = "\n\n".join(
-        f"[{i+1}] {a['title']}\nSource: {a['source']} | Categorie: {a['categorie']} | Date: {a['date']}\nResume: {a['summary']}\nLien: {a['link']}"
+        f"[{i+1}] {a['title']}\nSource: {a['source']} | Cat: {a['categorie']} | Date: {a['date']}\nResume: {a['summary']}\nLien: {a['link']}"
         for i, a in enumerate(raw_articles)
     )
 
     today = datetime.now().strftime("%Y-%m-%d")
 
-    prompt = f"""Tu es le redacteur de Pharm'Actus, un media d'actualites destine aux PHARMACIENS D'OFFICINE.
+    prompt = f"""Tu es Stephen, pharmacien consultant chez Pharm'Alpha et redacteur en chef de Pharm'Actus.
 
-PUBLIC CIBLE : pharmaciens titulaires, adjoints et preparateurs. Pas le grand public.
-TON : professionnel mais dynamique, comme un confrere bien informe qui te brief. Tutoiement OK.
-VOCABULAIRE : utilise le jargon metier (substitution, marge, DP, ROSP, honoraires, dispensation, DCI, AMM, LFSS, etc.). Pas besoin de vulgariser les termes pharma.
+=== TON STYLE ===
+- Tu parles comme un pote pharmacien qui briefe ses confreres entre deux clients
+- Tutoiement naturel, ton decontracte mais expert
+- Phrases courtes et percutantes. Une idee par phrase. Pas de blabla.
+- Questions rhetoriques pour interpeller ("Et devinez quoi ?", "Ca te rappelle quelque chose ?")
+- Un brin d'humour ou d'ironie quand le sujet s'y prete
+- Accroche forte des la premiere phrase. Pas de "bonjour", pas de "chers confreres"
+- Jargon metier sans vulgariser (substitution, marge, DP, ROSP, honoraires, DCI, AMM, LFSS, etc.)
+- Tu assumes que tes lecteurs sont pharmaciens titulaires, adjoints ou preparateurs
+- Conclus avec un impact concret : qu'est-ce que ca change au comptoir demain matin ?
 
-Voici {len(raw_articles)} articles RSS collectes aujourd'hui ({today}) :
+=== PUBLIC ===
+Pharmaciens d'officine en France (PAS le grand public)
 
+=== ARTICLES DU JOUR ({today}) ===
 {articles_text}
 
 ---
 
-Selectionne les {NEW_ARTICLES_PER_RUN} articles les plus importants pour des pharmaciens d'officine en France.
+Selectionne les {NEW_ARTICLES_PER_RUN} articles les plus percutants pour des pharmaciens d'officine.
 
-Criteres de selection :
-- Impact direct sur l'exercice officinal (reglementation, marges, nouvelles missions, approvisionnement)
-- Pertinence business et economique pour l'officine
-- Nouveautes reglementaires, LFSS, conventions, ROSP
-- Sante publique quand ca impacte le comptoir (vaccinations, depistages, alertes sanitaires)
-- Diversite des sujets (evite 3 articles sur le meme theme)
+Criteres :
+- Impact direct sur l'exercice officinal (reglementation, marges, missions, approvisionnement)
+- Pertinence business/economique
+- Reglementaire (LFSS, conventions, ROSP)
+- Sante publique si impact comptoir (vaccins, depistages, alertes)
+- Diversite des sujets
 
-Pour chaque article selectionne, genere :
-- un titre accrocheur (max 80 caracteres)
-- un resume de 2-3 phrases (informatif, factuel, angle pharmacien)
-- un texte complet de 150-250 mots structure en PLUSIEURS PARAGRAPHES separes par \\n\\n (4-5 paragraphes). Phrases courtes et percutantes. Chaque paragraphe = une idee. Chiffres concrets, impacts officine, ce que ca change pour le pharmacien. Accroche forte en ouverture.
-- la categorie : "pharma_france", "pharma_monde" ou "sante"
-- le badge_label correspondant : "Pharma France", "Pharma Monde" ou "Sante"
+Pour chaque article, genere :
+- "titre" : accrocheur, max 80 car, style direct de Stephen
+- "resume" : 2-3 phrases percutantes, angle pharmacien
+- "full_text" : 150-250 mots, 4-5 paragraphes separes par \\n\\n. Style Stephen : phrases courtes, chiffres concrets, impact officine, humour si pertinent. 1ere phrase = accroche forte.
+- "categorie" : "pharma_france" | "pharma_monde" | "sante"
+- "badge_label" : "Pharma France" | "Pharma Monde" | "Sante"
+- "source" et "source_url"
+- "image_keywords" : 2-3 mots EN ANGLAIS pour chercher une photo libre de droit (ex: "pharmacy shelves", "vaccine injection", "pills bottle")
 
-IMPORTANT pour full_text : le texte sera affiche en HTML avec des paragraphes <p>. Utilise \\n\\n pour separer chaque paragraphe. Ne fais PAS un bloc de texte continu.
-
-Reponds UNIQUEMENT en JSON valide, format :
+JSON UNIQUEMENT :
 [
   {{
     "titre": "...",
     "resume": "...",
     "full_text": "...",
-    "categorie": "pharma_france|pharma_monde|sante",
-    "badge_label": "Pharma France|Pharma Monde|Sante",
-    "source": "Nom de la source",
-    "source_url": "URL de l'article original",
+    "categorie": "...",
+    "badge_label": "...",
+    "source": "...",
+    "source_url": "...",
+    "image_keywords": "...",
     "date": "{today}"
   }}
 ]"""
@@ -140,7 +146,6 @@ Reponds UNIQUEMENT en JSON valide, format :
     )
 
     text = response.content[0].text.strip()
-    # Extraire le JSON (peut etre dans un bloc ```)
     json_match = re.search(r"\[[\s\S]*\]", text)
     if json_match:
         return json.loads(json_match.group())
@@ -149,160 +154,187 @@ Reponds UNIQUEMENT en JSON valide, format :
     return []
 
 
-CAT_STYLE = {
-    "pharma_france": "French pharmacy, blue white red tones",
-    "pharma_monde": "global pharmaceutical, blue tones, world map",
-    "sante": "healthcare, medical, green and white tones",
-    "lsv": "educational, curious, purple and warm tones",
-}
+# ── CLAUDE : generation du Le Saviez-Vous ────────────────────────────
+
+def generate_lsv_with_claude(existing_lsv_titles):
+    """Generate a daily Le Saviez-Vous about pharmacy/health history."""
+    client = anthropic.Anthropic()
+    today = datetime.now().strftime("%Y-%m-%d")
+
+    existing = "\n".join(f"- {t}" for t in existing_lsv_titles) if existing_lsv_titles else "(aucun)"
+
+    prompt = f"""Tu es Stephen, pharmacien passionne d'histoire de la pharmacie et de la sante.
+Tu rediges un "Le Saviez-Vous" quotidien pour Pharm'Actus.
+
+=== TON STYLE ===
+- Tu racontes comme si tu partageais une anecdote fascinante a un pote pharmacien
+- Accroche percutante ("Tu savais que...", "Imagine un peu...", "Figure-toi que...")
+- Anecdotes concretes : dates, noms, lieux, chiffres
+- Un twist ou un fait surprenant au milieu du recit
+- Conclusion qui fait le lien avec le quotidien au comptoir aujourd'hui
+- Phrases courtes, rythmees, une idee par phrase
+- Humour bienvenu, ton decontracte, tutoiement naturel
+
+=== SUJETS POSSIBLES ===
+- Histoire d'un medicament celebre (decouverte, molecule, anecdote)
+- Inventions pharmaceutiques marquantes
+- Pharmaciens celebres ou meconnus
+- Evolution du metier a travers les ages
+- Plantes medicinales et leur histoire
+- Grandes epidemies et reponse pharmaceutique
+- Reglementations historiques qui ont change le metier
+- Anecdotes insolites de la pharmacopee mondiale
+
+=== TITRES DEJA UTILISES (ne pas refaire) ===
+{existing}
+
+Genere UN SEUL "Le Saviez-Vous" original.
+
+JSON UNIQUEMENT :
+{{
+  "titre": "Le saviez-vous ? [titre accrocheur, max 80 car]",
+  "resume": "2-3 phrases de teaser percutantes",
+  "full_text": "250-350 mots, 5-6 paragraphes separes par \\n\\n. Raconte l'histoire de facon captivante, style Stephen. Derniere phrase = lien avec aujourd'hui au comptoir.",
+  "image_keywords": "2-3 mots EN ANGLAIS pour photo libre de droit",
+  "date": "{today}"
+}}"""
+
+    response = client.messages.create(
+        model="claude-sonnet-4-20250514",
+        max_tokens=2000,
+        messages=[{"role": "user", "content": prompt}],
+    )
+
+    text = response.content[0].text.strip()
+    json_match = re.search(r"\{[\s\S]*\}", text)
+    if json_match:
+        lsv = json.loads(json_match.group())
+        lsv["categorie"] = "lsv"
+        lsv["badge_label"] = "Le Saviez-Vous"
+        lsv["source"] = "Pharm'Alpha"
+        lsv["source_url"] = ""
+        return lsv
+
+    print("  [ERROR] Claude n'a pas retourne de JSON valide pour le LSV")
+    return None
 
 
-def make_image_prompt(titre, resume, categorie):
-    """Use Claude to generate a specific DALL-E prompt for an article."""
+# ── PEXELS : photos libres de droit ──────────────────────────────────
+
+def search_pexels_photo(query):
+    """Search Pexels for a free stock photo. Returns (download_url, photographer)."""
+    api_key = os.environ.get("PEXELS_API_KEY", "")
+    if not api_key:
+        print("    [SKIP] PEXELS_API_KEY non definie")
+        return "", ""
+
+    encoded = urllib.parse.quote(query)
+    url = f"https://api.pexels.com/v1/search?query={encoded}&per_page=1&orientation=landscape"
+    req = urllib.request.Request(url, headers={"Authorization": api_key})
+
     try:
-        claude = anthropic.Anthropic()
-        resp = claude.messages.create(
-            model="claude-haiku-4-5-20251001",
-            max_tokens=300,
-            messages=[{"role": "user", "content": (
-                f"Generate a DALL-E image prompt for this pharmacy news article.\n"
-                f"Title: {titre}\nSummary: {resume}\nCategory: {categorie}\n\n"
-                f"Rules:\n"
-                f"- Describe a specific, concrete scene that illustrates this exact article\n"
-                f"- Photorealistic editorial photography style\n"
-                f"- Include specific visual details (objects, setting, lighting)\n"
-                f"- NO text, NO logos, NO watermarks in the image\n"
-                f"- 16:9 landscape format\n"
-                f"- Reply ONLY with the prompt, nothing else"
-            )}]
-        )
-        return resp.content[0].text.strip()
+        with urllib.request.urlopen(req) as resp:
+            data = json.loads(resp.read())
+            if data.get("photos"):
+                photo = data["photos"][0]
+                # landscape = 1200x627, parfait pour le web
+                img_url = photo["src"]["landscape"]
+                photographer = photo.get("photographer", "")
+                return img_url, photographer
     except Exception as e:
-        print(f"    [PROMPT-ERR] {e}")
-        style_hint = CAT_STYLE.get(categorie, "pharmacy, healthcare")
-        return (
-            f"Editorial photo for article: {titre}. "
-            f"Style: {style_hint}. Photorealistic, no text, no logos."
-        )
+        print(f"    [PEXELS-ERR] {e}")
+    return "", ""
 
 
-def generate_article_image(article_id, titre, categorie, resume=""):
-    """Generate a DALL-E image for an article. Returns relative path or empty string."""
-    openai_key = os.environ.get("OPENAI_API_KEY", "")
-    if not openai_key:
-        print("    [SKIP] OPENAI_API_KEY non definie")
-        return ""
-
-    ASSETS_DIR.mkdir(exist_ok=True)
-    img_name = f"img_{article_id}.png"
-    img_path = ASSETS_DIR / img_name
-
-    if img_path.exists():
-        return f"assets/{img_name}"
-
-    prompt = make_image_prompt(titre, resume, categorie)
-
+def download_photo(url, dest_path):
+    """Download a photo to local file."""
     try:
-        client = OpenAI(api_key=openai_key)
-        response = client.images.generate(
-            model="dall-e-3",
-            prompt=prompt,
-            size="1792x1024",
-            quality="standard",
-            n=1,
-        )
-        url = response.data[0].url
-        urllib.request.urlretrieve(url, str(img_path))
-        print(f"    [IMG] {img_name} genere")
-        return f"assets/{img_name}"
+        urllib.request.urlretrieve(url, str(dest_path))
+        return True
     except Exception as e:
-        print(f"    [IMG-ERR] {e}")
-        # Retry once after 65s if rate limited
-        if "429" in str(e):
-            print("    [IMG] Attente 65s (rate limit)...")
-            time.sleep(65)
-            try:
-                client = OpenAI(api_key=openai_key)
-                response = client.images.generate(
-                    model="dall-e-3",
-                    prompt=prompt,
-                    size="1792x1024",
-                    quality="standard",
-                    n=1,
-                )
-                url = response.data[0].url
-                urllib.request.urlretrieve(url, str(img_path))
-                print(f"    [IMG] {img_name} genere (retry)")
-                return f"assets/{img_name}"
-            except Exception as e2:
-                print(f"    [IMG-ERR] Retry echoue: {e2}")
-        return ""
+        print(f"    [DL-ERR] {e}")
+        return False
+
+
+# ── HTML : insertion des articles ─────────────────────────────────────
+
+def get_existing_lsv_titles():
+    """Extract existing LSV titles from index.html."""
+    html = INDEX_HTML.read_text(encoding="utf-8")
+    return re.findall(r'titre:\s*"(Le saviez-vous[^"]*)"', html, re.IGNORECASE)
 
 
 def update_index_html(new_articles):
-    """Insert new articles into index.html's ARTICLES array."""
+    """Insert new articles into index.html ARTICLES array."""
     html = INDEX_HTML.read_text(encoding="utf-8")
 
-    # Trouver le tableau ARTICLES existant
     match = re.search(r"const ARTICLES = \[([\s\S]*?)\];", html)
     if not match:
         print("  [ERROR] ARTICLES array introuvable dans index.html")
         return False
 
     existing_block = match.group(1)
-
-    # Parser les articles existants (extraire les IDs pour eviter les doublons)
     existing_ids = set(re.findall(r'id:\s*"([^"]+)"', existing_block))
 
-    # Construire les nouveaux articles en JS
     today = datetime.now().strftime("%Y-%m-%d")
-    new_js_entries = []
+    ASSETS_DIR.mkdir(exist_ok=True)
 
-    for i, a in enumerate(new_articles):
-        article_id = f"actu_{today.replace('-','_')}_{i+1}"
+    new_js_entries = []
+    actu_idx = 0
+
+    for a in new_articles:
+        is_lsv = a.get("categorie") == "lsv"
+        if is_lsv:
+            article_id = f"lsv_{today.replace('-', '_')}"
+        else:
+            actu_idx += 1
+            article_id = f"actu_{today.replace('-', '_')}_{actu_idx}"
         if article_id in existing_ids:
             article_id += "_b"
 
-        # Escape les quotes dans les textes
         def esc(s):
             return s.replace("\\", "\\\\").replace('"', '\\"').replace("\n", "\\n")
 
-        default_source = "Pharm'Alpha"
         vals = {
             "id": article_id,
             "date": today,
+            "type": "lsv" if is_lsv else "actu",
             "categorie": a.get("categorie", "sante"),
             "titre": esc(a.get("titre", "")),
             "resume": esc(a.get("resume", "")),
             "full_text": esc(a.get("full_text", a.get("resume", ""))),
-            "source": esc(a.get("source", default_source)),
+            "source": esc(a.get("source", "Pharm'Alpha")),
             "source_url": a.get("source_url", ""),
             "badge_label": a.get("badge_label", "Sante"),
         }
 
-        # Generer image DALL-E
-        print(f"  [{i+1}/{len(new_articles)}] {vals['titre'][:50]}...")
-        img_url = generate_article_image(
-            article_id, a.get("titre", ""), vals["categorie"],
-            resume=a.get("resume", "")
-        )
-        if i < len(new_articles) - 1 and img_url:
-            time.sleep(62)  # Rate limit DALL-E: 1 img/min
+        # Photo Pexels
+        img_url = ""
+        img_keywords = a.get("image_keywords", "")
+        print(f"  [{new_articles.index(a)+1}/{len(new_articles)}] {vals['titre'][:55]}...")
+        if img_keywords:
+            photo_url, photographer = search_pexels_photo(img_keywords)
+            if photo_url:
+                img_name = f"img_{article_id}.jpg"
+                img_path = ASSETS_DIR / img_name
+                if download_photo(photo_url, img_path):
+                    img_url = f"assets/{img_name}"
+                    print(f"    [IMG] {img_name} (Pexels{' - ' + photographer if photographer else ''})")
 
         entry = (
             '  {\n'
-            '    id: "' + vals["id"] + '",\n'
-            '    date: "' + vals["date"] + '",\n'
-            '    type: "actu",\n'
-            '    categorie: "' + vals["categorie"] + '",\n'
-            '    titre: "' + vals["titre"] + '",\n'
-            '    resume: "' + vals["resume"] + '",\n'
-            '    full_text: "' + vals["full_text"] + '",\n'
-            '    source: "' + vals["source"] + '",\n'
-            '    source_url: "' + vals["source_url"] + '",\n'
+            f'    id: "{vals["id"]}",\n'
+            f'    date: "{vals["date"]}",\n'
+            f'    type: "{vals["type"]}",\n'
+            f'    categorie: "{vals["categorie"]}",\n'
+            f'    titre: "{vals["titre"]}",\n'
+            f'    resume: "{vals["resume"]}",\n'
+            f'    full_text: "{vals["full_text"]}",\n'
+            f'    source: "{vals["source"]}",\n'
+            f'    source_url: "{vals["source_url"]}",\n'
             '    tiktok_url: "",\n'
-            '    badge_label: "' + vals["badge_label"] + '",\n'
-            '    image_url: "' + img_url + '"\n'
+            f'    badge_label: "{vals["badge_label"]}",\n'
+            f'    image_url: "{img_url}"\n'
             '  }'
         )
         new_js_entries.append(entry)
@@ -311,17 +343,16 @@ def update_index_html(new_articles):
         print("  Aucun nouvel article a ajouter")
         return False
 
-    # Prepend les nouveaux articles (plus recents en premier)
+    # Prepend (plus recents en premier)
     new_block = ",\n".join(new_js_entries)
     if existing_block.strip():
         updated_block = "\n" + new_block + ",\n" + existing_block.strip() + "\n"
     else:
         updated_block = "\n" + new_block + "\n"
 
-    # Limiter le nombre total d'articles
+    # Limiter le total
     all_entries = re.findall(r"\{[^}]+\}", updated_block, re.DOTALL)
     if len(all_entries) > MAX_ARTICLES_TOTAL:
-        # Garder seulement les MAX_ARTICLES_TOTAL premiers
         kept = all_entries[:MAX_ARTICLES_TOTAL]
         updated_block = "\n" + ",\n".join(kept) + "\n"
 
@@ -332,29 +363,40 @@ def update_index_html(new_articles):
     return True
 
 
+# ── MAIN ──────────────────────────────────────────────────────────────
+
 def main():
-    print("=== Pharm'Alpha - Mise a jour actus ===")
+    print("=== Pharm'Actus - Mise a jour quotidienne ===")
     print(f"  Date: {datetime.now().strftime('%Y-%m-%d %H:%M')}")
 
     # 1. Fetch RSS
-    print("\n[1/3] Collecte des flux RSS...")
+    print("\n[1/4] Collecte des flux RSS...")
     raw_articles = fetch_rss_articles()
-
     if not raw_articles:
-        print("  Aucun article trouve. Arret.")
+        print("  Aucun article RSS. Arret.")
         return
 
-    # 2. Curate avec Claude
-    print(f"\n[2/3] Curation via Claude API ({len(raw_articles)} articles)...")
+    # 2. Curate 3 actus
+    print(f"\n[2/4] Curation via Claude ({len(raw_articles)} articles)...")
     curated = curate_with_claude(raw_articles)
-    print(f"  {len(curated)} articles selectionnes")
+    print(f"  {len(curated)} actus selectionnees")
+
+    # 3. Generate 1 Le Saviez-Vous
+    print("\n[3/4] Generation du Le Saviez-Vous...")
+    existing_lsv = get_existing_lsv_titles()
+    lsv = generate_lsv_with_claude(existing_lsv)
+    if lsv:
+        print(f"  LSV: {lsv.get('titre', '')[:60]}...")
+        curated.append(lsv)
+    else:
+        print("  [WARN] Pas de LSV genere")
 
     if not curated:
-        print("  Aucun article curate. Arret.")
+        print("  Rien a publier. Arret.")
         return
 
-    # 3. Update HTML
-    print("\n[3/3] Mise a jour index.html...")
+    # 4. Photos Pexels + insertion HTML
+    print("\n[4/4] Photos Pexels + mise a jour index.html...")
     updated = update_index_html(curated)
 
     if updated:
