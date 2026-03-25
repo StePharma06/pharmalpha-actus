@@ -429,10 +429,16 @@ def build_newsletter_html(articles):
     for i, a in enumerate(actus):
         bg, fg = badge_colors.get(a.get("categorie", ""), ("#fff7ed", "#f97316"))
         pad = "24px" if i == 0 else "20px"
+        img_url = a.get("image_url", "")
+        img_html = ""
+        if img_url:
+            full_url = f"https://actus.pharmalpha.fr/{img_url}"
+            img_html = f'<tr><td style="padding-top:12px;"><img src="{full_url}" alt="" width="536" style="width:100%;max-width:536px;height:auto;border-radius:8px;display:block;" /></td></tr>'
         articles_html += f'''
   <tr><td style="padding:{pad} 32px 0;">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
       <tr><td><span style="display:inline-block;background:{bg};color:{fg};font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.4px;">{a.get("badge_label","")}</span></td></tr>
+      {img_html}
       <tr><td style="padding-top:10px;"><a href="https://actus.pharmalpha.fr/" style="font-size:18px;font-weight:700;color:#1a1a1a;text-decoration:none;line-height:1.35;">{a.get("titre","")}</a></td></tr>
       <tr><td style="padding-top:8px;"><p style="margin:0;font-size:14px;color:#555;line-height:1.6;">{a.get("resume","")}</p></td></tr>
       <tr><td style="padding-top:10px;"><span style="font-size:12px;color:#888;">Source : {a.get("source","")}</span></td></tr>
@@ -475,6 +481,9 @@ def build_newsletter_html(articles):
     <p style="margin:0;font-size:15px;color:#333;line-height:1.6;">
       Salut !<br><br>Voici ton briefing pharma du jour. {count_str} pour rester au top. Bonne lecture !
     </p>
+    <p style="margin:12px 0 0;font-size:13px;color:#999;line-height:1.5;font-style:italic;">
+      Astuce : r&eacute;ponds juste &laquo; bien re&ccedil;u &raquo; &agrave; cet email. &Ccedil;a indique &agrave; ta messagerie qu'on se conna&icirc;t, et mes actus atterriront toujours dans ta bo&icirc;te principale.
+    </p>
   </td></tr>
   <tr><td style="padding:0 32px;"><div style="border-top:1px solid #e5e5e5;"></div></td></tr>
   {articles_html}
@@ -485,13 +494,24 @@ def build_newsletter_html(articles):
       </td>
     </tr></table>
   </td></tr>
-  <tr><td style="padding:28px 32px;">
-    <div style="border-top:1px solid #e5e5e5;padding-top:20px;text-align:center;">
-      <p style="margin:0 0 8px;font-size:14px;font-weight:700;color:#1a1a1a;">Pharm'Alpha</p>
-      <p style="margin:0 0 12px;font-size:12px;color:#888;line-height:1.5;">
-        L'actu pharma par un pharmacien, pour les pharmaciens.<br>
-        Stephen ROBERT &mdash; Pharmacien &amp; Consultant
-      </p>
+  <tr><td style="padding:28px 32px 0;">
+    <div style="border-top:1px solid #e5e5e5;padding-top:20px;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+          <td style="vertical-align:top;width:60px;padding-right:16px;">
+            <div style="width:52px;height:52px;border-radius:50%;background:#f97316;color:#fff;font-size:22px;font-weight:700;line-height:52px;text-align:center;">S</div>
+          </td>
+          <td style="vertical-align:top;">
+            <p style="margin:0 0 4px;font-size:14px;font-weight:700;color:#1a1a1a;">Stephen ROBERT</p>
+            <p style="margin:0;font-size:13px;color:#666;line-height:1.5;">Pharmacien d'officine devenu consultant. Je d&eacute;crypte l'actu pharma chaque matin pour que tu restes dans la boucle, sans y passer des heures.</p>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </td></tr>
+  <tr><td style="padding:20px 32px 28px;">
+    <div style="border-top:1px solid #f0f0f0;padding-top:16px;text-align:center;">
+      <p style="margin:0 0 8px;font-size:13px;font-weight:700;color:#f97316;">Pharm'Alpha</p>
       <p style="margin:0;font-size:11px;color:#aaa;line-height:1.5;">
         Tu re&ccedil;ois cet email car tu t'es inscrit(e) sur
         <a href="https://actus.pharmalpha.fr/" style="color:#888;">Pharm'Actus</a>.<br>
