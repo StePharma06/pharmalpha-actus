@@ -16,6 +16,10 @@ from pathlib import Path
 import anthropic
 import feedparser
 
+BREVO_LIST_ID = 5  # "Newsletter Pharm'Alpha"
+SENDER_EMAIL = "stephen.pharmacien@gmail.com"
+SENDER_NAME = "Pharm'Actus"
+
 
 FALLBACK_MODEL = "claude-haiku-4-5-20251001"
 
@@ -393,6 +397,168 @@ def update_index_html(new_articles):
     return True
 
 
+# ── BREVO : envoi newsletter ──────────────────────────────────────────
+
+def build_newsletter_html(articles):
+    """Build newsletter HTML from today's articles."""
+    today = datetime.now()
+    jours = ["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"]
+    mois_noms = ["","janvier","f\u00e9vrier","mars","avril","mai","juin",
+                 "juillet","ao\u00fbt","septembre","octobre","novembre","d\u00e9cembre"]
+    date_str = f"{jours[today.weekday()]} {today.day} {mois_noms[today.month]} {today.year}"
+
+    actus = [a for a in articles if a.get("categorie") != "lsv"][:3]
+    lsv = next((a for a in articles if a.get("categorie") == "lsv"), None)
+    count_str = f"{len(actus)} actus" + (" + 1 Le Saviez-Vous" if lsv else "")
+
+    badge_colors = {
+        "pharma_france": ("#fff7ed", "#f97316"),
+        "pharma_monde": ("#eff6ff", "#2563eb"),
+        "sante": ("#f0fdf4", "#16a34a"),
+    }
+
+    articles_html = ""
+    for i, a in enumerate(actus):
+        bg, fg = badge_colors.get(a.get("categorie", ""), ("#fff7ed", "#f97316"))
+        pad = "24px" if i == 0 else "20px"
+        articles_html += f'''
+  <tr><td style="padding:{pad} 32px 0;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+      <tr><td><span style="display:inline-block;background:{bg};color:{fg};font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.4px;">{a.get("badge_label","")}</span></td></tr>
+      <tr><td style="padding-top:10px;"><a href="https://stepharma06.github.io/pharmalpha-actus/" style="font-size:18px;font-weight:700;color:#1a1a1a;text-decoration:none;line-height:1.35;">{a.get("titre","")}</a></td></tr>
+      <tr><td style="padding-top:8px;"><p style="margin:0;font-size:14px;color:#555;line-height:1.6;">{a.get("resume","")}</p></td></tr>
+      <tr><td style="padding-top:10px;"><span style="font-size:12px;color:#888;">Source : {a.get("source","")}</span></td></tr>
+    </table>
+  </td></tr>
+  <tr><td style="padding:20px 32px 0;"><div style="border-top:1px solid #f0f0f0;"></div></td></tr>'''
+
+    if lsv:
+        articles_html += f'''
+  <tr><td style="padding:24px 32px 0;"><div style="border-top:2px solid #7c3aed;"></div></td></tr>
+  <tr><td style="padding:20px 32px 0;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f5f3ff;border-radius:10px;overflow:hidden;">
+      <tr><td style="padding:20px 24px;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+          <tr><td><span style="display:inline-block;background:#ede9fe;color:#7c3aed;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.4px;">Le Saviez-Vous</span></td></tr>
+          <tr><td style="padding-top:12px;"><a href="https://stepharma06.github.io/pharmalpha-actus/" style="font-size:18px;font-weight:700;color:#1a1a1a;text-decoration:none;line-height:1.35;">{lsv.get("titre","")}</a></td></tr>
+          <tr><td style="padding-top:8px;"><p style="margin:0;font-size:14px;color:#555;line-height:1.6;">{lsv.get("resume","")}</p></td></tr>
+        </table>
+      </td></tr>
+    </table>
+  </td></tr>'''
+
+    return f'''<!DOCTYPE html>
+<html lang="fr">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
+<body style="margin:0;padding:0;background:#f4f4f5;font-family:'Segoe UI',system-ui,-apple-system,sans-serif;">
+<div style="display:none;max-height:0;overflow:hidden;mso-hide:all;">{count_str} &mdash; {date_str}</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f4f4f5;">
+<tr><td align="center" style="padding:24px 16px;">
+<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+  <tr><td style="background:#ffffff;padding:28px 32px 16px;text-align:center;border-bottom:2px solid #f97316;">
+    <span style="font-size:28px;font-weight:800;color:#f97316;letter-spacing:-0.5px;">PHARM'ACTUS</span><br>
+    <span style="font-size:13px;color:#888;letter-spacing:0.3px;">L'actu pharma par un pharmacien, pour les pharmaciens</span>
+  </td></tr>
+  <tr><td style="background:#fafafa;padding:10px 32px;text-align:center;">
+    <span style="color:#1a1a1a;font-size:14px;font-weight:600;">{date_str}</span>
+    <span style="color:#888;font-size:14px;"> &mdash; {count_str}</span>
+  </td></tr>
+  <tr><td style="padding:28px 32px 20px;">
+    <p style="margin:0;font-size:15px;color:#333;line-height:1.6;">
+      Salut !<br><br>Voici ton briefing pharma du jour. {count_str} pour rester au top. Bonne lecture !
+    </p>
+  </td></tr>
+  <tr><td style="padding:0 32px;"><div style="border-top:1px solid #e5e5e5;"></div></td></tr>
+  {articles_html}
+  <tr><td style="padding:28px 32px 0;" align="center">
+    <table role="presentation" cellpadding="0" cellspacing="0"><tr>
+      <td style="background:#f97316;border-radius:8px;">
+        <a href="https://stepharma06.github.io/pharmalpha-actus/" style="display:inline-block;padding:14px 32px;color:#ffffff;font-size:15px;font-weight:700;text-decoration:none;letter-spacing:0.3px;">Lire les articles complets &rarr;</a>
+      </td>
+    </tr></table>
+  </td></tr>
+  <tr><td style="padding:28px 32px;">
+    <div style="border-top:1px solid #e5e5e5;padding-top:20px;text-align:center;">
+      <p style="margin:0 0 8px;font-size:14px;font-weight:700;color:#1a1a1a;">Pharm'Alpha</p>
+      <p style="margin:0 0 12px;font-size:12px;color:#888;line-height:1.5;">
+        L'actu pharma par un pharmacien, pour les pharmaciens.<br>
+        Stephen ROBERT &mdash; Pharmacien &amp; Consultant
+      </p>
+      <p style="margin:0;font-size:11px;color:#aaa;line-height:1.5;">
+        Tu re&ccedil;ois cet email car tu t'es inscrit(e) sur
+        <a href="https://stepharma06.github.io/pharmalpha-actus/" style="color:#888;">Pharm'Actus</a>.<br>
+        <a href="{{{{ unsubscribe }}}}" style="color:#888;">Se d&eacute;sinscrire</a> &bull;
+        <a href="https://stepharma06.github.io/pharmalpha-actus/" style="color:#888;">Voir en ligne</a>
+      </p>
+    </div>
+  </td></tr>
+</table>
+</td></tr></table>
+</body></html>'''
+
+
+def send_newsletter(articles):
+    """Send newsletter to all contacts in the Brevo list."""
+    api_key = os.environ.get("BREVO_API_KEY", "")
+    if not api_key:
+        print("  [SKIP] BREVO_API_KEY non definie, email non envoye")
+        return
+
+    # Fetch contacts from list
+    url = f"https://api.brevo.com/v3/contacts/lists/{BREVO_LIST_ID}/contacts"
+    headers = {"api-key": api_key, "Accept": "application/json"}
+    try:
+        req = urllib.request.Request(url, headers=headers)
+        with urllib.request.urlopen(req) as resp:
+            data = json.loads(resp.read())
+        contacts = data.get("contacts", [])
+    except Exception as e:
+        print(f"  [BREVO-ERR] Impossible de recuperer les contacts: {e}")
+        return
+
+    if not contacts:
+        print("  [INFO] Aucun abonne dans la liste, email non envoye")
+        return
+
+    emails = [c["email"] for c in contacts if c.get("email")]
+    print(f"  {len(emails)} abonne(s) dans la liste")
+
+    # Build email
+    html_content = build_newsletter_html(articles)
+    today = datetime.now()
+    jours = ["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"]
+    mois_noms = ["","janvier","f\u00e9vrier","mars","avril","mai","juin",
+                 "juillet","ao\u00fbt","septembre","octobre","novembre","d\u00e9cembre"]
+    date_str = f"{jours[today.weekday()]} {today.day} {mois_noms[today.month]} {today.year}"
+    subject = f"Pharm'Actus du {date_str}"
+
+    # Send via Brevo transactional API
+    send_url = "https://api.brevo.com/v3/smtp/email"
+    payload = json.dumps({
+        "sender": {"name": SENDER_NAME, "email": SENDER_EMAIL},
+        "to": [{"email": e} for e in emails],
+        "subject": subject,
+        "htmlContent": html_content,
+    }).encode("utf-8")
+
+    try:
+        req = urllib.request.Request(
+            send_url,
+            data=payload,
+            headers={
+                "api-key": api_key,
+                "Content-Type": "application/json",
+                "Accept": "application/json",
+            },
+            method="POST",
+        )
+        with urllib.request.urlopen(req) as resp:
+            result = json.loads(resp.read())
+            print(f"  Newsletter envoyee ! ID: {result.get('messageId', 'N/A')}")
+    except Exception as e:
+        print(f"  [BREVO-ERR] Echec envoi: {e}")
+
+
 # ── MAIN ──────────────────────────────────────────────────────────────
 
 def main():
@@ -400,19 +566,19 @@ def main():
     print(f"  Date: {datetime.now().strftime('%Y-%m-%d %H:%M')}")
 
     # 1. Fetch RSS
-    print("\n[1/4] Collecte des flux RSS...")
+    print("\n[1/5] Collecte des flux RSS...")
     raw_articles = fetch_rss_articles()
     if not raw_articles:
         print("  Aucun article RSS. Arret.")
         return
 
     # 2. Curate 3 actus
-    print(f"\n[2/4] Curation via Claude ({len(raw_articles)} articles)...")
+    print(f"\n[2/5] Curation via Claude ({len(raw_articles)} articles)...")
     curated = curate_with_claude(raw_articles)
     print(f"  {len(curated)} actus selectionnees")
 
     # 3. Generate 1 Le Saviez-Vous
-    print("\n[3/4] Generation du Le Saviez-Vous...")
+    print("\n[3/5] Generation du Le Saviez-Vous...")
     existing_lsv = get_existing_lsv_titles()
     lsv = generate_lsv_with_claude(existing_lsv)
     if lsv:
@@ -426,10 +592,13 @@ def main():
         return
 
     # 4. Photos Pexels + insertion HTML
-    print("\n[4/4] Photos Pexels + mise a jour index.html...")
+    print("\n[4/5] Photos Pexels + mise a jour index.html...")
     updated = update_index_html(curated)
 
     if updated:
+        # 5. Send newsletter
+        print("\n[5/5] Envoi newsletter Brevo...")
+        send_newsletter(curated)
         print("\n=== Mise a jour terminee avec succes ===")
     else:
         print("\n=== Aucune mise a jour effectuee ===")

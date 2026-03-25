@@ -31,10 +31,11 @@ jobs:
       - name: Install dependencies
         run: pip install anthropic feedparser
 
-      - name: Fetch RSS, curate articles, generate LSV & fetch photos
+      - name: Fetch RSS, curate articles, generate LSV, fetch photos & send newsletter
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
         run: python scripts/update_actus.py
 
       - name: Commit & push if changed
