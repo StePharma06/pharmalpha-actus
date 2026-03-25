@@ -1406,12 +1406,12 @@ function renderArticles() {
     return;
   }
 
-  // Grouper par Aujourd'hui / Hier / Précédemment
+  // Grouper par Aujourd'hui / Hier / Précédemment (heure locale FR)
   const now = new Date();
-  const todayStr = now.toISOString().slice(0, 10);
+  const todayStr = now.getFullYear() + '-' + String(now.getMonth()+1).padStart(2,'0') + '-' + String(now.getDate()).padStart(2,'0');
   const yesterday = new Date(now);
   yesterday.setDate(yesterday.getDate() - 1);
-  const yesterdayStr = yesterday.toISOString().slice(0, 10);
+  const yesterdayStr = yesterday.getFullYear() + '-' + String(yesterday.getMonth()+1).padStart(2,'0') + '-' + String(yesterday.getDate()).padStart(2,'0');
 
   const groups = { today: [], yesterday: [], older: [] };
   filtered.forEach(a => {
