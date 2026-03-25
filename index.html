@@ -707,6 +707,51 @@ body {
 .footer a { color: var(--orange); text-decoration: none; font-weight: 500; }
 .footer a:hover { text-decoration: underline; }
 
+/* === BIO === */
+.bio-section {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 48px 24px 32px;
+}
+.bio-card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px 32px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+.bio-photo {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.bio-info h3 {
+  margin: 0 0 4px;
+  font-size: 18px;
+  color: var(--text);
+}
+.bio-info .bio-title {
+  font-size: 13px;
+  color: var(--orange);
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+.bio-info .bio-desc {
+  font-size: 14px;
+  color: var(--text-dim);
+  line-height: 1.6;
+  margin: 0;
+}
+@media (max-width: 600px) {
+  .bio-card { flex-direction: column; text-align: center; padding: 24px 20px; }
+  .bio-photo { width: 80px; height: 80px; }
+}
+
 /* === TOAST === */
 .toast {
   position: fixed;
@@ -998,6 +1043,18 @@ body {
     <p class="nl-privacy">Tes donnees restent privees. Desabonnement en 1 clic.</p>
   </div>
 </div>
+
+<!-- BIO -->
+<section class="bio-section">
+  <div class="bio-card">
+    <img src="assets/stephen.png" alt="Stephen ROBERT" class="bio-photo">
+    <div class="bio-info">
+      <h3>Stephen ROBERT</h3>
+      <p class="bio-title">Consultant, Formateur &amp; Communicant Pharma</p>
+      <p class="bio-desc">Docteur en Pharmacie, dipl&ocirc;m&eacute; d'un Mast&egrave;re Marketing &amp; Management des Industries de Sant&eacute;. Avec Pharm'Actus, je d&eacute;crypte l'actu pharma chaque matin pour que tu restes <em>in</em>, sans y passer des heures.</p>
+    </div>
+  </div>
+</section>
 
 <!-- FOOTER -->
 <footer class="footer">
