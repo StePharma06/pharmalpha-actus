@@ -17,16 +17,28 @@ import anthropic
 import feedparser
 
 
+FALLBACK_MODEL = "claude-haiku-4-5-20251001"
+
+
 def claude_create(client, **kwargs):
-    """Call Claude API with retry on overload (529) or rate limit (429)."""
-    for attempt in range(4):
+    """Call Claude API with retry + fallback to Haiku if Sonnet is overloaded."""
+    original_model = kwargs.get("model", "")
+    # 2 tentatives sur le modele principal
+    for attempt in range(2):
         try:
             return client.messages.create(**kwargs)
         except anthropic.APIStatusError as e:
-            if e.status_code in (429, 529) and attempt < 3:
-                wait = 60 * (attempt + 1)  # 60s, 120s, 180s
-                print(f"    [RETRY] Claude erreur {e.status_code}, attente {wait}s...")
-                time.sleep(wait)
+            if e.status_code in (429, 529) and attempt < 1:
+                print(f"    [RETRY] Claude {e.status_code}, attente 30s...")
+                time.sleep(30)
+            elif e.status_code in (429, 529):
+                # Fallback sur Haiku
+                print(f"    [FALLBACK] {original_model} indisponible, bascule sur Haiku...")
+                kwargs["model"] = FALLBACK_MODEL
+                try:
+                    return client.messages.create(**kwargs)
+                except Exception:
+                    raise e  # Renvoyer l'erreur originale
             else:
                 raise
 
