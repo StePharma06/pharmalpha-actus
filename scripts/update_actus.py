@@ -18,14 +18,14 @@ import feedparser
 
 
 def claude_create(client, **kwargs):
-    """Call Claude API with retry on overload (529)."""
-    for attempt in range(3):
+    """Call Claude API with retry on overload (529) or rate limit (429)."""
+    for attempt in range(4):
         try:
             return client.messages.create(**kwargs)
         except anthropic.APIStatusError as e:
-            if e.status_code == 529 and attempt < 2:
-                wait = 30 * (attempt + 1)
-                print(f"    [RETRY] Claude surcharge (529), attente {wait}s...")
+            if e.status_code in (429, 529) and attempt < 3:
+                wait = 60 * (attempt + 1)  # 60s, 120s, 180s
+                print(f"    [RETRY] Claude erreur {e.status_code}, attente {wait}s...")
                 time.sleep(wait)
             else:
                 raise
@@ -83,7 +83,10 @@ def fetch_rss_articles():
         except Exception as e:
             print(f"  [WARN] Erreur feed {feed_cfg['name']}: {e}")
 
-    print(f"  {len(articles)} articles RSS collectes")
+    # Garder les 30 plus recents pour ne pas surcharger Claude
+    articles.sort(key=lambda a: a["date"], reverse=True)
+    articles = articles[:30]
+    print(f"  {len(articles)} articles RSS retenus (30 max)")
     return articles
 
 
