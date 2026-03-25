@@ -7,6 +7,7 @@ Fetch RSS → Claude curate (ton Stephen) → Pexels photos → Le Saviez-Vous �
 import json
 import os
 import re
+import time
 import urllib.parse
 import urllib.request
 from datetime import datetime, timedelta, timezone
@@ -14,6 +15,20 @@ from pathlib import Path
 
 import anthropic
 import feedparser
+
+
+def claude_create(client, **kwargs):
+    """Call Claude API with retry on overload (529)."""
+    for attempt in range(3):
+        try:
+            return client.messages.create(**kwargs)
+        except anthropic.APIStatusError as e:
+            if e.status_code == 529 and attempt < 2:
+                wait = 30 * (attempt + 1)
+                print(f"    [RETRY] Claude surcharge (529), attente {wait}s...")
+                time.sleep(wait)
+            else:
+                raise
 
 
 SCRIPT_DIR = Path(__file__).parent
@@ -139,7 +154,7 @@ JSON UNIQUEMENT :
   }}
 ]"""
 
-    response = client.messages.create(
+    response = claude_create(client,
         model="claude-sonnet-4-20250514",
         max_tokens=4000,
         messages=[{"role": "user", "content": prompt}],
@@ -199,7 +214,7 @@ JSON UNIQUEMENT :
   "date": "{today}"
 }}"""
 
-    response = client.messages.create(
+    response = claude_create(client,
         model="claude-sonnet-4-20250514",
         max_tokens=2000,
         messages=[{"role": "user", "content": prompt}],
