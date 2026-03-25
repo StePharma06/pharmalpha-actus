@@ -321,65 +321,6 @@ body {
   gap: 16px;
 }
 
-/* === DAY CARDS (grid desktop + slider mobile) === */
-.day-cards {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px 16px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-  gap: 16px;
-}
-
-/* === LSV WIDE CARD === */
-.card-lsv {
-  grid-column: 1 / -1;
-  flex-direction: row;
-  align-items: center;
-  padding: 14px 20px;
-  gap: 20px;
-  border-left: 3px solid var(--purple);
-  cursor: pointer;
-}
-.lsv-badge-col {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 4px;
-  flex-shrink: 0;
-}
-.lsv-body {
-  flex: 1;
-  min-width: 0;
-}
-.lsv-body h3 {
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1.3;
-  color: var(--black);
-  margin: 0 0 2px;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-.lsv-body .card-resume {
-  -webkit-line-clamp: 1;
-  font-size: 13px;
-  line-height: 1.4;
-  margin: 0;
-}
-.lsv-actions {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-shrink: 0;
-}
-.lsv-actions .btn-share {
-  padding: 6px 10px;
-  font-size: 12px;
-}
-
 /* === SECTION TITLES === */
 .section-title {
   max-width: 1200px;
@@ -785,50 +726,10 @@ body {
   .modal-body { padding: 16px 20px 24px; }
   .modal-body h2 { font-size: 20px; }
   .modal-footer { padding: 12px 20px 20px; }
-  /* --- Slider horizontal pour les day-cards --- */
-  .day-cards {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    padding: 0 16px 16px;
-    gap: 12px;
-    scrollbar-width: none;
-  }
-  .day-cards::-webkit-scrollbar { display: none; }
-  .day-cards > .card {
-    flex: 0 0 85%;
-    scroll-snap-align: start;
-    min-width: 0;
-  }
-  /* LSV redevient vertical dans le slider */
-  .card-lsv {
-    flex-direction: column;
-    align-items: stretch;
-    border-left: none;
-    border-top: 3px solid var(--purple);
-    padding: 18px;
-    gap: 10px;
-  }
-  .lsv-badge-col {
-    flex-direction: row;
-    align-items: center;
-    gap: 8px;
-  }
-  .lsv-body h3 {
-    font-size: 16px;
-    -webkit-line-clamp: 2;
-  }
-  .lsv-body .card-resume {
-    -webkit-line-clamp: 3;
-  }
-  .lsv-actions {
-    justify-content: flex-start;
-  }
 }
 @media (max-width: 420px) {
   .hero { padding: 28px 16px 16px; }
-  .filters, .grid, .day-cards, .stats-bar { padding-left: 16px; padding-right: 16px; }
+  .filters, .grid, .stats-bar { padding-left: 16px; padding-right: 16px; }
   .card { padding: 16px; }
 }
 
@@ -1465,24 +1366,6 @@ function renderCard(a, i) {
     </article>`;
 }
 
-function renderLsvWideCard(a, i) {
-  return `
-    <article class="card card-lsv" style="animation-delay:${i * 0.04}s" onclick="openModal('${a.id}')">
-      <div class="lsv-badge-col">
-        <span class="badge badge-lsv">${a.badge_label}</span>
-        <span class="card-date">${formatDate(a.date)}</span>
-      </div>
-      <div class="lsv-body">
-        <h3>${a.titre}</h3>
-        <p class="card-resume">${a.resume}</p>
-      </div>
-      <div class="lsv-actions">
-        <button class="btn-read-more" onclick="event.stopPropagation(); openModal('${a.id}')">Lire l'histoire &rarr;</button>
-        <button class="btn-share" onclick="event.stopPropagation(); shareArticle('${a.id}', event)">${ICONS.share}</button>
-      </div>
-    </article>`;
-}
-
 function renderListItem(a) {
   const shortDate = new Date(a.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'short' });
   return `
@@ -1498,26 +1381,26 @@ function renderArticles() {
   const query = searchInput.value.toLowerCase().trim();
   const isAllFilter = currentFilter === 'all';
 
-  // Filtrage : par defaut, on exclut les LSV sauf si on clique sur l'onglet LSV
+  // Filtrage : "all" inclut tout (actus + LSV), sinon par categorie
   let filtered = ARTICLES;
-  if (isAllFilter) {
-    filtered = filtered.filter(a => a.categorie !== 'lsv');
-  } else {
+  if (!isAllFilter) {
     filtered = filtered.filter(a => a.categorie === currentFilter);
   }
   if (query) filtered = filtered.filter(a =>
     a.titre.toLowerCase().includes(query) || a.resume.toLowerCase().includes(query)
   );
-  filtered.sort((a, b) => new Date(b.date) - new Date(a.date));
-
-  // LSV mise en avant (le plus recent) pour le filtre "all"
-  const featuredLsv = isAllFilter
-    ? ARTICLES.filter(a => a.categorie === 'lsv').sort((a, b) => new Date(b.date) - new Date(a.date))[0]
-    : null;
+  // Tri par date desc, puis actus avant LSV au sein d'un meme jour
+  filtered.sort((a, b) => {
+    const dateDiff = new Date(b.date) - new Date(a.date);
+    if (dateDiff !== 0) return dateDiff;
+    // A date egale : actus d'abord, LSV en dernier
+    if (a.categorie === 'lsv' && b.categorie !== 'lsv') return 1;
+    if (a.categorie !== 'lsv' && b.categorie === 'lsv') return -1;
+    return 0;
+  });
 
   // Stats
-  const displayCount = filtered.length + (featuredLsv ? 1 : 0);
-  document.getElementById('stats-count').innerHTML = `<strong>${displayCount}</strong> article${displayCount > 1 ? 's' : ''}`;
+  document.getElementById('stats-count').innerHTML = `<strong>${filtered.length}</strong> article${filtered.length > 1 ? 's' : ''}`;
   if (ARTICLES.length > 0) {
     const latest = ARTICLES.filter(a => a.categorie !== 'lsv').reduce((a, b) => new Date(a.date) > new Date(b.date) ? a : b, ARTICLES[0]);
     document.getElementById('stats-date').textContent = formatDate(latest.date);
@@ -1525,7 +1408,7 @@ function renderArticles() {
 
   const container = document.getElementById('articles-container');
 
-  if (filtered.length === 0 && !featuredLsv) {
+  if (filtered.length === 0) {
     container.innerHTML = '<div class="empty-state"><p>Aucun article ne correspond à votre recherche.</p></div>';
     return;
   }
@@ -1547,36 +1430,14 @@ function renderArticles() {
   const labels = { today: "Aujourd'hui", yesterday: "Hier", older: "Précédemment" };
   let html = '';
   let cardIdx = 0;
-  let lsvShown = false;
 
   ['today', 'yesterday'].forEach(key => {
     if (groups[key].length === 0) return;
     html += `<div class="section-title">${labels[key]}</div>`;
-
-    if (isAllFilter) {
-      // day-cards : grid desktop / slider mobile
-      html += '<div class="day-cards">';
-      html += groups[key].map(a => renderCard(a, cardIdx++)).join('');
-      // Ajouter le LSV dans la premiere section non-vide
-      if (featuredLsv && !lsvShown) {
-        html += renderLsvWideCard(featuredLsv, cardIdx++);
-        lsvShown = true;
-      }
-      html += '</div>';
-    } else {
-      html += '<div class="grid">';
-      html += groups[key].map(a => renderCard(a, cardIdx++)).join('');
-      html += '</div>';
-    }
-  });
-
-  // Si aucune section today/yesterday, afficher le LSV seul
-  if (featuredLsv && !lsvShown) {
-    html += '<div class="section-title">Le Saviez-Vous</div>';
-    html += '<div class="day-cards">';
-    html += renderLsvWideCard(featuredLsv, cardIdx++);
+    html += '<div class="grid">';
+    html += groups[key].map(a => renderCard(a, cardIdx++)).join('');
     html += '</div>';
-  }
+  });
 
   if (groups.older.length > 0) {
     html += `<div class="section-title">${labels.older}</div>`;
