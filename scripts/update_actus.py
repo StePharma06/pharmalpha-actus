@@ -498,29 +498,37 @@ def build_newsletter_html(articles):
 
 
 def send_newsletter(articles):
-    """Send newsletter to all contacts in the Brevo list."""
+    """Send newsletter individually to each contact in the Brevo list."""
     api_key = os.environ.get("BREVO_API_KEY", "")
     if not api_key:
         print("  [SKIP] BREVO_API_KEY non definie, email non envoye")
         return
 
-    # Fetch contacts from list
-    url = f"https://api.brevo.com/v3/contacts/lists/{BREVO_LIST_ID}/contacts"
+    # Fetch ALL contacts with pagination (50 per page)
+    all_contacts = []
+    offset = 0
+    limit = 50
     headers = {"api-key": api_key, "Accept": "application/json"}
-    try:
-        req = urllib.request.Request(url, headers=headers)
-        with urllib.request.urlopen(req) as resp:
-            data = json.loads(resp.read())
-        contacts = data.get("contacts", [])
-    except Exception as e:
-        print(f"  [BREVO-ERR] Impossible de recuperer les contacts: {e}")
-        return
+    while True:
+        url = f"https://api.brevo.com/v3/contacts/lists/{BREVO_LIST_ID}/contacts?limit={limit}&offset={offset}"
+        try:
+            req = urllib.request.Request(url, headers=headers)
+            with urllib.request.urlopen(req) as resp:
+                data = json.loads(resp.read())
+            contacts = data.get("contacts", [])
+            all_contacts.extend(contacts)
+            if len(contacts) < limit:
+                break
+            offset += limit
+        except Exception as e:
+            print(f"  [BREVO-ERR] Impossible de recuperer les contacts: {e}")
+            return
 
-    if not contacts:
+    if not all_contacts:
         print("  [INFO] Aucun abonne dans la liste, email non envoye")
         return
 
-    emails = [c["email"] for c in contacts if c.get("email")]
+    emails = [c["email"] for c in all_contacts if c.get("email")]
     print(f"  {len(emails)} abonne(s) dans la liste")
 
     # Build email
@@ -532,31 +540,37 @@ def send_newsletter(articles):
     date_str = f"{jours[today.weekday()]} {today.day} {mois_noms[today.month]} {today.year}"
     subject = f"Pharm'Actus du {date_str}"
 
-    # Send via Brevo transactional API
+    # Send individually to each contact (privacy: no one sees others' emails)
     send_url = "https://api.brevo.com/v3/smtp/email"
-    payload = json.dumps({
-        "sender": {"name": SENDER_NAME, "email": SENDER_EMAIL},
-        "to": [{"email": e} for e in emails],
-        "subject": subject,
-        "htmlContent": html_content,
-    }).encode("utf-8")
+    sent = 0
+    errors = 0
+    for email in emails:
+        payload = json.dumps({
+            "sender": {"name": SENDER_NAME, "email": SENDER_EMAIL},
+            "to": [{"email": email}],
+            "subject": subject,
+            "htmlContent": html_content,
+        }).encode("utf-8")
+        try:
+            req = urllib.request.Request(
+                send_url,
+                data=payload,
+                headers={
+                    "api-key": api_key,
+                    "Content-Type": "application/json",
+                    "Accept": "application/json",
+                },
+                method="POST",
+            )
+            with urllib.request.urlopen(req) as resp:
+                json.loads(resp.read())
+            sent += 1
+        except Exception as e:
+            errors += 1
+            print(f"  [BREVO-ERR] Echec pour {email}: {e}")
 
-    try:
-        req = urllib.request.Request(
-            send_url,
-            data=payload,
-            headers={
-                "api-key": api_key,
-                "Content-Type": "application/json",
-                "Accept": "application/json",
-            },
-            method="POST",
-        )
-        with urllib.request.urlopen(req) as resp:
-            result = json.loads(resp.read())
-            print(f"  Newsletter envoyee ! ID: {result.get('messageId', 'N/A')}")
-    except Exception as e:
-        print(f"  [BREVO-ERR] Echec envoi: {e}")
+    print(f"  Newsletter envoyee a {sent}/{len(emails)} abonne(s)" +
+          (f" ({errors} erreur(s))" if errors else ""))
 
 
 # ── MAIN ──────────────────────────────────────────────────────────────
