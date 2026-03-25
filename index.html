@@ -18,7 +18,6 @@
 <meta name="twitter:title" content="Pharm'Actus - L'actu pharma pour les pharmaciens">
 <meta name="twitter:description" content="Chaque matin, le r\u00e9sum\u00e9 pharma que t'aurais aim\u00e9 avoir entre deux clients. 3 actus + 1 histoire. Gratuit.">
 <meta name="twitter:image" content="https://actus.pharmalpha.fr/assets/og_image.png">
-<script src="https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit" async defer></script>
 <style>
 :root {
   --bg: #ffffff;
@@ -925,7 +924,6 @@ body {
         <input type="email" id="hero-nl-email" placeholder="ton@email.com" required>
         <button type="submit" id="hero-nl-btn">S'abonner</button>
       </div>
-      <div class="hero-nl-captcha"><div id="hero-recaptcha"></div></div>
     </form>
     <div class="hero-nl-msg" id="hero-nl-msg"></div>
   </div>
@@ -994,7 +992,6 @@ body {
       <div class="nl-form-row">
         <input type="email" id="nl-email" placeholder="ton@email.com" required>
       </div>
-      <div class="nl-captcha"><div id="popup-recaptcha"></div></div>
       <button type="submit" id="nl-btn">S'abonner</button>
     </form>
     <div class="nl-msg" id="nl-msg"></div>
@@ -1569,25 +1566,8 @@ renderArticles();
 // NEWSLETTER (Brevo) — formulaire hero + popup
 // ============================================================
 const BREVO_FORM_URL = 'https://d62a61bf.sibforms.com/serve/MUIFABdrcLOgXvWIMTQmdKonNYSBSpG_-4LzQgb5KXKLX0PpNal4KBNqBfYfg-A45xyqA87TyS4cM4rArjkuU6IY0l0N7bMckzLEXgJNeMsijK0ute2LJh3MfkWG6UythgtFBJpK3tALlzYC-Qq1zopesAGpa-gCOlpHqDGc2_r4DfgZwncDe-CtQr8cV_2Hb6aIBYx_uzNSjLbsRw==';
-const RECAPTCHA_SITEKEY = '6Lcv-ZQsAAAAAFIBnP1lVl7vRrjmnodalcMbodY5';
 const NL_KEY = 'pharmalpha_nl';
 const NL_DISMISS_KEY = 'pharmalpha_nl_dismiss';
-
-// Widget IDs reCAPTCHA (attribues au chargement)
-let heroWidgetId = null;
-let popupWidgetId = null;
-
-// Rendu explicite des 2 widgets reCAPTCHA
-function onRecaptchaLoad() {
-  heroWidgetId = grecaptcha.render('hero-recaptcha', {
-    sitekey: RECAPTCHA_SITEKEY,
-    theme: 'light'
-  });
-  popupWidgetId = grecaptcha.render('popup-recaptcha', {
-    sitekey: RECAPTCHA_SITEKEY,
-    theme: 'light'
-  });
-}
 
 // Masquer le formulaire hero si deja abonne
 if (localStorage.getItem(NL_KEY) === 'subscribed') {
@@ -1618,22 +1598,8 @@ document.getElementById('nl-overlay').addEventListener('click', function(e) {
   if (e.target === this) closeNewsletter();
 });
 
-// --- Soumission generique Brevo (captcha revele au 1er clic) ---
-async function submitToBrevo(email, btn, msg, widgetId, captchaEl, onSuccess) {
-  // 1er clic : reveler le captcha
-  if (!captchaEl.classList.contains('visible')) {
-    captchaEl.classList.add('visible');
-    msg.textContent = 'Coche la case ci-dessous puis clique a nouveau.';
-    msg.className = msg.className.replace(/ ?(success|error)/g, '') + ' error';
-    return;
-  }
-  // 2e clic : verifier le captcha
-  const captchaResponse = grecaptcha.getResponse(widgetId);
-  if (!captchaResponse) {
-    msg.textContent = 'Coche la case "Je ne suis pas un robot" pour continuer.';
-    msg.className = msg.className.replace(/ ?(success|error)/g, '') + ' error';
-    return;
-  }
+// --- Soumission Brevo (honeypot anti-spam) ---
+async function submitToBrevo(email, btn, msg, onSuccess) {
   btn.disabled = true;
   btn.textContent = 'Envoi...';
   msg.className = msg.className.replace(/ ?(success|error)/g, '');
@@ -1644,7 +1610,7 @@ async function submitToBrevo(email, btn, msg, widgetId, captchaEl, onSuccess) {
     formData.append('email_address_check', '');
     formData.append('locale', 'fr');
     await fetch(BREVO_FORM_URL, { method: 'POST', body: formData, mode: 'no-cors' });
-    msg.textContent = 'Merci ! Verifie ta boite mail pour confirmer.';
+    msg.textContent = 'Merci ! Tu recevras les actus chaque matin.';
     msg.className = msg.className.replace(/ ?(success|error)/g, '') + ' success';
     localStorage.setItem(NL_KEY, 'subscribed');
     document.getElementById('hero-nl').style.display = 'none';
@@ -1666,8 +1632,6 @@ async function submitNewsletter(e) {
     email,
     document.getElementById('nl-btn'),
     document.getElementById('nl-msg'),
-    popupWidgetId,
-    document.querySelector('.nl-captcha'),
     () => setTimeout(closeNewsletter, 3000)
   );
 }
@@ -1680,9 +1644,7 @@ async function submitHeroNL(e) {
   await submitToBrevo(
     email,
     document.getElementById('hero-nl-btn'),
-    document.getElementById('hero-nl-msg'),
-    heroWidgetId,
-    document.querySelector('.hero-nl-captcha')
+    document.getElementById('hero-nl-msg')
   );
 }
 
