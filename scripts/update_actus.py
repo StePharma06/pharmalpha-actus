@@ -17,8 +17,9 @@ import anthropic
 import feedparser
 
 BREVO_LIST_ID = 5  # "Newsletter Pharm'Alpha"
-SENDER_EMAIL = "stephen.pharmacien@gmail.com"
+SENDER_EMAIL = "actus@pharmalpha.fr"
 SENDER_NAME = "Pharm'Actus"
+REPLY_TO_EMAIL = "stephen.pharmacien@gmail.com"
 
 
 FALLBACK_MODEL = "claude-haiku-4-5-20251001"
@@ -554,6 +555,7 @@ def send_newsletter(articles):
     for email in emails:
         payload = json.dumps({
             "sender": {"name": SENDER_NAME, "email": SENDER_EMAIL},
+            "replyTo": {"email": REPLY_TO_EMAIL, "name": SENDER_NAME},
             "to": [{"email": email}],
             "subject": subject,
             "htmlContent": html_content,
