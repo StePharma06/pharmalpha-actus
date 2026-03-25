@@ -149,7 +149,7 @@ def build_email_html(articles):
           </td>
           <td style="vertical-align:top;">
             <p style="margin:0 0 4px;font-size:14px;font-weight:700;color:#1a1a1a;">Stephen ROBERT</p>
-            <p style="margin:0;font-size:13px;color:#666;line-height:1.5;">Pharmacien d'officine devenu consultant. Je d&eacute;crypte l'actu pharma chaque matin pour que tu restes dans la boucle, sans y passer des heures.</p>
+            <p style="margin:0;font-size:13px;color:#666;line-height:1.5;">Docteur en Pharmacie &bull; Mast&egrave;re Marketing &amp; Management des Industries de Sant&eacute; &bull; Consultant, formateur et communicant pharma.<br>Avec Pharm'Actus, je d&eacute;crypte l'actu pharma chaque matin pour que tu restes <em>in</em>, sans y passer des heures.</p>
           </td>
         </tr>
       </table>
