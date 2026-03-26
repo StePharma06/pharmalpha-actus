@@ -2,9 +2,9 @@ name: Daily Actus Update
 
 on:
   schedule:
-    # 5h UTC = 6h heure de Paris (hiver) / 7h (ete)
-    # 4h UTC = 5h (hiver) / 6h (ete)
-    - cron: '0 4 * * *'
+    # 1h UTC → avec les retards GitHub (~2-4h), execution reelle vers 3-5h UTC
+    # soit ~4-6h Paris (hiver) / ~5-7h Paris (ete)
+    - cron: '0 1 * * *'
   workflow_dispatch:  # Lancement manuel possible
 
 permissions:
