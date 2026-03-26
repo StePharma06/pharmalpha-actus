@@ -470,8 +470,8 @@ def build_newsletter_html(articles):
 <tr><td align="center" style="padding:24px 16px;">
 <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
   <tr><td style="background:#ffffff;padding:28px 32px 16px;text-align:center;border-bottom:2px solid #f97316;">
-    <span style="font-size:28px;font-weight:800;color:#f97316;letter-spacing:-0.5px;">PHARM'ACTUS</span><br>
-    <span style="font-size:13px;color:#888;letter-spacing:0.3px;">L'actu pharma par un pharmacien, pour les pharmaciens</span>
+    <span style="font-size:32px;font-weight:800;color:#1a1a1a;letter-spacing:-0.5px;">Pharm'<span style="color:#f97316;">Actus</span></span><br>
+    <span style="font-size:13px;color:#888;letter-spacing:0.3px;">Chaque matin, le r&eacute;sum&eacute; pharma que t'aurais aim&eacute; avoir entre deux clients.</span>
   </td></tr>
   <tr><td style="background:#fafafa;padding:10px 32px;text-align:center;">
     <span style="color:#1a1a1a;font-size:14px;font-weight:600;">{date_str}</span>
@@ -479,7 +479,7 @@ def build_newsletter_html(articles):
   </td></tr>
   <tr><td style="padding:28px 32px 20px;">
     <p style="margin:0;font-size:15px;color:#333;line-height:1.6;">
-      Salut !<br><br>Voici ton briefing pharma du jour. {count_str} pour rester au top. Bonne lecture !
+      Hey, je sais que tu es press&eacute;, tu as tellement de choses &agrave; faire ! C'est pourquoi je t'ai s&eacute;lectionn&eacute; les 3 actus du jour &agrave; ne pas manquer. Et m&ecirc;me une histoire pharma pour ta pause caf&eacute;. Bonne lecture !
     </p>
     <p style="margin:12px 0 0;font-size:13px;color:#999;line-height:1.5;font-style:italic;">
       Astuce : r&eacute;ponds juste &laquo; bien re&ccedil;u &raquo; &agrave; cet email. &Ccedil;a indique &agrave; ta messagerie qu'on se conna&icirc;t, et mes actus atterriront toujours dans ta bo&icirc;te principale.
@@ -498,12 +498,13 @@ def build_newsletter_html(articles):
     <div style="border-top:1px solid #e5e5e5;padding-top:20px;">
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
         <tr>
-          <td style="vertical-align:top;width:60px;padding-right:16px;">
-            <div style="width:52px;height:52px;border-radius:50%;background:#f97316;color:#fff;font-size:22px;font-weight:700;line-height:52px;text-align:center;">S</div>
+          <td style="vertical-align:top;width:70px;padding-right:16px;">
+            <img src="https://actus.pharmalpha.fr/assets/stephen.png" alt="Stephen ROBERT" width="60" height="60" style="width:60px;height:60px;border-radius:50%;display:block;" />
           </td>
           <td style="vertical-align:top;">
-            <p style="margin:0 0 4px;font-size:14px;font-weight:700;color:#1a1a1a;">Stephen ROBERT</p>
-            <p style="margin:0;font-size:13px;color:#666;line-height:1.5;">Docteur en Pharmacie &bull; Mast&egrave;re Marketing &amp; Management des Industries de Sant&eacute; &bull; Consultant, formateur et communicant pharma.<br>Avec Pharm'Actus, je d&eacute;crypte l'actu pharma chaque matin pour que tu restes <em>in</em>, sans y passer des heures.</p>
+            <p style="margin:0 0 2px;font-size:15px;font-weight:700;color:#1a1a1a;">Stephen ROBERT</p>
+            <p style="margin:0 0 8px;font-size:12px;font-weight:600;color:#f97316;">Consultant, Formateur &amp; Communicant Pharma</p>
+            <p style="margin:0;font-size:13px;color:#666;line-height:1.5;">Docteur en Pharmacie, dipl&ocirc;m&eacute; d'un Mast&egrave;re Marketing &amp; Management des Industries de Sant&eacute;. Avec Pharm'Actus, je d&eacute;crypte l'actu pharma chaque matin pour que tu restes <em>in</em>, sans y passer des heures.</p>
           </td>
         </tr>
       </table>
