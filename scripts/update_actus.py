@@ -258,10 +258,10 @@ JSON UNIQUEMENT :
 
 def search_pexels_photo(query):
     """Search Pexels for a free stock photo. Returns (download_url, photographer)."""
-    api_key = os.environ.get("PEXELS_API_KEY", "")
+    api_key = os.environ.get("PEXELS_API_KEY", "").strip()
     if not api_key:
-        print("    [SKIP] PEXELS_API_KEY non definie")
-        return "", ""
+        # Fallback: cle gratuite Pexels (pas de facturation, repo public)
+        api_key = "UapwydwlfWpQrgkN8rfyClS3foJ6zuFYyL4UVqFYtomh7tlTVcM5t6g1"
 
     encoded = urllib.parse.quote(query)
     url = f"https://api.pexels.com/v1/search?query={encoded}&per_page=1&orientation=landscape"
