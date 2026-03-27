@@ -407,7 +407,45 @@ def update_index_html(new_articles):
 
 # ── BREVO : envoi newsletter ──────────────────────────────────────────
 
-def build_newsletter_html(articles):
+def generate_email_intro(articles):
+    """Generate a unique daily email intro using Claude, referencing an article."""
+    actus = [a for a in articles if a.get("categorie") != "lsv"][:3]
+    lsv = next((a for a in articles if a.get("categorie") == "lsv"), None)
+    titres = [a.get("titre", "") for a in actus]
+    lsv_titre = lsv.get("titre", "") if lsv else ""
+
+    prompt = f"""Tu es Stephen, pharmacien devenu consultant pharma. Tu ecris l'intro de ta newsletter quotidienne Pharm'Actus.
+
+Voici les actus du jour :
+{chr(10).join(f'- {t}' for t in titres)}
+{f'- Le Saviez-Vous : {lsv_titre}' if lsv_titre else ''}
+
+Ecris une intro de 2-3 phrases MAX (pas plus de 40 mots). Regles :
+- Tutoie le lecteur
+- Ton decontracte, direct, un peu piquant
+- Fais reference a UNE actu du jour de maniere accrocheuse (sans donner la reponse, juste teaser)
+- Finis par "Bonne lecture !" ou une variante
+- PAS de emoji, PAS de guillemets autour du texte
+- Ecris en HTML avec les entites pour les accents (&eacute; &agrave; &egrave; etc.)"""
+
+    try:
+        client = anthropic.Anthropic()
+        response = claude_create(client,
+            model=FALLBACK_MODEL,
+            max_tokens=150,
+            messages=[{"role": "user", "content": prompt}]
+        )
+        intro = response.content[0].text.strip()
+        # Nettoyage : enlever guillemets si Claude en ajoute
+        intro = intro.strip('"').strip("'").strip("\u00ab\u00bb")
+        print(f"  [EMAIL-INTRO] Intro generee: {intro[:60]}...")
+        return intro
+    except Exception as e:
+        print(f"  [EMAIL-INTRO] Erreur Claude, fallback statique: {e}")
+        return None
+
+
+def build_newsletter_html(articles, custom_intro=None):
     """Build newsletter HTML from today's articles."""
     today = datetime.now()
     jours = ["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"]
@@ -479,7 +517,7 @@ def build_newsletter_html(articles):
   </td></tr>
   <tr><td style="padding:28px 32px 20px;">
     <p style="margin:0;font-size:15px;color:#333;line-height:1.6;">
-      Hey, je sais que tu es press&eacute;, tu as tellement de choses &agrave; faire ! C'est pourquoi je t'ai s&eacute;lectionn&eacute; les 3 actus du jour &agrave; ne pas manquer. Et m&ecirc;me une histoire pharma pour ta pause caf&eacute;. Bonne lecture !
+      {custom_intro if custom_intro else "Hey, je sais que tu es press&eacute;, tu as tellement de choses &agrave; faire ! C'est pourquoi je t'ai s&eacute;lectionn&eacute; les 3 actus du jour &agrave; ne pas manquer. Et m&ecirc;me une histoire pharma pour ta pause caf&eacute;. Bonne lecture !"}
     </p>
     <p style="margin:12px 0 0;font-size:13px;color:#999;line-height:1.5;font-style:italic;">
       Astuce : r&eacute;ponds juste &laquo; bien re&ccedil;u &raquo; &agrave; cet email. &Ccedil;a indique &agrave; ta messagerie qu'on se conna&icirc;t, et mes actus atterriront toujours dans ta bo&icirc;te principale.
@@ -560,8 +598,11 @@ def send_newsletter(articles):
     emails = [c["email"] for c in all_contacts if c.get("email")]
     print(f"  {len(emails)} abonne(s) dans la liste")
 
+    # Generate personalized intro via Claude
+    custom_intro = generate_email_intro(articles)
+
     # Build email
-    html_content = build_newsletter_html(articles)
+    html_content = build_newsletter_html(articles, custom_intro=custom_intro)
     today = datetime.now()
     jours = ["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"]
     mois_noms = ["","janvier","f\u00e9vrier","mars","avril","mai","juin",
