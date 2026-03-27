@@ -402,7 +402,58 @@ def update_index_html(new_articles):
     INDEX_HTML.write_text(updated_html, encoding="utf-8")
 
     print(f"  {len(new_js_entries)} articles ajoutes a index.html")
+
+    # Generate individual article pages for social sharing
+    generate_article_pages(new_articles)
+
     return True
+
+
+def generate_article_pages(articles):
+    """Generate individual HTML pages for each article (og:tags for social sharing)."""
+    articles_dir = REPO_ROOT / "articles"
+    articles_dir.mkdir(exist_ok=True)
+
+    for a in articles:
+        article_id = a.get("id", "")
+        if not article_id:
+            continue
+
+        titre = a.get("titre", "").replace('"', "&quot;")
+        resume = a.get("resume", "").replace('"', "&quot;")
+        image_url = a.get("image_url", "")
+        if image_url:
+            og_image = f"https://actus.pharmalpha.fr/{image_url}"
+        else:
+            og_image = "https://actus.pharmalpha.fr/assets/og_image.png"
+
+        page_html = f'''<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{titre} - Pharm'Actus</title>
+<meta property="og:title" content="{titre}" />
+<meta property="og:description" content="{resume}" />
+<meta property="og:image" content="{og_image}" />
+<meta property="og:url" content="https://actus.pharmalpha.fr/articles/{article_id}.html" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Pharm'Actus" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{titre}" />
+<meta name="twitter:description" content="{resume}" />
+<meta name="twitter:image" content="{og_image}" />
+<meta http-equiv="refresh" content="0;url=https://actus.pharmalpha.fr/?a={article_id}" />
+</head>
+<body>
+<p>Redirection vers <a href="https://actus.pharmalpha.fr/?a={article_id}">Pharm'Actus</a>...</p>
+</body>
+</html>'''
+
+        page_path = articles_dir / f"{article_id}.html"
+        page_path.write_text(page_html, encoding="utf-8")
+
+    print(f"  {len(articles)} pages article generees dans articles/")
 
 
 # ── BREVO : envoi newsletter ──────────────────────────────────────────
