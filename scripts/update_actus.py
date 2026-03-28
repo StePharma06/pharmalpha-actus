@@ -258,10 +258,8 @@ JSON UNIQUEMENT :
 
 def search_pexels_photo(query):
     """Search Pexels for a free stock photo. Returns (download_url, photographer)."""
-    api_key = os.environ.get("PEXELS_API_KEY", "").strip()
-    if not api_key:
-        # Fallback: cle gratuite Pexels (pas de facturation, repo public)
-        api_key = "UapwydwlfWpQrgkN8rfyClS3foJ6zuFYyL4UVqFYtomh7tlTVcM5t6g1"
+    # Cle hardcodee : gratuite, pas de facturation, repo public
+    api_key = "UapwydwlfWpQrgkN8rfyClS3foJ6zuFYyL4UVqFYtomh7tlTVcM5t6g1"
 
     encoded = urllib.parse.quote(query)
     url = f"https://api.pexels.com/v1/search?query={encoded}&per_page=1&orientation=landscape"
@@ -411,7 +409,7 @@ def update_index_html(new_articles):
 
 def generate_article_pages(articles):
     """Generate individual HTML pages for each article (og:tags for social sharing)."""
-    articles_dir = REPO_ROOT / "articles"
+    articles_dir = ROOT_DIR / "articles"
     articles_dir.mkdir(exist_ok=True)
 
     for a in articles:
