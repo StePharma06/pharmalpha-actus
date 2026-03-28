@@ -1,0 +1,4 @@
+# TikTok pipeline temp files
+output/tiktok/
+__pycache__/
+*.pyc

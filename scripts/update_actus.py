@@ -747,6 +747,13 @@ def main():
     if lsv:
         print(f"  LSV: {lsv.get('titre', '')[:60]}...")
         curated.append(lsv)
+        # Export LSV for TikTok video pipeline
+        lsv_output_dir = ROOT_DIR / "output"
+        lsv_output_dir.mkdir(exist_ok=True)
+        lsv_output_file = lsv_output_dir / "latest_lsv.json"
+        with open(lsv_output_file, "w", encoding="utf-8") as lsv_f:
+            json.dump(lsv, lsv_f, ensure_ascii=False, indent=2)
+        print(f"  [LSV-EXPORT] Sauvegarde dans output/latest_lsv.json")
     else:
         print("  [WARN] Pas de LSV genere")
 
