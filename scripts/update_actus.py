@@ -256,17 +256,19 @@ JSON UNIQUEMENT :
 
 # ── PEXELS : photos libres de droit ──────────────────────────────────
 
+PEXELS_API_KEY = "UapwydwlfWpQrgkN8rfyClS3foJ6zuFYyL4UVqFYtomh7tlTVcM5t6g1"
+HTTP_HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; PharmActus/1.0)"}
+
+
 def search_pexels_photo(query):
     """Search Pexels for a free stock photo. Returns (download_url, photographer)."""
-    # Cle hardcodee : gratuite, pas de facturation, repo public
-    api_key = "UapwydwlfWpQrgkN8rfyClS3foJ6zuFYyL4UVqFYtomh7tlTVcM5t6g1"
-
     encoded = urllib.parse.quote(query)
-    url = f"https://api.pexels.com/v1/search?query={encoded}&per_page=1&orientation=landscape"
-    req = urllib.request.Request(url, headers={"Authorization": api_key})
+    url = f"https://api.pexels.com/v1/search?query={encoded}&per_page=3&orientation=landscape"
+    headers = {**HTTP_HEADERS, "Authorization": PEXELS_API_KEY}
+    req = urllib.request.Request(url, headers=headers)
 
     try:
-        with urllib.request.urlopen(req) as resp:
+        with urllib.request.urlopen(req, timeout=15) as resp:
             data = json.loads(resp.read())
             if data.get("photos"):
                 photo = data["photos"][0]
@@ -282,11 +284,32 @@ def search_pexels_photo(query):
 def download_photo(url, dest_path):
     """Download a photo to local file."""
     try:
-        urllib.request.urlretrieve(url, str(dest_path))
+        req = urllib.request.Request(url, headers=HTTP_HEADERS)
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            with open(str(dest_path), "wb") as f:
+                f.write(resp.read())
         return True
     except Exception as e:
         print(f"    [DL-ERR] {e}")
         return False
+
+
+STOCK_DIR = ASSETS_DIR / "stock"
+_stock_usage = {}  # track which stock photos are used this run
+
+
+def get_fallback_photo(categorie):
+    """Pick a stock fallback photo for the given category. Cycles through available photos."""
+    cat = categorie if categorie in ("pharma_france", "pharma_monde", "sante", "lsv") else "sante"
+    idx = _stock_usage.get(cat, 0)
+    # 4 photos per category: cat_1.jpg .. cat_4.jpg
+    photo_name = f"{cat}_{(idx % 4) + 1}.jpg"
+    photo_path = STOCK_DIR / photo_name
+    _stock_usage[cat] = idx + 1
+    if photo_path.exists():
+        dest_name = f"stock/{photo_name}"
+        return dest_name
+    return ""
 
 
 # ── HTML : insertion des articles ─────────────────────────────────────
@@ -348,7 +371,7 @@ def update_index_html(new_articles):
             "badge_label": a.get("badge_label", "Sante"),
         }
 
-        # Photo Pexels
+        # Photo : Pexels API → fallback stock local
         img_url = ""
         img_keywords = a.get("image_keywords", "")
         print(f"  [{new_articles.index(a)+1}/{len(new_articles)}] {vals['titre'][:55]}...")
@@ -360,6 +383,12 @@ def update_index_html(new_articles):
                 if download_photo(photo_url, img_path):
                     img_url = f"assets/{img_name}"
                     print(f"    [IMG] {img_name} (Pexels{' - ' + photographer if photographer else ''})")
+        if not img_url:
+            # Fallback : photo stock pre-telechargee par categorie
+            fallback = get_fallback_photo(a.get("categorie", "sante"))
+            if fallback:
+                img_url = f"assets/{fallback}"
+                print(f"    [IMG-FALLBACK] {fallback}")
 
         entry = (
             '  {\n'
@@ -725,8 +754,8 @@ def main():
         print("  Rien a publier. Arret.")
         return
 
-    # 4. Photos Pexels + insertion HTML
-    print("\n[4/5] Photos Pexels + mise a jour index.html...")
+    # 4. Photos + insertion HTML
+    print("\n[4/5] Photos + mise a jour index.html...")
     updated = update_index_html(curated)
 
     if updated:
