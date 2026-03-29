@@ -390,6 +390,10 @@ def update_index_html(new_articles):
                 img_url = f"assets/{fallback}"
                 print(f"    [IMG-FALLBACK] {fallback}")
 
+        # Mettre a jour le dict article pour que la newsletter ait aussi l'image
+        a["image_url"] = img_url
+        a["id"] = article_id
+
         entry = (
             '  {\n'
             f'    id: "{vals["id"]}",\n'
