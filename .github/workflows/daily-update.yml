@@ -76,6 +76,7 @@ jobs:
     needs: update
     if: needs.update.outputs.has_changes == 'true'
     runs-on: ubuntu-latest
+    continue-on-error: true  # N'echoue pas le workflow global si TikTok plante
     steps:
       - uses: actions/checkout@v4
         with:
