@@ -143,12 +143,14 @@ Pharmaciens d'officine en France (PAS le grand public)
 
 Selectionne les {NEW_ARTICLES_PER_RUN} articles les plus percutants pour des pharmaciens d'officine.
 
-Criteres :
+Criteres de selection :
 - Impact direct sur l'exercice officinal (reglementation, marges, missions, approvisionnement)
 - Pertinence business/economique
 - Reglementaire (LFSS, conventions, ROSP)
 - Sante publique si impact comptoir (vaccins, depistages, alertes)
 - Diversite des sujets
+
+REGLE ABSOLUE : maximum 1 article par source. Si plusieurs articles viennent du meme media, garde le plus percutant et prends les autres dans d'autres sources. L'objectif est de varier les sources (Moniteur, Quotidien du Pharmacien, VIDAL, Le Monde, France Info, etc.).
 
 Pour chaque article, genere :
 - "titre" : accrocheur, max 80 car, style direct de Stephen

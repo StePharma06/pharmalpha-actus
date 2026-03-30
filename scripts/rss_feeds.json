@@ -2,11 +2,11 @@
   "feeds": [
     {"name": "Le Moniteur des Pharmacies", "url": "https://www.lemoniteurdespharmacies.fr/feed", "categorie": "pharma_france"},
     {"name": "Le Quotidien du Pharmacien", "url": "https://www.lequotidiendupharmacien.fr/rss.xml", "categorie": "pharma_france"},
+    {"name": "Le Pharmacien de France", "url": "https://www.lepharmaciendefrance.fr/feed", "categorie": "pharma_france"},
     {"name": "LEEM", "url": "https://www.leem.org/rss.xml", "categorie": "pharma_france"},
     {"name": "VIDAL Actualites", "url": "https://www.vidal.fr/rss.xml", "categorie": "sante"},
     {"name": "Le Monde Sante", "url": "https://www.lemonde.fr/sante/rss_full.xml", "categorie": "sante"},
     {"name": "France Info Sante", "url": "https://www.francetvinfo.fr/sante.rss", "categorie": "sante"},
-    {"name": "FiercePharma", "url": "https://www.fiercepharma.com/rss/xml", "categorie": "pharma_monde"},
     {"name": "The Conversation FR Sante", "url": "https://theconversation.com/fr/sante/articles.atom", "categorie": "sante"}
   ]
 }
