@@ -299,6 +299,9 @@ def download_photo(url, dest_path):
 STOCK_DIR = ASSETS_DIR / "stock"
 _stock_usage = {}  # track which stock photos are used this run
 
+NEWSLETTER_SENT_FILE = ROOT_DIR / "output" / "newsletter_sent.json"
+PENDING_LSV_FILE = ROOT_DIR / "output" / "pending_lsv.json"
+
 
 def get_fallback_photo(categorie):
     """Pick a stock fallback photo for the given category. Cycles through available photos."""
@@ -312,6 +315,46 @@ def get_fallback_photo(categorie):
         dest_name = f"stock/{photo_name}"
         return dest_name
     return ""
+
+
+def newsletter_already_sent_today():
+    """Check if newsletter was already sent today."""
+    today = datetime.now().strftime("%Y-%m-%d")
+    if NEWSLETTER_SENT_FILE.exists():
+        try:
+            data = json.loads(NEWSLETTER_SENT_FILE.read_text(encoding="utf-8"))
+            if data.get("date") == today:
+                return True
+        except Exception:
+            pass
+    return False
+
+
+def mark_newsletter_sent():
+    """Mark newsletter as sent today."""
+    today = datetime.now().strftime("%Y-%m-%d")
+    NEWSLETTER_SENT_FILE.parent.mkdir(exist_ok=True)
+    NEWSLETTER_SENT_FILE.write_text(
+        json.dumps({"date": today, "sent_at": datetime.now().isoformat()}),
+        encoding="utf-8"
+    )
+
+
+def load_pending_lsv():
+    """Load a LSV saved from a previous run (not yet published)."""
+    if PENDING_LSV_FILE.exists():
+        try:
+            lsv = json.loads(PENDING_LSV_FILE.read_text(encoding="utf-8"))
+            lsv["date"] = datetime.now().strftime("%Y-%m-%d")
+            lsv.setdefault("categorie", "lsv")
+            lsv.setdefault("badge_label", "Le Saviez-Vous")
+            lsv.setdefault("source", "Pharm'Alpha")
+            lsv.setdefault("source_url", "")
+            print(f"  [LSV-PENDING] Utilisation du LSV en attente : {lsv.get('titre','')[:60]}...")
+            return lsv
+        except Exception as e:
+            print(f"  [LSV-PENDING] Erreur: {e}")
+    return None
 
 
 # ── HTML : insertion des articles ─────────────────────────────────────
@@ -375,11 +418,13 @@ def update_index_html(new_articles):
 
         # Photo : Pexels API → fallback stock local
         img_url = ""
+        pexels_cdn_url = ""  # URL CDN directe pour l'email (dispo avant deploiement)
         img_keywords = a.get("image_keywords", "")
         print(f"  [{new_articles.index(a)+1}/{len(new_articles)}] {vals['titre'][:55]}...")
         if img_keywords:
             photo_url, photographer = search_pexels_photo(img_keywords)
             if photo_url:
+                pexels_cdn_url = photo_url  # Sauvegarde URL CDN pour l'email
                 img_name = f"img_{article_id}.jpg"
                 img_path = ASSETS_DIR / img_name
                 if download_photo(photo_url, img_path):
@@ -394,6 +439,14 @@ def update_index_html(new_articles):
 
         # Mettre a jour le dict article pour que la newsletter ait aussi l'image
         a["image_url"] = img_url
+        # Email: URL Pexels CDN directe (disponible avant deploiement Pages)
+        # Pour les photos stock : elles sont committees, l'URL hébergée est stable
+        if pexels_cdn_url:
+            a["email_image_url"] = pexels_cdn_url
+        elif img_url:
+            a["email_image_url"] = f"https://actus.pharmalpha.fr/{img_url}"
+        else:
+            a["email_image_url"] = ""
         a["id"] = article_id
 
         entry = (
@@ -551,10 +604,10 @@ def build_newsletter_html(articles, custom_intro=None):
     for i, a in enumerate(actus):
         bg, fg = badge_colors.get(a.get("categorie", ""), ("#fff7ed", "#f97316"))
         pad = "24px" if i == 0 else "20px"
-        img_url = a.get("image_url", "")
+        email_img = a.get("email_image_url") or a.get("image_url", "")
         img_html = ""
-        if img_url:
-            full_url = f"https://actus.pharmalpha.fr/{img_url}"
+        if email_img:
+            full_url = email_img if email_img.startswith("http") else f"https://actus.pharmalpha.fr/{email_img}"
             img_html = f'<tr><td style="padding-top:12px;"><img src="{full_url}" alt="" width="536" style="width:100%;max-width:536px;height:auto;border-radius:8px;display:block;" /></td></tr>'
         articles_html += f'''
   <tr><td style="padding:{pad} 32px 0;">
@@ -592,7 +645,7 @@ def build_newsletter_html(articles, custom_intro=None):
 <tr><td align="center" style="padding:24px 16px;">
 <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
   <tr><td style="background:#ffffff;padding:28px 32px 16px;text-align:center;border-bottom:2px solid #f97316;">
-    <span style="font-size:32px;font-weight:800;color:#1a1a1a;letter-spacing:-0.5px;">Pharm'<span style="color:#f97316;">Actus</span></span><br>
+    <a href="https://actus.pharmalpha.fr/" style="text-decoration:none;"><span style="font-size:32px;font-weight:800;color:#1a1a1a;letter-spacing:-0.5px;">Pharm'<span style="color:#f97316;">Actus</span></span></a><br>
     <span style="font-size:13px;color:#888;letter-spacing:0.3px;">Chaque matin, le r&eacute;sum&eacute; pharma que t'aurais aim&eacute; avoir entre deux clients.</span>
   </td></tr>
   <tr><td style="background:#fafafa;padding:10px 32px;text-align:center;">
@@ -650,6 +703,10 @@ def build_newsletter_html(articles, custom_intro=None):
 
 def send_newsletter(articles):
     """Send newsletter individually to each contact in the Brevo list."""
+    if newsletter_already_sent_today():
+        print("  [SKIP] Newsletter deja envoyee aujourd'hui - une seule newsletter par jour")
+        return
+
     api_key = os.environ.get("BREVO_API_KEY", "")
     if not api_key:
         print("  [SKIP] BREVO_API_KEY non definie, email non envoye")
@@ -726,6 +783,9 @@ def send_newsletter(articles):
 
     print(f"  Newsletter envoyee a {sent}/{len(emails)} abonne(s)" +
           (f" ({errors} erreur(s))" if errors else ""))
+    if sent > 0:
+        mark_newsletter_sent()
+        print("  [SENT-MARK] Newsletter marquee comme envoyee aujourd'hui")
 
 
 # ── MAIN ──────────────────────────────────────────────────────────────
@@ -746,10 +806,10 @@ def main():
     curated = curate_with_claude(raw_articles)
     print(f"  {len(curated)} actus selectionnees")
 
-    # 3. Generate 1 Le Saviez-Vous
+    # 3. Generate 1 Le Saviez-Vous (ou utiliser le LSV en attente)
     print("\n[3/5] Generation du Le Saviez-Vous...")
     existing_lsv = get_existing_lsv_titles()
-    lsv = generate_lsv_with_claude(existing_lsv)
+    lsv = load_pending_lsv() or generate_lsv_with_claude(existing_lsv)
     if lsv:
         print(f"  LSV: {lsv.get('titre', '')[:60]}...")
         curated.append(lsv)
@@ -760,6 +820,10 @@ def main():
         with open(lsv_output_file, "w", encoding="utf-8") as lsv_f:
             json.dump(lsv, lsv_f, ensure_ascii=False, indent=2)
         print(f"  [LSV-EXPORT] Sauvegarde dans output/latest_lsv.json")
+        # Supprimer le fichier pending s'il a ete utilise
+        if PENDING_LSV_FILE.exists():
+            PENDING_LSV_FILE.unlink()
+            print("  [LSV-PENDING] Fichier pending supprime apres utilisation")
     else:
         print("  [WARN] Pas de LSV genere")
 
