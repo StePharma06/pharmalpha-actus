@@ -1,9 +1,10 @@
 name: Daily Actus Update
 
 on:
+  repository_dispatch:
+    types: [daily-update]  # Declenche via API externe (cron-job.org) → heure exacte garantie
   schedule:
-    # 1h UTC → avec les retards GitHub (~2-4h), execution reelle vers 3-5h UTC
-    # soit ~4-6h Paris (hiver) / ~5-7h Paris (ete)
+    # Filet de securite uniquement (retards GitHub free tier ~2-6h)
     - cron: '0 1 * * *'
   workflow_dispatch:  # Lancement manuel possible
 
@@ -79,7 +80,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: main
+          ref: master
 
       - uses: actions/setup-python@v5
         with:
