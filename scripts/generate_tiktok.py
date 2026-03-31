@@ -66,8 +66,9 @@ def load_lsv():
     return lsv
 
 
-SCRIPT_PROMPT = """Tu es le redacteur en chef de Pharm'Alpha, une chaine TikTok "Le Saviez-Vous" pharma/sante.
-Style : HugoDecrypte version pharmacie. Ton dynamique, accessible, passionnant.
+SCRIPT_PROMPT = """Tu es le directeur creatif de Pharm'Alpha, chaine TikTok "Le Saviez-Vous" pharma/sante.
+Style de reference : HugoDecrypte pour la pharmacie. Dynamique, accessible, passionnant.
+Format : 65 secondes minimum. Alternance facecam avatar + animation realiste (style Estherium TikTok).
 
 Voici l'article "Le Saviez-Vous" du jour :
 
@@ -76,64 +77,65 @@ RESUME : {resume}
 TEXTE COMPLET :
 {full_text}
 
-Transforme ce texte en script TikTok de ~60 secondes avec la structure suivante :
-- HOOK (5s) : accroche choc, fait surprenant qui donne envie de regarder
-- INTRO AVATAR (5s) : phrase courte que l'avatar Stephen dit face camera pour lancer le sujet
-- SEGMENT 1 (15s) : le fait principal, contexte
-- SEGMENT 2 (15s) : developpement, anecdote
-- SEGMENT 3 (10s) : twist ou fait surprenant, lien avec aujourd'hui
-- CTA AVATAR (10s) : question ouverte engageante + "Suivez Pharm'Actus !"
+Cree un script TikTok de 65+ secondes avec EXACTEMENT cette structure :
+1. HOOK anime (5s) : image realiste + accroche choc en voix off, fait surprenant
+2. FACECAM INTRO (7s) : avatar Stephen presente le sujet face camera, style HugoDecrypte
+3. SEGMENT 1 anime (15s) : le fait principal + contexte, images realistes + voix off
+4. FACECAM REBOND (7s) : avatar Stephen reagit, "Mais le plus incroyable c'est que..."
+5. SEGMENT 2 anime (12s) : le twist ou developpement surprenant + voix off
+6. FACECAM CONCLUSION (15s) : avatar conclut + "Pharmusez vous bien" + CTA (@pharmalpha + actus.pharmalpha.fr) + PHRASE LOOP
+
+REGLE IMPORTANTE - PHRASE LOOP (technique Estherium TikTok) :
+La DERNIERE phrase de avatar_conclusion doit se connecter NATURELLEMENT et SEAMLESSLY
+a la PREMIERE phrase du hook, pour que quand TikTok relance la video en boucle,
+le spectateur ne s'en rende pas compte et continue a regarder.
+Exemple : si hook commence par "Le saviez-vous ? L'aspirine est nee..." -> loop phrase finit
+par "...la prochaine fois que vous prendrez de l'aspirine, vous y penserez."
+Creer une continuite logique ou emotionnelle entre la fin et le debut.
 
 REGLES IMAGES :
-- Chaque image_prompt doit decrire une VRAIE PHOTO de reportage/editorial
-- Style : photorealistic, editorial photography, natural lighting, shot on Canon EOS R5
-- PAS de texte dans les images, PAS de style cartoon/illustration
-- Sujets concrets : personnes, lieux, objets reels lies au sujet
+- image_prompt en ANGLAIS, style photorealistic editorial photography, shot on Canon EOS R5
+- PAS de texte dans les images, PAS de style IA/cartoon/illustration
+- Sujets concrets : personnes reelles, lieux, objets photographiables
 
-Reponds UNIQUEMENT en JSON :
+Reponds UNIQUEMENT en JSON valide :
 {{
   "hook": {{
-    "voiceover": "Texte voix off du hook, 1-2 phrases max",
-    "screen_text": "Texte court affiche a l'ecran (max 10 mots)",
-    "image_prompt": "Prompt DALL-E en anglais, photorealistic editorial...",
+    "voiceover": "Accroche voix off choc, 1-2 phrases max (5s de parole)",
+    "screen_text": "Texte affiche a l'ecran (max 10 mots percutants)",
+    "image_prompt": "Prompt DALL-E en anglais, photorealistic editorial, Canon EOS R5...",
     "duration": 5
   }},
   "avatar_intro": {{
-    "speech": "Phrase que l'avatar Stephen dit face camera (5 sec max)",
-    "duration": 5
+    "speech": "Stephen face cam : presentation du sujet style HugoDecrypte (7s max)",
+    "duration": 7
   }},
-  "segments": [
-    {{
-      "id": "seg_1",
-      "voiceover": "Texte voix off segment 1 (~15 sec de parole)",
-      "screen_text": "Fait cle affiche (max 12 mots)",
-      "image_prompt": "Prompt DALL-E en anglais, photorealistic...",
-      "duration": 15
-    }},
-    {{
-      "id": "seg_2",
-      "voiceover": "Texte voix off segment 2 (~15 sec)",
-      "screen_text": "Developpement / anecdote (max 12 mots)",
-      "image_prompt": "Prompt DALL-E en anglais, photorealistic...",
-      "duration": 15
-    }},
-    {{
-      "id": "seg_3",
-      "voiceover": "Texte voix off segment 3 (~10 sec)",
-      "screen_text": "Twist / conclusion (max 12 mots)",
-      "image_prompt": "Prompt DALL-E en anglais, photorealistic...",
-      "duration": 10
-    }}
-  ],
-  "avatar_cta": {{
-    "speech": "Question ouverte + Suivez Pharm'Actus ! (~10 sec)",
-    "duration": 10
+  "segment_1": {{
+    "voiceover": "Voix off segment 1 : fait principal + contexte (~15s de parole, ~50 mots)",
+    "screen_text": "Fait cle affiche (max 12 mots)",
+    "image_prompt": "Prompt DALL-E en anglais, photorealistic editorial...",
+    "duration": 15
   }},
-  "full_voiceover": "Script voix off COMPLET (hook + segments, SANS les parties avatar). ~40 sec de parole, ~100 mots.",
-  "titre_tiktok": "Titre accrocheur pour le post TikTok (max 80 car)",
-  "description_tiktok": "Description du post TikTok avec hashtags (max 300 car)",
+  "avatar_rebond": {{
+    "speech": "Stephen face cam : rebond sur seg1, 'Mais le plus incroyable c'est que...' (7s max)",
+    "duration": 7
+  }},
+  "segment_2": {{
+    "voiceover": "Voix off segment 2 : twist / developpement surprenant (~12s de parole, ~40 mots)",
+    "screen_text": "Le twist (max 12 mots)",
+    "image_prompt": "Prompt DALL-E en anglais, photorealistic editorial...",
+    "duration": 12
+  }},
+  "avatar_conclusion": {{
+    "speech": "Stephen face cam : conclusion + 'Pharmusez vous bien' + 'Abonnez-vous @pharmalpha sur TikTok et retrouvez toutes nos actus sur actus.pharmalpha.fr' + phrase loop (15s max)",
+    "loop_phrase": "La derniere phrase exacte qui connecte seamlessly au debut du hook",
+    "duration": 15
+  }},
+  "full_voiceover": "Voix off COMPLETE pour les parties animees UNIQUEMENT (hook + segment_1 + segment_2 concatenes). ~32 secondes de parole, ~110 mots. NE PAS inclure les parties avatar.",
+  "titre_tiktok": "Titre TikTok accrocheur (max 80 car)",
+  "description_tiktok": "Description + hashtags (max 300 car)",
   "hashtags": "#lesaviezvous #pharmalpha #pharmacie #sante",
-  "thumbnail_prompt": "Prompt DALL-E pour thumbnail impactante, close-up dramatique, bold colors, photorealistic"
+  "thumbnail_prompt": "Prompt DALL-E thumbnail impactante, close-up dramatique, bold colors, photorealistic, vertical 9:16"
 }}"""
 
 
@@ -174,9 +176,12 @@ def generate_tiktok_script(lsv):
 def generate_images(script):
     print("[3/7] Generation des images via DALL-E 3...")
 
-    prompts = [("hook", script["hook"]["image_prompt"])]
-    for seg in script["segments"]:
-        prompts.append((seg["id"], seg["image_prompt"]))
+    prompts = [
+        ("hook", script.get("hook", {}).get("image_prompt", "")),
+        ("segment_1", script.get("segment_1", {}).get("image_prompt", "")),
+        ("segment_2", script.get("segment_2", {}).get("image_prompt", "")),
+    ]
+    prompts = [(k, v) for k, v in prompts if v]
 
     images = {}
     for label, prompt in prompts:
@@ -237,10 +242,12 @@ def generate_voiceover(script):
 
     voiceover_text = script.get("full_voiceover", "")
     if not voiceover_text:
-        parts = [script["hook"]["voiceover"]]
-        for seg in script["segments"]:
-            parts.append(seg["voiceover"])
-        voiceover_text = " ".join(parts)
+        parts = [
+            script.get("hook", {}).get("voiceover", ""),
+            script.get("segment_1", {}).get("voiceover", ""),
+            script.get("segment_2", {}).get("voiceover", ""),
+        ]
+        voiceover_text = " ".join(p for p in parts if p)
 
     data = {
         "text": voiceover_text,
@@ -340,17 +347,20 @@ def generate_heygen_clip(text, label, avatar_id):
 
 
 def generate_avatar_clips(script):
-    print("[5/7] Generation des clips avatar via HeyGen...")
+    print("[5/7] Generation des clips avatar via HeyGen (intro + rebond + conclusion)...")
     avatar_id = get_today_avatar_id()
     if not avatar_id:
         print("  [SKIP] Pas d'avatar HeyGen configure -> mode 100% anime")
-        return None, None
+        return None, None, None
 
     intro_text = script.get("avatar_intro", {}).get("speech", "")
-    cta_text = script.get("avatar_cta", {}).get("speech", "")
+    rebond_text = script.get("avatar_rebond", {}).get("speech", "")
+    conclusion_text = script.get("avatar_conclusion", {}).get("speech", "")
+
     intro_clip = generate_heygen_clip(intro_text, "intro", avatar_id) if intro_text else None
-    cta_clip = generate_heygen_clip(cta_text, "cta", avatar_id) if cta_text else None
-    return intro_clip, cta_clip
+    rebond_clip = generate_heygen_clip(rebond_text, "rebond", avatar_id) if rebond_text else None
+    conclusion_clip = generate_heygen_clip(conclusion_text, "conclusion", avatar_id) if conclusion_text else None
+    return intro_clip, rebond_clip, conclusion_clip
 
 
 def upload_to_creatomate(file_path, mime_type):
@@ -377,7 +387,7 @@ def upload_to_creatomate(file_path, mime_type):
     return result.get("url", "")
 
 
-def build_creatomate_source(script, images, voiceover_path, intro_clip, cta_clip):
+def build_creatomate_source(script, images, voiceover_path, intro_clip, rebond_clip, conclusion_clip):
     print("  Upload des assets vers Creatomate...")
     voiceover_url = upload_to_creatomate(voiceover_path, "audio/mpeg")
 
@@ -388,25 +398,24 @@ def build_creatomate_source(script, images, voiceover_path, intro_clip, cta_clip
         image_urls[label] = upload_to_creatomate(img_path, "image/png")
         print(f"    {label} uploade")
 
-    intro_url = None
-    cta_url = None
-    if intro_clip and intro_clip.exists():
-        intro_url = upload_to_creatomate(intro_clip, "video/mp4")
-    if cta_clip and cta_clip.exists():
-        cta_url = upload_to_creatomate(cta_clip, "video/mp4")
+    intro_url = upload_to_creatomate(intro_clip, "video/mp4") if intro_clip and intro_clip.exists() else None
+    rebond_url = upload_to_creatomate(rebond_clip, "video/mp4") if rebond_clip and rebond_clip.exists() else None
+    conclusion_url = upload_to_creatomate(conclusion_clip, "video/mp4") if conclusion_clip and conclusion_clip.exists() else None
 
     elements = []
     t = 0
+    vo_offset = 0  # position dans le fichier voiceover (parties animees seulement)
 
-    # HOOK
-    hook = script["hook"]
+    # ── HOOK (animation) ──────────────────────────────────────────────────────
+    hook = script.get("hook", {})
     hook_dur = hook.get("duration", 5)
-    elements.append({
-        "type": "image", "source": image_urls.get("hook", ""),
-        "x": "50%", "y": "50%", "width": "100%", "height": "100%",
-        "time": t, "duration": hook_dur,
-        "animations": [{"type": "scale", "start_scale": "100%", "end_scale": "110%", "easing": "linear"}],
-    })
+    if image_urls.get("hook"):
+        elements.append({
+            "type": "image", "source": image_urls["hook"],
+            "x": "50%", "y": "50%", "width": "100%", "height": "100%",
+            "time": t, "duration": hook_dur,
+            "animations": [{"type": "scale", "start_scale": "100%", "end_scale": "110%", "easing": "linear"}],
+        })
     elements.append({
         "type": "text", "text": hook.get("screen_text", ""),
         "x": "50%", "y": "75%", "width": "85%",
@@ -416,77 +425,123 @@ def build_creatomate_source(script, images, voiceover_path, intro_clip, cta_clip
         "x_alignment": "50%", "y_alignment": "50%",
         "animations": [{"type": "text-appear", "split": "word", "duration": 0.3}],
     })
+    elements.append({
+        "type": "audio", "source": voiceover_url,
+        "time": t, "duration": hook_dur, "trim_start": vo_offset,
+    })
+    vo_offset += hook_dur
     t += hook_dur
 
-    # AVATAR INTRO
+    # ── FACECAM INTRO (avatar) ────────────────────────────────────────────────
+    intro_dur = script.get("avatar_intro", {}).get("duration", 7)
     if intro_url:
-        intro_dur = script.get("avatar_intro", {}).get("duration", 5)
         elements.append({
             "type": "video", "source": intro_url,
             "x": "50%", "y": "50%", "width": "100%", "height": "100%",
             "time": t, "duration": intro_dur,
         })
-        t += intro_dur
+    t += intro_dur
 
-    # SEGMENTS
-    for seg in script["segments"]:
-        seg_id = seg["id"]
-        seg_dur = seg.get("duration", 15)
-        if seg_id in image_urls:
-            elements.append({
-                "type": "image", "source": image_urls[seg_id],
-                "x": "50%", "y": "50%", "width": "100%", "height": "100%",
-                "time": t, "duration": seg_dur,
-                "animations": [{"type": "scale", "start_scale": "110%", "end_scale": "100%", "easing": "linear"}],
-            })
+    # ── SEGMENT 1 (animation) ─────────────────────────────────────────────────
+    seg1 = script.get("segment_1", {})
+    seg1_dur = seg1.get("duration", 15)
+    if image_urls.get("segment_1"):
         elements.append({
-            "type": "text", "text": seg.get("screen_text", ""),
+            "type": "image", "source": image_urls["segment_1"],
+            "x": "50%", "y": "50%", "width": "100%", "height": "100%",
+            "time": t, "duration": seg1_dur,
+            "animations": [{"type": "scale", "start_scale": "110%", "end_scale": "100%", "easing": "linear"}],
+        })
+    if seg1.get("screen_text"):
+        elements.append({
+            "type": "text", "text": seg1["screen_text"],
             "x": "50%", "y": "80%", "width": "85%",
-            "time": t, "duration": seg_dur,
+            "time": t, "duration": seg1_dur,
             "font_family": "Montserrat", "font_weight": "700", "font_size": "7 vmin",
-            "fill_color": "#ffffff",
-            "shadow_color": "rgba(0,0,0,0.6)", "shadow_blur": "3",
+            "fill_color": "#ffffff", "shadow_color": "rgba(0,0,0,0.6)", "shadow_blur": "3",
             "x_alignment": "50%", "y_alignment": "50%",
             "background_color": "rgba(0,0,0,0.4)",
             "background_x_padding": "8%", "background_y_padding": "4%",
             "background_border_radius": "8",
             "animations": [{"type": "text-appear", "split": "word", "duration": 0.2}],
         })
-        t += seg_dur
+    elements.append({
+        "type": "audio", "source": voiceover_url,
+        "time": t, "duration": seg1_dur, "trim_start": vo_offset,
+    })
+    vo_offset += seg1_dur
+    t += seg1_dur
 
-    # CTA
-    cta_dur = script.get("avatar_cta", {}).get("duration", 10)
-    if cta_url:
+    # ── FACECAM REBOND (avatar) ───────────────────────────────────────────────
+    rebond_dur = script.get("avatar_rebond", {}).get("duration", 7)
+    if rebond_url:
         elements.append({
-            "type": "video", "source": cta_url,
+            "type": "video", "source": rebond_url,
             "x": "50%", "y": "50%", "width": "100%", "height": "100%",
-            "time": t, "duration": cta_dur,
+            "time": t, "duration": rebond_dur,
+        })
+    t += rebond_dur
+
+    # ── SEGMENT 2 (animation) ─────────────────────────────────────────────────
+    seg2 = script.get("segment_2", {})
+    seg2_dur = seg2.get("duration", 12)
+    if image_urls.get("segment_2"):
+        elements.append({
+            "type": "image", "source": image_urls["segment_2"],
+            "x": "50%", "y": "50%", "width": "100%", "height": "100%",
+            "time": t, "duration": seg2_dur,
+            "animations": [{"type": "scale", "start_scale": "100%", "end_scale": "108%", "easing": "linear"}],
+        })
+    if seg2.get("screen_text"):
+        elements.append({
+            "type": "text", "text": seg2["screen_text"],
+            "x": "50%", "y": "80%", "width": "85%",
+            "time": t, "duration": seg2_dur,
+            "font_family": "Montserrat", "font_weight": "700", "font_size": "7 vmin",
+            "fill_color": "#ffffff", "shadow_color": "rgba(0,0,0,0.6)", "shadow_blur": "3",
+            "x_alignment": "50%", "y_alignment": "50%",
+            "background_color": "rgba(0,0,0,0.4)",
+            "background_x_padding": "8%", "background_y_padding": "4%",
+            "background_border_radius": "8",
+            "animations": [{"type": "text-appear", "split": "word", "duration": 0.2}],
+        })
+    elements.append({
+        "type": "audio", "source": voiceover_url,
+        "time": t, "duration": seg2_dur, "trim_start": vo_offset,
+    })
+    t += seg2_dur
+
+    # ── FACECAM CONCLUSION (avatar) ───────────────────────────────────────────
+    conclusion_dur = script.get("avatar_conclusion", {}).get("duration", 15)
+    if conclusion_url:
+        elements.append({
+            "type": "video", "source": conclusion_url,
+            "x": "50%", "y": "50%", "width": "100%", "height": "100%",
+            "time": t, "duration": conclusion_dur,
         })
     else:
-        last_img = image_urls.get(script["segments"][-1]["id"], "")
-        if last_img:
+        # Fallback : image avec texte CTA si pas d'avatar
+        fallback_img = image_urls.get("segment_2") or image_urls.get("segment_1") or image_urls.get("hook")
+        if fallback_img:
             elements.append({
-                "type": "image", "source": last_img,
+                "type": "image", "source": fallback_img,
                 "x": "50%", "y": "50%", "width": "100%", "height": "100%",
-                "time": t, "duration": cta_dur,
-                "color_overlay": "rgba(0,0,0,0.3)",
+                "time": t, "duration": conclusion_dur,
+                "color_overlay": "rgba(0,0,0,0.45)",
             })
-        cta_speech = script.get("avatar_cta", {}).get("speech", "Suivez Pharm'Actus !")
+        cta_speech = script.get("avatar_conclusion", {}).get("speech", "Pharmusez vous bien !")
         elements.append({
             "type": "text", "text": cta_speech,
             "x": "50%", "y": "50%", "width": "80%",
-            "time": t, "duration": cta_dur,
+            "time": t, "duration": conclusion_dur,
             "font_family": "Montserrat", "font_weight": "800", "font_size": "7 vmin",
             "fill_color": "#ffffff", "shadow_color": "rgba(0,0,0,0.8)", "shadow_blur": "5",
             "x_alignment": "50%", "y_alignment": "50%",
             "animations": [{"type": "text-appear", "split": "line", "duration": 0.5}],
         })
-    t += cta_dur
+    t += conclusion_dur
 
-    # VOICEOVER
-    elements.append({"type": "audio", "source": voiceover_url, "time": 0, "duration": t})
-
-    # WATERMARK
+    # ── WATERMARK ─────────────────────────────────────────────────────────────
     elements.append({
         "type": "text", "text": "Pharm'Actus",
         "x": "85%", "y": "5%", "time": 0, "duration": t,
@@ -529,9 +584,9 @@ def render_video(source):
     return None
 
 
-def assemble_video(script, images, voiceover_path, intro_clip, cta_clip):
+def assemble_video(script, images, voiceover_path, intro_clip, rebond_clip, conclusion_clip):
     print("[6/7] Assemblage video via Creatomate...")
-    source = build_creatomate_source(script, images, voiceover_path, intro_clip, cta_clip)
+    source = build_creatomate_source(script, images, voiceover_path, intro_clip, rebond_clip, conclusion_clip)
 
     source_path = OUTPUT_DIR / "creatomate_source.json"
     with open(source_path, "w", encoding="utf-8") as f:
@@ -653,8 +708,8 @@ def main():
 
     images = generate_images(script)
     voiceover_path = generate_voiceover(script)
-    intro_clip, cta_clip = generate_avatar_clips(script)
-    video_path = assemble_video(script, images, voiceover_path, intro_clip, cta_clip)
+    intro_clip, rebond_clip, conclusion_clip = generate_avatar_clips(script)
+    video_path = assemble_video(script, images, voiceover_path, intro_clip, rebond_clip, conclusion_clip)
 
     if video_path:
         publish_id = publish_to_tiktok(video_path, script)
