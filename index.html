@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pharm'Actus - Actualit&eacute;s Pharma &amp; Sant&eacute;</title>
-<meta name="description" content="Chaque matin, le r&eacute;sum&eacute; pharma que t'aurais aim&eacute; avoir entre deux clients. 3 actus + 1 histoire. Gratuit.">
+<meta name="description" content="Chaque matin, le r&eacute;sum&eacute; pharma que t'aurais aim&eacute; avoir entre deux clients. 5 actus + 1 Le Saviez-Vous. Gratuit.">
 <!-- Open Graph -->
 <meta property="og:title" content="Pharm'Actus - L'actu pharma pour les pharmaciens">
-<meta property="og:description" content="Chaque matin, le resume pharma que t'aurais aime avoir entre deux clients. 3 actus + 1 histoire. Gratuit.">
+<meta property="og:description" content="Chaque matin, le resume pharma que t'aurais aime avoir entre deux clients. 5 actus + 1 Le Saviez-Vous. Gratuit.">
 <meta property="og:image" content="https://actus.pharmalpha.fr/assets/og_image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -16,7 +16,7 @@
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Pharm'Actus - L'actu pharma pour les pharmaciens">
-<meta name="twitter:description" content="Chaque matin, le resume pharma que t'aurais aime avoir entre deux clients. 3 actus + 1 histoire. Gratuit.">
+<meta name="twitter:description" content="Chaque matin, le resume pharma que t'aurais aime avoir entre deux clients. 5 actus + 1 Le Saviez-Vous. Gratuit.">
 <meta name="twitter:image" content="https://actus.pharmalpha.fr/assets/og_image.png">
 <style>
 :root {
@@ -40,6 +40,10 @@
   --green-light: #f0fdf4;
   --purple: #7c3aed;
   --purple-light: #f5f3ff;
+  --teal: #0d9488;
+  --teal-light: #f0fdfa;
+  --indigo: #4f46e5;
+  --indigo-light: #eef2ff;
   --radius: 12px;
   --radius-sm: 8px;
   --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
@@ -433,6 +437,8 @@ body {
 .badge-pharma_monde { background: var(--blue-light); color: var(--blue); }
 .badge-sante { background: var(--green-light); color: var(--green); }
 .badge-lsv { background: var(--purple-light); color: var(--purple); }
+.badge-bonne_nouvelle { background: var(--teal-light); color: var(--teal); }
+.badge-avenir_pharma { background: var(--indigo-light); color: var(--indigo); }
 .card-date { font-size: 12px; color: var(--text-dim); }
 .card h3 {
   font-size: 16px;
@@ -622,6 +628,8 @@ body {
 .modal-visual.cat-pharma_monde { background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%); }
 .modal-visual.cat-sante { background: linear-gradient(135deg, #16a34a 0%, #15803d 100%); }
 .modal-visual.cat-lsv { background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%); }
+.modal-visual.cat-bonne_nouvelle { background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%); }
+.modal-visual.cat-avenir_pharma { background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%); }
 .modal-text {
   font-size: 15px;
   line-height: 1.8;
@@ -957,8 +965,8 @@ body {
 <!-- HERO -->
 <section class="hero">
   <h1>Pharm'<span>Actus</span></h1>
-  <p>Chaque matin, le r&eacute;sum&eacute; pharma que t'aurais aim&eacute; avoir entre deux clients.<br>3 actus + 1 histoire. Gratuit, sans spam, en 2 min.</p>
-  <p style="margin-top:8px;font-size:0.95em;opacity:0.85;">Partagez autour de vous et abonnez-vous pour rester connect&eacute; !</p>
+  <p>Chaque matin, retrouve l'actus pharma &agrave; lire entre 2 ordo.<br>Pharma France, Pharma Monde, Sant&eacute; G&eacute;n&eacute;rale. Pharm'Actus, c'est au moins une bonne nouvelle et une vision sur l'avenir avec la recherche.<br>5 actus + 1 histoire incroyable.<br>C'est gratuit, sans spam et &ccedil;a te prend 5 min par jour pour rester inform&eacute;.</p>
+  <p style="margin-top:8px;font-size:0.95em;opacity:0.85;">Partage ce site &agrave; ton entourage et pense &agrave; t'abonner pour ne rien manquer&nbsp;!</p>
   <div class="hero-nl" id="hero-nl">
     <p class="hero-nl-label">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,7 12,13 2,7"/></svg>
@@ -980,6 +988,8 @@ body {
   <button class="filter-btn" data-filter="pharma_france">Pharma France</button>
   <button class="filter-btn" data-filter="pharma_monde">Pharma Monde</button>
   <button class="filter-btn" data-filter="sante">Sante</button>
+  <button class="filter-btn" data-filter="bonne_nouvelle">La bonne nouvelle</button>
+  <button class="filter-btn" data-filter="avenir_pharma">L'avenir de la pharma</button>
   <button class="filter-btn filter-btn-lsv" data-filter="lsv">Le Saviez-Vous</button>
   <div class="search-box">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>

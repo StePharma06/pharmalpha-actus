@@ -7,6 +7,8 @@
     {"name": "VIDAL Actualites", "url": "https://www.vidal.fr/rss.xml", "categorie": "sante"},
     {"name": "Le Monde Sante", "url": "https://www.lemonde.fr/sante/rss_full.xml", "categorie": "sante"},
     {"name": "France Info Sante", "url": "https://www.francetvinfo.fr/sante.rss", "categorie": "sante"},
-    {"name": "The Conversation FR Sante", "url": "https://theconversation.com/fr/sante/articles.atom", "categorie": "sante"}
+    {"name": "The Conversation FR Sante", "url": "https://theconversation.com/fr/sante/articles.atom", "categorie": "sante"},
+    {"name": "INSERM Actualites", "url": "https://www.inserm.fr/feed/", "categorie": "avenir_pharma"},
+    {"name": "ANSM Actualites", "url": "https://ansm.sante.fr/actualites.rss", "categorie": "avenir_pharma"}
   ]
 }

@@ -1,0 +1,33 @@
+name: TikTok Video Daily
+
+on:
+  schedule:
+    - cron: '0 2 * * *'  # 04h00 Paris (heure d'ete) — apres le run actus
+  workflow_dispatch:  # Lancement manuel possible
+
+jobs:
+  tiktok-video:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install anthropic
+
+      - name: Generate & publish TikTok video
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          ELEVENLABS_VOICE_ID: ${{ secrets.ELEVENLABS_VOICE_ID }}
+          HEYGEN_API_KEY: ${{ secrets.HEYGEN_API_KEY }}
+          HEYGEN_AVATAR_IDS: ${{ secrets.HEYGEN_AVATAR_IDS }}
+          CREATOMATE_API_KEY: ${{ secrets.CREATOMATE_API_KEY }}
+          TIKTOK_ACCESS_TOKEN: ${{ secrets.TIKTOK_ACCESS_TOKEN }}
+        run: python scripts/generate_tiktok.py

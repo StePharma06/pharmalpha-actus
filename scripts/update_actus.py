@@ -56,7 +56,7 @@ ASSETS_DIR = ROOT_DIR / "assets"
 
 MAX_ARTICLES_TOTAL = 50
 MAX_AGE_DAYS = 7
-NEW_ARTICLES_PER_RUN = 3
+NEW_ARTICLES_PER_RUN = 5  # 3 actus + 1 bonne nouvelle + 1 avenir pharma
 
 
 # ── RSS ──────────────────────────────────────────────────────────────
@@ -141,27 +141,37 @@ Pharmaciens d'officine en France (PAS le grand public)
 
 ---
 
-Selectionne les {NEW_ARTICLES_PER_RUN} articles les plus percutants pour des pharmaciens d'officine.
+Selectionne et redige EXACTEMENT 5 articles dans ces 5 categories :
 
-Criteres de selection :
-- Impact direct sur l'exercice officinal (reglementation, marges, missions, approvisionnement)
-- Pertinence business/economique
-- Reglementaire (LFSS, conventions, ROSP)
-- Sante publique si impact comptoir (vaccins, depistages, alertes)
-- Diversite des sujets
+**[1-2-3] ACTUS DU JOUR** (3 articles) — Les plus percutants pour les pharmaciens officinaux
+- Impact direct sur l'exercice : reglementation, marges, missions, approvisionnement, reglementaire (LFSS, ROSP), sante publique
+- categorie : "pharma_france" | "pharma_monde" | "sante"
+- badge_label : "Pharma France" | "Pharma Monde" | "Sante"
 
-REGLE ABSOLUE : maximum 1 article par source. Si plusieurs articles viennent du meme media, garde le plus percutant et prends les autres dans d'autres sources. L'objectif est de varier les sources (Moniteur, Quotidien du Pharmacien, VIDAL, Le Monde, France Info, etc.).
+**[4] LA BONNE NOUVELLE** (1 article) — Une info positive, encourageante pour la profession
+- Avancee pour les patients ou les pharmaciens, nouveau service valorise, remboursement obtenu, etude rassurante, innovation utile
+- Si aucune vraie bonne nouvelle dans les articles, prends la moins mauvaise et formule-la positivement
+- categorie : "bonne_nouvelle"
+- badge_label : "La bonne nouvelle"
+
+**[5] L'AVENIR DE LA PHARMA** (1 article) — R&D, innovation, pipeline, perspectives
+- Medicament en developpement (phase 2/3/4), nouvelle molecule, technologie emergente (ARNm, CAR-T, IA, etc.), recherche prometteuse avec impact clinique futur
+- Si peu d'articles R&D disponibles, extrais la dimension innovation/avenir d'un article existant
+- categorie : "avenir_pharma"
+- badge_label : "L'avenir de la pharma"
+
+REGLE ABSOLUE : maximum 1 article par source. Varier les sources (Moniteur, Quotidien du Pharmacien, VIDAL, Le Monde, France Info, INSERM, etc.).
 
 Pour chaque article, genere :
 - "titre" : accrocheur, max 80 car, style direct de Stephen
 - "resume" : 2-3 phrases percutantes, angle pharmacien
 - "full_text" : 150-250 mots, 4-5 paragraphes separes par \\n\\n. Style Stephen : phrases courtes, chiffres concrets, impact officine, humour si pertinent. 1ere phrase = accroche forte.
-- "categorie" : "pharma_france" | "pharma_monde" | "sante"
-- "badge_label" : "Pharma France" | "Pharma Monde" | "Sante"
+- "categorie" : voir ci-dessus
+- "badge_label" : voir ci-dessus
 - "source" et "source_url"
-- "image_keywords" : 2-3 mots EN ANGLAIS pour chercher une photo libre de droit (ex: "pharmacy shelves", "vaccine injection", "pills bottle")
+- "image_keywords" : 2-3 mots EN ANGLAIS pour chercher une photo libre de droit
 
-JSON UNIQUEMENT :
+JSON UNIQUEMENT (tableau de 5 objets) :
 [
   {{
     "titre": "...",
@@ -590,14 +600,26 @@ def build_newsletter_html(articles, custom_intro=None):
                  "juillet","ao\u00fbt","septembre","octobre","novembre","d\u00e9cembre"]
     date_str = f"{jours[today.weekday()]} {today.day} {mois_noms[today.month]} {today.year}"
 
-    actus = [a for a in articles if a.get("categorie") != "lsv"][:3]
+    actus = [a for a in articles if a.get("categorie") != "lsv"]
     lsv = next((a for a in articles if a.get("categorie") == "lsv"), None)
-    count_str = f"{len(actus)} actus" + (" + 1 Le Saviez-Vous" if lsv else "")
+    n_actus = len([a for a in actus if a.get("categorie") in ("pharma_france", "pharma_monde", "sante")])
+    has_bonne = any(a.get("categorie") == "bonne_nouvelle" for a in actus)
+    has_avenir = any(a.get("categorie") == "avenir_pharma" for a in actus)
+    parts = [f"{n_actus} actu{'s' if n_actus > 1 else ''}"]
+    if has_bonne:
+        parts.append("1 bonne nouvelle")
+    if has_avenir:
+        parts.append("1 avenir pharma")
+    if lsv:
+        parts.append("1 Le Saviez-Vous")
+    count_str = " + ".join(parts)
 
     badge_colors = {
         "pharma_france": ("#fff7ed", "#f97316"),
         "pharma_monde": ("#eff6ff", "#2563eb"),
         "sante": ("#f0fdf4", "#16a34a"),
+        "bonne_nouvelle": ("#f0fdfa", "#0d9488"),
+        "avenir_pharma": ("#eef2ff", "#4f46e5"),
     }
 
     articles_html = ""
@@ -654,7 +676,7 @@ def build_newsletter_html(articles, custom_intro=None):
   </td></tr>
   <tr><td style="padding:28px 32px 20px;">
     <p style="margin:0;font-size:15px;color:#333;line-height:1.6;">
-      {custom_intro if custom_intro else "Hey, je sais que tu es press&eacute;, tu as tellement de choses &agrave; faire ! C'est pourquoi je t'ai s&eacute;lectionn&eacute; les 3 actus du jour &agrave; ne pas manquer. Et m&ecirc;me une histoire pharma pour ta pause caf&eacute;. Bonne lecture !"}
+      {custom_intro if custom_intro else "Hey, je sais que tu es press&eacute;, tu as tellement de choses &agrave; faire ! C'est pourquoi je t'ai s&eacute;lectionn&eacute; les 5 actus du jour &agrave; ne pas manquer &mdash; dont une bonne nouvelle et un regard sur l'avenir de la pharma. Et m&ecirc;me une histoire pharma pour ta pause caf&eacute;. Bonne lecture !"}
     </p>
     <p style="margin:12px 0 0;font-size:13px;color:#999;line-height:1.5;font-style:italic;">
       Astuce : r&eacute;ponds juste &laquo; bien re&ccedil;u &raquo; &agrave; cet email. &Ccedil;a indique &agrave; ta messagerie qu'on se conna&icirc;t, et mes actus atterriront toujours dans ta bo&icirc;te principale.
@@ -801,7 +823,7 @@ def main():
         print("  Aucun article RSS. Arret.")
         return
 
-    # 2. Curate 3 actus
+    # 2. Curate 5 articles (3 actus + 1 bonne nouvelle + 1 avenir pharma)
     print(f"\n[2/5] Curation via Claude ({len(raw_articles)} articles)...")
     curated = curate_with_claude(raw_articles)
     print(f"  {len(curated)} actus selectionnees")
