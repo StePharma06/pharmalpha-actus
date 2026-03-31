@@ -602,17 +602,8 @@ def build_newsletter_html(articles, custom_intro=None):
 
     actus = [a for a in articles if a.get("categorie") != "lsv"]
     lsv = next((a for a in articles if a.get("categorie") == "lsv"), None)
-    n_actus = len([a for a in actus if a.get("categorie") in ("pharma_france", "pharma_monde", "sante")])
-    has_bonne = any(a.get("categorie") == "bonne_nouvelle" for a in actus)
-    has_avenir = any(a.get("categorie") == "avenir_pharma" for a in actus)
-    parts = [f"{n_actus} actu{'s' if n_actus > 1 else ''}"]
-    if has_bonne:
-        parts.append("1 bonne nouvelle")
-    if has_avenir:
-        parts.append("1 avenir pharma")
-    if lsv:
-        parts.append("1 Le Saviez-Vous")
-    count_str = " + ".join(parts)
+    n_total = len(actus)
+    count_str = f"{n_total} actu{'s' if n_total > 1 else ''}" + (" + 1 histoire" if lsv else "")
 
     badge_colors = {
         "pharma_france": ("#fff7ed", "#f97316"),
@@ -668,7 +659,7 @@ def build_newsletter_html(articles, custom_intro=None):
 <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
   <tr><td style="background:#ffffff;padding:28px 32px 16px;text-align:center;border-bottom:2px solid #f97316;">
     <a href="https://actus.pharmalpha.fr/" style="text-decoration:none;"><span style="font-size:32px;font-weight:800;color:#1a1a1a;letter-spacing:-0.5px;">Pharm'<span style="color:#f97316;">Actus</span></span></a><br>
-    <span style="font-size:13px;color:#888;letter-spacing:0.3px;">Chaque matin, le r&eacute;sum&eacute; pharma que t'aurais aim&eacute; avoir entre deux clients.</span>
+    <span style="font-size:13px;color:#888;letter-spacing:0.3px;">Chaque matin, retrouve l'actus pharma &agrave; lire entre deux ordo.</span>
   </td></tr>
   <tr><td style="background:#fafafa;padding:10px 32px;text-align:center;">
     <span style="color:#1a1a1a;font-size:14px;font-weight:600;">{date_str}</span>
