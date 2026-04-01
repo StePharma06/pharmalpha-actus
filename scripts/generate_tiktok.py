@@ -719,9 +719,53 @@ def publish_to_tiktok(video_path, script):
         return None
 
 
+QUEUE_DIR = ROOT_DIR / "output" / "tiktok" / "queue"
+PUBLISH_DELAY_DAYS = 2
+
+
+def save_to_queue(video_path, script):
+    """Save video + metadata to queue for deferred publication."""
+    today = datetime.now().strftime("%Y-%m-%d")
+    from datetime import timedelta
+    publish_date = (datetime.now() + timedelta(days=PUBLISH_DELAY_DAYS)).strftime("%Y-%m-%d")
+
+    slot_dir = QUEUE_DIR / today
+    slot_dir.mkdir(parents=True, exist_ok=True)
+
+    # Copy video
+    import shutil
+    dest_video = slot_dir / "video.mp4"
+    shutil.copy2(video_path, dest_video)
+
+    # Copy images from OUTPUT_DIR
+    for png in OUTPUT_DIR.glob("*.png"):
+        shutil.copy2(png, slot_dir / png.name)
+
+    # Save script
+    with open(slot_dir / "script.json", "w", encoding="utf-8") as f:
+        json.dump(script, f, ensure_ascii=False, indent=2)
+
+    # Save metadata
+    metadata = {
+        "generated_date": today,
+        "publish_date": publish_date,
+        "published": False,
+        "publish_id": None,
+        "titre": script.get("titre_tiktok", ""),
+        "description": script.get("description_tiktok", ""),
+        "hashtags": script.get("hashtags", ""),
+    }
+    with open(slot_dir / "metadata.json", "w", encoding="utf-8") as f:
+        json.dump(metadata, f, ensure_ascii=False, indent=2)
+
+    print(f"  Video en queue : {slot_dir}")
+    print(f"  Publication prevue : {publish_date} a 18h30 Paris")
+    return slot_dir
+
+
 def main():
     print("=" * 60)
-    print("PHARM'ACTUS TIKTOK - Pipeline video quotidien v2")
+    print("PHARM'ACTUS TIKTOK - Generation video (queue J+2)")
     print(f"Date : {datetime.now().strftime('%Y-%m-%d %H:%M')}")
     print("=" * 60)
 
@@ -738,8 +782,6 @@ def main():
 
     if not HEYGEN_API_KEY:
         print("[INFO] HeyGen non configure -> mode 100% anime")
-    if not TIKTOK_ACCESS_TOKEN:
-        print("[INFO] TikTok non configure -> video generee mais pas publiee")
 
     lsv = load_lsv()
     script = generate_tiktok_script(lsv)
@@ -753,14 +795,11 @@ def main():
     video_path = assemble_video(script, image_urls, voiceover_url, intro_url, rebond_url, conclusion_url)
 
     if video_path:
-        publish_id = publish_to_tiktok(video_path, script)
+        slot_dir = save_to_queue(video_path, script)
         print()
         print("=" * 60)
-        if publish_id:
-            print(f"VIDEO PUBLIEE sur TikTok ! (ID: {publish_id})")
-        else:
-            print(f"VIDEO GENEREE : {video_path}")
-            print("Publication manuelle requise")
+        print(f"VIDEO EN QUEUE : {slot_dir}")
+        print(f"Sera publiee dans {PUBLISH_DELAY_DAYS} jours a 18h30 Paris")
         print("=" * 60)
     else:
         print("\n[ERROR] Pipeline echoue - pas de video generee")

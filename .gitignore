@@ -1,4 +1,7 @@
-# TikTok pipeline temp files
-output/tiktok/
+# TikTok pipeline temp files (pas la queue qui est committee)
+output/tiktok/*.json
+output/tiktok/*.mp3
+output/tiktok/*.mp4
+output/tiktok/*.png
 __pycache__/
 *.pyc

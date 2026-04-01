@@ -2,16 +2,20 @@ name: TikTok Video Daily
 
 on:
   schedule:
-    - cron: '0 2 * * *'  # 04h00 Paris (heure d'ete) — apres le run actus
+    - cron: '0 2 * * *'  # 04h00 Paris (heure d'ete) — generation quotidienne
   workflow_dispatch:  # Lancement manuel possible
 
+permissions:
+  contents: write
+
 jobs:
-  tiktok-video:
+  tiktok-generate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           ref: master
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: actions/setup-python@v5
         with:
@@ -20,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: pip install anthropic
 
-      - name: Generate & publish TikTok video
+      - name: Generate TikTok video
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
@@ -29,17 +33,26 @@ jobs:
           HEYGEN_API_KEY: ${{ secrets.HEYGEN_API_KEY }}
           HEYGEN_AVATAR_IDS: ${{ secrets.HEYGEN_AVATAR_IDS }}
           CREATOMATE_API_KEY: ${{ secrets.CREATOMATE_API_KEY }}
-          TIKTOK_ACCESS_TOKEN: ${{ secrets.TIKTOK_ACCESS_TOKEN }}
         run: python scripts/generate_tiktok.py
 
-      - name: Upload video artifact
+      - name: Commit video to queue
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add output/tiktok/queue/
+          if git diff --staged --quiet; then
+            echo "Rien a committer"
+          else
+            git commit -m "tiktok: video du $(date +%Y-%m-%d) en queue (publication J+2)"
+            git push
+          fi
+
+      - name: Upload artifact (backup 7j)
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: tiktok-video-${{ github.run_number }}
           path: |
-            output/tiktok/tiktok_video.mp4
-            output/tiktok/tiktok_script.json
-            output/tiktok/creatomate_source.json
-            output/tiktok/*.png
+            output/tiktok/queue/
+            output/tiktok/*.json
           retention-days: 7
