@@ -31,3 +31,15 @@ jobs:
           CREATOMATE_API_KEY: ${{ secrets.CREATOMATE_API_KEY }}
           TIKTOK_ACCESS_TOKEN: ${{ secrets.TIKTOK_ACCESS_TOKEN }}
         run: python scripts/generate_tiktok.py
+
+      - name: Upload video artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tiktok-video-${{ github.run_number }}
+          path: |
+            output/tiktok/tiktok_video.mp4
+            output/tiktok/tiktok_script.json
+            output/tiktok/creatomate_source.json
+            output/tiktok/*.png
+          retention-days: 7
