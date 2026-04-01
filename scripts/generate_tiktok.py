@@ -1,27 +1,27 @@
 #!/usr/bin/env python3
 """
 Pharm'Actus TikTok - Pipeline video quotidien
-Transforme le LSV du jour en video TikTok ~60s et publie a 18h Paris.
+Transforme le LSV du jour en video TikTok ~65s et publie sur TikTok.
 
 Pipeline :
   1. Lire output/latest_lsv.json
-  2. Claude API -> script segmente TikTok
-  3. DALL-E 3 -> 4 images photorealistes (9:16)
-  4. ElevenLabs -> voix off (~60s)
-  5. HeyGen -> 2 clips avatar (intro + CTA)
-  6. Creatomate -> assemblage video finale
-  7. TikTok API -> publication programmee
+  2. Claude API -> script segmente TikTok (65s, 3 facecams + 2 segments animes)
+  3. DALL-E 3 -> 3 images photorealistes (9:16)
+  4. ElevenLabs -> voix off (~32s parties animees)
+  5. HeyGen -> 3 clips avatar (intro + rebond + conclusion)
+  6. Creatomate -> assemblage video finale (URLs publiques, pas d'upload)
+  7. TikTok API -> publication
 """
 
-import base64
 import json
 import os
 import re
 import sys
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
-from datetime import datetime, timezone
+from datetime import datetime
 from pathlib import Path
 
 # -- Config ----------------------------------------------------------------
@@ -46,6 +46,7 @@ def api_request(url, data=None, headers=None, method=None):
     if data is not None and isinstance(data, dict):
         data = json.dumps(data).encode("utf-8")
         headers.setdefault("Content-Type", "application/json")
+    headers.setdefault("User-Agent", "PharmaAlpha/1.0")
     req = urllib.request.Request(url, data=data, headers=headers, method=method)
     with urllib.request.urlopen(req, timeout=300) as resp:
         ct = resp.headers.get("Content-Type", "")
@@ -53,6 +54,31 @@ def api_request(url, data=None, headers=None, method=None):
         if "json" in ct:
             return json.loads(raw)
         return raw
+
+
+def upload_temp(file_path):
+    """Upload file to tmpfiles.org and return direct download URL (valid ~1h)."""
+    boundary = f"----Boundary{int(time.time())}"
+    with open(file_path, "rb") as f:
+        file_bytes = f.read()
+    body = (
+        f"--{boundary}\r\n"
+        f'Content-Disposition: form-data; name="file"; filename="{file_path.name}"\r\n'
+        f"Content-Type: application/octet-stream\r\n\r\n"
+    ).encode() + file_bytes + f"\r\n--{boundary}--\r\n".encode()
+    req = urllib.request.Request(
+        "https://tmpfiles.org/api/v1/upload",
+        data=body,
+        headers={
+            "Content-Type": f"multipart/form-data; boundary={boundary}",
+            "User-Agent": "PharmaAlpha/1.0",
+        },
+    )
+    with urllib.request.urlopen(req, timeout=120) as resp:
+        result = json.loads(resp.read())
+    page_url = result.get("data", {}).get("url", "")
+    # Convert page URL to direct download URL: insert /dl/ after domain
+    return page_url.replace("tmpfiles.org/", "tmpfiles.org/dl/", 1)
 
 
 def load_lsv():
@@ -174,6 +200,7 @@ def generate_tiktok_script(lsv):
 
 
 def generate_images(script):
+    """Generate DALL-E images. Returns dict {label: public_url}."""
     print("[3/7] Generation des images via DALL-E 3...")
 
     prompts = [
@@ -183,7 +210,7 @@ def generate_images(script):
     ]
     prompts = [(k, v) for k, v in prompts if v]
 
-    images = {}
+    image_urls = {}
     for label, prompt in prompts:
         if "photorealistic" not in prompt.lower():
             prompt = f"Photorealistic editorial photography, {prompt}, natural lighting, shot on Canon EOS R5, no AI artifacts, no text"
@@ -203,13 +230,16 @@ def generate_images(script):
                 headers={"Authorization": f"Bearer {OPENAI_API_KEY}"},
             )
             img_url = resp["data"][0]["url"]
+            # Save locally for debugging
             img_path = OUTPUT_DIR / f"{label}.png"
             urllib.request.urlretrieve(img_url, str(img_path))
-            images[label] = img_path
+            # Keep DALL-E URL for Creatomate (valid ~1h)
+            image_urls[label] = img_url
             print(f"  {label} : OK")
         except Exception as e:
             print(f"  [WARN] Image {label} echouee : {e}")
 
+    # Thumbnail (local only, not used in Creatomate)
     thumb_prompt = script.get("thumbnail_prompt", "")
     if thumb_prompt:
         if "photorealistic" not in thumb_prompt.lower():
@@ -229,15 +259,15 @@ def generate_images(script):
             )
             thumb_path = OUTPUT_DIR / "thumbnail.png"
             urllib.request.urlretrieve(resp["data"][0]["url"], str(thumb_path))
-            images["thumbnail"] = thumb_path
             print("  thumbnail : OK")
         except Exception as e:
             print(f"  [WARN] Thumbnail echouee : {e}")
 
-    return images
+    return image_urls
 
 
 def generate_voiceover(script):
+    """Generate voiceover via ElevenLabs. Returns (local_path, public_url)."""
     print("[4/7] Generation de la voix off via ElevenLabs...")
 
     voiceover_text = script.get("full_voiceover", "")
@@ -274,7 +304,43 @@ def generate_voiceover(script):
         f.write(audio_bytes)
 
     print(f"  Voix off generee : {len(audio_bytes) / 1024:.0f} KB")
-    return audio_path
+
+    # Upload to temp host for Creatomate (needs public URL)
+    voiceover_url = upload_temp(audio_path)
+    print(f"  Voix off uploadee : {voiceover_url[:60]}...")
+
+    return audio_path, voiceover_url
+
+
+def generate_speech_audio(text, label):
+    """Generate speech audio via ElevenLabs for a HeyGen clip.
+    Returns public URL of the audio file."""
+    print(f"    Speech {label} via ElevenLabs...")
+    data = {
+        "text": text,
+        "model_id": "eleven_multilingual_v2",
+        "voice_settings": {
+            "stability": 0.5,
+            "similarity_boost": 0.75,
+            "style": 0.3,
+            "use_speaker_boost": True,
+        },
+    }
+    audio_bytes = api_request(
+        f"https://api.elevenlabs.io/v1/text-to-speech/{ELEVENLABS_VOICE_ID}",
+        data=data,
+        headers={
+            "xi-api-key": ELEVENLABS_API_KEY,
+            "Accept": "audio/mpeg",
+        },
+    )
+    audio_path = OUTPUT_DIR / f"speech_{label}.mp3"
+    with open(audio_path, "wb") as f:
+        f.write(audio_bytes)
+
+    audio_url = upload_temp(audio_path)
+    print(f"    Speech {label} : {len(audio_bytes) / 1024:.0f} KB, uploaded")
+    return audio_url
 
 
 def get_today_avatar_id():
@@ -287,7 +353,13 @@ def get_today_avatar_id():
 
 
 def generate_heygen_clip(text, label, avatar_id):
+    """Generate HeyGen avatar clip with pre-generated ElevenLabs audio.
+    Returns public video URL (not local path)."""
     print(f"  HeyGen {label} : generation...")
+
+    # Generate speech audio via ElevenLabs and upload to temp host
+    audio_url = generate_speech_audio(text, label)
+
     data = {
         "video_inputs": [{
             "character": {
@@ -296,10 +368,8 @@ def generate_heygen_clip(text, label, avatar_id):
                 "avatar_style": "normal",
             },
             "voice": {
-                "type": "elevenlabs",
-                "voice_id": ELEVENLABS_VOICE_ID,
-                "api_key": ELEVENLABS_API_KEY,
-                "input_text": text,
+                "type": "audio",
+                "audio_url": audio_url,
             },
             "background": {
                 "type": "color",
@@ -318,10 +388,11 @@ def generate_heygen_clip(text, label, avatar_id):
         )
         video_id = resp.get("data", {}).get("video_id")
         if not video_id:
-            print(f"  [WARN] HeyGen {label} : pas de video_id")
+            print(f"  [WARN] HeyGen {label} : pas de video_id — resp: {resp}")
             return None
 
-        for _ in range(60):
+        print(f"    HeyGen {label} : video_id={video_id}, attente rendu...")
+        for attempt in range(60):
             time.sleep(5)
             status_resp = api_request(
                 f"https://api.heygen.com/v1/video_status.get?video_id={video_id}",
@@ -330,16 +401,21 @@ def generate_heygen_clip(text, label, avatar_id):
             status = status_resp.get("data", {}).get("status", "")
             if status == "completed":
                 video_url = status_resp["data"]["video_url"]
+                # Save locally for debugging
                 clip_path = OUTPUT_DIR / f"avatar_{label}.mp4"
                 urllib.request.urlretrieve(video_url, str(clip_path))
-                print(f"  HeyGen {label} : OK")
-                return clip_path
+                print(f"  HeyGen {label} : OK ({attempt * 5}s)")
+                return video_url  # Return public URL for Creatomate
             elif status == "failed":
-                err = status_resp.get("data", {}).get("error", "")
+                err = status_resp.get("data", {}).get("error", "unknown")
                 print(f"  [WARN] HeyGen {label} echoue : {err}")
                 return None
 
-        print(f"  [WARN] HeyGen {label} timeout")
+        print(f"  [WARN] HeyGen {label} timeout (5 min)")
+        return None
+    except urllib.error.HTTPError as e:
+        body = e.read().decode()[:300] if hasattr(e, "read") else str(e)
+        print(f"  [WARN] HeyGen {label} HTTP {e.code} : {body}")
         return None
     except Exception as e:
         print(f"  [WARN] HeyGen {label} erreur : {e}")
@@ -347,6 +423,7 @@ def generate_heygen_clip(text, label, avatar_id):
 
 
 def generate_avatar_clips(script):
+    """Generate 3 HeyGen avatar clips. Returns (intro_url, rebond_url, conclusion_url)."""
     print("[5/7] Generation des clips avatar via HeyGen (intro + rebond + conclusion)...")
     avatar_id = get_today_avatar_id()
     if not avatar_id:
@@ -357,51 +434,14 @@ def generate_avatar_clips(script):
     rebond_text = script.get("avatar_rebond", {}).get("speech", "")
     conclusion_text = script.get("avatar_conclusion", {}).get("speech", "")
 
-    intro_clip = generate_heygen_clip(intro_text, "intro", avatar_id) if intro_text else None
-    rebond_clip = generate_heygen_clip(rebond_text, "rebond", avatar_id) if rebond_text else None
-    conclusion_clip = generate_heygen_clip(conclusion_text, "conclusion", avatar_id) if conclusion_text else None
-    return intro_clip, rebond_clip, conclusion_clip
+    intro_url = generate_heygen_clip(intro_text, "intro", avatar_id) if intro_text else None
+    rebond_url = generate_heygen_clip(rebond_text, "rebond", avatar_id) if rebond_text else None
+    conclusion_url = generate_heygen_clip(conclusion_text, "conclusion", avatar_id) if conclusion_text else None
+    return intro_url, rebond_url, conclusion_url
 
 
-def upload_to_creatomate(file_path, mime_type):
-    with open(file_path, "rb") as f:
-        file_bytes = f.read()
-
-    boundary = "----FormBoundary" + str(int(time.time()))
-    body = (
-        f"--{boundary}\r\n"
-        f'Content-Disposition: form-data; name="file"; filename="{file_path.name}"\r\n'
-        f"Content-Type: {mime_type}\r\n\r\n"
-    ).encode("utf-8") + file_bytes + f"\r\n--{boundary}--\r\n".encode("utf-8")
-
-    req = urllib.request.Request(
-        "https://api.creatomate.com/v1/files",
-        data=body,
-        headers={
-            "Authorization": f"Bearer {CREATOMATE_API_KEY}",
-            "Content-Type": f"multipart/form-data; boundary={boundary}",
-        },
-    )
-    with urllib.request.urlopen(req, timeout=120) as resp:
-        result = json.loads(resp.read())
-    return result.get("url", "")
-
-
-def build_creatomate_source(script, images, voiceover_path, intro_clip, rebond_clip, conclusion_clip):
-    print("  Upload des assets vers Creatomate...")
-    voiceover_url = upload_to_creatomate(voiceover_path, "audio/mpeg")
-
-    image_urls = {}
-    for label, img_path in images.items():
-        if label == "thumbnail":
-            continue
-        image_urls[label] = upload_to_creatomate(img_path, "image/png")
-        print(f"    {label} uploade")
-
-    intro_url = upload_to_creatomate(intro_clip, "video/mp4") if intro_clip and intro_clip.exists() else None
-    rebond_url = upload_to_creatomate(rebond_clip, "video/mp4") if rebond_clip and rebond_clip.exists() else None
-    conclusion_url = upload_to_creatomate(conclusion_clip, "video/mp4") if conclusion_clip and conclusion_clip.exists() else None
-
+def build_creatomate_source(script, image_urls, voiceover_url, intro_url, rebond_url, conclusion_url):
+    """Build Creatomate render source JSON using public URLs (no file upload)."""
     elements = []
     t = 0
     vo_offset = 0  # position dans le fichier voiceover (parties animees seulement)
@@ -584,9 +624,10 @@ def render_video(source):
     return None
 
 
-def assemble_video(script, images, voiceover_path, intro_clip, rebond_clip, conclusion_clip):
+def assemble_video(script, image_urls, voiceover_url, intro_url, rebond_url, conclusion_url):
+    """Assemble final video via Creatomate using public URLs."""
     print("[6/7] Assemblage video via Creatomate...")
-    source = build_creatomate_source(script, images, voiceover_path, intro_clip, rebond_clip, conclusion_clip)
+    source = build_creatomate_source(script, image_urls, voiceover_url, intro_url, rebond_url, conclusion_url)
 
     source_path = OUTPUT_DIR / "creatomate_source.json"
     with open(source_path, "w", encoding="utf-8") as f:
@@ -680,7 +721,7 @@ def publish_to_tiktok(video_path, script):
 
 def main():
     print("=" * 60)
-    print("PHARM'ACTUS TIKTOK - Pipeline video quotidien")
+    print("PHARM'ACTUS TIKTOK - Pipeline video quotidien v2")
     print(f"Date : {datetime.now().strftime('%Y-%m-%d %H:%M')}")
     print("=" * 60)
 
@@ -706,10 +747,10 @@ def main():
     with open(OUTPUT_DIR / "tiktok_script.json", "w", encoding="utf-8") as f:
         json.dump(script, f, ensure_ascii=False, indent=2)
 
-    images = generate_images(script)
-    voiceover_path = generate_voiceover(script)
-    intro_clip, rebond_clip, conclusion_clip = generate_avatar_clips(script)
-    video_path = assemble_video(script, images, voiceover_path, intro_clip, rebond_clip, conclusion_clip)
+    image_urls = generate_images(script)
+    voiceover_path, voiceover_url = generate_voiceover(script)
+    intro_url, rebond_url, conclusion_url = generate_avatar_clips(script)
+    video_path = assemble_video(script, image_urls, voiceover_url, intro_url, rebond_url, conclusion_url)
 
     if video_path:
         publish_id = publish_to_tiktok(video_path, script)
