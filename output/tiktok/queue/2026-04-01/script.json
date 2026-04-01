@@ -1,0 +1,38 @@
+{
+  "hook": {
+    "voiceover": "Tu savais qu'au Moyen Âge, les pharmaciens passaient leurs journées à essayer de transformer le plomb en or ?",
+    "screen_text": "Pharmaciens = Alchimistes ?!",
+    "image_prompt": "Photorealistic editorial photography of a medieval apothecary shop with smoking alchemical equipment, alembics and retorts, mysterious glass vessels filled with colorful liquids, dramatic lighting, shot on Canon EOS R5, cinematic composition",
+    "duration": 5
+  },
+  "avatar_intro": {
+    "speech": "Salut tout le monde, Stephen de Pharm'Alpha ! Aujourd'hui je vous raconte l'histoire dingue de nos ancêtres apothicaires qui étaient de véritables apprentis sorciers !",
+    "duration": 7
+  },
+  "segment_1": {
+    "voiceover": "Au XIIe siècle, nos prédécesseurs apothicaires travaillaient dans des arrière-boutiques enfumées, entourés d'alambics et de cornues. Ils cherchaient la pierre philosophale entre deux préparations ! À Montpellier en 1220, l'apothicaire Jean de Saint-Amand avait même convaincu le roi Louis VIII de financer ses recherches alchimiques !",
+    "screen_text": "1220 : Le roi finance l'alchimie !",
+    "image_prompt": "Photorealistic editorial photography of a medieval king in royal robes examining golden coins and alchemical apparatus, ornate medieval chamber with stone walls, dramatic candlelight, shot on Canon EOS R5, historical documentary style",
+    "duration": 15
+  },
+  "avatar_rebond": {
+    "speech": "Mais le plus incroyable, c'est qu'en cherchant l'impossible, ils ont découvert l'essentiel !",
+    "duration": 7
+  },
+  "segment_2": {
+    "voiceover": "L'acide sulfurique, l'acide nitrique, l'alcool éthylique... Tous ces composés qu'on utilise encore aujourd'hui sont nés de leurs expérimentations magiques ! Arnaud de Villeneuve pensait avoir trouvé l'élixir de jouvence dans l'alcool distillé qu'il appelait 'aqua vitae'.",
+    "screen_text": "Leurs échecs = nos découvertes !",
+    "image_prompt": "Photorealistic editorial photography of modern laboratory glass bottles containing clear chemical solutions, scientific equipment, clean white lab environment with precise lighting, shot on Canon EOS R5, pharmaceutical editorial style",
+    "duration": 12
+  },
+  "avatar_conclusion": {
+    "speech": "Ces apprentis sorciers ont posé les bases de la chimie moderne ! Pharmusez-vous bien ! Abonnez-vous @pharmalpha sur TikTok et retrouvez toutes nos actus sur actus.pharmalpha.fr. La prochaine fois qu'un client vous demandera un remède miracle, vous saurez que nos ancêtres promettaient carrément l'immortalité au comptoir !",
+    "loop_phrase": "La prochaine fois qu'un client vous demandera un remède miracle, vous saurez que nos ancêtres promettaient carrément l'immortalité au comptoir !",
+    "duration": 15
+  },
+  "full_voiceover": "Tu savais qu'au Moyen Âge, les pharmaciens passaient leurs journées à essayer de transformer le plomb en or ? Au XIIe siècle, nos prédécesseurs apothicaires travaillaient dans des arrière-boutiques enfumées, entourés d'alambics et de cornues. Ils cherchaient la pierre philosophale entre deux préparations ! À Montpellier en 1220, l'apothicaire Jean de Saint-Amand avait même convaincu le roi Louis VIII de financer ses recherches alchimiques ! L'acide sulfurique, l'acide nitrique, l'alcool éthylique... Tous ces composés qu'on utilise encore aujourd'hui sont nés de leurs expérimentations magiques ! Arnaud de Villeneuve pensait avoir trouvé l'élixir de jouvence dans l'alcool distillé qu'il appelait 'aqua vitae'.",
+  "titre_tiktok": "Quand les pharmaciens étaient des alchimistes ! 🧪✨",
+  "description_tiktok": "Découvre l'histoire dingue de tes ancêtres apothicaires qui cherchaient à transformer le plomb en or ! 🏺⚗️ Entre magie et science, ils ont posé les bases de la pharmacie moderne 💊 #lesaviezvous #pharmalpha #pharmacie #sante #alchimie #histoire #medieval #apothicaire #science",
+  "hashtags": "#lesaviezvous #pharmalpha #pharmacie #sante",
+  "thumbnail_prompt": "Photorealistic close-up portrait of a medieval apothecary in dark robes holding a glowing golden vial, dramatic chiaroscuro lighting, mysterious atmosphere, bold contrast, vertical 9:16 format, shot on Canon EOS R5, cinematic editorial style"
+}
