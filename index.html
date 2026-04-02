@@ -2118,10 +2118,9 @@ async function submitToBrevo(email, btn, msg, onSuccess) {
     formData.append('email_address_check', '');
     formData.append('locale', 'fr');
     await fetch(BREVO_FORM_URL, { method: 'POST', body: formData, mode: 'no-cors' });
-    msg.textContent = 'Merci ! Tu recevras les actus chaque matin.';
+    msg.innerHTML = 'Merci, c\'est valid&eacute; ! &#x1F389;<br>Il est possible que j\'atterrisse dans tes spams... r&eacute;ponds juste &laquo;&nbsp;bien re&ccedil;u&nbsp;&raquo; &agrave; l\'email que tu viens de recevoir, &ccedil;a indique &agrave; ta messagerie qu\'on se conna&icirc;t, et mes actus atterriront toujours dans ta bo&icirc;te principale ;)';
     msg.className = msg.className.replace(/ ?(success|error)/g, '') + ' success';
     localStorage.setItem(NL_KEY, 'subscribed');
-    document.getElementById('hero-nl').style.display = 'none';
     if (onSuccess) onSuccess();
   } catch (err) {
     msg.textContent = 'Erreur. Reessaie dans quelques instants.';
@@ -2140,7 +2139,7 @@ async function submitNewsletter(e) {
     email,
     document.getElementById('nl-btn'),
     document.getElementById('nl-msg'),
-    () => setTimeout(closeNewsletter, 3000)
+    () => setTimeout(closeNewsletter, 12000)
   );
 }
 
