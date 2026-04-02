@@ -1,38 +1,54 @@
 {
   "hook": {
-    "voiceover": "Le saviez-vous ? Au 19ème siècle, les pharmaciens vendaient de l'opium aux bébés pour les calmer !",
-    "screen_text": "OPIUM pour BÉBÉS en pharmacie",
-    "image_prompt": "Photorealistic editorial photography of a Victorian era pharmacy interior with glass bottles containing dark liquid medicines on wooden shelves, vintage apothecary setting, moody lighting, shot on Canon EOS R5, 85mm lens, shallow depth of field",
+    "voiceover": "Au 19ème siècle, les pharmaciens vendaient de l'opium aux bébés pour les calmer !",
+    "screen_text": "Opium pour bébés en pharmacie",
+    "video_search": "vintage pharmacy bottles shelves medicine",
+    "image_prompt": "Photorealistic editorial shot of vintage 1800s pharmacy interior with dark wooden shelves lined with old medicine bottles and opium preparations, dim lighting, Canon EOS R5, 85mm lens",
     "duration": 5
   },
-  "avatar_intro": {
-    "speech": "Salut tout le monde ! Stephen de Pharm'Alpha. Aujourd'hui on va parler d'une époque où la pharmacie n'avait vraiment aucune limite !",
-    "duration": 7
+  "facecam_intro": {
+    "speech": "Salut c'est Stephen, pharmacien !",
+    "duration": 3
   },
-  "segment_1": {
-    "voiceover": "En 1840, des marques comme 'Mrs Winslow's Soothing Syrup' étaient vendues librement en pharmacie. Ces sirops contenaient jusqu'à 10% d'opium ! Les mères en donnaient aux nourrissons pour les faire dormir.",
-    "screen_text": "10% d'OPIUM dans les sirops bébés",
-    "image_prompt": "Photorealistic editorial photography of Victorian era medicine bottles with vintage labels, mother's hands giving drops to a sleeping baby in 1840s setting, warm domestic lighting, shot on Canon EOS R5, 50mm lens",
-    "duration": 15
+  "story": {
+    "full_voiceover": "Figure-toi qu'au 19ème siècle, le laudanum était LE remède miracle vendu librement dans nos officines ! Cette solution d'opium à 10% était donnée aux nourrissons qui pleuraient. En 1840, des marques comme Mrs Winslow's Soothing Syrup cartonnaient chez les jeunes mamans. Quelques gouttes dans le biberon et hop, bébé dormait comme un ange ! Sauf que ces sirops contenaient entre 0,4 et 2 grains d'opium par dose. De quoi assommer un adulte ! Nos confrères ne se doutaient pas qu'ils créaient une épidémie de dépendance infantile. Le twist ? En 1868, le médecin Horatio Wood balance : ces préparations tuent plus d'enfants que toutes les maladies réunies ! Il faudra attendre 1906 pour commencer à réglementer ces ventes. Le pharmacien Sydenham appelait ça l'opium de Dieu, il ne croyait pas si bien dire ! Aujourd'hui, quand un parent demande quelque chose de naturel pour faire dormir bébé, on peut rappeler que naturel ne rime pas avec inoffensif ! Pharmusez-vous bien ! Abonnez-vous à @pharmalpha et retrouvez nos actus sur actus.pharmalpha.fr",
+    "segments": [
+      {
+        "id": "seg1",
+        "screen_text": "Laudanum = remède miracle 1800",
+        "video_search": "crying baby vintage crib nursery",
+        "image_prompt": "Photorealistic editorial shot of 1840s nursery with crying baby in wooden crib, dim candlelight, vintage atmosphere, Canon EOS R5, 50mm lens",
+        "duration": 12
+      },
+      {
+        "id": "seg2",
+        "screen_text": "Mrs Winslow's Soothing Syrup",
+        "video_search": "vintage medicine bottle label syrup",
+        "image_prompt": "Photorealistic close-up of vintage 1840s medicine bottle with ornate label reading 'Mrs Winslow's Soothing Syrup', dark amber glass, editorial lighting, Canon EOS R5, macro lens",
+        "duration": 13
+      },
+      {
+        "id": "seg3",
+        "screen_text": "2 grains d'opium = dose adulte",
+        "video_search": "shocked doctor reading medical report",
+        "image_prompt": "Photorealistic portrait of shocked Victorian-era doctor in 1868 reading medical report with alarmed expression, period clothing, editorial lighting, Canon EOS R5, 85mm lens",
+        "duration": 13
+      },
+      {
+        "id": "seg4",
+        "screen_text": "Pharmusez-vous bien !",
+        "video_search": "modern pharmacy consultation parent baby",
+        "image_prompt": "Photorealistic modern pharmacy scene with pharmacist consulting young parent holding baby, bright professional lighting, contemporary setting, Canon EOS R5, 35mm lens",
+        "duration": 12
+      }
+    ]
   },
-  "avatar_rebond": {
-    "speech": "Mais le plus incroyable, c'est que les pharmaciens pensaient vraiment bien faire !",
-    "duration": 7
+  "facecam_outro": {
+    "speech": "D'ailleurs, tu savais que nos ancêtres vendaient aussi...",
+    "duration": 5
   },
-  "segment_2": {
-    "voiceover": "Le médecin Horatio Wood a fini par alerter : 'Ces préparations tuent plus d'enfants que toutes les maladies réunies'. Il faudra attendre 1906 pour réguler ces ventes !",
-    "screen_text": "1906 : première réglementation",
-    "image_prompt": "Photorealistic editorial photography of a concerned Victorian doctor Horatio Wood examining medical documents and bottles in his office, dramatic lighting, serious expression, shot on Canon EOS R5, 35mm lens",
-    "duration": 12
-  },
-  "avatar_conclusion": {
-    "speech": "Aujourd'hui, quand un parent demande 'quelque chose de naturel', on sait que naturel ne rime pas avec inoffensif ! Pharmusez-vous bien ! Abonnez-vous @pharmalpha sur TikTok et retrouvez toutes nos actus sur actus.pharmalpha.fr. La prochaine fois que vous irez en pharmacie, vous saurez d'où on vient !",
-    "loop_phrase": "La prochaine fois que vous irez en pharmacie, vous saurez d'où on vient !",
-    "duration": 15
-  },
-  "full_voiceover": "Le saviez-vous ? Au 19ème siècle, les pharmaciens vendaient de l'opium aux bébés pour les calmer ! En 1840, des marques comme 'Mrs Winslow's Soothing Syrup' étaient vendues librement en pharmacie. Ces sirops contenaient jusqu'à 10% d'opium ! Les mères en donnaient aux nourrissons pour les faire dormir. Le médecin Horatio Wood a fini par alerter : 'Ces préparations tuent plus d'enfants que toutes les maladies réunies'. Il faudra attendre 1906 pour réguler ces ventes !",
-  "titre_tiktok": "🚨 Quand les pharmacies vendaient de l'OPIUM aux bébés ! #shocking",
-  "description_tiktok": "Au 19ème siècle, du laudanum pour calmer les nourrissons... Une époque sans réglementation où 'naturel' rimait avec danger ! 😱 Suivez @pharmalpha pour plus de faits chocs sur l'histoire de la pharmacie ! 💊",
-  "hashtags": "#lesaviezvous #pharmalpha #pharmacie #sante #histoire #medical #shocking #bebe #opium #laudanum #victorien #regulation",
-  "thumbnail_prompt": "Dramatic photorealistic close-up of Victorian era dark medicine bottle with skull and crossbones symbol, baby silhouette in background, contrasting warm and cold lighting, vertical 9:16 format, shot on Canon EOS R5, macro lens, editorial style"
+  "titre_tiktok": "Quand les pharmaciens vendaient de l'opium aux bébés pour les calmer 😱",
+  "description_tiktok": "Au 19ème siècle, le laudanum était vendu librement en pharmacie comme sirop pour calmer les bébés... Une époque sans réglementation où naturel ne rimait pas avec inoffensif ! #lesaviezvous #pharmalpha #pharmacie #sante #histoire #laudanum #opium #regulation",
+  "hashtags": "#lesaviezvous #pharmalpha #pharmacie #sante",
+  "thumbnail_prompt": "Photorealistic vertical 9:16 thumbnail showing split scene: left side vintage 1840s pharmacy with opium bottles, right side modern crying baby, dramatic lighting contrast, editorial style, Canon EOS R5"
 }
