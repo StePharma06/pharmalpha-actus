@@ -509,7 +509,7 @@ def build_creatomate_source(script, clips, voiceover_url, vo_text,
             "type": "image", "source": logo_url,
             "x": "50%", "y": "38%", "width": "50%",
             "time": round(t, 2), "duration": slide_dur,
-            "color_filter": "invert(1)",  # invert black logo to white on dark bg
+            "color_filter": "invert",  # invert black logo to white on dark bg
         })
     # "ABONNE-TOI"
     elements.append({
