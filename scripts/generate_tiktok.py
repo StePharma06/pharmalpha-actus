@@ -160,7 +160,8 @@ JSON UNIQUEMENT :
   "music_mood": "medieval|epic|warm|mysterious|celebration",
   "titre_tiktok": "Titre conversationnel accrocheur (max 80 car)",
   "description_tiktok": "Description + hashtags (max 300 car)",
-  "hashtags": "#lesaviezvous #pharmalpha #pharmacie #sante"
+  "hashtags": "#lesaviezvous #pharmalpha #pharmacie #sante",
+  "tiktok_caption": "Caption COMPLET pret a copier-coller sur TikTok, optimise pour le SEO TikTok et la page Pour Toi. Structure : 1) Premiere ligne = hook accrocheur avec emoji (reprend le titre). 2) 2-3 lignes de description engageante avec mots-cles naturels (pharma, sante, histoire, medicament, etc). 3) CTA : 'Commente si tu savais !' ou 'Tag un pote pharmacien !'. 4) 15-20 hashtags melangeant populaires (#fyp #pourtoi #apprendresurtiktok #culture #histoire) et niches (#pharmacie #pharma #lesaviezvous #pharmalpha #sante #medicament #anecdote). Max 2200 caracteres."
 }}"""
 
 
@@ -618,7 +619,18 @@ def save_to_queue(video_path, script):
     with open(slot / "metadata.json", "w", encoding="utf-8") as f:
         json.dump(metadata, f, ensure_ascii=False, indent=2)
 
+    # Caption TikTok pret a copier-coller
+    caption = script.get("tiktok_caption", "")
+    if not caption:
+        titre = script.get("titre_tiktok", "")
+        desc = script.get("description_tiktok", "")
+        hashtags = script.get("hashtags", "")
+        caption = f"{titre}\n\n{desc}\n\n{hashtags}"
+    with open(slot / "tiktok_caption.txt", "w", encoding="utf-8") as f:
+        f.write(caption)
+
     print(f"  Queue : {slot}")
+    print(f"  Caption TikTok : tiktok_caption.txt")
     print(f"  Publication : {publish_date} a 18h30")
     return slot
 
