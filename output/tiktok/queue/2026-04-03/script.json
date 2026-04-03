@@ -1,54 +1,45 @@
 {
   "hook": {
-    "voiceover": "Saviez-vous que vos bijoux sont pesés avec une technique inventée par des pharmaciens du Moyen Âge ?",
-    "screen_text": "Bijoux = technique pharmaciens médiévaux",
-    "video_search": "jewelry diamond weighing scale close up",
-    "image_prompt": "Photorealistic editorial shot of a jeweler's precision scale weighing a diamond, Canon EOS R5, dramatic lighting, shallow depth of field",
-    "duration": 5
-  },
-  "facecam_intro": {
-    "speech": "Salut c'est Stephen, pharmacien !",
-    "duration": 3
+    "voiceover": "Savais-tu que le mot carat vient directement de nos ancêtres pharmaciens ?",
+    "video_prompt": "Extreme close-up of weathered hands holding ancient dark brown carob seeds, golden candlelight flickering across wrinkled fingers, medieval stone apothecary background, cinematic depth of field"
   },
   "story": {
-    "full_voiceover": "Figure-toi qu'au Moyen Âge, nos confrères pharmaciens avaient un sacré problème : comment peser avec précision leurs poudres et extraits les plus coûteux ? Les balances existaient, mais les poids variaient d'une ville à l'autre. La solution géniale est venue du caroubier ! Cet arbre méditerranéen a des graines extraordinaires : elles pèsent toutes exactement le même poids, 200 milligrammes ! Les pharmaciens arabes du 10ème siècle ont été les premiers à s'en servir comme étalon universel. Ils appelaient ces graines « qīrāṭ », qui est devenu notre mot « carat » ! Imagine ton ancêtre pharmacien de Bagdad sortant délicatement ses graines pour peser son safran ! Le truc génial ? Cette unité était universelle. Un marchand vénitien et un apothicaire de Damas se comprenaient parfaitement. Le carat moderne de 200 mg reprend exactement ce poids ancestral ! Alors quand tu calibres ta balance électronique, pense à ces pharmaciens qui comptaient leurs graines une par une ! Pharmusez-vous bien ! Abonnez-vous à @pharmalpha et retrouvez nos actus sur actus.pharmalpha.fr",
-    "segments": [
+    "full_voiceover": "Savais-tu que le mot carat vient directement de nos ancêtres pharmaciens ? Au Moyen Âge, nos confrères avaient un énorme problème : comment peser précisément leurs poudres les plus précieuses ? Les balances existaient, mais les poids variaient de ville en ville, c'était le chaos total ! La solution géniale est venue du caroubier méditerranéen. Ses graines ont une particularité extraordinaire : elles pèsent toutes exactement le même poids, 200 milligrammes pile ! Les pharmaciens arabes du 10ème siècle ont été les premiers à utiliser ces petites merveilles comme étalon universel. Ils les appelaient qīrāṭ, qui est devenu notre mot carat ! Imagine ton ancêtre pharmacien de Bagdad sortant délicatement ses graines pour peser son safran ! Le truc fantastique, c'est que cette unité était universelle ! Un marchand vénitien et un apothicaire de Damas se comprenaient parfaitement. Un carat à Alexandrie valait un carat à Paris, une harmonisation internationale avant la lettre ! Cette tradition a survécu jusqu'au 20ème siècle pour les pierres précieuses et l'or. Le carat moderne de 200 mg reprend exactement ce poids ancestral ! Alors quand tu calibres ta balance électronique, pense à ces pharmaciens qui comptaient leurs graines une par une ! Pharmusez-vous bien !",
+    "parts": [
       {
-        "id": "seg1",
-        "screen_text": "Problème pharmaciens Moyen Âge : poids approximatifs",
-        "video_search": "medieval pharmacy apothecary herbs weighing",
-        "image_prompt": "Photorealistic medieval apothecary workshop with herbs and primitive scales, Canon EOS R5, warm candlelight, historical accuracy",
-        "duration": 12
+        "id": "part1",
+        "video_prompt": "Medieval apothecary workshop with wooden shelves full of clay jars and bottles, warm candlelight casting dancing shadows, an old bearded pharmacist in robes looking frustrated while trying to weigh powders on an unbalanced brass scale",
+        "duration": 10
       },
       {
-        "id": "seg2",
-        "screen_text": "Graines de caroube = 200mg exactement",
-        "video_search": "carob seeds close up macro photography",
-        "image_prompt": "Photorealistic macro shot of carob seeds scattered on an antique brass scale, Canon EOS R5, sharp focus, editorial lighting",
-        "duration": 13
+        "id": "part2",
+        "video_prompt": "Cinematic slow motion shot of dark brown carob seeds being carefully poured from a cloth pouch onto a pristine brass balance scale, Mediterranean sunlight streaming through stone window, seeds catching the light as they fall",
+        "duration": 10
       },
       {
-        "id": "seg3",
-        "screen_text": "Qīrāṭ → carat : étalon universel",
-        "video_search": "ancient arabic market spices trading",
-        "image_prompt": "Photorealistic scene of an ancient Arabic marketplace with a pharmacist weighing precious spices using carob seeds, Canon EOS R5, cinematic lighting",
-        "duration": 13
+        "id": "part3",
+        "video_prompt": "Arabian pharmacist in traditional 10th century robes delicately placing individual carob seeds on one side of an ornate brass scale while measuring golden saffron threads on the other, warm oil lamp lighting, intricate Arabic patterns on the walls",
+        "duration": 10
       },
       {
-        "id": "seg4",
-        "screen_text": "Pharmusez-vous bien !",
-        "video_search": "modern pharmacy digital scale precision",
-        "image_prompt": "Photorealistic modern pharmacy with digital precision scale next to scattered carob seeds, Canon EOS R5, clean professional lighting",
-        "duration": 12
+        "id": "part4",
+        "video_prompt": "Split screen montage showing merchants and apothecaries in different medieval cities - Venice, Damascus, Alexandria, Paris - all using identical carob seeds on their scales, warm golden hour lighting, bustling market atmosphere",
+        "duration": 10
+      },
+      {
+        "id": "part5",
+        "video_prompt": "Modern pharmacy scene transitioning from ancient carob seeds to sleek digital precision scale displaying 200mg, pharmacist's hands adjusting the electronic balance, clean white laboratory lighting, seamless time-lapse effect",
+        "duration": 10
       }
     ]
   },
-  "facecam_outro": {
-    "speech": "Et oui, cette histoire de poids remonte vraiment loin dans notre profession !",
-    "duration": 5
+  "facecam_cta": {
+    "speech": "Si cette histoire de graines t'a surpris, commente et abonne-toi pour plus d'anecdotes pharma !",
+    "duration": 7
   },
-  "titre_tiktok": "Quand les pharmaciens du Moyen Age ont inventé le carat avec des graines...",
-  "description_tiktok": "🌿 L'incroyable histoire du carat : de la graine de caroube à vos bijoux ! Nos ancêtres pharmaciens étaient vraiment géniaux 💎⚖️ #lesaviezvous #pharmalpha #pharmacie #histoire",
+  "music_mood": "medieval",
+  "titre_tiktok": "Le mot carat vient de nos ancêtres pharmaciens ! 🌰⚖️",
+  "description_tiktok": "L'origine surprenante du mot carat dans l'histoire de la pharmacie ! Des graines de caroubier aux balances modernes... #lesaviezvous #pharmalpha #pharmacie #histoire",
   "hashtags": "#lesaviezvous #pharmalpha #pharmacie #sante",
-  "thumbnail_prompt": "Photorealistic vertical 9:16 thumbnail showing a split screen: medieval pharmacist with carob seeds on left, modern diamond on jeweler's scale on right, dramatic lighting, Canon EOS R5 quality"
+  "tiktok_caption": "Le mot carat vient de nos ancêtres pharmaciens ! 🌰⚖️\n\nQui aurait cru que ces petites graines de caroubier ont révolutionné la pharmacie médiévale ? De Bagdad à Paris, nos confrères du 10ème siècle avaient trouvé LA solution pour peser précisément leurs préparations les plus précieuses !\n\nCommente si tu savais que le carat moderne vient de là !\n\n#fyp #pourtoi #apprendresurtiktok #culture #histoire #pharmacie #pharma #lesaviezvous #pharmalpha #sante #medicament #anecdote #moyenage #carat #caroubier #science #education #curiosite #tiktokacademie #savoir #decouverte #patrimoine #tradition #innovation #mesure #precision"
 }
