@@ -124,11 +124,14 @@ STRUCTURE :
    - part3 (10s) : developpement ou anecdote
    - part4 (10s) : twist ou fait surprenant
    - part5 (10s) : conclusion + "Pharmusez-vous bien !"
-3. FACECAM CTA (7s) : texte que Stephen dit face camera pour conclure. Ex : "Si cette histoire t'a plu, commente, partage et abonne-toi !"
-4. SLIDE FIN (3s) : geree par le code (logo + "Abonne-toi")
+3. FACECAM CTA (7s) : Stephen face camera, CTA + LOOP PHRASE.
+   La phrase DOIT se terminer par quelque chose qui enchaine NATURELLEMENT avec le debut du hook.
+   Technique Estherium TikTok : quand la video relance en boucle, le spectateur ne s'en rend pas compte.
+   Ex si hook = "Saviez-vous que vos bijoux..." -> CTA finit par "...et la prochaine fois que tu regarderas un bijou, tu y penseras."
+   Inclure aussi un CTA : "Commente, partage et abonne-toi !"
 
 REGLES :
-- full_voiceover = hook + story concatenes (~55 secondes, ~190 mots). Rythme soutenu, pas de pause.
+- full_voiceover = hook + story concatenes (~55 secondes, ~190 mots). Rythme soutenu, pas de pause. UNIQUEMENT des caracteres ASCII simples et accents francais standards. PAS de caracteres speciaux, PAS d'emoji, PAS de guillemets typographiques.
 - facecam_cta = phrase courte pour le face camera final (7 sec max)
 - Chaque partie a un "video_prompt" DETAILLE pour generer un clip video IA (Grok Imagine).
   Les prompts doivent etre ULTRA SPECIFIQUES et VISUELS. Decrire une SCENE avec action, mouvement, eclairage.
@@ -154,7 +157,7 @@ JSON UNIQUEMENT :
     ]
   }},
   "facecam_cta": {{
-    "speech": "Phrase CTA face camera (7s max). Ex: 'Si cette histoire t'a plu, laisse un commentaire et abonne-toi !'",
+    "speech": "CTA face camera (7s max) qui se termine par une LOOP PHRASE connectant seamlessly au debut du hook. Ex: 'Commente et abonne-toi ! Et la prochaine fois que tu...'",
     "duration": 7
   }},
   "music_mood": "medieval|epic|warm|mysterious|celebration",
@@ -262,32 +265,98 @@ def generate_video_clips(script):
 
 # -- Step 4: ElevenLabs Voiceover -----------------------------------------
 
+def clean_text_for_tts(text):
+    """Clean text for ElevenLabs: remove weird chars, fix encoding."""
+    import unicodedata
+    # Fix double-encoded UTF-8
+    try:
+        text = text.encode('latin-1').decode('utf-8')
+    except (UnicodeDecodeError, UnicodeEncodeError):
+        pass
+    # Normalize unicode
+    text = unicodedata.normalize('NFC', text)
+    # Replace fancy quotes with simple ones
+    text = text.replace('\u2018', "'").replace('\u2019', "'")
+    text = text.replace('\u201c', '"').replace('\u201d', '"')
+    text = text.replace('\u00ab', '"').replace('\u00bb', '"')
+    # Remove any remaining non-printable chars
+    text = ''.join(c for c in text if c.isprintable() or c in '\n\r\t ')
+    return text.strip()
+
+
 def generate_voiceover(script):
-    """One continuous voiceover: hook + story. Returns (path, url)."""
-    print("[4/7] Generation voix off ElevenLabs...")
+    """Voiceover with word-level timestamps. Returns (path, url, word_timestamps)."""
+    print("[4/7] Generation voix off ElevenLabs (avec timestamps)...")
     full_text = script.get("story", {}).get("full_voiceover", "")
     if not full_text:
         hook = script.get("hook", {}).get("voiceover", "")
         full_text = hook
 
-    audio_bytes = api_request(
-        f"https://api.elevenlabs.io/v1/text-to-speech/{ELEVENLABS_VOICE_ID}",
+    full_text = clean_text_for_tts(full_text)
+    print(f"  Texte : {len(full_text)} chars, {len(full_text.split())} mots")
+
+    # Use with-timestamps endpoint for word-level sync
+    resp = api_request(
+        f"https://api.elevenlabs.io/v1/text-to-speech/{ELEVENLABS_VOICE_ID}/with-timestamps",
         data={
             "text": full_text,
             "model_id": "eleven_multilingual_v2",
             "voice_settings": {"stability": 0.5, "similarity_boost": 0.75,
                                "style": 0.3, "use_speaker_boost": True},
         },
-        headers={"xi-api-key": ELEVENLABS_API_KEY, "Accept": "audio/mpeg"},
+        headers={"xi-api-key": ELEVENLABS_API_KEY},
     )
+
+    # Response contains audio_base64 + alignment
+    import base64
+    audio_b64 = resp.get("audio_base64", "")
+    alignment = resp.get("alignment", {})
+    audio_bytes = base64.b64decode(audio_b64)
+
     path = OUTPUT_DIR / "voiceover.mp3"
     with open(path, "wb") as f:
         f.write(audio_bytes)
     print(f"  Voix off : {len(audio_bytes) / 1024:.0f} KB")
 
+    # Extract word timestamps: {characters, character_start_times_seconds, character_end_times_seconds}
+    word_timestamps = []
+    chars = alignment.get("characters", [])
+    starts = alignment.get("character_start_times_seconds", [])
+    ends = alignment.get("character_end_times_seconds", [])
+
+    if chars and starts and ends:
+        current_word = ""
+        word_start = 0
+        for i, ch in enumerate(chars):
+            if ch == " " or ch == "\n":
+                if current_word:
+                    word_timestamps.append({
+                        "word": current_word,
+                        "start": word_start,
+                        "end": ends[i - 1] if i > 0 else starts[i],
+                    })
+                    current_word = ""
+            else:
+                if not current_word:
+                    word_start = starts[i] if i < len(starts) else 0
+                current_word += ch
+        if current_word:
+            word_timestamps.append({
+                "word": current_word,
+                "start": word_start,
+                "end": ends[-1] if ends else 0,
+            })
+        print(f"  Timestamps : {len(word_timestamps)} mots synchronises")
+    else:
+        print("  [WARN] Pas de timestamps, fallback proportionnel")
+
+    # Save timestamps for debug
+    with open(OUTPUT_DIR / "word_timestamps.json", "w", encoding="utf-8") as f:
+        json.dump(word_timestamps, f, ensure_ascii=False, indent=2)
+
     url = upload_temp(path)
     print(f"  Upload : OK")
-    return path, url, full_text
+    return path, url, full_text, word_timestamps
 
 
 # -- Step 5: HeyGen Facecam CTA -------------------------------------------
@@ -376,8 +445,37 @@ def generate_facecam_cta(script):
 
 # -- Step 6: Creatomate Assembly -------------------------------------------
 
-def build_subtitle_elements(text, start_time, duration):
-    """Sous-titres 3 mots, gros, blanc + ombre noire epaisse."""
+def build_subtitle_elements_from_timestamps(word_timestamps, audio_offset=0.0):
+    """Build synced subtitles from ElevenLabs word timestamps. 3 words at a time."""
+    if not word_timestamps:
+        return []
+
+    elements = []
+    for i in range(0, len(word_timestamps), 3):
+        chunk = word_timestamps[i:i + 3]
+        text = " ".join(w["word"] for w in chunk)
+        start = chunk[0]["start"] + audio_offset
+        end = chunk[-1]["end"] + audio_offset
+        dur = max(0.2, end - start)
+
+        elements.append({
+            "type": "text",
+            "text": text.upper(),
+            "x": "50%", "y": "75%", "width": "90%",
+            "time": round(start, 2),
+            "duration": round(dur, 2),
+            "font_family": "Montserrat", "font_weight": "800",
+            "font_size": "9.5 vmin",
+            "fill_color": "#ffffff",
+            "shadow_color": "rgba(0,0,0,0.95)", "shadow_blur": "8",
+            "shadow_x": "3", "shadow_y": "3",
+            "x_alignment": "50%", "y_alignment": "50%",
+        })
+    return elements
+
+
+def build_subtitle_elements_fallback(text, start_time, duration):
+    """Fallback: proportional subtitles if no timestamps available."""
     words = text.split()
     if not words:
         return []
@@ -405,88 +503,79 @@ def build_subtitle_elements(text, start_time, duration):
 
 
 def build_creatomate_source(script, clips, voiceover_url, vo_text,
-                             facecam_url, logo_url):
+                             word_timestamps, facecam_url):
     elements = []
     t = 0.0
 
-    hook_dur = 5.0
     parts = script.get("story", {}).get("parts", [])
     story_dur = sum(p.get("duration", 10) for p in parts)
     cta_dur = script.get("facecam_cta", {}).get("duration", 7)
-    slide_dur = 3.0
-    vo_total = hook_dur + story_dur  # voiceover covers hook + story
+
+    # Compute actual voiceover duration from timestamps
+    if word_timestamps:
+        vo_actual_dur = word_timestamps[-1]["end"]
+    else:
+        vo_actual_dur = 55.0  # fallback
+
+    # Hook = first 5s of audio, story = rest
+    hook_dur = 5.0
 
     # Music mood
     mood = script.get("music_mood", "default")
     music_url = MUSIC_TRACKS.get(mood, MUSIC_TRACKS["default"])
 
+    # Total duration (no more slide fin)
+    total_dur = vo_actual_dur + cta_dur
+
     # ── BACKGROUND MUSIC (full duration, low volume) ─────────────────────────
-    total_dur = hook_dur + story_dur + cta_dur + slide_dur
     elements.append({
         "type": "audio", "source": music_url,
         "time": 0, "duration": round(total_dur, 2),
         "volume": "12%",
     })
 
-    # ── VOICEOVER (hook + story) ─────────────────────────────────────────────
+    # ── VOICEOVER (plays for its actual duration) ────────────────────────────
     elements.append({
         "type": "audio", "source": voiceover_url,
-        "time": 0, "duration": round(vo_total, 2),
+        "time": 0, "duration": round(vo_actual_dur, 2),
         "volume": "100%",
     })
 
-    # ── 1. HOOK (5s) — video clip ────────────────────────────────────────────
+    # ── SUBTITLES (synced to word timestamps) ────────────────────────────────
+    if word_timestamps:
+        elements.extend(build_subtitle_elements_from_timestamps(word_timestamps, audio_offset=0))
+    else:
+        elements.extend(build_subtitle_elements_fallback(vo_text, 0, vo_actual_dur))
+
+    # ── 1. HOOK (~5s) — video clip ───────────────────────────────────────────
     if clips.get("hook"):
         elements.append({
             "type": "video", "source": clips["hook"],
             "x": "50%", "y": "50%", "width": "100%", "height": "100%",
             "time": t, "duration": hook_dur,
-            "volume": "0%",  # mute clip audio, we have voiceover
+            "volume": "0%",
         })
-
-    # Hook subtitles
-    hook_vo = script.get("hook", {}).get("voiceover", "")
-    if hook_vo:
-        elements.extend(build_subtitle_elements(hook_vo, t, hook_dur))
     t += hook_dur
 
-    # ── 2. STORY (5 × 10s) — video clips ────────────────────────────────────
-    story_text = script.get("story", {}).get("full_voiceover", "")
-    # Remove hook text from story text for subtitles (it's already in full_voiceover)
-    if hook_vo and story_text.startswith(hook_vo):
-        story_only = story_text[len(hook_vo):].strip()
-    else:
-        story_only = story_text
-
-    story_words = story_only.split()
-    total_story_words = len(story_words)
-    word_offset = 0
-
+    # ── 2. STORY (5 clips) — durations adjusted to fill until voiceover ends ─
+    remaining_vo = vo_actual_dur - hook_dur
     for i, part in enumerate(parts):
         part_dur = part.get("duration", 10)
+        # Scale part durations to match actual voiceover
+        if story_dur > 0:
+            part_dur = remaining_vo * (part.get("duration", 10) / story_dur)
         part_id = part["id"]
 
-        # Video clip
         if clips.get(part_id):
             elements.append({
                 "type": "video", "source": clips[part_id],
                 "x": "50%", "y": "50%", "width": "100%", "height": "100%",
-                "time": round(t, 2), "duration": part_dur,
+                "time": round(t, 2), "duration": round(part_dur, 2),
                 "volume": "0%",
             })
-
-        # Subtitles proportional
-        part_word_count = max(1, int(total_story_words * part_dur / story_dur))
-        if i == len(parts) - 1:
-            part_word_count = total_story_words - word_offset
-        part_words = story_words[word_offset:word_offset + part_word_count]
-        if part_words:
-            elements.extend(build_subtitle_elements(" ".join(part_words), t, part_dur))
-        word_offset += part_word_count
-
         t += part_dur
 
-    # ── 3. FACECAM CTA (7s) ─────────────────────────────────────────────────
+    # ── 3. FACECAM CTA (loop phrase, fin de video) ───────────────────────────
     if facecam_url:
         elements.append({
             "type": "video", "source": facecam_url,
@@ -495,45 +584,7 @@ def build_creatomate_source(script, clips, voiceover_url, vo_text,
         })
     t += cta_dur
 
-    # ── 4. SLIDE FIN (3s) — logo + "Abonne-toi" ─────────────────────────────
-    # Fond sombre
-    elements.append({
-        "type": "shape", "shape": "rectangle",
-        "fill_color": "#0f1117",
-        "x": "50%", "y": "50%", "width": "100%", "height": "100%",
-        "time": round(t, 2), "duration": slide_dur,
-    })
-    # Logo
-    if logo_url:
-        elements.append({
-            "type": "image", "source": logo_url,
-            "x": "50%", "y": "38%", "width": "50%",
-            "time": round(t, 2), "duration": slide_dur,
-            "color_filter": "invert",  # invert black logo to white on dark bg
-        })
-    # "ABONNE-TOI"
-    elements.append({
-        "type": "text", "text": "ABONNE-TOI",
-        "x": "50%", "y": "62%", "width": "80%",
-        "time": round(t, 2), "duration": slide_dur,
-        "font_family": "Montserrat", "font_weight": "900",
-        "font_size": "12 vmin",
-        "fill_color": "#f97316",
-        "x_alignment": "50%", "y_alignment": "50%",
-        "animations": [{"type": "scale", "start_scale": "80%", "end_scale": "100%",
-                         "easing": "ease-out", "duration": 0.3}],
-    })
-    # @pharmalpha
-    elements.append({
-        "type": "text", "text": "@pharmalpha",
-        "x": "50%", "y": "72%", "width": "80%",
-        "time": round(t, 2), "duration": slide_dur,
-        "font_family": "Montserrat", "font_weight": "600",
-        "font_size": "6 vmin",
-        "fill_color": "rgba(255,255,255,0.7)",
-        "x_alignment": "50%", "y_alignment": "50%",
-    })
-    t += slide_dur
+    # PAS de slide fin — la facecam CTA EST la fin (loop phrase -> hook)
 
     return {
         "output_format": "mp4", "width": 1080, "height": 1920,
@@ -572,10 +623,10 @@ def render_video(source):
     return None
 
 
-def assemble_video(script, clips, vo_url, vo_text, facecam_url, logo_url):
+def assemble_video(script, clips, vo_url, vo_text, word_timestamps, facecam_url):
     print("[6/7] Assemblage Creatomate...")
     source = build_creatomate_source(script, clips, vo_url, vo_text,
-                                      facecam_url, logo_url)
+                                      word_timestamps, facecam_url)
     with open(OUTPUT_DIR / "creatomate_source.json", "w", encoding="utf-8") as f:
         json.dump(source, f, ensure_ascii=False, indent=2)
 
@@ -657,13 +708,6 @@ def main():
     if not HEYGEN_API_KEY:
         print("[INFO] HeyGen non configure -> pas de facecam CTA")
 
-    # Upload logo for end slide
-    logo_path = ROOT_DIR / "assets" / "logo_pharmalpha.png"
-    logo_url = None
-    if logo_path.exists():
-        logo_url = upload_temp(logo_path)
-        print(f"  Logo uploade : OK")
-
     lsv = load_lsv()
     script = generate_script(lsv)
 
@@ -671,9 +715,9 @@ def main():
         json.dump(script, f, ensure_ascii=False, indent=2)
 
     clips = generate_video_clips(script)
-    vo_path, vo_url, vo_text = generate_voiceover(script)
+    vo_path, vo_url, vo_text, word_timestamps = generate_voiceover(script)
     facecam_url = generate_facecam_cta(script)
-    video_path = assemble_video(script, clips, vo_url, vo_text, facecam_url, logo_url)
+    video_path = assemble_video(script, clips, vo_url, vo_text, word_timestamps, facecam_url)
 
     if video_path:
         slot = save_to_queue(video_path, script)
