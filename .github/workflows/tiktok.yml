@@ -2,8 +2,8 @@ name: TikTok Video Daily
 
 on:
   schedule:
-    - cron: '0 2 * * *'  # 04h00 Paris (heure d'ete) — generation quotidienne
-  workflow_dispatch:  # Lancement manuel possible
+    - cron: '0 2 * * *'  # 04h00 Paris — generation quotidienne
+  workflow_dispatch:  # Lancement manuel
 
 permissions:
   contents: write
@@ -21,15 +21,14 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Install dependencies
-        run: pip install anthropic
-
       - name: Generate TikTok video
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
           ELEVENLABS_VOICE_ID: ${{ secrets.ELEVENLABS_VOICE_ID }}
+          HEYGEN_API_KEY: ${{ secrets.HEYGEN_API_KEY }}
+          HEYGEN_AVATAR_IDS: ${{ secrets.HEYGEN_AVATAR_IDS }}
           CREATOMATE_API_KEY: ${{ secrets.CREATOMATE_API_KEY }}
         run: python scripts/generate_tiktok.py
 
