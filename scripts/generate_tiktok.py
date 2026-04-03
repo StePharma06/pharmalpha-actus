@@ -1,23 +1,14 @@
 #!/usr/bin/env python3
 """
-Pharm'Actus TikTok - Pipeline video quotidien v3
-Transforme le LSV du jour en video TikTok ~65s.
+Pharm'Actus TikTok - Pipeline video v4 (simple & clean)
+Style : VoxTemporis / StoryFrance / CortexRaconte
 
 Structure :
-  Hook anime (5s) -> Facecam intro (3s) -> Story animee (50s) -> Facecam outro (5s)
-  Voix ElevenLabs ininterrompue sur hook + story (55s).
-  Sous-titres mot par mot style TikTok viral.
-  Videos stock Pexels + images DALL-E en Ken Burns.
-
-Pipeline :
-  1. Lire output/latest_lsv.json
-  2. Claude -> script segmente
-  3. DALL-E -> images photorealistes (fallback si pas de video Pexels)
-  4. Pexels -> clips video stock 9:16
-  5. ElevenLabs -> voiceover complet (hook + story, 55s)
-  6. HeyGen -> 2 clips avatar (intro 3s + outro 5s)
-  7. Creatomate -> assemblage final avec sous-titres
-  8. Sauvegarde en queue (publication J+2)
+  Hook (5s) -> "Abonne-toi" (2s) -> Story narree (53s) -> CTA + "Abonne-toi" (5s)
+  Voix ElevenLabs ininterrompue du debut a la fin.
+  Images DALL-E plein ecran avec Ken Burns.
+  Sous-titres mot par mot (blanc + ombre noire, gros, centres).
+  PAS de facecam. PAS de videos stock.
 """
 
 import json
@@ -41,19 +32,15 @@ QUEUE_DIR = ROOT_DIR / "output" / "tiktok" / "queue"
 PUBLISH_DELAY_DAYS = 2
 
 ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
-OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "")
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 ELEVENLABS_API_KEY = os.environ.get("ELEVENLABS_API_KEY", "")
 ELEVENLABS_VOICE_ID = os.environ.get("ELEVENLABS_VOICE_ID", "")
-HEYGEN_API_KEY = os.environ.get("HEYGEN_API_KEY", "")
-HEYGEN_AVATAR_IDS = os.environ.get("HEYGEN_AVATAR_IDS", "")
 CREATOMATE_API_KEY = os.environ.get("CREATOMATE_API_KEY", "")
-PEXELS_API_KEY = os.environ.get("PEXELS_API_KEY", "")
 
 
 # -- Helpers ---------------------------------------------------------------
 
 def api_request(url, data=None, headers=None, method=None):
-    """Generic HTTP request helper."""
     headers = headers or {}
     if data is not None and isinstance(data, dict):
         data = json.dumps(data).encode("utf-8")
@@ -69,7 +56,7 @@ def api_request(url, data=None, headers=None, method=None):
 
 
 def upload_temp(file_path):
-    """Upload file to tmpfiles.org, return direct download URL."""
+    """Upload to tmpfiles.org, return direct download URL."""
     boundary = f"----Boundary{int(time.time())}"
     with open(file_path, "rb") as f:
         file_bytes = f.read()
@@ -79,12 +66,9 @@ def upload_temp(file_path):
         f"Content-Type: application/octet-stream\r\n\r\n"
     ).encode() + file_bytes + f"\r\n--{boundary}--\r\n".encode()
     req = urllib.request.Request(
-        "https://tmpfiles.org/api/v1/upload",
-        data=body,
-        headers={
-            "Content-Type": f"multipart/form-data; boundary={boundary}",
-            "User-Agent": "Mozilla/5.0 PharmaAlpha/1.0",
-        },
+        "https://tmpfiles.org/api/v1/upload", data=body,
+        headers={"Content-Type": f"multipart/form-data; boundary={boundary}",
+                 "User-Agent": "Mozilla/5.0 PharmaAlpha/1.0"},
     )
     with urllib.request.urlopen(req, timeout=120) as resp:
         result = json.loads(resp.read())
@@ -100,16 +84,14 @@ def load_lsv():
         sys.exit(1)
     with open(LSV_INPUT, "r", encoding="utf-8") as f:
         lsv = json.load(f)
-    titre = lsv.get("titre", "")[:60]
-    print(f"[1/8] LSV charge : {titre}...")
+    print(f"[1/5] LSV charge : {lsv.get('titre', '')[:60]}...")
     return lsv
 
 
 # -- Step 2: Claude Script ------------------------------------------------
 
-SCRIPT_PROMPT = """Tu es le directeur creatif de Pharm'Alpha, chaine TikTok "Le Saviez-Vous" pharma/sante.
-Style : HugoDecrypte pour la pharmacie. Ton conversationnel, dynamique, passionnant.
-Format : 65 secondes. Structure HOOK -> FACECAM -> STORY -> OUTRO.
+SCRIPT_PROMPT = """Tu es le narrateur de Pharm'Alpha, chaine TikTok "Le Saviez-Vous" pharma/sante.
+Style : VoxTemporis, StoryFrance, CortexRaconte. Narration captivante, rythme soutenu, ton conversationnel.
 
 ARTICLE DU JOUR :
 TITRE : {titre}
@@ -117,92 +99,56 @@ RESUME : {resume}
 TEXTE COMPLET :
 {full_text}
 
-Cree un script TikTok de 65 secondes avec EXACTEMENT cette structure :
+Cree un script TikTok de 65 secondes. PAS de facecam. Voix off ininterrompue du debut a la fin.
 
-1. HOOK (5s) : accroche choc en voix off sur image/video animee. Le spectateur DOIT rester.
-   La phrase doit etre COMPLETE en 5 secondes (pas coupee au milieu).
+STRUCTURE EXACTE :
+1. HOOK (5s) : phrase d'accroche CHOC qui donne envie de rester. Doit etre COMPLETE en 5 secondes.
+2. [Pause visuelle "Abonne-toi @pharmalpha" pendant 2s — geree par le code, pas dans le texte]
+3. STORY en 5 parties enchainee sans rupture :
+   - part1 (10s) : mise en contexte, pose le decor
+   - part2 (11s) : le fait principal, developpement
+   - part3 (11s) : le twist ou fait surprenant
+   - part4 (11s) : consequence, lien avec aujourd'hui
+   - part5 (10s) : conclusion + "Pharmusez-vous bien !" + "Retrouvez toutes nos actus sur actus point pharmalpha point fr"
+4. [Pause visuelle "Abonne-toi @pharmalpha" pendant 5s — geree par le code]
 
-2. FACECAM INTRO (3s) : Stephen dit juste "Salut c'est Stephen, pharmacien !" — RIEN d'autre.
+REGLES TEXTE :
+- full_voiceover = texte COMPLET et CONTINU hook + story (PAS les pauses "abonne-toi"). ~220 mots pour 58 secondes.
+- Le hook doit ACCROCHER : question rhetorique, fait choquant, mystere. Style conversationnel.
+- titre_tiktok : style conversationnel naturel, pas de majuscules agressives. Ex: "Quand les pharmaciens inventaient le carat avec des graines..."
+- Chaque partie a un "screen_text" court (le fait cle en 6-8 mots max) qui s'affiche en gros
 
-3. STORY (50s) : l'histoire complete en voix off ininterrompue.
-   Decouper en 4 segments pour les visuels, mais le texte voix off est CONTINU.
-   - seg1 (12s) : contexte, mise en situation
-   - seg2 (13s) : developpement, le fait principal
-   - seg3 (13s) : le twist ou fait surprenant
-   - seg4 (12s) : conclusion + "Pharmusez-vous bien !" + "Abonnez-vous a @pharmalpha et retrouvez nos actus sur actus.pharmalpha.fr"
-
-4. FACECAM OUTRO (5s) : phrase loop qui connecte SEAMLESSLY au debut du hook.
-   Quand TikTok relance la video, le spectateur doit continuer a regarder sans s'en rendre compte.
-
-REGLES TITRES / TEXTE :
-- titre_tiktok : style conversationnel, PAS de majuscules agressives. Ex : "Quand on vendait des sirops a l'opium aux bebes..."
-- screen_text : phrases courtes, percutantes, style sous-titre viral
-- Le hook doit donner envie de rester, pas choquer gratuitement
-
-REGLES VISUELS :
-- Chaque segment a un "video_search" (mots-cles EN ANGLAIS pour chercher une video stock Pexels)
-- ET un "image_prompt" en fallback (si pas de video trouvee) : photorealistic, editorial, Canon EOS R5
-- video_search doit etre CONCRET et FILMABLE (pas abstrait) : "pharmacy bottles shelf", "baby sleeping crib", etc.
+REGLES IMAGES (6 images, une par partie + hook) :
+- image_prompt en ANGLAIS
+- Style : photorealistic editorial photography, shot on Canon EOS R5, 85mm, shallow depth of field
+- CONCRET et SPECIFIQUE au sujet (pas generique). Ex: "close-up of carob seeds on antique brass pharmacy scale" pas "pharmacy interior"
+- PAS de texte dans l'image, PAS de style cartoon/IA
 
 Reponds UNIQUEMENT en JSON valide :
 {{
   "hook": {{
-    "voiceover": "Accroche choc, phrase COMPLETE en 5 sec (~20 mots max)",
-    "screen_text": "Texte ecran percutant (max 8 mots)",
-    "video_search": "mots-cles anglais pour video stock Pexels",
-    "image_prompt": "Fallback DALL-E : photorealistic editorial, Canon EOS R5...",
-    "duration": 5
-  }},
-  "facecam_intro": {{
-    "speech": "Salut c'est Stephen, pharmacien !",
-    "duration": 3
+    "voiceover": "Phrase d'accroche complete en 5 sec (~20 mots)",
+    "screen_text": "Fait choc (6-8 mots max)",
+    "image_prompt": "Prompt DALL-E specifique et concret..."
   }},
   "story": {{
-    "full_voiceover": "Texte voix off COMPLET et CONTINU pour les 50s de story (seg1+seg2+seg3+seg4 enchaines). ~170 mots. Rythme soutenu, pas de pause. Se termine par 'Pharmusez-vous bien ! Abonnez-vous a @pharmalpha et retrouvez nos actus sur actus.pharmalpha.fr'",
-    "segments": [
-      {{
-        "id": "seg1",
-        "screen_text": "Sous-titre percutant (max 10 mots)",
-        "video_search": "mots-cles anglais concrets pour Pexels",
-        "image_prompt": "Fallback DALL-E photorealistic...",
-        "duration": 12
-      }},
-      {{
-        "id": "seg2",
-        "screen_text": "Sous-titre percutant (max 10 mots)",
-        "video_search": "mots-cles anglais concrets",
-        "image_prompt": "Fallback DALL-E photorealistic...",
-        "duration": 13
-      }},
-      {{
-        "id": "seg3",
-        "screen_text": "Sous-titre percutant (max 10 mots)",
-        "video_search": "mots-cles anglais concrets",
-        "image_prompt": "Fallback DALL-E photorealistic...",
-        "duration": 13
-      }},
-      {{
-        "id": "seg4",
-        "screen_text": "Pharmusez-vous bien !",
-        "video_search": "mots-cles anglais concrets",
-        "image_prompt": "Fallback DALL-E photorealistic...",
-        "duration": 12
-      }}
+    "full_voiceover": "Texte COMPLET et CONTINU des 5 parties enchainees (~200 mots, 53 sec de parole). Se termine par 'Pharmusez-vous bien ! Retrouvez toutes nos actus sur actus point pharmalpha point fr'",
+    "parts": [
+      {{"id": "part1", "screen_text": "Fait cle (6-8 mots)", "image_prompt": "Prompt DALL-E specifique...", "duration": 10}},
+      {{"id": "part2", "screen_text": "Fait cle (6-8 mots)", "image_prompt": "Prompt DALL-E specifique...", "duration": 11}},
+      {{"id": "part3", "screen_text": "Fait cle (6-8 mots)", "image_prompt": "Prompt DALL-E specifique...", "duration": 11}},
+      {{"id": "part4", "screen_text": "Fait cle (6-8 mots)", "image_prompt": "Prompt DALL-E specifique...", "duration": 11}},
+      {{"id": "part5", "screen_text": "Pharmusez-vous bien !", "image_prompt": "Prompt DALL-E specifique...", "duration": 10}}
     ]
   }},
-  "facecam_outro": {{
-    "speech": "Phrase loop qui connecte seamlessly au debut du hook (5s max)",
-    "duration": 5
-  }},
-  "titre_tiktok": "Titre conversationnel accrocheur (max 80 car, PAS de majuscules agressives)",
+  "titre_tiktok": "Titre conversationnel accrocheur (max 80 car)",
   "description_tiktok": "Description + hashtags (max 300 car)",
-  "hashtags": "#lesaviezvous #pharmalpha #pharmacie #sante",
-  "thumbnail_prompt": "Prompt DALL-E thumbnail impactante, vertical 9:16, photorealistic"
+  "hashtags": "#lesaviezvous #pharmalpha #pharmacie #sante"
 }}"""
 
 
-def generate_tiktok_script(lsv):
-    print("[2/8] Generation du script TikTok via Claude...")
+def generate_script(lsv):
+    print("[2/5] Generation du script via Claude...")
     prompt = SCRIPT_PROMPT.format(
         titre=lsv.get("titre", ""),
         resume=lsv.get("resume", ""),
@@ -210,130 +156,76 @@ def generate_tiktok_script(lsv):
     )
     resp = api_request(
         "https://api.anthropic.com/v1/messages",
-        data={
-            "model": "claude-sonnet-4-20250514",
-            "max_tokens": 2000,
-            "messages": [{"role": "user", "content": prompt}],
-        },
-        headers={
-            "x-api-key": ANTHROPIC_API_KEY,
-            "anthropic-version": "2023-06-01",
-        },
+        data={"model": "claude-sonnet-4-20250514", "max_tokens": 2000,
+              "messages": [{"role": "user", "content": prompt}]},
+        headers={"x-api-key": ANTHROPIC_API_KEY, "anthropic-version": "2023-06-01"},
     )
     text = resp["content"][0]["text"].strip()
-    json_match = re.search(r"\{[\s\S]*\}", text)
-    if not json_match:
-        print("[ERROR] Claude n'a pas retourne de JSON valide")
+    match = re.search(r"\{[\s\S]*\}", text)
+    if not match:
+        print("[ERROR] Pas de JSON valide")
         sys.exit(1)
-    script = json.loads(json_match.group())
-    print(f"  Script genere : {script.get('titre_tiktok', '')[:50]}...")
+    script = json.loads(match.group())
+    print(f"  Script : {script.get('titre_tiktok', '')[:50]}...")
     return script
 
 
-# -- Step 3: DALL-E Images ------------------------------------------------
+# -- Step 3: Gemini Images (nanobanana) ------------------------------------
+
+def generate_gemini_image(prompt, label):
+    """Generate one image via Gemini API. Returns public URL or None."""
+    import base64
+    full_prompt = f"Generate a photorealistic vertical 9:16 image: {prompt}. No text, no watermark, no AI artifacts. Editorial photography quality."
+    data = {
+        "contents": [{"parts": [{"text": full_prompt}]}],
+        "generationConfig": {"responseModalities": ["IMAGE", "TEXT"]},
+    }
+    try:
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key={GEMINI_API_KEY}"
+        resp = api_request(url, data=data)
+        # Extract base64 image from response
+        for part in resp.get("candidates", [{}])[0].get("content", {}).get("parts", []):
+            if "inlineData" in part:
+                img_data = base64.b64decode(part["inlineData"]["data"])
+                mime = part["inlineData"].get("mimeType", "image/png")
+                ext = "png" if "png" in mime else "jpg"
+                img_path = OUTPUT_DIR / f"{label}.{ext}"
+                with open(img_path, "wb") as f:
+                    f.write(img_data)
+                # Upload to tmpfiles for public URL (Creatomate needs URLs)
+                img_url = upload_temp(img_path)
+                return img_url
+        print(f"  [WARN] {label} : pas d'image dans la reponse Gemini")
+        return None
+    except Exception as e:
+        print(f"  [WARN] {label} : {e}")
+        return None
+
 
 def generate_images(script):
-    """Generate DALL-E fallback images. Returns {label: url}."""
-    print("[3/8] Generation des images DALL-E (fallback)...")
+    """Generate images for hook + 5 story parts via Gemini. Returns {label: url}."""
+    print("[3/5] Generation images Gemini (nanobanana)...")
     prompts = [("hook", script.get("hook", {}).get("image_prompt", ""))]
-    for seg in script.get("story", {}).get("segments", []):
-        prompts.append((seg["id"], seg.get("image_prompt", "")))
+    for part in script.get("story", {}).get("parts", []):
+        prompts.append((part["id"], part.get("image_prompt", "")))
     prompts = [(k, v) for k, v in prompts if v]
 
     image_urls = {}
     for label, prompt in prompts:
-        if "photorealistic" not in prompt.lower():
-            prompt = f"Photorealistic editorial photography, {prompt}, natural lighting, shot on Canon EOS R5, no text overlay"
-        try:
-            resp = api_request(
-                "https://api.openai.com/v1/images/generations",
-                data={"model": "dall-e-3", "prompt": prompt, "n": 1,
-                      "size": "1024x1792", "quality": "hd", "style": "natural"},
-                headers={"Authorization": f"Bearer {OPENAI_API_KEY}"},
-            )
-            url = resp["data"][0]["url"]
-            img_path = OUTPUT_DIR / f"{label}.png"
-            urllib.request.urlretrieve(url, str(img_path))
+        url = generate_gemini_image(prompt, label)
+        if url:
             image_urls[label] = url
             print(f"  {label} : OK")
-        except Exception as e:
-            print(f"  [WARN] Image {label} : {e}")
-
-    # Thumbnail
-    thumb_prompt = script.get("thumbnail_prompt", "")
-    if thumb_prompt:
-        try:
-            resp = api_request(
-                "https://api.openai.com/v1/images/generations",
-                data={"model": "dall-e-3", "prompt": thumb_prompt, "n": 1,
-                      "size": "1024x1792", "quality": "hd", "style": "natural"},
-                headers={"Authorization": f"Bearer {OPENAI_API_KEY}"},
-            )
-            urllib.request.urlretrieve(resp["data"][0]["url"], str(OUTPUT_DIR / "thumbnail.png"))
-            print("  thumbnail : OK")
-        except Exception as e:
-            print(f"  [WARN] thumbnail : {e}")
-
+        else:
+            print(f"  {label} : ECHEC")
     return image_urls
 
 
-# -- Step 4: Pexels Videos ------------------------------------------------
-
-def search_pexels_video(query, orientation="portrait"):
-    """Search Pexels for a stock video. Returns URL or None."""
-    if not PEXELS_API_KEY:
-        return None
-    try:
-        encoded = urllib.parse.quote(query)
-        url = f"https://api.pexels.com/videos/search?query={encoded}&orientation={orientation}&size=medium&per_page=5"
-        resp = api_request(url, headers={"Authorization": PEXELS_API_KEY})
-        videos = resp.get("videos", [])
-        for video in videos:
-            for vf in video.get("video_files", []):
-                if vf.get("quality") == "hd" and vf.get("width", 0) <= 1080:
-                    return vf["link"]
-            # Fallback: any file
-            if video.get("video_files"):
-                return video["video_files"][0]["link"]
-    except Exception as e:
-        print(f"    [WARN] Pexels search '{query}' : {e}")
-    return None
-
-
-def fetch_pexels_videos(script):
-    """Fetch stock videos for each segment. Returns {label: url}."""
-    print("[4/8] Recherche videos stock Pexels...")
-    video_urls = {}
-
-    # Hook video
-    hook_search = script.get("hook", {}).get("video_search", "")
-    if hook_search:
-        url = search_pexels_video(hook_search)
-        if url:
-            video_urls["hook"] = url
-            print(f"  hook : OK ({hook_search})")
-        else:
-            print(f"  hook : pas de video, fallback image")
-
-    # Story segments
-    for seg in script.get("story", {}).get("segments", []):
-        search = seg.get("video_search", "")
-        if search:
-            url = search_pexels_video(search)
-            if url:
-                video_urls[seg["id"]] = url
-                print(f"  {seg['id']} : OK ({search})")
-            else:
-                print(f"  {seg['id']} : pas de video, fallback image")
-
-    return video_urls
-
-
-# -- Step 5: ElevenLabs Voiceover -----------------------------------------
+# -- Step 4: ElevenLabs Voiceover -----------------------------------------
 
 def generate_voiceover(script):
-    """Generate single continuous voiceover (hook + story). Returns (path, url)."""
-    print("[5/8] Generation voix off ElevenLabs (continue, 55s)...")
+    """One continuous voiceover: hook + story. Returns (path, url)."""
+    print("[4/5] Generation voix off ElevenLabs...")
 
     hook_text = script.get("hook", {}).get("voiceover", "")
     story_text = script.get("story", {}).get("full_voiceover", "")
@@ -344,312 +236,273 @@ def generate_voiceover(script):
         data={
             "text": full_text,
             "model_id": "eleven_multilingual_v2",
-            "voice_settings": {
-                "stability": 0.5,
-                "similarity_boost": 0.75,
-                "style": 0.3,
-                "use_speaker_boost": True,
-            },
-        },
-        headers={"xi-api-key": ELEVENLABS_API_KEY, "Accept": "audio/mpeg"},
-    )
-
-    audio_path = OUTPUT_DIR / "voiceover.mp3"
-    with open(audio_path, "wb") as f:
-        f.write(audio_bytes)
-    print(f"  Voix off : {len(audio_bytes) / 1024:.0f} KB")
-
-    vo_url = upload_temp(audio_path)
-    print(f"  Uploadee : {vo_url[:50]}...")
-    return audio_path, vo_url, full_text
-
-
-# -- Step 6: HeyGen Avatar Clips ------------------------------------------
-
-def get_today_avatar_id():
-    if not HEYGEN_AVATAR_IDS:
-        return None
-    ids = [x.strip() for x in HEYGEN_AVATAR_IDS.split(",") if x.strip()]
-    return ids[datetime.now().timetuple().tm_yday % len(ids)] if ids else None
-
-
-def generate_heygen_clip(text, label, avatar_id):
-    """Generate HeyGen clip with ElevenLabs pre-generated audio."""
-    print(f"  HeyGen {label} : generation...")
-
-    # Pre-generate speech audio
-    audio_bytes = api_request(
-        f"https://api.elevenlabs.io/v1/text-to-speech/{ELEVENLABS_VOICE_ID}",
-        data={
-            "text": text,
-            "model_id": "eleven_multilingual_v2",
             "voice_settings": {"stability": 0.5, "similarity_boost": 0.75,
                                "style": 0.3, "use_speaker_boost": True},
         },
         headers={"xi-api-key": ELEVENLABS_API_KEY, "Accept": "audio/mpeg"},
     )
-    audio_path = OUTPUT_DIR / f"speech_{label}.mp3"
-    with open(audio_path, "wb") as f:
+
+    path = OUTPUT_DIR / "voiceover.mp3"
+    with open(path, "wb") as f:
         f.write(audio_bytes)
-    audio_url = upload_temp(audio_path)
+    print(f"  Voix off : {len(audio_bytes) / 1024:.0f} KB")
 
-    try:
-        resp = api_request(
-            "https://api.heygen.com/v2/video/generate",
-            data={
-                "video_inputs": [{
-                    "character": {"type": "avatar", "avatar_id": avatar_id, "avatar_style": "normal"},
-                    "voice": {"type": "audio", "audio_url": audio_url},
-                    "background": {"type": "color", "value": "#f0f0f0"},
-                }],
-                "test": False,
-                "dimension": {"width": 1080, "height": 1920},
-            },
-            headers={"X-Api-Key": HEYGEN_API_KEY},
-        )
-        video_id = resp.get("data", {}).get("video_id")
-        if not video_id:
-            print(f"  [WARN] HeyGen {label} : pas de video_id")
-            return None
-
-        for attempt in range(60):
-            time.sleep(5)
-            st = api_request(
-                f"https://api.heygen.com/v1/video_status.get?video_id={video_id}",
-                headers={"X-Api-Key": HEYGEN_API_KEY},
-            )
-            status = st.get("data", {}).get("status", "")
-            if status == "completed":
-                video_url = st["data"]["video_url"]
-                clip_path = OUTPUT_DIR / f"avatar_{label}.mp4"
-                urllib.request.urlretrieve(video_url, str(clip_path))
-                print(f"  HeyGen {label} : OK ({attempt * 5}s)")
-                return video_url
-            elif status == "failed":
-                print(f"  [WARN] HeyGen {label} echoue : {st.get('data', {}).get('error', '')}")
-                return None
-
-        print(f"  [WARN] HeyGen {label} timeout")
-        return None
-    except Exception as e:
-        print(f"  [WARN] HeyGen {label} : {e}")
-        return None
+    url = upload_temp(path)
+    print(f"  Upload : OK")
+    return path, url, full_text
 
 
-def generate_avatar_clips(script):
-    """Generate intro (3s) + outro (5s) avatar clips."""
-    print("[6/8] Generation clips avatar HeyGen (intro + outro)...")
-    avatar_id = get_today_avatar_id()
-    if not avatar_id:
-        print("  [SKIP] Pas d'avatar -> mode 100% anime")
-        return None, None
+# -- Step 5: Creatomate Assembly -------------------------------------------
 
-    intro_text = script.get("facecam_intro", {}).get("speech", "Salut c'est Stephen, pharmacien !")
-    outro_text = script.get("facecam_outro", {}).get("speech", "")
-
-    intro_url = generate_heygen_clip(intro_text, "intro", avatar_id)
-    outro_url = generate_heygen_clip(outro_text, "outro", avatar_id) if outro_text else None
-    return intro_url, outro_url
-
-
-# -- Step 7: Creatomate Assembly -------------------------------------------
-
-def build_subtitle_elements(full_text, start_time, total_duration):
-    """Generate word-by-word subtitle elements for the voiceover."""
-    words = full_text.split()
+def build_subtitle_elements(text, start_time, duration):
+    """Word-by-word subtitles: 3 words at a time, big white text + black shadow."""
+    words = text.split()
     if not words:
         return []
 
-    # Group words into chunks of 3-4 for readability
+    # Group by 3 words
     chunks = []
-    i = 0
-    while i < len(words):
-        chunk_size = 3 if len(words) - i > 4 else len(words) - i
-        chunks.append(" ".join(words[i:i + chunk_size]))
-        i += chunk_size
+    for i in range(0, len(words), 3):
+        chunks.append(" ".join(words[i:i + 3]))
 
-    chunk_duration = total_duration / len(chunks) if chunks else 1
+    chunk_dur = duration / len(chunks) if chunks else 1
     elements = []
 
     for idx, chunk in enumerate(chunks):
-        t = start_time + idx * chunk_duration
+        t = start_time + idx * chunk_dur
         elements.append({
             "type": "text",
-            "text": chunk,
-            "x": "50%", "y": "70%", "width": "90%",
-            "time": t,
-            "duration": chunk_duration,
+            "text": chunk.upper(),
+            "x": "50%",
+            "y": "72%",
+            "width": "90%",
+            "time": round(t, 2),
+            "duration": round(chunk_dur, 2),
             "font_family": "Montserrat",
-            "font_weight": "900",
-            "font_size": "9 vmin",
+            "font_weight": "800",
+            "font_size": "10 vmin",
             "fill_color": "#ffffff",
-            "stroke_color": "#000000",
-            "stroke_width": "2",
+            "shadow_color": "rgba(0,0,0,0.95)",
+            "shadow_blur": "6",
+            "shadow_x": "3",
+            "shadow_y": "3",
             "x_alignment": "50%",
             "y_alignment": "50%",
-            "animations": [{"type": "text-appear", "split": "word", "duration": 0.15}],
         })
 
     return elements
 
 
-def build_creatomate_source(script, image_urls, video_urls, voiceover_url, vo_text,
-                             intro_url, outro_url):
-    """Build Creatomate render source JSON."""
+def build_abonne_toi_element(start_time, duration):
+    """'ABONNE-TOI' popup element."""
+    return [
+        # Dark overlay
+        {
+            "type": "shape",
+            "shape": "rectangle",
+            "fill_color": "rgba(0,0,0,0.5)",
+            "x": "50%", "y": "50%", "width": "100%", "height": "100%",
+            "time": round(start_time, 2),
+            "duration": round(duration, 2),
+        },
+        # Text
+        {
+            "type": "text",
+            "text": "ABONNE-TOI\n@pharmalpha",
+            "x": "50%", "y": "48%", "width": "80%",
+            "time": round(start_time, 2),
+            "duration": round(duration, 2),
+            "font_family": "Montserrat",
+            "font_weight": "900",
+            "font_size": "14 vmin",
+            "fill_color": "#ffffff",
+            "shadow_color": "rgba(0,0,0,0.8)",
+            "shadow_blur": "8",
+            "x_alignment": "50%",
+            "y_alignment": "50%",
+            "line_height": "140%",
+            "animations": [{"type": "scale", "start_scale": "80%", "end_scale": "100%",
+                            "easing": "ease-out", "duration": 0.3}],
+        },
+        # Arrow emoji
+        {
+            "type": "text",
+            "text": "👆",
+            "x": "50%", "y": "62%",
+            "time": round(start_time, 2),
+            "duration": round(duration, 2),
+            "font_size": "12 vmin",
+            "x_alignment": "50%",
+            "y_alignment": "50%",
+        },
+    ]
+
+
+def build_creatomate_source(script, image_urls, voiceover_url, vo_text):
+    """Build the Creatomate render JSON."""
     elements = []
-    t = 0
+    t = 0.0
 
-    hook_dur = script.get("hook", {}).get("duration", 5)
-    intro_dur = script.get("facecam_intro", {}).get("duration", 3)
-    outro_dur = script.get("facecam_outro", {}).get("duration", 5)
-    segments = script.get("story", {}).get("segments", [])
-    story_dur = sum(seg.get("duration", 12) for seg in segments)
+    hook_dur = 5.0
+    abonne1_dur = 2.0
+    parts = script.get("story", {}).get("parts", [])
+    story_dur = sum(p.get("duration", 10) for p in parts)
+    abonne2_dur = 5.0
 
-    # ── 1. HOOK (5s) — animation + voix ElevenLabs ───────────────────────────
-    hook_visual = video_urls.get("hook") or image_urls.get("hook")
-    if hook_visual:
-        media_type = "video" if "hook" in video_urls else "image"
-        el = {
-            "type": media_type, "source": hook_visual,
-            "x": "50%", "y": "50%", "width": "100%", "height": "100%",
-            "time": t, "duration": hook_dur,
-        }
-        if media_type == "image":
-            el["animations"] = [{"type": "scale", "start_scale": "100%", "end_scale": "115%", "easing": "linear"}]
-        elements.append(el)
+    total_vo_dur = hook_dur + story_dur  # voiceover covers hook + story
 
-    # Hook screen text
-    hook_text = script.get("hook", {}).get("screen_text", "")
-    if hook_text:
-        elements.append({
-            "type": "text", "text": hook_text,
-            "x": "50%", "y": "78%", "width": "85%",
-            "time": t, "duration": hook_dur,
-            "font_family": "Montserrat", "font_weight": "900", "font_size": "9 vmin",
-            "fill_color": "#ffffff", "stroke_color": "#000000", "stroke_width": "2",
-            "x_alignment": "50%", "y_alignment": "50%",
-            "animations": [{"type": "text-appear", "split": "word", "duration": 0.2}],
-        })
-
-    # Start voiceover at hook (runs through hook + story)
-    vo_total = hook_dur + story_dur
+    # ── VOICEOVER (continuous, starts at 0, plays during hook + paused during abonne1 + resumes for story) ──
+    # Place hook audio
     elements.append({
         "type": "audio", "source": voiceover_url,
-        "time": t, "duration": vo_total,
+        "time": 0, "duration": hook_dur, "trim_start": 0,
     })
-    t += hook_dur
-
-    # ── 2. FACECAM INTRO (3s) — avatar ───────────────────────────────────────
-    if intro_url:
-        elements.append({
-            "type": "video", "source": intro_url,
-            "x": "50%", "y": "50%", "width": "100%", "height": "100%",
-            "time": t, "duration": intro_dur,
-        })
-    t += intro_dur
-
-    # ── 3. STORY SEGMENTS (50s) — animations + sous-titres ───────────────────
-    # Voiceover continues (started at 0, plays through hook + story)
-    # But voiceover audio was started at t=0 with duration = hook_dur + story_dur
-    # The story portion starts at offset hook_dur in the audio.
-    # Since we already placed the full audio starting at t=0 playing for vo_total,
-    # and the facecam intro is 3s of video overlay without its own audio track,
-    # the voiceover keeps playing underneath the intro facecam too.
-    # We need to PAUSE the voiceover during the facecam intro.
-    # Solution: split voiceover into 2 parts: hook portion + story portion
-
-    # Actually, let's redo the audio: place hook portion, then story portion after intro
-    # Remove the full audio element we just added and replace with split approach
-    elements = [e for e in elements if not (e.get("type") == "audio" and e.get("source") == voiceover_url)]
-
-    # Hook audio (plays during hook)
+    # Place story audio (after abonne1 pause)
     elements.append({
         "type": "audio", "source": voiceover_url,
-        "time": 0, "duration": hook_dur,
-        "trim_start": 0,
-    })
-
-    # Story audio (plays after intro, trimmed to skip hook portion)
-    elements.append({
-        "type": "audio", "source": voiceover_url,
-        "time": t, "duration": story_dur,
+        "time": hook_dur + abonne1_dur, "duration": story_dur,
         "trim_start": hook_dur,
     })
 
-    # Build story subtitles from full_voiceover (story part only)
-    story_text = script.get("story", {}).get("full_voiceover", "")
-    subtitle_elements = build_subtitle_elements(story_text, t, story_dur)
-    elements.extend(subtitle_elements)
-
-    # Segment visuals
-    for seg in segments:
-        seg_id = seg["id"]
-        seg_dur = seg.get("duration", 12)
-
-        visual = video_urls.get(seg_id) or image_urls.get(seg_id)
-        if visual:
-            media_type = "video" if seg_id in video_urls else "image"
-            el = {
-                "type": media_type, "source": visual,
-                "x": "50%", "y": "50%", "width": "100%", "height": "100%",
-                "time": t, "duration": seg_dur,
-            }
-            if media_type == "image":
-                # Alternate Ken Burns direction
-                idx = int(seg_id.replace("seg", "")) if seg_id.startswith("seg") else 1
-                if idx % 2 == 1:
-                    el["animations"] = [{"type": "scale", "start_scale": "110%", "end_scale": "100%", "easing": "linear"}]
-                else:
-                    el["animations"] = [{"type": "scale", "start_scale": "100%", "end_scale": "110%", "easing": "linear"}]
-            elements.append(el)
-
-        t += seg_dur
-
-    # ── 4. FACECAM OUTRO (5s) — loop phrase ──────────────────────────────────
-    if outro_url:
+    # ── 1. HOOK (5s) ─────────────────────────────────────────────────────────
+    hook_img = image_urls.get("hook")
+    if hook_img:
         elements.append({
-            "type": "video", "source": outro_url,
+            "type": "image", "source": hook_img,
             "x": "50%", "y": "50%", "width": "100%", "height": "100%",
-            "time": t, "duration": outro_dur,
+            "time": t, "duration": hook_dur,
+            "animations": [{"type": "scale", "start_scale": "100%", "end_scale": "120%",
+                            "easing": "linear"}],
         })
-    else:
-        # Fallback text
-        outro_text = script.get("facecam_outro", {}).get("speech", "Pharmusez-vous bien !")
-        fallback_img = image_urls.get("seg4") or image_urls.get("seg3") or image_urls.get("hook")
-        if fallback_img:
-            elements.append({
-                "type": "image", "source": fallback_img,
-                "x": "50%", "y": "50%", "width": "100%", "height": "100%",
-                "time": t, "duration": outro_dur,
-                "color_overlay": "rgba(0,0,0,0.4)",
-            })
+
+    # Hook screen text (big, dramatic)
+    hook_text = script.get("hook", {}).get("screen_text", "")
+    if hook_text:
         elements.append({
-            "type": "text", "text": outro_text,
-            "x": "50%", "y": "50%", "width": "80%",
-            "time": t, "duration": outro_dur,
-            "font_family": "Montserrat", "font_weight": "900", "font_size": "7 vmin",
-            "fill_color": "#ffffff", "stroke_color": "#000000", "stroke_width": "1.5",
+            "type": "text", "text": hook_text.upper(),
+            "x": "50%", "y": "72%", "width": "85%",
+            "time": t, "duration": hook_dur,
+            "font_family": "Montserrat", "font_weight": "900", "font_size": "11 vmin",
+            "fill_color": "#ffffff",
+            "shadow_color": "rgba(0,0,0,0.95)", "shadow_blur": "8",
+            "shadow_x": "3", "shadow_y": "3",
             "x_alignment": "50%", "y_alignment": "50%",
+            "animations": [{"type": "text-appear", "split": "word", "duration": 0.25}],
         })
-    t += outro_dur
+
+    # Hook subtitles
+    hook_vo = script.get("hook", {}).get("voiceover", "")
+    elements.extend(build_subtitle_elements(hook_vo, t, hook_dur))
+
+    t += hook_dur
+
+    # ── 2. ABONNE-TOI #1 (2s) ────────────────────────────────────────────────
+    # Keep last hook image as background
+    if hook_img:
+        elements.append({
+            "type": "image", "source": hook_img,
+            "x": "50%", "y": "50%", "width": "120%", "height": "120%",
+            "time": t, "duration": abonne1_dur,
+            "color_filter": "blur(8px)",
+        })
+    elements.extend(build_abonne_toi_element(t, abonne1_dur))
+    t += abonne1_dur
+
+    # ── 3. STORY (5 parts, ~53s) ─────────────────────────────────────────────
+    story_text = script.get("story", {}).get("full_voiceover", "")
+    story_words = story_text.split()
+    total_story_words = len(story_words)
+    word_offset = 0
+
+    for i, part in enumerate(parts):
+        part_dur = part.get("duration", 10)
+        part_id = part["id"]
+
+        # Visual: image with Ken Burns
+        img = image_urls.get(part_id)
+        if img:
+            # Alternate zoom direction
+            if i % 2 == 0:
+                anim = {"type": "scale", "start_scale": "100%", "end_scale": "115%", "easing": "linear"}
+            else:
+                anim = {"type": "scale", "start_scale": "115%", "end_scale": "100%", "easing": "linear"}
+            elements.append({
+                "type": "image", "source": img,
+                "x": "50%", "y": "50%", "width": "100%", "height": "100%",
+                "time": round(t, 2), "duration": part_dur,
+                "animations": [anim],
+            })
+
+        # Screen text (fact overlay at top)
+        screen_text = part.get("screen_text", "")
+        if screen_text and part_id != "part5":
+            elements.append({
+                "type": "text", "text": screen_text.upper(),
+                "x": "50%", "y": "18%", "width": "85%",
+                "time": round(t, 2), "duration": part_dur,
+                "font_family": "Montserrat", "font_weight": "800", "font_size": "6 vmin",
+                "fill_color": "rgba(255,255,255,0.9)",
+                "shadow_color": "rgba(0,0,0,0.7)", "shadow_blur": "4",
+                "x_alignment": "50%", "y_alignment": "50%",
+                "background_color": "rgba(0,0,0,0.35)",
+                "background_x_padding": "5%", "background_y_padding": "3%",
+                "background_border_radius": "8",
+            })
+
+        # Subtitles for this part (proportional word count)
+        part_word_count = int(total_story_words * part_dur / story_dur)
+        if i == len(parts) - 1:
+            part_word_count = total_story_words - word_offset  # last part gets remainder
+        part_words = story_words[word_offset:word_offset + part_word_count]
+        part_text = " ".join(part_words)
+        if part_text:
+            elements.extend(build_subtitle_elements(part_text, t, part_dur))
+        word_offset += part_word_count
+
+        t += part_dur
+
+    # ── 4. ABONNE-TOI #2 + CTA (5s) ──────────────────────────────────────────
+    last_img = image_urls.get("part5") or image_urls.get("part4") or image_urls.get("hook")
+    if last_img:
+        elements.append({
+            "type": "image", "source": last_img,
+            "x": "50%", "y": "50%", "width": "120%", "height": "120%",
+            "time": round(t, 2), "duration": abonne2_dur,
+            "color_filter": "blur(8px)",
+        })
+    elements.extend(build_abonne_toi_element(t, abonne2_dur))
+    # Add actus.pharmalpha.fr below
+    elements.append({
+        "type": "text",
+        "text": "actus.pharmalpha.fr",
+        "x": "50%", "y": "75%", "width": "80%",
+        "time": round(t, 2), "duration": abonne2_dur,
+        "font_family": "Montserrat", "font_weight": "600", "font_size": "5 vmin",
+        "fill_color": "rgba(255,255,255,0.8)",
+        "x_alignment": "50%", "y_alignment": "50%",
+    })
+    t += abonne2_dur
 
     # ── WATERMARK ─────────────────────────────────────────────────────────────
     elements.append({
         "type": "text", "text": "@pharmalpha",
-        "x": "50%", "y": "5%", "time": 0, "duration": t,
+        "x": "50%", "y": "5%", "time": 0, "duration": round(t, 2),
         "font_family": "Montserrat", "font_weight": "700", "font_size": "3.5 vmin",
-        "fill_color": "rgba(255,255,255,0.7)",
+        "fill_color": "rgba(255,255,255,0.6)",
         "x_alignment": "50%",
     })
 
     return {
-        "output_format": "mp4", "width": 1080, "height": 1920,
-        "frame_rate": 30, "duration": t, "elements": elements,
+        "output_format": "mp4",
+        "width": 1080, "height": 1920,
+        "frame_rate": 30,
+        "duration": round(t, 2),
+        "elements": elements,
     }
 
 
 def render_video(source):
-    print("  Lancement du rendu Creatomate...")
+    print("  Rendu Creatomate...")
     resp = api_request(
         "https://api.creatomate.com/v1/renders",
         data={"source": source},
@@ -667,7 +520,7 @@ def render_video(source):
         )
         state = st.get("status", "")
         if state == "succeeded":
-            print("  Rendu termine !")
+            print("  Rendu OK !")
             return st.get("url", "")
         elif state == "failed":
             print(f"  [ERROR] Rendu echoue : {st.get('error_message', '')}")
@@ -677,13 +530,9 @@ def render_video(source):
     return None
 
 
-def assemble_video(script, image_urls, video_urls, voiceover_url, vo_text,
-                    intro_url, outro_url):
-    print("[7/8] Assemblage video Creatomate...")
-    source = build_creatomate_source(
-        script, image_urls, video_urls, voiceover_url, vo_text,
-        intro_url, outro_url,
-    )
+def assemble_video(script, image_urls, vo_url, vo_text):
+    print("[5/5] Assemblage Creatomate...")
+    source = build_creatomate_source(script, image_urls, vo_url, vo_text)
 
     with open(OUTPUT_DIR / "creatomate_source.json", "w", encoding="utf-8") as f:
         json.dump(source, f, ensure_ascii=False, indent=2)
@@ -699,20 +548,20 @@ def assemble_video(script, image_urls, video_urls, voiceover_url, vo_text,
     return video_path
 
 
-# -- Step 8: Save to Queue ------------------------------------------------
+# -- Save to Queue ---------------------------------------------------------
 
 def save_to_queue(video_path, script):
     today = datetime.now().strftime("%Y-%m-%d")
     publish_date = (datetime.now() + timedelta(days=PUBLISH_DELAY_DAYS)).strftime("%Y-%m-%d")
 
-    slot_dir = QUEUE_DIR / today
-    slot_dir.mkdir(parents=True, exist_ok=True)
+    slot = QUEUE_DIR / today
+    slot.mkdir(parents=True, exist_ok=True)
 
-    shutil.copy2(video_path, slot_dir / "video.mp4")
+    shutil.copy2(video_path, slot / "video.mp4")
     for png in OUTPUT_DIR.glob("*.png"):
-        shutil.copy2(png, slot_dir / png.name)
+        shutil.copy2(png, slot / png.name)
 
-    with open(slot_dir / "script.json", "w", encoding="utf-8") as f:
+    with open(slot / "script.json", "w", encoding="utf-8") as f:
         json.dump(script, f, ensure_ascii=False, indent=2)
 
     metadata = {
@@ -724,57 +573,49 @@ def save_to_queue(video_path, script):
         "description": script.get("description_tiktok", ""),
         "hashtags": script.get("hashtags", ""),
     }
-    with open(slot_dir / "metadata.json", "w", encoding="utf-8") as f:
+    with open(slot / "metadata.json", "w", encoding="utf-8") as f:
         json.dump(metadata, f, ensure_ascii=False, indent=2)
 
-    print(f"  Queue : {slot_dir}")
-    print(f"  Publication prevue : {publish_date} a 18h30 Paris")
-    return slot_dir
+    print(f"  Queue : {slot}")
+    print(f"  Publication : {publish_date} a 18h30")
+    return slot
 
 
 # -- Main ------------------------------------------------------------------
 
 def main():
     print("=" * 60)
-    print("PHARM'ACTUS TIKTOK v3 - Generation video")
+    print("PHARM'ACTUS TIKTOK v4 - Simple & Clean")
     print(f"Date : {datetime.now().strftime('%Y-%m-%d %H:%M')}")
     print("=" * 60)
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
     missing = []
-    for key in ["ANTHROPIC_API_KEY", "OPENAI_API_KEY", "ELEVENLABS_API_KEY",
+    for key in ["ANTHROPIC_API_KEY", "GEMINI_API_KEY", "ELEVENLABS_API_KEY",
                  "ELEVENLABS_VOICE_ID", "CREATOMATE_API_KEY"]:
         if not os.environ.get(key):
             missing.append(key)
     if missing:
-        print(f"[ERROR] Cles API manquantes : {', '.join(missing)}")
+        print(f"[ERROR] Cles manquantes : {', '.join(missing)}")
         sys.exit(1)
 
-    if not HEYGEN_API_KEY:
-        print("[INFO] HeyGen non configure -> pas de facecam")
-    if not PEXELS_API_KEY:
-        print("[INFO] Pexels non configure -> images DALL-E uniquement")
-
     lsv = load_lsv()
-    script = generate_tiktok_script(lsv)
+    script = generate_script(lsv)
 
     with open(OUTPUT_DIR / "tiktok_script.json", "w", encoding="utf-8") as f:
         json.dump(script, f, ensure_ascii=False, indent=2)
 
     image_urls = generate_images(script)
-    video_urls = fetch_pexels_videos(script)
     vo_path, vo_url, vo_text = generate_voiceover(script)
-    intro_url, outro_url = generate_avatar_clips(script)
-    video_path = assemble_video(script, image_urls, video_urls, vo_url, vo_text,
-                                 intro_url, outro_url)
+    video_path = assemble_video(script, image_urls, vo_url, vo_text)
 
     if video_path:
         slot = save_to_queue(video_path, script)
         print()
         print("=" * 60)
         print(f"VIDEO EN QUEUE : {slot}")
-        print(f"Publication dans {PUBLISH_DELAY_DAYS} jours a 18h30")
+        print(f"Publication dans {PUBLISH_DELAY_DAYS} jours")
         print("=" * 60)
     else:
         print("\n[ERROR] Pipeline echoue")
