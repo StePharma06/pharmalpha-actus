@@ -186,7 +186,19 @@ def generate_script(lsv):
     if not match:
         print("[ERROR] Pas de JSON valide")
         sys.exit(1)
-    script = json.loads(match.group())
+    raw = match.group()
+    # Parse robustly: find matching closing brace
+    depth = 0
+    end_pos = 0
+    for i, c in enumerate(raw):
+        if c == '{':
+            depth += 1
+        elif c == '}':
+            depth -= 1
+            if depth == 0:
+                end_pos = i + 1
+                break
+    script = json.loads(raw[:end_pos])
     print(f"  Script : {script.get('titre_tiktok', '')[:50]}...")
     return script
 
