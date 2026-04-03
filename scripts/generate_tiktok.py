@@ -131,7 +131,7 @@ STRUCTURE :
    Inclure aussi un CTA : "Commente, partage et abonne-toi !"
 
 REGLES :
-- full_voiceover = hook + story concatenes (~55 secondes, ~190 mots). Rythme soutenu, pas de pause. UNIQUEMENT des caracteres ASCII simples et accents francais standards. PAS de caracteres speciaux, PAS d'emoji, PAS de guillemets typographiques.
+- full_voiceover = hook + story concatenes. EXACTEMENT 150 mots maximum (pas plus !). Rythme soutenu. Avec accents francais corrects (e avec accent, a avec accent, etc). PAS d'emoji, PAS de guillemets typographiques.
 - facecam_cta = phrase courte pour le face camera final (7 sec max)
 - Chaque partie a un "video_prompt" DETAILLE pour generer un clip video IA (Grok Imagine).
   Les prompts doivent etre ULTRA SPECIFIQUES et VISUELS. Decrire une SCENE avec action, mouvement, eclairage.
@@ -266,21 +266,24 @@ def generate_video_clips(script):
 # -- Step 4: ElevenLabs Voiceover -----------------------------------------
 
 def clean_text_for_tts(text):
-    """Clean text for ElevenLabs: remove weird chars, fix encoding."""
+    """Clean text for ElevenLabs: fix encoding issues, keep accents."""
     import unicodedata
-    # Fix double-encoded UTF-8
+    # Fix double-encoded UTF-8 (e.g. Ã© -> é)
     try:
         text = text.encode('latin-1').decode('utf-8')
     except (UnicodeDecodeError, UnicodeEncodeError):
         pass
     # Normalize unicode
     text = unicodedata.normalize('NFC', text)
-    # Replace fancy quotes with simple ones
+    # Replace fancy quotes
     text = text.replace('\u2018', "'").replace('\u2019', "'")
     text = text.replace('\u201c', '"').replace('\u201d', '"')
     text = text.replace('\u00ab', '"').replace('\u00bb', '"')
-    # Remove any remaining non-printable chars
+    # Keep accents! Only remove non-printable chars
     text = ''.join(c for c in text if c.isprintable() or c in '\n\r\t ')
+    # Replace "10eme" type patterns with spoken form
+    import re
+    text = re.sub(r'(\d+)(?:eme|ème)', r'\1ème', text)
     return text.strip()
 
 
@@ -511,41 +514,37 @@ def build_creatomate_source(script, clips, voiceover_url, vo_text,
     story_dur = sum(p.get("duration", 10) for p in parts)
     cta_dur = script.get("facecam_cta", {}).get("duration", 7)
 
-    # Compute actual voiceover duration from timestamps
-    if word_timestamps:
-        vo_actual_dur = word_timestamps[-1]["end"]
-    else:
-        vo_actual_dur = 55.0  # fallback
-
-    # Hook = first 5s of audio, story = rest
+    # Fixed durations — clips are NOT stretched
     hook_dur = 5.0
 
     # Music mood
     mood = script.get("music_mood", "default")
     music_url = MUSIC_TRACKS.get(mood, MUSIC_TRACKS["default"])
 
-    # Total duration (no more slide fin)
-    total_dur = vo_actual_dur + cta_dur
+    # Total visual duration = hook + story clips (at real duration) + facecam
+    total_visual_dur = hook_dur + story_dur + cta_dur
 
     # ── BACKGROUND MUSIC (full duration, low volume) ─────────────────────────
     elements.append({
         "type": "audio", "source": music_url,
-        "time": 0, "duration": round(total_dur, 2),
+        "time": 0, "duration": round(total_visual_dur, 2),
         "volume": "12%",
     })
 
-    # ── VOICEOVER (plays for its actual duration) ────────────────────────────
+    # ── VOICEOVER (plays during hook + story, NOT during facecam) ────────────
+    vo_dur = hook_dur + story_dur
     elements.append({
         "type": "audio", "source": voiceover_url,
-        "time": 0, "duration": round(vo_actual_dur, 2),
+        "time": 0, "duration": round(vo_dur, 2),
         "volume": "100%",
     })
 
-    # ── SUBTITLES (synced to word timestamps) ────────────────────────────────
+    # ── SUBTITLES (synced to word timestamps, capped at vo_dur) ────────────
     if word_timestamps:
-        elements.extend(build_subtitle_elements_from_timestamps(word_timestamps, audio_offset=0))
+        capped = [w for w in word_timestamps if w["start"] < vo_dur]
+        elements.extend(build_subtitle_elements_from_timestamps(capped, audio_offset=0))
     else:
-        elements.extend(build_subtitle_elements_fallback(vo_text, 0, vo_actual_dur))
+        elements.extend(build_subtitle_elements_fallback(vo_text, 0, vo_dur))
 
     # ── 1. HOOK (~5s) — video clip ───────────────────────────────────────────
     if clips.get("hook"):
@@ -557,20 +556,16 @@ def build_creatomate_source(script, clips, voiceover_url, vo_text,
         })
     t += hook_dur
 
-    # ── 2. STORY (5 clips) — durations adjusted to fill until voiceover ends ─
-    remaining_vo = vo_actual_dur - hook_dur
+    # ── 2. STORY (5 clips) — fixed durations, no stretching ────────────────
     for i, part in enumerate(parts):
         part_dur = part.get("duration", 10)
-        # Scale part durations to match actual voiceover
-        if story_dur > 0:
-            part_dur = remaining_vo * (part.get("duration", 10) / story_dur)
         part_id = part["id"]
 
         if clips.get(part_id):
             elements.append({
                 "type": "video", "source": clips[part_id],
                 "x": "50%", "y": "50%", "width": "100%", "height": "100%",
-                "time": round(t, 2), "duration": round(part_dur, 2),
+                "time": round(t, 2), "duration": part_dur,
                 "volume": "0%",
             })
         t += part_dur
@@ -586,9 +581,12 @@ def build_creatomate_source(script, clips, voiceover_url, vo_text,
 
     # PAS de slide fin — la facecam CTA EST la fin (loop phrase -> hook)
 
+    total_dur_final = round(t, 2)
+    print(f"  Timeline : {total_dur_final}s (hook {hook_dur} + story {story_dur} + cta {cta_dur})")
+
     return {
         "output_format": "mp4", "width": 1080, "height": 1920,
-        "frame_rate": 30, "duration": round(t, 2),
+        "frame_rate": 30, "duration": total_dur_final,
         "elements": elements,
     }
 
