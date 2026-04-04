@@ -1,0 +1,45 @@
+{
+  "hook": {
+    "voiceover": "En 1943, ton pharmacien pouvait être l'espion le plus recherché par la Gestapo !",
+    "video_prompt": "Extreme close-up of weathered hands in 1940s clothing carefully hiding a rolled paper inside a medicine bottle, dramatic shadows from venetian blinds, sepia-toned lighting, film noir atmosphere, tension palpable"
+  },
+  "story": {
+    "full_voiceover": "En 1943, ton pharmacien pouvait être l'espion le plus recherché par la Gestapo ! Marcel Taillandier, pharmacien à Lyon, avait transformé son officine en véritable quartier général de la Résistance. Pendant que les Allemands patrouillaient dans les rues, lui organisait la révolution depuis son comptoir. Son génie ? Il utilisait les codes pharmaceutiques pour transmettre des messages secrets. Une ordonnance pour aspirine 500 milligrammes fois douze signifiait en réalité douze parachutistes atterrissent secteur cinq. Mais le plus dingue, c'est qu'il fabriquait de fausses gélules avec des microfilms à l'intérieur ! Les résistants venaient chercher leur traitement et repartaient avec des plans d'installations allemandes. Lui et ses confrères cachaient aussi morphine, sulfamides et antiseptiques pour soigner les blessés du maquis. Le réseau a tenu deux ans avant d'être démantelé. Taillandier, déporté à Dachau, a survécu et exercé jusqu'en 1978. Pharmusez-vous bien !",
+    "parts": [
+      {
+        "id": "part1",
+        "video_prompt": "Wide shot of a 1940s French pharmacy interior with wooden shelves full of medicine bottles, a pharmacist in white coat working behind the counter while German soldiers patrol outside the window, warm amber lighting, cinematic WWII atmosphere",
+        "duration": 10
+      },
+      {
+        "id": "part2",
+        "video_prompt": "Close-up of hands writing a fake prescription with secret codes, fountain pen moving across aged paper, candlelight flickering, mysterious shadows dancing on the paper, underground resistance feeling",
+        "duration": 10
+      },
+      {
+        "id": "part3",
+        "video_prompt": "Macro shot of hands carefully opening medicine capsules and inserting tiny rolled microfilms inside, then reassembling them, precise movements, dramatic side lighting, espionage thriller atmosphere",
+        "duration": 10
+      },
+      {
+        "id": "part4",
+        "video_prompt": "Medium shot of a resistance fighter in beret and dark coat discreetly receiving medicine bottles from the pharmacist across the counter, both looking cautious, dim pharmacy lighting, wartime tension",
+        "duration": 10
+      },
+      {
+        "id": "part5",
+        "video_prompt": "Slow motion shot of the same pharmacy in modern times, sunlight streaming through windows, peaceful atmosphere, then fade to black and white photo of Marcel Taillandier in pharmacist coat, emotional tribute",
+        "duration": 10
+      }
+    ]
+  },
+  "facecam_cta": {
+    "speech": "Commente, partage et abonne-toi ! Et la prochaine fois que tu iras chercher tes médicaments, pense aux héros en blouse blanche qui ont sauvé des vies.",
+    "duration": 7
+  },
+  "music_mood": "mysterious",
+  "titre_tiktok": "Quand les pharmaciens étaient des espions de guerre 🕵️‍♂️💊",
+  "description_tiktok": "L'histoire incroyable des pharmaciens résistants pendant la Seconde Guerre mondiale ! Marcel Taillandier transformait son officine en centre d'espionnage. #lesaviezvous #pharmalpha #pharmacie #histoire #resistance #wwii #sante #medicament #france #culture #anecdote #apprendresurtiktok #fyp #pourtoi",
+  "hashtags": "#lesaviezvous #pharmalpha #pharmacie #sante",
+  "tiktok_caption": "🕵️‍♂️ En 1943, ton pharmacien pouvait être l'espion le plus recherché par la Gestapo !\n\nDécouvre l'histoire incroyable de Marcel Taillandier, pharmacien résistant qui utilisait son officine pour transmettre des messages secrets et cacher des microfilms dans de fausses gélules ! Ces héros en blouse blanche ont risqué leur vie pour sauver la France.\n\nCommente si tu connaissais cette histoire ! 💬\n\n#lesaviezvous #pharmalpha #pharmacie #sante #histoire #resistance #wwii #france #culture #anecdote #medicament #heros #espionnage #seconde guerre mondiale #lyon #gestapo #maquis #apprendresurtiktok #fyp #pourtoi #viral #incroyable #culture generale"
+}
