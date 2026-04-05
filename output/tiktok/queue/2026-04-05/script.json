@@ -1,0 +1,45 @@
+{
+  "hook": {
+    "voiceover": "Saviez-vous que le premier médicament anticancer vient d'un gaz de combat mortel ?",
+    "video_prompt": "Extreme close-up of yellowing chemical warfare shells from WWI arranged in military formation, dramatic shadows, sepia-toned lighting with green toxic smoke wisps curling around the metal, cinematic zoom-out revealing skull warning symbols"
+  },
+  "story": {
+    "full_voiceover": "Saviez-vous que le premier médicament anticancer vient d'un gaz de combat mortel ? Décembre 1943, le port de Bari en Italie. Les Allemands bombardent, et parmi les navires coulés, le SS John Harvey transportait secrètement 2000 bombes à l'ypérite, ce fameux gaz moutarde de 14-18. Le Dr Stewart Alexander arrive sur place et fait une découvation troublante : les marins exposés au gaz voient leurs globules blancs s'effondrer dramatiquement. Mais cette tragédie donne une idée de génie aux pharmacologues Louis Goodman et Alfred Gilman. Si ce poison détruit les globules blancs, pourquoi ne pas l'utiliser contre les leucémies ? Ils modifient la molécule pour créer la mechlorethamine. Premier test en août 1943 : les tumeurs du patient fondent littéralement ! Le plus dingue ? Cette révolution thérapeutique est restée top secret pendant des années à cause du contexte militaire. Les premiers articles scientifiques ne paraîtront qu'en 1946 ! Aujourd'hui, quand tu délivres une chimio, rappelle-toi qu'elle vient d'un gaz de combat observé dans un port bombardé. Pharmusez-vous bien !",
+    "parts": [
+      {
+        "id": "part1",
+        "video_prompt": "Aerial view of Bari harbor at night in 1943, explosions lighting up the dark water, German bombers flying overhead, burning ships creating orange reflections on black water, dramatic war cinematography",
+        "duration": 10
+      },
+      {
+        "id": "part2",
+        "video_prompt": "Close-up of a 1940s doctor in military uniform examining pale, weakened sailors in a makeshift hospital tent, microscope showing depleted white blood cells on screen, harsh medical lighting, documentary style",
+        "duration": 10
+      },
+      {
+        "id": "part3",
+        "video_prompt": "Two men in white lab coats working intensely in a 1940s laboratory, chemical formulas being written on blackboard, glass beakers with bubbling solutions, warm amber lighting through vintage windows",
+        "duration": 10
+      },
+      {
+        "id": "part4",
+        "video_prompt": "Slow-motion injection of clear liquid into patient's arm, followed by dramatic time-lapse visualization of tumor shrinking inside human body, medical breakthrough moment with bright scientific lighting",
+        "duration": 10
+      },
+      {
+        "id": "part5",
+        "video_prompt": "Modern pharmacy interior with pharmacist's hands carefully dispensing chemotherapy medication into sterile bag, professional medical lighting, seamless transition from vintage to contemporary",
+        "duration": 10
+      }
+    ]
+  },
+  "facecam_cta": {
+    "speech": "Commente si tu savais et abonne-toi ! Et la prochaine fois que tu entendras parler de médicament, tu te demanderas d'où il vient vraiment...",
+    "duration": 7
+  },
+  "music_mood": "mysterious",
+  "titre_tiktok": "Quand un gaz de guerre devient le premier anticancéreux 🧪",
+  "description_tiktok": "L'histoire incroyable du premier médicament de chimiothérapie né d'une catastrophe militaire #lesaviezvous #pharmalpha #pharmacie #histoire",
+  "hashtags": "#lesaviezvous #pharmalpha #pharmacie #sante",
+  "tiktok_caption": "🧪 Quand un gaz de guerre devient le premier anticancéreux\n\nL'histoire méconnue de la mechlorethamine, premier médicament de chimiothérapie né d'une tragédie militaire en 1943. Comment des pharmacologues ont transformé un poison mortel en révolution thérapeutique qui sauve encore des vies aujourd'hui.\n\nCommente si tu connaissais cette histoire incroyable !\n\n#fyp #pourtoi #apprendresurtiktok #culture #histoire #pharmacie #pharma #lesaviezvous #pharmalpha #sante #medicament #chimiotherapie #cancer #anecdote #science #medecine #guerremondiale #innovation #decouverte #hopital #soignant #etudiant"
+}
