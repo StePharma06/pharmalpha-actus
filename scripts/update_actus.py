@@ -12,6 +12,9 @@ import urllib.parse
 import urllib.request
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from zoneinfo import ZoneInfo
+
+PARIS_TZ = ZoneInfo("Europe/Paris")
 
 import anthropic
 import feedparser
@@ -95,7 +98,7 @@ def fetch_rss_articles():
                         "link": link,
                         "source": feed_cfg["name"],
                         "categorie": feed_cfg["categorie"],
-                        "date": published.strftime("%Y-%m-%d") if published else datetime.now().strftime("%Y-%m-%d"),
+                        "date": published.strftime("%Y-%m-%d") if published else datetime.now(PARIS_TZ).strftime("%Y-%m-%d"),
                     })
         except Exception as e:
             print(f"  [WARN] Erreur feed {feed_cfg['name']}: {e}")
@@ -109,16 +112,30 @@ def fetch_rss_articles():
 
 # ── CLAUDE : curation des actus (ton Stephen) ───────────────────────
 
-def curate_with_claude(raw_articles):
+def get_existing_source_urls():
+    """Get source_urls already published on the site (to avoid duplicates)."""
+    html = INDEX_HTML.read_text(encoding="utf-8")
+    return set(re.findall(r'source_url:\s*"([^"]+)"', html))
+
+
+def curate_with_claude(raw_articles, existing_urls=None):
     """Select and rewrite the best articles with Stephen's personal tone."""
     client = anthropic.Anthropic()
+
+    # Filtrer en amont les articles deja publies sur le site
+    if existing_urls:
+        before = len(raw_articles)
+        raw_articles = [a for a in raw_articles if a.get("link", "") not in existing_urls]
+        skipped = before - len(raw_articles)
+        if skipped:
+            print(f"  {skipped} articles RSS deja publies, exclus de la curation")
 
     articles_text = "\n\n".join(
         f"[{i+1}] {a['title']}\nSource: {a['source']} | Cat: {a['categorie']} | Date: {a['date']}\nResume: {a['summary']}\nLien: {a['link']}"
         for i, a in enumerate(raw_articles)
     )
 
-    today = datetime.now().strftime("%Y-%m-%d")
+    today = datetime.now(PARIS_TZ).strftime("%Y-%m-%d")
 
     prompt = f"""Tu es Stephen, pharmacien consultant chez Pharm'Alpha et redacteur en chef de Pharm'Actus.
 
@@ -206,7 +223,7 @@ JSON UNIQUEMENT (tableau de 5 objets) :
 def generate_lsv_with_claude(existing_lsv_titles):
     """Generate a daily Le Saviez-Vous about pharmacy/health history."""
     client = anthropic.Anthropic()
-    today = datetime.now().strftime("%Y-%m-%d")
+    today = datetime.now(PARIS_TZ).strftime("%Y-%m-%d")
 
     existing = "\n".join(f"- {t}" for t in existing_lsv_titles) if existing_lsv_titles else "(aucun)"
 
@@ -329,7 +346,7 @@ def get_fallback_photo(categorie):
 
 def newsletter_already_sent_today():
     """Check if newsletter was already sent today."""
-    today = datetime.now().strftime("%Y-%m-%d")
+    today = datetime.now(PARIS_TZ).strftime("%Y-%m-%d")
     if NEWSLETTER_SENT_FILE.exists():
         try:
             data = json.loads(NEWSLETTER_SENT_FILE.read_text(encoding="utf-8"))
@@ -342,10 +359,10 @@ def newsletter_already_sent_today():
 
 def mark_newsletter_sent():
     """Mark newsletter as sent today."""
-    today = datetime.now().strftime("%Y-%m-%d")
+    today = datetime.now(PARIS_TZ).strftime("%Y-%m-%d")
     NEWSLETTER_SENT_FILE.parent.mkdir(exist_ok=True)
     NEWSLETTER_SENT_FILE.write_text(
-        json.dumps({"date": today, "sent_at": datetime.now().isoformat()}),
+        json.dumps({"date": today, "sent_at": datetime.now(PARIS_TZ).isoformat()}),
         encoding="utf-8"
     )
 
@@ -355,7 +372,7 @@ def load_pending_lsv():
     if PENDING_LSV_FILE.exists():
         try:
             lsv = json.loads(PENDING_LSV_FILE.read_text(encoding="utf-8"))
-            lsv["date"] = datetime.now().strftime("%Y-%m-%d")
+            lsv["date"] = datetime.now(PARIS_TZ).strftime("%Y-%m-%d")
             lsv.setdefault("categorie", "lsv")
             lsv.setdefault("badge_label", "Le Saviez-Vous")
             lsv.setdefault("source", "Pharm'Alpha")
@@ -388,7 +405,7 @@ def update_index_html(new_articles):
     existing_ids = set(re.findall(r'id:\s*"([^"]+)"', existing_block))
     existing_urls = set(re.findall(r'source_url:\s*"([^"]+)"', existing_block))
 
-    today = datetime.now().strftime("%Y-%m-%d")
+    today = datetime.now(PARIS_TZ).strftime("%Y-%m-%d")
     ASSETS_DIR.mkdir(exist_ok=True)
 
     new_js_entries = []
@@ -594,7 +611,7 @@ Ecris une intro de 2-3 phrases MAX (pas plus de 40 mots). Regles :
 
 def build_newsletter_html(articles, custom_intro=None):
     """Build newsletter HTML from today's articles."""
-    today = datetime.now()
+    today = datetime.now(PARIS_TZ)
     jours = ["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"]
     mois_noms = ["","janvier","f\u00e9vrier","mars","avril","mai","juin",
                  "juillet","ao\u00fbt","septembre","octobre","novembre","d\u00e9cembre"]
@@ -757,7 +774,7 @@ def send_newsletter(articles):
 
     # Build email
     html_content = build_newsletter_html(articles, custom_intro=custom_intro)
-    today = datetime.now()
+    today = datetime.now(PARIS_TZ)
     jours = ["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"]
     mois_noms = ["","janvier","f\u00e9vrier","mars","avril","mai","juin",
                  "juillet","ao\u00fbt","septembre","octobre","novembre","d\u00e9cembre"]
@@ -805,7 +822,7 @@ def send_newsletter(articles):
 
 def main():
     print("=== Pharm'Actus - Mise a jour quotidienne ===")
-    print(f"  Date: {datetime.now().strftime('%Y-%m-%d %H:%M')}")
+    print(f"  Date: {datetime.now(PARIS_TZ).strftime('%Y-%m-%d %H:%M')}")
 
     # 1. Fetch RSS
     print("\n[1/5] Collecte des flux RSS...")
@@ -815,8 +832,9 @@ def main():
         return
 
     # 2. Curate 5 articles (3 actus + 1 bonne nouvelle + 1 avenir pharma)
-    print(f"\n[2/5] Curation via Claude ({len(raw_articles)} articles)...")
-    curated = curate_with_claude(raw_articles)
+    existing_urls = get_existing_source_urls()
+    print(f"\n[2/5] Curation via Claude ({len(raw_articles)} articles, {len(existing_urls)} deja publies)...")
+    curated = curate_with_claude(raw_articles, existing_urls)
     print(f"  {len(curated)} actus selectionnees")
 
     # 3. Generate 1 Le Saviez-Vous (ou utiliser le LSV en attente)
@@ -849,9 +867,10 @@ def main():
     updated = update_index_html(curated)
 
     if updated:
-        # 5. Send newsletter
-        print("\n[5/5] Envoi newsletter Brevo...")
-        send_newsletter(curated)
+        # 5. Send newsletter (uniquement les articles effectivement ajoutes)
+        added = [a for a in curated if a.get("id")]
+        print(f"\n[5/5] Envoi newsletter Brevo ({len(added)} articles)...")
+        send_newsletter(added)
         print("\n=== Mise a jour terminee avec succes ===")
     else:
         print("\n=== Aucune mise a jour effectuee ===")

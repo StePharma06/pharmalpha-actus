@@ -9,6 +9,10 @@
     {"name": "France Info Sante", "url": "https://www.francetvinfo.fr/sante.rss", "categorie": "sante"},
     {"name": "The Conversation FR Sante", "url": "https://theconversation.com/fr/sante/articles.atom", "categorie": "sante"},
     {"name": "INSERM Actualites", "url": "https://www.inserm.fr/feed/", "categorie": "avenir_pharma"},
-    {"name": "ANSM Actualites", "url": "https://ansm.sante.fr/actualites.rss", "categorie": "avenir_pharma"}
+    {"name": "ANSM Actualites", "url": "https://ansm.sante.fr/actualites.rss", "categorie": "avenir_pharma"},
+    {"name": "Pourquoi Docteur", "url": "https://www.pourquoidocteur.fr/rss.xml", "categorie": "sante"},
+    {"name": "Sciences et Avenir Sante", "url": "https://www.sciencesetavenir.fr/sante/rss.xml", "categorie": "sante"},
+    {"name": "Egora", "url": "https://www.egora.fr/rss.xml", "categorie": "pharma_france"},
+    {"name": "HAS Actualites", "url": "https://www.has-sante.fr/jcms/c_5155/fr/flux-rss", "categorie": "pharma_france"}
   ]
 }
