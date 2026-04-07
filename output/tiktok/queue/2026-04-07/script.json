@@ -1,0 +1,45 @@
+{
+  "hook": {
+    "voiceover": "Saviez-vous qu'un pharmacien a inventé le Coca-Cola comme médicament contre les migraines ?",
+    "video_prompt": "Close-up of a 1886 vintage glass pharmacy bottle labeled 'Coca-Cola Syrup' being carefully placed on a wooden apothecary counter next to old brass scales and medicine bottles, warm sepia lighting, steam rising from the bottle"
+  },
+  "story": {
+    "full_voiceover": "Saviez-vous qu'un pharmacien a inventé le Coca-Cola comme médicament contre les migraines ? En mai 1886, John Pemberton bricolait derrière son comptoir d'Atlanta un nouveau sirop contre la fatigue. Ce brave pharmacien mélangeait des extraits de feuilles de coca et de noix de kola dans un chaudron en cuivre. L'objectif était révolutionnaire : créer le tonique médical du siècle ! Son comptable Frank Robinson trouve le nom Coca-Cola et dessine à la main le logo qu'on connaît encore aujourd'hui. Le sirop se vendait 5 cents le verre à la fontaine de Jacob's Pharmacy. Mais voilà le twist incroyable : Pemberton était morphinomane depuis la guerre et son Coca contenait 9 milligrammes de cocaïne par verre ! Pas étonnant que les clients en redemandent sans cesse. Il vend sa formule en 1887 pour 2300 dollars et meurt dans la misère, sans savoir que sa petite préparation deviendrait un empire de 180 milliards. Pharmusez-vous bien !",
+    "parts": [
+      {
+        "id": "part1",
+        "video_prompt": "Medium shot of John Pemberton in white pharmacist coat working behind a 1886 wooden pharmacy counter, mixing ingredients in a large copper kettle with steam rising, vintage apothecary bottles surrounding him, warm golden hour lighting",
+        "duration": 10
+      },
+      {
+        "id": "part2",
+        "video_prompt": "Extreme close-up of hands carefully pouring dark coca leaf extract and kola nut powder into a bubbling copper cauldron, ingredients swirling together, dramatic steam effects, candlelit pharmacy ambiance",
+        "duration": 10
+      },
+      {
+        "id": "part3",
+        "video_prompt": "Close-up of Frank Robinson's hands drawing the iconic Coca-Cola script logo with a vintage fountain pen on aged parchment paper, ink flowing smoothly, old accounting books and receipts scattered around the desk",
+        "duration": 10
+      },
+      {
+        "id": "part4",
+        "video_prompt": "Dramatic reveal shot of a small glass vial with white cocaine powder next to a Coca-Cola glass, morphine bottle in background, dark moody lighting with single candle flame, shadows dancing on pharmacy walls",
+        "duration": 10
+      },
+      {
+        "id": "part5",
+        "video_prompt": "Wide cinematic shot of modern Coca-Cola factory assembly line with thousands of bottles moving rapidly on conveyor belts, bright industrial lighting contrasting with fade-in overlay of old Pemberton's humble pharmacy",
+        "duration": 10
+      }
+    ]
+  },
+  "facecam_cta": {
+    "speech": "Commente si tu savais et abonne-toi pour plus d'histoires ! Et la prochaine fois que tu verras un médicament dans ton officine, tu te demanderas peut-être quelle invention il cache...",
+    "duration": 7
+  },
+  "music_mood": "mysterious",
+  "titre_tiktok": "Ce pharmacien a inventé le Coca-Cola par accident en cherchant un anti-migraine",
+  "description_tiktok": "L'histoire fascinante de John Pemberton, le pharmacien qui a créé la boisson la plus célèbre au monde dans son officine ! De la cocaïne au empire milliardaire... #lesaviezvous #pharmalpha #pharmacie #histoire",
+  "hashtags": "#lesaviezvous #pharmalpha #pharmacie #sante",
+  "tiktok_caption": "🥤 Ce pharmacien a inventé le Coca-Cola comme médicament contre les migraines !\n\nEn 1886, John Pemberton créait un sirop médical dans son officine d'Atlanta. Il ne savait pas qu'il inventait la boisson la plus célèbre au monde ! L'histoire cachée derrière ce breuvage révolutionnaire va te surprendre...\n\nCommente si tu savais cette anecdote incroyable !\n\n#fyp #pourtoi #apprendresurtiktok #culture #histoire #pharmacie #pharma #lesaviezvous #pharmalpha #sante #medicament #anecdote #cocacola #invention #atlanta #curiosite #savoirplus #educatif #storytime #incroyable"
+}
