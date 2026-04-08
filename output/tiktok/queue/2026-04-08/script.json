@@ -1,0 +1,45 @@
+{
+  "hook": {
+    "voiceover": "En 1898, les pharmaciens vendaient de l'héroïne en sirop pour soigner la toux des bébés !",
+    "video_prompt": "Close-up of an ornate 1898 glass medicine bottle labeled 'Bayer Heroin' being placed on a vintage pharmacy counter, warm amber lighting filtering through old apothecary windows, dust particles floating in golden sunbeams, cinematic slow motion"
+  },
+  "story": {
+    "full_voiceover": "En 1898, les pharmaciens vendaient de l'héroïne en sirop pour soigner la toux des bébés ! Cette année-là, Bayer lance avec fanfare leur nouveau médicament révolutionnaire : l'héroïne ! Heinrich Dreser, leur pharmacologue vedette, vient de synthétiser cette molécule qu'il présente comme héroïque. Les pharmaciens du monde entier se mettent à vendre ce sirop miracle contre la toux, les bronchites et même les douleurs dentaires des nourrissons. Bayer en produit une tonne par an ! Le marketing promet : plus efficace que la morphine, sans accoutumance. Mais voici le twist hallucinant : Bayer commercialise l'héroïne ET l'aspirine la même année, mais ils sont plus méfiants envers l'aspirine qu'ils jugent trop toxique ! Pendant douze ans, les mères donnent consciencieusement leur cuillère d'héroïne Bayer aux petits qui toussent, créant des générations de dépendants sans le savoir. Pharmusez-vous bien !",
+    "parts": [
+      {
+        "id": "part1",
+        "video_prompt": "Wide shot of Bayer pharmaceutical laboratory in 1898, scientists in white coats working with glass apparatus and chemical formulas on blackboards, steam rising from beakers, vintage sepia tones, bustling activity",
+        "duration": 10
+      },
+      {
+        "id": "part2",
+        "video_prompt": "Tracking shot along vintage pharmacy shelves lined with identical Bayer Heroin bottles, ornate labels gleaming under gaslight, a pharmacist's hands carefully selecting bottles, rich mahogany wood textures, golden hour lighting",
+        "duration": 10
+      },
+      {
+        "id": "part3",
+        "video_prompt": "Extreme close-up of a silver spoon being filled with dark heroin syrup from an elegant glass bottle, liquid slowly dripping, soft focus background showing vintage medicine advertisements on wallpaper, warm candlelit atmosphere",
+        "duration": 10
+      },
+      {
+        "id": "part4",
+        "video_prompt": "Split screen composition showing two medicine bottles side by side - Bayer Heroin and Bayer Aspirin - with dramatic lighting emphasizing the contrast, old newspaper headlines about miracle cures floating in background, sepia to color transition",
+        "duration": 10
+      },
+      {
+        "id": "part5",
+        "video_prompt": "Slow motion sequence of a mother's silhouette giving medicine to a child by a window, sunlight streaming through lace curtains creating shadow patterns, nostalgic and melancholic mood, vintage family portrait aesthetic",
+        "duration": 10
+      }
+    ]
+  },
+  "facecam_cta": {
+    "speech": "Commente si ça t'a choqué et abonne-toi ! Et la prochaine fois que tu regarderas un sirop en pharmacie, repense à cette histoire !",
+    "duration": 7
+  },
+  "music_mood": "mysterious",
+  "titre_tiktok": "Quand Bayer vendait de l'héroïne comme sirop pour enfants en 1898",
+  "description_tiktok": "L'histoire vraie des pharmaciens qui vendaient de l'héroïne Bayer en toute légalité ! Une époque où on craignait plus l'aspirine que l'héroïne... #lesaviezvous #pharmalpha #pharmacie #histoire",
+  "hashtags": "#lesaviezvous #pharmalpha #pharmacie #sante #histoire #medicament #bayer #heroine #aspirine #anecdote #culture #apprendresurtiktok #fyp #pourtoi",
+  "tiktok_caption": "🤯 En 1898, les pharmaciens vendaient de l'héroïne comme sirop pour bébés !\n\nCette histoire vraie va te choquer : Bayer commercialisait l'héroïne en pharmacie comme remède miracle contre la toux des enfants, pendant qu'ils se méfiaient de... l'aspirine ! Pendant 12 ans, les parents ont donné de l'héroïne à leurs enfants en toute bonne foi.\n\nCommente si cette anecdote t'a surpris ! 👇\n\n#fyp #pourtoi #lesaviezvous #pharmalpha #pharmacie #histoire #sante #medicament #bayer #heroine #aspirine #anecdote #culture #apprendresurtiktok #wtf #choc #incroyable #vintage #medical #drogues"
+}
