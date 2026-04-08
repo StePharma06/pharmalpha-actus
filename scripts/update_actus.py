@@ -160,10 +160,16 @@ Pharmaciens d'officine en France (PAS le grand public)
 
 Selectionne et redige EXACTEMENT 5 articles dans ces 5 categories :
 
-**[1-2-3] ACTUS DU JOUR** (3 articles) — Les plus percutants pour les pharmaciens officinaux
+**[1] PHARMA MONDE** (1 article OBLIGATOIRE) — Actu internationale pharma/sante
+- Source etrangere UNIQUEMENT (Reuters, STAT News, Pharmaceutical Journal, Fierce Pharma, European Pharmaceutical Review, Pharmacy Times, Nature Medicine, BioPharma Dive, etc.)
+- Traduis et adapte en francais avec le style Stephen. Explique l'impact pour un pharmacien francais.
+- categorie : "pharma_monde"
+- badge_label : "Pharma Monde"
+
+**[2-3] ACTUS DU JOUR** (2 articles) — Les plus percutants pour les pharmaciens officinaux
 - Impact direct sur l'exercice : reglementation, marges, missions, approvisionnement, reglementaire (LFSS, ROSP), sante publique
-- categorie : "pharma_france" | "pharma_monde" | "sante"
-- badge_label : "Pharma France" | "Pharma Monde" | "Sante"
+- categorie : "pharma_france" | "sante"
+- badge_label : "Pharma France" | "Sante"
 
 **[4] LA BONNE NOUVELLE** (1 article) — Une info positive, encourageante pour la profession
 - Avancee pour les patients ou les pharmaciens, nouveau service valorise, remboursement obtenu, etude rassurante, innovation utile
@@ -177,7 +183,10 @@ Selectionne et redige EXACTEMENT 5 articles dans ces 5 categories :
 - categorie : "avenir_pharma"
 - badge_label : "L'avenir de la pharma"
 
-REGLE ABSOLUE : maximum 1 article par source. Varier les sources (Moniteur, Quotidien du Pharmacien, VIDAL, Le Monde, France Info, INSERM, etc.).
+REGLES DE SOURCES :
+1. Maximum 1 article par source (media). JAMAIS 2 articles du meme media.
+2. ALTERNER les sources d'un jour a l'autre. Le Moniteur et Le Quotidien du Pharmacien sont des references, mais ne les utilise pas TOUS les jours. Alterne avec : Egora, HAS, Ordre des Pharmaciens, LEEM, Le Pharmacien de France, VIDAL, Sciences et Avenir, Pourquoi Docteur, APMnews, The Conversation, etc.
+3. Pour Pharma Monde : UNIQUEMENT des sources etrangeres (Reuters, STAT News, Pharmaceutical Journal, Fierce Pharma, European Pharmaceutical Review, Pharmacy Times, Nature Medicine, BioPharma Dive). Traduis en francais.
 
 Pour chaque article, genere :
 - "titre" : accrocheur, max 80 car, style direct de Stephen
