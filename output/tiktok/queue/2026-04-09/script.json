@@ -1,0 +1,45 @@
+{
+  "hook": {
+    "voiceover": "Saviez-vous qu'au XIXe siècle, les pharmaciens étaient officiellement des distillateurs d'alcool ?",
+    "video_prompt": "Extreme close-up of crystal clear alcohol drops falling from a copper alambic spout into a glass measuring beaker, golden candlelight reflecting on the copper surface, steam rising, cinematic macro shot with shallow depth of field"
+  },
+  "story": {
+    "full_voiceover": "Saviez-vous qu'au XIXe siècle, les pharmaciens étaient officiellement des distillateurs d'alcool ? En 1816, ils obtiennent le monopole royal de la distillation d'alcool médical en France. Dans chaque arrière-boutique trônait un magnifique alambic en cuivre, à côté des mortiers et piluliers. Le pharmacien, blouse blanche et barbe fournie, surveillait sa précieuse distillation d'esprit-de-vin à 95 degrés, indispensable pour ses teintures et extraits magistraux. Mais attention, certains pharmaciens peu scrupuleux détournaient discrètement une partie de leur production vers les cafés du quartier ! L'alcool médical finissait dans les verres des bistrotiers, créant un juteux business parallèle. Évidemment, l'administration des Contributions indirectes découvre le pot aux roses en 1872. Fini la récréation ! L'État reprend le contrôle avec des taxes prohibitives et une surveillance étroite des officines. Aujourd'hui, quand tu commandes ton alcool Cooper à 70 degrés, rappelle-toi que tes confrères le fabriquaient eux-mêmes. Pharmusez-vous bien !",
+    "parts": [
+      {
+        "id": "part1",
+        "video_prompt": "Wide shot of a 19th century French pharmacy interior with wooden shelves full of glass bottles, a pharmacist in white coat examining an official royal document with golden seal, warm oil lamp lighting, period authentic details",
+        "duration": 10
+      },
+      {
+        "id": "part2",
+        "video_prompt": "Medium shot of an ornate copper alambic steaming in a pharmacy backroom, surrounded by mortars, pill bottles and dried herbs hanging from ceiling, a bearded pharmacist in white coat monitoring the distillation process, golden hour lighting",
+        "duration": 10
+      },
+      {
+        "id": "part3",
+        "video_prompt": "Close-up of clear high-proof alcohol being carefully poured into small amber glass bottles with handwritten medical labels, steam visible, precise measuring tools on wooden counter, warm candlelight creating dramatic shadows",
+        "duration": 10
+      },
+      {
+        "id": "part4",
+        "video_prompt": "Sneaky low-angle shot of hands secretly transferring bottles of clear alcohol from pharmacy storage to a wooden crate, then cut to the same bottles being served in a dim 19th century bistro, mysterious lighting with shadows",
+        "duration": 10
+      },
+      {
+        "id": "part5",
+        "video_prompt": "Modern pharmacy interior with contemporary Cooper alcohol bottles on clean white shelves, smooth camera movement transitioning from old sepia-toned pharmacy scene to bright modern lighting, professional medical environment",
+        "duration": 10
+      }
+    ]
+  },
+  "facecam_cta": {
+    "speech": "Commente si tu savais, abonne-toi pour plus d'anecdotes ! Et la prochaine fois que tu verras de l'alcool médical, tu sauras d'où ça vient !",
+    "duration": 7
+  },
+  "music_mood": "mysterious",
+  "titre_tiktok": "Quand les pharmaciens étaient des distillateurs secrets 🧪",
+  "description_tiktok": "L'histoire méconnue du monopole pharmaceutique sur l'alcool ! Entre médecine et contrebande... #lesaviezvous #pharmalpha #pharmacie #histoire",
+  "hashtags": "#lesaviezvous #pharmalpha #pharmacie #sante",
+  "tiktok_caption": "🧪 Quand les pharmaciens étaient des distillateurs secrets d'alcool !\n\nEn 1816, nos confrères avaient le monopole royal de la distillation d'alcool médical. Mais certains en profitaient pour alimenter discrètement les bistros du coin ! Une époque où être pharmacien rimait avec chimiste... et parfois contrebandier 😅\n\nCommente si tu savais ! Tag un pote pharmacien 👇\n\n#fyp #pourtoi #apprendresurtiktok #culture #histoire #pharmacie #pharma #lesaviezvous #pharmalpha #sante #medicament #anecdote #alcool #distillation #france #heritage #professiondesante #officine #mysterieux #business #monopole"
+}
