@@ -645,21 +645,26 @@ def build_newsletter_html(articles, custom_intro=None):
         "avenir_pharma": ("#eef2ff", "#4f46e5"),
     }
 
+    def article_url(article):
+        aid = article.get("id", "")
+        return f"https://actus.pharmalpha.fr/articles/{aid}.html" if aid else "https://actus.pharmalpha.fr/"
+
     articles_html = ""
     for i, a in enumerate(actus):
         bg, fg = badge_colors.get(a.get("categorie", ""), ("#fff7ed", "#f97316"))
         pad = "24px" if i == 0 else "20px"
         email_img = a.get("email_image_url") or a.get("image_url", "")
         img_html = ""
+        art_url = article_url(a)
         if email_img:
             full_url = email_img if email_img.startswith("http") else f"https://actus.pharmalpha.fr/{email_img}"
-            img_html = f'<tr><td style="padding-top:12px;"><img src="{full_url}" alt="" width="536" style="width:100%;max-width:536px;height:auto;border-radius:8px;display:block;" /></td></tr>'
+            img_html = f'<tr><td style="padding-top:12px;"><a href="{art_url}"><img src="{full_url}" alt="" width="536" style="width:100%;max-width:536px;height:auto;border-radius:8px;display:block;border:0;" /></a></td></tr>'
         articles_html += f'''
   <tr><td style="padding:{pad} 32px 0;">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
       <tr><td><span style="display:inline-block;background:{bg};color:{fg};font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.4px;">{a.get("badge_label","")}</span></td></tr>
       {img_html}
-      <tr><td style="padding-top:10px;"><a href="https://actus.pharmalpha.fr/" style="font-size:18px;font-weight:700;color:#1a1a1a;text-decoration:none;line-height:1.35;">{a.get("titre","")}</a></td></tr>
+      <tr><td style="padding-top:10px;"><a href="{art_url}" style="font-size:18px;font-weight:700;color:#1a1a1a;text-decoration:none;line-height:1.35;">{a.get("titre","")}</a></td></tr>
       <tr><td style="padding-top:8px;"><p style="margin:0;font-size:14px;color:#555;line-height:1.6;">{a.get("resume","")}</p></td></tr>
       <tr><td style="padding-top:10px;"><span style="font-size:12px;color:#888;">Source : {a.get("source","")}</span></td></tr>
     </table>
@@ -667,6 +672,7 @@ def build_newsletter_html(articles, custom_intro=None):
   <tr><td style="padding:20px 32px 0;"><div style="border-top:1px solid #f0f0f0;"></div></td></tr>'''
 
     if lsv:
+        lsv_url = article_url(lsv)
         articles_html += f'''
   <tr><td style="padding:24px 32px 0;"><div style="border-top:2px solid #7c3aed;"></div></td></tr>
   <tr><td style="padding:20px 32px 0;">
@@ -674,7 +680,7 @@ def build_newsletter_html(articles, custom_intro=None):
       <tr><td style="padding:20px 24px;">
         <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
           <tr><td><span style="display:inline-block;background:#ede9fe;color:#7c3aed;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.4px;">Le Saviez-Vous</span></td></tr>
-          <tr><td style="padding-top:12px;"><a href="https://actus.pharmalpha.fr/" style="font-size:18px;font-weight:700;color:#1a1a1a;text-decoration:none;line-height:1.35;">{lsv.get("titre","")}</a></td></tr>
+          <tr><td style="padding-top:12px;"><a href="{lsv_url}" style="font-size:18px;font-weight:700;color:#1a1a1a;text-decoration:none;line-height:1.35;">{lsv.get("titre","")}</a></td></tr>
           <tr><td style="padding-top:8px;"><p style="margin:0;font-size:14px;color:#555;line-height:1.6;">{lsv.get("resume","")}</p></td></tr>
         </table>
       </td></tr>

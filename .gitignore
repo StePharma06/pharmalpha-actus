@@ -1,7 +1,7 @@
-# TikTok pipeline temp files (pas la queue qui est committee)
-output/tiktok/*.json
-output/tiktok/*.mp3
-output/tiktok/*.mp4
-output/tiktok/*.png
+# TikTok pipeline temp files
+output/tiktok/
 __pycache__/
 *.pyc
+
+# Dashboard analytics (prive, ne pas publier sur le site)
+dashboard/
