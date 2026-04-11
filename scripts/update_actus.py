@@ -186,10 +186,16 @@ Selectionne et redige EXACTEMENT 4 articles dans ces 4 categories (1 article par
 
 NE PAS generer d'article categorie "sante" (cette categorie est desactivee). NE PAS generer d'article "business" (genere separement en format analytique long).
 
-REGLES DE SOURCES :
-1. Maximum 1 article par source (media). JAMAIS 2 articles du meme media.
-2. ALTERNER les sources d'un jour a l'autre. Le Moniteur et Le Quotidien du Pharmacien sont des references, mais ne les utilise pas TOUS les jours. Alterne avec : Egora, HAS, Ordre des Pharmaciens, LEEM, Le Pharmacien de France, VIDAL, Sciences et Avenir, Pourquoi Docteur, APMnews, The Conversation, etc.
-3. Pour Pharma Monde : UNIQUEMENT des sources etrangeres (Reuters, STAT News, Pharmaceutical Journal, Fierce Pharma, European Pharmaceutical Review, Pharmacy Times, Nature Medicine, BioPharma Dive). Traduis en francais.
+REGLES DE SOURCES (STRICTES) :
+1. REGLE ABSOLUE : JAMAIS 2 articles du meme media dans une meme journee. 1 seul Moniteur max, 1 seul Quotidien du Pharmacien max, etc. Si Pharma France choisit Moniteur, aucune autre categorie ne peut piocher dans Moniteur.
+2. ALTERNANCE OBLIGATOIRE : Le Moniteur et Le Quotidien du Pharmacien sont des references mais NE DOIVENT PAS etre utilises TOUS les jours. Sur une semaine, varie au maximum. Alterne avec : Egora, HAS, Ordre des Pharmaciens, LEEM, Le Pharmacien de France, VIDAL, Sciences et Avenir, Pourquoi Docteur, APMnews, The Conversation, INSERM, ANSM, Medscape FR, etc.
+3. Pour Pharma Monde : UNIQUEMENT des sources ETRANGERES (Reuters, STAT News, Pharmaceutical Journal, Fierce Pharma, European Pharmaceutical Review, Pharmacy Times, Nature Medicine, BioPharma Dive). Traduis en francais. Si aucune actu internationale claire dans les articles fournis, prends quand meme un article etranger et adapte-le au contexte francais.
+
+=== IMPORTANCE DIFFERENCIANTE ===
+Pharma Monde et Business Officine sont les 2 rubriques qui DIFFERENCIENT Pharm'Actus des autres newsletters pharma (qui se contentent de relayer Moniteur/Quotidien).
+- Pharma Monde : NE DOIS JAMAIS etre loupee. C'est ce qui fait qu'un pharmacien francais va lire Pharm'Actus au lieu d'aller directement sur Moniteur.
+- Business Officine est genere separement en format long et doit avoir le meme niveau d'exigence.
+Donc : donne-toi a fond sur Pharma Monde. Pas d'article pharma monde faible ou evasif.
 
 Pour chaque article, genere :
 - "titre" : accrocheur, max 80 car, style direct de Stephen
@@ -317,13 +323,28 @@ BUSINESS_PRIORITY_SOURCES = {
 }
 
 
-def generate_business_article(raw_articles, existing_urls=None):
-    """Generate a daily Business Officine analytical article (long format)."""
-    client = anthropic.Anthropic()
+def generate_business_article(raw_articles, existing_urls=None, used_sources=None):
+    """Generate a daily Business Officine analytical article (long format).
 
-    # Filter existing urls
+    used_sources : list of source names already used TODAY by curate_with_claude.
+    The business article must NOT pick from these sources (enforce source alternation).
+    """
+    client = anthropic.Anthropic()
+    used_sources = set(used_sources or [])
+
+    # Filter out already-published URLs
     if existing_urls:
         raw_articles = [a for a in raw_articles if a.get("link", "") not in existing_urls]
+
+    # Filter out articles from sources already used today
+    if used_sources:
+        before = len(raw_articles)
+        raw_articles = [a for a in raw_articles if a.get("source", "") not in used_sources]
+        print(f"  {before - len(raw_articles)} articles exclus (sources deja utilisees aujourd'hui : {', '.join(used_sources)})")
+
+    if not raw_articles:
+        print("  [WARN] Aucun article business disponible apres filtrage des sources")
+        return None
 
     # Prioritize business sources for the curation
     prioritized = sorted(raw_articles, key=lambda a: a.get("source", "") not in BUSINESS_PRIORITY_SOURCES)
@@ -338,9 +359,17 @@ def generate_business_article(raw_articles, existing_urls=None):
     today = datetime.now(PARIS_TZ).strftime("%Y-%m-%d")
     week_start = (datetime.now(PARIS_TZ) - timedelta(days=7)).strftime("%Y-%m-%d")
 
+    used_sources_text = ""
+    if used_sources:
+        used_sources_text = (
+            f"\n\n=== SOURCES DEJA UTILISEES AUJOURD'HUI (NE PAS reutiliser) ===\n"
+            f"Les autres categories ont deja pris des articles dans : {', '.join(used_sources)}.\n"
+            f"REGLE ABSOLUE : ne choisis AUCUN article provenant de ces sources. Pioche dans un autre media.\n"
+        )
+
     prompt = f"""Tu es Stephen ROBERT, pharmacien consultant chez Pharm'Alpha et redacteur en chef de Pharm'Actus.
 
-Tu rediges un article analytique quotidien "BUSINESS OFFICINE" publie chaque matin sur Pharm'Actus.
+Tu rediges un article analytique quotidien "BUSINESS OFFICINE" publie chaque matin sur Pharm'Actus.{used_sources_text}
 
 === OBJECTIF DE LA RUBRIQUE ===
 Donner aux pharmaciens titulaires une lecture BUSINESS claire d'une actu de la semaine :
@@ -364,6 +393,12 @@ Donner aux pharmaciens titulaires une lecture BUSINESS claire d'une actu de la s
 3. Qui touche la RENTABILITE, les MARGES, les MISSIONS, la REGLEMENTATION, ou le MARCHE
 4. Idealement different des sujets traites dans les 4 autres categories du jour
 5. EVITER un sujet deja traite les jours precedents (l'article doit etre original)
+
+=== IMPORTANCE STRATEGIQUE ===
+Business Officine est l'une des 2 RUBRIQUES DIFFERENCIANTES de Pharm'Actus (avec Pharma Monde).
+C'est CE qui fait que les pharmaciens s'abonnent et partagent. Il NE DOIT JAMAIS etre loupe.
+Si aucun angle business evident n'emerge de l'actu, extrais la dimension business d'un sujet reglementaire, economique ou structurel.
+Donne-toi a fond sur cet article : chiffres precis, comparaisons, ton consultant.
 
 === ARTICLES DISPONIBLES ({week_start} → {today}) ===
 {articles_text}
@@ -1103,10 +1138,15 @@ def main():
     curated = curate_with_claude(raw_articles, existing_urls)
     print(f"  {len(curated)} articles selectionnes (hors business et LSV)")
 
+    # Extraire les sources deja utilisees pour eviter doublons dans business
+    used_sources_today = [a.get("source", "") for a in curated if a.get("source")]
+    if used_sources_today:
+        print(f"  Sources utilisees aujourd'hui : {', '.join(used_sources_today)}")
+
     # 3. Generate Business Officine analytical article (separate long-format call)
     print("\n[3/6] Generation de l'article Business Officine...")
     try:
-        business = generate_business_article(raw_articles, existing_urls)
+        business = generate_business_article(raw_articles, existing_urls, used_sources=used_sources_today)
         if business:
             print(f"  Business: {business.get('titre', '')[:60]}...")
             print(f"  Confidence: {business.get('confidence_score', 0)*100:.0f}%")
