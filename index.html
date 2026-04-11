@@ -440,6 +440,19 @@ body {
 .badge-bonne_nouvelle { background: var(--teal-light); color: var(--teal); }
 .badge-avenir_pharma { background: var(--indigo-light); color: var(--indigo); }
 .card-date { font-size: 12px; color: var(--text-dim); }
+.card-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; margin-bottom: 4px; }
+.card-tag {
+  font-size: 10px;
+  color: var(--text-muted);
+  background: var(--bg-alt);
+  padding: 2px 8px;
+  border-radius: 100px;
+  text-transform: lowercase;
+  border: 1px solid var(--border-light);
+  text-decoration: none;
+  transition: all 0.15s;
+}
+.card-tag:hover { border-color: var(--orange); color: var(--orange); background: var(--orange-light); }
 .card h3 {
   font-size: 16px;
   font-weight: 700;
@@ -946,6 +959,10 @@ body {
       <img src="assets/logo_pharmalpha_wide.png" alt="Pharm'Alpha Consulting">
     </div>
     <div class="header-right">
+      <a href="archives.html" class="header-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 8v13H3V8"/><path d="M1 3h22v5H1z"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+        Archives
+      </a>
       <a href="https://www.tiktok.com/@pharmalpha" target="_blank" class="header-link">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.73a8.19 8.19 0 004.76 1.52V6.79a4.84 4.84 0 01-1-.1z"/></svg>
         TikTok
@@ -2422,6 +2439,14 @@ function formatDate(dateStr) {
 
 const CARDS_COUNT = 6; // Nombre de cards affichees en grille
 
+function renderCardTags(a) {
+  if (!a.tags || a.tags.length === 0) return '';
+  const tags = a.tags.slice(0, 4).map(t =>
+    `<a href="archives.html?tag=${encodeURIComponent(t)}" class="card-tag" onclick="event.stopPropagation()">#${t}</a>`
+  ).join('');
+  return `<div class="card-tags">${tags}</div>`;
+}
+
 function renderCard(a, i) {
   const sourceLink = a.source_url
     ? `<span class="card-source">Source : <a href="${a.source_url}" target="_blank">${a.source} &rarr;</a></span>`
@@ -2439,6 +2464,7 @@ function renderCard(a, i) {
         </div>
         <h3>${a.titre}</h3>
         <p class="card-resume">${a.resume}</p>
+        ${renderCardTags(a)}
         <div class="card-actions">
           <div class="card-actions-row">
             <button class="btn-read-more" onclick="openModal('${a.id}')">En savoir plus &rarr;</button>
@@ -2472,9 +2498,10 @@ function renderArticles() {
   if (!isAllFilter) {
     filtered = filtered.filter(a => a.categorie === currentFilter);
   }
-  if (query) filtered = filtered.filter(a =>
-    a.titre.toLowerCase().includes(query) || a.resume.toLowerCase().includes(query)
-  );
+  if (query) filtered = filtered.filter(a => {
+    const hay = (a.titre + ' ' + a.resume + ' ' + (a.full_text || '') + ' ' + (a.tags || []).join(' ')).toLowerCase();
+    return hay.includes(query);
+  });
   // Tri par date desc, puis actus avant LSV au sein d'un meme jour
   filtered.sort((a, b) => {
     const dateDiff = new Date(b.date) - new Date(a.date);

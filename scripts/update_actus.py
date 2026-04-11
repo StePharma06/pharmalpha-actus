@@ -196,6 +196,7 @@ Pour chaque article, genere :
 - "badge_label" : voir ci-dessus
 - "source" et "source_url"
 - "image_keywords" : 2-3 mots EN ANGLAIS pour chercher une photo libre de droit
+- "tags" : ARRAY de 3 a 5 mots-cles thematiques en francais, minuscules, sans accents, format court (1-2 mots max par tag). Exemples : ["lfss", "remboursement", "vaccination", "rupture", "dp", "rosp", "marge", "substitution", "grippe", "covid", "diabete", "antibiotique", "generique", "galenique", "officine", "ars", "has", "ansm", "innovation", "recherche", "ia", "fda", "ema"]. Choisis les tags les plus specifiques au sujet pour permettre un filtrage precis.
 
 JSON UNIQUEMENT (tableau de 5 objets) :
 [
@@ -208,6 +209,7 @@ JSON UNIQUEMENT (tableau de 5 objets) :
     "source": "...",
     "source_url": "...",
     "image_keywords": "...",
+    "tags": ["tag1", "tag2", "tag3"],
     "date": "{today}"
   }}
 ]"""
@@ -269,8 +271,11 @@ JSON UNIQUEMENT :
   "resume": "2-3 phrases de teaser percutantes",
   "full_text": "250-350 mots, 5-6 paragraphes separes par \\n\\n. Raconte l'histoire de facon captivante, style Stephen. Derniere phrase = lien avec aujourd'hui au comptoir.",
   "image_keywords": "2-3 mots EN ANGLAIS pour photo libre de droit",
+  "tags": ["histoire", "tag2", "tag3"],
   "date": "{today}"
-}}"""
+}}
+
+Pour les tags : 3 a 5 mots-cles thematiques en francais, minuscules, sans accents (ex: "histoire", "penicilline", "xixeme", "vaccin", "plante", "chimie", "decouverte", "pharmacologie", "epidemie")."""
 
     response = claude_create(client,
         model="claude-sonnet-4-20250514",
@@ -485,6 +490,20 @@ def update_index_html(new_articles):
             a["email_image_url"] = ""
         a["id"] = article_id
 
+        # Tags : array de strings, filtrage/normalisation
+        raw_tags = a.get("tags", [])
+        if isinstance(raw_tags, str):
+            raw_tags = [t.strip() for t in raw_tags.split(",") if t.strip()]
+        clean_tags = []
+        for t in raw_tags[:5]:
+            if not isinstance(t, str):
+                continue
+            tag = t.strip().lower().replace(" ", "-")
+            if tag and tag not in clean_tags:
+                clean_tags.append(tag)
+        a["tags"] = clean_tags
+        tags_js = "[" + ", ".join(f'"{esc(t)}"' for t in clean_tags) + "]"
+
         entry = (
             '  {\n'
             f'    id: "{vals["id"]}",\n'
@@ -498,7 +517,8 @@ def update_index_html(new_articles):
             f'    source_url: "{vals["source_url"]}",\n'
             '    tiktok_url: "",\n'
             f'    badge_label: "{vals["badge_label"]}",\n'
-            f'    image_url: "{img_url}"\n'
+            f'    image_url: "{img_url}",\n'
+            f'    tags: {tags_js}\n'
             '  }'
         )
         new_js_entries.append(entry)
@@ -528,7 +548,73 @@ def update_index_html(new_articles):
     # Generate individual article pages for social sharing
     generate_article_pages(new_articles)
 
+    # Generate articles.json companion file (for archives.html)
+    generate_articles_json(updated_html)
+
     return True
+
+
+def generate_articles_json(index_html):
+    """Parse ARTICLES array from index.html and write articles.json (for archives page)."""
+    match = re.search(r"const ARTICLES = \[([\s\S]*?)\];", index_html)
+    if not match:
+        print("  [WARN] Impossible d'extraire ARTICLES pour articles.json")
+        return
+    block = match.group(1)
+
+    # Parse JS-literal entries with balanced brace tracking (handles strings)
+    entries = []
+    depth = 0
+    start = None
+    in_str = False
+    escape = False
+    for i, c in enumerate(block):
+        if escape:
+            escape = False
+            continue
+        if c == "\\":
+            escape = True
+            continue
+        if c == '"':
+            in_str = not in_str
+            continue
+        if in_str:
+            continue
+        if c == "{":
+            if depth == 0:
+                start = i
+            depth += 1
+        elif c == "}":
+            depth -= 1
+            if depth == 0 and start is not None:
+                entries.append(block[start:i + 1])
+                start = None
+
+    def js_entry_to_dict(js):
+        """Convert a JS object literal to a Python dict. Fields are known: id, date, type, categorie, titre, resume, full_text, source, source_url, tiktok_url, badge_label, image_url, tags."""
+        d = {}
+        for field in ("id", "date", "type", "categorie", "titre", "resume", "full_text", "source", "source_url", "tiktok_url", "badge_label", "image_url"):
+            m = re.search(rf'{field}:\s*"((?:[^"\\]|\\.)*)"', js)
+            if m:
+                val = m.group(1).replace('\\"', '"').replace("\\n", "\n").replace("\\\\", "\\")
+                d[field] = val
+        # Tags : array of strings
+        tm = re.search(r'tags:\s*\[([^\]]*)\]', js)
+        if tm:
+            tags_raw = tm.group(1)
+            d["tags"] = [t.strip().strip('"') for t in re.findall(r'"([^"]*)"', tags_raw)]
+        else:
+            d["tags"] = []
+        return d
+
+    articles = [js_entry_to_dict(e) for e in entries]
+    # Filter empty entries
+    articles = [a for a in articles if a.get("id")]
+
+    json_path = ROOT_DIR / "articles.json"
+    with open(json_path, "w", encoding="utf-8") as f:
+        json.dump({"articles": articles, "count": len(articles), "updated_at": datetime.now(PARIS_TZ).isoformat()}, f, ensure_ascii=False, indent=2)
+    print(f"  articles.json genere ({len(articles)} articles)")
 
 
 def generate_article_pages(articles):

@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Archives - Pharm'Actus</title>
+<meta name="description" content="Toutes les actus pharma publiees sur Pharm'Actus. Recherche, filtres et tags thematiques.">
+<meta property="og:title" content="Archives Pharm'Actus">
+<meta property="og:description" content="Toutes les actus pharma publiees depuis le lancement. Recherche et filtres.">
+<meta property="og:image" content="https://actus.pharmalpha.fr/assets/og_image.png">
+<meta property="og:url" content="https://actus.pharmalpha.fr/archives.html">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="assets/caducee-pharmacien.png">
+<style>
+:root {
+  --bg: #ffffff;
+  --bg-alt: #f8f8f8;
+  --bg-card: #ffffff;
+  --border: #e5e5e5;
+  --border-light: #f0f0f0;
+  --text: #1a1a1a;
+  --text-secondary: #555;
+  --text-muted: #888;
+  --text-dim: #aaa;
+  --orange: #f97316;
+  --orange-light: #fff7ed;
+  --orange-hover: #ea580c;
+  --blue: #2563eb;
+  --blue-light: #eff6ff;
+  --green: #16a34a;
+  --green-light: #f0fdf4;
+  --purple: #7c3aed;
+  --purple-light: #f5f3ff;
+  --teal: #0d9488;
+  --teal-light: #f0fdfa;
+  --indigo: #4f46e5;
+  --indigo-light: #eef2ff;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: var(--bg-alt);
+  color: var(--text);
+  line-height: 1.6;
+  padding-bottom: 60px;
+}
+a { color: inherit; text-decoration: none; }
+
+/* HEADER */
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid var(--border-light);
+  padding: 16px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+}
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.logo { font-size: 22px; font-weight: 800; letter-spacing: -0.5px; }
+.logo span { color: var(--orange); }
+.nav { display: flex; gap: 24px; font-size: 14px; font-weight: 600; color: var(--text-secondary); }
+.nav a:hover { color: var(--orange); }
+.nav a.active { color: var(--orange); }
+
+/* HERO */
+.hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px 24px;
+}
+.hero h1 { font-size: 32px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 6px; }
+.hero p { color: var(--text-muted); font-size: 14px; }
+
+/* SEARCH + FILTERS */
+.controls {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 24px 0;
+}
+.search-box {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.search-box:focus-within {
+  border-color: var(--orange);
+  box-shadow: 0 0 0 3px rgba(249,115,22,0.1);
+}
+.search-box svg { width: 18px; height: 18px; color: var(--text-muted); flex-shrink: 0; }
+.search-box input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 15px;
+  background: transparent;
+  font-family: inherit;
+}
+.search-box .clear-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-muted);
+  padding: 4px;
+  display: none;
+}
+.search-box.has-value .clear-btn { display: block; }
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.filter-btn {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 8px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+.filter-btn:hover { border-color: var(--text-muted); color: var(--text); }
+.filter-btn.active {
+  background: var(--text);
+  border-color: var(--text);
+  color: #fff;
+}
+.filter-btn-lsv.active {
+  background: var(--purple);
+  border-color: var(--purple);
+}
+
+/* TAG CLOUD */
+.tags-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8px 24px 16px;
+}
+.tags-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 5px 12px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: inherit;
+}
+.tag:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+}
+.tag.active {
+  background: var(--orange);
+  border-color: var(--orange);
+  color: #fff;
+}
+.tag .tag-count {
+  font-size: 10px;
+  opacity: 0.7;
+  font-weight: 600;
+}
+.tag.active .tag-count { opacity: 1; }
+
+/* STATS */
+.stats-bar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8px 24px 16px;
+  font-size: 13px;
+  color: var(--text-muted);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.stats-bar strong { color: var(--text); font-weight: 700; }
+.reset-filters {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-size: 12px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 500;
+}
+.reset-filters:hover { color: var(--orange); border-color: var(--orange); }
+.reset-filters.hidden { display: none; }
+
+/* ARTICLES GRID */
+.articles-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8px 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+.article-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+.article-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+.article-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+.article-card .card-body {
+  padding: 16px 18px 18px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.article-card .card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.article-card .badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 100px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+.badge-pharma_france { background: var(--orange-light); color: var(--orange); }
+.badge-pharma_monde { background: var(--blue-light); color: var(--blue); }
+.badge-sante { background: var(--green-light); color: var(--green); }
+.badge-lsv { background: var(--purple-light); color: var(--purple); }
+.badge-bonne_nouvelle { background: var(--teal-light); color: var(--teal); }
+.badge-avenir_pharma { background: var(--indigo-light); color: var(--indigo); }
+.article-card .card-date { font-size: 11px; color: var(--text-dim); }
+.article-card h3 { font-size: 15px; line-height: 1.35; margin-bottom: 8px; }
+.article-card .card-resume {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin-bottom: 12px;
+  flex: 1;
+}
+.article-card .card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: auto;
+}
+.article-card .mini-tag {
+  font-size: 10px;
+  color: var(--text-muted);
+  background: var(--bg-alt);
+  padding: 2px 8px;
+  border-radius: 100px;
+  text-transform: lowercase;
+  border: 1px solid var(--border-light);
+}
+.article-card .mini-tag:hover { border-color: var(--orange); color: var(--orange); }
+
+/* EMPTY STATE */
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 80px 24px;
+  color: var(--text-muted);
+}
+.empty-state svg { width: 64px; height: 64px; margin: 0 auto 16px; opacity: 0.3; }
+.empty-state p { font-size: 15px; }
+
+/* PAGINATION */
+.pagination {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.pagination button {
+  background: #fff;
+  border: 1px solid var(--border);
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  color: var(--text-secondary);
+  font-family: inherit;
+  font-weight: 600;
+  min-width: 40px;
+}
+.pagination button:hover:not(:disabled) { border-color: var(--orange); color: var(--orange); }
+.pagination button.active { background: var(--orange); border-color: var(--orange); color: #fff; }
+.pagination button:disabled { opacity: 0.4; cursor: not-allowed; }
+
+/* MODAL */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  backdrop-filter: blur(4px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+.modal-overlay.active { display: flex; }
+.modal-content {
+  background: #fff;
+  border-radius: 16px;
+  max-width: 720px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 32px 32px 28px;
+  position: relative;
+}
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--bg-alt);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  color: var(--text-secondary);
+}
+.modal-close:hover { background: var(--border); color: var(--text); }
+.modal-badges-row { display: flex; gap: 8px; align-items: center; margin-bottom: 12px; flex-wrap: wrap; }
+.modal-date { font-size: 12px; color: var(--text-muted); margin-left: auto; }
+.modal-content h2 { font-size: 24px; font-weight: 800; line-height: 1.3; margin-bottom: 16px; }
+.modal-content img { width: 100%; border-radius: 10px; margin-bottom: 20px; }
+.modal-text { color: var(--text-secondary); font-size: 15px; line-height: 1.75; }
+.modal-text p { margin-bottom: 14px; }
+.modal-footer { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--border-light); font-size: 13px; }
+.modal-footer a { color: var(--orange); font-weight: 600; }
+.modal-tags { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 6px; }
+.modal-tags .mini-tag { font-size: 11px; padding: 3px 10px; background: var(--bg-alt); border-radius: 100px; color: var(--text-secondary); border: 1px solid var(--border-light); cursor: pointer; }
+.modal-tags .mini-tag:hover { border-color: var(--orange); color: var(--orange); }
+
+@media (max-width: 700px) {
+  .hero { padding: 24px 16px 16px; }
+  .hero h1 { font-size: 24px; }
+  .articles-grid { padding: 8px 16px; gap: 14px; grid-template-columns: 1fr; }
+  .nav { gap: 16px; font-size: 13px; }
+  .modal-content { padding: 24px 20px; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo">Pharm'<span>Actus</span></a>
+    <nav class="nav">
+      <a href="/">Accueil</a>
+      <a href="/archives.html" class="active">Archives</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Archives</h1>
+  <p id="hero-subtitle">Toutes les actus publi&eacute;es sur Pharm'Actus. Recherche, filtres et tags th&eacute;matiques.</p>
+</section>
+
+<section class="controls">
+  <div class="search-box" id="search-box">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    <input type="text" id="search-input" placeholder="Rechercher par titre, r&eacute;sum&eacute;, contenu ou tag...">
+    <button class="clear-btn" id="search-clear" aria-label="Effacer">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+
+  <div class="filters">
+    <button class="filter-btn active" data-filter="all">Toutes</button>
+    <button class="filter-btn" data-filter="pharma_france">Pharma France</button>
+    <button class="filter-btn" data-filter="pharma_monde">Pharma Monde</button>
+    <button class="filter-btn" data-filter="sante">Sant&eacute;</button>
+    <button class="filter-btn" data-filter="bonne_nouvelle">La bonne nouvelle</button>
+    <button class="filter-btn" data-filter="avenir_pharma">L'avenir de la pharma</button>
+    <button class="filter-btn filter-btn-lsv" data-filter="lsv">Le Saviez-Vous</button>
+  </div>
+</section>
+
+<section class="tags-section">
+  <p class="tags-title">Tags th&eacute;matiques</p>
+  <div class="tag-cloud" id="tag-cloud"></div>
+</section>
+
+<div class="stats-bar">
+  <div id="stats-count">Chargement...</div>
+  <button class="reset-filters hidden" id="reset-filters">R&eacute;initialiser les filtres</button>
+</div>
+
+<main class="articles-grid" id="articles-grid"></main>
+
+<nav class="pagination" id="pagination"></nav>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal-content">
+    <button class="modal-close" id="modal-close">&times;</button>
+    <div class="modal-badges-row">
+      <span class="badge" id="modal-badge"></span>
+      <span class="modal-date" id="modal-date"></span>
+    </div>
+    <h2 id="modal-title"></h2>
+    <div id="modal-img-wrap"></div>
+    <div class="modal-text" id="modal-text"></div>
+    <div class="modal-tags" id="modal-tags"></div>
+    <div class="modal-footer" id="modal-footer"></div>
+  </div>
+</div>
+
+<script>
+const PAGE_SIZE = 18;
+let ALL_ARTICLES = [];
+let currentFilter = 'all';
+let currentTag = null;
+let currentQuery = '';
+let currentPage = 1;
+
+const BADGE_LABELS = {
+  pharma_france: 'Pharma France',
+  pharma_monde: 'Pharma Monde',
+  sante: 'Sant\u00e9',
+  bonne_nouvelle: 'La bonne nouvelle',
+  avenir_pharma: 'L\u2019avenir de la pharma',
+  lsv: 'Le Saviez-Vous',
+};
+
+function formatDate(dateStr) {
+  const d = new Date(dateStr);
+  return d.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+}
+
+async function loadArticles() {
+  try {
+    const res = await fetch('articles.json?t=' + Date.now());
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const data = await res.json();
+    ALL_ARTICLES = data.articles || [];
+    ALL_ARTICLES.sort((a, b) => {
+      const dateDiff = new Date(b.date) - new Date(a.date);
+      if (dateDiff !== 0) return dateDiff;
+      if (a.categorie === 'lsv' && b.categorie !== 'lsv') return 1;
+      if (a.categorie !== 'lsv' && b.categorie === 'lsv') return -1;
+      return 0;
+    });
+    buildTagCloud();
+    render();
+  } catch (e) {
+    document.getElementById('articles-grid').innerHTML = '<div class="empty-state"><p>Erreur de chargement des articles : ' + e.message + '</p></div>';
+  }
+}
+
+function buildTagCloud() {
+  const tagCounts = {};
+  ALL_ARTICLES.forEach(a => {
+    (a.tags || []).forEach(t => {
+      tagCounts[t] = (tagCounts[t] || 0) + 1;
+    });
+  });
+  const sorted = Object.entries(tagCounts).sort((a, b) => b[1] - a[1]).slice(0, 30);
+  const cloud = document.getElementById('tag-cloud');
+  if (sorted.length === 0) {
+    cloud.innerHTML = '<span style="font-size:12px;color:#aaa;font-style:italic;">Les tags seront disponibles sur les nouveaux articles &agrave; partir du 2026-04-11.</span>';
+    return;
+  }
+  cloud.innerHTML = sorted.map(([tag, count]) =>
+    `<button class="tag" data-tag="${tag}">#${tag}<span class="tag-count">${count}</span></button>`
+  ).join('');
+  cloud.querySelectorAll('.tag').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const tag = btn.dataset.tag;
+      currentTag = (currentTag === tag) ? null : tag;
+      currentPage = 1;
+      updateTagCloudUI();
+      render();
+    });
+  });
+}
+
+function updateTagCloudUI() {
+  document.querySelectorAll('.tag').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.tag === currentTag);
+  });
+}
+
+function filterArticles() {
+  let filtered = ALL_ARTICLES.slice();
+  if (currentFilter !== 'all') {
+    filtered = filtered.filter(a => a.categorie === currentFilter);
+  }
+  if (currentTag) {
+    filtered = filtered.filter(a => (a.tags || []).includes(currentTag));
+  }
+  if (currentQuery) {
+    const q = currentQuery.toLowerCase();
+    filtered = filtered.filter(a => {
+      const hay = (a.titre + ' ' + (a.resume || '') + ' ' + (a.full_text || '') + ' ' + (a.tags || []).join(' ') + ' ' + (a.source || '')).toLowerCase();
+      return hay.includes(q);
+    });
+  }
+  return filtered;
+}
+
+function render() {
+  const filtered = filterArticles();
+  const total = filtered.length;
+  const totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));
+  if (currentPage > totalPages) currentPage = 1;
+  const start = (currentPage - 1) * PAGE_SIZE;
+  const pageItems = filtered.slice(start, start + PAGE_SIZE);
+
+  // Stats
+  const statsText = total === 0
+    ? 'Aucun article ne correspond &agrave; ta recherche.'
+    : `<strong>${total}</strong> article${total > 1 ? 's' : ''}` + (total > PAGE_SIZE ? ` &mdash; page <strong>${currentPage}</strong>/${totalPages}` : '');
+  document.getElementById('stats-count').innerHTML = statsText;
+
+  const hasFilter = currentFilter !== 'all' || currentTag || currentQuery;
+  document.getElementById('reset-filters').classList.toggle('hidden', !hasFilter);
+
+  const grid = document.getElementById('articles-grid');
+  if (total === 0) {
+    grid.innerHTML = `<div class="empty-state">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <p>Aucun article ne correspond &agrave; ta recherche.</p>
+    </div>`;
+    document.getElementById('pagination').innerHTML = '';
+    return;
+  }
+
+  grid.innerHTML = pageItems.map(a => renderCard(a)).join('');
+  grid.querySelectorAll('.article-card').forEach(card => {
+    card.addEventListener('click', e => {
+      if (e.target.closest('.mini-tag')) return;
+      openModal(card.dataset.id);
+    });
+  });
+  grid.querySelectorAll('.mini-tag').forEach(el => {
+    el.addEventListener('click', e => {
+      e.stopPropagation();
+      currentTag = el.dataset.tag;
+      currentPage = 1;
+      updateTagCloudUI();
+      render();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+
+  renderPagination(totalPages);
+}
+
+function renderCard(a) {
+  const img = a.image_url ? `<img src="${a.image_url}" alt="" loading="lazy">` : '';
+  const tags = (a.tags || []).slice(0, 4).map(t =>
+    `<span class="mini-tag" data-tag="${t}">#${t}</span>`
+  ).join('');
+  return `<article class="article-card" data-id="${a.id}">
+    ${img}
+    <div class="card-body">
+      <div class="card-top">
+        <span class="badge badge-${a.categorie}">${a.badge_label || BADGE_LABELS[a.categorie] || ''}</span>
+        <span class="card-date">${formatDate(a.date)}</span>
+      </div>
+      <h3>${a.titre}</h3>
+      <p class="card-resume">${a.resume || ''}</p>
+      <div class="card-tags">${tags}</div>
+    </div>
+  </article>`;
+}
+
+function renderPagination(totalPages) {
+  const pag = document.getElementById('pagination');
+  if (totalPages <= 1) { pag.innerHTML = ''; return; }
+  let html = `<button ${currentPage === 1 ? 'disabled' : ''} data-page="${currentPage - 1}">&larr;</button>`;
+  const pagesToShow = new Set([1, totalPages, currentPage, currentPage - 1, currentPage + 1]);
+  const sortedPages = [...pagesToShow].filter(p => p >= 1 && p <= totalPages).sort((a, b) => a - b);
+  let prev = 0;
+  sortedPages.forEach(p => {
+    if (p - prev > 1) html += `<span style="color:#aaa;padding:0 4px;">...</span>`;
+    html += `<button class="${p === currentPage ? 'active' : ''}" data-page="${p}">${p}</button>`;
+    prev = p;
+  });
+  html += `<button ${currentPage === totalPages ? 'disabled' : ''} data-page="${currentPage + 1}">&rarr;</button>`;
+  pag.innerHTML = html;
+  pag.querySelectorAll('button[data-page]').forEach(b => {
+    b.addEventListener('click', () => {
+      currentPage = parseInt(b.dataset.page);
+      render();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+}
+
+function openModal(id) {
+  const a = ALL_ARTICLES.find(x => x.id === id);
+  if (!a) return;
+  document.getElementById('modal-badge').className = 'badge badge-' + a.categorie;
+  document.getElementById('modal-badge').textContent = a.badge_label || BADGE_LABELS[a.categorie] || '';
+  document.getElementById('modal-date').textContent = formatDate(a.date);
+  document.getElementById('modal-title').textContent = a.titre;
+
+  const imgWrap = document.getElementById('modal-img-wrap');
+  imgWrap.innerHTML = a.image_url ? `<img src="${a.image_url}" alt="">` : '';
+
+  const text = (a.full_text || a.resume || '').split('\n\n').map(p => '<p>' + p.replace(/\n/g, '<br>') + '</p>').join('');
+  document.getElementById('modal-text').innerHTML = text;
+
+  const tagsDiv = document.getElementById('modal-tags');
+  if (a.tags && a.tags.length) {
+    tagsDiv.innerHTML = a.tags.map(t => `<span class="mini-tag" data-tag="${t}">#${t}</span>`).join('');
+    tagsDiv.querySelectorAll('.mini-tag').forEach(el => {
+      el.addEventListener('click', () => {
+        closeModal();
+        currentTag = el.dataset.tag;
+        currentPage = 1;
+        updateTagCloudUI();
+        render();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+  } else {
+    tagsDiv.innerHTML = '';
+  }
+
+  const footer = document.getElementById('modal-footer');
+  footer.innerHTML = a.source_url
+    ? `Source : <a href="${a.source_url}" target="_blank" rel="noopener">${a.source} &rarr;</a>`
+    : `Source : ${a.source || ''}`;
+
+  document.getElementById('modal-overlay').classList.add('active');
+}
+
+function closeModal() {
+  document.getElementById('modal-overlay').classList.remove('active');
+}
+
+document.getElementById('modal-close').addEventListener('click', closeModal);
+document.getElementById('modal-overlay').addEventListener('click', e => {
+  if (e.target.id === 'modal-overlay') closeModal();
+});
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentFilter = btn.dataset.filter;
+    currentPage = 1;
+    render();
+  });
+});
+
+const searchInput = document.getElementById('search-input');
+const searchBox = document.getElementById('search-box');
+searchInput.addEventListener('input', () => {
+  currentQuery = searchInput.value.trim();
+  currentPage = 1;
+  searchBox.classList.toggle('has-value', !!currentQuery);
+  render();
+});
+document.getElementById('search-clear').addEventListener('click', () => {
+  searchInput.value = '';
+  currentQuery = '';
+  searchBox.classList.remove('has-value');
+  render();
+  searchInput.focus();
+});
+
+document.getElementById('reset-filters').addEventListener('click', () => {
+  currentFilter = 'all';
+  currentTag = null;
+  currentQuery = '';
+  currentPage = 1;
+  searchInput.value = '';
+  searchBox.classList.remove('has-value');
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.toggle('active', b.dataset.filter === 'all'));
+  updateTagCloudUI();
+  render();
+});
+
+loadArticles();
+</script>
+</body>
+</html>
