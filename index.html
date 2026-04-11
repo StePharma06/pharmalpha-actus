@@ -129,6 +129,75 @@ body {
   background: var(--orange-light);
 }
 .header-link svg { width:16px; height:16px; flex-shrink:0; }
+.header-link-archives {
+  border-color: var(--orange);
+  color: var(--orange);
+  font-weight: 600;
+}
+.header-link-archives:hover {
+  background: var(--orange);
+  color: #fff;
+  border-color: var(--orange);
+}
+
+/* ARCHIVES CTA (big callout at bottom of articles list) */
+.archives-cta {
+  max-width: 1200px;
+  margin: 40px auto 0;
+  padding: 0 24px;
+}
+.archives-cta-inner {
+  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+  border: 1px solid #fdba74;
+  border-radius: 16px;
+  padding: 32px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.archives-cta-text { flex: 1; min-width: 260px; }
+.archives-cta-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 6px;
+  letter-spacing: -0.3px;
+}
+.archives-cta-sub {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+.archives-cta-sub strong { color: var(--orange); }
+.archives-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--orange);
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 100px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.2s;
+  border: 2px solid var(--orange);
+  font-family: inherit;
+  cursor: pointer;
+}
+.archives-cta-btn:hover {
+  background: var(--orange-hover);
+  border-color: var(--orange-hover);
+  transform: translateX(4px);
+}
+.archives-cta-btn svg { width: 18px; height: 18px; }
+@media (max-width: 700px) {
+  .archives-cta-inner { padding: 24px 20px; flex-direction: column; align-items: stretch; text-align: center; }
+  .archives-cta-btn { justify-content: center; }
+}
 .btn-share-site {
   background: var(--orange);
   color: #fff;
@@ -959,7 +1028,7 @@ body {
       <img src="assets/logo_pharmalpha_wide.png" alt="Pharm'Alpha Consulting">
     </div>
     <div class="header-right">
-      <a href="archives.html" class="header-link">
+      <a href="archives.html" class="header-link header-link-archives">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 8v13H3V8"/><path d="M1 3h22v5H1z"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
         Archives
       </a>
@@ -1022,6 +1091,23 @@ body {
 
 <!-- ARTICLES (groupes par date) -->
 <div id="articles-container"></div>
+
+<!-- ARCHIVES CTA -->
+<div class="archives-cta">
+  <div class="archives-cta-inner">
+    <div class="archives-cta-text">
+      <div class="archives-cta-title">Explore toutes les archives Pharm'Actus</div>
+      <div class="archives-cta-sub">
+        <strong id="archives-count">&mdash;</strong> articles publi&eacute;s depuis le lancement.
+        Recherche par mot-cl&eacute;, filtres par cat&eacute;gorie et <strong>tags th&eacute;matiques</strong> pour retrouver n'importe quelle actu en quelques clics.
+      </div>
+    </div>
+    <a href="archives.html" class="archives-cta-btn">
+      Voir les archives
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+  </div>
+</div>
 
 <!-- MODAL -->
 <div class="modal-overlay" id="modal-overlay">
@@ -2514,6 +2600,8 @@ function renderArticles() {
 
   // Stats
   document.getElementById('stats-count').innerHTML = `<strong>${filtered.length}</strong> article${filtered.length > 1 ? 's' : ''}`;
+  const archivesCountEl = document.getElementById('archives-count');
+  if (archivesCountEl) archivesCountEl.textContent = ARTICLES.length;
   if (ARTICLES.length > 0) {
     const latest = ARTICLES.filter(a => a.categorie !== 'lsv').reduce((a, b) => new Date(a.date) > new Date(b.date) ? a : b, ARTICLES[0]);
     document.getElementById('stats-date').textContent = formatDate(latest.date);
