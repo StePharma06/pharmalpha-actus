@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Dashboard Pharm'Actus</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, 'Segoe UI', system-ui, sans-serif;
+  background: #f4f4f5;
+  color: #1a1a1a;
+  padding: 32px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+header { margin-bottom: 32px; }
+h1 { font-size: 28px; margin-bottom: 6px; }
+h1 span { color: #f97316; }
+.subtitle { color: #888; font-size: 13px; }
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 12px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  margin-bottom: 24px;
+}
+.stats-grid h3 { font-size: 11px; text-transform: uppercase; color: #888; font-weight: 700; letter-spacing: 0.4px; padding-bottom: 12px; border-bottom: 2px solid #f0f0f0; }
+.stats-grid .head-label { grid-column: 1; }
+.stats-grid .head-week { text-align: right; color: #f97316; }
+.stats-grid .head-cumul { text-align: right; color: #0d9488; }
+.stats-row { display: contents; }
+.stats-row > div {
+  padding: 14px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.stats-row:last-child > div { border-bottom: none; }
+.stats-row .label { font-weight: 500; color: #555; font-size: 14px; }
+.stats-row .label small { display: block; color: #aaa; font-size: 11px; margin-top: 2px; font-weight: 400; }
+.stats-row .value { text-align: right; font-size: 20px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.stats-row .value.week { color: #f97316; }
+.stats-row .value.cumul { color: #0d9488; }
+.stats-row .value small { display: block; color: #aaa; font-size: 11px; font-weight: 400; margin-top: 2px; }
+
+.card {
+  background: #fff;
+  padding: 24px 28px;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  margin-bottom: 24px;
+}
+.card h2 { font-size: 18px; margin-bottom: 4px; }
+.card h2 .tag { font-size: 11px; background: #fff7ed; color: #f97316; padding: 3px 10px; border-radius: 100px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px; margin-left: 8px; vertical-align: middle; }
+.card h2 .tag.cumul { background: #f0fdfa; color: #0d9488; }
+.card .hint { color: #888; font-size: 12px; margin-bottom: 16px; }
+table { width: 100%; border-collapse: collapse; }
+th {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 2px solid #f0f0f0;
+  color: #666;
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+td { padding: 12px; border-bottom: 1px solid #f0f0f0; font-size: 14px; vertical-align: middle; }
+td.rank { width: 36px; color: #aaa; font-weight: 700; }
+td.date { width: 100px; color: #888; font-size: 12px; font-family: monospace; }
+td.title { font-weight: 500; }
+td.num { width: 80px; text-align: right; font-variant-numeric: tabular-nums; }
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 100px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: #fafafa; }
+.footer { color: #aaa; font-size: 11px; text-align: center; margin-top: 40px; padding-top: 24px; border-top: 1px solid #e5e5e5; }
+@media (max-width: 700px) {
+  .stats-grid { grid-template-columns: 1.5fr 1fr 1fr; gap: 8px; padding: 16px; }
+  .stats-row .value { font-size: 16px; }
+  td.title { font-size: 13px; }
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>Dashboard <span>Pharm'Actus</span></h1>
+  <p class="subtitle">Semaine du 2026-04-04 au 2026-04-11 &mdash; Cumul depuis le 2026-01-01 &mdash; MAJ 2026-04-11 03:56</p>
+</header>
+
+<div class="stats-grid">
+  <h3 class="head-label">Metrique</h3>
+  <h3 class="head-week">Semaine pass&eacute;e</h3>
+  <h3 class="head-cumul">Cumul&eacute;</h3>
+
+  <div class="stats-row">
+    <div class="label">Abonn&eacute;s<small>a ce jour</small></div>
+    <div class="value week">&mdash;</div>
+    <div class="value cumul">195</div>
+  </div>
+  <div class="stats-row">
+    <div class="label">Emails d&eacute;livr&eacute;s</div>
+    <div class="value week">1116</div>
+    <div class="value cumul">0</div>
+  </div>
+  <div class="stats-row">
+    <div class="label">Taux d'ouverture<small>uniques / d&eacute;livr&eacute;s</small></div>
+    <div class="value week">33.0%<small>368 uniques &middot; 609 total</small></div>
+    <div class="value cumul">0.0%<small>0 uniques &middot; 0 total</small></div>
+  </div>
+  <div class="stats-row">
+    <div class="label">Taux de clic<small>uniques / d&eacute;livr&eacute;s</small></div>
+    <div class="value week">11.6%<small>130 uniques &middot; 303 total</small></div>
+    <div class="value cumul">0.0%<small>0 uniques &middot; 0 total</small></div>
+  </div>
+  <div class="stats-row">
+    <div class="label">CTOR<small>clic / ouverture</small></div>
+    <div class="value week">35.3%</div>
+    <div class="value cumul">0.0%</div>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Top articles &mdash; <span class="tag">Semaine pass&eacute;e</span></h2>
+  <p class="hint">Articles les plus cliqu&eacute;s par des abonn&eacute;s distincts cette semaine.</p>
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Date</th>
+        <th>Cat&eacute;gorie</th>
+        <th>Article</th>
+        <th>Lecteurs</th>
+        <th>Clics</th>
+      </tr>
+    </thead>
+    <tbody>
+<tr><td colspan="6" style="text-align:center;color:#888;padding:24px;font-size:13px;">Aucun clic identifi&eacute; sur un article sp&eacute;cifique.<br><small>Les liens per-article ont &eacute;t&eacute; activ&eacute;s le 2026-04-11. Les donn&eacute;es commencent a s'accumuler.</small></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="card">
+  <h2>Top articles &mdash; <span class="tag cumul">Cumul&eacute;</span></h2>
+  <p class="hint">Articles les plus cliqu&eacute;s depuis le d&eacute;but (hors clics historiques sur homepage avant le 2026-04-11).</p>
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Date</th>
+        <th>Cat&eacute;gorie</th>
+        <th>Article</th>
+        <th>Lecteurs</th>
+        <th>Clics</th>
+      </tr>
+    </thead>
+    <tbody>
+<tr><td colspan="6" style="text-align:center;color:#888;padding:24px;font-size:13px;">Aucun clic identifi&eacute; sur un article sp&eacute;cifique.<br><small>Les liens per-article ont &eacute;t&eacute; activ&eacute;s le 2026-04-11. Les donn&eacute;es commencent a s'accumuler.</small></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p class="footer">Dashboard priv&eacute; Pharm'Actus &mdash; Donn&eacute;es via Brevo API &mdash; Meta noindex actif</p>
+</body>
+</html>
