@@ -1,9 +1,11 @@
 name: TikTok Video Daily
 
+# SUSPENDU - pipeline TikTok mis en pause a la demande de Stephen (2026-04-11)
+# Pour re-activer : decommenter le bloc 'schedule' ci-dessous
 on:
-  schedule:
-    - cron: '0 2 * * *'  # 04h00 Paris — generation quotidienne
-  workflow_dispatch:  # Lancement manuel
+  # schedule:
+  #   - cron: '0 2 * * *'  # 04h00 Paris — generation quotidienne
+  workflow_dispatch:  # Lancement manuel uniquement
 
 permissions:
   contents: write

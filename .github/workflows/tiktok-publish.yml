@@ -1,9 +1,11 @@
 name: TikTok Publish
 
+# SUSPENDU - pipeline TikTok mis en pause a la demande de Stephen (2026-04-11)
+# Pour re-activer : decommenter le bloc 'schedule' ci-dessous
 on:
-  schedule:
-    - cron: '30 16 * * *'  # 18h30 Paris (heure d'ete) — publication quotidienne
-  workflow_dispatch:  # Lancement manuel possible
+  # schedule:
+  #   - cron: '30 16 * * *'  # 18h30 Paris
+  workflow_dispatch:  # Lancement manuel uniquement
 
 permissions:
   contents: write
