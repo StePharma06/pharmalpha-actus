@@ -1,0 +1,40 @@
+name: Business Officine Hebdo
+
+on:
+  schedule:
+    - cron: '30 5 * * 1'  # Lundi 05h30 UTC = 07h30 Paris (apres le run actus quotidien)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  business-weekly:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install anthropic feedparser
+
+      - name: Generate + publish Business Officine article
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+        run: python scripts/generate_business_weekly.py
+
+      - name: Commit & push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html articles/ "DRAFTS/business/" || true
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Business Officine hebdo $(date -u +%Y-%m-%d)"
+            git push
+          fi

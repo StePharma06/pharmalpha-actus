@@ -35,6 +35,8 @@
   --teal-light: #f0fdfa;
   --indigo: #4f46e5;
   --indigo-light: #eef2ff;
+  --burgundy: #9f1239;
+  --burgundy-light: #fff1f2;
 }
 * { margin:0; padding:0; box-sizing:border-box; }
 body {
@@ -279,6 +281,7 @@ a { color: inherit; text-decoration: none; }
 .badge-lsv { background: var(--purple-light); color: var(--purple); }
 .badge-bonne_nouvelle { background: var(--teal-light); color: var(--teal); }
 .badge-avenir_pharma { background: var(--indigo-light); color: var(--indigo); }
+.badge-business_officine { background: var(--burgundy-light); color: var(--burgundy); }
 .article-card .card-date { font-size: 11px; color: var(--text-dim); }
 .article-card h3 { font-size: 15px; line-height: 1.35; margin-bottom: 8px; }
 .article-card .card-resume {
@@ -432,6 +435,7 @@ a { color: inherit; text-decoration: none; }
     <button class="filter-btn" data-filter="sante">Sant&eacute;</button>
     <button class="filter-btn" data-filter="bonne_nouvelle">La bonne nouvelle</button>
     <button class="filter-btn" data-filter="avenir_pharma">L'avenir de la pharma</button>
+    <button class="filter-btn" data-filter="business_officine">Business Officine</button>
     <button class="filter-btn filter-btn-lsv" data-filter="lsv">Le Saviez-Vous</button>
   </div>
 </section>
@@ -480,6 +484,7 @@ const BADGE_LABELS = {
   sante: 'Sant\u00e9',
   bonne_nouvelle: 'La bonne nouvelle',
   avenir_pharma: 'L\u2019avenir de la pharma',
+  business_officine: 'Business Officine',
   lsv: 'Le Saviez-Vous',
 };
 
