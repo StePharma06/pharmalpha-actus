@@ -582,7 +582,7 @@ def generate_article_pages(articles):
 
 def generate_email_intro(articles):
     """Generate a unique daily email intro using Claude, referencing an article."""
-    actus = [a for a in articles if a.get("categorie") != "lsv"][:3]
+    actus = [a for a in articles if a.get("categorie") != "lsv"]
     lsv = next((a for a in articles if a.get("categorie") == "lsv"), None)
     titres = [a.get("titre", "") for a in actus]
     lsv_titre = lsv.get("titre", "") if lsv else ""
@@ -593,19 +593,25 @@ Voici les actus du jour :
 {chr(10).join(f'- {t}' for t in titres)}
 {f'- Le Saviez-Vous : {lsv_titre}' if lsv_titre else ''}
 
-Ecris une intro de 2-3 phrases MAX (pas plus de 40 mots). Regles :
+Ecris une intro de 2-3 phrases MAX (pas plus de 50 mots). Regles :
 - Tutoie le lecteur
 - Ton decontracte, direct, un peu piquant
-- Fais reference a UNE actu du jour de maniere accrocheuse (sans donner la reponse, juste teaser)
+- Fais reference a UNE ou DEUX actus du jour de maniere accrocheuse (teaser, sans donner la reponse)
 - Finis par "Bonne lecture !" ou une variante
 - PAS de emoji, PAS de guillemets autour du texte
-- Ecris en HTML avec les entites pour les accents (&eacute; &agrave; &egrave; etc.)"""
+- Ecris en HTML avec les entites pour les accents (&eacute; &agrave; &egrave; &ecirc; &ucirc; &icirc; &ocirc; &ccedil; etc.)
+
+ATTENTION ORTHOGRAPHE : relis-toi avant de repondre. ZERO faute tolere.
+- Verifie chaque mot accentue (co&ucirc;ter, d&eacute;j&agrave;, r&eacute;cent, etc.)
+- Verifie les accords (pluriel, participe passe)
+- Si tu as un doute sur un mot, reformule avec un mot plus simple
+- Exemples de fautes a ne PAS faire : "coitait" au lieu de "co&ucirc;tait", "lache" au lieu de "l&acirc;che", etc."""
 
     try:
         client = anthropic.Anthropic()
         response = claude_create(client,
-            model=FALLBACK_MODEL,
-            max_tokens=150,
+            model="claude-sonnet-4-20250514",
+            max_tokens=200,
             messages=[{"role": "user", "content": prompt}]
         )
         intro = response.content[0].text.strip()
