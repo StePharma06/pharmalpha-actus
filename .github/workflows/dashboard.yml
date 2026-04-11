@@ -1,0 +1,28 @@
+name: Generate Dashboard Analytics
+
+on:
+  workflow_dispatch:  # Lancement manuel uniquement
+  schedule:
+    - cron: '0 6 * * 1'  # Chaque lundi 6h UTC (8h Paris)
+
+jobs:
+  dashboard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Generate dashboard
+        env:
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+        run: python scripts/generate_dashboard.py
+
+      - name: Upload dashboard artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dashboard-pharmactus
+          path: dashboard/dashboard.html
+          retention-days: 30
