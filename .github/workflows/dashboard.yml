@@ -1,9 +1,12 @@
 name: Generate Dashboard Analytics
 
 on:
-  workflow_dispatch:  # Lancement manuel uniquement
+  workflow_dispatch:  # Lancement manuel
   schedule:
     - cron: '0 6 * * 1'  # Chaque lundi 6h UTC (8h Paris)
+
+permissions:
+  contents: write
 
 jobs:
   dashboard:
@@ -15,14 +18,19 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Generate dashboard
+      - name: Generate dashboard + send email
         env:
           BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
         run: python scripts/generate_dashboard.py
 
-      - name: Upload dashboard artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: dashboard-pharmactus
-          path: dashboard/dashboard.html
-          retention-days: 30
+      - name: Commit & push dashboard.html
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add dashboard.html
+          if git diff --staged --quiet; then
+            echo "No changes to dashboard"
+          else
+            git commit -m "Dashboard update $(date -u +%Y-%m-%d)"
+            git push
+          fi
