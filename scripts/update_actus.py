@@ -59,7 +59,8 @@ ASSETS_DIR = ROOT_DIR / "assets"
 
 MAX_ARTICLES_TOTAL = 50
 MAX_AGE_DAYS = 7
-NEW_ARTICLES_PER_RUN = 5  # 3 actus + 1 bonne nouvelle + 1 avenir pharma
+NEW_ARTICLES_PER_RUN = 4  # 1 pharma_france + 1 pharma_monde + 1 bonne_nouvelle + 1 avenir_pharma
+# + 1 business_officine (generation separee en format long) + 1 LSV
 
 
 # ── RSS ──────────────────────────────────────────────────────────────
@@ -158,30 +159,32 @@ Pharmaciens d'officine en France (PAS le grand public)
 
 ---
 
-Selectionne et redige EXACTEMENT 5 articles dans ces 5 categories :
+Selectionne et redige EXACTEMENT 4 articles dans ces 4 categories (1 article par categorie, ni plus ni moins) :
 
-**[1] PHARMA MONDE** (1 article OBLIGATOIRE) — Actu internationale pharma/sante
-- Source etrangere UNIQUEMENT (Reuters, STAT News, Pharmaceutical Journal, Fierce Pharma, European Pharmaceutical Review, Pharmacy Times, Nature Medicine, BioPharma Dive, etc.)
+**[1] PHARMA FRANCE** (1 article OBLIGATOIRE) — Actu reglementaire/economique/metier francaise
+- Impact direct sur l'exercice officinal : LFSS, conventions, ROSP, missions, marges, Ordre, ARS, HAS, ANSM, Assurance Maladie
+- Source francaise uniquement (Moniteur, Quotidien du Pharmacien, Pharmacien de France, LEEM, HAS, ANSM, Egora, APMnews, Ordre, etc.)
+- categorie : "pharma_france"
+- badge_label : "Pharma France"
+
+**[2] PHARMA MONDE** (1 article OBLIGATOIRE) — Actu internationale pharma/sante
+- Source ETRANGERE uniquement (Reuters, STAT News, Pharmaceutical Journal, Fierce Pharma, European Pharmaceutical Review, Pharmacy Times, Nature Medicine, BioPharma Dive, etc.)
 - Traduis et adapte en francais avec le style Stephen. Explique l'impact pour un pharmacien francais.
 - categorie : "pharma_monde"
 - badge_label : "Pharma Monde"
 
-**[2-3] ACTUS DU JOUR** (2 articles) — Les plus percutants pour les pharmaciens officinaux
-- Impact direct sur l'exercice : reglementation, marges, missions, approvisionnement, reglementaire (LFSS, ROSP), sante publique
-- categorie : "pharma_france" | "sante"
-- badge_label : "Pharma France" | "Sante"
-
-**[4] LA BONNE NOUVELLE** (1 article) — Une info positive, encourageante pour la profession
-- Avancee pour les patients ou les pharmaciens, nouveau service valorise, remboursement obtenu, etude rassurante, innovation utile
+**[3] LA BONNE NOUVELLE** (1 article OBLIGATOIRE) — Une info positive et encourageante
+- Avancee therapeutique, nouveau service valorise, remboursement obtenu, etude rassurante, innovation utile, humain derriere un chiffre
 - Si aucune vraie bonne nouvelle dans les articles, prends la moins mauvaise et formule-la positivement
 - categorie : "bonne_nouvelle"
 - badge_label : "La bonne nouvelle"
 
-**[5] L'AVENIR DE LA PHARMA** (1 article) — R&D, innovation, pipeline, perspectives
+**[4] L'AVENIR DE LA PHARMA** (1 article OBLIGATOIRE) — R&D, innovation, pipeline, perspectives
 - Medicament en developpement (phase 2/3/4), nouvelle molecule, technologie emergente (ARNm, CAR-T, IA, etc.), recherche prometteuse avec impact clinique futur
-- Si peu d'articles R&D disponibles, extrais la dimension innovation/avenir d'un article existant
 - categorie : "avenir_pharma"
 - badge_label : "L'avenir de la pharma"
+
+NE PAS generer d'article categorie "sante" (cette categorie est desactivee). NE PAS generer d'article "business" (genere separement en format analytique long).
 
 REGLES DE SOURCES :
 1. Maximum 1 article par source (media). JAMAIS 2 articles du meme media.
@@ -250,10 +253,12 @@ Tu rediges un "Le Saviez-Vous" quotidien pour Pharm'Actus.
 - Phrases courtes, rythmees, une idee par phrase
 - Humour bienvenu, ton decontracte, tutoiement naturel
 
-=== SUJETS POSSIBLES ===
+=== SUJETS POSSIBLES (pharmacie ET medecine en general) ===
 - Histoire d'un medicament celebre (decouverte, molecule, anecdote)
-- Inventions pharmaceutiques marquantes
-- Pharmaciens celebres ou meconnus
+- Inventions pharmaceutiques OU medicales marquantes
+- Pharmaciens, medecins, chimistes celebres ou meconnus
+- Histoire d'une maladie, d'un vaccin, d'un instrument medical
+- Anecdotes sur des pratiques medicales historiques (parfois insolites)
 - Evolution du metier a travers les ages
 - Plantes medicinales et leur histoire
 - Grandes epidemies et reponse pharmaceutique
@@ -295,6 +300,153 @@ Pour les tags : 3 a 5 mots-cles thematiques en francais, minuscules, sans accent
 
     print("  [ERROR] Claude n'a pas retourne de JSON valide pour le LSV")
     return None
+
+
+# ── CLAUDE : article Business Officine (analytique long format) ──────
+
+BUSINESS_PRIORITY_SOURCES = {
+    "Le Moniteur des Pharmacies",
+    "Le Quotidien du Pharmacien",
+    "Le Pharmacien de France",
+    "LEEM",
+    "HAS Actualites",
+    "ANSM Actualites",
+    "Ordre des Pharmaciens",
+    "APMnews Pharma",
+    "Egora",
+}
+
+
+def generate_business_article(raw_articles, existing_urls=None):
+    """Generate a daily Business Officine analytical article (long format)."""
+    client = anthropic.Anthropic()
+
+    # Filter existing urls
+    if existing_urls:
+        raw_articles = [a for a in raw_articles if a.get("link", "") not in existing_urls]
+
+    # Prioritize business sources for the curation
+    prioritized = sorted(raw_articles, key=lambda a: a.get("source", "") not in BUSINESS_PRIORITY_SOURCES)
+    # Limit to top 30 to fit prompt
+    prioritized = prioritized[:30]
+
+    articles_text = "\n\n".join(
+        f"[{i+1}] {a['title']}\nSource: {a['source']} | Date: {a['date']}\nResume: {a['summary']}\nLien: {a['link']}"
+        for i, a in enumerate(prioritized)
+    )
+
+    today = datetime.now(PARIS_TZ).strftime("%Y-%m-%d")
+    week_start = (datetime.now(PARIS_TZ) - timedelta(days=7)).strftime("%Y-%m-%d")
+
+    prompt = f"""Tu es Stephen ROBERT, pharmacien consultant chez Pharm'Alpha et redacteur en chef de Pharm'Actus.
+
+Tu rediges un article analytique quotidien "BUSINESS OFFICINE" publie chaque matin sur Pharm'Actus.
+
+=== OBJECTIF DE LA RUBRIQUE ===
+Donner aux pharmaciens titulaires une lecture BUSINESS claire d'une actu de la semaine :
+- Impact economique sur l'officine (chiffres concrets, marges, ROSP, honoraires, missions)
+- Enjeux reglementaires qui vont changer la donne
+- Opportunites business a saisir
+- Decryptage de rapports officiels (LEEM, HAS, ANSM, Cour des comptes, LFSS, IGAS)
+
+=== TON STYLE ===
+- Direct, decontracte, tutoiement
+- MAIS plus analytique que les actus quotidiennes : tu es consultant business, pas journaliste
+- Chiffres OBLIGATOIRES a chaque argument (euros, %, nombre de pharmacies, etc.)
+- Reference a un rapport, une etude, une source officielle quand possible
+- Langue professionnelle mais accessible
+- Phrases courtes qui vont droit au but
+- Conclus avec un insight actionable
+
+=== CRITERES DE SELECTION DU SUJET ===
+1. Sujet avec un VRAI impact business (pas juste une actu info)
+2. Avec des chiffres publics verifiables
+3. Qui touche la RENTABILITE, les MARGES, les MISSIONS, la REGLEMENTATION, ou le MARCHE
+4. Idealement different des sujets traites dans les 4 autres categories du jour
+5. EVITER un sujet deja traite les jours precedents (l'article doit etre original)
+
+=== ARTICLES DISPONIBLES ({week_start} → {today}) ===
+{articles_text}
+
+---
+
+Parmi ces articles, identifie LE SUJET BUSINESS le plus percutant a traiter aujourd'hui. Redige un article analytique structure :
+
+1. **titre** (max 90 car) : accrocheur, oriente business avec un chiffre si possible
+2. **chapo** (2-3 phrases, ~40 mots) : le chiffre choc ou l'enjeu central
+3. **contexte** (150-200 mots) : de quoi parle-t-on, depuis quand, qui est concerne
+4. **analyse** (250-350 mots) : decryptage, chiffres precis, comparaisons, impact. AU MOINS 3 chiffres verifiables.
+5. **recommandations** (100-150 mots) : 3-5 actions concretes numerotees (format "1. Titre — Detail")
+6. **sources** : liste des sources utilisees avec nom + url
+7. **image_keywords** : 2-3 mots EN ANGLAIS pour chercher une photo Pexels
+8. **tags** : 4 tags en francais minuscules, sans accents
+
+JSON UNIQUEMENT :
+{{
+  "titre": "...",
+  "chapo": "...",
+  "contexte": "...",
+  "analyse": "...",
+  "recommandations": "...",
+  "sources": [
+    {{"nom": "...", "url": "..."}}
+  ],
+  "image_keywords": "...",
+  "tags": ["tag1", "tag2", "tag3", "tag4"],
+  "confidence_score": 0.X,
+  "warnings": ["liste des incertitudes / chiffres a verifier"]
+}}
+
+Le confidence_score (0-1) reflete ton niveau de certitude sur la qualite des chiffres."""
+
+    response = claude_create(
+        client,
+        model="claude-sonnet-4-20250514",
+        max_tokens=5000,
+        messages=[{"role": "user", "content": prompt}],
+    )
+
+    text = response.content[0].text.strip()
+    json_match = re.search(r"\{[\s\S]*\}", text)
+    if not json_match:
+        print("  [ERROR] Pas de JSON valide pour l'article business")
+        return None
+
+    try:
+        biz = json.loads(json_match.group())
+    except json.JSONDecodeError as e:
+        print(f"  [ERROR] JSON business parse: {e}")
+        return None
+
+    # Assemble into the standard article format for downstream injection
+    sources_list = biz.get("sources", [])
+    sources_md = "\n".join(f"- {s.get('nom', '')}" for s in sources_list)
+
+    full_text = (
+        f"{biz.get('chapo', '')}\n\n"
+        f"## Contexte\n\n{biz.get('contexte', '')}\n\n"
+        f"## Analyse business\n\n{biz.get('analyse', '')}\n\n"
+        f"## Recommandations actionnables\n\n{biz.get('recommandations', '')}\n\n"
+        f"## Sources citees\n\n{sources_md}"
+    )
+
+    chapo = biz.get("chapo", "")
+    resume = chapo[:280] + ("..." if len(chapo) > 280 else "")
+
+    return {
+        "titre": biz.get("titre", "Business Officine"),
+        "resume": resume,
+        "full_text": full_text,
+        "categorie": "business_officine",
+        "badge_label": "Business",
+        "source": "Pharm'Actus",
+        "source_url": "",
+        "image_keywords": biz.get("image_keywords", "pharmacy business finance"),
+        "tags": biz.get("tags", ["business", "analyse", "officine"]),
+        "confidence_score": biz.get("confidence_score", 0),
+        "warnings": biz.get("warnings", []),
+        "sources_detail": sources_list,
+    }
 
 
 # ── PEXELS : photos libres de droit ──────────────────────────────────
@@ -346,6 +498,13 @@ PENDING_LSV_FILE = ROOT_DIR / "output" / "pending_lsv.json"
 
 def get_fallback_photo(categorie):
     """Pick a stock fallback photo for the given category. Cycles through available photos."""
+    # Business officine : single stock file, no numbering
+    if categorie == "business_officine":
+        photo_path = STOCK_DIR / "business_officine.jpg"
+        if photo_path.exists():
+            return "stock/business_officine.jpg"
+        return ""
+
     cat = categorie if categorie in ("pharma_france", "pharma_monde", "sante", "lsv") else "sante"
     idx = _stock_usage.get(cat, 0)
     # 4 photos per category: cat_1.jpg .. cat_4.jpg
@@ -932,20 +1091,33 @@ def main():
     print(f"  Date: {datetime.now(PARIS_TZ).strftime('%Y-%m-%d %H:%M')}")
 
     # 1. Fetch RSS
-    print("\n[1/5] Collecte des flux RSS...")
+    print("\n[1/6] Collecte des flux RSS...")
     raw_articles = fetch_rss_articles()
     if not raw_articles:
         print("  Aucun article RSS. Arret.")
         return
 
-    # 2. Curate 5 articles (3 actus + 1 bonne nouvelle + 1 avenir pharma)
+    # 2. Curate 4 articles (pharma_france + pharma_monde + bonne_nouvelle + avenir_pharma)
     existing_urls = get_existing_source_urls()
-    print(f"\n[2/5] Curation via Claude ({len(raw_articles)} articles, {len(existing_urls)} deja publies)...")
+    print(f"\n[2/6] Curation via Claude ({len(raw_articles)} articles, {len(existing_urls)} deja publies)...")
     curated = curate_with_claude(raw_articles, existing_urls)
-    print(f"  {len(curated)} actus selectionnees")
+    print(f"  {len(curated)} articles selectionnes (hors business et LSV)")
 
-    # 3. Generate 1 Le Saviez-Vous (ou utiliser le LSV en attente)
-    print("\n[3/5] Generation du Le Saviez-Vous...")
+    # 3. Generate Business Officine analytical article (separate long-format call)
+    print("\n[3/6] Generation de l'article Business Officine...")
+    try:
+        business = generate_business_article(raw_articles, existing_urls)
+        if business:
+            print(f"  Business: {business.get('titre', '')[:60]}...")
+            print(f"  Confidence: {business.get('confidence_score', 0)*100:.0f}%")
+            curated.append(business)
+        else:
+            print("  [WARN] Pas d'article business genere")
+    except Exception as e:
+        print(f"  [ERROR] Echec business: {e}")
+
+    # 4. Generate 1 Le Saviez-Vous (ou utiliser le LSV en attente)
+    print("\n[4/6] Generation du Le Saviez-Vous...")
     existing_lsv = get_existing_lsv_titles()
     lsv = load_pending_lsv() or generate_lsv_with_claude(existing_lsv)
     if lsv:
@@ -969,14 +1141,14 @@ def main():
         print("  Rien a publier. Arret.")
         return
 
-    # 4. Photos + insertion HTML
-    print("\n[4/5] Photos + mise a jour index.html...")
+    # 5. Photos + insertion HTML
+    print("\n[5/6] Photos + mise a jour index.html...")
     updated = update_index_html(curated)
 
     if updated:
-        # 5. Send newsletter (uniquement les articles effectivement ajoutes)
+        # 6. Send newsletter (uniquement les articles effectivement ajoutes)
         added = [a for a in curated if a.get("id")]
-        print(f"\n[5/5] Envoi newsletter Brevo ({len(added)} articles)...")
+        print(f"\n[6/6] Envoi newsletter Brevo ({len(added)} articles)...")
         send_newsletter(added)
         print("\n=== Mise a jour terminee avec succes ===")
     else:

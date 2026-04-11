@@ -721,6 +721,27 @@ body {
   line-height: 1.8;
   color: var(--text-secondary);
 }
+.modal-subtitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 24px 0 8px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--orange);
+  display: inline-block;
+}
+.modal-list {
+  margin: 8px 0 16px;
+  padding-left: 20px;
+}
+.modal-list li {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
 .modal-text p {
   margin: 0 0 14px 0;
 }
@@ -1196,6 +1217,21 @@ body {
 // Mis a jour automatiquement par n8n chaque semaine
 // ============================================================
 const ARTICLES = [
+  {
+    id: "business_2026_04_11",
+    date: "2026-04-11",
+    type: "business",
+    categorie: "business_officine",
+    titre: "TROD angine suspendu : le manque à gagner réel par officine (et comment compenser)",
+    resume: "Plus de commandes depuis le 3 avril. Pour une officine qui réalise 15 TROD/mois, c'est 1 080 € de CA annuel qui disparaît. Pas la fin du monde — mais un symptôme.",
+    full_text: "Plus de commandes depuis le 3 avril. Pour une officine qui réalise 15 TROD/mois, c'est 1 080 € de CA annuel qui disparaît. Pas la fin du monde — mais un symptôme.\n\n## Contexte\n\nL'Assurance Maladie a suspendu le 3 avril les commandes de TROD angine dans toutes les officines. Raison officielle : fin du marché public, nouveau dispositif à mettre en place. Délai de reprise annoncé : « plusieurs semaines ». En langage Sécu, ça veut dire plusieurs mois.\n\nRappelons ce qu'est cette mission : un test rapide d'orientation diagnostique qui permet au pharmacien de différencier une angine virale (inutile de prescrire un antibio) d'une angine bactérienne (amoxicilline indiquée). Honoraire fixé à 6 € TTC par test par l'avenant conventionnel de 2022. C'était la vitrine de la nouvelle pharmacie clinique : une mission tarifée, valorisante, qui libérait du temps médical.\n\nAujourd'hui : impossible de la facturer. Et donc impossible de l'amortir.\n\n## Analyse business\n\nPassons aux chiffres. Selon la FSPF, environ 30 % des 20 900 officines françaises pratiquent réellement les TROD angine (les autres ne se sont jamais lancées ou ont abandonné). Sur ces ~6 270 pharmacies actives, la moyenne communément citée est de 15 TROD/mois par officine — avec une forte saisonnalité (pic hivernal à 30-40/mois, été à 5-8).\n\nCalcul direct : 15 tests × 6 € = 90 €/mois de CA missions. Annualisé : 1 080 €/pharmacie. Sur le réseau national : 6,77 M€/an qui s'évaporent pendant la suspension.\n\nCe n'est pas énorme pour une officine prise isolément — à peine 0,1 % du CA moyen annuel. Mais le problème n'est pas là. Le vrai problème c'est le signal politique : quand une mission est suspendue du jour au lendemain, sans concertation, sans planning de reprise, ça refroidit tous les titulaires qui hésitaient à investir dans d'autres missions (bilan partagé, vaccination, cystite). Le message implicite : « investis pour nous, on peut t'arrêter quand on veut. »\n\nÀ comparer avec le bilan partagé de médication — 60 €/patient — que moins de 4 % des pharmacies réalisent effectivement. Les freins sont connus : complexité administrative, formation longue, rémunération jugée insuffisante par rapport au temps mobilisé. La suspension du TROD vient alimenter ce scepticisme ambiant.\n\n## Recommandations actionnables\n\n1. Inventaire immédiat — Compte tes tests restants et estime combien de semaines tu tiens. Au rythme normal : rationne, réserve pour les cas ambigus.\n2. Communication patient — Affiche clairement « TROD angine temporairement indisponible » en vitrine et sur ton écran d'attente. Évite la négociation au comptoir.\n3. Bascule les consultations manquées — Chaque patient qui venait pour un TROD et repart vers le médecin traitant, c'est une occasion de lui proposer un autre service : vaccination, cystite, point sur ses traitements chroniques.\n4. Prépare ta reprise — Liste de patients concernés + rappel SMS dès que la commande redevient possible. Tu rattrapes 2-3 semaines de « retard » en une quinzaine.\n5. Diversifie ton mix missions — Ne reste pas dépendant d'une seule source. Si tu n'as pas encore lancé le bilan partagé ou la vaccination grippe/COVID, c'est le moment.\n\n## Sources citées\n\n- Le Moniteur des Pharmacies - TROD angine : suspension des commandes\n- Convention nationale pharmaceutique (avenant 2022, tarif honoraires)\n- FSPF - Statistiques d'usage des missions officinales\n- Ordre des Pharmaciens - Démographie officinale 2025",
+    source: "Pharm'Actus",
+    source_url: "",
+    tiktok_url: "",
+    badge_label: "Business",
+    image_url: "assets/img_business_2026_04_11.jpg",
+    tags: ["business", "trod", "marges", "missions"]
+  },
 {
     id: "actu_2026_04_11_1",
     date: "2026-04-11",
@@ -2091,7 +2127,19 @@ function openModal(id) {
   document.getElementById('modal-date').textContent = formatDate(a.date);
   document.getElementById('modal-title').textContent = a.titre;
   const rawText = a.full_text || a.resume;
-  document.getElementById('modal-text').innerHTML = rawText.split('\n\n').map(p => '<p>' + p.replace(/\n/g, '<br>') + '</p>').join('');
+  document.getElementById('modal-text').innerHTML = rawText.split('\n\n').map(block => {
+    if (block.startsWith('## ')) {
+      return '<h4 class="modal-subtitle">' + block.substring(3) + '</h4>';
+    }
+    // Simple markdown: bold **text** + italic list items
+    block = block.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+    // Bullet points (lines starting with "- ")
+    if (block.split('\n').every(l => !l.trim() || l.trim().startsWith('- '))) {
+      const items = block.split('\n').filter(l => l.trim().startsWith('- ')).map(l => '<li>' + l.trim().substring(2) + '</li>').join('');
+      return '<ul class="modal-list">' + items + '</ul>';
+    }
+    return '<p>' + block.replace(/\n/g, '<br>') + '</p>';
+  }).join('');
 
   // Image ou visuel par defaut
   const imgWrap = document.getElementById('modal-img-wrap');
