@@ -252,41 +252,61 @@ Tu rediges un "Le Saviez-Vous" quotidien pour Pharm'Actus.
 
 === TON STYLE ===
 - Tu racontes comme si tu partageais une anecdote fascinante a un pote pharmacien
-- Accroche percutante ("Tu savais que...", "Imagine un peu...", "Figure-toi que...")
+- Accroche percutante (VARIE les formulations, pas toujours "Tu savais que" ou "Figure-toi que")
 - Anecdotes concretes : dates, noms, lieux, chiffres
 - Un twist ou un fait surprenant au milieu du recit
-- Conclusion qui fait le lien avec le quotidien au comptoir aujourd'hui
+- Conclusion qui fait le lien avec le quotidien au comptoir ou la medecine d'aujourd'hui
 - Phrases courtes, rythmees, une idee par phrase
 - Humour bienvenu, ton decontracte, tutoiement naturel
 
-=== SUJETS POSSIBLES (pharmacie ET medecine en general) ===
-- Histoire d'un medicament celebre (decouverte, molecule, anecdote)
-- Inventions pharmaceutiques OU medicales marquantes
-- Pharmaciens, medecins, chimistes celebres ou meconnus
-- Histoire d'une maladie, d'un vaccin, d'un instrument medical
-- Anecdotes sur des pratiques medicales historiques (parfois insolites)
-- Evolution du metier a travers les ages
-- Plantes medicinales et leur histoire
-- Grandes epidemies et reponse pharmaceutique
-- Reglementations historiques qui ont change le metier
-- Anecdotes insolites de la pharmacopee mondiale
+=== SUJETS POSSIBLES (pharmacie, medecine, sante en general — VARIER chaque jour) ===
+IMPORTANT : ne te limite PAS a l'histoire de la pharmacie. Elargis a la medecine, la sante, la science.
+Voici 15 categories a alterner jour apres jour :
 
-=== TITRES DEJA UTILISES (ne pas refaire) ===
+1. Comment on diagnostiquait une maladie autrefois (diabete, syphilis, tuberculose, peste, etc.)
+2. L'invention d'un instrument medical (stethoscope, thermometre, seringue, microscope, etc.)
+3. Un medicament celebre et son histoire (aspirine, morphine, cortisone, viagra, etc.)
+4. Une epidemie et comment on l'a vaincue (variole, cholera, polio, grippe espagnole, etc.)
+5. Un medecin, chirurgien ou chercheur celebre/meconnu (pas que des pharmaciens !)
+6. Une pratique medicale bizarre/terrifiante du passe (saignees, trepanation, mercure, etc.)
+7. L'histoire d'un vaccin (qui l'a invente, comment, les resistances a l'epoque)
+8. Un poison devenu medicament (ou l'inverse)
+9. L'histoire d'une plante medicinale (du jardin au comprime)
+10. Un record medical ou pharmaceutique insolite
+11. L'evolution d'un outil du quotidien officinal (balance, mortier, ordonnance, etc.)
+12. Une decouverte accidentelle en medecine (serendipite medicale)
+13. L'histoire d'un organe ou d'une partie du corps et ce qu'on en croyait
+14. Les debuts de la chirurgie, de l'anesthesie, de l'antisepsie
+15. Une avancee recente mais meconnue de la science medicale
+
+=== REGLE DE VARIETE (STRICTE) ===
+- NE PAS toujours commencer le titre par "Quand les pharmaciens..." — ce format est trop repetitif
+- Alterner les types de titres :
+  * "Le saviez-vous ? Comment on diagnostiquait le diabete au XVIIe siecle"
+  * "Le saviez-vous ? L'aspirine a failli ne jamais exister"
+  * "Le saviez-vous ? Le stethoscope est ne de la pudeur d'un medecin"
+  * "Le saviez-vous ? Pourquoi le mercure a ete le medicament le plus prescrit pendant 4 siecles"
+  * "Le saviez-vous ? La premiere greffe du coeur a dure 18 minutes"
+  * "Le saviez-vous ? Un pharmacien a invente le Coca-Cola (et c'etait pas pour boire)"
+- VARIER les epoques : antiquite, moyen-age, renaissance, XVIIe-XVIIIe, XIXe, XXe, recent
+- VARIER les domaines : pharmacie, chirurgie, diagnostic, epidemiologie, nutrition, psychiatrie, etc.
+
+=== TITRES DEJA UTILISES (ne pas refaire un sujet trop proche) ===
 {existing}
 
-Genere UN SEUL "Le Saviez-Vous" original.
+Genere UN SEUL "Le Saviez-Vous" original, sur un sujet DIFFERENT des titres ci-dessus.
 
 JSON UNIQUEMENT :
 {{
-  "titre": "Le saviez-vous ? [titre accrocheur, max 80 car]",
+  "titre": "Le saviez-vous ? [titre accrocheur et VARIE, max 80 car]",
   "resume": "2-3 phrases de teaser percutantes",
-  "full_text": "250-350 mots, 5-6 paragraphes separes par \\n\\n. Raconte l'histoire de facon captivante, style Stephen. Derniere phrase = lien avec aujourd'hui au comptoir.",
+  "full_text": "250-350 mots, 5-6 paragraphes separes par \\n\\n. Raconte l'histoire de facon captivante, style Stephen. Derniere phrase = lien avec la medecine/pharmacie d'aujourd'hui.",
   "image_keywords": "2-3 mots EN ANGLAIS pour photo libre de droit",
   "tags": ["histoire", "tag2", "tag3"],
   "date": "{today}"
 }}
 
-Pour les tags : 3 a 5 mots-cles thematiques en francais, minuscules, sans accents (ex: "histoire", "penicilline", "xixeme", "vaccin", "plante", "chimie", "decouverte", "pharmacologie", "epidemie")."""
+Pour les tags : 3 a 5 mots-cles thematiques en francais, minuscules, sans accents (ex: "histoire", "diagnostic", "diabete", "chirurgie", "vaccin", "plante", "chimie", "decouverte", "epidemie", "anesthesie", "instrument", "poison")."""
 
     response = claude_create(client,
         model="claude-sonnet-4-20250514",
@@ -323,14 +343,15 @@ BUSINESS_PRIORITY_SOURCES = {
 }
 
 
-def generate_business_article(raw_articles, existing_urls=None, used_sources=None):
+def generate_business_article(raw_articles, existing_urls=None, used_sources=None, used_titles=None):
     """Generate a daily Business Officine analytical article (long format).
 
     used_sources : list of source names already used TODAY by curate_with_claude.
-    The business article must NOT pick from these sources (enforce source alternation).
+    used_titles : list of article titles already used TODAY (to avoid same topic in business).
     """
     client = anthropic.Anthropic()
     used_sources = set(used_sources or [])
+    used_titles = used_titles or []
 
     # Filter out already-published URLs
     if existing_urls:
@@ -365,6 +386,12 @@ def generate_business_article(raw_articles, existing_urls=None, used_sources=Non
             f"\n\n=== SOURCES DEJA UTILISEES AUJOURD'HUI (NE PAS reutiliser) ===\n"
             f"Les autres categories ont deja pris des articles dans : {', '.join(used_sources)}.\n"
             f"REGLE ABSOLUE : ne choisis AUCUN article provenant de ces sources. Pioche dans un autre media.\n"
+        )
+    if used_titles:
+        used_sources_text += (
+            f"\n=== SUJETS DEJA TRAITES AUJOURD'HUI (NE PAS refaire le meme sujet) ===\n"
+            + "\n".join(f"- {t}" for t in used_titles) + "\n"
+            + "L'article business DOIT porter sur un SUJET DIFFERENT de ceux ci-dessus. Pas de doublon thematique.\n"
         )
 
     prompt = f"""Tu es Stephen ROBERT, pharmacien consultant chez Pharm'Alpha et redacteur en chef de Pharm'Actus.
@@ -1138,15 +1165,16 @@ def main():
     curated = curate_with_claude(raw_articles, existing_urls)
     print(f"  {len(curated)} articles selectionnes (hors business et LSV)")
 
-    # Extraire les sources deja utilisees pour eviter doublons dans business
+    # Extraire les sources + sujets deja utilises pour eviter doublons dans business
     used_sources_today = [a.get("source", "") for a in curated if a.get("source")]
+    used_titles_today = [a.get("titre", "") for a in curated if a.get("titre")]
     if used_sources_today:
         print(f"  Sources utilisees aujourd'hui : {', '.join(used_sources_today)}")
 
     # 3. Generate Business Officine analytical article (separate long-format call)
     print("\n[3/6] Generation de l'article Business Officine...")
     try:
-        business = generate_business_article(raw_articles, existing_urls, used_sources=used_sources_today)
+        business = generate_business_article(raw_articles, existing_urls, used_sources=used_sources_today, used_titles=used_titles_today)
         if business:
             print(f"  Business: {business.get('titre', '')[:60]}...")
             print(f"  Confidence: {business.get('confidence_score', 0)*100:.0f}%")
