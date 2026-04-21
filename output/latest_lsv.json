@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? La première anesthésie a failli tourner au carnage public",
-  "resume": "16 octobre 1846, Boston : un dentiste s'apprête à endormir un patient devant 200 chirurgiens sceptiques. L'enjeu ? Révolutionner la chirurgie ou finir en prison pour homicide.",
-  "full_text": "Imagine la scène : amphithéâtre bondé du Massachusetts General Hospital, 200 chirurgiens au coude à coude, tous venus assister à ce qu'ils appellent déjà « la fumisterie du siècle ». William Morton, dentiste de 27 ans, s'avance avec son inhalateur bricolé et son éther sulfurique.\n\nLe patient, Gilbert Abbott, doit se faire retirer une tumeur au cou. Sans anesthésie, c'est l'agonie assurée. Avec l'éther de Morton, c'est peut-être la mort. Les chirurgiens ricanent : « Si ça foire, on aura un cadavre sur les bras et ce charlatan au tribunal. »\n\nMorton fait inhaler ses vapeurs à Abbott. Dix minutes d'attente insoutenable. Le patient s'effondre, inconscient. Mort ou endormi ? John Warren, le chirurgien-chef, commence à opérer. Première incision : Abbott ne bronche pas. Deuxième, troisième coup de scalpel : toujours rien.\n\nPlot twist hallucinant : Abbott se réveille en pleine opération ! Mais au lieu de hurler, il déclare calmement n'avoir « rien ressenti du tout ». Warren se tourne vers l'amphithéâtre médusé et lance cette phrase historique : « Messieurs, ce n'est pas de la fumisterie ! »\n\nCette démonstration révolutionne la médecine en une matinée. Fini les patients qui mordent des balles en bois, fini les amputations à la va-vite avec quatre gaillards pour maintenir le malheureux.\n\nAujourd'hui, quand tu vois passer une ordonnance d'antalgiques post-opératoires, pense à ce dentiste audacieux qui a permis que « chirurgie » ne rime plus avec « torture ».",
-  "image_keywords": "anesthesia surgery historical",
+  "titre": "Le saviez-vous ? La pénicilline a failli finir à la poubelle",
+  "resume": "En 1928, Alexander Fleming découvre par accident le premier antibiotique de l'histoire. Mais il a fallu attendre 12 ans et une guerre mondiale pour que sa trouvaille révolutionne la médecine.",
+  "full_text": "28 septembre 1928, Londres. Alexander Fleming revient de vacances dans son labo du St Mary's Hospital. Sur sa paillasse, des boîtes de Petri oubliées avec des cultures de staphylocoques. La plupart sont contaminées par des moisissures.\n\nN'importe qui d'autre aurait tout jeté à l'autoclave. Mais Fleming remarque un truc bizarre : autour d'une moisissure verdâtre, les bactéries ont complètement disparu. Comme si cette fichue moisissure les avait tuées.\n\nIl isole le champignon, l'identifie comme un Penicillium et baptise sa substance active \"pénicilline\". Mais voilà le hic : Fleming n'arrive pas à la purifier correctement. Il publie ses résultats en 1929 et... personne n'y fait attention. Même lui finit par laisser tomber.\n\nFallait attendre 1940 et l'équipe d'Oxford menée par Howard Florey et Ernst Boris Chain. Ils reprennent les travaux de Fleming, réussissent enfin à purifier la pénicilline et testent sur des souris infectées. Résultat : 100% de survie contre 0% pour le groupe témoin.\n\nLa Seconde Guerre mondiale change tout. Les Alliés ont un besoin urgent d'antibiotiques pour leurs blessés. En 1943, la production industrielle démarre. Fleming, Florey et Chain se partagent le Nobel de 1945.\n\nAujourd'hui, quand tu délivres une boîte d'amoxicilline, tu tiens entre tes mains l'héritage de cette moisissure \"ratée\" qui a sauvé des millions de vies.",
+  "image_keywords": "penicillin mold laboratory",
   "tags": [
     "histoire",
-    "anesthesie",
-    "chirurgie",
+    "antibiotique",
     "decouverte",
-    "medecine"
+    "penicilline",
+    "fleming"
   ],
-  "date": "2026-04-20",
+  "date": "2026-04-21",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",
