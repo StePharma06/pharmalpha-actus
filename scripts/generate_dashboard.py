@@ -459,14 +459,9 @@ tr:hover td {{ background: #fafafa; }}
   <h3 class="head-cumul">Cumul&eacute;</h3>
 
   <div class="stats-row">
-    <div class="label">Abonn&eacute;s total<small>a ce jour</small></div>
-    <div class="value week">&mdash;</div>
-    <div class="value cumul">{subs}</div>
-  </div>
-  <div class="stats-row">
-    <div class="label">Nouveaux abonn&eacute;s<small>inscrits sur la p&eacute;riode</small></div>
+    <div class="label">Abonn&eacute;s<small>nouveaux / total</small></div>
     <div class="value week">+{new_week}</div>
-    <div class="value cumul">+{new_cumul}</div>
+    <div class="value cumul">{subs}</div>
   </div>
   <div class="stats-row">
     <div class="label">Emails d&eacute;livr&eacute;s</div>
@@ -556,8 +551,7 @@ def render_email_dashboard(**ctx):
         </tr>'''
 
     stats_rows = ""
-    stats_rows += format_stat_row("Abonnes total", "&mdash;", str(subs))
-    stats_rows += format_stat_row("Nouveaux abonnes", f"+{new_week}", f"+{new_cumul}", "inscrits sur la periode")
+    stats_rows += format_stat_row("Abonnes", f"+{new_week}", str(subs), "nouveaux / total")
     stats_rows += format_stat_row("Emails delivres", str(week["delivered"]), str(cumul["delivered"]))
     stats_rows += format_stat_row(
         "Taux d'ouverture",
