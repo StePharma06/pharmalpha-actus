@@ -70,6 +70,54 @@ def get_subscribers_count(api_key):
     return data.get("totalSubscribers", 0)
 
 
+def get_new_subscribers_since(api_key, since_date_str):
+    """Count NEW subscribers in the list since a given date (YYYY-MM-DD).
+
+    Fetches all contacts in the list with pagination, then counts those whose
+    `createdAt` is >= since_date. Returns (count, list_of_new_contacts_for_debug).
+    """
+    from datetime import datetime as _dt, timezone as _tz
+    try:
+        since_dt = _dt.strptime(since_date_str, "%Y-%m-%d").replace(tzinfo=_tz.utc)
+    except ValueError:
+        return 0, []
+
+    new_count = 0
+    new_contacts = []
+    offset = 0
+    limit = 500
+    while True:
+        endpoint = f"/contacts/lists/{BREVO_LIST_ID}/contacts?limit={limit}&offset={offset}"
+        data = brevo_api(endpoint, api_key)
+        contacts = data.get("contacts", [])
+        if not contacts:
+            break
+        for c in contacts:
+            created = c.get("createdAt", "")
+            if not created:
+                continue
+            # Brevo returns ISO 8601 : 2026-04-10T15:30:00.123+00:00
+            try:
+                # Normalize: strip milliseconds / tz for comparison
+                cleaned = created.split(".")[0]
+                if cleaned.endswith("Z"):
+                    cleaned = cleaned[:-1]
+                if "+" in cleaned:
+                    cleaned = cleaned.split("+")[0]
+                created_dt = _dt.fromisoformat(cleaned).replace(tzinfo=_tz.utc)
+                if created_dt >= since_dt:
+                    new_count += 1
+                    new_contacts.append({"email": c.get("email", ""), "createdAt": created})
+            except Exception:
+                continue
+        if len(contacts) < limit:
+            break
+        offset += limit
+        if offset > 10000:
+            break
+    return new_count, new_contacts
+
+
 def get_aggregated_report(api_key, start_date, end_date):
     """Get aggregated Brevo report for a period."""
     endpoint = f"/smtp/statistics/aggregatedReport?startDate={start_date}&endDate={end_date}"
@@ -209,25 +257,32 @@ def build_dashboard(api_key):
     print(f"  Semaine : {week_start} -> {end_date}")
     print(f"  Cumule  : {CUMUL_START_DATE} -> {end_date}")
 
-    print("\n[1/5] Abonnes Brevo...")
+    print("\n[1/6] Abonnes Brevo...")
     subscribers = get_subscribers_count(api_key)
     print(f"  {subscribers} abonnes dans la liste")
 
-    print("\n[2/5] Stats semaine passee (7j)...")
+    print("\n[2/6] Nouveaux abonnes...")
+    new_week, _ = get_new_subscribers_since(api_key, week_start)
+    new_cumul, _ = get_new_subscribers_since(api_key, CUMUL_START_DATE)
+    print(f"  +{new_week} cette semaine, +{new_cumul} depuis le {CUMUL_START_DATE}")
+
+    print("\n[3/6] Stats semaine passee (7j)...")
     week_stats = get_stats_for_period(api_key, week_start, end_date)
     print(f"  {week_stats['delivered']} delivres, {week_stats['unique_opens']} ouvertures, {week_stats['unique_clicks']} clics")
 
-    print("\n[3/5] Stats cumulees (depuis debut)...")
+    print("\n[4/6] Stats cumulees (depuis debut)...")
     cumul_stats = get_stats_for_period(api_key, CUMUL_START_DATE, end_date)
     print(f"  {cumul_stats['delivered']} delivres, {cumul_stats['unique_opens']} ouvertures, {cumul_stats['unique_clicks']} clics")
 
-    print("\n[4/5] Mapping articles...")
+    print("\n[5/6] Mapping articles...")
     articles_map = load_articles_map()
     print(f"  {len(articles_map)} articles connus")
 
-    print("\n[5/5] Generation HTML...")
+    print("\n[6/6] Generation HTML + email...")
     html = render_dashboard(
         subscribers=subscribers,
+        new_week=new_week,
+        new_cumul=new_cumul,
         week_stats=week_stats,
         cumul_stats=cumul_stats,
         articles_map=articles_map,
@@ -239,6 +294,8 @@ def build_dashboard(api_key):
     print("\n[Email] Envoi du dashboard par email...")
     email_html = render_email_dashboard(
         subscribers=subscribers,
+        new_week=new_week,
+        new_cumul=new_cumul,
         week_stats=week_stats,
         cumul_stats=cumul_stats,
         articles_map=articles_map,
@@ -282,6 +339,8 @@ def build_top_table_html(stats, articles_map):
 def render_dashboard(**ctx):
     """Render the full HTML dashboard."""
     subs = ctx["subscribers"]
+    new_week = ctx.get("new_week", 0)
+    new_cumul = ctx.get("new_cumul", 0)
     week = ctx["week_stats"]
     cumul = ctx["cumul_stats"]
     articles_map = ctx["articles_map"]
@@ -400,9 +459,14 @@ tr:hover td {{ background: #fafafa; }}
   <h3 class="head-cumul">Cumul&eacute;</h3>
 
   <div class="stats-row">
-    <div class="label">Abonn&eacute;s<small>a ce jour</small></div>
+    <div class="label">Abonn&eacute;s total<small>a ce jour</small></div>
     <div class="value week">&mdash;</div>
     <div class="value cumul">{subs}</div>
+  </div>
+  <div class="stats-row">
+    <div class="label">Nouveaux abonn&eacute;s<small>inscrits sur la p&eacute;riode</small></div>
+    <div class="value week">+{new_week}</div>
+    <div class="value cumul">+{new_cumul}</div>
   </div>
   <div class="stats-row">
     <div class="label">Emails d&eacute;livr&eacute;s</div>
@@ -475,6 +539,8 @@ tr:hover td {{ background: #fafafa; }}
 def render_email_dashboard(**ctx):
     """Render a simplified HTML dashboard for email (inline styles, table layouts)."""
     subs = ctx["subscribers"]
+    new_week = ctx.get("new_week", 0)
+    new_cumul = ctx.get("new_cumul", 0)
     week = ctx["week_stats"]
     cumul = ctx["cumul_stats"]
     articles_map = ctx["articles_map"]
@@ -490,7 +556,8 @@ def render_email_dashboard(**ctx):
         </tr>'''
 
     stats_rows = ""
-    stats_rows += format_stat_row("Abonnes", "&mdash;", str(subs))
+    stats_rows += format_stat_row("Abonnes total", "&mdash;", str(subs))
+    stats_rows += format_stat_row("Nouveaux abonnes", f"+{new_week}", f"+{new_cumul}", "inscrits sur la periode")
     stats_rows += format_stat_row("Emails delivres", str(week["delivered"]), str(cumul["delivered"]))
     stats_rows += format_stat_row(
         "Taux d'ouverture",
