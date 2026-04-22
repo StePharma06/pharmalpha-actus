@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? La pénicilline a failli finir à la poubelle",
-  "resume": "En 1928, Alexander Fleming découvre par accident le premier antibiotique de l'histoire. Mais il a fallu attendre 12 ans et une guerre mondiale pour que sa trouvaille révolutionne la médecine.",
-  "full_text": "28 septembre 1928, Londres. Alexander Fleming revient de vacances dans son labo du St Mary's Hospital. Sur sa paillasse, des boîtes de Petri oubliées avec des cultures de staphylocoques. La plupart sont contaminées par des moisissures.\n\nN'importe qui d'autre aurait tout jeté à l'autoclave. Mais Fleming remarque un truc bizarre : autour d'une moisissure verdâtre, les bactéries ont complètement disparu. Comme si cette fichue moisissure les avait tuées.\n\nIl isole le champignon, l'identifie comme un Penicillium et baptise sa substance active \"pénicilline\". Mais voilà le hic : Fleming n'arrive pas à la purifier correctement. Il publie ses résultats en 1929 et... personne n'y fait attention. Même lui finit par laisser tomber.\n\nFallait attendre 1940 et l'équipe d'Oxford menée par Howard Florey et Ernst Boris Chain. Ils reprennent les travaux de Fleming, réussissent enfin à purifier la pénicilline et testent sur des souris infectées. Résultat : 100% de survie contre 0% pour le groupe témoin.\n\nLa Seconde Guerre mondiale change tout. Les Alliés ont un besoin urgent d'antibiotiques pour leurs blessés. En 1943, la production industrielle démarre. Fleming, Florey et Chain se partagent le Nobel de 1945.\n\nAujourd'hui, quand tu délivres une boîte d'amoxicilline, tu tiens entre tes mains l'héritage de cette moisissure \"ratée\" qui a sauvé des millions de vies.",
-  "image_keywords": "penicillin mold laboratory",
+  "titre": "Le saviez-vous ? Le thermomètre était un objet de luxe réservé aux riches",
+  "resume": "Pendant deux siècles, prendre sa température était un privilège de millionnaire. Il fallait attendre 20 minutes et avoir les moyens de s'offrir l'équivalent d'une voiture !",
+  "full_text": "Imagine un peu : en 1714, quand Gabriel Fahrenheit invente le premier thermomètre fiable au mercure, l'objet coûte l'équivalent de 3000 euros actuels. Seuls les médecins des cours royales peuvent se l'offrir.\n\nMais le pire, c'est qu'il faut 20 minutes pour avoir une mesure ! Les patients doivent rester immobiles, le thermomètre sous le bras, pendant qu'un domestique surveille l'heure avec un sablier. Les consultations médicales deviennent des cérémonies interminables.\n\nEt tiens-toi bien : jusqu'en 1866, on ne prenait pas la température dans la bouche ou sous le bras, mais uniquement dans les urines ! Les médecins plongeaient leur précieux instrument dans un pot de chambre, estimant que c'était plus \"scientifique\".\n\nLe tournant arrive avec Thomas Allbutt en 1867. Ce médecin anglais génial invente le thermomètre compact qui ne mesure que 15 cm (contre 30 avant) et donne le résultat en 5 minutes. Révolution !\n\nMais il faudra attendre 1885 pour que la production de masse rende l'objet accessible au grand public. Avant ça, avoir de la fièvre était un luxe diagnostique réservé à l'élite.\n\nAujourd'hui, avec nos thermomètres infrarouges à 2 secondes, on mesure la température de nos patients plus vite qu'un aristocrate du XVIIIe siècle ne sortait son mouchoir en dentelle !",
+  "image_keywords": "antique thermometer",
   "tags": [
     "histoire",
-    "antibiotique",
-    "decouverte",
-    "penicilline",
-    "fleming"
+    "diagnostic",
+    "instrument",
+    "temperature",
+    "medecine"
   ],
-  "date": "2026-04-21",
+  "date": "2026-04-22",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",
