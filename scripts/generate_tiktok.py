@@ -114,51 +114,41 @@ RESUME : {resume}
 TEXTE COMPLET :
 {full_text}
 
-Cree un script TikTok de 65 secondes. Voix off continue du debut a la fin.
+Cree un script TikTok FLUIDE. Voix off continue du debut a la fin. Pas de facecam, juste clips video IA + voix ElevenLabs + sous-titres.
 
 STRUCTURE :
 1. HOOK (5s) : accroche CHOC, phrase complete en 5 secondes. Donne envie de rester.
-2. STORY en 5 parties enchainee sans rupture (50s total) :
-   - part1 (10s) : mise en contexte
-   - part2 (10s) : le fait principal
-   - part3 (10s) : developpement ou anecdote
-   - part4 (10s) : twist ou fait surprenant
-   - part5 (10s) : conclusion + "Pharmusez-vous bien !"
-3. FACECAM CTA (7s) : Stephen face camera, CTA + LOOP PHRASE.
-   La phrase DOIT se terminer par quelque chose qui enchaine NATURELLEMENT avec le debut du hook.
-   Technique Estherium TikTok : quand la video relance en boucle, le spectateur ne s'en rend pas compte.
-   Ex si hook = "Saviez-vous que vos bijoux..." -> CTA finit par "...et la prochaine fois que tu regarderas un bijou, tu y penseras."
-   Inclure aussi un CTA : "Commente, partage et abonne-toi !"
+2. STORY en 4 parties enchainees sans rupture (40s total) :
+   - part1 (10s) : contexte
+   - part2 (10s) : fait principal
+   - part3 (10s) : twist ou developpement surprenant
+   - part4 (10s) : conclusion + "Pharmusez-vous bien !" + LOOP PHRASE
+   La LOOP PHRASE est la derniere phrase du voiceover. Elle doit se connecter NATURELLEMENT au debut du hook pour que la video tourne en boucle sans rupture.
+   Ex si hook = "Tu savais que le mot carat vient des pharmaciens..." -> fin = "...et la prochaine fois que tu verras un bijou, tu y penseras."
 
 REGLES :
-- full_voiceover = hook + story concatenes. EXACTEMENT 150 mots maximum (pas plus !). Rythme soutenu. Avec accents francais corrects (e avec accent, a avec accent, etc). PAS d'emoji, PAS de guillemets typographiques.
-- facecam_cta = phrase courte pour le face camera final (7 sec max)
-- Chaque partie a un "video_prompt" DETAILLE pour generer un clip video IA (Grok Imagine).
-  Les prompts doivent etre ULTRA SPECIFIQUES et VISUELS. Decrire une SCENE avec action, mouvement, eclairage.
-  Ex : "Close-up of dark brown carob seeds being carefully poured from an old hand onto a brass pharmacy scale, warm candlelight, medieval apothecary, cinematic slow motion"
+- full_voiceover = hook + story concatenes. MAXIMUM 130 mots (environ 45 secondes au rythme ElevenLabs). Rythme fluide, pas de pause.
+- Ecrire en FRANCAIS NATUREL avec les accents (é, è, à, ç, etc). PAS d'emoji, PAS de guillemets typographiques.
+- Chaque partie a un "video_prompt" DETAILLE pour Grok Imagine (scene, action, mouvement, eclairage, cinematique).
+  Ex : "Close-up of dark brown carob seeds being carefully poured onto a brass pharmacy scale, warm candlelight, medieval apothecary, cinematic slow motion"
   PAS de descriptions vagues. PAS de texte dans la video.
-- music_mood : le mood de la musique d'ambiance parmi : medieval, epic, warm, mysterious, celebration
+- music_mood parmi : medieval, epic, warm, mysterious, celebration
 - titre_tiktok : conversationnel, PAS de majuscules agressives
 
 JSON UNIQUEMENT :
 {{
   "hook": {{
-    "voiceover": "Accroche choc, phrase COMPLETE en 5 sec (~20 mots)",
-    "video_prompt": "Scene detaillee pour clip video IA, mouvement, eclairage, cinematique..."
+    "voiceover": "Accroche choc complete en 5 sec (~15-18 mots)",
+    "video_prompt": "Scene detaillee cinematique..."
   }},
   "story": {{
-    "full_voiceover": "Texte COMPLET hook + story (5 parties enchainees). ~190 mots, 55 sec. Se termine par 'Pharmusez-vous bien !'",
+    "full_voiceover": "Texte COMPLET hook + 4 parties enchainees. 130 mots MAX. Se termine par 'Pharmusez-vous bien !' puis LOOP PHRASE connectant au debut du hook.",
     "parts": [
       {{"id": "part1", "video_prompt": "Scene detaillee...", "duration": 10}},
       {{"id": "part2", "video_prompt": "Scene detaillee...", "duration": 10}},
       {{"id": "part3", "video_prompt": "Scene detaillee...", "duration": 10}},
-      {{"id": "part4", "video_prompt": "Scene detaillee...", "duration": 10}},
-      {{"id": "part5", "video_prompt": "Scene detaillee...", "duration": 10}}
+      {{"id": "part4", "video_prompt": "Scene detaillee...", "duration": 10}}
     ]
-  }},
-  "facecam_cta": {{
-    "speech": "CTA face camera (7s max) qui se termine par une LOOP PHRASE connectant seamlessly au debut du hook. Ex: 'Commente et abonne-toi ! Et la prochaine fois que tu...'",
-    "duration": 7
   }},
   "music_mood": "medieval|epic|warm|mysterious|celebration",
   "titre_tiktok": "Titre conversationnel accrocheur (max 80 car)",
@@ -524,17 +514,22 @@ def build_creatomate_source(script, clips, voiceover_url, vo_text,
 
     parts = script.get("story", {}).get("parts", [])
     story_dur = sum(p.get("duration", 10) for p in parts)
-    cta_dur = script.get("facecam_cta", {}).get("duration", 7)
 
     # Fixed durations — clips are NOT stretched
     hook_dur = 5.0
 
+    # Total visual duration = hook + story (no facecam)
+    total_visual_dur = hook_dur + story_dur
+
+    # Use real voiceover duration if available (for music/voiceover sync)
+    if word_timestamps:
+        vo_actual_dur = word_timestamps[-1]["end"]
+    else:
+        vo_actual_dur = total_visual_dur
+
     # Music mood
     mood = script.get("music_mood", "default")
     music_url = MUSIC_TRACKS.get(mood, MUSIC_TRACKS["default"])
-
-    # Total visual duration = hook + story clips (at real duration) + facecam
-    total_visual_dur = hook_dur + story_dur + cta_dur
 
     # ── BACKGROUND MUSIC (full duration, low volume) ─────────────────────────
     elements.append({
@@ -543,13 +538,14 @@ def build_creatomate_source(script, clips, voiceover_url, vo_text,
         "volume": "12%",
     })
 
-    # ── VOICEOVER (plays during hook + story, NOT during facecam) ────────────
-    vo_dur = hook_dur + story_dur
+    # ── VOICEOVER (actual duration, not padded) ──────────────────────────────
     elements.append({
         "type": "audio", "source": voiceover_url,
-        "time": 0, "duration": round(vo_dur, 2),
+        "time": 0, "duration": round(vo_actual_dur, 2),
         "volume": "100%",
     })
+
+    vo_dur = total_visual_dur  # for subtitle capping
 
     # ── SUBTITLES (synced to word timestamps, capped at vo_dur) ────────────
     if word_timestamps:
@@ -582,19 +578,10 @@ def build_creatomate_source(script, clips, voiceover_url, vo_text,
             })
         t += part_dur
 
-    # ── 3. FACECAM CTA (loop phrase, fin de video) ───────────────────────────
-    if facecam_url:
-        elements.append({
-            "type": "video", "source": facecam_url,
-            "x": "50%", "y": "50%", "width": "100%", "height": "100%",
-            "time": round(t, 2), "duration": cta_dur,
-        })
-    t += cta_dur
-
-    # PAS de slide fin — la facecam CTA EST la fin (loop phrase -> hook)
+    # Pas de facecam — la story contient deja la loop phrase dans le voiceover
 
     total_dur_final = round(t, 2)
-    print(f"  Timeline : {total_dur_final}s (hook {hook_dur} + story {story_dur} + cta {cta_dur})")
+    print(f"  Timeline : {total_dur_final}s (hook {hook_dur} + story {story_dur})")
 
     return {
         "output_format": "mp4", "width": 1080, "height": 1920,
@@ -715,8 +702,7 @@ def main():
         print(f"[ERROR] Cles manquantes : {', '.join(missing)}")
         sys.exit(1)
 
-    if not HEYGEN_API_KEY:
-        print("[INFO] HeyGen non configure -> pas de facecam CTA")
+    # Facecam desactive : voix ElevenLabs + clips Grok uniquement
 
     lsv = load_lsv()
     script = generate_script(lsv)
@@ -725,9 +711,9 @@ def main():
         json.dump(script, f, ensure_ascii=False, indent=2)
 
     clips = generate_video_clips(script)
+    print("[5/7] Facecam HeyGen desactive (pipeline fluide uniquement)")
     vo_path, vo_url, vo_text, word_timestamps = generate_voiceover(script)
-    facecam_url = generate_facecam_cta(script)
-    video_path = assemble_video(script, clips, vo_url, vo_text, word_timestamps, facecam_url)
+    video_path = assemble_video(script, clips, vo_url, vo_text, word_timestamps, None)
 
     if video_path:
         slot = save_to_queue(video_path, script)
