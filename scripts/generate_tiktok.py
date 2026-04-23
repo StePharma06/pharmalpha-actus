@@ -127,7 +127,9 @@ STRUCTURE :
    Ex si hook = "Tu savais que le mot carat vient des pharmaciens..." -> fin = "...et la prochaine fois que tu verras un bijou, tu y penseras."
 
 REGLES CRITIQUES :
-- full_voiceover = hook + story concatenes. MAXIMUM 130 mots. Rythme fluide, pas de pause.
+- full_voiceover = hook + story concatenes. MAXIMUM 120 mots (strict). Rythme fluide, pas de pause.
+- EVITER les noms propres difficiles a prononcer (noms etrangers, marques obscures, chiffres complexes). ElevenLabs bugue dessus.
+  Ex : au lieu de "Eben Byers", ecrire "un riche industriel americain". Au lieu de "Radithor", ecrire "cet elixir" ou "cette potion".
 - NE PAS inclure "Pharmusez-vous bien" ni aucune signature personnelle. C'est une video 100% IA narree anonymement.
 - Le voiceover doit se terminer par la LOOP PHRASE qui connecte naturellement au debut du hook.
 - Ecrire en FRANCAIS NATUREL avec les accents (é, è, à, ç, etc). PAS d'emoji, PAS de guillemets typographiques.
@@ -260,25 +262,18 @@ def generate_video_clips(script, target_story_dur):
             clips["hook"] = url
             clip_durations["hook"] = 5
 
-    # Story: N clips of equal duration summing to target_story_dur
+    # Story: utilise EXACTEMENT les prompts fournis par Claude (pas de rotation)
     parts = script.get("story", {}).get("parts", [])
-    # Grok max 10s per clip -> minimum N clips = ceil(target / 10)
-    import math
-    n_needed = max(1, math.ceil(target_story_dur / 10))
-    n_clips = max(n_needed, len(parts))  # use at least the parts Claude defined
-    # Clamp each clip to [4, 10] seconds
-    clip_dur = max(4, min(10, target_story_dur / n_clips))
-    # Recompute n_clips so total matches exactly
-    n_clips = math.ceil(target_story_dur / clip_dur)
-    print(f"  Strategy : {n_clips} clips de {clip_dur:.1f}s (total story {n_clips * clip_dur:.1f}s)")
-
-    # Reuse the prompts Claude provided, extend with hook prompt if needed
     prompts = [p.get("video_prompt", "") for p in parts if p.get("video_prompt")]
-    if not prompts:
-        prompts = [hook_prompt]
-    while len(prompts) < n_clips:
-        # Reuse existing prompts in rotation
-        prompts.append(prompts[len(prompts) % len(parts)] if parts else hook_prompt)
+    n_clips = len(prompts) if prompts else 4
+
+    # Chaque clip dure target_story_dur / n_clips, limite Grok = 10s max
+    clip_dur = target_story_dur / n_clips
+    if clip_dur > 10:
+        # Impossible de tout couvrir avec n_clips a 10s -> on prend 10s et on ignore la fin
+        clip_dur = 10
+        print(f"  ATTN : voix trop longue, {n_clips * 10:.0f}s de clips pour voix {target_story_dur:.0f}s")
+    print(f"  Strategy : {n_clips} clips de {clip_dur:.1f}s (total story {n_clips * clip_dur:.1f}s)")
 
     for i in range(n_clips):
         time.sleep(10)  # rate limit protection
