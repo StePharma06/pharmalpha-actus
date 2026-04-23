@@ -24,8 +24,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
-          cache-dependency-path: tiktok-renderer/package-lock.json
 
       - name: Install Chrome/Chromium dependencies for Remotion
         run: |
@@ -36,12 +34,7 @@ jobs:
 
       - name: Install Remotion dependencies
         working-directory: tiktok-renderer
-        run: |
-          if [ -f package-lock.json ]; then
-            npm ci
-          else
-            npm install
-          fi
+        run: npm install --no-audit --no-fund
 
       - name: Generate TikTok video
         env:
