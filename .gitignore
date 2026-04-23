@@ -1,8 +1,8 @@
-# TikTok pipeline temp files
-output/tiktok/
+# TikTok pipeline temp files (queue committed, rest ignored)
+output/tiktok/*
+!output/tiktok/queue/
 __pycache__/
 *.pyc
 
-# Dashboard analytics : le fichier dashboard.html a la racine EST publie
-# (avec meta noindex et URL obfusquee). Les anciens dossiers locaux restent ignores.
+# Dashboard analytics
 dashboard/
