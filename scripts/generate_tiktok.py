@@ -252,8 +252,10 @@ def generate_video_clips(script):
         if url:
             clips["hook"] = url
 
-    # Story clips (10s each)
-    for part in script.get("story", {}).get("parts", []):
+    # Story clips (10s each) — sleep between requests to avoid xAI rate limit
+    for i, part in enumerate(script.get("story", {}).get("parts", [])):
+        if i > 0 or clips:
+            time.sleep(10)  # breathe between Grok requests
         part_id = part["id"]
         prompt = part.get("video_prompt", "")
         dur = part.get("duration", 10)
