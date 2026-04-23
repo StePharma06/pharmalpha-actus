@@ -724,6 +724,16 @@ def main():
         print(f"VIDEO EN QUEUE : {slot}")
         print(f"Publication dans {PUBLISH_DELAY_DAYS} jours")
         print("=" * 60)
+
+        # Affiche le caption TikTok dans les logs
+        caption_file = slot / "tiktok_caption.txt"
+        if caption_file.exists():
+            print()
+            print("=" * 60)
+            print("CAPTION TIKTOK (a copier-coller)")
+            print("=" * 60)
+            print(caption_file.read_text(encoding="utf-8"))
+            print("=" * 60)
     else:
         print("\n[ERROR] Pipeline echoue")
         sys.exit(1)
