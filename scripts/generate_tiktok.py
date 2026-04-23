@@ -118,16 +118,17 @@ Cree un script TikTok FLUIDE. Voix off continue du debut a la fin. Pas de faceca
 
 STRUCTURE :
 1. HOOK (5s) : accroche CHOC, phrase complete en 5 secondes. Donne envie de rester.
-2. STORY en 4 parties enchainees sans rupture (40s total) :
+2. STORY en 5 parties enchainees sans rupture (~50s total) :
    - part1 (10s) : contexte
    - part2 (10s) : fait principal
    - part3 (10s) : twist ou developpement surprenant
-   - part4 (10s) : conclusion + LOOP PHRASE
+   - part4 (10s) : consequence / developpement
+   - part5 (10s) : conclusion + LOOP PHRASE
    La LOOP PHRASE est la derniere phrase du voiceover. Elle doit se connecter NATURELLEMENT au debut du hook pour que la video tourne en boucle sans rupture.
    Ex si hook = "Tu savais que le mot carat vient des pharmaciens..." -> fin = "...et la prochaine fois que tu verras un bijou, tu y penseras."
 
 REGLES CRITIQUES :
-- full_voiceover = hook + story concatenes. MAXIMUM 120 mots (strict). Rythme fluide, pas de pause.
+- full_voiceover = hook + story concatenes. EXACTEMENT 140-150 mots (strict, pour ~50 secondes de voix). Rythme fluide, pas de pause.
 - EVITER les noms propres difficiles a prononcer (noms etrangers, marques obscures, chiffres complexes). ElevenLabs bugue dessus.
   Ex : au lieu de "Eben Byers", ecrire "un riche industriel americain". Au lieu de "Radithor", ecrire "cet elixir" ou "cette potion".
 - NE PAS inclure "Pharmusez-vous bien" ni aucune signature personnelle. C'est une video 100% IA narree anonymement.
@@ -146,12 +147,13 @@ JSON UNIQUEMENT :
     "video_prompt": "Scene detaillee cinematique..."
   }},
   "story": {{
-    "full_voiceover": "Texte COMPLET hook + 4 parties enchainees. 130 mots MAX. Se termine par LOOP PHRASE connectant au debut du hook. PAS de Pharmusez-vous bien ni signature.",
+    "full_voiceover": "Texte COMPLET hook + 5 parties enchainees. 150 mots MAX (~50s de voix). Se termine par LOOP PHRASE connectant au debut du hook. PAS de Pharmusez-vous bien ni signature.",
     "parts": [
       {{"id": "part1", "video_prompt": "Scene detaillee...", "duration": 10}},
       {{"id": "part2", "video_prompt": "Scene detaillee...", "duration": 10}},
       {{"id": "part3", "video_prompt": "Scene detaillee...", "duration": 10}},
-      {{"id": "part4", "video_prompt": "Scene detaillee...", "duration": 10}}
+      {{"id": "part4", "video_prompt": "Scene detaillee...", "duration": 10}},
+      {{"id": "part5", "video_prompt": "Scene detaillee...", "duration": 10}}
     ]
   }},
   "music_mood": "medieval|epic|warm|mysterious|celebration",
@@ -262,18 +264,29 @@ def generate_video_clips(script, target_story_dur):
             clips["hook"] = url
             clip_durations["hook"] = 5
 
-    # Story: utilise EXACTEMENT les prompts fournis par Claude (pas de rotation)
+    # Story: adapte le nombre de clips a la duree reelle de la voix
+    # Grok supporte 4-10s par clip
     parts = script.get("story", {}).get("parts", [])
     prompts = [p.get("video_prompt", "") for p in parts if p.get("video_prompt")]
-    n_clips = len(prompts) if prompts else 4
+    if not prompts:
+        prompts = [hook_prompt]
 
-    # Chaque clip dure target_story_dur / n_clips, limite Grok = 10s max
-    clip_dur = target_story_dur / n_clips
-    if clip_dur > 10:
-        # Impossible de tout couvrir avec n_clips a 10s -> on prend 10s et on ignore la fin
-        clip_dur = 10
-        print(f"  ATTN : voix trop longue, {n_clips * 10:.0f}s de clips pour voix {target_story_dur:.0f}s")
-    print(f"  Strategy : {n_clips} clips de {clip_dur:.1f}s (total story {n_clips * clip_dur:.1f}s)")
+    # Nombre de clips necessaires pour couvrir la voix (clips de 8-10s)
+    import math
+    target_clip_len = 9.0  # duree cible par clip
+    n_clips_needed = max(len(prompts), math.ceil(target_story_dur / target_clip_len))
+    clip_dur = target_story_dur / n_clips_needed
+    # Clamp [4, 10]
+    clip_dur = max(4.0, min(10.0, clip_dur))
+    # Recalcule n_clips pour que somme = target
+    n_clips = max(1, math.ceil(target_story_dur / clip_dur))
+
+    # Si on a plus de clips que de prompts Claude, on repete le dernier (conclusion)
+    # qui reste coherent avec "aujourd'hui, les scientifiques..."
+    while len(prompts) < n_clips:
+        prompts.append(prompts[-1])
+
+    print(f"  Strategy : {n_clips} clips de {clip_dur:.1f}s (total story {n_clips * clip_dur:.1f}s pour voix {target_story_dur:.0f}s)")
 
     for i in range(n_clips):
         time.sleep(10)  # rate limit protection
