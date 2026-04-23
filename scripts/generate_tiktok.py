@@ -40,7 +40,7 @@ ELEVENLABS_API_KEY = os.environ.get("ELEVENLABS_API_KEY", "")
 ELEVENLABS_VOICE_ID = os.environ.get("ELEVENLABS_VOICE_ID", "")
 HEYGEN_API_KEY = os.environ.get("HEYGEN_API_KEY", "")
 HEYGEN_AVATAR_IDS = os.environ.get("HEYGEN_AVATAR_IDS", "")
-CREATOMATE_API_KEY = os.environ.get("CREATOMATE_API_KEY", "")
+# Creatomate removed — we now use Remotion locally (npm run render)
 
 # Musiques d'ambiance libres de droits (Archive.org, CC0)
 MUSIC_TRACKS = {
@@ -567,125 +567,85 @@ def build_subtitle_elements_fallback(text, start_time, duration):
     return elements
 
 
-def build_creatomate_source(script, clips, clip_durations, voiceover_url, vo_text,
-                             word_timestamps, hook_end_s, facecam_url):
-    """Assemble timeline. Video duration = voice duration (computed from clips)."""
-    elements = []
-    t = 0.0
+import subprocess
 
-    hook_dur = clip_durations.get("hook", 5.0)
-    # Compute total from clip_durations
-    total_visual_dur = sum(clip_durations.values())
 
-    # Use real voiceover duration (ends when voice ends)
-    if word_timestamps:
-        vo_actual_dur = word_timestamps[-1]["end"]
-    else:
-        vo_actual_dur = total_visual_dur
-
-    # Music ends with voice (not video, so music tail doesn't persist)
-    end_dur = max(vo_actual_dur, total_visual_dur)
-
-    # Music
+def build_remotion_props(script, clips, clip_durations, voiceover_url,
+                         word_timestamps, hook_end_s):
+    """Build inputProps for Remotion TikTokPharmactus composition."""
     mood = script.get("music_mood", "default")
     music_url = MUSIC_TRACKS.get(mood, MUSIC_TRACKS["default"])
-    elements.append({
-        "type": "audio", "source": music_url,
-        "time": 0, "duration": round(end_dur, 2),
-        "volume": "12%",
-    })
 
-    # Voiceover (full duration)
-    elements.append({
-        "type": "audio", "source": voiceover_url,
-        "time": 0, "duration": round(vo_actual_dur, 2),
-        "volume": "100%",
-    })
-
-    # Hook video clip (ajoute AVANT les sous-titres pour qu'ils soient par-dessus)
+    # Build ordered clip list (hook first, then part1, part2, ...)
+    ordered_clips = []
     if clips.get("hook"):
-        elements.append({
-            "type": "video", "source": clips["hook"],
-            "x": "50%", "y": "50%", "width": "100%", "height": "100%",
-            "time": t, "duration": hook_dur,
-            "volume": "0%",
+        ordered_clips.append({
+            "url": clips["hook"],
+            "durationInSeconds": clip_durations.get("hook", 5.0),
         })
-    t += hook_dur
-
-    # Story clips
     story_parts = sorted([k for k in clips.keys() if k.startswith("part")],
                           key=lambda x: int(x.replace("part", "")))
     for part_id in story_parts:
-        part_dur = clip_durations.get(part_id, 10.0)
-        elements.append({
-            "type": "video", "source": clips[part_id],
-            "x": "50%", "y": "50%", "width": "100%", "height": "100%",
-            "time": round(t, 2), "duration": round(part_dur, 2),
-            "volume": "0%",
+        ordered_clips.append({
+            "url": clips[part_id],
+            "durationInSeconds": clip_durations.get(part_id, 10.0),
         })
-        t += part_dur
 
-    total_dur_final = round(max(t, vo_actual_dur), 2)
-
-    # ─── SOUS-TITRES EN DERNIER (pour qu'ils soient au-dessus des videos) ───
-    if word_timestamps:
-        elements.extend(build_subtitle_elements_from_timestamps(
-            word_timestamps, audio_offset=0, max_duration=total_dur_final))
-    else:
-        elements.extend(build_subtitle_elements_fallback(vo_text, 0, vo_actual_dur))
-    print(f"  Timeline : {total_dur_final}s (video {t:.1f}s, voice {vo_actual_dur:.1f}s)")
+    # Normalize words for Remotion (keep word/start/end)
+    words = []
+    for w in (word_timestamps or []):
+        words.append({
+            "word": w["word"],
+            "start": float(w["start"]),
+            "end": float(w["end"]),
+        })
 
     return {
-        "output_format": "mp4", "width": 1080, "height": 1920,
-        "frame_rate": 30, "duration": total_dur_final,
-        "elements": elements,
+        "clips": ordered_clips,
+        "voiceoverUrl": voiceover_url,
+        "musicUrl": music_url,
+        "words": words,
     }
 
 
-def render_video(source):
-    print("  Rendu Creatomate...")
-    resp = api_request(
-        "https://api.creatomate.com/v1/renders",
-        data={"source": source},
-        headers={"Authorization": f"Bearer {CREATOMATE_API_KEY}"},
-    )
-    renders = resp if isinstance(resp, list) else [resp]
-    render_id = renders[0].get("id", "")
-    print(f"  Render ID : {render_id}")
+def render_video_remotion(props, output_path):
+    """Call Remotion CLI via Node.js to render the video locally."""
+    print("  Rendu Remotion (local)...")
+    renderer_dir = ROOT_DIR / "tiktok-renderer"
+    props_path = OUTPUT_DIR / "remotion_props.json"
 
-    for _ in range(120):
-        time.sleep(5)
-        st = api_request(
-            f"https://api.creatomate.com/v1/renders/{render_id}",
-            headers={"Authorization": f"Bearer {CREATOMATE_API_KEY}"},
-        )
-        state = st.get("status", "")
-        if state == "succeeded":
-            print("  Rendu OK !")
-            return st.get("url", "")
-        elif state == "failed":
-            err = st.get("error_message", "")
-            print(f"  [ERROR] Rendu echoue : {err}")
-            return None
+    with open(props_path, "w", encoding="utf-8") as f:
+        json.dump(props, f, ensure_ascii=False, indent=2)
 
-    print("  [ERROR] Timeout 10 min")
-    return None
+    cmd = [
+        "node", str(renderer_dir / "scripts" / "render.mjs"),
+        f"--input={props_path}",
+        f"--output={output_path}",
+    ]
+    print(f"  Commande : {' '.join(cmd)}")
+    result = subprocess.run(cmd, cwd=str(renderer_dir), capture_output=True, text=True)
+    if result.returncode != 0:
+        print("  [ERROR] Remotion render echoue :")
+        print(result.stdout[-1500:])
+        print(result.stderr[-1500:])
+        return False
+    print(result.stdout[-500:])
+    return True
 
 
 def assemble_video(script, clips, clip_durations, vo_url, vo_text,
                     word_timestamps, hook_end_s, facecam_url):
-    print("[6/7] Assemblage Creatomate...")
-    source = build_creatomate_source(script, clips, clip_durations, vo_url, vo_text,
-                                      word_timestamps, hook_end_s, facecam_url)
-    with open(OUTPUT_DIR / "creatomate_source.json", "w", encoding="utf-8") as f:
-        json.dump(source, f, ensure_ascii=False, indent=2)
-
-    video_url = render_video(source)
-    if not video_url:
-        return None
+    print("[6/7] Assemblage Remotion...")
+    props = build_remotion_props(script, clips, clip_durations, vo_url,
+                                  word_timestamps, hook_end_s)
+    with open(OUTPUT_DIR / "remotion_props.json", "w", encoding="utf-8") as f:
+        json.dump(props, f, ensure_ascii=False, indent=2)
 
     video_path = OUTPUT_DIR / "tiktok_video.mp4"
-    urllib.request.urlretrieve(video_url, str(video_path))
+    ok = render_video_remotion(props, video_path)
+    if not ok or not video_path.exists():
+        return None
+
     size_mb = video_path.stat().st_size / (1024 * 1024)
     print(f"  Video finale : {size_mb:.1f} MB")
     return video_path
@@ -748,7 +708,7 @@ def main():
 
     missing = []
     for key in ["ANTHROPIC_API_KEY", "XAI_API_KEY", "ELEVENLABS_API_KEY",
-                 "ELEVENLABS_VOICE_ID", "CREATOMATE_API_KEY"]:
+                 "ELEVENLABS_VOICE_ID"]:
         if not os.environ.get(key):
             missing.append(key)
     if missing:

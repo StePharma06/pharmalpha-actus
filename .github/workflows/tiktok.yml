@@ -3,7 +3,7 @@ name: TikTok Video Daily
 on:
   schedule:
     - cron: '0 2 * * *'  # 04h00 Paris — generation quotidienne
-  workflow_dispatch:  # Lancement manuel
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -21,15 +21,34 @@ jobs:
         with:
           python-version: '3.12'
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: tiktok-renderer/package-lock.json
+
+      - name: Install Chrome/Chromium dependencies for Remotion
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg libnss3 libatk1.0-0 libatk-bridge2.0-0 \
+            libcups2 libdrm2 libxkbcommon0 libxcomposite1 libxdamage1 \
+            libxfixes3 libxrandr2 libgbm1 libasound2t64 libpango-1.0-0 libcairo2
+
+      - name: Install Remotion dependencies
+        working-directory: tiktok-renderer
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            npm install
+          fi
+
       - name: Generate TikTok video
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
           ELEVENLABS_VOICE_ID: ${{ secrets.ELEVENLABS_VOICE_ID }}
-          HEYGEN_API_KEY: ${{ secrets.HEYGEN_API_KEY }}
-          HEYGEN_AVATAR_IDS: ${{ secrets.HEYGEN_AVATAR_IDS }}
-          CREATOMATE_API_KEY: ${{ secrets.CREATOMATE_API_KEY }}
         run: python scripts/generate_tiktok.py
 
       - name: Commit video to queue
@@ -41,7 +60,6 @@ jobs:
             echo "Rien a committer"
           else
             git commit -m "tiktok: video du $(date +%Y-%m-%d) en queue (publication J+2)"
-            # Retry-safe push : rebase si le remote a avance pendant le workflow
             for i in 1 2 3; do
               git pull --rebase origin master || true
               if git push origin master; then
@@ -61,4 +79,5 @@ jobs:
           path: |
             output/tiktok/queue/
             output/tiktok/*.json
+            output/tiktok/*.mp4
           retention-days: 7

@@ -1,8 +1,13 @@
-# TikTok pipeline temp files (queue committed, rest ignored)
-output/tiktok/*
-!output/tiktok/queue/
+# TikTok pipeline temp files (pas la queue qui est committee)
+output/tiktok/*.json
+output/tiktok/*.mp3
+output/tiktok/*.mp4
+output/tiktok/*.png
 __pycache__/
 *.pyc
 
-# Dashboard analytics
-dashboard/
+# Remotion renderer - node_modules et build
+tiktok-renderer/node_modules/
+tiktok-renderer/out/
+tiktok-renderer/.remotion/
+tiktok-renderer/props.json
