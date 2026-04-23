@@ -122,14 +122,14 @@ STRUCTURE :
    - part1 (10s) : contexte
    - part2 (10s) : fait principal
    - part3 (10s) : twist ou developpement surprenant
-   - part4 (10s) : conclusion + "Pharmusez-vous bien !" + LOOP PHRASE
+   - part4 (10s) : conclusion + LOOP PHRASE
    La LOOP PHRASE est la derniere phrase du voiceover. Elle doit se connecter NATURELLEMENT au debut du hook pour que la video tourne en boucle sans rupture.
    Ex si hook = "Tu savais que le mot carat vient des pharmaciens..." -> fin = "...et la prochaine fois que tu verras un bijou, tu y penseras."
 
 REGLES CRITIQUES :
 - full_voiceover = hook + story concatenes. MAXIMUM 130 mots. Rythme fluide, pas de pause.
-- L'EXPRESSION "Pharmusez-vous bien !" DOIT apparaitre EXACTEMENT UNE FOIS, et UNIQUEMENT a la TOUTE FIN du voiceover, juste avant la loop phrase. JAMAIS au milieu.
-- Ordre strict de fin : [...conclusion de l'histoire...] "Pharmusez-vous bien !" [LOOP PHRASE qui connecte au hook].
+- NE PAS inclure "Pharmusez-vous bien" ni aucune signature personnelle. C'est une video 100% IA narree anonymement.
+- Le voiceover doit se terminer par la LOOP PHRASE qui connecte naturellement au debut du hook.
 - Ecrire en FRANCAIS NATUREL avec les accents (é, è, à, ç, etc). PAS d'emoji, PAS de guillemets typographiques.
 - Chaque partie a un "video_prompt" DETAILLE pour Grok Imagine (scene, action, mouvement, eclairage, cinematique).
   Ex : "Close-up of dark brown carob seeds being carefully poured onto a brass pharmacy scale, warm candlelight, medieval apothecary, cinematic slow motion"
@@ -144,7 +144,7 @@ JSON UNIQUEMENT :
     "video_prompt": "Scene detaillee cinematique..."
   }},
   "story": {{
-    "full_voiceover": "Texte COMPLET hook + 4 parties enchainees. 130 mots MAX. Se termine par 'Pharmusez-vous bien !' puis LOOP PHRASE connectant au debut du hook.",
+    "full_voiceover": "Texte COMPLET hook + 4 parties enchainees. 130 mots MAX. Se termine par LOOP PHRASE connectant au debut du hook. PAS de Pharmusez-vous bien ni signature.",
     "parts": [
       {{"id": "part1", "video_prompt": "Scene detaillee...", "duration": 10}},
       {{"id": "part2", "video_prompt": "Scene detaillee...", "duration": 10}},
