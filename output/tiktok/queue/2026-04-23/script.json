@@ -1,36 +1,36 @@
 {
   "hook": {
-    "voiceover": "En 1920, on vendait de l'eau radioactive en pharmacie comme élixir de jouvence.",
-    "video_prompt": "Close-up of vintage glass pharmacy bottles with glowing radioactive water, 1920s apothecary shelves, warm amber lighting, mysterious glow emanating from bottles, cinematic rack focus"
+    "voiceover": "Dans les années vingt, on buvait de l'eau radioactive pour rester jeune.",
+    "video_prompt": "Close-up of a glowing radioactive water bottle being poured into an elegant glass in a 1920s Art Deco pharmacy, ethereal green glow, vintage lighting, cinematic slow motion"
   },
   "story": {
-    "full_voiceover": "En 1920, on vendait de l'eau radioactive en pharmacie comme élixir de jouvence. Le Radithor, eau distillée au radium, promettait de guérir impuissance, arthrite et de prolonger la vie. Un dollar la bouteille, les Américains s'arrachaient cette potion miracle du Dr Bailey. Eben Byers, riche industriel, en boit 2 à 3 bouteilles par jour pendant trois ans, soit 1400 bouteilles au total. Mais le radium s'accumule dans ses os comme le calcium. En 1930, ses dents tombent, sa mâchoire se désintègre, des trous apparaissent dans son crâne. Il meurt en 1932, rongé de l'intérieur. L'affaire provoque un scandale énorme et la création des premières réglementations strictes. Aujourd'hui heureusement, la radioactivité soigne vraiment avec des doses précises, pas comme ces élixirs vendus autrefois.",
+    "full_voiceover": "Dans les années vingt, on buvait de l'eau radioactive pour rester jeune. En mille neuf cent dix-huit, tu pouvais acheter en pharmacie un tonique énergisant à base de radium dissous dans l'eau. Le slogan promettait une cure de jouvence perpétuelle à un dollar la bouteille. Un riche industriel américain devient client régulier en mille neuf cent vingt-sept. Il boit trois bouteilles par jour pendant trois ans, soit mille quatre cents bouteilles au total pour soigner une blessure au bras. Mais le radium s'accumule dans les os comme le calcium. En mille neuf cent trente, il perd ses dents, sa mâchoire se désintègre littéralement. Les médecins découvrent des trous dans son crâne avant qu'il ne meure rongé de l'intérieur. Cette tragédie révolutionne la réglementation pharmaceutique et nous rappelle pourquoi on teste tout aujourd'hui avant de le vendre.",
     "parts": [
       {
         "id": "part1",
-        "video_prompt": "1920s pharmacy interior with elegant man in suit examining Radithor bottles on wooden shelves, vintage cash register, sepia tone lighting, period accurate details, cinematic wide shot",
+        "video_prompt": "Wide shot of a bustling 1920s American pharmacy with wooden shelves filled with mysterious bottles, pharmacist in white coat serving customers, warm sepia tones, period accurate details",
         "duration": 10
       },
       {
         "id": "part2",
-        "video_prompt": "Wealthy 1920s gentleman Eben Byers in golf attire drinking from Radithor bottle on luxurious estate terrace, multiple bottles on silver tray, golden hour lighting, tracking shot",
+        "video_prompt": "Medium shot of an elegant wealthy man in 1920s attire drinking from a glowing bottle in his luxurious study, golf trophies visible, repeated drinking motion, golden hour lighting",
         "duration": 10
       },
       {
         "id": "part3",
-        "video_prompt": "Dark medical examination room, close-up of X-ray showing deteriorating skull with visible holes, dramatic chiaroscuro lighting, vintage medical equipment, ominous atmosphere",
+        "video_prompt": "Dramatic close-up of deteriorating bones and skull with visible holes, medical X-ray style visualization, dark atmospheric lighting with green radioactive glow, horror cinematography",
         "duration": 10
       },
       {
         "id": "part4",
-        "video_prompt": "Modern hospital radiotherapy room with precise medical equipment, clean white environment, advanced technology, bright clinical lighting, smooth camera movement showing progress",
+        "video_prompt": "Modern pharmaceutical laboratory with scientists in protective gear testing medicines, high-tech equipment, bright clinical lighting, smooth camera movement from vintage to modern",
         "duration": 10
       }
     ]
   },
   "music_mood": "mysterious",
-  "titre_tiktok": "Quand la radioactivité était vendue comme potion magique en pharmacie",
-  "description_tiktok": "L'histoire terrifiante du Radithor, cet élixir radioactif qui a tué un millionnaire après 1400 bouteilles ! De la pharmacie du début du XXe siècle aux réglementations modernes. #lesaviezvous #pharmalpha #pharmacie #sante #histoire #radioactivite",
+  "titre_tiktok": "Quand l'eau radioactive était vendue comme élixir de jeunesse",
+  "description_tiktok": "L'histoire terrifiante du radium en pharmacie dans les années 1920. Un industriel américain en est mort après 1400 bouteilles... #lesaviezvous #pharmalpha #histoire",
   "hashtags": "#lesaviezvous #pharmalpha #pharmacie #sante",
-  "tiktok_caption": "💀 En 1920, on vendait de l'eau radioactive comme élixir de jouvence !\n\nL'histoire du Radithor et d'Eben Byers qui en est mort après 1400 bouteilles... Cette tragédie a créé les premières lois sur les médicaments ! Aujourd'hui la radioactivité soigne vraiment avec des doses précises.\n\nCommente si tu savais que la pharmacie vendait ça !\n\n#fyp #pourtoi #apprendresurtiktok #culture #histoire #pharmacie #pharma #lesaviezvous #pharmalpha #sante #medicament #anecdote #radioactivite #vintage #science #medical #regulations #FDA #radithor #scary #facts #educational #healthfacts"
+  "tiktok_caption": "☢️ Ils buvaient de l'eau RADIOACTIVE pour rester jeunes !\n\nDans les années 1920, les pharmacies vendaient des élixirs au radium comme remèdes miracles. Un riche industriel en est mort après avoir bu 1400 bouteilles... Sa mâchoire s'est littéralement désintégrée ! Cette tragédie a révolutionné la réglementation pharmaceutique.\n\nCommente si tu savais cette histoire terrifiante !\n\n#fyp #pourtoi #apprendresurtiktok #culture #histoire #pharmacie #pharma #lesaviezvous #pharmalpha #sante #medicament #anecdote #radioactivite #annees20 #science #medecine #regulation #fda #radium #poison #danger #vintage #retro #horreur"
 }
