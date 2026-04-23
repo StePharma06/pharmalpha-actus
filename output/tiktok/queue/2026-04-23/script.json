@@ -1,36 +1,36 @@
 {
   "hook": {
-    "voiceover": "Dans les années 20, on buvait de l'eau radioactive pour rester jeune !",
-    "video_prompt": "Elegant 1920s pharmacy interior with ornate glass bottles glowing with ethereal green radioactive light on mahogany shelves, art deco styling, warm golden lighting, cinematic close-up"
+    "voiceover": "En 1920, on vendait de l'eau radioactive en pharmacie comme élixir de jouvence.",
+    "video_prompt": "Close-up of vintage glass pharmacy bottles with glowing radioactive water, 1920s apothecary shelves, warm amber lighting, mysterious glow emanating from bottles, cinematic rack focus"
   },
   "story": {
-    "full_voiceover": "Dans les années 20, on buvait de l'eau radioactive pour rester jeune ! En 1918, le Radithor était vendu en pharmacie comme tonique miracle. Du radium dissous dans l'eau pour guérir tout : impuissance, dépression, arthrite. Eben Byers, riche industriel américain, en devient accro. Il boit 3 bouteilles par jour pendant 3 ans, soit 1400 bouteilles au total ! Mais le radium s'accumule dans ses os comme le calcium. En 1930, ses dents tombent, sa mâchoire se désintègre, son crâne se perce de trous béants. Il meurt en 1932, littéralement rongé de l'intérieur. L'affaire provoque un scandale mondial et la création des premières lois sur les médicaments. Pharmusez-vous bien ! Heureusement qu'aujourd'hui la science a bien évolué depuis cette époque folle.",
+    "full_voiceover": "En 1920, on vendait de l'eau radioactive en pharmacie comme élixir de jouvence. Le Radithor, eau distillée au radium, promettait de guérir impuissance, arthrite et de prolonger la vie. Un dollar la bouteille, les Américains s'arrachaient cette potion miracle du Dr Bailey. Eben Byers, riche industriel, en boit 2 à 3 bouteilles par jour pendant trois ans, soit 1400 bouteilles au total. Mais le radium s'accumule dans ses os comme le calcium. En 1930, ses dents tombent, sa mâchoire se désintègre, des trous apparaissent dans son crâne. Il meurt en 1932, rongé de l'intérieur. L'affaire provoque un scandale énorme et la création des premières réglementations strictes. Aujourd'hui heureusement, la radioactivité soigne vraiment avec des doses précises, pas comme ces élixirs vendus autrefois.",
     "parts": [
       {
         "id": "part1",
-        "video_prompt": "Vintage 1920s advertisement poster showing elegant people drinking from glowing bottles, sepia tones with green radioactive glow effects, art deco design elements, slow zoom in",
+        "video_prompt": "1920s pharmacy interior with elegant man in suit examining Radithor bottles on wooden shelves, vintage cash register, sepia tone lighting, period accurate details, cinematic wide shot",
         "duration": 10
       },
       {
         "id": "part2",
-        "video_prompt": "Wealthy 1920s businessman in golf attire drinking from a glowing green bottle in luxurious mansion, multiple empty Radithor bottles on mahogany table, warm lighting, slow motion",
+        "video_prompt": "Wealthy 1920s gentleman Eben Byers in golf attire drinking from Radithor bottle on luxurious estate terrace, multiple bottles on silver tray, golden hour lighting, tracking shot",
         "duration": 10
       },
       {
         "id": "part3",
-        "video_prompt": "Dramatic close-up of human skull and jaw bones with glowing green radioactive particles, dark medical examination room, eerie green lighting, cinematic horror atmosphere",
+        "video_prompt": "Dark medical examination room, close-up of X-ray showing deteriorating skull with visible holes, dramatic chiaroscuro lighting, vintage medical equipment, ominous atmosphere",
         "duration": 10
       },
       {
         "id": "part4",
-        "video_prompt": "Modern pharmaceutical laboratory with scientists in white coats handling precise medical equipment, clean bright lighting, high-tech machinery, professional medical atmosphere",
+        "video_prompt": "Modern hospital radiotherapy room with precise medical equipment, clean white environment, advanced technology, bright clinical lighting, smooth camera movement showing progress",
         "duration": 10
       }
     ]
   },
   "music_mood": "mysterious",
-  "titre_tiktok": "Quand la radioactivité était vendue comme potion de jouvence 🧪☢️",
-  "description_tiktok": "L'histoire terrifiante du Radithor, l'eau radioactive miracle des années 20 qui a tué ses clients ! Un industriel américain en est mort après 1400 bouteilles... #lesaviezvous #pharmalpha #pharmacie #histoire #radioactivite #sante #medicament #anecdote #culture #apprendresurtiktok",
+  "titre_tiktok": "Quand la radioactivité était vendue comme potion magique en pharmacie",
+  "description_tiktok": "L'histoire terrifiante du Radithor, cet élixir radioactif qui a tué un millionnaire après 1400 bouteilles ! De la pharmacie du début du XXe siècle aux réglementations modernes. #lesaviezvous #pharmalpha #pharmacie #sante #histoire #radioactivite",
   "hashtags": "#lesaviezvous #pharmalpha #pharmacie #sante",
-  "tiktok_caption": "☢️ Dans les années 20, on buvait de l'eau radioactive pour rester jeune !\n\nL'histoire terrifiante du Radithor : vendu en pharmacie comme élixir de jouvence, ce \"tonique\" au radium promettait de guérir tous les maux. Un riche industriel américain en est mort après avoir bu 1400 bouteilles, littéralement rongé de l'intérieur par la radioactivité ! Cette tragédie a créé les premières lois sur les médicaments.\n\nCommente si tu savais ! 👇\n\n#fyp #pourtoi #apprendresurtiktok #culture #histoire #pharmacie #pharma #lesaviezvous #pharmalpha #sante #medicament #anecdote #radioactivite #science #medical #vintage #1920s #tragique #scandale #regulation #fda #radithor #radium"
+  "tiktok_caption": "💀 En 1920, on vendait de l'eau radioactive comme élixir de jouvence !\n\nL'histoire du Radithor et d'Eben Byers qui en est mort après 1400 bouteilles... Cette tragédie a créé les premières lois sur les médicaments ! Aujourd'hui la radioactivité soigne vraiment avec des doses précises.\n\nCommente si tu savais que la pharmacie vendait ça !\n\n#fyp #pourtoi #apprendresurtiktok #culture #histoire #pharmacie #pharma #lesaviezvous #pharmalpha #sante #medicament #anecdote #radioactivite #vintage #science #medical #regulations #FDA #radithor #scary #facts #educational #healthfacts"
 }
