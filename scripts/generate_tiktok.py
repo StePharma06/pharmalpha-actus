@@ -126,8 +126,10 @@ STRUCTURE :
    La LOOP PHRASE est la derniere phrase du voiceover. Elle doit se connecter NATURELLEMENT au debut du hook pour que la video tourne en boucle sans rupture.
    Ex si hook = "Tu savais que le mot carat vient des pharmaciens..." -> fin = "...et la prochaine fois que tu verras un bijou, tu y penseras."
 
-REGLES :
-- full_voiceover = hook + story concatenes. MAXIMUM 130 mots (environ 45 secondes au rythme ElevenLabs). Rythme fluide, pas de pause.
+REGLES CRITIQUES :
+- full_voiceover = hook + story concatenes. MAXIMUM 130 mots. Rythme fluide, pas de pause.
+- L'EXPRESSION "Pharmusez-vous bien !" DOIT apparaitre EXACTEMENT UNE FOIS, et UNIQUEMENT a la TOUTE FIN du voiceover, juste avant la loop phrase. JAMAIS au milieu.
+- Ordre strict de fin : [...conclusion de l'histoire...] "Pharmusez-vous bien !" [LOOP PHRASE qui connecte au hook].
 - Ecrire en FRANCAIS NATUREL avec les accents (é, è, à, ç, etc). PAS d'emoji, PAS de guillemets typographiques.
 - Chaque partie a un "video_prompt" DETAILLE pour Grok Imagine (scene, action, mouvement, eclairage, cinematique).
   Ex : "Close-up of dark brown carob seeds being carefully poured onto a brass pharmacy scale, warm candlelight, medieval apothecary, cinematic slow motion"
@@ -330,8 +332,8 @@ def generate_voiceover(script):
         data={
             "text": full_text,
             "model_id": "eleven_multilingual_v2",
-            "voice_settings": {"stability": 0.5, "similarity_boost": 0.75,
-                               "style": 0.3, "use_speaker_boost": True},
+            "voice_settings": {"stability": 0.85, "similarity_boost": 0.75,
+                               "style": 0.1, "use_speaker_boost": True},
         },
         headers={"xi-api-key": ELEVENLABS_API_KEY},
     )
@@ -416,7 +418,7 @@ def generate_facecam_cta(script):
         data={
             "text": cta_text,
             "model_id": "eleven_multilingual_v2",
-            "voice_settings": {"stability": 0.5, "similarity_boost": 0.75,
+            "voice_settings": {"stability": 0.85, "similarity_boost": 0.75,
                                "style": 0.4, "use_speaker_boost": True},
         },
         headers={"xi-api-key": ELEVENLABS_API_KEY, "Accept": "audio/mpeg"},
@@ -605,14 +607,7 @@ def build_creatomate_source(script, clips, clip_durations, voiceover_url, vo_tex
         "volume": "100%",
     })
 
-    # Subtitles — synced to full voiceover, capped at end_dur
-    if word_timestamps:
-        elements.extend(build_subtitle_elements_from_timestamps(
-            word_timestamps, audio_offset=0, max_duration=end_dur))
-    else:
-        elements.extend(build_subtitle_elements_fallback(vo_text, 0, vo_actual_dur))
-
-    # Hook video clip
+    # Hook video clip (ajoute AVANT les sous-titres pour qu'ils soient par-dessus)
     if clips.get("hook"):
         elements.append({
             "type": "video", "source": clips["hook"],
@@ -622,7 +617,7 @@ def build_creatomate_source(script, clips, clip_durations, voiceover_url, vo_tex
         })
     t += hook_dur
 
-    # Story clips (in order partN with sizes from clip_durations)
+    # Story clips
     story_parts = sorted([k for k in clips.keys() if k.startswith("part")],
                           key=lambda x: int(x.replace("part", "")))
     for part_id in story_parts:
@@ -636,6 +631,13 @@ def build_creatomate_source(script, clips, clip_durations, voiceover_url, vo_tex
         t += part_dur
 
     total_dur_final = round(max(t, vo_actual_dur), 2)
+
+    # ─── SOUS-TITRES EN DERNIER (pour qu'ils soient au-dessus des videos) ───
+    if word_timestamps:
+        elements.extend(build_subtitle_elements_from_timestamps(
+            word_timestamps, audio_offset=0, max_duration=total_dur_final))
+    else:
+        elements.extend(build_subtitle_elements_fallback(vo_text, 0, vo_actual_dur))
     print(f"  Timeline : {total_dur_final}s (video {t:.1f}s, voice {vo_actual_dur:.1f}s)")
 
     return {
