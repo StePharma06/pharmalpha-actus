@@ -240,31 +240,53 @@ def generate_grok_clip(prompt, label, duration=10):
         return None
 
 
-def generate_video_clips(script):
-    """Generate all video clips via Grok Imagine. Returns {label: url}."""
-    print("[3/7] Generation clips video Grok Imagine...")
-    clips = {}
+def generate_video_clips(script, target_story_dur):
+    """Generate clips sized to match actual voice duration.
 
-    # Hook clip (5s)
+    target_story_dur = total duration voice needs for the story (after hook).
+    Hook is always 5s. Story clips are split to fill target_story_dur.
+    """
+    print(f"[3/7] Generation clips video Grok (target story: {target_story_dur:.1f}s)...")
+    clips = {}
+    clip_durations = {}
+
+    # Hook clip = 5s fixed
     hook_prompt = script.get("hook", {}).get("video_prompt", "")
     if hook_prompt:
         url = generate_grok_clip(hook_prompt, "hook", duration=5)
         if url:
             clips["hook"] = url
+            clip_durations["hook"] = 5
 
-    # Story clips (10s each) — sleep between requests to avoid xAI rate limit
-    for i, part in enumerate(script.get("story", {}).get("parts", [])):
-        if i > 0 or clips:
-            time.sleep(10)  # breathe between Grok requests
-        part_id = part["id"]
-        prompt = part.get("video_prompt", "")
-        dur = part.get("duration", 10)
-        if prompt:
-            url = generate_grok_clip(prompt, part_id, duration=dur)
-            if url:
-                clips[part_id] = url
+    # Story: N clips of equal duration summing to target_story_dur
+    parts = script.get("story", {}).get("parts", [])
+    # Grok max 10s per clip -> minimum N clips = ceil(target / 10)
+    import math
+    n_needed = max(1, math.ceil(target_story_dur / 10))
+    n_clips = max(n_needed, len(parts))  # use at least the parts Claude defined
+    # Clamp each clip to [4, 10] seconds
+    clip_dur = max(4, min(10, target_story_dur / n_clips))
+    # Recompute n_clips so total matches exactly
+    n_clips = math.ceil(target_story_dur / clip_dur)
+    print(f"  Strategy : {n_clips} clips de {clip_dur:.1f}s (total story {n_clips * clip_dur:.1f}s)")
 
-    return clips
+    # Reuse the prompts Claude provided, extend with hook prompt if needed
+    prompts = [p.get("video_prompt", "") for p in parts if p.get("video_prompt")]
+    if not prompts:
+        prompts = [hook_prompt]
+    while len(prompts) < n_clips:
+        # Reuse existing prompts in rotation
+        prompts.append(prompts[len(prompts) % len(parts)] if parts else hook_prompt)
+
+    for i in range(n_clips):
+        time.sleep(10)  # rate limit protection
+        part_id = f"part{i+1}"
+        url = generate_grok_clip(prompts[i], part_id, duration=int(round(clip_dur)))
+        if url:
+            clips[part_id] = url
+            clip_durations[part_id] = clip_dur
+
+    return clips, clip_durations
 
 
 # -- Step 4: ElevenLabs Voiceover -----------------------------------------
@@ -452,18 +474,57 @@ def generate_facecam_cta(script):
 
 # -- Step 6: Creatomate Assembly -------------------------------------------
 
-def build_subtitle_elements_from_timestamps(word_timestamps, audio_offset=0.0):
-    """Build synced subtitles from ElevenLabs word timestamps. 3 words at a time."""
+def build_subtitle_elements_from_timestamps(word_timestamps, audio_offset=0.0, max_duration=None):
+    """Build subtitles from word timestamps, grouped by punctuation, min 1s each."""
     if not word_timestamps:
         return []
 
+    # Clean: strip whitespace, skip empty words
+    clean = [w for w in word_timestamps if w["word"].strip()]
+    if not clean:
+        return []
+
+    # Group words into chunks: 2-3 words, break on punctuation
+    chunks = []
+    current = []
+    for w in clean:
+        current.append(w)
+        word_text = w["word"]
+        has_punct = any(p in word_text for p in ".!?,;:")
+        if len(current) >= 3 or has_punct or len(" ".join(x["word"] for x in current)) > 22:
+            chunks.append(current)
+            current = []
+    if current:
+        if chunks:  # merge last small chunk with previous
+            chunks[-1].extend(current)
+        else:
+            chunks.append(current)
+
     elements = []
-    for i in range(0, len(word_timestamps), 3):
-        chunk = word_timestamps[i:i + 3]
-        text = " ".join(w["word"] for w in chunk)
+    for idx, chunk in enumerate(chunks):
+        text = " ".join(w["word"] for w in chunk).strip()
+        # Strip trailing/leading punctuation for cleaner subtitle
+        text = text.strip(" ,;")
+        if not text:
+            continue
+
         start = chunk[0]["start"] + audio_offset
         end = chunk[-1]["end"] + audio_offset
-        dur = max(0.2, end - start)
+        dur = end - start
+
+        # Enforce minimum 1s display, and extend to next chunk start if possible
+        min_dur = 1.0
+        if dur < min_dur:
+            if idx + 1 < len(chunks):
+                next_start = chunks[idx + 1][0]["start"] + audio_offset
+                dur = min(min_dur, next_start - start)
+            else:
+                dur = min_dur
+
+        if max_duration is not None and start + dur > max_duration:
+            dur = max_duration - start
+        if dur <= 0:
+            continue
 
         elements.append({
             "type": "text",
@@ -471,11 +532,11 @@ def build_subtitle_elements_from_timestamps(word_timestamps, audio_offset=0.0):
             "x": "50%", "y": "75%", "width": "90%",
             "time": round(start, 2),
             "duration": round(dur, 2),
-            "font_family": "Montserrat", "font_weight": "800",
-            "font_size": "9.5 vmin",
+            "font_family": "Oswald", "font_weight": "700",
+            "font_size": "9 vmin",
             "fill_color": "#ffffff",
-            "shadow_color": "rgba(0,0,0,0.95)", "shadow_blur": "8",
-            "shadow_x": "3", "shadow_y": "3",
+            "shadow_color": "rgba(0,0,0,0.95)", "shadow_blur": "10",
+            "shadow_x": "4", "shadow_y": "4",
             "x_alignment": "50%", "y_alignment": "50%",
         })
     return elements
@@ -499,64 +560,59 @@ def build_subtitle_elements_fallback(text, start_time, duration):
             "x": "50%", "y": "75%", "width": "90%",
             "time": round(start_time + idx * chunk_dur, 2),
             "duration": round(chunk_dur, 2),
-            "font_family": "Montserrat", "font_weight": "800",
-            "font_size": "9.5 vmin",
+            "font_family": "Oswald", "font_weight": "700",
+            "font_size": "9 vmin",
             "fill_color": "#ffffff",
-            "shadow_color": "rgba(0,0,0,0.95)", "shadow_blur": "8",
-            "shadow_x": "3", "shadow_y": "3",
+            "shadow_color": "rgba(0,0,0,0.95)", "shadow_blur": "10",
+            "shadow_x": "4", "shadow_y": "4",
             "x_alignment": "50%", "y_alignment": "50%",
         })
     return elements
 
 
-def build_creatomate_source(script, clips, voiceover_url, vo_text,
-                             word_timestamps, facecam_url):
+def build_creatomate_source(script, clips, clip_durations, voiceover_url, vo_text,
+                             word_timestamps, hook_end_s, facecam_url):
+    """Assemble timeline. Video duration = voice duration (computed from clips)."""
     elements = []
     t = 0.0
 
-    parts = script.get("story", {}).get("parts", [])
-    story_dur = sum(p.get("duration", 10) for p in parts)
+    hook_dur = clip_durations.get("hook", 5.0)
+    # Compute total from clip_durations
+    total_visual_dur = sum(clip_durations.values())
 
-    # Fixed durations — clips are NOT stretched
-    hook_dur = 5.0
-
-    # Total visual duration = hook + story (no facecam)
-    total_visual_dur = hook_dur + story_dur
-
-    # Use real voiceover duration if available (for music/voiceover sync)
+    # Use real voiceover duration (ends when voice ends)
     if word_timestamps:
         vo_actual_dur = word_timestamps[-1]["end"]
     else:
         vo_actual_dur = total_visual_dur
 
-    # Music mood
+    # Music ends with voice (not video, so music tail doesn't persist)
+    end_dur = max(vo_actual_dur, total_visual_dur)
+
+    # Music
     mood = script.get("music_mood", "default")
     music_url = MUSIC_TRACKS.get(mood, MUSIC_TRACKS["default"])
-
-    # ── BACKGROUND MUSIC (full duration, low volume) ─────────────────────────
     elements.append({
         "type": "audio", "source": music_url,
-        "time": 0, "duration": round(total_visual_dur, 2),
+        "time": 0, "duration": round(end_dur, 2),
         "volume": "12%",
     })
 
-    # ── VOICEOVER (actual duration, not padded) ──────────────────────────────
+    # Voiceover (full duration)
     elements.append({
         "type": "audio", "source": voiceover_url,
         "time": 0, "duration": round(vo_actual_dur, 2),
         "volume": "100%",
     })
 
-    vo_dur = total_visual_dur  # for subtitle capping
-
-    # ── SUBTITLES (synced to word timestamps, capped at vo_dur) ────────────
+    # Subtitles — synced to full voiceover, capped at end_dur
     if word_timestamps:
-        capped = [w for w in word_timestamps if w["start"] < vo_dur]
-        elements.extend(build_subtitle_elements_from_timestamps(capped, audio_offset=0))
+        elements.extend(build_subtitle_elements_from_timestamps(
+            word_timestamps, audio_offset=0, max_duration=end_dur))
     else:
-        elements.extend(build_subtitle_elements_fallback(vo_text, 0, vo_dur))
+        elements.extend(build_subtitle_elements_fallback(vo_text, 0, vo_actual_dur))
 
-    # ── 1. HOOK (~5s) — video clip ───────────────────────────────────────────
+    # Hook video clip
     if clips.get("hook"):
         elements.append({
             "type": "video", "source": clips["hook"],
@@ -566,24 +622,21 @@ def build_creatomate_source(script, clips, voiceover_url, vo_text,
         })
     t += hook_dur
 
-    # ── 2. STORY (5 clips) — fixed durations, no stretching ────────────────
-    for i, part in enumerate(parts):
-        part_dur = part.get("duration", 10)
-        part_id = part["id"]
-
-        if clips.get(part_id):
-            elements.append({
-                "type": "video", "source": clips[part_id],
-                "x": "50%", "y": "50%", "width": "100%", "height": "100%",
-                "time": round(t, 2), "duration": part_dur,
-                "volume": "0%",
-            })
+    # Story clips (in order partN with sizes from clip_durations)
+    story_parts = sorted([k for k in clips.keys() if k.startswith("part")],
+                          key=lambda x: int(x.replace("part", "")))
+    for part_id in story_parts:
+        part_dur = clip_durations.get(part_id, 10.0)
+        elements.append({
+            "type": "video", "source": clips[part_id],
+            "x": "50%", "y": "50%", "width": "100%", "height": "100%",
+            "time": round(t, 2), "duration": round(part_dur, 2),
+            "volume": "0%",
+        })
         t += part_dur
 
-    # Pas de facecam — la story contient deja la loop phrase dans le voiceover
-
-    total_dur_final = round(t, 2)
-    print(f"  Timeline : {total_dur_final}s (hook {hook_dur} + story {story_dur})")
+    total_dur_final = round(max(t, vo_actual_dur), 2)
+    print(f"  Timeline : {total_dur_final}s (video {t:.1f}s, voice {vo_actual_dur:.1f}s)")
 
     return {
         "output_format": "mp4", "width": 1080, "height": 1920,
@@ -622,10 +675,11 @@ def render_video(source):
     return None
 
 
-def assemble_video(script, clips, vo_url, vo_text, word_timestamps, facecam_url):
+def assemble_video(script, clips, clip_durations, vo_url, vo_text,
+                    word_timestamps, hook_end_s, facecam_url):
     print("[6/7] Assemblage Creatomate...")
-    source = build_creatomate_source(script, clips, vo_url, vo_text,
-                                      word_timestamps, facecam_url)
+    source = build_creatomate_source(script, clips, clip_durations, vo_url, vo_text,
+                                      word_timestamps, hook_end_s, facecam_url)
     with open(OUTPUT_DIR / "creatomate_source.json", "w", encoding="utf-8") as f:
         json.dump(source, f, ensure_ascii=False, indent=2)
 
@@ -712,10 +766,31 @@ def main():
     with open(OUTPUT_DIR / "tiktok_script.json", "w", encoding="utf-8") as f:
         json.dump(script, f, ensure_ascii=False, indent=2)
 
-    clips = generate_video_clips(script)
-    print("[5/7] Facecam HeyGen desactive (pipeline fluide uniquement)")
+    # STEP 1: Generate voice first to know exact duration
     vo_path, vo_url, vo_text, word_timestamps = generate_voiceover(script)
-    video_path = assemble_video(script, clips, vo_url, vo_text, word_timestamps, None)
+    if word_timestamps:
+        vo_actual_dur = word_timestamps[-1]["end"]
+    else:
+        vo_actual_dur = 45.0
+    print(f"  Duree voix reelle : {vo_actual_dur:.1f}s")
+
+    # STEP 2: Compute hook + story durations from voice
+    # Hook = first ~5s of voice (end at first period/question mark near 5s)
+    hook_end_s = 5.0
+    for w in word_timestamps:
+        if w["end"] > 4.0 and w["end"] < 7.0:
+            if any(p in w["word"] for p in ".!?"):
+                hook_end_s = w["end"]
+                break
+    story_dur = vo_actual_dur - hook_end_s
+    print(f"  Hook : {hook_end_s:.1f}s | Story : {story_dur:.1f}s")
+
+    # STEP 3: Generate clips sized to match voice
+    clips, clip_durations = generate_video_clips(script, story_dur)
+    print("[5/7] Facecam HeyGen desactive (pipeline fluide uniquement)")
+
+    video_path = assemble_video(script, clips, clip_durations, vo_url, vo_text,
+                                 word_timestamps, hook_end_s, None)
 
     if video_path:
         slot = save_to_queue(video_path, script)
