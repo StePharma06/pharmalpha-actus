@@ -1,11 +1,9 @@
 name: TikTok Video Daily
 
-# SUSPENDU - pipeline TikTok mis en pause a la demande de Stephen (2026-04-11)
-# Pour re-activer : decommenter le bloc 'schedule' ci-dessous
 on:
-  # schedule:
-  #   - cron: '0 2 * * *'  # 04h00 Paris — generation quotidienne
-  workflow_dispatch:  # Lancement manuel uniquement
+  schedule:
+    - cron: '0 2 * * *'  # 04h00 Paris — generation quotidienne
+  workflow_dispatch:  # Lancement manuel
 
 permissions:
   contents: write
@@ -43,7 +41,16 @@ jobs:
             echo "Rien a committer"
           else
             git commit -m "tiktok: video du $(date +%Y-%m-%d) en queue (publication J+2)"
-            git push
+            # Retry-safe push : rebase si le remote a avance pendant le workflow
+            for i in 1 2 3; do
+              git pull --rebase origin master || true
+              if git push origin master; then
+                echo "Push reussi (tentative $i)"
+                break
+              fi
+              echo "Push echoue (tentative $i), retry..."
+              sleep 5
+            done
           fi
 
       - name: Upload artifact (backup 7j)
