@@ -35,7 +35,8 @@ QUEUE_DIR = ROOT_DIR / "output" / "tiktok" / "queue"
 PUBLISH_DELAY_DAYS = 2
 
 ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
-XAI_API_KEY = os.environ.get("XAI_API_KEY", "")
+KIEAI_API_KEY = os.environ.get("KIEAI_API_KEY", "")  # proxy Grok Imagine (moins cher, moins de rate limit)
+XAI_API_KEY = os.environ.get("XAI_API_KEY", "")  # fallback direct xAI si pas de Kie.ai
 ELEVENLABS_API_KEY = os.environ.get("ELEVENLABS_API_KEY", "")
 ELEVENLABS_VOICE_ID = os.environ.get("ELEVENLABS_VOICE_ID", "")
 HEYGEN_API_KEY = os.environ.get("HEYGEN_API_KEY", "")
@@ -201,9 +202,72 @@ def generate_script(lsv):
 
 # -- Step 3: Grok Imagine Video Clips -------------------------------------
 
-def generate_grok_clip(prompt, label, duration=10):
-    """Generate a video clip via xAI Grok Imagine. Returns public URL."""
-    print(f"  {label} : generation ({duration}s)...")
+def generate_kieai_clip(prompt, label, duration=10):
+    """Generate a video clip via Kie.ai Grok Imagine proxy. Returns public URL."""
+    print(f"  {label} : generation Kie.ai ({duration}s)...")
+    try:
+        resp = api_request(
+            "https://api.kie.ai/api/v1/jobs/createTask",
+            data={
+                "model": "grok-imagine/text-to-video",
+                "input": {
+                    "prompt": prompt,
+                    "aspect_ratio": "9:16",
+                    "mode": "normal",
+                    "duration": duration,
+                    "resolution": "720p",
+                    "nsfw_checker": False,
+                },
+            },
+            headers={"Authorization": f"Bearer {KIEAI_API_KEY}"},
+        )
+        task_id = resp.get("data", {}).get("taskId")
+        if not task_id:
+            print(f"  [WARN] {label} : pas de taskId -> {resp}")
+            return None
+
+        # Poll with exponential backoff (2, 3, 5, 8, 8, 8... max)
+        delays = [2, 3, 5, 8]
+        max_attempts = 80
+        for attempt in range(max_attempts):
+            time.sleep(delays[min(attempt, len(delays) - 1)])
+            result = api_request(
+                f"https://api.kie.ai/api/v1/jobs/recordInfo?taskId={task_id}",
+                headers={"Authorization": f"Bearer {KIEAI_API_KEY}"},
+            )
+            state = result.get("data", {}).get("state", "")
+            if state == "success":
+                result_json = result.get("data", {}).get("resultJson", "")
+                try:
+                    parsed = json.loads(result_json) if isinstance(result_json, str) else result_json
+                    urls = parsed.get("resultUrls", [])
+                    if not urls:
+                        print(f"  [WARN] {label} : pas d'URL dans resultJson")
+                        return None
+                    video_url = urls[0]
+                    clip_path = OUTPUT_DIR / f"{label}.mp4"
+                    urllib.request.urlretrieve(video_url, str(clip_path))
+                    print(f"  {label} : OK (Kie.ai)")
+                    return video_url
+                except Exception as e:
+                    print(f"  [WARN] {label} : parse resultJson echoue : {e}")
+                    return None
+            elif state == "fail":
+                fail_msg = result.get("data", {}).get("failMsg", "unknown")
+                print(f"  [WARN] {label} echoue : {fail_msg}")
+                return None
+            # Sinon : waiting, queuing, generating -> on continue
+
+        print(f"  [WARN] {label} timeout")
+        return None
+    except Exception as e:
+        print(f"  [WARN] {label} : {e}")
+        return None
+
+
+def generate_xai_clip(prompt, label, duration=10):
+    """Fallback : direct xAI API (rate-limited)."""
+    print(f"  {label} : generation xAI direct ({duration}s)...")
     try:
         resp = api_request(
             "https://api.x.ai/v1/videos/generations",
@@ -230,7 +294,6 @@ def generate_grok_clip(prompt, label, duration=10):
             status = result.get("status", "")
             if status == "done":
                 video_url = result.get("video", {}).get("url", "")
-                # Save locally for queue
                 clip_path = OUTPUT_DIR / f"{label}.mp4"
                 urllib.request.urlretrieve(video_url, str(clip_path))
                 print(f"  {label} : OK ({attempt * 5}s)")
@@ -244,6 +307,16 @@ def generate_grok_clip(prompt, label, duration=10):
     except Exception as e:
         print(f"  [WARN] {label} : {e}")
         return None
+
+
+def generate_grok_clip(prompt, label, duration=10):
+    """Try Kie.ai first (cheaper, less rate-limited), fallback to xAI direct."""
+    if KIEAI_API_KEY:
+        return generate_kieai_clip(prompt, label, duration)
+    if XAI_API_KEY:
+        return generate_xai_clip(prompt, label, duration)
+    print(f"  [ERROR] {label} : ni KIEAI_API_KEY ni XAI_API_KEY configuree")
+    return None
 
 
 def find_segment_duration(text_segment, word_timestamps):
@@ -334,15 +407,17 @@ def generate_video_clips(script, target_story_dur, word_timestamps=None):
         parts.append(last)
         print(f"  Ajout clip supplementaire : {last['_computed_duration']:.1f}s (gap de {remaining:.1f}s)")
 
-    # Genere les clips
+    # Genere les clips (Kie.ai gere le rate limit par queue interne, pas de sleep necessaire)
     for i, part in enumerate(parts):
-        time.sleep(10)  # rate limit
         part_id = f"part{i+1}"
         dur = part["_computed_duration"]
         url = generate_grok_clip(part["video_prompt"], part_id, duration=int(round(dur)))
         if url:
             clips[part_id] = url
             clip_durations[part_id] = dur
+        # Petit sleep entre requetes (evite saturation)
+        if i < len(parts) - 1:
+            time.sleep(2)
 
     return clips, clip_durations
 

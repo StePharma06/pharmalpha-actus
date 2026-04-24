@@ -39,6 +39,7 @@ jobs:
       - name: Generate TikTok video
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          KIEAI_API_KEY: ${{ secrets.KIEAI_API_KEY }}
           XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
           ELEVENLABS_VOICE_ID: ${{ secrets.ELEVENLABS_VOICE_ID }}
