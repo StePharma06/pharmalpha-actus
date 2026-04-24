@@ -107,8 +107,11 @@ body {
   gap: 12px;
 }
 .logo-area img {
-  height: 52px;
+  height: 90px;
   width: auto;
+}
+@media (max-width: 700px) {
+  .logo-area img { height: 64px; }
 }
 .header-right {
   display: flex;
@@ -1053,7 +1056,7 @@ body {
 <header class="header">
   <div class="header-inner">
     <div class="logo-area">
-      <img src="assets/logo_pharmactus.png" alt="Pharm'Actus" style="max-height:48px;">
+      <img src="assets/logo_pharmactus.png" alt="Pharm'Actus">
     </div>
     <div class="header-right">
       <a href="archives.html" class="header-link header-link-archives">
