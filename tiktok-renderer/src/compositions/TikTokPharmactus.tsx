@@ -59,11 +59,12 @@ export const TikTokPharmactus: React.FC<TikTokPharmactusProps> = ({
   const ctaDurationFrames = cta ? Math.round(cta.durationInSeconds * fps) : 0;
   const ctaEndFrame = ctaStartFrame + ctaDurationFrames;
 
-  // Story voiceover duration = last word end, to avoid voiceover bleeding into CTA pause
+  // Story voiceover duration = min(last word end, storyEndFrame) to avoid bleeding into CTA
   const storyVoiceEndSeconds = words && words.length > 0 ? words[words.length - 1].end : 0;
-
-  // Sous-titres story (mot par mot)
-  const captions = words ? groupWordsToCaptions(words, fps) : [];
+  const voiceStoryDurationFrames = Math.min(
+    Math.round(storyVoiceEndSeconds * fps),
+    storyEndFrame
+  );
 
   // CTA caption = texte fixe affiché pendant le CTA
   const ctaCaptions = cta
@@ -85,8 +86,8 @@ export const TikTokPharmactus: React.FC<TikTokPharmactusProps> = ({
         </Sequence>
       ))}
 
-      {/* Voix off story (s'arrête à la fin du dernier mot) */}
-      <Sequence from={0} durationInFrames={Math.round(storyVoiceEndSeconds * fps)}>
+      {/* Voix off story — coupee a min(voix, clips) pour eviter superposition avec CTA */}
+      <Sequence from={0} durationInFrames={voiceStoryDurationFrames}>
         <Audio src={voiceoverUrl} volume={1} />
       </Sequence>
 
@@ -97,8 +98,12 @@ export const TikTokPharmactus: React.FC<TikTokPharmactusProps> = ({
         </Sequence>
       )}
 
-      {/* Sous-titres story */}
-      {captions.length > 0 && <Subtitles captions={captions} style="tiktok" position={72} />}
+      {/* Sous-titres story — style moderne avec highlight mot par mot */}
+      {words && words.length > 0 && (
+        <Sequence from={0} durationInFrames={storyEndFrame}>
+          <Subtitles words={words} style="modern" position={72} accentColor="#f97316" />
+        </Sequence>
+      )}
 
       {/* ──── SEGMENT CTA ──── */}
       {cta && (
@@ -129,7 +134,7 @@ export const TikTokPharmactus: React.FC<TikTokPharmactusProps> = ({
           </Sequence>
 
           {/* Sous-titre CTA */}
-          {ctaCaptions.length > 0 && <Subtitles captions={ctaCaptions} style="tiktok" position={78} />}
+          {ctaCaptions.length > 0 && <Subtitles captions={ctaCaptions} style="clean" position={82} />}
         </>
       )}
     </AbsoluteFill>
