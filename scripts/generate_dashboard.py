@@ -290,17 +290,24 @@ def build_dashboard(api_key):
     DASHBOARD_HTML.write_text(html, encoding="utf-8")
     print(f"  Fichier : {DASHBOARD_HTML}")
 
-    # Envoi email
-    print("\n[Email] Envoi du dashboard par email...")
-    email_html = render_email_dashboard(
-        subscribers=subscribers,
-        new_week=new_week,
-        new_cumul=new_cumul,
-        week_stats=week_stats,
-        cumul_stats=cumul_stats,
-        articles_map=articles_map,
-    )
-    send_dashboard_email(api_key, email_html)
+    # Envoi email : UNIQUEMENT le lundi (weekday == 0) OU si forcage via env FORCE_EMAIL=1
+    today_weekday = today.weekday()
+    force_email = os.environ.get("FORCE_EMAIL", "").strip() in ("1", "true", "yes")
+    if today_weekday == 0 or force_email:
+        reason = "forcage FORCE_EMAIL" if force_email else "lundi matin"
+        print(f"\n[Email] Envoi du dashboard par email ({reason})...")
+        email_html = render_email_dashboard(
+            subscribers=subscribers,
+            new_week=new_week,
+            new_cumul=new_cumul,
+            week_stats=week_stats,
+            cumul_stats=cumul_stats,
+            articles_map=articles_map,
+        )
+        send_dashboard_email(api_key, email_html)
+    else:
+        days = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
+        print(f"\n[Email] On est {days[today_weekday]} - email envoye uniquement le lundi. Dashboard HTML a jour seulement.")
 
     print(f"\n=== Termine ===")
     print(f"URL en ligne : {DASHBOARD_URL}")

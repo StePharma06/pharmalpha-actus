@@ -3,7 +3,7 @@ name: Generate Dashboard Analytics
 on:
   workflow_dispatch:  # Lancement manuel
   schedule:
-    - cron: '0 6 * * 1'  # Chaque lundi 6h UTC (8h Paris)
+    - cron: '0 6 * * *'  # Chaque jour 6h UTC (8h Paris) - HTML quotidien + email le lundi uniquement
 
 permissions:
   contents: write
