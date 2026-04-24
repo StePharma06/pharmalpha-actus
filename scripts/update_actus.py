@@ -828,14 +828,42 @@ def generate_articles_json(index_html):
             d["tags"] = []
         return d
 
-    articles = [js_entry_to_dict(e) for e in entries]
-    # Filter empty entries
-    articles = [a for a in articles if a.get("id")]
+    current_articles = [js_entry_to_dict(e) for e in entries]
+    current_articles = [a for a in current_articles if a.get("id")]
 
+    # Merge with existing articles.json (cumulative archive - articles never disappear)
     json_path = ROOT_DIR / "articles.json"
+    existing_articles = []
+    if json_path.exists():
+        try:
+            with open(json_path, encoding="utf-8") as f:
+                existing_data = json.load(f)
+                existing_articles = existing_data.get("articles", [])
+        except Exception as e:
+            print(f"  [WARN] Lecture articles.json existant : {e}")
+
+    # Dedupe by id : les articles courants (fraîchement générés) priment sur l'historique
+    current_ids = {a["id"] for a in current_articles}
+    merged = list(current_articles)
+    historical_count = 0
+    for a in existing_articles:
+        if a.get("id") and a["id"] not in current_ids:
+            merged.append(a)
+            historical_count += 1
+
+    # Tri : date desc, puis actus avant LSV à date égale
+    def sort_key(a):
+        is_lsv = 1 if a.get("categorie") == "lsv" else 0
+        return (a.get("date", ""), -is_lsv, a.get("id", ""))
+    merged.sort(key=sort_key, reverse=True)
+
     with open(json_path, "w", encoding="utf-8") as f:
-        json.dump({"articles": articles, "count": len(articles), "updated_at": datetime.now(PARIS_TZ).isoformat()}, f, ensure_ascii=False, indent=2)
-    print(f"  articles.json genere ({len(articles)} articles)")
+        json.dump({
+            "articles": merged,
+            "count": len(merged),
+            "updated_at": datetime.now(PARIS_TZ).isoformat(),
+        }, f, ensure_ascii=False, indent=2)
+    print(f"  articles.json genere ({len(merged)} articles total : {len(current_articles)} depuis index.html + {historical_count} historiques)")
 
 
 def generate_article_pages(articles):
