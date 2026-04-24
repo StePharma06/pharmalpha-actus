@@ -107,7 +107,7 @@ body {
   gap: 12px;
 }
 .logo-area img {
-  height: 40px;
+  height: 50px;
   width: auto;
 }
 .header-right {
@@ -320,7 +320,7 @@ body {
 .filter-btn {
   padding: 7px 16px;
   border-radius: 100px;
-  border: 1px solid var(--border);
+  border: 1.5px solid var(--border);
   background: var(--bg);
   color: var(--text-secondary);
   font-size: 13px;
@@ -329,30 +329,49 @@ body {
   transition: all 0.2s;
   font-family: inherit;
 }
-.filter-btn:hover { border-color: var(--text-muted); color: var(--text); }
-.filter-btn.active {
+
+/* Filtre "Toutes" : neutre */
+.filter-btn[data-filter="all"].active {
   background: var(--black);
   border-color: var(--black);
   color: #fff;
   font-weight: 600;
 }
-.filter-btn-lsv {
-  background: var(--orange);
-  border-color: var(--orange);
-  color: #fff;
-  font-weight: 600;
-}
-.filter-btn-lsv:hover {
-  background: var(--orange-hover);
-  border-color: var(--orange-hover);
-  color: #fff;
-}
-.filter-btn-lsv.active {
-  background: var(--orange-hover);
-  border-color: var(--orange-hover);
-  color: #fff;
-  box-shadow: 0 0 0 3px rgba(249,115,22,0.25);
-}
+
+/* Pharma France : orange */
+.filter-btn[data-filter="pharma_france"] { color: var(--orange); border-color: rgba(249,115,22,0.35); }
+.filter-btn[data-filter="pharma_france"]:hover { background: var(--orange-light); border-color: var(--orange); }
+.filter-btn[data-filter="pharma_france"].active { background: var(--orange); border-color: var(--orange); color: #fff; font-weight: 600; box-shadow: 0 0 0 3px rgba(249,115,22,0.2); }
+
+/* Pharma Monde : bleu */
+.filter-btn[data-filter="pharma_monde"] { color: var(--blue); border-color: rgba(37,99,235,0.35); }
+.filter-btn[data-filter="pharma_monde"]:hover { background: var(--blue-light); border-color: var(--blue); }
+.filter-btn[data-filter="pharma_monde"].active { background: var(--blue); border-color: var(--blue); color: #fff; font-weight: 600; box-shadow: 0 0 0 3px rgba(37,99,235,0.2); }
+
+/* Sante : vert */
+.filter-btn[data-filter="sante"] { color: var(--green); border-color: rgba(22,163,74,0.35); }
+.filter-btn[data-filter="sante"]:hover { background: var(--green-light); border-color: var(--green); }
+.filter-btn[data-filter="sante"].active { background: var(--green); border-color: var(--green); color: #fff; font-weight: 600; box-shadow: 0 0 0 3px rgba(22,163,74,0.2); }
+
+/* Bonne nouvelle : teal */
+.filter-btn[data-filter="bonne_nouvelle"] { color: var(--teal); border-color: rgba(13,148,136,0.35); }
+.filter-btn[data-filter="bonne_nouvelle"]:hover { background: var(--teal-light); border-color: var(--teal); }
+.filter-btn[data-filter="bonne_nouvelle"].active { background: var(--teal); border-color: var(--teal); color: #fff; font-weight: 600; box-shadow: 0 0 0 3px rgba(13,148,136,0.2); }
+
+/* Avenir pharma : indigo */
+.filter-btn[data-filter="avenir_pharma"] { color: var(--indigo); border-color: rgba(79,70,229,0.35); }
+.filter-btn[data-filter="avenir_pharma"]:hover { background: var(--indigo-light); border-color: var(--indigo); }
+.filter-btn[data-filter="avenir_pharma"].active { background: var(--indigo); border-color: var(--indigo); color: #fff; font-weight: 600; box-shadow: 0 0 0 3px rgba(79,70,229,0.2); }
+
+/* Business Officine : burgundy */
+.filter-btn[data-filter="business_officine"] { color: var(--burgundy); border-color: rgba(159,18,57,0.35); }
+.filter-btn[data-filter="business_officine"]:hover { background: var(--burgundy-light); border-color: var(--burgundy); }
+.filter-btn[data-filter="business_officine"].active { background: var(--burgundy); border-color: var(--burgundy); color: #fff; font-weight: 600; box-shadow: 0 0 0 3px rgba(159,18,57,0.2); }
+
+/* Le Saviez-Vous : violet */
+.filter-btn[data-filter="lsv"] { color: var(--purple); border-color: rgba(124,58,237,0.35); }
+.filter-btn[data-filter="lsv"]:hover { background: var(--purple-light); border-color: var(--purple); }
+.filter-btn[data-filter="lsv"].active { background: var(--purple); border-color: var(--purple); color: #fff; font-weight: 600; box-shadow: 0 0 0 3px rgba(124,58,237,0.2); }
 .search-box {
   margin-left: auto;
   position: relative;
@@ -1104,7 +1123,7 @@ body {
   <button class="filter-btn" data-filter="bonne_nouvelle">La bonne nouvelle</button>
   <button class="filter-btn" data-filter="avenir_pharma">L'avenir de la pharma</button>
   <button class="filter-btn" data-filter="business_officine">Business Officine</button>
-  <button class="filter-btn filter-btn-lsv" data-filter="lsv">Le Saviez-Vous</button>
+  <button class="filter-btn" data-filter="lsv">Le Saviez-Vous</button>
   <div class="search-box">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
     <input type="text" id="search" placeholder="Rechercher...">
