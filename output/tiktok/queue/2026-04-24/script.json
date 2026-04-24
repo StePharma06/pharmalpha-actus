@@ -1,46 +1,46 @@
 {
   "hook": {
-    "voiceover": "En 1884, la cocaïne était l'anesthésique miracle des chirurgiens du monde entier.",
-    "video_prompt": "Close-up of a white powder being carefully measured on vintage brass scales in a 1880s medical office, dramatic lighting, cinematic period atmosphere"
+    "voiceover": "Le saviez-vous ? La cocaïne était le premier anesthésique utilisé en chirurgie.",
+    "video_prompt": "Close-up of white cocaine powder on vintage medical scale in 1880s medical office, dramatic lighting, sepia tones, old glass vials in background"
   },
   "story": {
-    "full_voiceover": "En 1884, la cocaïne était l'anesthésique miracle des chirurgiens du monde entier. Vienne, 1884. Carl Koller, jeune ophtalmologue de 27 ans, cherche désespérément comment endormir l'œil avant une opération. Jusqu'alors, c'était l'horreur absolue pour les patients. Son ami Sigmund Freud lui donne quelques grammes de cocaïne qu'il étudie pour ses propriétés antidépressives. Koller teste cette poudre sur sa propre langue et découvre un engourdissement total. Le 15 septembre 1884, il réalise la première opération de cataracte sous anesthésie locale à la cocaïne. Révolution totale ! Mais rapidement, les médecins réalisent que leurs patients deviennent accros. William Halsted, pionnier de la chirurgie américaine, développe une dépendance si sévère qu'il doit être interné. En 1905, Alfred Einhorn invente la procaïne, première alternative non addictive. Et aujourd'hui, quand tu reçois une injection chez le dentiste, tu peux remercier cette découverte dangereuse qui révolutionna la médecine.",
+    "full_voiceover": "Le saviez-vous ? La cocaïne était le premier anesthésique utilisé en chirurgie. Vienne, 1884. Carl Koller, jeune ophtalmologue de 27 ans, cherche désespérément un moyen d'endormir l'œil avant opération. Jusqu'alors, c'était l'horreur pour les patients. Son ami Sigmund Freud lui donne quelques grammes de cocaïne qu'il étudie pour ses propriétés antidépressives. Koller teste cette poudre sur sa propre langue et découvre un engourdissement total. Le 15 septembre 1884, il réalise la première opération de cataracte sous anesthésie locale à la cocaïne. Révolution mondiale ! Mais rapidement, les médecins réalisent que leurs patients deviennent accros. William Halsted, pionnier chirurgien américain, développe une dépendance si sévère qu'il doit être interné. En 1905, Alfred Einhorn invente la procaïne, première alternative non addictive qui sauve la médecine. Et voilà comment une découverte révolutionnaire a failli détruire la chirurgie moderne.",
     "parts": [
       {
         "id": "part1",
-        "text_segment": "Vienne, 1884. Carl Koller, jeune ophtalmologue de 27 ans, cherche désespérément comment endormir l'œil avant une opération. Jusqu'alors, c'était l'horreur absolue pour les patients.",
-        "video_prompt": "Carl Koller in 1884 Vienna medical office examining patient's eye, distressed patient expressions, vintage medical instruments, period accurate clothing, dramatic shadows",
+        "text_segment": "Vienne, 1884. Carl Koller, jeune ophtalmologue de 27 ans, cherche désespérément un moyen d'endormir l'œil avant opération. Jusqu'alors, c'était l'horreur pour les patients.",
+        "video_prompt": "Carl Koller in 1880s Vienna medical office, young bearded doctor in period clothing examining eye surgery instruments, worried expression, dim gas lighting, vintage medical equipment",
         "_computed_duration": 10.0
       },
       {
         "id": "part2",
         "text_segment": "Son ami Sigmund Freud lui donne quelques grammes de cocaïne qu'il étudie pour ses propriétés antidépressives. Koller teste cette poudre sur sa propre langue et découvre un engourdissement total.",
-        "video_prompt": "Sigmund Freud handing white powder to Carl Koller in Victorian study, Koller testing substance on his tongue with surprised expression, vintage laboratory setting",
+        "video_prompt": "Sigmund Freud handing white powder to Carl Koller in Victorian study, Koller tasting powder on tongue with surprised expression, books and medical journals scattered on desk",
         "_computed_duration": 10.0
       },
       {
         "id": "part3",
-        "text_segment": "Le 15 septembre 1884, il réalise la première opération de cataracte sous anesthésie locale à la cocaïne. Révolution totale !",
-        "video_prompt": "Historic operating room scene with Carl Koller performing eye surgery on calm patient, assistants watching in amazement, 1880s medical equipment, triumphant atmosphere",
-        "_computed_duration": 9.683
+        "text_segment": "Le 15 septembre 1884, il réalise la première opération de cataracte sous anesthésie locale à la cocaïne. Révolution mondiale !",
+        "video_prompt": "Historic operating theater 1884, Carl Koller performing eye surgery on calm patient, other doctors watching in amazement, vintage surgical instruments, dramatic spotlight",
+        "_computed_duration": 9.427
       },
       {
         "id": "part4",
-        "text_segment": "Mais rapidement, les médecins réalisent que leurs patients deviennent accros. William Halsted, pionnier de la chirurgie américaine, développe une dépendance si sévère qu'il doit être interné.",
-        "video_prompt": "William Halsted in late 1800s looking haggard and dependent, medical asylum setting, concerned colleagues, dark dramatic lighting showing addiction consequences",
+        "text_segment": "Mais rapidement, les médecins réalisent que leurs patients deviennent accros. William Halsted, pionnier chirurgien américain, développe une dépendance si sévère qu'il doit être interné.",
+        "video_prompt": "William Halsted in 1890s hospital, disheveled appearance, shaking hands reaching for cocaine vial, concerned medical staff in background, psychiatric hospital setting",
         "_computed_duration": 10.0
       },
       {
         "id": "part5",
-        "text_segment": "En 1905, Alfred Einhorn invente la procaïne, première alternative non addictive. Et aujourd'hui, quand tu reçois une injection chez le dentiste, tu peux remercier cette découverte dangereuse qui révolutionna la médecine.",
-        "video_prompt": "Modern dentist preparing lidocaine injection, split screen showing Alfred Einhorn in 1905 laboratory, smooth transition from historical to contemporary medical practice",
+        "text_segment": "En 1905, Alfred Einhorn invente la procaïne, première alternative non addictive qui sauve la médecine. Et voilà comment une découverte révolutionnaire a failli détruire la chirurgie moderne.",
+        "video_prompt": "Alfred Einhorn in early 1900s laboratory holding procaine vial triumphantly, modern dental syringe morphing into view, transition to contemporary medical setting",
         "_computed_duration": 10.0
       }
     ]
   },
   "music_mood": "mysterious",
-  "titre_tiktok": "La cocaïne était le premier anesthésiant des chirurgiens 💉",
-  "description_tiktok": "L'histoire folle de Carl Koller qui révolutionna la chirurgie avec une poudre dangereuse ! #lesaviezvous #pharmalpha #pharmacie #histoire",
+  "titre_tiktok": "Quand la cocaïne était un médicament miracle 😱",
+  "description_tiktok": "L'histoire folle du premier anesthésique qui a révolutionné la chirurgie... avant de devenir un cauchemar ! Carl Koller et sa découverte qui a failli détruire la médecine moderne.",
   "hashtags": "#lesaviezvous #pharmalpha #pharmacie #sante",
-  "tiktok_caption": "💉 La cocaïne était le premier anesthésiant des chirurgiens !\n\nEn 1884, Carl Koller révolutionne la médecine avec cette poudre blanche... mais découvre rapidement ses dangers ! Une histoire incroyable qui montre comment la science progresse parfois par accident. De Sigmund Freud aux dentistes d'aujourd'hui, voici comment l'anesthésie locale est née.\n\nCommente si tu savais ! 👇\n\n#fyp #pourtoi #apprendresurtiktok #culture #histoire #pharmacie #pharma #lesaviezvous #pharmalpha #sante #medicament #anecdote #science #medecine #chirurgie #cocaine #anesthesie #dentiste #injection #decouverte #vienne #1884"
+  "tiktok_caption": "💊 Quand la cocaïne était un médicament miracle 😱\n\nL'histoire dingue de Carl Koller qui a révolutionné la chirurgie en 1884 avec de la cocaïne ! De Freud aux dentistes modernes, découvre comment cette découverte géniale a failli détruire la médecine avant d'être remplacée par nos anesthésiques actuels.\n\nCommente si tu savais déjà ça ! 👇\n\n#fyp #pourtoi #apprendresurtiktok #culture #histoire #pharmacie #pharma #lesaviezvous #pharmalpha #sante #medicament #anecdote #cocaine #anesthesie #chirurgie #medecine #sciencesocial #factcheck #savoirplus #eduktok #histoiredemedicine #curiosite #insolite #shocking"
 }
