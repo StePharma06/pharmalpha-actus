@@ -1,0 +1,41 @@
+{
+  "hook": {
+    "voiceover": "Savez-vous que la cocaïne était autrefois l'anesthésique miracle de tous les chirurgiens ?",
+    "video_prompt": "Extreme close-up of white crystalline powder being carefully measured on an antique brass medical scale, dramatic shadows, vintage medical cabinet in background, cinematic lighting with golden highlights"
+  },
+  "story": {
+    "full_voiceover": "Savez-vous que la cocaïne était autrefois l'anesthésique miracle de tous les chirurgiens ? Nous sommes à Vienne en 1884. Un jeune ophtalmologue désespéré cherche un moyen d'endormir l'œil avant opération. Jusqu'alors, c'était l'horreur absolue pour les patients. Son ami psychiatre lui donne quelques grammes de cocaïne qu'il étudie pour ses propriétés antidépressives. Le médecin a l'idée géniale de tester cette poudre sur sa propre langue. Résultat : engourdissement total ! Il réalise la première opération de cataracte sous anesthésie locale. Le patient ne sent rien, le chirurgien devient une star mondiale. Les médecins du monde entier se ruent sur cette poudre miracle. Mais très vite, ils réalisent que leurs patients deviennent complètement accros. Certains chirurgiens aussi ! En 1905, un chimiste sauve la situation en inventant une alternative non addictive. Et voilà comment cette découverte révolutionnaire a failli tourner au cauchemar médical.",
+    "parts": [
+      {
+        "id": "part1",
+        "video_prompt": "Wide shot of a dimly lit 1880s Viennese medical office, wooden desk covered with medical instruments, oil lamp casting warm light, vintage surgical tools arranged on leather mat, atmospheric period setting",
+        "duration": 10
+      },
+      {
+        "id": "part2",
+        "video_prompt": "Close-up of hands grinding coca leaves in a marble mortar and pestle, white powder forming, scientific glassware in background, laboratory setting with warm golden lighting, slow motion grinding action",
+        "duration": 10
+      },
+      {
+        "id": "part3",
+        "video_prompt": "Dramatic close-up of an eye surgery in progress, vintage surgical instruments, patient lying still on operating table, surgeon's steady hands working, period medical equipment, cinematic low-angle shot",
+        "duration": 10
+      },
+      {
+        "id": "part4",
+        "video_prompt": "Montage of multiple doctors in different locations frantically seeking the white powder, hands reaching for medicine bottles, worried expressions, dark dramatic lighting suggesting addiction and desperation",
+        "duration": 10
+      },
+      {
+        "id": "part5",
+        "video_prompt": "Modern dental office with contemporary anesthetic injection, clean white surfaces, professional medical equipment, bright clinical lighting, smooth camera movement from vintage to modern era",
+        "duration": 10
+      }
+    ]
+  },
+  "music_mood": "mysterious",
+  "titre_tiktok": "La cocaïne était l'anesthésique de tous les dentistes 😱",
+  "description_tiktok": "Une découverte médicale révolutionnaire qui a failli virer au cauchemar ! L'histoire fascinante du premier anesthésique local. #pharmacie #sante #lesaviezvous",
+  "hashtags": "#lesaviezvous #pharmalpha #pharmacie #sante",
+  "tiktok_caption": "💉 La cocaïne était l'anesthésique de tous les dentistes 😱\n\nUne découverte médicale révolutionnaire de 1884 qui a littéralement changé la chirurgie pour toujours... mais qui a failli virer au cauchemar total ! Cette histoire incroyable montre comment la médecine avance parfois par accident, entre génie et danger.\n\nCommente si tu savais cette anecdote dingue !\n\n#fyp #pourtoi #apprendresurtiktok #culture #histoire #pharmacie #pharma #lesaviezvous #pharmalpha #sante #medicament #anecdote #chirurgie #anesthesie #medecine #culture #education #incroyable #choc"
+}
