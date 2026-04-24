@@ -874,6 +874,15 @@ def save_to_queue(video_path, script):
     with open(slot / "tiktok_caption.txt", "w", encoding="utf-8") as f:
         f.write(caption)
 
+    # Generation cover image (frame video + titre overlay)
+    try:
+        from generate_cover import generate_cover
+        cover_path = generate_cover(slot)
+        if cover_path:
+            print(f"  Cover : cover.jpg")
+    except Exception as e:
+        print(f"  [WARN] Cover generation failed : {e}")
+
     print(f"  Queue : {slot}")
     print(f"  Caption TikTok : tiktok_caption.txt")
     print(f"  Publication : {publish_date} a 18h30")
