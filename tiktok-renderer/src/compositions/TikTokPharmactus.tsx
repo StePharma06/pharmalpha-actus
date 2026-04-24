@@ -1,5 +1,5 @@
 import React from 'react';
-import {AbsoluteFill, Audio, Sequence, Video, useVideoConfig} from 'remotion';
+import {AbsoluteFill, Audio, Sequence, Video, useVideoConfig, spring, useCurrentFrame} from 'remotion';
 import {z} from 'zod';
 import {Subtitles} from '../components/Subtitles';
 
@@ -21,6 +21,14 @@ export const tiktokPharmactusSchema = z.object({
       })
     )
     .optional(),
+  cta: z
+    .object({
+      voiceoverUrl: z.string(),
+      durationInSeconds: z.number(),
+      pauseBeforeSeconds: z.number().default(1.0),
+      backgroundClipUrl: z.string().default(''),
+    })
+    .optional(),
 });
 
 export type TikTokPharmactusProps = z.infer<typeof tiktokPharmactusSchema>;
@@ -30,10 +38,11 @@ export const TikTokPharmactus: React.FC<TikTokPharmactusProps> = ({
   voiceoverUrl,
   musicUrl,
   words,
+  cta,
 }) => {
   const {fps} = useVideoConfig();
 
-  // Calcule le frame de démarrage de chaque clip
+  // Calcule le frame de démarrage de chaque clip story
   let cumulativeFrames = 0;
   const clipsWithTiming = clips.map((clip) => {
     const from = cumulativeFrames;
@@ -42,32 +51,140 @@ export const TikTokPharmactus: React.FC<TikTokPharmactusProps> = ({
     return {...clip, from, durationInFrames};
   });
 
-  // Convertit les timestamps (en secondes) en frames pour les sous-titres
-  const captions = words
-    ? groupWordsToCaptions(words, fps)
+  const storyEndFrame = cumulativeFrames;
+
+  // CTA timing
+  const ctaPauseFrames = cta ? Math.round(cta.pauseBeforeSeconds * fps) : 0;
+  const ctaStartFrame = storyEndFrame + ctaPauseFrames;
+  const ctaDurationFrames = cta ? Math.round(cta.durationInSeconds * fps) : 0;
+  const ctaEndFrame = ctaStartFrame + ctaDurationFrames;
+
+  // Story voiceover duration = last word end, to avoid voiceover bleeding into CTA pause
+  const storyVoiceEndSeconds = words && words.length > 0 ? words[words.length - 1].end : 0;
+
+  // Sous-titres story (mot par mot)
+  const captions = words ? groupWordsToCaptions(words, fps) : [];
+
+  // CTA caption = texte fixe affiché pendant le CTA
+  const ctaCaptions = cta
+    ? [
+        {
+          from: ctaStartFrame,
+          to: ctaEndFrame,
+          text: "Abonne-toi pour continuer à découvrir d'autres secrets de la médecine.",
+        },
+      ]
     : [];
 
   return (
     <AbsoluteFill className="bg-black">
-      {/* Clips vidéo en séquence */}
+      {/* Clips vidéo story en séquence */}
       {clipsWithTiming.map((clip, i) => (
         <Sequence key={i} from={clip.from} durationInFrames={clip.durationInFrames}>
-          <Video
-            src={clip.url}
-            muted
-            style={{width: '100%', height: '100%', objectFit: 'cover'}}
-          />
+          <Video src={clip.url} muted style={{width: '100%', height: '100%', objectFit: 'cover'}} />
         </Sequence>
       ))}
 
-      {/* Voix off ElevenLabs (continue sur toute la vidéo) */}
-      <Audio src={voiceoverUrl} volume={1} />
+      {/* Voix off story (s'arrête à la fin du dernier mot) */}
+      <Sequence from={0} durationInFrames={Math.round(storyVoiceEndSeconds * fps)}>
+        <Audio src={voiceoverUrl} volume={1} />
+      </Sequence>
 
-      {/* Musique de fond (faible volume) */}
-      {musicUrl ? <Audio src={musicUrl} volume={0.12} /> : null}
+      {/* Musique de fond (toute la durée sauf CTA) */}
+      {musicUrl && (
+        <Sequence from={0} durationInFrames={storyEndFrame}>
+          <Audio src={musicUrl} volume={0.12} />
+        </Sequence>
+      )}
 
-      {/* Sous-titres mot par mot */}
+      {/* Sous-titres story */}
       {captions.length > 0 && <Subtitles captions={captions} style="tiktok" position={72} />}
+
+      {/* ──── SEGMENT CTA ──── */}
+      {cta && (
+        <>
+          {/* Pendant la pause (1s), on garde le dernier clip visible mais figé */}
+          <Sequence from={storyEndFrame} durationInFrames={ctaPauseFrames + ctaDurationFrames}>
+            {cta.backgroundClipUrl ? (
+              <AbsoluteFill>
+                <Video
+                  src={cta.backgroundClipUrl}
+                  muted
+                  style={{width: '100%', height: '100%', objectFit: 'cover', filter: 'brightness(0.35) blur(2px)'}}
+                />
+              </AbsoluteFill>
+            ) : (
+              <AbsoluteFill className="bg-black" />
+            )}
+          </Sequence>
+
+          {/* Voix CTA après la pause */}
+          <Sequence from={ctaStartFrame} durationInFrames={ctaDurationFrames}>
+            <Audio src={cta.voiceoverUrl} volume={1} />
+          </Sequence>
+
+          {/* Overlay bouton "Abonne-toi" TikTok style + texte */}
+          <Sequence from={ctaStartFrame} durationInFrames={ctaDurationFrames}>
+            <AbonneToiOverlay />
+          </Sequence>
+
+          {/* Sous-titre CTA */}
+          {ctaCaptions.length > 0 && <Subtitles captions={ctaCaptions} style="tiktok" position={78} />}
+        </>
+      )}
+    </AbsoluteFill>
+  );
+};
+
+/**
+ * Overlay bouton "Abonne-toi" style TikTok (rouge + plus blanc).
+ * Animation : scale in + pulse.
+ */
+const AbonneToiOverlay: React.FC = () => {
+  const frame = useCurrentFrame();
+  const {fps} = useVideoConfig();
+  const scaleIn = spring({frame, fps, config: {damping: 10}});
+  const pulse = 1 + Math.sin((frame / fps) * Math.PI * 1.5) * 0.04;
+
+  return (
+    <AbsoluteFill className="flex items-center justify-center">
+      <div style={{transform: `scale(${scaleIn * pulse})`}} className="flex flex-col items-center gap-8">
+        {/* Avatar placeholder (cercle rouge avec +) */}
+        <div
+          style={{
+            width: 240,
+            height: 240,
+            borderRadius: '50%',
+            background: 'linear-gradient(135deg, #ff2d55, #ff0050)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            boxShadow: '0 12px 40px rgba(255, 0, 80, 0.6)',
+            border: '6px solid white',
+            position: 'relative',
+          }}
+        >
+          <span style={{color: 'white', fontSize: 140, fontWeight: 900, lineHeight: 1}}>+</span>
+        </div>
+
+        {/* Bouton Abonne-toi */}
+        <div
+          style={{
+            background: '#ff0050',
+            color: 'white',
+            padding: '28px 72px',
+            borderRadius: 16,
+            fontSize: 68,
+            fontWeight: 900,
+            letterSpacing: '-0.01em',
+            fontFamily: '"Oswald", sans-serif',
+            textTransform: 'uppercase',
+            boxShadow: '0 8px 28px rgba(0,0,0,0.5)',
+          }}
+        >
+          ABONNE-TOI
+        </div>
+      </div>
     </AbsoluteFill>
   );
 };

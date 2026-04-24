@@ -129,14 +129,14 @@ STRUCTURE :
 
 REGLES CRITIQUES :
 - full_voiceover = hook + story concatenes. EXACTEMENT 140-150 mots (strict, pour ~50 secondes de voix). Rythme fluide, pas de pause.
-- EVITER les noms propres difficiles a prononcer (noms etrangers, marques obscures, chiffres complexes). ElevenLabs bugue dessus.
-  Ex : au lieu de "Eben Byers", ecrire "un riche industriel americain". Au lieu de "Radithor", ecrire "cet elixir" ou "cette potion".
-- NE PAS inclure "Pharmusez-vous bien" ni aucune signature personnelle. C'est une video 100% IA narree anonymement.
+- UTILISER les noms propres authentiques (Radithor, Eben Byers, dates, lieux) pour la credibilite historique. Ne pas generaliser "un riche industriel", ecrire "Eben Byers".
+- Pour chaque partie, FOURNIR text_segment = les mots EXACTS du voiceover qui correspondent a ce clip video. Les text_segments concatenes doivent EGALER full_voiceover (sauf le hook, qui a son propre text).
+- COHERENCE CRITIQUE : le video_prompt de chaque partie doit ILLUSTRER exactement ce que dit le text_segment. Si text dit "Eben Byers boit", le prompt doit montrer Eben Byers en train de boire. Si text dit "les medecins de l'epoque", prompt = medecins 1930s. Si text dit "aujourd'hui", prompt = moderne.
+- NE PAS inclure "Pharmusez-vous bien" ni signature personnelle.
 - Le voiceover doit se terminer par la LOOP PHRASE qui connecte naturellement au debut du hook.
-- Ecrire en FRANCAIS NATUREL avec les accents (é, è, à, ç, etc). PAS d'emoji, PAS de guillemets typographiques.
-- Chaque partie a un "video_prompt" DETAILLE pour Grok Imagine (scene, action, mouvement, eclairage, cinematique).
-  Ex : "Close-up of dark brown carob seeds being carefully poured onto a brass pharmacy scale, warm candlelight, medieval apothecary, cinematic slow motion"
-  PAS de descriptions vagues. PAS de texte dans la video.
+- Ecrire en FRANCAIS NATUREL avec les accents. PAS d'emoji, PAS de guillemets typographiques.
+- video_prompt en ANGLAIS, DETAILLE (scene, action, mouvement, eclairage, cinematique, epoque specifique).
+  Ex : "Close-up of Eben Byers in 1920s golf attire drinking from a glowing green Radithor bottle, luxurious mansion library, warm lamplight, cinematic slow motion"
 - music_mood parmi : medieval, epic, warm, mysterious, celebration
 - titre_tiktok : conversationnel, PAS de majuscules agressives
 
@@ -147,13 +147,13 @@ JSON UNIQUEMENT :
     "video_prompt": "Scene detaillee cinematique..."
   }},
   "story": {{
-    "full_voiceover": "Texte COMPLET hook + 5 parties enchainees. 150 mots MAX (~50s de voix). Se termine par LOOP PHRASE connectant au debut du hook. PAS de Pharmusez-vous bien ni signature.",
+    "full_voiceover": "Texte COMPLET hook + 5 parties enchainees. 150 mots MAX. Avec noms propres authentiques. Se termine par LOOP PHRASE.",
     "parts": [
-      {{"id": "part1", "video_prompt": "Scene detaillee...", "duration": 10}},
-      {{"id": "part2", "video_prompt": "Scene detaillee...", "duration": 10}},
-      {{"id": "part3", "video_prompt": "Scene detaillee...", "duration": 10}},
-      {{"id": "part4", "video_prompt": "Scene detaillee...", "duration": 10}},
-      {{"id": "part5", "video_prompt": "Scene detaillee...", "duration": 10}}
+      {{"id": "part1", "text_segment": "Mots EXACTS du voiceover pour ce clip (apres le hook)", "video_prompt": "Scene detaillee qui illustre ces mots"}},
+      {{"id": "part2", "text_segment": "Mots EXACTS du voiceover pour ce clip", "video_prompt": "Scene illustrant"}},
+      {{"id": "part3", "text_segment": "Mots EXACTS du voiceover pour ce clip", "video_prompt": "Scene illustrant"}},
+      {{"id": "part4", "text_segment": "Mots EXACTS du voiceover pour ce clip", "video_prompt": "Scene illustrant"}},
+      {{"id": "part5", "text_segment": "Mots EXACTS du voiceover pour ce clip (fin incluant loop phrase)", "video_prompt": "Scene illustrant"}}
     ]
   }},
   "music_mood": "medieval|epic|warm|mysterious|celebration",
@@ -246,55 +246,103 @@ def generate_grok_clip(prompt, label, duration=10):
         return None
 
 
-def generate_video_clips(script, target_story_dur):
-    """Generate clips sized to match actual voice duration.
+def find_segment_duration(text_segment, word_timestamps):
+    """Trouve la duree d'un text_segment dans le voiceover via les timestamps.
+    Retourne (start_seconds, end_seconds, duration_seconds)."""
+    if not text_segment or not word_timestamps:
+        return None
 
-    target_story_dur = total duration voice needs for the story (after hook).
-    Hook is always 5s. Story clips are split to fill target_story_dur.
-    """
+    # Nettoie le segment en mots
+    target_words = [w.lower().strip(".,;:!?'\"") for w in text_segment.split() if w.strip()]
+    if not target_words:
+        return None
+
+    # Cherche la sequence de mots dans les timestamps (matching tolerant)
+    vo_words = [(i, w["word"].lower().strip(".,;:!?'\""), w) for i, w in enumerate(word_timestamps)]
+    target_len = len(target_words)
+
+    for start_idx in range(len(vo_words) - target_len + 1):
+        # Match approximatif (5 premiers mots)
+        match = True
+        check_count = min(5, target_len)
+        for j in range(check_count):
+            if vo_words[start_idx + j][1] != target_words[j]:
+                match = False
+                break
+        if match:
+            start_t = vo_words[start_idx][2]["start"]
+            end_t = vo_words[min(start_idx + target_len - 1, len(vo_words) - 1)][2]["end"]
+            return (start_t, end_t, end_t - start_t)
+
+    return None
+
+
+def generate_video_clips(script, target_story_dur, word_timestamps=None):
+    """Generate clips sized to match each text_segment's actual duration in the voice."""
     print(f"[3/7] Generation clips video Grok (target story: {target_story_dur:.1f}s)...")
     clips = {}
     clip_durations = {}
 
-    # Hook clip = 5s fixed
+    # Hook clip : duree = duree reelle du hook dans le voiceover
     hook_prompt = script.get("hook", {}).get("video_prompt", "")
+    hook_text = script.get("hook", {}).get("voiceover", "")
+    hook_dur_real = 5.0
+    if word_timestamps and hook_text:
+        seg = find_segment_duration(hook_text, word_timestamps)
+        if seg:
+            hook_dur_real = max(3.0, min(7.0, seg[2]))
+            print(f"  Hook detecte : {hook_dur_real:.1f}s (dans la voix)")
+
     if hook_prompt:
-        url = generate_grok_clip(hook_prompt, "hook", duration=5)
+        url = generate_grok_clip(hook_prompt, "hook", duration=int(round(hook_dur_real)))
         if url:
             clips["hook"] = url
-            clip_durations["hook"] = 5
+            clip_durations["hook"] = hook_dur_real
 
-    # Story: adapte le nombre de clips a la duree reelle de la voix
-    # Grok supporte 4-10s par clip
+    # Story parts : utilise text_segment + timestamps pour calculer la vraie duree
     parts = script.get("story", {}).get("parts", [])
-    prompts = [p.get("video_prompt", "") for p in parts if p.get("video_prompt")]
-    if not prompts:
-        prompts = [hook_prompt]
+    parts = [p for p in parts if p.get("video_prompt")]
 
-    # Nombre de clips necessaires pour couvrir la voix (clips de 8-10s)
-    import math
-    target_clip_len = 9.0  # duree cible par clip
-    n_clips_needed = max(len(prompts), math.ceil(target_story_dur / target_clip_len))
-    clip_dur = target_story_dur / n_clips_needed
-    # Clamp [4, 10]
-    clip_dur = max(4.0, min(10.0, clip_dur))
-    # Recalcule n_clips pour que somme = target
-    n_clips = max(1, math.ceil(target_story_dur / clip_dur))
+    # Calcule duree reelle de chaque text_segment dans la voix
+    for part in parts:
+        text_seg = part.get("text_segment", "")
+        dur = None
+        if word_timestamps and text_seg:
+            seg = find_segment_duration(text_seg, word_timestamps)
+            if seg:
+                dur = seg[2]
 
-    # Si on a plus de clips que de prompts Claude, on repete le dernier (conclusion)
-    # qui reste coherent avec "aujourd'hui, les scientifiques..."
-    while len(prompts) < n_clips:
-        prompts.append(prompts[-1])
+        # Fallback : repartition egale si pas de match
+        if dur is None:
+            dur = target_story_dur / max(1, len(parts))
+            print(f"  {part['id']} : fallback {dur:.1f}s (text_segment non trouve)")
+        else:
+            print(f"  {part['id']} : {dur:.1f}s (sync avec voix)")
 
-    print(f"  Strategy : {n_clips} clips de {clip_dur:.1f}s (total story {n_clips * clip_dur:.1f}s pour voix {target_story_dur:.0f}s)")
+        # Clamp Grok [4, 10]
+        dur = max(4.0, min(10.0, dur))
+        part["_computed_duration"] = dur
 
-    for i in range(n_clips):
-        time.sleep(10)  # rate limit protection
+    # Si somme des clips < target_story_dur, on ajoute un clip final en repetant le dernier
+    total_planned = sum(p["_computed_duration"] for p in parts)
+    remaining = target_story_dur - total_planned
+    if remaining > 3.0 and parts:
+        # Ajoute un clip supplementaire en utilisant le dernier prompt
+        last = parts[-1].copy()
+        last["id"] = f"part{len(parts) + 1}"
+        last["_computed_duration"] = min(10.0, remaining)
+        parts.append(last)
+        print(f"  Ajout clip supplementaire : {last['_computed_duration']:.1f}s (gap de {remaining:.1f}s)")
+
+    # Genere les clips
+    for i, part in enumerate(parts):
+        time.sleep(10)  # rate limit
         part_id = f"part{i+1}"
-        url = generate_grok_clip(prompts[i], part_id, duration=int(round(clip_dur)))
+        dur = part["_computed_duration"]
+        url = generate_grok_clip(part["video_prompt"], part_id, duration=int(round(dur)))
         if url:
             clips[part_id] = url
-            clip_durations[part_id] = clip_dur
+            clip_durations[part_id] = dur
 
     return clips, clip_durations
 
@@ -396,6 +444,40 @@ def generate_voiceover(script):
     url = upload_temp(path)
     print(f"  Upload : OK")
     return path, url, full_text, word_timestamps
+
+
+CTA_TEXT = "Abonne-toi pour continuer à découvrir d'autres secrets surprenants de la médecine d'aujourd'hui et d'autrefois."
+
+
+def generate_cta_voiceover():
+    """Genere le voiceover CTA final (texte fixe)."""
+    print("[4.5/7] Generation voix CTA ElevenLabs...")
+    resp = api_request(
+        f"https://api.elevenlabs.io/v1/text-to-speech/{ELEVENLABS_VOICE_ID}/with-timestamps",
+        data={
+            "text": CTA_TEXT,
+            "model_id": "eleven_multilingual_v2",
+            "voice_settings": {"stability": 0.85, "similarity_boost": 0.75,
+                               "style": 0.1, "use_speaker_boost": True},
+        },
+        headers={"xi-api-key": ELEVENLABS_API_KEY},
+    )
+    import base64
+    audio_bytes = base64.b64decode(resp.get("audio_base64", ""))
+    alignment = resp.get("alignment", {})
+
+    path = OUTPUT_DIR / "voiceover_cta.mp3"
+    with open(path, "wb") as f:
+        f.write(audio_bytes)
+
+    # Calcule la duree (dernier character end)
+    ends = alignment.get("character_end_times_seconds", [])
+    duration = ends[-1] if ends else 5.0
+
+    # Upload
+    cta_url = upload_temp(path)
+    print(f"  CTA voix : {duration:.1f}s, {len(audio_bytes) / 1024:.0f} KB")
+    return path, cta_url, duration
 
 
 # -- Step 5: HeyGen Facecam CTA -------------------------------------------
@@ -584,7 +666,7 @@ import subprocess
 
 
 def build_remotion_props(script, clips, clip_durations, voiceover_url,
-                         word_timestamps, hook_end_s):
+                         word_timestamps, hook_end_s, cta_url=None, cta_duration=0.0):
     """Build inputProps for Remotion TikTokPharmactus composition."""
     mood = script.get("music_mood", "default")
     music_url = MUSIC_TRACKS.get(mood, MUSIC_TRACKS["default"])
@@ -613,12 +695,24 @@ def build_remotion_props(script, clips, clip_durations, voiceover_url,
             "end": float(w["end"]),
         })
 
-    return {
+    props = {
         "clips": ordered_clips,
         "voiceoverUrl": voiceover_url,
         "musicUrl": music_url,
         "words": words,
     }
+
+    if cta_url:
+        # Dernier clip de story reste en visuel pendant le CTA
+        last_clip = ordered_clips[-1] if ordered_clips else None
+        props["cta"] = {
+            "voiceoverUrl": cta_url,
+            "durationInSeconds": cta_duration,
+            "pauseBeforeSeconds": 1.0,  # silence dramatique
+            "backgroundClipUrl": last_clip["url"] if last_clip else "",
+        }
+
+    return props
 
 
 def render_video_remotion(props, output_path):
@@ -647,10 +741,12 @@ def render_video_remotion(props, output_path):
 
 
 def assemble_video(script, clips, clip_durations, vo_url, vo_text,
-                    word_timestamps, hook_end_s, facecam_url):
+                    word_timestamps, hook_end_s, facecam_url,
+                    cta_url=None, cta_duration=0.0):
     print("[6/7] Assemblage Remotion...")
     props = build_remotion_props(script, clips, clip_durations, vo_url,
-                                  word_timestamps, hook_end_s)
+                                  word_timestamps, hook_end_s,
+                                  cta_url=cta_url, cta_duration=cta_duration)
     with open(OUTPUT_DIR / "remotion_props.json", "w", encoding="utf-8") as f:
         json.dump(props, f, ensure_ascii=False, indent=2)
 
@@ -755,12 +851,16 @@ def main():
     story_dur = vo_actual_dur - hook_end_s
     print(f"  Hook : {hook_end_s:.1f}s | Story : {story_dur:.1f}s")
 
-    # STEP 3: Generate clips sized to match voice
-    clips, clip_durations = generate_video_clips(script, story_dur)
+    # STEP 3: Generate clips sized to match voice (text_segment sync)
+    clips, clip_durations = generate_video_clips(script, story_dur, word_timestamps)
+
+    # STEP 3.5: Generate CTA voiceover (fixed text + Abonne-toi overlay)
+    cta_path, cta_url, cta_dur = generate_cta_voiceover()
     print("[5/7] Facecam HeyGen desactive (pipeline fluide uniquement)")
 
     video_path = assemble_video(script, clips, clip_durations, vo_url, vo_text,
-                                 word_timestamps, hook_end_s, None)
+                                 word_timestamps, hook_end_s, None,
+                                 cta_url=cta_url, cta_duration=cta_dur)
 
     if video_path:
         slot = save_to_queue(video_path, script)

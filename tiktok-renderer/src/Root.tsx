@@ -14,9 +14,13 @@ export const RemotionRoot: React.FC = () => {
       height={1920}
       schema={tiktokPharmactusSchema}
       calculateMetadata={({props}) => {
-        const totalSeconds = props.clips.reduce((sum, c) => sum + c.durationInSeconds, 0);
+        const storySeconds = props.clips.reduce((sum, c) => sum + c.durationInSeconds, 0);
+        const ctaSeconds = props.cta
+          ? props.cta.pauseBeforeSeconds + props.cta.durationInSeconds
+          : 0;
+        const total = storySeconds + ctaSeconds;
         return {
-          durationInFrames: Math.max(30, Math.round(totalSeconds * 30)),
+          durationInFrames: Math.max(30, Math.round(total * 30)),
         };
       }}
       defaultProps={{
