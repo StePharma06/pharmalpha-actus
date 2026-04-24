@@ -854,6 +854,16 @@ def main():
     # STEP 3: Generate clips sized to match voice (text_segment sync)
     clips, clip_durations = generate_video_clips(script, story_dur, word_timestamps)
 
+    # Abort early if Grok failed for all clips (rate limit, quota, etc.)
+    if len(clips) < 2:
+        print()
+        print("=" * 60)
+        print(f"[ERROR] Seulement {len(clips)} clip(s) generes par Grok.")
+        print("Cause probable : quota xAI epuise (HTTP 429).")
+        print("Verifie : https://console.x.ai/")
+        print("=" * 60)
+        sys.exit(1)
+
     # STEP 3.5: Generate CTA voiceover (fixed text + Abonne-toi overlay)
     cta_path, cta_url, cta_dur = generate_cta_voiceover()
     print("[5/7] Facecam HeyGen desactive (pipeline fluide uniquement)")
