@@ -1,46 +1,46 @@
 {
   "hook": {
-    "voiceover": "En 1667, un médecin français a sauvé un patient en lui injectant du sang d'agneau !",
-    "video_prompt": "Close-up cinematic shot of a 17th century French physician in period clothing holding a vial of blood next to a white lamb in a baroque medical chamber, golden candlelight, dramatic shadows"
+    "voiceover": "Tu savais qu'on vendait de l'eau radioactive en pharmacie comme élixir de jouvence ?",
+    "video_prompt": "1920s American pharmacy ornate wooden shelf with rows of glass bottles containing glowing greenish radioactive water, vintage handwritten labels reading 'Radithor', warm amber apothecary lighting, dust particles floating in sunbeams, cinematic medium shot with shallow depth of field, historically accurate"
   },
   "story": {
-    "full_voiceover": "En 1667, un médecin français a sauvé un patient en lui injectant du sang d'agneau ! Paris, juin 1667. Jean-Baptiste Denis, médecin du Roi-Soleil, s'apprête à sauver un jeune homme de quinze ans épuisé par des saignées répétées. Sa solution révolutionnaire ? Lui transfuser du sang d'agneau directement dans les veines. L'idée semblait logique à l'époque. Denis pensait que le sang animal était plus pur, moins corrompu par les passions humaines. L'agneau, symbole d'innocence, était le candidat parfait. Le miracle opère, le jeune homme survit ! Denis récidive sur un valet violent, espérant l'apaiser avec ce sang innocent. Mais le troisième patient, Antoine Mauroy, meurt après la transfusion. Sa veuve porte plainte, le scandale éclate. Les transfusions sont interdites pour plus d'un siècle en Europe. Il faudra attendre Karl Landsteiner en 1900 pour comprendre les groupes sanguins. Et la prochaine fois que tu vois une poche de sang à l'hôpital, souviens-toi qu'elle a remplacé nos amis les agneaux parisiens !",
+    "full_voiceover": "Tu savais qu'on vendait de l'eau radioactive en pharmacie comme élixir de jouvence ? Dans les années 1920, le Radithor, invente par le docteur William Bailey, promettait une cure miracle contre l'impuissance, l'arthrite et la fatigue. Un dollar la bouteille, les Américains s'arrachent cette potion au radium. Eben Byers, riche industriel et champion de golf, en devient accro en 1927. Il boit trois bouteilles par jour pendant trois ans, soit 1400 bouteilles au total. Mais le radium s'accumule dans ses os comme le calcium. En 1932, sa mâchoire se désintègre, des trous béants apparaissent dans son crâne. Il meurt rongé de l'intérieur. Ce scandale va créer les premières lois de contrôle des médicaments. Alors la prochaine fois qu'on te vend une potion miracle, souviens-toi d'Eben Byers.",
     "parts": [
       {
         "id": "part1",
-        "text_segment": "Paris, juin 1667. Jean-Baptiste Denis, médecin du Roi-Soleil, s'apprête à sauver un jeune homme de quinze ans épuisé par des saignées répétées.",
-        "video_prompt": "Wide shot of 1667 Paris street scene transitioning to Jean-Baptiste Denis in ornate 17th century physician robes examining a pale, weak young man in a baroque medical chamber with Louis XIV portraits on walls",
-        "_computed_duration": 9.219
+        "text_segment": "Dans les années 1920, le Radithor, invente par le docteur William Bailey, promettait une cure miracle contre l'impuissance, l'arthrite et la fatigue.",
+        "video_prompt": "Close-up of a single vintage Radithor glass bottle with elegant cursive label on a 1920s pharmacy counter, glowing greenish liquid inside, shallow depth of field, warm amber lighting, cinematic slow camera push-in",
+        "_computed_duration": 9.149
       },
       {
         "id": "part2",
-        "text_segment": "Sa solution révolutionnaire ? Lui transfuser du sang d'agneau directement dans les veines. L'idée semblait logique à l'époque. Denis pensait que le sang animal était plus pur, moins corrompu par les passions humaines.",
-        "video_prompt": "Close-up of Denis performing the transfusion procedure, connecting tubes from a white lamb to the patient's arm, candlelit medical instruments on table, dramatic baroque lighting",
+        "text_segment": "Un dollar la bouteille, les Américains s'arrachent cette potion au radium. Eben Byers, riche industriel et champion de golf, en devient accro en 1927.",
+        "video_prompt": "Eben Byers, handsome 1920s wealthy American industrialist in golf attire with moustache, drinking confidently from a Radithor bottle on the porch of his luxurious estate, golden hour sunset lighting, cinematic slow motion, period-accurate costume",
         "_computed_duration": 10.0
       },
       {
         "id": "part3",
-        "text_segment": "L'agneau, symbole d'innocence, était le candidat parfait. Le miracle opère, le jeune homme survit ! Denis récidive sur un valet violent, espérant l'apaiser avec ce sang innocent.",
-        "video_prompt": "Split screen showing the recovered young patient sitting up healthily, then Denis performing another transfusion on an aggressive-looking servant, both scenes in 17th century setting",
-        "_computed_duration": 10.0
+        "text_segment": "Il boit trois bouteilles par jour pendant trois ans, soit 1400 bouteilles au total. Mais le radium s'accumule dans ses os comme le calcium.",
+        "video_prompt": "Overhead cinematic shot of hundreds of empty Radithor glass bottles neatly arranged in rows on a dark wooden floor, dramatic moody lighting casting long shadows, suggestive scale of overconsumption",
+        "_computed_duration": 8.951
       },
       {
         "id": "part4",
-        "text_segment": "Mais le troisième patient, Antoine Mauroy, meurt après la transfusion. Sa veuve porte plainte, le scandale éclate. Les transfusions sont interdites pour plus d'un siècle en Europe.",
-        "video_prompt": "Dark dramatic scene of a man dying on a medical table, followed by an angry widow in black 17th century dress pointing accusingly in a courthouse, papers being signed banning transfusions",
-        "_computed_duration": 10.0
+        "text_segment": "En 1932, sa mâchoire se désintègre, des trous béants apparaissent dans son crâne.",
+        "video_prompt": "Eerie 1930s medical x-ray on a vintage lightbox showing a human skull with visible dark holes in the jaw and cranium, gloved doctor hand pointing, dim hospital examination room, dramatic cold cinematic lighting",
+        "_computed_duration": 6.258000000000003
       },
       {
         "id": "part5",
-        "text_segment": "Il faudra attendre Karl Landsteiner en 1900 pour comprendre les groupes sanguins. Et la prochaine fois que tu vois une poche de sang à l'hôpital, souviens-toi qu'elle a remplacé nos amis les agneaux parisiens !",
-        "video_prompt": "Transition from Karl Landsteiner in 1900s laboratory examining blood samples under microscope to modern hospital blood bag hanging on IV stand, ending with fluffy white lambs in a pastoral field",
+        "text_segment": "Il meurt rongé de l'intérieur. Ce scandale va créer les premières lois de contrôle des médicaments. Alors la prochaine fois qu'on te vend une potion miracle, souviens-toi d'Eben Byers.",
+        "video_prompt": "1932 yellowed newspaper front page on a dusty wooden desk with headline about radium water death, accompanied by a formal FDA regulatory document stamp, warm vintage tungsten lighting, cinematic wide shot",
         "_computed_duration": 10.0
       }
     ]
   },
   "music_mood": "mysterious",
-  "titre_tiktok": "Le premier don du sang s'est fait avec un agneau en 1667 😱",
-  "description_tiktok": "L'histoire folle de la première transfusion sanguine par Jean-Baptiste Denis ! #lesaviezvous #pharmalpha #histoire #sante",
+  "titre_tiktok": "Quand on buvait de l'eau radioactive en pharmacie",
+  "description_tiktok": "En 1918, le Radithor promettait une cure de jouvence au radium. L'histoire tragique d'Eben Byers a créé la régulation pharmaceutique moderne.",
   "hashtags": "#lesaviezvous #pharmalpha #pharmacie #sante",
-  "tiktok_caption": "🩸 En 1667, un médecin français a sauvé un patient avec du sang d'agneau !\n\nJean-Baptiste Denis pensait que le sang animal était plus pur que le sang humain corrompu par les vices. Cette histoire médicale incroyable montre à quel point la médecine a évolué depuis 4 siècles !\n\nCommente si tu savais ! 👇\n\n#fyp #pourtoi #apprendresurtiktok #culture #histoire #pharmacie #pharma #lesaviezvous #pharmalpha #sante #medicament #anecdote #medecine #transfusion #sang #france #paris #science #medical #incroyable"
+  "tiktok_caption": "☢️ Quand on buvait de l'eau radioactive en pharmacie !\n\nDans les années 1920, le Radithor était vendu comme potion miracle au radium. Un champion de golf, Eben Byers, en a bu 1400 bouteilles... et sa mâchoire s'est désintégrée. Son histoire a littéralement créé la régulation pharmaceutique qu'on connaît aujourd'hui.\n\nCommente si tu connaissais cette histoire terrifiante ! 👇\n\n#fyp #pourtoi #apprendresurtiktok #culture #histoire #pharmacie #pharma #lesaviezvous #pharmalpha #sante #medicament #anecdote #radithor #radium #radioactivite #ebenbyers #annees1920 #science #medecine #histoiredemedecine #insolite #shocking"
 }
