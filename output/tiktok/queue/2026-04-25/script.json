@@ -1,0 +1,46 @@
+{
+  "hook": {
+    "voiceover": "En 1667, un médecin français a sauvé un patient en lui injectant du sang d'agneau !",
+    "video_prompt": "Close-up cinematic shot of a 17th century French physician in period clothing holding a vial of blood next to a white lamb in a baroque medical chamber, golden candlelight, dramatic shadows"
+  },
+  "story": {
+    "full_voiceover": "En 1667, un médecin français a sauvé un patient en lui injectant du sang d'agneau ! Paris, juin 1667. Jean-Baptiste Denis, médecin du Roi-Soleil, s'apprête à sauver un jeune homme de quinze ans épuisé par des saignées répétées. Sa solution révolutionnaire ? Lui transfuser du sang d'agneau directement dans les veines. L'idée semblait logique à l'époque. Denis pensait que le sang animal était plus pur, moins corrompu par les passions humaines. L'agneau, symbole d'innocence, était le candidat parfait. Le miracle opère, le jeune homme survit ! Denis récidive sur un valet violent, espérant l'apaiser avec ce sang innocent. Mais le troisième patient, Antoine Mauroy, meurt après la transfusion. Sa veuve porte plainte, le scandale éclate. Les transfusions sont interdites pour plus d'un siècle en Europe. Il faudra attendre Karl Landsteiner en 1900 pour comprendre les groupes sanguins. Et la prochaine fois que tu vois une poche de sang à l'hôpital, souviens-toi qu'elle a remplacé nos amis les agneaux parisiens !",
+    "parts": [
+      {
+        "id": "part1",
+        "text_segment": "Paris, juin 1667. Jean-Baptiste Denis, médecin du Roi-Soleil, s'apprête à sauver un jeune homme de quinze ans épuisé par des saignées répétées.",
+        "video_prompt": "Wide shot of 1667 Paris street scene transitioning to Jean-Baptiste Denis in ornate 17th century physician robes examining a pale, weak young man in a baroque medical chamber with Louis XIV portraits on walls",
+        "_computed_duration": 9.219
+      },
+      {
+        "id": "part2",
+        "text_segment": "Sa solution révolutionnaire ? Lui transfuser du sang d'agneau directement dans les veines. L'idée semblait logique à l'époque. Denis pensait que le sang animal était plus pur, moins corrompu par les passions humaines.",
+        "video_prompt": "Close-up of Denis performing the transfusion procedure, connecting tubes from a white lamb to the patient's arm, candlelit medical instruments on table, dramatic baroque lighting",
+        "_computed_duration": 10.0
+      },
+      {
+        "id": "part3",
+        "text_segment": "L'agneau, symbole d'innocence, était le candidat parfait. Le miracle opère, le jeune homme survit ! Denis récidive sur un valet violent, espérant l'apaiser avec ce sang innocent.",
+        "video_prompt": "Split screen showing the recovered young patient sitting up healthily, then Denis performing another transfusion on an aggressive-looking servant, both scenes in 17th century setting",
+        "_computed_duration": 10.0
+      },
+      {
+        "id": "part4",
+        "text_segment": "Mais le troisième patient, Antoine Mauroy, meurt après la transfusion. Sa veuve porte plainte, le scandale éclate. Les transfusions sont interdites pour plus d'un siècle en Europe.",
+        "video_prompt": "Dark dramatic scene of a man dying on a medical table, followed by an angry widow in black 17th century dress pointing accusingly in a courthouse, papers being signed banning transfusions",
+        "_computed_duration": 10.0
+      },
+      {
+        "id": "part5",
+        "text_segment": "Il faudra attendre Karl Landsteiner en 1900 pour comprendre les groupes sanguins. Et la prochaine fois que tu vois une poche de sang à l'hôpital, souviens-toi qu'elle a remplacé nos amis les agneaux parisiens !",
+        "video_prompt": "Transition from Karl Landsteiner in 1900s laboratory examining blood samples under microscope to modern hospital blood bag hanging on IV stand, ending with fluffy white lambs in a pastoral field",
+        "_computed_duration": 10.0
+      }
+    ]
+  },
+  "music_mood": "mysterious",
+  "titre_tiktok": "Le premier don du sang s'est fait avec un agneau en 1667 😱",
+  "description_tiktok": "L'histoire folle de la première transfusion sanguine par Jean-Baptiste Denis ! #lesaviezvous #pharmalpha #histoire #sante",
+  "hashtags": "#lesaviezvous #pharmalpha #pharmacie #sante",
+  "tiktok_caption": "🩸 En 1667, un médecin français a sauvé un patient avec du sang d'agneau !\n\nJean-Baptiste Denis pensait que le sang animal était plus pur que le sang humain corrompu par les vices. Cette histoire médicale incroyable montre à quel point la médecine a évolué depuis 4 siècles !\n\nCommente si tu savais ! 👇\n\n#fyp #pourtoi #apprendresurtiktok #culture #histoire #pharmacie #pharma #lesaviezvous #pharmalpha #sante #medicament #anecdote #medecine #transfusion #sang #france #paris #science #medical #incroyable"
+}
