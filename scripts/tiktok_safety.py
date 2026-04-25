@@ -156,42 +156,64 @@ def generate_beep_wav(duration_seconds, output_path, freq_hz=880, sample_rate=44
 
 
 def beep_audio_at_positions(input_mp3_path, output_mp3_path, positions, freq_hz=880):
-    """Bipe les sections [start, end] d'un MP3.
+    """Bipe les sections [start, end] d'un MP3 en utilisant ffmpeg directement.
 
-    Utilise pydub + imageio_ffmpeg pour avoir ffmpeg meme si pas dans PATH.
+    Utilise imageio_ffmpeg.get_ffmpeg_exe() pour avoir ffmpeg meme sans install.
+    Pas de dependance a pydub (qui requiert ffprobe).
     Return True si succes, False sinon.
     """
-    try:
-        from pydub import AudioSegment
-        from pydub.generators import Sine
-    except ImportError:
-        print("  [WARN] pydub non installe, beep audio ignore")
-        return False
+    if not positions:
+        import shutil
+        shutil.copy2(str(input_mp3_path), str(output_mp3_path))
+        return True
 
-    # Configure ffmpeg path (imageio_ffmpeg fournit un binaire embarque)
+    # Trouve ffmpeg : imageio_ffmpeg embarque > PATH
+    ffmpeg = None
     try:
         import imageio_ffmpeg
-        ffmpeg_exe = imageio_ffmpeg.get_ffmpeg_exe()
-        AudioSegment.converter = ffmpeg_exe
-        AudioSegment.ffmpeg = ffmpeg_exe
-        AudioSegment.ffprobe = ffmpeg_exe.replace("ffmpeg", "ffprobe")
+        ffmpeg = imageio_ffmpeg.get_ffmpeg_exe()
     except Exception:
-        pass  # fallback sur ffmpeg dans PATH
+        import shutil
+        ffmpeg = shutil.which("ffmpeg")
+    if not ffmpeg:
+        print("  [WARN] ffmpeg introuvable, beep audio skip")
+        return False
 
-    audio = AudioSegment.from_file(str(input_mp3_path), format="mp3")
-    for start_s, end_s in positions:
-        start_ms = int(start_s * 1000)
-        end_ms = int(end_s * 1000)
-        duration_ms = end_ms - start_ms
-        if duration_ms <= 0:
-            continue
-        beep = Sine(freq_hz).to_audio_segment(duration=duration_ms).apply_gain(-6)
-        # Fade in/out 20ms
-        beep = beep.fade_in(min(20, duration_ms // 4)).fade_out(min(20, duration_ms // 4))
-        audio = audio[:start_ms] + beep + audio[end_ms:]
+    # Build filter_complex :
+    # - voice  : volume=0 sur les positions bannies
+    # - sine   : volume=0 sauf sur les positions bannies
+    # - mix    : combine voice + sine
+    enable_expr = "+".join(
+        f"between(t,{s:.3f},{e:.3f})" for s, e in positions
+    )
 
-    audio.export(str(output_mp3_path), format="mp3", bitrate="128k")
-    return True
+    filter_complex = (
+        f"[0:a]volume=enable='{enable_expr}':volume=0[voice];"
+        f"sine=frequency={freq_hz}:sample_rate=44100,"
+        f"volume=enable='not({enable_expr})':volume=0,"
+        f"volume=0.4[beep];"
+        f"[voice][beep]amix=inputs=2:duration=first:dropout_transition=0[out]"
+    )
+
+    import subprocess
+    cmd = [
+        ffmpeg, "-y", "-hide_banner", "-loglevel", "warning",
+        "-i", str(input_mp3_path),
+        "-filter_complex", filter_complex,
+        "-map", "[out]",
+        "-c:a", "libmp3lame", "-b:a", "128k",
+        str(output_mp3_path),
+    ]
+    try:
+        result = subprocess.run(cmd, capture_output=True, timeout=120)
+        if result.returncode != 0:
+            err = result.stderr.decode(errors="replace")[:300]
+            print(f"  [WARN] ffmpeg beep echec : {err}")
+            return False
+        return True
+    except Exception as e:
+        print(f"  [WARN] ffmpeg subprocess : {e}")
+        return False
 
 
 if __name__ == "__main__":

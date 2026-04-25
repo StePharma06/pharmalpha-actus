@@ -512,26 +512,30 @@ def generate_voiceover(script):
     else:
         print("  [WARN] Pas de timestamps, fallback proportionnel")
 
-    # ── CENSURE TIKTOK : bip audio sur les mots bannis ─────────────────────
+    # ── CENSURE TIKTOK : sous-titres TOUJOURS, audio bip si possible ──────
     try:
         import tiktok_safety as ts
         banned_positions = ts.find_banned_positions(word_timestamps)
         if banned_positions:
             print(f"  Censure TikTok : {len(banned_positions)} mot(s) banni(s) detecte(s)")
+            # 1. CENSURE SOUS-TITRES (toujours, independamment du bip audio)
+            word_timestamps = ts.censor_word_timestamps(word_timestamps)
+            print(f"    Sous-titres censures (mot -> *)")
+            # 2. CENSURE AUDIO (best-effort, peut echouer si pas de ffmpeg)
             beeped_path = OUTPUT_DIR / "voiceover_beeped.mp3"
-            ok = ts.beep_audio_at_positions(path, beeped_path, banned_positions)
-            if ok and beeped_path.exists():
-                # Remplace le voiceover par la version bipee
-                path = beeped_path
-                # Censure aussi les timestamps (pour les sous-titres)
-                word_timestamps = ts.censor_word_timestamps(word_timestamps)
-                print(f"  Voix bipee : {beeped_path.stat().st_size // 1024} KB")
+            try:
+                ok = ts.beep_audio_at_positions(path, beeped_path, banned_positions)
+                if ok and beeped_path.exists():
+                    path = beeped_path
+                    print(f"    Voix bipee : {beeped_path.stat().st_size // 1024} KB")
+                else:
+                    print("    [WARN] Bip audio echec -> voix originale (sous-titres restent censures)")
+            except Exception as e:
+                print(f"    [WARN] Bip audio impossible : {e}")
         else:
             print("  Censure TikTok : aucun mot banni dans la voix")
     except ImportError:
         print("  [WARN] tiktok_safety non dispo")
-    except Exception as e:
-        print(f"  [WARN] Censure audio echouee : {e}")
 
     # Save timestamps (potentiellement censures) pour debug
     with open(OUTPUT_DIR / "word_timestamps.json", "w", encoding="utf-8") as f:
