@@ -1,7 +1,19 @@
 import React from 'react';
-import {AbsoluteFill, Audio, Sequence, Video, useVideoConfig, spring, useCurrentFrame} from 'remotion';
+import {AbsoluteFill, Audio, Sequence, Video, staticFile, useVideoConfig, spring, useCurrentFrame} from 'remotion';
 import {z} from 'zod';
 import {Subtitles} from '../components/Subtitles';
+
+/**
+ * Resolve une URL : si c'est un chemin relatif (sans http://), passe par staticFile()
+ * pour le servir depuis tiktok-renderer/public/. Sinon retourne tel quel.
+ */
+const resolveUrl = (url: string): string => {
+  if (!url) return url;
+  if (url.startsWith('http://') || url.startsWith('https://') || url.startsWith('data:')) {
+    return url;
+  }
+  return staticFile(url);
+};
 
 export const tiktokPharmactusSchema = z.object({
   clips: z.array(
@@ -82,19 +94,19 @@ export const TikTokPharmactus: React.FC<TikTokPharmactusProps> = ({
       {/* Clips vidéo story en séquence */}
       {clipsWithTiming.map((clip, i) => (
         <Sequence key={i} from={clip.from} durationInFrames={clip.durationInFrames}>
-          <Video src={clip.url} muted style={{width: '100%', height: '100%', objectFit: 'cover'}} />
+          <Video src={resolveUrl(clip.url)} muted style={{width: '100%', height: '100%', objectFit: 'cover'}} />
         </Sequence>
       ))}
 
       {/* Voix off story — coupee a min(voix, clips) pour eviter superposition avec CTA */}
       <Sequence from={0} durationInFrames={voiceStoryDurationFrames}>
-        <Audio src={voiceoverUrl} volume={1} />
+        <Audio src={resolveUrl(voiceoverUrl)} volume={1} />
       </Sequence>
 
       {/* Musique de fond (toute la durée sauf CTA) */}
       {musicUrl && (
         <Sequence from={0} durationInFrames={storyEndFrame}>
-          <Audio src={musicUrl} volume={0.12} />
+          <Audio src={resolveUrl(musicUrl)} volume={0.12} />
         </Sequence>
       )}
 
@@ -113,7 +125,7 @@ export const TikTokPharmactus: React.FC<TikTokPharmactusProps> = ({
             {cta.backgroundClipUrl ? (
               <AbsoluteFill>
                 <Video
-                  src={cta.backgroundClipUrl}
+                  src={resolveUrl(cta.backgroundClipUrl)}
                   muted
                   style={{width: '100%', height: '100%', objectFit: 'cover', filter: 'brightness(0.35) blur(2px)'}}
                 />
@@ -125,7 +137,7 @@ export const TikTokPharmactus: React.FC<TikTokPharmactusProps> = ({
 
           {/* Voix CTA après la pause */}
           <Sequence from={ctaStartFrame} durationInFrames={ctaDurationFrames}>
-            <Audio src={cta.voiceoverUrl} volume={1} />
+            <Audio src={resolveUrl(cta.voiceoverUrl)} volume={1} />
           </Sequence>
 
           {/* Overlay bouton "Abonne-toi" TikTok style + texte */}
