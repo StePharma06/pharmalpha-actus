@@ -512,7 +512,28 @@ def generate_voiceover(script):
     else:
         print("  [WARN] Pas de timestamps, fallback proportionnel")
 
-    # Save timestamps for debug
+    # ── CENSURE TIKTOK : bip audio sur les mots bannis ─────────────────────
+    try:
+        import tiktok_safety as ts
+        banned_positions = ts.find_banned_positions(word_timestamps)
+        if banned_positions:
+            print(f"  Censure TikTok : {len(banned_positions)} mot(s) banni(s) detecte(s)")
+            beeped_path = OUTPUT_DIR / "voiceover_beeped.mp3"
+            ok = ts.beep_audio_at_positions(path, beeped_path, banned_positions)
+            if ok and beeped_path.exists():
+                # Remplace le voiceover par la version bipee
+                path = beeped_path
+                # Censure aussi les timestamps (pour les sous-titres)
+                word_timestamps = ts.censor_word_timestamps(word_timestamps)
+                print(f"  Voix bipee : {beeped_path.stat().st_size // 1024} KB")
+        else:
+            print("  Censure TikTok : aucun mot banni dans la voix")
+    except ImportError:
+        print("  [WARN] tiktok_safety non dispo")
+    except Exception as e:
+        print(f"  [WARN] Censure audio echouee : {e}")
+
+    # Save timestamps (potentiellement censures) pour debug
     with open(OUTPUT_DIR / "word_timestamps.json", "w", encoding="utf-8") as f:
         json.dump(word_timestamps, f, ensure_ascii=False, indent=2)
 
@@ -864,13 +885,18 @@ def save_to_queue(video_path, script):
     with open(slot / "metadata.json", "w", encoding="utf-8") as f:
         json.dump(metadata, f, ensure_ascii=False, indent=2)
 
-    # Caption TikTok pret a copier-coller
+    # Caption TikTok pret a copier-coller (avec censure mots/hashtags bannis)
     caption = script.get("tiktok_caption", "")
     if not caption:
         titre = script.get("titre_tiktok", "")
         desc = script.get("description_tiktok", "")
         hashtags = script.get("hashtags", "")
         caption = f"{titre}\n\n{desc}\n\n{hashtags}"
+    try:
+        import tiktok_safety as ts
+        caption = ts.censor_caption(caption)
+    except ImportError:
+        pass
     with open(slot / "tiktok_caption.txt", "w", encoding="utf-8") as f:
         f.write(caption)
 

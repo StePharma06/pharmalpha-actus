@@ -36,8 +36,8 @@ jobs:
         working-directory: tiktok-renderer
         run: npm install --no-audit --no-fund
 
-      - name: Install Python dependencies (Pillow + imageio for cover generation)
-        run: pip install --quiet Pillow imageio imageio-ffmpeg
+      - name: Install Python dependencies (Pillow + imageio + pydub)
+        run: pip install --quiet Pillow imageio imageio-ffmpeg pydub
 
       - name: Generate TikTok video
         env:
