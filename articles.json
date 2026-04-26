@@ -1,6 +1,131 @@
 {
   "articles": [
     {
+      "id": "actu_2026_04_26_5",
+      "date": "2026-04-26",
+      "type": "actu",
+      "categorie": "business_officine",
+      "titre": "Taxe soda : plusieurs millions d'euros échappent à l'État, impact sur l'officine",
+      "resume": "La taxe sur les boissons sucrées fait l'objet de fraudes massives. Les sodas importés échappent en partie au dispositif, privant l'État de millions d'euros.",
+      "full_text": "La taxe sur les boissons sucrées fait l'objet de fraudes massives. Les sodas importés échappent en partie au dispositif, privant l'État de millions d'euros.\n\n## Contexte\n\nLa taxe française sur les boissons sucrées, instaurée en 2012 et renforcée en 2018, devait générer environ 340 millions d'euros de recettes annuelles pour l'État. Le principe est simple : plus une boisson contient de sucre, plus elle est taxée. Trois paliers existent : 3,38 €/hectolitre pour les boissons contenant 1-5g de sucre/100ml, 6,76 €/hl pour 5-10g/100ml, et 20,28 €/hl au-delà de 10g/100ml. Cette taxation progressive vise à décourager la consommation de produits trop sucrés et financer la sécurité sociale. Mais un angle mort persiste : une partie des sodas importés échappe à cette taxation, créant une distorsion de concurrence majeure. Cette faille concerne directement les pharmaciens, qui vendent des substituts édulcorés et conseillent sur les risques du diabète.\n\n## Analyse business\n\nSelon France Info, plusieurs millions d'euros de recettes fiscales échappent chaque année à l'État via cette fraude à la taxe soda. Le manque à gagner représente potentiellement 5 à 10% des 340 millions d'euros attendus annuellement, soit 17 à 34 millions d'euros. Cette fraude crée une concurrence déloyale : un soda importé frauduleusement peut être vendu jusqu'à 20 centimes moins cher qu'un produit équivalent taxé normalement. Pour les pharmaciens, cet écart tarifaire impacte directement la vente des produits de substitution (édulcorants, compléments pour diabétiques) et les conseils nutritionnels. Le marché français des boissons sucrées représente 2,8 milliards d'euros annuels, avec une consommation moyenne de 84 litres par habitant et par an. Les officines touchent indirectement ce secteur via les produits diététiques (marché de 180 millions d'euros) et les dispositifs de mesure glycémique (320 millions d'euros). Cette fraude fiscale affaiblit l'efficacité de la politique de santé publique anti-obésité, alors que 47% des Français sont en surpoids et que le diabète coûte 7,9 milliards d'euros par an à l'Assurance maladie.\n\n## Recommandations actionnables\n\n1. Développer les substituts — Profite de la distorsion tarifaire pour promouvoir tes édulcorants naturels et produits diététiques, avec un discours santé renforcé sur les risques du sucre.\n\n2. Renforcer l'accompagnement diabète — Mise sur l'éducation thérapeutique et la vente de lecteurs glycémiques pour capter la clientèle sensibilisée aux risques du sucre.\n\n3. Créer des partenariats nutritionnels — Propose des bilans nutritionnels payants (30-50€) en complément des ventes, avec focus sur la réduction du sucre.\n\n4. Anticiper la régulation — Prépare-toi à une potentielle hausse des taxes sur le sucre quand l'État colmatera cette faille fiscale.\n\n## Sources citees\n\n- France Info Sante",
+      "source": "Pharm'Actus",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Business",
+      "image_url": "assets/img_actu_2026_04_26_5.jpg",
+      "tags": [
+        "fiscalite",
+        "nutrition",
+        "diabete",
+        "concurrence"
+      ]
+    },
+    {
+      "id": "actu_2026_04_26_4",
+      "date": "2026-04-26",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "Merck dévoile son anticorps bispécifique PD-1 x VEGF",
+      "resume": "Les premières données du bispécifique de Merck sortent enfin. Cette molécule qui cible à la fois PD-1 et VEGF pourrait révolutionner l'immuno-oncologie. Pipeline chinois en ébullition avec Zai Lab qui vise l'international.",
+      "full_text": "Merck lève enfin le voile sur son bispécifique PD-1 x VEGF. Les premières données cliniques étaient très attendues par toute l'industrie.\n\nL'idée ? Combiner immunothérapie (PD-1) et anti-angiogenèse (VEGF) dans une seule molécule. Plus efficace que la bithérapie, plus simple à administrer.\n\nParallèlement, Zai Lab annonce ses ambitions mondiales avec un pipeline sous licence Hengrui Pharma. Kailera Therapeutics cartonne en IPO record. L'Asie pousse fort sur l'innovation.\n\nPour nos patients cancer ? Ces bispécifiques représentent la prochaine génération d'immunothérapies. Moins d'effets secondaires, plus d'efficacité théorique.\n\nÀ retenir : l'oncologie de demain se joue entre les États-Unis et l'Asie. L'Europe regarde passer le train, mais nos patients en bénéficieront quand même.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/pharma/merck-pd-1vegf-data-zai-lab-global-view-kailera-record-ipo",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_04_26_4.jpg",
+      "tags": [
+        "bispecifique",
+        "immunotherapie",
+        "pd1",
+        "vegf",
+        "oncologie"
+      ]
+    },
+    {
+      "id": "actu_2026_04_26_3",
+      "date": "2026-04-26",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "Plus de 10 millions d'enfants vaccinés contre le paludisme en Afrique",
+      "resume": "Cinq ans après le lancement par l'OMS, la vaccination antipaludique décolle. 1 million de vies sauvées en un an grâce à la stratégie combinée vaccin + moustiquaires + traitements. La preuve que ça marche.",
+      "full_text": "10 millions d'enfants vaccinés, 1 million de vies sauvées en une seule année. Les chiffres de l'OMS parlent d'eux-mêmes.\n\nCinq ans après le lancement de la campagne de vaccination antipaludique, l'Afrique voit enfin les résultats. L'approche combinée fait ses preuves : vaccin + moustiquaires + traitements curatifs.\n\nCe qui marche ? La stratégie globale plutôt que le médicament miracle isolé. Une leçon qui résonne avec notre quotidien : conseil + produit + suivi = efficacité.\n\nPour nous pharmaciens, c'est un rappel de l'importance de nos conseils voyageurs. Nos patients qui partent en Afrique ont besoin de cette approche multicible.\n\nEt symboliquement ? Ça prouve qu'un vaccin peut changer la donne, même sur une maladie aussi complexe que le paludisme. De quoi redonner confiance dans la vaccination.",
+      "source": "France Info Santé",
+      "source_url": "https://www.franceinfo.fr/sante/vaccins/contre-le-paludisme-plus-de-10-millions-d-enfants-vaccines-en-afrique-cinq-ans-apres-le-lancement-de-la-campagne-par-l-oms_7963397.html",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_04_26_3.jpg",
+      "tags": [
+        "paludisme",
+        "vaccination",
+        "afrique",
+        "oms",
+        "prevention"
+      ]
+    },
+    {
+      "id": "actu_2026_04_26_2",
+      "date": "2026-04-26",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "Roche mise tout sur son SERD oral malgré des données mitigées",
+      "resume": "Le patron pharma de Roche maintient le cap : giredestrant pourrait devenir le plus gros produit de l'histoire du groupe. Même avec des résultats cliniques imparfaits en oncologie. Pari risqué ou vision long terme ?",
+      "full_text": "Malgré des données cliniques \"imparfaites\", Roche ne lâche rien sur son SERD oral giredestrant. Son PDG pharma le revendique : ce sera \"le plus gros produit de l'histoire du groupe\".\n\nLe contexte ? Des résultats d'études pas franchement éblouissants pour ce concurrent des anti-aromatases en cancer du sein. Mais Roche y croit dur comme fer.\n\nLeur argument : l'administration orale change tout face aux injections actuelles. Plus de compliance, moins de contraintes hospitalières. Un argument qui tient la route au comptoir.\n\nCôté pratique pour nous : si ce SERD oral arrive en France, ça pourrait révolutionner la prise en charge des patientes. Exit les allers-retours à l'hôpital, hello les DP cancer plus fluides.\n\nLe pari de Roche ? Miser sur l'usage plutôt que sur l'efficacité pure. Pas bête quand on connaît nos patientes.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/pharma/roche-pharma-ceo-maintains-oral-serd-could-be-largest-product-company-history-despite-data",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/img_actu_2026_04_26_2.jpg",
+      "tags": [
+        "oncologie",
+        "serd",
+        "cancer",
+        "sein",
+        "oral"
+      ]
+    },
+    {
+      "id": "actu_2026_04_26_1",
+      "date": "2026-04-26",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "Novo Nordisk casse les prix d'Ozempic et Wegovy de 35 à 50%",
+      "resume": "Le géant danois annonce une baisse historique pour 2027 aux États-Unis : Wegovy passe à 675$. Trump et la pression politique ont eu raison de la stratégie tarifaire. Et chez nous, ça va bouger aussi ?",
+      "full_text": "675 dollars au lieu de 1000. Novo Nordisk capitule face à la pression américaine.\n\nLe laboratoire danois annonce une chute de 35 à 50% des prix catalogue pour Ozempic et Wegovy dès janvier 2027. Une première dans l'industrie pour des blockbusters en pleine expansion.\n\nDerrière cette décision : Trump et son accord avec le Royaume-Uni liant tarifs douaniers et prix des médicaments. La recette fait école et Novo préfère anticiper.\n\nPour nous ? Difficile d'imaginer que cette guerre des prix reste cantonnée aux États-Unis. Avec la pression française sur les prix du diabète et de l'obésité, ces molécules pourraient voir leurs conditions de remboursement évoluer.\n\nÀ surveiller de près : si les négociations CEPS s'inspirent des nouveaux tarifs américains, ça pourrait changer la donne sur nos marges et nos volumes. Surtout avec la demande qui explose.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/business/international/baisse-historique-des-prix-pour-wegovy-et-ozempic-annoncee-par-novo-nordisk",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_04_26_1.jpg",
+      "tags": [
+        "semaglutide",
+        "prix",
+        "diabete",
+        "obesite",
+        "remboursement"
+      ]
+    },
+    {
+      "id": "lsv_2026_04_26",
+      "date": "2026-04-26",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? Le premier pacemaker fonctionnait avec une batterie de voiture",
+      "resume": "En 1958, un ingénieur électricien et un cardiologue ont révolutionné la cardiologie avec un appareil gros comme une boîte à chaussures. L'histoire rocambolesque du premier stimulateur cardiaque va te surprendre.",
+      "full_text": "Imagine un peu : en 1958, Arne Larsson, ingénieur suédois de 43 ans, fait des malaises cardiaques à répétition. Son cœur s'arrête parfois 30 fois par jour ! Sa femme Else, désespérée, pousse les médecins à tenter l'impossible.\n\nLe cardiologue Åke Senning s'associe alors avec Rune Elmqvist, ingénieur chez Siemens. Leur premier pacemaker ? Un monstre de 250 grammes, épais comme deux smartphones empilés, qu'il faut implanter dans l'abdomen. Et le plus dingue : il fonctiait avec des piles rechargeables... branchées sur une batterie de voiture !\n\nLe 8 octobre 1958, Larsson devient le premier homme au monde à recevoir cet engin révolutionnaire. Problème : l'appareil tombe en panne au bout de 3 heures. Ils lui en implantent un deuxième le lendemain, qui lâche après 8 semaines.\n\nMais voici le twist hallucinant : malgré ces débuts chaotiques, Arne Larsson a survécu à ses deux chirurgiens ! Il est mort en 2001 à 86 ans, après avoir porté 26 pacemakers différents au cours de sa vie.\n\nAujourd'hui, nos stimulateurs cardiaques pèsent 25 grammes, durent 10 à 15 ans et peuvent même être interrogés à distance par smartphone. Pas mal pour un appareil qui commençait sa carrière branché sur une Volvo !",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_04_26.jpg",
+      "tags": [
+        "histoire",
+        "cardiologie",
+        "chirurgie",
+        "instrument",
+        "innovation"
+      ]
+    },
+    {
       "id": "actu_2026_04_25_5",
       "date": "2026-04-25",
       "type": "actu",
@@ -1155,6 +1280,6 @@
       ]
     }
   ],
-  "count": 56,
-  "updated_at": "2026-04-25T05:57:07.861753+02:00"
+  "count": 62,
+  "updated_at": "2026-04-26T06:28:56.553359+02:00"
 }
