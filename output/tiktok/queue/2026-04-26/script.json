@@ -1,0 +1,46 @@
+{
+  "hook": {
+    "voiceover": "En 1958, le premier pacemaker fonctionnait avec une batterie de voiture !",
+    "video_prompt": "Close-up of a massive 1958 pacemaker device the size of a shoebox connected to a vintage car battery with cables, medical laboratory setting, dramatic lighting, cinematic reveal"
+  },
+  "story": {
+    "full_voiceover": "En 1958, le premier pacemaker fonctionnait avec une batterie de voiture ! Arne Larsson, ingénieur suédois de 43 ans, fait des malaises cardiaques terrifiants. Son cœur s'arrête 30 fois par jour ! Sa femme Else pousse les médecins à tenter l'impossible. Le cardiologue Åke Senning s'associe avec l'ingénieur Rune Elmqvist pour créer un monstre révolutionnaire. Leur pacemaker pèse 250 grammes, épais comme deux smartphones, implanté dans l'abdomen et rechargé sur batterie de voiture ! Le 8 octobre 1958, Larsson reçoit ce premier appareil au monde. Catastrophe : il tombe en panne après 3 heures seulement ! Un deuxième est implanté le lendemain, qui lâche après 8 semaines. Mais voici le twist hallucinant : malgré ces débuts chaotiques, Arne Larsson a survécu à ses deux chirurgiens ! Il meurt en 2001 à 86 ans après 26 pacemakers différents. Aujourd'hui nos stimulateurs pèsent 25 grammes et durent 15 ans, pas mal pour un appareil qui a débuté dans le garage !",
+    "parts": [
+      {
+        "id": "part1",
+        "text_segment": "Arne Larsson, ingénieur suédois de 43 ans, fait des malaises cardiaques terrifiants. Son cœur s'arrête 30 fois par jour ! Sa femme Else pousse les médecins à tenter l'impossible.",
+        "video_prompt": "1958 Swedish man Arne Larsson collapsing from heart failure in his home, his worried wife Else helping him, desperate scene in 1950s interior, dramatic medical emergency atmosphere",
+        "_computed_duration": 10.0
+      },
+      {
+        "id": "part2",
+        "text_segment": "Le cardiologue Åke Senning s'associe avec l'ingénieur Rune Elmqvist pour créer un monstre révolutionnaire. Leur pacemaker pèse 250 grammes, épais comme deux smartphones, implanté dans l'abdomen et rechargé sur batterie de voiture !",
+        "video_prompt": "1958 doctors Åke Senning and Rune Elmqvist in medical laboratory examining massive early pacemaker device, thick rectangular device connected to car battery, vintage medical equipment, black and white cinematic",
+        "_computed_duration": 10.0
+      },
+      {
+        "id": "part3",
+        "text_segment": "Le 8 octobre 1958, Larsson reçoit ce premier appareil au monde. Catastrophe : il tombe en panne après 3 heures seulement ! Un deuxième est implanté le lendemain, qui lâche après 8 semaines.",
+        "video_prompt": "Historic 1958 surgery room, Arne Larsson on operating table receiving first pacemaker implantation, then quick cut to malfunctioning device sparking, medical emergency, vintage hospital setting",
+        "_computed_duration": 10.0
+      },
+      {
+        "id": "part4",
+        "text_segment": "Mais voici le twist hallucinant : malgré ces débuts chaotiques, Arne Larsson a survécu à ses deux chirurgiens ! Il meurt en 2001 à 86 ans après 26 pacemakers différents.",
+        "video_prompt": "Elderly Arne Larsson in 2001 smiling and healthy at age 86, montage showing timeline from 1958 to 2001, multiple pacemaker devices through decades, triumphant survivor story",
+        "_computed_duration": 10.0
+      },
+      {
+        "id": "part5",
+        "text_segment": "Aujourd'hui nos stimulateurs pèsent 25 grammes et durent 15 ans, pas mal pour un appareil qui a débuté dans le garage !",
+        "video_prompt": "Modern tiny pacemaker device in doctor's hand next to smartphone for size comparison, sleek contemporary medical office, then transition to vintage 1958 garage with car battery, full circle moment",
+        "_computed_duration": 5.397999999999996
+      }
+    ]
+  },
+  "music_mood": "epic",
+  "titre_tiktok": "Le premier pacemaker marchait avec une batterie de voiture",
+  "description_tiktok": "L'histoire folle du premier stimulateur cardiaque en 1958 ! De la batterie de voiture aux appareils modernes. #lesaviezvous #pharmalpha #histoire #sante",
+  "hashtags": "#lesaviezvous #pharmalpha #pharmacie #sante",
+  "tiktok_caption": "🚗⚡ Le premier pacemaker marchait avec une batterie de voiture !\n\nL'histoire incroyable d'Arne Larsson et du premier stimulateur cardiaque en 1958. Un appareil révolutionnaire de 250g qui tombait en panne toutes les 3 heures ! Aujourd'hui on a des pacemakers de 25g qui durent 15 ans 🤯\n\nCommente si tu connaissais cette anecdote médicale !\n\n#fyp #pourtoi #apprendresurtiktok #culture #histoire #pharmacie #pharma #lesaviezvous #pharmalpha #sante #medicament #anecdote #medical #innovation #technologie #vintage #pacemaker #cardiologie #chirurgie #incroyable"
+}
