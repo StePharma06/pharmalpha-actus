@@ -2354,6 +2354,15 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.classList.add('active');
     currentFilter = btn.dataset.filter;
     renderArticles();
+    // Mobile : MAJ du label du bouton 'Filtres' + ferme le dropdown
+    const _cur = document.getElementById('filters-toggle-current');
+    if (_cur) _cur.textContent = btn.textContent.trim();
+    if (window.innerWidth <= 768) {
+      const _wrap = document.getElementById('filters-buttons');
+      const _btn = document.getElementById('filters-toggle');
+      if (_wrap) _wrap.classList.remove('open');
+      if (_btn) _btn.setAttribute('aria-expanded', 'false');
+    }
   });
 });
 searchInput.addEventListener('input', renderArticles);
