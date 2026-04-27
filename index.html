@@ -118,22 +118,7 @@ body {
 @media (max-width: 1000px) {
   .logo-area img { height: 50px; }
 }
-@media (max-width: 700px) {
-  .header-inner {
-    flex-direction: column;
-    gap: 12px;
-    align-items: center;
-  }
-  .logo-area { width: 100%; display: flex; justify-content: center; }
-  .logo-area img { height: 56px; }
-  .header-right {
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-  .header-link { padding: 6px 12px; font-size: 12px; }
-}
+
 .header-right {
   display: flex;
   align-items: center;
@@ -939,8 +924,25 @@ body {
   .filters { flex-direction: column; align-items: stretch; }
   .search-box { margin-left: 0; }
   .search-box input, .search-box input:focus { width: 100%; }
-  .header-inner { gap: 10px; }
-  .header-right { flex-wrap: wrap; }
+  /* Header empile : logo en haut centre, boutons sur 2eme ligne */
+  .header-inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .logo-area {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .logo-area img { height: 56px; }
+  .header-right {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .header-link { padding: 6px 12px; font-size: 12px; }
   .modal-body { padding: 16px 20px 24px; }
   .modal-body h2 { font-size: 20px; }
   .modal-footer { padding: 12px 20px 20px; }
