@@ -1,0 +1,46 @@
+{
+  "hook": {
+    "voiceover": "Tu savais que le premier scanner médical pesait 500 kilos et prenait 9 jours pour une seule image ?",
+    "video_prompt": "Massive 1970s EMI Mark 1 CT scanner machine in hospital room, enormous mechanical device with control panels, vintage medical equipment, dramatic lighting, cinematic establishing shot"
+  },
+  "story": {
+    "full_voiceover": "Tu savais que le premier scanner médical pesait 500 kilos et prenait 9 jours pour une seule image ? Nous sommes en 1972 et Godfrey Hounsfield chez EMI présente une machine révolutionnaire de la taille d'une petite voiture. Son EMI Mark 1 peut voir à l'intérieur du cerveau sans ouvrir le crâne, mais attention, il faut compter 9 jours complets pour calculer une seule image ! Le premier patient est scanné le 1er octobre 1971 à l'Atkinson Morley Hospital pour une tumeur cérébrale. Les médecins attendent plus d'une semaine, suspendus au ronronnement de cette bête mécanique. Quand l'image sort enfin, c'est du jamais vu : une coupe parfaite du cerveau avec la tumeur bien visible. Le plus dingue ? Hounsfield avait commencé par scanner des boîtes de conserve pour tester sa théorie ! Il décroche le Nobel en 1979 et aujourd'hui un scanner prend quelques secondes, imagine la patience qu'il fallait à l'époque !",
+    "parts": [
+      {
+        "id": "part1",
+        "text_segment": "Nous sommes en 1972 et Godfrey Hounsfield chez EMI présente une machine révolutionnaire de la taille d'une petite voiture.",
+        "video_prompt": "Godfrey Hounsfield in 1972 lab coat presenting the EMI Mark 1 scanner, vintage EMI Records facility, British engineer with glasses, retro 70s hospital setting, documentary style",
+        "_computed_duration": 7.3260000000000005
+      },
+      {
+        "id": "part2",
+        "text_segment": "Son EMI Mark 1 peut voir à l'intérieur du cerveau sans ouvrir le crâne, mais attention, il faut compter 9 jours complets pour calculer une seule image !",
+        "video_prompt": "Close-up of EMI Mark 1 scanner controls and display screens showing brain scan processing, vintage computer terminals, blinking lights, slow mechanical movements, 1970s technology aesthetic",
+        "_computed_duration": 8.533000000000001
+      },
+      {
+        "id": "part3",
+        "text_segment": "Le premier patient est scanné le 1er octobre 1971 à l'Atkinson Morley Hospital pour une tumeur cérébrale. Les médecins attendent plus d'une semaine, suspendus au ronronnement de cette bête mécanique.",
+        "video_prompt": "Patient lying in EMI Mark 1 scanner at Atkinson Morley Hospital 1971, doctors in white coats waiting anxiously, vintage medical equipment humming, tense atmosphere, period-accurate hospital interior",
+        "_computed_duration": 10.0
+      },
+      {
+        "id": "part4",
+        "text_segment": "Quand l'image sort enfin, c'est du jamais vu : une coupe parfaite du cerveau avec la tumeur bien visible. Le plus dingue ? Hounsfield avait commencé par scanner des boîtes de conserve pour tester sa théorie !",
+        "video_prompt": "First brain CT scan image emerging from printer showing clear tumor, doctors amazed reaction, then flashback to Hounsfield testing tin cans in laboratory, eureka moment, scientific breakthrough",
+        "_computed_duration": 10.0
+      },
+      {
+        "id": "part5",
+        "text_segment": "Il décroche le Nobel en 1979 et aujourd'hui un scanner prend quelques secondes, imagine la patience qu'il fallait à l'époque !",
+        "video_prompt": "Modern CT scanner in action with patient, ultra-fast scan completion in seconds, contrast with vintage 1972 technology, time-lapse comparison showing technological evolution, dramatic before-after",
+        "_computed_duration": 7.395000000000003
+      }
+    ]
+  },
+  "music_mood": "epic",
+  "titre_tiktok": "Le premier scanner prenait 9 jours pour UNE image !",
+  "description_tiktok": "L'incroyable histoire du premier scanner médical qui pesait 500 kilos ! De la révolution d'Hounsfield aux scanners modernes. #lesaviezvous #pharmalpha #scanner #histoire",
+  "hashtags": "#lesaviezvous #pharmalpha #pharmacie #sante",
+  "tiktok_caption": "🏥 Le premier scanner prenait 9 JOURS pour une seule image !\n\nEn 1972, Godfrey Hounsfield révolutionne la médecine avec son scanner de 500 kilos ! Les médecins devaient attendre plus d'une semaine pour voir l'intérieur du cerveau. Aujourd'hui on fait ça en quelques secondes, imaginez la patience qu'il fallait !\n\nCommente si tu savais ! 👇\n\n#fyp #pourtoi #apprendresurtiktiktok #culture #histoire #lesaviezvous #pharmalpha #pharmacie #sante #medicament #scanner #medical #hopital #technologie #invention #nobel #anecdote #saviez #cerveau #radiologue #EMI #Hounsfield #1972 #revolution"
+}
