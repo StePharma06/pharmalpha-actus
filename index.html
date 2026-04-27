@@ -108,20 +108,31 @@ body {
   gap: 12px;
 }
 .logo-area {
-  flex-shrink: 1;
-  min-width: 0;
+  flex-shrink: 0;
 }
 .logo-area img {
   height: 60px;
   width: auto;
-  max-width: 100%;
   display: block;
 }
 @media (max-width: 1000px) {
-  .logo-area img { height: 48px; }
+  .logo-area img { height: 50px; }
 }
 @media (max-width: 700px) {
-  .logo-area img { height: 38px; }
+  .header-inner {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+  .logo-area { width: 100%; display: flex; justify-content: center; }
+  .logo-area img { height: 56px; }
+  .header-right {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .header-link { padding: 6px 12px; font-size: 12px; }
 }
 .header-right {
   display: flex;
