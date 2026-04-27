@@ -107,9 +107,21 @@ body {
   align-items: center;
   gap: 12px;
 }
+.logo-area {
+  flex-shrink: 1;
+  min-width: 0;
+}
 .logo-area img {
-  height: 80px;
+  height: 60px;
   width: auto;
+  max-width: 100%;
+  display: block;
+}
+@media (max-width: 1000px) {
+  .logo-area img { height: 48px; }
+}
+@media (max-width: 700px) {
+  .logo-area img { height: 38px; }
 }
 .header-right {
   display: flex;
