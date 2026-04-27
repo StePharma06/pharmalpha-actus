@@ -377,6 +377,45 @@ body {
 .filter-btn[data-filter="business_officine"]:hover { background: var(--burgundy-light); border-color: var(--burgundy); }
 .filter-btn[data-filter="business_officine"].active { background: var(--burgundy); border-color: var(--burgundy); color: #fff; font-weight: 600; box-shadow: 0 0 0 3px rgba(159,18,57,0.2); }
 
+/* Toggle mobile "Filtres" (cache sur desktop) */
+.filters-toggle {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 100px;
+  border: 1.5px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s;
+  width: 100%;
+  justify-content: center;
+}
+.filters-toggle:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+}
+.filters-toggle svg { width: 18px; height: 18px; }
+.filters-toggle-current {
+  margin-left: auto;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+  padding: 3px 10px;
+  border-radius: 100px;
+  background: var(--bg-alt);
+}
+.filters-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
 /* Le Saviez-Vous : violet */
 .filter-btn[data-filter="lsv"] { color: var(--purple); border-color: rgba(124,58,237,0.35); }
 .filter-btn[data-filter="lsv"]:hover { background: var(--purple-light); border-color: var(--purple); }
@@ -930,6 +969,21 @@ body {
     align-items: center;
     gap: 12px;
   }
+  /* Filtres : toggle visible, boutons caches par defaut */
+  .filters-toggle { display: flex; }
+  .filters-buttons {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 6px;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-top: 8px;
+    background: var(--bg-alt);
+  }
+  .filters-buttons.open { display: flex; }
+  .filters-buttons .filter-btn { width: 100%; text-align: center; }
   .logo-area {
     width: 100%;
     display: flex;
@@ -1142,14 +1196,21 @@ body {
 
 <!-- FILTERS -->
 <section class="filters">
-  <button class="filter-btn active" data-filter="all">Toutes</button>
-  <button class="filter-btn" data-filter="pharma_france">Pharma France</button>
-  <button class="filter-btn" data-filter="pharma_monde">Pharma Monde</button>
-  <button class="filter-btn" data-filter="sante">Sante</button>
-  <button class="filter-btn" data-filter="bonne_nouvelle">La bonne nouvelle</button>
-  <button class="filter-btn" data-filter="avenir_pharma">L'avenir de la pharma</button>
-  <button class="filter-btn" data-filter="business_officine">Business Officine</button>
-  <button class="filter-btn" data-filter="lsv">Le Saviez-Vous</button>
+  <button class="filters-toggle" id="filters-toggle" onclick="toggleFiltersMobile()" aria-expanded="false">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="7" y1="12" x2="17" y2="12"/><line x1="10" y1="18" x2="14" y2="18"/></svg>
+    <span>Filtres</span>
+    <span class="filters-toggle-current" id="filters-toggle-current">Toutes</span>
+  </button>
+  <div class="filters-buttons" id="filters-buttons">
+    <button class="filter-btn active" data-filter="all">Toutes</button>
+    <button class="filter-btn" data-filter="pharma_france">Pharma France</button>
+    <button class="filter-btn" data-filter="pharma_monde">Pharma Monde</button>
+    <button class="filter-btn" data-filter="sante">Sante</button>
+    <button class="filter-btn" data-filter="bonne_nouvelle">La bonne nouvelle</button>
+    <button class="filter-btn" data-filter="avenir_pharma">L'avenir de la pharma</button>
+    <button class="filter-btn" data-filter="business_officine">Business Officine</button>
+    <button class="filter-btn" data-filter="lsv">Le Saviez-Vous</button>
+  </div>
   <div class="search-box">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
     <input type="text" id="search" placeholder="Rechercher...">
@@ -2280,6 +2341,13 @@ function showToast(msg) {
 // ============================================================
 // FILTERS & INIT
 // ============================================================
+function toggleFiltersMobile() {
+  const wrap = document.getElementById('filters-buttons');
+  const btn = document.getElementById('filters-toggle');
+  const isOpen = wrap.classList.toggle('open');
+  btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+}
+
 document.querySelectorAll('.filter-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
