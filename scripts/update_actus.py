@@ -4,8 +4,6 @@ Pharm'Actus - Mise a jour quotidienne
 Fetch RSS → Claude curate (ton Stephen) → Pexels photos → Le Saviez-Vous → Update index.html
 """
 
-import base64
-import hashlib
 import json
 import os
 import re
@@ -198,6 +196,26 @@ Pharma Monde et Business Officine sont les 2 rubriques qui DIFFERENCIENT Pharm'A
 - Pharma Monde : NE DOIS JAMAIS etre loupee. C'est ce qui fait qu'un pharmacien francais va lire Pharm'Actus au lieu d'aller directement sur Moniteur.
 - Business Officine est genere separement en format long et doit avoir le meme niveau d'exigence.
 Donc : donne-toi a fond sur Pharma Monde. Pas d'article pharma monde faible ou evasif.
+
+=== REGLE LEGALE CRITIQUE (a respecter ABSOLUMENT) ===
+Code de la sante publique L.5122 : INTERDICTION de publicite/promotion grand public et de tout angle "merch" sur les medicaments a prescription (PMO/PMR), notamment :
+- GLP-1 (Ozempic, Wegovy, Mounjaro, Trulicity, Saxenda...)
+- Antibiotiques, antihypertenseurs, antidiabetiques, antidepresseurs, etc.
+- Tout medicament rembourse par l'Assurance Maladie
+
+INTERDIT pour tout article identifiant un Rx specifique :
+- "Comment booster tes ventes de [Rx]"
+- "Mise en avant en lineaire / vitrine / ILV"
+- "Communication client" sur le produit
+- "Merchandising" / "valoriser" / "promouvoir"
+
+AUTORISE pour les Rx :
+- Impact sante publique, acces aux soins
+- Reglementation, AMM, taux de remboursement
+- Formation des equipes, gestion approvisionnement
+- Chiffres macro (CA national, impact sur le reseau)
+
+Le merch / promotion commerciale n'est OK QUE pour : OTC, complements alimentaires, dermo-cosmetique, parapharmacie, dispositifs medicaux non rembourses, ou les SERVICES officinaux (vaccination, BPM, missions).
 
 Pour chaque article, genere :
 - "titre" : accrocheur, max 80 car, style direct de Stephen
@@ -429,6 +447,19 @@ C'est CE qui fait que les pharmaciens s'abonnent et partagent. Il NE DOIT JAMAIS
 Si aucun angle business evident n'emerge de l'actu, extrais la dimension business d'un sujet reglementaire, economique ou structurel.
 Donne-toi a fond sur cet article : chiffres precis, comparaisons, ton consultant.
 
+=== REGLE LEGALE CRITIQUE (PUBLICITE Rx INTERDITE - L.5122) ===
+INTERDICTION ABSOLUE de proposer des recommandations type "merch", "mise en avant", "promotion", "communication client", "vitrine", "linéaire", "ILV" sur un MEDICAMENT A PRESCRIPTION identifie (GLP-1 type Ozempic/Wegovy/Mounjaro, antibiotiques, antidiabetiques, antihypertenseurs, antidepresseurs, tout Rx rembourse par l'Assurance Maladie).
+
+Si le sujet du jour est un Rx specifique, l'article business doit porter sur :
+- Impact macro (CA national, evolution du marche, parts de marche labos)
+- Reglementaire (AMM, LFSS, taux de remboursement, prix administre)
+- Formation equipes / gestion approvisionnement (operationnel pas commercial)
+- Pas de "comment booster tes ventes" / "comment valoriser ce produit"
+
+Le merch / mise en avant n'est OK QUE pour : OTC, parapharmacie, dermo-cosmetique, complements alimentaires, dispositifs medicaux non rembourses, ou les SERVICES officinaux (vaccination, BPM, entretiens pharma).
+
+Si tu identifies un risque, REFORMULE l'angle ou change de sujet.
+
 === ARTICLES DISPONIBLES ({week_start} → {today}) ===
 {articles_text}
 
@@ -519,31 +550,25 @@ PEXELS_API_KEY = "UapwydwlfWpQrgkN8rfyClS3foJ6zuFYyL4UVqFYtomh7tlTVcM5t6g1"
 HTTP_HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; PharmActus/1.0)"}
 
 
-def search_pexels_photo(query, per_page=5):
-    """Search Pexels. Returns list of (download_url, photographer) candidates (up to per_page)."""
+def search_pexels_photo(query):
+    """Search Pexels for a free stock photo. Returns (download_url, photographer)."""
     encoded = urllib.parse.quote(query)
-    url = f"https://api.pexels.com/v1/search?query={encoded}&per_page={per_page}&orientation=landscape"
+    url = f"https://api.pexels.com/v1/search?query={encoded}&per_page=3&orientation=landscape"
     headers = {**HTTP_HEADERS, "Authorization": PEXELS_API_KEY}
     req = urllib.request.Request(url, headers=headers)
 
-    candidates = []
     try:
         with urllib.request.urlopen(req, timeout=15) as resp:
             data = json.loads(resp.read())
-            for photo in data.get("photos", []):
-                img_url = photo.get("src", {}).get("landscape", "")
+            if data.get("photos"):
+                photo = data["photos"][0]
+                # landscape = 1200x627, parfait pour le web
+                img_url = photo["src"]["landscape"]
                 photographer = photo.get("photographer", "")
-                if img_url:
-                    candidates.append((img_url, photographer))
+                return img_url, photographer
     except Exception as e:
         print(f"    [PEXELS-ERR] {e}")
-    return candidates
-
-
-def search_pexels_photo_first(query):
-    """Backwards-compat: returns the first candidate or ('','')."""
-    cands = search_pexels_photo(query, per_page=3)
-    return cands[0] if cands else ("", "")
+    return "", ""
 
 
 def download_photo(url, dest_path):
@@ -557,244 +582,6 @@ def download_photo(url, dest_path):
     except Exception as e:
         print(f"    [DL-ERR] {e}")
         return False
-
-
-# ── QA IMAGES : doublons + cohérence + fallback Grok ─────────────────
-
-def fetch_image_bytes(url):
-    """Download image into memory (no disk write). Returns bytes or None."""
-    try:
-        req = urllib.request.Request(url, headers=HTTP_HEADERS)
-        with urllib.request.urlopen(req, timeout=20) as resp:
-            return resp.read()
-    except Exception as e:
-        print(f"    [FETCH-ERR] {e}")
-        return None
-
-
-def compute_md5(data):
-    """MD5 hash of bytes or file path."""
-    if isinstance(data, (str, Path)):
-        p = Path(data)
-        if not p.exists():
-            return ""
-        data = p.read_bytes()
-    return hashlib.md5(data).hexdigest()
-
-
-_recent_md5_cache = None
-
-def get_recent_md5s(days=14):
-    """Return set of MD5 hashes for images modified in the last N days. Cached per run."""
-    global _recent_md5_cache
-    if _recent_md5_cache is not None:
-        return _recent_md5_cache
-    cutoff = time.time() - days * 86400
-    md5s = set()
-    if ASSETS_DIR.exists():
-        for f in ASSETS_DIR.glob("img_*.jpg"):
-            try:
-                if f.stat().st_mtime >= cutoff:
-                    md5s.add(compute_md5(f))
-            except Exception:
-                pass
-    _recent_md5_cache = md5s
-    print(f"  [QA] {len(md5s)} MD5s of recent images cached for duplicate detection")
-    return md5s
-
-
-def validate_image_coherence(image_url, title, summary, claude_client=None):
-    """Ask Claude Haiku if the image fits the article. Returns 'SAFE' / 'RISKY' / 'WRONG' / 'SKIP'."""
-    if not claude_client or not image_url:
-        return "SKIP"
-    try:
-        # Télécharge et encode l'image en base64
-        img_bytes = fetch_image_bytes(image_url)
-        if not img_bytes:
-            return "SKIP"
-        img_b64 = base64.standard_b64encode(img_bytes).decode("utf-8")
-        # Détection du media_type basique (Pexels = jpeg)
-        media_type = "image/jpeg"
-
-        prompt = (
-            f"Tu valides la cohérence d'une image illustrant un article pharma.\n\n"
-            f"TITRE: {title}\n"
-            f"RÉSUMÉ: {summary[:300]}\n\n"
-            f"Réponds UNIQUEMENT par un seul mot parmi : SAFE, RISKY, WRONG.\n"
-            f"- SAFE = l'image illustre correctement le sujet, aucune lecture problématique.\n"
-            f"- RISKY = l'image peut être mal interprétée (ex: image avec billets/argent pour un article sur 'fraude' ou 'corruption' en santé, médecin avec dollars pour article 'économies', etc).\n"
-            f"- WRONG = l'image n'a pas de lien clair avec le sujet (ex: visio télémédecine pour un bug technique, jeune sportif pour article sénior, etc).\n\n"
-            f"Réponds en 1 mot uniquement."
-        )
-        resp = claude_client.messages.create(
-            model="claude-haiku-4-5-20251001",
-            max_tokens=10,
-            messages=[{
-                "role": "user",
-                "content": [
-                    {"type": "image", "source": {"type": "base64", "media_type": media_type, "data": img_b64}},
-                    {"type": "text", "text": prompt},
-                ],
-            }],
-        )
-        verdict = resp.content[0].text.strip().upper().split()[0]
-        if verdict in ("SAFE", "RISKY", "WRONG"):
-            return verdict
-        return "SKIP"
-    except Exception as e:
-        print(f"    [QA-ERR] {e}")
-        return "SKIP"
-
-
-XAI_API_KEY = os.environ.get("XAI_API_KEY", "")
-
-def generate_grok_image(title, summary, dest_path):
-    """Fallback: generate a custom image via xAI grok-imagine-image. Returns True if success."""
-    if not XAI_API_KEY:
-        print(f"    [GROK] XAI_API_KEY absent, skip")
-        return False
-    # Construit un prompt anglais éditorial depuis titre + résumé
-    prompt = (
-        f"Photorealistic editorial photograph illustrating a French pharmacy news article. "
-        f"Subject: {title}. Context: {summary[:200]}. "
-        f"Setting: modern French pharmacy or healthcare environment. "
-        f"Style: editorial, professional, warm natural lighting, photorealistic, "
-        f"no readable text, no logos, no signs with words, landscape 1200x675."
-    )
-    payload = json.dumps({
-        "model": "grok-imagine-image",
-        "prompt": prompt,
-        "n": 1,
-        "response_format": "b64_json",
-    }).encode("utf-8")
-    req = urllib.request.Request(
-        "https://api.x.ai/v1/images/generations",
-        data=payload,
-        headers={"Authorization": f"Bearer {XAI_API_KEY}", "Content-Type": "application/json"},
-        method="POST",
-    )
-    try:
-        with urllib.request.urlopen(req, timeout=120) as resp:
-            data = json.loads(resp.read().decode("utf-8"))
-        images = data.get("data", [])
-        if not images:
-            return False
-        b64 = images[0].get("b64_json")
-        if b64:
-            Path(dest_path).write_bytes(base64.b64decode(b64))
-        else:
-            url = images[0].get("url")
-            if not url:
-                return False
-            img_bytes = fetch_image_bytes(url)
-            if not img_bytes:
-                return False
-            Path(dest_path).write_bytes(img_bytes)
-        return True
-    except Exception as e:
-        print(f"    [GROK-ERR] {e}")
-        return False
-
-
-def regenerate_keywords_via_claude(title, summary, claude_client):
-    """Ask Claude for 3 alternative image_keywords if first Pexels query fails."""
-    if not claude_client:
-        return ""
-    try:
-        resp = claude_client.messages.create(
-            model="claude-haiku-4-5-20251001",
-            max_tokens=40,
-            messages=[{
-                "role": "user",
-                "content": (
-                    f"Donne 2-3 mots-clés EN ANGLAIS pour chercher une photo libre de droit "
-                    f"illustrant cet article pharma. Réponds en 2-3 mots SEULEMENT, séparés par espaces.\n"
-                    f"TITRE: {title}\nRÉSUMÉ: {summary[:200]}"
-                ),
-            }],
-        )
-        kw = resp.content[0].text.strip().strip('"').strip()
-        # Sécurité : extraire juste les mots
-        words = re.findall(r"[a-zA-Z]+", kw)[:3]
-        return " ".join(words)
-    except Exception as e:
-        print(f"    [KW-ERR] {e}")
-        return ""
-
-
-def pick_best_image(article, article_id, recent_md5s, claude_client=None):
-    """
-    Pipeline QA images en 3 niveaux :
-    1. Pexels (3 candidats) avec check doublons (MD5) + check cohérence (Claude Haiku)
-    2. Re-roll Pexels avec keywords alternatifs (générés par Claude) si rien ne passe
-    3. Fallback Grok (génération custom)
-    4. Fallback stock local (gestion identique à avant en bout de chaîne)
-
-    Returns (img_url, cdn_url, source_label) — source ∈ {'pexels','grok','stock',''}
-    """
-    title = article.get("titre", "")
-    summary = article.get("resume", "")
-    keywords = article.get("image_keywords", "")
-    img_name = f"img_{article_id}.jpg"
-    img_path = ASSETS_DIR / img_name
-
-    def try_candidates(candidates, source_tag):
-        for cand_url, photographer in candidates:
-            img_bytes = fetch_image_bytes(cand_url)
-            if not img_bytes:
-                continue
-            md5 = compute_md5(img_bytes)
-            if md5 in recent_md5s:
-                print(f"    [QA-DUP] doublon detecte (md5={md5[:8]}), skip")
-                continue
-            verdict = validate_image_coherence(cand_url, title, summary, claude_client)
-            if verdict in ("RISKY", "WRONG"):
-                print(f"    [QA-{verdict}] image rejetee, skip")
-                continue
-            # OK : on accepte (SAFE ou SKIP si pas de Claude dispo)
-            img_path.write_bytes(img_bytes)
-            recent_md5s.add(md5)
-            tag = "QA-OK" if verdict == "SAFE" else "QA-SKIP"
-            print(f"    [{tag}] {img_name} ({source_tag}{' - ' + photographer if photographer else ''})")
-            return cand_url
-        return ""
-
-    # Niveau 1 : Pexels avec keywords originaux
-    if keywords:
-        cands = search_pexels_photo(keywords, per_page=5)
-        url = try_candidates(cands, "Pexels")
-        if url:
-            return f"assets/{img_name}", url, "pexels"
-
-    # Niveau 2 : Re-roll Pexels avec keywords alternatifs
-    if claude_client:
-        alt_kw = regenerate_keywords_via_claude(title, summary, claude_client)
-        if alt_kw and alt_kw != keywords:
-            print(f"    [QA-RETRY] keywords alternatifs: {alt_kw}")
-            cands = search_pexels_photo(alt_kw, per_page=5)
-            url = try_candidates(cands, "Pexels-alt")
-            if url:
-                return f"assets/{img_name}", url, "pexels"
-
-    # Niveau 3 : Fallback Grok (image generee)
-    print(f"    [QA-GROK] aucun candidat Pexels valide, generation Grok...")
-    if generate_grok_image(title, summary, img_path):
-        try:
-            md5 = compute_md5(img_path)
-            recent_md5s.add(md5)
-        except Exception:
-            pass
-        print(f"    [QA-OK] {img_name} (Grok)")
-        cdn = f"https://actus.pharmalpha.fr/assets/{img_name}"
-        return f"assets/{img_name}", cdn, "grok"
-
-    # Niveau 4 : Fallback stock local (comportement actuel)
-    fallback = get_fallback_photo(article.get("categorie", "sante"))
-    if fallback:
-        print(f"    [IMG-FALLBACK] {fallback}")
-        return f"assets/{fallback}", f"https://actus.pharmalpha.fr/assets/{fallback}", "stock"
-
-    return "", "", ""
 
 
 STOCK_DIR = ASSETS_DIR / "stock"
@@ -889,14 +676,6 @@ def update_index_html(new_articles):
     today = datetime.now(PARIS_TZ).strftime("%Y-%m-%d")
     ASSETS_DIR.mkdir(exist_ok=True)
 
-    # Client Anthropic pour la validation cohérence d'images (Claude Haiku)
-    # Si la cle est absente, le pipeline degrade gracieusement (skip validation)
-    try:
-        client = anthropic.Anthropic()
-    except Exception as e:
-        print(f"  [WARN] Anthropic client init failed ({e}) — image coherence check disabled")
-        client = None
-
     new_js_entries = []
     actu_idx = 0
 
@@ -932,15 +711,37 @@ def update_index_html(new_articles):
             "badge_label": a.get("badge_label", "Sante"),
         }
 
-        # Photo : pipeline QA (Pexels + doublons + coherence Claude + fallback Grok + stock)
+        # Photo : Pexels API → fallback stock local
+        img_url = ""
+        pexels_cdn_url = ""  # URL CDN directe pour l'email (dispo avant deploiement)
+        img_keywords = a.get("image_keywords", "")
         print(f"  [{new_articles.index(a)+1}/{len(new_articles)}] {vals['titre'][:55]}...")
-        recent_md5s = get_recent_md5s(days=14)
-        img_url, cdn_url, source = pick_best_image(a, article_id, recent_md5s, claude_client=client)
+        if img_keywords:
+            photo_url, photographer = search_pexels_photo(img_keywords)
+            if photo_url:
+                pexels_cdn_url = photo_url  # Sauvegarde URL CDN pour l'email
+                img_name = f"img_{article_id}.jpg"
+                img_path = ASSETS_DIR / img_name
+                if download_photo(photo_url, img_path):
+                    img_url = f"assets/{img_name}"
+                    print(f"    [IMG] {img_name} (Pexels{' - ' + photographer if photographer else ''})")
+        if not img_url:
+            # Fallback : photo stock pre-telechargee par categorie
+            fallback = get_fallback_photo(a.get("categorie", "sante"))
+            if fallback:
+                img_url = f"assets/{fallback}"
+                print(f"    [IMG-FALLBACK] {fallback}")
 
         # Mettre a jour le dict article pour que la newsletter ait aussi l'image
         a["image_url"] = img_url
-        # Email: URL CDN directe (Pexels CDN, ou actus.pharmalpha.fr/assets pour Grok/stock)
-        a["email_image_url"] = cdn_url if cdn_url else ""
+        # Email: URL Pexels CDN directe (disponible avant deploiement Pages)
+        # Pour les photos stock : elles sont committees, l'URL hébergée est stable
+        if pexels_cdn_url:
+            a["email_image_url"] = pexels_cdn_url
+        elif img_url:
+            a["email_image_url"] = f"https://actus.pharmalpha.fr/{img_url}"
+        else:
+            a["email_image_url"] = ""
         a["id"] = article_id
 
         # Tags : array de strings, filtrage/normalisation
