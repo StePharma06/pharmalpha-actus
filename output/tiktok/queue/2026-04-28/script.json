@@ -1,0 +1,46 @@
+{
+  "hook": {
+    "voiceover": "En 1500, un barbier a inventé la césarienne en sauvant sa femme mourante.",
+    "video_prompt": "Dramatic scene of Jacob Nufer, a 16th century Swiss barber-surgeon, holding primitive surgical tools in a dimly lit medieval kitchen, determination in his eyes, candlelight flickering, cinematic close-up"
+  },
+  "story": {
+    "full_voiceover": "En 1500, un barbier a inventé la césarienne en sauvant sa femme mourante. Nous sommes à Siegershausen, petit village suisse. Jacob Nufer voit sa femme agoniser depuis des jours en couches. Treize sages-femmes ont échoué, les médecins baissent les bras. Jacob prend une décision folle : ouvrir le ventre de sa femme avec ses outils de barbier, sur sa table de cuisine, sans anesthésie. L'Église interdit cette pratique aux médecins diplômés, mais lui n'en est pas un. Le miracle se produit : l'enfant naît vivant et la mère survit aussi. Elle aura ensuite cinq autres enfants naturellement. Cette première césarienne documentée restera un cas isolé pendant des siècles. Les médecins savants boudent cette technique pendant 400 ans, préférant laisser mourir les femmes plutôt que d'admettre qu'un barbier avait eu raison. Aujourd'hui une naissance sur cinq se fait par césarienne, et tout a commencé avec un homme qui refusait d'accepter la mort.",
+    "parts": [
+      {
+        "id": "part1",
+        "text_segment": "Nous sommes à Siegershausen, petit village suisse. Jacob Nufer voit sa femme agoniser depuis des jours en couches. Treize sages-femmes ont échoué, les médecins baissent les bras.",
+        "video_prompt": "Wide shot of medieval Swiss village Siegershausen in 1500, then transition to interior of humble home where Jacob Nufer watches his suffering wife in labor, multiple midwives looking defeated, somber lighting",
+        "_computed_duration": 9.311
+      },
+      {
+        "id": "part2",
+        "text_segment": "Jacob prend une décision folle : ouvrir le ventre de sa femme avec ses outils de barbier, sur sa table de cuisine, sans anesthésie. L'Église interdit cette pratique aux médecins diplômés, mais lui n'en est pas un.",
+        "video_prompt": "Intense close-up of Jacob Nufer's hands preparing crude barber tools on wooden kitchen table, medieval surgical instruments, candlelit room, determination and desperation, cinematic tension",
+        "_computed_duration": 10.0
+      },
+      {
+        "id": "part3",
+        "text_segment": "Le miracle se produit : l'enfant naît vivant et la mère survit aussi. Elle aura ensuite cinq autres enfants naturellement.",
+        "video_prompt": "Emotional scene of newborn baby crying, Jacob Nufer's relieved face, his wife recovering against all odds, warm golden light suggesting hope and miracle, 16th century setting",
+        "_computed_duration": 7.545999999999999
+      },
+      {
+        "id": "part4",
+        "text_segment": "Cette première césarienne documentée restera un cas isolé pendant des siècles. Les médecins savants boudent cette technique pendant 400 ans, préférant laisser mourir les femmes plutôt que d'admettre qu'un barbier avait eu raison.",
+        "video_prompt": "Montage of arrogant medieval and renaissance physicians in universities dismissing the technique, books and scrolls, academic pride, dark atmosphere showing centuries of medical ignorance",
+        "_computed_duration": 10.0
+      },
+      {
+        "id": "part5",
+        "text_segment": "Aujourd'hui une naissance sur cinq se fait par césarienne, et tout a commencé avec un homme qui refusait d'accepter la mort.",
+        "video_prompt": "Modern hospital cesarean section room with advanced medical equipment, skilled surgeons working, bright clinical lighting, transition to portrait of Jacob Nufer, connecting past to present",
+        "_computed_duration": 7.268000000000001
+      }
+    ]
+  },
+  "music_mood": "epic",
+  "titre_tiktok": "Ce barbier de 1500 a inventé la césarienne pour sauver sa femme",
+  "description_tiktok": "L'histoire incroyable de Jacob Nufer, le barbier qui a révolutionné l'obstétrique ! Une opération interdite aux médecins, réalisée avec des outils de fortune. #lesaviezvous #pharmalpha #histoire",
+  "hashtags": "#lesaviezvous #pharmalpha #pharmacie #sante",
+  "tiktok_caption": "🏥 Ce barbier de 1500 a inventé la césarienne pour sauver sa femme !\n\nL'histoire incroyable de Jacob Nufer qui a défié l'autorité médicale de son époque. Avec ses simples outils de barbier, il a sauvé sa femme ET son enfant quand 13 sages-femmes avaient échoué. Le plus fou ? Les médecins ont ignoré sa technique pendant 400 ans !\n\nCommente si cette histoire t'a surpris ! 👇\n\n#fyp #pourtoi #apprendresurtiktok #culture #histoire #pharmacie #pharma #lesaviezvous #pharmalpha #sante #medicament #anecdote #medical #obstetrique #cesarienne #barbier #suisse #1500 #innovation #femmes #accouchement"
+}
