@@ -1,0 +1,46 @@
+{
+  "hook": {
+    "voiceover": "En 1921, une chienne agonisante a sauvé des millions de vies humaines.",
+    "video_prompt": "Close-up of a dying collie dog lying on a laboratory table in 1921, weak and breathing heavily, vintage medical laboratory setting, dramatic lighting, cinematic black and white aesthetic"
+  },
+  "story": {
+    "full_voiceover": "En 1921, une chienne agonisante a sauvé des millions de vies humaines. À cette époque, le diabète de type 1, c'est une condamnation à mort absolue. Les enfants maigrissent, tombent dans le coma et meurent en quelques mois. Frederick Banting, 29 ans, chirurgien au chômage, a une idée folle avec son assistant Charles Best, 22 ans. Ils expérimentent sur des chiens à Toronto, provoquent le diabète puis injectent des extraits pancréatiques. Le 30 juillet 1921, Marjorie, une chienne colley diabétique mourante, reçoit la première injection d'insuline de l'histoire. Sa glycémie chute spectaculairement, elle survit 70 jours de plus. Six mois plus tard, Leonard Thompson, 14 ans, devient le premier humain traité. Première tentative ratée, seconde tentative le 23 janvier 1922 : sa glycémie passe de 5,2 à 1,2 grammes par litre. Aujourd'hui, chaque boîte d'insuline vendue en pharmacie porte cette histoire extraordinaire qui commence avec une chienne agonisante.",
+    "parts": [
+      {
+        "id": "part1",
+        "text_segment": "À cette époque, le diabète de type 1, c'est une condamnation à mort absolue. Les enfants maigrissent, tombent dans le coma et meurent en quelques mois.",
+        "video_prompt": "Sepia-toned hospital ward from 1921 showing thin, dying children in beds, nurses walking helplessly, dramatic shadows, vintage medical equipment, melancholic atmosphere",
+        "_computed_duration": 8.649
+      },
+      {
+        "id": "part2",
+        "text_segment": "Frederick Banting, 29 ans, chirurgien au chômage, a une idée folle avec son assistant Charles Best, 22 ans. Ils expérimentent sur des chiens à Toronto, provoquent le diabète puis injectent des extraits pancréatiques.",
+        "video_prompt": "Two young researchers Banting and Best in 1921 laboratory coats working intensely with glass syringes and pancreatic extracts, University of Toronto lab, vintage scientific equipment, focused lighting",
+        "_computed_duration": 10.0
+      },
+      {
+        "id": "part3",
+        "text_segment": "Le 30 juillet 1921, Marjorie, une chienne colley diabétique mourante, reçoit la première injection d'insuline de l'histoire. Sa glycémie chute spectaculairement, elle survit 70 jours de plus.",
+        "video_prompt": "Historic moment of first insulin injection into collie dog Marjorie, researcher's hands holding vintage syringe, dog gradually becoming stronger, miraculous medical breakthrough, golden hour lighting",
+        "_computed_duration": 10.0
+      },
+      {
+        "id": "part4",
+        "text_segment": "Six mois plus tard, Leonard Thompson, 14 ans, devient le premier humain traité. Première tentative ratée, seconde tentative le 23 janvier 1922 : sa glycémie passe de 5,2 à 1,2 grammes par litre.",
+        "video_prompt": "14-year-old Leonard Thompson in 1922 hospital bed receiving insulin injection, transformation from weak to healthy, vintage medical charts showing dropping glucose levels, hope and recovery",
+        "_computed_duration": 10.0
+      },
+      {
+        "id": "part5",
+        "text_segment": "Aujourd'hui, chaque boîte d'insuline vendue en pharmacie porte cette histoire extraordinaire qui commence avec une chienne agonisante.",
+        "video_prompt": "Modern pharmacist's hands holding insulin box in contemporary pharmacy, camera pulls back to reveal the connection between past and present, warm lighting, inspiring conclusion",
+        "_computed_duration": 7.661999999999992
+      }
+    ]
+  },
+  "music_mood": "epic",
+  "titre_tiktok": "Cette chienne a sauvé des millions de vies (histoire vraie de l'insuline)",
+  "description_tiktok": "L'histoire incroyable de Marjorie, première patiente à recevoir de l'insuline en 1921. De cette chienne mourante aux millions de diabétiques sauvés aujourd'hui. #lesaviezvous #pharmalpha #pharmacie #insuline #diabete #histoire #sante",
+  "hashtags": "#lesaviezvous #pharmalpha #pharmacie #sante",
+  "tiktok_caption": "🐕 Cette chienne a littéralement sauvé des millions de vies humaines !\n\nL'histoire fascinante de Marjorie et de la découverte de l'insuline en 1921. Avant cette découverte révolutionnaire, le diabète de type 1 était une condamnation à mort. Deux jeunes chercheurs canadiens ont tout changé avec leur expérience sur cette chienne mourante.\n\nCommente si tu savais pour Marjorie ! 👇\n\n#fyp #pourtoi #apprendresurtiktok #culture #histoire #pharmacie #pharma #lesaviezvous #pharmalpha #sante #medicament #insuline #diabete #anecdote #medical #science #decouverte #canada #toronto #chien #colley #breakthrough #medecine #hopital #traitement #chronique #glycemie #pancreas #injection"
+}
