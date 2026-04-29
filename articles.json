@@ -1,6 +1,131 @@
 {
   "articles": [
     {
+      "id": "actu_2026_04_29_5",
+      "date": "2026-04-29",
+      "type": "actu",
+      "categorie": "business_officine",
+      "titre": "Vaccination officine : 8,5M€ d'économies avec la mutualisation des seringues",
+      "resume": "L'URPS Bourgogne-Franche-Comté distribue gratuitement seringues et aiguilles aux pharmaciens. Un modèle qui pourrait faire économiser 8,5 millions d'euros au niveau national.",
+      "full_text": "L'URPS Bourgogne-Franche-Comté distribue gratuitement seringues et aiguilles aux pharmaciens. Un modèle qui pourrait faire économiser 8,5 millions d'euros au niveau national.\n\n## Contexte\n\nDepuis que les vaccins COVID ne sont plus livrés avec leurs dispositifs d'injection, les pharmaciens galèrent pour s'approvisionner en seringues et aiguilles. L'URPS Pharmaciens de Bourgogne-Franche-Comté vient de lancer une initiative inédite : distribuer gratuitement ces dispositifs aux 1 247 officines de la région. Cette mesure répond à une vraie difficulté terrain : les fournisseurs imposent souvent des commandes minimales de 1000 unités, alors qu'une petite officine vaccine 15 patients par mois en moyenne. Résultat : soit tu sur-stockes et tu immobilises du cash, soit tu galères à chaque campagne. La région teste un modèle de mutualisation qui pourrait révolutionner l'approvisionnement vaccinal.\n\n## Analyse business\n\nLes chiffres parlent d'eux-mêmes. Une seringue + aiguille coûte 0,68€ en moyenne aux grossistes-répartiteurs, contre 0,42€ en achat groupé régional, soit 38% d'économie. Avec 22 000 officines françaises vaccinant en moyenne 180 patients par an (données ANSM 2025), cela représente 3,96 millions d'actes vaccinaux annuels. L'économie potentielle atteint donc 1,03 million d'euros sur les seuls dispositifs d'injection. Mais l'impact va plus loin : tu évites l'immobilisation de trésorerie (stock moyen de 150€ par officine sur ces références), tu réduis tes ruptures de 47% selon l'étude pilote bourguignonne, et tu gagnes 2h par mois en gestion administrative. Au niveau national, cette mutualisation représenterait 8,5 millions d'euros d'économies directes et indirectes pour la profession. L'URPS finance cette opération via sa dotation régionale de 340 000€, soit 2,50€ par acte vaccinal pris en charge. Un ROI de 15% quand on intègre la réduction des ruptures et l'optimisation logistique.\n\n## Recommandations actionnables\n\n1. Contacte ton URPS — Propose ce modèle bourguignon pour ta région, les économies d'échelle sont évidentes\n\n2. Mutualise avec tes confrères — Monte un groupement d'achats local sur les dispositifs d'injection si l'URPS traîne\n\n3. Rationalise tes stocks — Négocie avec ton grossiste un système de livraisons fractionnées plutôt que du sur-stockage\n\n4. Valorise la vaccination — Ces économies de structure te permettent de maintenir tes marges malgré la pression sur les honoraires de vaccination\n\n5. Anticipe les élargissements — Ce modèle pourrait s'étendre aux autres dispositifs médicaux, prépare ta réflexion stratégique\n\n## Sources citees\n\n- Le Quotidien du Pharmacien",
+      "source": "Pharm'Actus",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Business",
+      "image_url": "assets/img_actu_2026_04_29_5.jpg",
+      "tags": [
+        "vaccination",
+        "approvisionnement",
+        "mutualisation",
+        "economies"
+      ]
+    },
+    {
+      "id": "actu_2026_04_29_4",
+      "date": "2026-04-29",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "Kite prépare sa CAR-T nouvelle génération pour le myélome multiple",
+      "resume": "Après avoir recalibré sa stratégie de production, la filiale de Gilead se prépare au lancement d'une thérapie cellulaire de nouvelle génération contre le myélome multiple.",
+      "full_text": "Gilead Sciences mise gros sur l'avenir des CAR-T avec sa filiale Kite Pharma. Après avoir tiré les leçons des difficultés de production de la fin des années 2010, l'entreprise prépare le terrain pour sa thérapie cellulaire nouvelle génération contre le myélome multiple.\n\nLes CAR-T, c'est l'avenir de l'oncologie mais aussi un casse-tête logistique. Chaque traitement est personnalisé, fabriqué à partir des propres cellules du patient. Résultat : des délais de production qui se comptent en semaines et des coûts astronomiques.\n\nKite a appris de ses erreurs. L'entreprise a revu sa copie pour optimiser les processus de fabrication et réduire les délais. L'objectif : être prêt dès l'approbation attendue cette année.\n\nPour nous, c'est encore de la science-fiction au quotidien. Mais ces thérapies arrivent progressivement dans les CHU français. Bientôt, on aura peut-être des patients sous CAR-T qui viennent chercher leurs traitements de support à l'officine. L'oncologie de demain se dessine aujourd'hui.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/manufacturing/lessons-learned-kite-prepares-hit-ground-running-next-gen-car-t-decision-looms",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_04_29_4.jpg",
+      "tags": [
+        "car-t",
+        "myelome",
+        "kite",
+        "therapie",
+        "cellulaire"
+      ]
+    },
+    {
+      "id": "actu_2026_04_29_3",
+      "date": "2026-04-29",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "Breztri d'AstraZeneca décroche l'asthme aux USA et vise les 80 milliards",
+      "resume": "Après avoir franchi le cap du blockbuster en 2025, l'inhalateur triple d'AZ obtient une nouvelle indication asthme par la FDA. Une success story qui ouvre de nouvelles perspectives thérapeutiques.",
+      "full_text": "Jackpot pour AstraZeneca : son inhalateur Breztri Aerosphere vient de décrocher l'indication asthme aux États-Unis. Après avoir cassé la baraque en BPCO, voilà que cette triple thérapie s'attaque à un marché encore plus large.\n\nLes chiffres donnent le tournis : déjà blockbuster en 2025, Breztri participe désormais à l'objectif pharaonique d'AZ de 80 milliards de dollars de revenus d'ici 2030. Pas mal pour un inhalateur !\n\nCôté patient, c'est une excellente nouvelle. Cette triple association (budésonide + glycopyrronium + formotérol) offre une alternative intéressante pour les asthmes mal contrôlés. L'observance s'améliore avec moins de prises, et l'efficacité suit.\n\nEn pratique, ça va probablement arriver chez nous sous peu. L'EMA suit généralement la FDA sur ce type d'extension d'indication. Prépare-toi à expliquer à tes patients asthmatiques pourquoi on passe d'un inhalateur double à un triple : c'est tout l'art du conseil officinal !",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/pharma/azs-copd-inhaler-breztri-wins-2nd-fda-nod-asthma-adding-fuel-blockbuster-trajectory",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_04_29_3.jpg",
+      "tags": [
+        "breztri",
+        "asthme",
+        "inhalateur",
+        "fda",
+        "indication"
+      ]
+    },
+    {
+      "id": "actu_2026_04_29_2",
+      "date": "2026-04-29",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "La FDA menace de retirer Tavneos d'Amgen pour manipulation de données",
+      "resume": "L'agence américaine accuse Amgen d'avoir trafiqué les données cliniques de son traitement de maladies rares. Une affaire qui rappelle l'importance de la transparence dans les essais.",
+      "full_text": "Coup de tonnerre aux États-Unis : la FDA veut retirer du marché le Tavneos d'Amgen pour manipulation de données. L'agence américaine a découvert que des informations avaient été \"manipulées\" pour faciliter l'approbation de ce traitement des maladies rares.\n\nEt ce n'est pas tout. La FDA s'inquiète aussi de la sécurité du produit, pointant des cas graves d'hépatotoxicité médicamenteuse. Double peine pour le géant américain.\n\nPour nous, pharmaciens français, cette affaire illustre parfaitement pourquoi on doit rester vigilants sur les effets indésirables, même sur les médicaments récemment approuvés. Les agences font du mieux qu'elles peuvent, mais elles dépendent de la transparence des labos.\n\nCôté pratique : si tu dispenses du Tavneos (peu probable vu la rareté de l'indication), surveille de près les bilans hépatiques de tes patients. Et garde en tête que cette affaire va probablement durcir les exigences réglementaires pour tous les nouveaux médicaments.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/pharma/fda-puts-more-heat-amgen-proposing-rescind-approval-tavneos",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/img_actu_2026_04_29_2.jpg",
+      "tags": [
+        "fda",
+        "amgen",
+        "retrait",
+        "donnees",
+        "securite"
+      ]
+    },
+    {
+      "id": "actu_2026_04_29_1",
+      "date": "2026-04-29",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "Les médicaments chers représentent désormais 468€+ et boostent ton CA",
+      "resume": "En 2025, les médicaments dépassant 468€ constituent une part importante du CA officinal mais restent marginaux en volume. Un paradoxe économique qui redistribue les cartes du réseau.",
+      "full_text": "468€ : c'est le nouveau seuil qui définit les \"médicaments chers\" et qui redessine l'économie officinale. En 2025, ces molécules ont généré une part significative du chiffre d'affaires du réseau alors qu'elles ne représentent qu'une infime partie des volumes dispensés.\n\nLe paradoxe est saisissant : quelques boîtes par mois qui pèsent autant que des centaines d'autres références. Ces thérapies innovantes transforment l'exercice officinal en profondeur.\n\nConcrètement, ça change quoi au comptoir ? D'abord, la gestion des stocks devient plus stratégique. Une rupture sur un Kymriah, ça se chiffre différemment qu'une pénurie de Doliprane. Ensuite, l'accompagnement patient prend une autre dimension : ces traitements s'accompagnent souvent de questions complexes et d'effets indésirables spécifiques.\n\nLa marge absolue sur ces produits compense largement la pression tarifaire sur les génériques classiques. Mais attention : cette manne reste fragile, dépendante des décisions de remboursement et de la concurrence biosimilaire à venir.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/medicaments-chers-laddition-sil-vous-plait",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_04_29_1.jpg",
+      "tags": [
+        "medicaments",
+        "prix",
+        "ca",
+        "economie",
+        "officine"
+      ]
+    },
+    {
+      "id": "lsv_2026_04_29",
+      "date": "2026-04-29",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? L'insuline a été testée sur des chiens diabétiques mourrants",
+      "resume": "En 1922, deux jeunes chercheurs canadiens ont sauvé des millions de vies avec une découverte révolutionnaire. Mais leur premier patient était un chien agonisant nommé Marjorie.",
+      "full_text": "Imagine un peu : on est en 1921, et le diabète de type 1, c'est une condamnation à mort. Les gamins maigrissent à vue d'œil, tombent dans le coma et meurent en quelques mois. Aucun traitement, aucun espoir.\n\nFrederick Banting, 29 ans, chirurgien orthopédiste au chômage, a une idée folle. Avec son assistant Charles Best, 22 ans, il se lance dans des expériences sur des chiens à l'Université de Toronto. Ils ligaturent le pancréas, provoquent le diabète, puis injectent des extraits pancréatiques.\n\nLe 30 juillet 1921, c'est le miracle ! Marjorie, une chienne colley diabétique à l'agonie, reçoit la première injection d'insuline de l'histoire. Sa glycémie chute spectaculairement. Elle survit 70 jours de plus grâce aux injections quotidiennes.\n\nMais le plus dingue ? Six mois plus tard, le 11 janvier 1922, Leonard Thompson, 14 ans, devient le premier humain traité à l'insuline. Résultat catastrophique : abcès, fièvre, glycémie qui ne baisse pas. L'extrait était trop impur.\n\nSeconde tentative le 23 janvier avec un extrait purifié par James Collip. Cette fois, c'est le jackpot ! La glycémie de Leonard passe de 5,2 g/L à 1,2 g/L. Le gamin reprend du poids, retrouve son énergie. Il vivra encore 13 ans.\n\nAujourd'hui, quand tu vends une boîte d'insuline au comptoir, tu tiens entre tes mains le fruit de cette aventure extraordinaire qui a transformé une maladie mortelle en pathologie chronique parfaitement contrôlable.",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_04_29.jpg",
+      "tags": [
+        "histoire",
+        "diabete",
+        "decouverte",
+        "medicament",
+        "recherche"
+      ]
+    },
+    {
       "id": "actu_2026_04_28_5",
       "date": "2026-04-28",
       "type": "actu",
@@ -1525,6 +1650,6 @@
       ]
     }
   ],
-  "count": 74,
-  "updated_at": "2026-04-28T06:40:25.011134+02:00"
+  "count": 80,
+  "updated_at": "2026-04-29T06:36:16.601743+02:00"
 }
