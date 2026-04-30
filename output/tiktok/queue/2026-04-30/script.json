@@ -1,0 +1,46 @@
+{
+  "hook": {
+    "voiceover": "Un apprenti pharmacien de 20 ans révolutionne la médecine depuis son arrière-boutique en 1804.",
+    "video_prompt": "Close-up of young Friedrich Sertürner in 1804 German apothecary uniform working with glass vials and mysterious substances in a dimly lit pharmacy back room, candlelight flickering, historical cinematic style"
+  },
+  "story": {
+    "full_voiceover": "Un apprenti pharmacien de 20 ans révolutionne la médecine depuis son arrière-boutique en 1804. Friedrich Sertürner travaille chez l'apothicaire d'Einbeck quand il décide d'analyser l'opium, cette pâte mystérieuse utilisée depuis des millénaires. Il teste différents solvents, chauffe, filtre, cristallise méthodiquement dans son laboratoire de fortune. Soudain, miracle ! Des cristaux blancs apparaissent qu'il baptise morphium, du nom de Morphée le dieu des rêves. Premier alcaloïde pur de l'histoire ! Mais le jeune homme teste son produit sur lui-même et ses amis, résultat catastrophique : coma pendant plusieurs heures. Les effets sont si terrifiants qu'il attend 13 ans avant de publier sa découverte révolutionnaire. Tragiquement, Sertürner mourra dans la pauvreté totale tandis que son invention fonde l'industrie pharmaceutique moderne. Et la prochaine fois que tu verras de la morphine, tu penseras à ce génie oublié.",
+    "parts": [
+      {
+        "id": "part1",
+        "text_segment": "Friedrich Sertürner travaille chez l'apothicaire d'Einbeck quand il décide d'analyser l'opium, cette pâte mystérieuse utilisée depuis des millénaires.",
+        "video_prompt": "Wide shot of 1804 German town Einbeck with traditional apothecary shop, Friedrich Sertürner examining dark opium paste under magnifying glass, period accurate interior with wooden shelves and ceramic jars",
+        "_computed_duration": 7.547
+      },
+      {
+        "id": "part2",
+        "text_segment": "Il teste différents solvents, chauffe, filtre, cristallise méthodiquement dans son laboratoire de fortune. Soudain, miracle ! Des cristaux blancs apparaissent qu'il baptise morphium, du nom de Morphée le dieu des rêves.",
+        "video_prompt": "Extreme close-up of laboratory process: heating opium solution over flame, filtering through paper, white crystals forming in glass dish, dramatic lighting revealing pure white morphine crystals, 1804 primitive lab equipment",
+        "_computed_duration": 10.0
+      },
+      {
+        "id": "part3",
+        "text_segment": "Premier alcaloïde pur de l'histoire ! Mais le jeune homme teste son produit sur lui-même et ses amis, résultat catastrophique : coma pendant plusieurs heures.",
+        "video_prompt": "Dramatic scene of Friedrich Sertürner and friends unconscious on chairs and floor in apothecary shop, empty vials nearby, concerned faces of people trying to wake them, dark atmospheric lighting conveying danger",
+        "_computed_duration": 9.312000000000001
+      },
+      {
+        "id": "part4",
+        "text_segment": "Les effets sont si terrifiants qu'il attend 13 ans avant de publier sa découverte révolutionnaire. Tragiquement, Sertürner mourra dans la pauvreté totale tandis que son invention fonde l'industrie pharmaceutique moderne.",
+        "video_prompt": "Split scene: left side shows aged Sertürner in 1817 writing his scientific paper by candlelight in modest room, right side shows growing pharmaceutical factories and wealth, stark contrast between inventor's poverty and industry success",
+        "_computed_duration": 10.0
+      },
+      {
+        "id": "part5",
+        "text_segment": "Et la prochaine fois que tu verras de la morphine, tu penseras à ce génie oublié.",
+        "video_prompt": "Modern hospital scene transitioning to historical: contemporary medical vial of morphine slowly morphing into Friedrich Sertürner's original white crystals, ethereal connection between past and present, warm nostalgic lighting",
+        "_computed_duration": 4.840999999999994
+      }
+    ]
+  },
+  "music_mood": "mysterious",
+  "titre_tiktok": "Cet apprenti de 20 ans a changé la médecine pour toujours",
+  "description_tiktok": "L'histoire incroyable de Friedrich Sertürner et sa découverte révolutionnaire ! #lesaviezvous #pharmalpha #pharmacie #histoire",
+  "hashtags": "#lesaviezvous #pharmalpha #pharmacie #sante",
+  "tiktok_caption": "💊 Cet apprenti de 20 ans a changé la médecine pour toujours\n\nEn 1804, Friedrich Sertürner révolutionne l'histoire depuis son arrière-boutique ! Sa découverte de la morphine fonde la pharmacologie moderne, mais il paiera le prix fort pour ses expériences dangereuses sur lui-même.\n\nUne histoire fascinante de génie, de courage et de sacrifice qui montre comment les plus grandes avancées médicales naissent parfois dans l'ombre.\n\nCommente si tu connaissais cette histoire incroyable ! 👇\n\n#fyp #pourtoi #apprendresurtiktok #culture #histoire #pharmacie #pharma #lesaviezvous #pharmalpha #sante #medicament #anecdote #science #medecine #morphine #allemagne #decouverte #inventeur #alcaloide #opium #laboratoire #recherche #innovation #pharmaceutical"
+}
