@@ -612,37 +612,120 @@ def send_newsletter_email(markdown, actus, lsv, companion_post=""):
 
 
 def generate_cover_image():
-    """Generate a 1200x675 cover image with logo + week number. Returns base64 string or None."""
+    """Generate a 1200x675 LinkedIn newsletter cover (S17 design : beige + globe + SEMAINE XX).
+    Returns base64 PNG or None.
+    """
     try:
         from PIL import Image, ImageDraw, ImageFont
-        logo_path = ROOT_DIR / "assets" / "logo_pharmactus.png"
-        if not logo_path.exists():
-            return None
-        W, H = 1200, 675
-        bg = Image.new("RGB", (W, H), "#ffffff")
-        draw = ImageDraw.Draw(bg)
-        draw.rectangle([(0, 0), (W, 8)], fill="#f97316")
-        draw.rectangle([(0, H - 8), (W, H)], fill="#f97316")
-        logo = Image.open(logo_path).convert("RGBA")
-        target_w = int(W * 0.65)
-        ratio = target_w / logo.size[0]
-        new_h = int(logo.size[1] * ratio)
-        logo = logo.resize((target_w, new_h), Image.LANCZOS)
-        logo_x = (W - target_w) // 2
-        logo_y = int(H * 0.32) - new_h // 2
-        bg.paste(logo, (logo_x, logo_y), logo)
-        try:
-            font = ImageFont.truetype("DejaVuSans.ttf", 32)
-        except Exception:
-            font = ImageFont.load_default()
-        week_num = datetime.now(PARIS_TZ).isocalendar()[1]
-        sub = f"L'essentiel de la semaine pharma  ·  S{week_num}"
-        bbox = draw.textbbox((0, 0), sub, font=font)
-        draw.text(((W - (bbox[2] - bbox[0])) // 2, logo_y + new_h + 50), sub, fill="#1a1a1a", font=font)
-        tag = "5 actus + 1 histoire pharma  ·  chaque matin sur actus.pharmalpha.fr"
-        bbox = draw.textbbox((0, 0), tag, font=font)
-        draw.text(((W - (bbox[2] - bbox[0])) // 2, H - 80), tag, fill="#888888", font=font)
         import io
+
+        icon_path = ROOT_DIR / "assets" / "favicon.png"
+        if not icon_path.exists():
+            return None
+
+        # Layout
+        W, H = 1200, 675
+        BG = "#F5F1EA"
+        ORANGE = "#F97316"
+        DARK = "#1A1A1A"
+        GREY = "#555555"
+        FOOTER_H = 60
+
+        # Compute week dates (last completed week = lundi to dimanche just past)
+        today = datetime.now(PARIS_TZ)
+        # Lundi de la semaine ECOULEE (pas la semaine en cours)
+        days_since_monday = today.weekday()
+        last_sunday = today - timedelta(days=days_since_monday + 1)
+        last_monday = last_sunday - timedelta(days=6)
+        week_num = last_monday.isocalendar()[1]
+
+        months_fr = ["", "JANVIER", "FÉVRIER", "MARS", "AVRIL", "MAI", "JUIN", "JUILLET", "AOÛT", "SEPTEMBRE", "OCTOBRE", "NOVEMBRE", "DÉCEMBRE"]
+        if last_monday.month == last_sunday.month:
+            date_str = f"{last_monday.day} - {last_sunday.day} {months_fr[last_sunday.month]} {last_sunday.year}"
+        else:
+            date_str = f"{last_monday.day} {months_fr[last_monday.month][:3]} - {last_sunday.day} {months_fr[last_sunday.month][:3]} {last_sunday.year}"
+
+        bg = Image.new("RGB", (W, H), BG)
+        draw = ImageDraw.Draw(bg)
+        draw.rectangle([(0, 0), (8, H - FOOTER_H)], fill=ORANGE)
+        draw.rectangle([(0, H - FOOTER_H), (W, H)], fill=DARK)
+
+        # Fonts with multiple fallbacks (Linux GitHub Actions, Windows local)
+        def get_font(size, bold=False):
+            paths = [
+                "C:/Windows/Fonts/arialbd.ttf" if bold else "C:/Windows/Fonts/arial.ttf",
+                "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf" if bold else "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+                "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf" if bold else "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf",
+                "DejaVuSans-Bold.ttf" if bold else "DejaVuSans.ttf",
+            ]
+            for p in paths:
+                try:
+                    return ImageFont.truetype(p, size)
+                except Exception:
+                    continue
+            return ImageFont.load_default()
+
+        font_label = get_font(22, bold=True)
+        font_huge = get_font(96, bold=True)
+        font_dates = get_font(26, bold=True)
+        font_sub = get_font(20, bold=False)
+        font_pharm = get_font(46, bold=True)
+        font_footer = get_font(15, bold=True)
+
+        # Icon (globe), white -> transparent
+        ICON_SIZE = 230
+        icon = Image.open(icon_path).convert("RGBA")
+        pixels = icon.load()
+        for y in range(icon.size[1]):
+            for x in range(icon.size[0]):
+                r, g, b, a = pixels[x, y]
+                if r > 240 and g > 240 and b > 240:
+                    pixels[x, y] = (r, g, b, 0)
+        icon = icon.resize((ICON_SIZE, ICON_SIZE), Image.LANCZOS)
+        icon_x = 130
+        icon_y = int((H - FOOTER_H) * 0.30) - 30
+        bg.paste(icon, (icon_x, icon_y), icon)
+
+        # PHARM'ACTUS text under icon
+        pharm_p = "PHARM'"
+        actus_p = "ACTUS"
+        bbox_p = draw.textbbox((0, 0), pharm_p, font=font_pharm)
+        bbox_a = draw.textbbox((0, 0), actus_p, font=font_pharm)
+        w_p, w_a = bbox_p[2] - bbox_p[0], bbox_a[2] - bbox_a[0]
+        text_total_w = w_p + w_a
+        text_x = icon_x + (ICON_SIZE - text_total_w) // 2
+        text_y = icon_y + ICON_SIZE + 20
+        draw.text((text_x, text_y), pharm_p, font=font_pharm, fill=DARK)
+        draw.text((text_x + w_p, text_y), actus_p, font=font_pharm, fill=ORANGE)
+
+        # Right column
+        right_x = 510
+        right_top = 110
+        label = "LA NEWSLETTER"
+        draw.text((right_x, right_top), label, font=font_label, fill=GREY)
+        bbox_l = draw.textbbox((0, 0), label, font=font_label)
+        label_w, label_h = bbox_l[2] - bbox_l[0], bbox_l[3] - bbox_l[1]
+        draw.rectangle([(right_x, right_top + label_h + 8), (right_x + label_w + 30, right_top + label_h + 12)], fill=ORANGE)
+
+        semaine_y = right_top + label_h + 30
+        draw.text((right_x, semaine_y), f"SEMAINE {week_num}", font=font_huge, fill=DARK)
+        bbox_s = draw.textbbox((0, 0), f"SEMAINE {week_num}", font=font_huge)
+        semaine_h = bbox_s[3] - bbox_s[1]
+        dates_y = semaine_y + semaine_h + 15
+        draw.text((right_x, dates_y), date_str, font=font_dates, fill=ORANGE)
+        bbox_d = draw.textbbox((0, 0), date_str, font=font_dates)
+        dates_h = bbox_d[3] - bbox_d[1]
+        tagline_y = dates_y + dates_h + 25
+        draw.text((right_x, tagline_y), "5 actus pharma + 1 saviez-vous + l'angle Stephen.", font=font_sub, fill=GREY)
+        draw.text((right_x, tagline_y + 30), "L'essentiel de la semaine, sans le bruit.", font=font_sub, fill=GREY)
+
+        # Footer
+        footer_y = H - FOOTER_H + 22
+        draw.text((40, footer_y), "STEPHEN ROBERT  |  PHARM'ALPHA", font=font_footer, fill="#FFFFFF")
+        url = "actus.pharmalpha.fr"
+        bbox_url = draw.textbbox((0, 0), url, font=font_footer)
+        draw.text((W - 40 - (bbox_url[2] - bbox_url[0]), footer_y), url, font=font_footer, fill=ORANGE)
+
         buf = io.BytesIO()
         bg.save(buf, "PNG", optimize=True)
         return base64.b64encode(buf.getvalue()).decode("utf-8")
