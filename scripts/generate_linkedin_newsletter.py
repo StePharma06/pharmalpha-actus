@@ -138,7 +138,7 @@ def generate_newsletter_content(actus, lsv):
     week_start = today - timedelta(days=today.weekday())  # lundi de la semaine ecoulee
     week_end = week_start + timedelta(days=6)
 
-    # Fournir les articles a Claude
+    # Fournir les articles a Claude (avec liens Pharm'Actus + sources)
     actus_data = []
     for i, a in enumerate(actus, 1):
         actus_data.append({
@@ -149,6 +149,9 @@ def generate_newsletter_content(actus, lsv):
             "resume": a.get("resume", ""),
             "categorie": a.get("badge_label", ""),
             "full_text": a.get("full_text", "")[:1500],
+            "source": a.get("source", "Pharm'Actus"),
+            "source_url": a.get("source_url", ""),
+            "pharmactus_url": f"{SITE_URL}/articles/{a.get('id', '')}.html" if a.get("id") else SITE_URL,
         })
     lsv_data = None
     if lsv:
@@ -156,10 +159,15 @@ def generate_newsletter_content(actus, lsv):
             "titre": lsv.get("titre", "").replace("Le saviez-vous ?", "").strip(),
             "resume": lsv.get("resume", ""),
             "full_text": lsv.get("full_text", "")[:1500],
+            "pharmactus_url": f"{SITE_URL}/articles/{lsv.get('id', '')}.html" if lsv.get("id") else SITE_URL,
         }
 
     actus_text = "\n\n".join(
-        f"[ACTU {a['n']}] {a['titre']} ({a['categorie']}, {a['date']})\nResume : {a['resume']}\nDetail : {a['full_text']}"
+        f"[ACTU {a['n']}] {a['titre']} ({a['categorie']}, {a['date']})\n"
+        f"Resume : {a['resume']}\n"
+        f"Detail : {a['full_text']}\n"
+        f"Source originale : {a['source']}" + (f" - {a['source_url']}" if a['source_url'] else " (pas d'URL externe)") + "\n"
+        f"Lien Pharm'Actus : {a['pharmactus_url']}"
         for a in actus_data
     )
     lsv_text = (
@@ -262,6 +270,9 @@ Voici ce que je retiens des 7 derniers jours, et pourquoi tu devrais y prêter a
 [2-3 phrases courtes qui presentent l'info, en texte normal]
 
 → [Takeaway actionnable, en texte normal, demarre par "Si...", "Traduction", "Concrètement", etc.]
+
+📰 Lire l'analyse complète : [URL Pharm'Actus de cet article]
+🔗 Source : [Nom source] — [URL source originale, si presente]
 ```
 
 ### 📸 INSÉRER → `02_[slug_court_de_actu_2].jpg`
@@ -298,6 +309,8 @@ Voici ce que je retiens des 7 derniers jours, et pourquoi tu devrais y prêter a
 [Resume LSV en 3-4 phrases courtes en texte normal, avec quelques mots cles en Unicode bold]
 
 Morale : [1 phrase qui fait reflexion, en texte normal]
+
+📰 Histoire complète : [URL Pharm'Actus du LSV]
 
 ━━━━━━━━━━━━━━━━━━━━
 
@@ -336,6 +349,10 @@ Réponds en commentaire, je lis tout.
 5. RESPECTE LA REGLE L.5122 : zero merch sur Rx.
 6. Utilise des "→" (fleche pleine) pour les takeaways.
 7. Utilise "━━━━━━━━━━━━━━━━━━━━" comme separateur entre les blocs (20 caracteres ━).
+8. **OBLIGATOIRE pour CHAQUE actu et le LSV** : ajoute en bas du bloc, en derniere ligne :
+   - "📰 Lire l'analyse complète : [URL Pharm'Actus exacte fournie dans les donnees]"
+   - "🔗 Source : [Nom de la source] — [URL source originale]" (omettre cette ligne si pas d'URL source pour le LSV ou si l'article n'a pas d'URL externe)
+   Les URLs doivent etre les VRAIES URLs fournies plus haut dans les donnees, pas inventees.
 
 Retourne UNIQUEMENT le markdown complet, rien d'autre. Pas de preambule, pas de conclusion."""
 
