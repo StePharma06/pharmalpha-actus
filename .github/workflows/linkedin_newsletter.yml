@@ -1,0 +1,25 @@
+name: LinkedIn Newsletter Weekly
+
+on:
+  schedule:
+    - cron: '0 5 * * 5'  # Vendredi 05h00 UTC = 07h00 Paris
+  workflow_dispatch:
+
+jobs:
+  newsletter:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install anthropic
+
+      - name: Generate + send LinkedIn newsletter draft
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+        run: python scripts/generate_linkedin_newsletter.py
