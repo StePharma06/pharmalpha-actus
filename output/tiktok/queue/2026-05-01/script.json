@@ -1,0 +1,46 @@
+{
+  "hook": {
+    "voiceover": "Pourquoi nos grands-parents gardaient un thermomètre en bouche pendant 25 minutes ?",
+    "video_prompt": "Extreme close-up of an elderly person in 1950s holding a large mercury thermometer in mouth, looking uncomfortable, vintage medical office setting, sepia tones, dramatic lighting"
+  },
+  "story": {
+    "full_voiceover": "Pourquoi nos grands-parents gardaient un thermomètre en bouche pendant 25 minutes ? En 1592, Galilée bricolait déjà son thermoscope avec de l'eau et des bulles colorées, mais c'était plus un gadget de salon qu'un outil médical. Le premier vrai thermomètre médical arrive en 1612 avec Santorio Sanctorius : 15 centimètres qu'il fallait tenir en bouche pendant 25 minutes ! Et ça coûtait l'équivalent de 500 euros aujourd'hui. Le tournant, c'est Gabriel Fahrenheit en 1714 avec son thermomètre au mercure : enfin plus précis et seulement 10 minutes en bouche. Les médecins découvrent alors que 37 degrés, c'est la normale, une révélation totale ! Mais le plus dingue ? Il faut attendre 1964 et la NASA qui développe l'infrarouge pour mesurer les étoiles, puis 1991 pour l'adapter à l'oreille et au front. Aujourd'hui on mesure en 2 secondes ce qui prenait un quart d'heure à nos ancêtres, imagine leur patience quand tu sors ton thermomètre !",
+    "parts": [
+      {
+        "id": "part1",
+        "text_segment": "En 1592, Galilée bricolait déjà son thermoscope avec de l'eau et des bulles colorées, mais c'était plus un gadget de salon qu'un outil médical.",
+        "video_prompt": "Galileo Galilei in Renaissance workshop manipulating a glass thermoscope with colored water bubbles, ornate study room, candlelight, historical recreation, warm golden lighting",
+        "_computed_duration": 8.823
+      },
+      {
+        "id": "part2",
+        "text_segment": "Le premier vrai thermomètre médical arrive en 1612 avec Santorio Sanctorius : 15 centimètres qu'il fallait tenir en bouche pendant 25 minutes ! Et ça coûtait l'équivalent de 500 euros aujourd'hui.",
+        "video_prompt": "Santorio Sanctorius in 1612 medical setting holding a massive 15cm thermometer, patient looking exhausted with device in mouth, expensive medical equipment around, Renaissance medicine atmosphere",
+        "_computed_duration": 10.0
+      },
+      {
+        "id": "part3",
+        "text_segment": "Le tournant, c'est Gabriel Fahrenheit en 1714 avec son thermomètre au mercure : enfin plus précis et seulement 10 minutes en bouche. Les médecins découvrent alors que 37 degrés, c'est la normale, une révélation totale !",
+        "video_prompt": "Gabriel Fahrenheit in 1714 laboratory examining mercury thermometer, doctors in period costumes looking amazed at temperature readings, scientific breakthrough moment, dramatic lighting",
+        "_computed_duration": 10.0
+      },
+      {
+        "id": "part4",
+        "text_segment": "Mais le plus dingue ? Il faut attendre 1964 et la NASA qui développe l'infrarouge pour mesurer les étoiles, puis 1991 pour l'adapter à l'oreille et au front.",
+        "video_prompt": "NASA scientists in 1960s space center working with infrared technology, stars and space imagery, then transition to 1990s medical lab adapting technology for ear thermometer, futuristic sci-fi atmosphere",
+        "_computed_duration": 10.0
+      },
+      {
+        "id": "part5",
+        "text_segment": "Aujourd'hui on mesure en 2 secondes ce qui prenait un quart d'heure à nos ancêtres, imagine leur patience quand tu sors ton thermomètre !",
+        "video_prompt": "Modern contactless thermometer being used on child's forehead in 2 seconds, quick measurement, then flashback montage of historical patients waiting 25 minutes, time contrast visualization",
+        "_computed_duration": 7.082000000000001
+      }
+    ]
+  },
+  "music_mood": "mysterious",
+  "titre_tiktok": "25 minutes avec un thermomètre en bouche, nos ancêtres étaient costauds !",
+  "description_tiktok": "L'évolution du thermomètre de Galilée à nos thermomètres infrarouge instantanés. 400 ans d'histoire médicale résumés ! 🌡️ #lesaviezvous #pharmalpha #histoire",
+  "hashtags": "#lesaviezvous #pharmalpha #pharmacie #sante #histoire #medicament #thermometre #galileo #fahrenheit #nasa #medical #ancien #evolution #culture #anecdote",
+  "tiktok_caption": "🌡️ 25 minutes avec un thermomètre en bouche, imagine la patience de nos ancêtres !\n\nDe Galilée en 1592 jusqu'aux thermomètres infrarouge de la NASA : 400 ans d'évolution médicale qui ont révolutionné nos consultations ! Qui aurait cru que mesurer la température était si compliqué ?\n\nCommente si tu savais que Fahrenheit a inventé l'échelle de température !\n\n#fyp #pourtoi #apprendresurtiktok #culture #histoire #lesaviezvous #pharmalpha #pharmacie #pharma #sante #medicament #thermometre #medical #galileo #fahrenheit #nasa #evolution #anecdote #ancien #consultation #temperature #mercure #infrarouge #technologie #science"
+}
