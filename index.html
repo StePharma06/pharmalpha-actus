@@ -22,6 +22,21 @@
 <meta name="twitter:title" content="Pharm'Actus - L'actu pharma pour les pharmaciens">
 <meta name="twitter:description" content="Chaque matin, le resume pharma que t'aurais aime avoir entre deux clients. 5 actus + 1 Le Saviez-Vous. Gratuit.">
 <meta name="twitter:image" content="https://actus.pharmalpha.fr/assets/og_image.png">
+
+<!-- Klaro CMP + Google Consent Mode v2 -->
+<link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.css">
+<script defer src="/assets/klaro-config.js"></script>
+<script defer src="https://cdn.kiprotect.com/klaro/v0.7/klaro-no-css.js"></script>
+
+<!-- Google Analytics 4 (chargé conditionnellement par Klaro après consent) -->
+<script type="text/plain" data-type="application/javascript" data-name="google-analytics"
+        src="https://www.googletagmanager.com/gtag/js?id=G-K5Z3LG8YFY"></script>
+<script type="text/plain" data-type="application/javascript" data-name="google-analytics">
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-K5Z3LG8YFY', { 'anonymize_ip': true });
+</script>
+
 <style>
 :root {
   --bg: #ffffff;
@@ -2234,9 +2249,15 @@ function renderArticles() {
 // ============================================================
 // MODAL
 // ============================================================
+// GA4 tracking helper (no-op if gtag not loaded yet)
+function track(name, params) {
+  try { if (typeof gtag === 'function') gtag('event', name, params || {}); } catch(e) {}
+}
+
 function openModal(id) {
   const a = ARTICLES.find(x => x.id === id);
   if (!a) return;
+  track('view_item', { item_id: id, item_category: a.categorie, item_name: a.titre });
   document.getElementById('modal-badge').className = `badge ${BADGE_CLASSES[a.categorie] || ''}`;
   document.getElementById('modal-badge').textContent = a.badge_label;
   document.getElementById('modal-date').textContent = formatDate(a.date);
@@ -2274,17 +2295,17 @@ function openModal(id) {
   // Source
   const src = document.getElementById('modal-source');
   src.innerHTML = a.source_url
-    ? `Source : <a href="${a.source_url}" target="_blank">${a.source} &rarr;</a>`
+    ? `Source : <a href="${a.source_url}" target="_blank" onclick="track('select_content',{content_type:'source',item_id:'${a.id}',source:'${(a.source||'').replace(/'/g,'')}'})">${a.source} &rarr;</a>`
     : `Source : ${a.source}`;
 
   // Share buttons — use individual article page for proper og:tags
   const articleUrl = 'https://actus.pharmalpha.fr/articles/' + a.id + '.html';
   const text = a.titre + ' - Pharm\'Actus';
   document.getElementById('modal-share').innerHTML = `
-    <a href="https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(articleUrl)}" target="_blank">${ICONS.linkedin || '<svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>'} LinkedIn</a>
-    <a href="https://wa.me/?text=${encodeURIComponent(text + ' ' + articleUrl)}" target="_blank">${ICONS.whatsapp} WhatsApp</a>
-    <a href="mailto:?subject=${encodeURIComponent(text)}&body=${encodeURIComponent(a.resume + '\n\n' + articleUrl)}">${ICONS.email} Email</a>
-    <button onclick="copyLink('${articleUrl}')">${ICONS.copy} Copier</button>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(articleUrl)}" target="_blank" onclick="track('share',{method:'linkedin',content_type:'article',item_id:'${a.id}'})">${ICONS.linkedin || '<svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>'} LinkedIn</a>
+    <a href="https://wa.me/?text=${encodeURIComponent(text + ' ' + articleUrl)}" target="_blank" onclick="track('share',{method:'whatsapp',content_type:'article',item_id:'${a.id}'})">${ICONS.whatsapp} WhatsApp</a>
+    <a href="mailto:?subject=${encodeURIComponent(text)}&body=${encodeURIComponent(a.resume + '\n\n' + articleUrl)}" onclick="track('share',{method:'email',content_type:'article',item_id:'${a.id}'})">${ICONS.email} Email</a>
+    <button onclick="track('share',{method:'copy_link',content_type:'article',item_id:'${a.id}'});copyLink('${articleUrl}')">${ICONS.copy} Copier</button>
   `;
 
   document.getElementById('modal-overlay').classList.add('show');
@@ -2311,8 +2332,10 @@ function shareArticle(id, event) {
   const text = a.titre + ' - Pharm\'Actus';
 
   if (navigator.share) {
+    track('share', { method: 'native', content_type: 'article', item_id: id });
     navigator.share({ title: text, text: a.resume, url: articleUrl }).catch(() => {});
   } else {
+    track('share', { method: 'copy_link', content_type: 'article', item_id: id });
     copyLink(articleUrl);
   }
 }
@@ -2321,8 +2344,10 @@ function shareSite() {
   const url = window.location.href.split('#')[0];
   const text = 'Pharm\'Alpha - Actualites Pharma & Sante';
   if (navigator.share) {
+    track('share', { method: 'native', content_type: 'site' });
     navigator.share({ title: text, text: 'L\'essentiel de l\'actu pharma, chaque semaine.', url: url }).catch(() => {});
   } else {
+    track('share', { method: 'copy_link', content_type: 'site' });
     copyLink(url);
   }
 }
@@ -2353,6 +2378,7 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     currentFilter = btn.dataset.filter;
+    track('select_content', { content_type: 'filter', item_id: currentFilter });
     renderArticles();
     // Mobile : MAJ du label du bouton 'Filtres' + ferme le dropdown
     const _cur = document.getElementById('filters-toggle-current');
@@ -2365,7 +2391,16 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
     }
   });
 });
-searchInput.addEventListener('input', renderArticles);
+// Debounced search tracking (1 event per typing burst, not per keystroke)
+let _searchTimer;
+searchInput.addEventListener('input', () => {
+  renderArticles();
+  clearTimeout(_searchTimer);
+  _searchTimer = setTimeout(() => {
+    const q = searchInput.value.trim();
+    if (q.length >= 2) track('search', { search_term: q });
+  }, 1500);
+});
 
 // Check ?a= param or hash for deep-link to article
 const urlParams = new URLSearchParams(window.location.search);
@@ -2427,6 +2462,7 @@ async function submitToBrevo(email, btn, msg, onSuccess) {
     formData.append('email_address_check', '');
     formData.append('locale', 'fr');
     await fetch(BREVO_FORM_URL, { method: 'POST', body: formData, mode: 'no-cors' });
+    track('generate_lead', { method: 'newsletter_brevo', value: 1, currency: 'EUR' });
     msg.textContent = 'Merci ! Tu recevras les actus chaque matin.';
     msg.className = msg.className.replace(/ ?(success|error)/g, '') + ' success';
     localStorage.setItem(NL_KEY, 'subscribed');

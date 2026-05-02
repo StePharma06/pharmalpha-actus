@@ -433,6 +433,21 @@ a { color: inherit; text-decoration: none; }
   .modal-content { padding: 24px 20px; }
 }
 </style>
+
+<!-- Klaro CMP + Google Consent Mode v2 -->
+<link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.css">
+<script defer src="/assets/klaro-config.js"></script>
+<script defer src="https://cdn.kiprotect.com/klaro/v0.7/klaro-no-css.js"></script>
+
+<!-- Google Analytics 4 (chargé conditionnellement par Klaro après consent) -->
+<script type="text/plain" data-type="application/javascript" data-name="google-analytics"
+        src="https://www.googletagmanager.com/gtag/js?id=G-K5Z3LG8YFY"></script>
+<script type="text/plain" data-type="application/javascript" data-name="google-analytics">
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-K5Z3LG8YFY', { 'anonymize_ip': true });
+</script>
+
 </head>
 <body>
 
@@ -687,9 +702,26 @@ function renderPagination(totalPages) {
   });
 }
 
+// GA4 tracking helper
+function track(name, params) {
+  try { if (typeof gtag === 'function') gtag('event', name, params || {}); } catch(e) {}
+}
+
+// Event delegation: any [data-share][data-article] click -> GA4 share event
+document.addEventListener('click', (e) => {
+  const el = e.target.closest('[data-share][data-article]');
+  if (!el) return;
+  track('share', {
+    method: el.dataset.share,
+    content_type: 'article',
+    item_id: el.dataset.article
+  });
+});
+
 function openModal(id) {
   const a = ALL_ARTICLES.find(x => x.id === id);
   if (!a) return;
+  track('view_item', { item_id: id, item_category: a.categorie, item_name: a.titre });
   document.getElementById('modal-badge').className = 'badge badge-' + a.categorie;
   document.getElementById('modal-badge').textContent = a.badge_label || BADGE_LABELS[a.categorie] || '';
   document.getElementById('modal-date').textContent = formatDate(a.date);
@@ -781,11 +813,16 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
 
 const searchInput = document.getElementById('search-input');
 const searchBox = document.getElementById('search-box');
+let _archSearchTimer;
 searchInput.addEventListener('input', () => {
   currentQuery = searchInput.value.trim();
   currentPage = 1;
   searchBox.classList.toggle('has-value', !!currentQuery);
   render();
+  clearTimeout(_archSearchTimer);
+  _archSearchTimer = setTimeout(() => {
+    if (currentQuery.length >= 2) track('search', { search_term: currentQuery });
+  }, 1500);
 });
 document.getElementById('search-clear').addEventListener('click', () => {
   searchInput.value = '';
