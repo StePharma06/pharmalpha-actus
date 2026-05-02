@@ -1,0 +1,59 @@
+name: Sync to pharmalpha-site (Vercel)
+
+# Mirror new actus content into pharmalpha-site/actus/ so Vercel
+# serves the same articles under https://pharmalpha.fr/actus/.
+#
+# IMPORTANT: this is a DUAL PUSH. The GitHub Pages deploy
+# (actus.pharmalpha.fr) MUST keep running in parallel until
+# Stephen validates the final DNS switch.
+
+on:
+  workflow_run:
+    workflows: ["Daily Actus Update"]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sync:
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout pharmalpha-actus (source)
+        uses: actions/checkout@v4
+        with:
+          path: source
+
+      - name: Checkout pharmalpha-site (target)
+        uses: actions/checkout@v4
+        with:
+          repository: StePharma06/pharmalpha-site
+          token: ${{ secrets.PHARMALPHA_SITE_PAT }}
+          path: target
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Sync content with URL transforms
+        env:
+          SOURCE_DIR: ${{ github.workspace }}/source
+          TARGET_DIR: ${{ github.workspace }}/target
+        run: python source/scripts/sync_to_vercel.py
+
+      - name: Commit & push if changed
+        working-directory: target
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add actus/
+          if git diff --staged --quiet; then
+            echo "No changes to sync"
+          else
+            git commit -m "sync(actus): auto-sync from pharmalpha-actus $(date -u +%Y-%m-%d)"
+            git push
+          fi
