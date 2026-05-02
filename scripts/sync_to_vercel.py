@@ -41,11 +41,24 @@ SKIP_NAMES = {
 URL_OLD = "actus.pharmalpha.fr"
 URL_NEW = "pharmalpha.fr/actus"
 
+# Convert relative paths to /actus/-prefixed absolute paths.
+# Required because vercel.json has trailingSlash:false: /actus/ is
+# redirected to /actus, breaking relative resolution for assets/img.
+RELATIVE_PATH_FIXES = [
+    (re.compile(r'(\b(?:src|href)=)(["\'])(assets/)'), r'\1\2/actus/\3'),
+    (re.compile(r'(\b(?:src|href)=)(["\'])(articles/)'), r'\1\2/actus/\3'),
+    (re.compile(r'(image_url\s*:\s*)(["\'])(assets/)'), r'\1\2/actus/\3'),
+    (re.compile(r'(fetch\()(["\'])(articles\.json)'), r'\1\2/actus/\3'),
+    (re.compile(r'(fetch\()(["\'])(output/)'), r'\1\2/actus/\3'),
+]
+
 
 def transform_html(text: str) -> str:
     text = text.replace(f"https://{URL_OLD}", f"https://{URL_NEW}")
     text = text.replace(f"http://{URL_OLD}", f"https://{URL_NEW}")
     text = re.sub(rf"\b{re.escape(URL_OLD)}\b", URL_NEW, text)
+    for pat, repl in RELATIVE_PATH_FIXES:
+        text = pat.sub(repl, text)
     return text
 
 
