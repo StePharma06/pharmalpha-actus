@@ -1,0 +1,46 @@
+{
+  "hook": {
+    "voiceover": "La première radiographie de l'histoire a terrorisé la femme qui l'a vue.",
+    "video_prompt": "Dramatic close-up of a terrified woman's face in 1895 Victorian dress, dimly lit laboratory background with flickering candles, cinematic lighting, fear in her eyes"
+  },
+  "story": {
+    "full_voiceover": "La première radiographie de l'histoire a terrorisé la femme qui l'a vue. 8 novembre 1895, laboratoire de Würzburg. Wilhelm Röntgen bidouille avec un tube cathodique quand un écran s'illumine à l'autre bout de la pièce. Impossible, le tube est recouvert de carton noir ! Il place sa main devant et voit l'ombre de ses os. Röntgen vient de découvrir les rayons X par pur hasard. Le 22 décembre, il demande à sa femme Anna de poser sa main sur une plaque pendant quinze minutes. Résultat stupéfiant : on voit ses os ET son alliance en or parfaitement. La réaction d'Anna ? J'ai vu ma mort ! Elle pensait que voir ses propres os était un terrible présage. En quelques semaines, cette découverte révolutionne la médecine mondiale. Aujourd'hui, chaque radiographie nous rappelle cette femme courageuse qui a eu si peur.",
+    "parts": [
+      {
+        "id": "part1",
+        "text_segment": "8 novembre 1895, laboratoire de Würzburg. Wilhelm Röntgen bidouille avec un tube cathodique quand un écran s'illumine à l'autre bout de la pièce. Impossible, le tube est recouvert de carton noir !",
+        "video_prompt": "Victorian era laboratory in Würzburg 1895, Wilhelm Röntgen working with cathode ray tube covered in black cardboard, fluorescent screen glowing mysteriously in background, warm gaslight illumination, scientific equipment",
+        "_computed_duration": 10.0
+      },
+      {
+        "id": "part2",
+        "text_segment": "Il place sa main devant et voit l'ombre de ses os. Röntgen vient de découvrir les rayons X par pur hasard.",
+        "video_prompt": "Close-up of Wilhelm Röntgen's hand placed between cathode tube and screen, ghostly bone shadows visible through flesh, amazed expression on his face, 1895 laboratory setting, dramatic lighting",
+        "_computed_duration": 7.628
+      },
+      {
+        "id": "part3",
+        "text_segment": "Le 22 décembre, il demande à sa femme Anna de poser sa main sur une plaque pendant quinze minutes. Résultat stupéfiant : on voit ses os ET son alliance en or parfaitement.",
+        "video_prompt": "Anna Röntgen in Victorian dress placing her hand on photographic plate, Wilhelm operating X-ray equipment, the famous first X-ray image showing hand bones and wedding ring clearly visible, historical laboratory 1895",
+        "_computed_duration": 10.0
+      },
+      {
+        "id": "part4",
+        "text_segment": "La réaction d'Anna ? J'ai vu ma mort ! Elle pensait que voir ses propres os était un terrible présage. En quelques semaines, cette découverte révolutionne la médecine mondiale.",
+        "video_prompt": "Anna Röntgen recoiling in horror looking at her hand X-ray, newspapers headlines spreading around the world, doctors examining X-ray images in medical offices, global revolution in medicine",
+        "_computed_duration": 10.0
+      },
+      {
+        "id": "part5",
+        "text_segment": "Aujourd'hui, chaque radiographie nous rappelle cette femme courageuse qui a eu si peur.",
+        "video_prompt": "Modern hospital X-ray room with patient getting radiography, transition to vintage portrait of Anna Röntgen, her famous hand X-ray image fading into modern medical equipment, tribute montage",
+        "_computed_duration": 5.631
+      }
+    ]
+  },
+  "music_mood": "mysterious",
+  "titre_tiktok": "Cette femme a vu la première radio de l'histoire et a paniqué 😱",
+  "description_tiktok": "L'histoire incroyable de la première radiographie ! Wilhelm Röntgen et sa femme Anna ont changé la médecine pour toujours 🩻 #lesaviezvous #pharmalpha #histoire #rayonsx",
+  "hashtags": "#lesaviezvous #pharmalpha #pharmacie #sante",
+  "tiktok_caption": "🩻 Cette femme a vu la première radio de l'histoire et a complètement paniqué !\n\nL'incroyable découverte de Wilhelm Röntgen en 1895 qui a révolutionné la médecine mondiale. Sa femme Anna pensait qu'elle allait mourir en voyant ses propres os ! Une anecdote historique fascinante sur les rayons X.\n\nCommente si tu savais cette histoire ! 👇\n\n#fyp #pourtoi #apprendresurtiktok #culture #histoire #pharmacie #pharma #lesaviezvous #pharmalpha #sante #medicament #anecdote #rayonsx #medecine #radiographie #science #decouverte #wilhelm #rontgen #1895 #vintage #medical"
+}
