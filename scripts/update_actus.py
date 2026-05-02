@@ -1064,8 +1064,8 @@ def build_newsletter_html(articles, custom_intro=None):
 <tr><td align="center" style="padding:24px 16px;">
 <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
   <tr><td style="background:#ffffff;padding:28px 32px 16px;text-align:center;border-bottom:2px solid #f97316;">
-    <a href="https://actus.pharmalpha.fr/" style="text-decoration:none;"><span style="font-size:32px;font-weight:800;color:#1a1a1a;letter-spacing:-0.5px;">Pharm'<span style="color:#f97316;">Actus</span></span></a><br>
-    <span style="font-size:13px;color:#888;letter-spacing:0.3px;">Chaque matin, retrouve l'actus pharma &agrave; lire entre deux ordo.</span>
+    <a href="https://actus.pharmalpha.fr/" style="text-decoration:none;display:inline-block;"><img src="https://actus.pharmalpha.fr/assets/logo_pharmactus.png" alt="Pharm'Actus" width="280" style="max-width:280px;height:auto;display:block;border:0;margin:0 auto;" /></a>
+    <div style="margin-top:10px;"><span style="font-size:13px;color:#888;letter-spacing:0.3px;">Chaque matin, retrouve l'actus pharma &agrave; lire entre deux ordo.</span></div>
   </td></tr>
   <tr><td style="background:#fafafa;padding:10px 32px;text-align:center;">
     <span style="color:#1a1a1a;font-size:14px;font-weight:600;">{date_str}</span>
