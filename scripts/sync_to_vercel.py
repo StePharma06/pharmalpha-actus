@@ -124,7 +124,48 @@ def main():
         total += n
         print(f"  dir : {d}/ ({n} files)")
 
+    # Regenere sitemap-actus.xml depuis articles.json (TARGET_ROOT/sitemap-actus.xml)
+    regenerate_sitemap_actus()
+
     print(f"\nSynced {total} files to {TARGET}")
+
+
+def regenerate_sitemap_actus():
+    """Regenere sitemap-actus.xml a la racine pharmalpha-site (depuis articles.json)."""
+    articles_json = TARGET / "articles.json"
+    sitemap_path = TARGET_ROOT / "sitemap-actus.xml"
+    if not articles_json.exists():
+        print("  skip sitemap-actus regen (articles.json missing)")
+        return
+    try:
+        data = json.loads(articles_json.read_text(encoding="utf-8"))
+        articles = data.get("articles", [])
+        urls = []
+        # Pages racine /actus
+        urls.append(("https://pharmalpha.fr/actus", None, "daily", "0.9"))
+        urls.append(("https://pharmalpha.fr/actus/archives.html", None, "daily", "0.7"))
+        # Articles individuels
+        for a in articles:
+            aid = a.get("id", "")
+            date = a.get("date", "")
+            if aid:
+                urls.append((f"https://pharmalpha.fr/actus/articles/{aid}.html", date, "monthly", "0.5"))
+        # Build XML
+        lines = ['<?xml version="1.0" encoding="UTF-8"?>',
+                 '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+        for url, lastmod, freq, prio in urls:
+            lines.append("  <url>")
+            lines.append(f"    <loc>{url}</loc>")
+            if lastmod:
+                lines.append(f"    <lastmod>{lastmod}</lastmod>")
+            lines.append(f"    <changefreq>{freq}</changefreq>")
+            lines.append(f"    <priority>{prio}</priority>")
+            lines.append("  </url>")
+        lines.append("</urlset>")
+        sitemap_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+        print(f"  sitemap-actus.xml regenere : {len(urls)} URLs")
+    except Exception as e:
+        print(f"  ⚠️  sitemap-actus regen erreur : {e}")
 
 
 if __name__ == "__main__":
