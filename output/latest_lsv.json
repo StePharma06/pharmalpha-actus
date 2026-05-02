@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? Le thermomètre a mis 150 ans à passer de la bouche au front",
-  "resume": "Galilée invente le premier thermomètre en 1592, mais il faudra attendre le XXe siècle pour qu'on arrête de le mettre dans la bouche pendant 10 minutes. Une révolution qui a changé nos consultations !",
-  "full_text": "Imagine un peu : en 1592, Galilée bricolait déjà un « thermoscope » avec de l'eau et des bulles colorées pour mesurer la température. Mais c'était plus un gadget de salon qu'un instrument médical !\n\nLe premier vrai thermomètre médical ? On le doit à Santorio Sanctorius en 1612. Un truc de 15 centimètres qu'il fallait tenir dans la bouche pendant... 25 minutes ! Autant dire que les patients n'étaient pas ravis. Et encore, ça c'était pour les riches, parce qu'un thermomètre coûtait l'équivalent de 500 euros aujourd'hui.\n\nLe tournant arrive en 1714 quand Gabriel Fahrenheit invente le thermomètre au mercure. Plus précis, plus rapide (seulement 10 minutes en bouche), il devient enfin utilisable en consultation. Les médecins découvrent alors que 37°C, c'est la normale – une révélation à l'époque !\n\nMais le plus dingue ? Il faut attendre 1964 pour voir apparaître le premier thermomètre infrarouge, développé par la NASA pour mesurer la température des étoiles. Et ce n'est qu'en 1991 qu'on adapte cette technologie pour l'oreille, puis le front.\n\nAujourd'hui, avec nos thermomètres sans contact en 2 secondes, on oublie que nos confrères d'autrefois passaient un quart d'heure par patient juste pour prendre la température !",
-  "image_keywords": "thermometer history medical",
+  "titre": "Le saviez-vous ? La première radiographie a révélé... une alliance",
+  "resume": "En 1895, Wilhelm Röntgen découvre les rayons X par accident. Sa première image ? La main de sa femme avec son alliance, qui lui fait dire qu'elle vient de voir sa propre mort.",
+  "full_text": "Imagine un peu la scène : 8 novembre 1895, laboratoire de Würzburg en Allemagne. Wilhelm Röntgen, physicien de 50 ans, bidouille avec un tube cathodique quand il remarque qu'un écran fluorescent s'illumine... à l'autre bout de la pièce. Bizarre, le tube est pourtant recouvert de carton noir !\n\nIntrigué, il place sa main entre le tube et l'écran. Et là, stupéfaction : il voit l'ombre de ses os ! Röntgen vient de découvrir les rayons X, qu'il baptise ainsi car il ne comprend pas leur nature (X pour \"inconnu\").\n\nMais le plus dingue, c'est la première vraie radiographie de l'histoire. Le 22 décembre 1895, il demande à sa femme Anna de poser sa main sur une plaque photographique pendant 15 minutes. Résultat : on voit parfaitement ses os ET son alliance en or, opaque aux rayons.\n\nLa réaction d'Anna ? \"J'ai vu ma mort !\" Elle pensait que voir ses propres os était un mauvais présage. Röntgen, lui, comprend immédiatement les implications médicales révolutionnaires.\n\nEn quelques semaines, la nouvelle fait le tour du monde. Les médecins s'emparent de cette invention miraculeuse qui permet enfin de voir à l'intérieur du corps humain sans l'ouvrir.\n\nAujourd'hui, chaque fois qu'un patient vient te demander des conseils après une radio, pense à Anna Röntgen : sans sa main courageuse, la médecine moderne n'existerait peut-être pas !",
+  "image_keywords": "x-ray hand vintage",
   "tags": [
     "histoire",
-    "instrument",
     "diagnostic",
-    "temperature",
-    "medecine"
+    "radiologie",
+    "decouverte",
+    "physique"
   ],
-  "date": "2026-05-01",
+  "date": "2026-05-02",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",
