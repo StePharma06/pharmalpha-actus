@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? La première radiographie a révélé... une alliance",
-  "resume": "En 1895, Wilhelm Röntgen découvre les rayons X par accident. Sa première image ? La main de sa femme avec son alliance, qui lui fait dire qu'elle vient de voir sa propre mort.",
-  "full_text": "Imagine un peu la scène : 8 novembre 1895, laboratoire de Würzburg en Allemagne. Wilhelm Röntgen, physicien de 50 ans, bidouille avec un tube cathodique quand il remarque qu'un écran fluorescent s'illumine... à l'autre bout de la pièce. Bizarre, le tube est pourtant recouvert de carton noir !\n\nIntrigué, il place sa main entre le tube et l'écran. Et là, stupéfaction : il voit l'ombre de ses os ! Röntgen vient de découvrir les rayons X, qu'il baptise ainsi car il ne comprend pas leur nature (X pour \"inconnu\").\n\nMais le plus dingue, c'est la première vraie radiographie de l'histoire. Le 22 décembre 1895, il demande à sa femme Anna de poser sa main sur une plaque photographique pendant 15 minutes. Résultat : on voit parfaitement ses os ET son alliance en or, opaque aux rayons.\n\nLa réaction d'Anna ? \"J'ai vu ma mort !\" Elle pensait que voir ses propres os était un mauvais présage. Röntgen, lui, comprend immédiatement les implications médicales révolutionnaires.\n\nEn quelques semaines, la nouvelle fait le tour du monde. Les médecins s'emparent de cette invention miraculeuse qui permet enfin de voir à l'intérieur du corps humain sans l'ouvrir.\n\nAujourd'hui, chaque fois qu'un patient vient te demander des conseils après une radio, pense à Anna Röntgen : sans sa main courageuse, la médecine moderne n'existerait peut-être pas !",
-  "image_keywords": "x-ray hand vintage",
+  "titre": "Le saviez-vous ? La pénicilline a failli finir à la poubelle",
+  "resume": "En 1928, Alexander Fleming part en vacances en laissant traîner ses boîtes de Petri sales. À son retour, une moisissure a tout contaminé. Au lieu de jeter, il observe... et révolutionne la médecine.",
+  "full_text": "Imagine la scène : septembre 1928, hôpital St Mary's de Londres. Alexander Fleming, bactériologiste un peu bordélique, s'apprête à partir en vacances. Il laisse ses cultures de staphylocoques sur la paillasse, sans les nettoyer. Un vrai cauchemar pour n'importe quel labo aujourd'hui !\n\nÀ son retour, catastrophe : une moisissure bleu-vert a envahi ses boîtes de Petri. Tout est contaminé. Fleming s'apprête à tout jeter quand il remarque un détail fascinant : autour de la moisissure, plus aucune bactérie. Elles ont toutes disparu.\n\nPlutôt que de râler contre sa négligence, Fleming creuse. Il identifie le champignon : *Penicillium notatum*. Il découvre qu'il sécrète une substance qui tue les bactéries pathogènes. Il l'appelle \"pénicilline\", du nom du champignon.\n\nMais voici le twist : Fleming n'arrive pas à purifier sa molécule ! Il publie ses résultats en 1929, puis abandonne. Il faudra attendre 1940 et les travaux d'Howard Florey et Ernst Boris Chain pour transformer cette observation en médicament.\n\nLa pénicilline sauvera des millions de vies pendant la Seconde Guerre mondiale. On l'appellera \"la drogue miracle\". Tout ça grâce à un labo mal rangé et à un scientifique curieux qui a su regarder au-delà du désordre.\n\nAujourd'hui, quand tu délivres un antibiotique au comptoir, rappelle-toi : cette révolution est née d'un \"accident\" que 99% des gens auraient jeté sans y réfléchir !",
+  "image_keywords": "penicillin mold laboratory",
   "tags": [
     "histoire",
-    "diagnostic",
-    "radiologie",
+    "antibiotique",
     "decouverte",
-    "physique"
+    "bacterie",
+    "fleming"
   ],
-  "date": "2026-05-02",
+  "date": "2026-05-03",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",
