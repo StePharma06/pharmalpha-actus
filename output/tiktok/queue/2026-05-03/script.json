@@ -1,0 +1,46 @@
+{
+  "hook": {
+    "voiceover": "Le plus grand médicament de l'histoire a failli finir à la poubelle à cause d'un labo sale.",
+    "video_prompt": "Close-up of moldy Petri dishes being thrown into a laboratory trash bin, 1928 hospital setting, dramatic lighting, slow motion, cinematic angle"
+  },
+  "story": {
+    "full_voiceover": "Le plus grand médicament de l'histoire a failli finir à la poubelle à cause d'un labo sale. Septembre 1928, hôpital St Mary's de Londres. Alexander Fleming, bactériologiste bordélique, part en vacances en laissant ses cultures de staphylocoques traîner sur la paillasse. À son retour, catastrophe totale : une moisissure bleu-vert a envahi toutes ses boîtes de Petri. Fleming s'apprête à tout jeter quand il remarque quelque chose d'incroyable : autour de la moisissure, plus aucune bactérie. Elles ont toutes disparu comme par magie. Il identifie le champignon Penicillium notatum et découvre qu'il tue les bactéries pathogènes. Mais Fleming n'arrive pas à purifier sa molécule et abandonne ses recherches. Il faudra attendre 1940 et les travaux de Florey et Chain pour créer le premier antibiotique. La pénicilline sauvera des millions de vies pendant la guerre. Tout ça grâce à un accident que la plupart auraient jeté sans réfléchir.",
+    "parts": [
+      {
+        "id": "part1",
+        "text_segment": "Septembre 1928, hôpital St Mary's de Londres. Alexander Fleming, bactériologiste bordélique, part en vacances en laissant ses cultures de staphylocoques traîner sur la paillasse.",
+        "video_prompt": "Alexander Fleming in 1928 leaving his laboratory at St Mary's Hospital London, messy lab bench with Petri dishes scattered around, period accurate clothing, warm sepia lighting, cinematic wide shot",
+        "_computed_duration": 10.0
+      },
+      {
+        "id": "part2",
+        "text_segment": "À son retour, catastrophe totale : une moisissure bleu-vert a envahi toutes ses boîtes de Petri. Fleming s'apprête à tout jeter quand il remarque quelque chose d'incroyable : autour de la moisissure, plus aucune bactérie.",
+        "video_prompt": "Close-up of contaminated Petri dishes with blue-green mold, Fleming's hands reaching to throw them away then stopping, dramatic lighting highlighting the clear zones around mold, 1920s laboratory setting",
+        "_computed_duration": 10.0
+      },
+      {
+        "id": "part3",
+        "text_segment": "Elles ont toutes disparu comme par magie. Il identifie le champignon Penicillium notatum et découvre qu'il tue les bactéries pathogènes. Mais Fleming n'arrive pas à purifier sa molécule et abandonne ses recherches.",
+        "video_prompt": "Fleming examining mold under vintage microscope, frustrated scientist working with primitive 1920s laboratory equipment, failed experiments on lab bench, warm scientific lighting",
+        "_computed_duration": 10.0
+      },
+      {
+        "id": "part4",
+        "text_segment": "Il faudra attendre 1940 et les travaux de Florey et Chain pour créer le premier antibiotique. La pénicilline sauvera des millions de vies pendant la guerre.",
+        "video_prompt": "1940s scientists Howard Florey and Ernst Chain working with advanced equipment, transition to WWII field hospitals with soldiers receiving penicillin injections, heroic cinematic lighting",
+        "_computed_duration": 10.0
+      },
+      {
+        "id": "part5",
+        "text_segment": "Tout ça grâce à un accident que la plupart auraient jeté sans réfléchir.",
+        "video_prompt": "Modern pharmacy with antibiotics on shelves, hands of pharmacist dispensing penicillin, transition back to the original moldy Petri dish, circular narrative, warm professional lighting",
+        "_computed_duration": 4.457999999999998
+      }
+    ]
+  },
+  "music_mood": "mysterious",
+  "titre_tiktok": "Cette découverte révolutionnaire a failli finir à la poubelle 😱",
+  "description_tiktok": "L'histoire incroyable de la pénicilline : comment un labo sale a révolutionné la médecine mondiale ! Alexander Fleming et son accident miraculeux 🧪 #lesaviezvous #pharmalpha #pharmacie #histoire",
+  "hashtags": "#lesaviezvous #pharmalpha #pharmacie #sante",
+  "tiktok_caption": "🧪 Cette découverte révolutionnaire a failli finir à la poubelle !\n\nL'histoire incroyable d'Alexander Fleming et de sa pénicilline : comment un labo bordélique a sauvé des millions de vies. Parfois les plus grandes découvertes naissent des accidents les plus improbables en pharmacie et médecine !\n\nCommente si tu savais cette anecdote historique !\n\n#fyp #pourtoi #apprendresurtiktok #culture #histoire #pharmacie #pharma #lesaviezvous #pharmalpha #sante #medicament #anecdote #science #decouverte #penicilline #antibiotique #medecine #alexanderfleming #recherche #labo #miracle #accident #bordel #contamination #moisissure"
+}
