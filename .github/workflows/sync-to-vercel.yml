@@ -11,7 +11,7 @@ on:
   workflow_run:
     workflows: ["Daily Actus Update"]
     types: [completed]
-    branches: [main]
+    branches: [master]
   workflow_dispatch:
 
 permissions:
