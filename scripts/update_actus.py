@@ -655,7 +655,28 @@ def load_pending_lsv():
 # ── HTML : insertion des articles ─────────────────────────────────────
 
 def get_existing_lsv_titles():
-    """Extract existing LSV titles from index.html."""
+    """Extract ALL LSV titles from articles.json (historique complet, ~60+ jours)
+    + fallback index.html (50 derniers articles seulement, ~8 jours).
+
+    Pourquoi articles.json en priorite : index.html est limite a MAX_ARTICLES_TOTAL=50,
+    soit ~8 jours d'historique LSV. Apres 10+ jours, Claude recycle les memes sujets
+    (penicilline, cocaine, etc.). articles.json garde TOUT l'historique publie.
+    """
+    articles_json_path = ROOT_DIR / "articles.json"
+    if articles_json_path.exists():
+        try:
+            data = json.loads(articles_json_path.read_text(encoding="utf-8"))
+            articles = data.get("articles", [])
+            lsvs = [
+                a.get("titre", "") for a in articles
+                if a.get("categorie") == "lsv" or a.get("id", "").startswith("lsv_")
+            ]
+            lsvs = [t for t in lsvs if t]
+            if lsvs:
+                return lsvs
+        except Exception as e:
+            print(f"  [WARN] articles.json illisible : {e}, fallback index.html")
+    # Fallback : ancienne methode (limite 50 articles ~8 jours)
     html = INDEX_HTML.read_text(encoding="utf-8")
     return re.findall(r'titre:\s*"(Le saviez-vous[^"]*)"', html, re.IGNORECASE)
 
