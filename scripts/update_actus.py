@@ -119,8 +119,13 @@ def get_existing_source_urls():
     return set(re.findall(r'source_url:\s*"([^"]+)"', html))
 
 
-def curate_with_claude(raw_articles, existing_urls=None):
-    """Select and rewrite the best articles with Stephen's personal tone."""
+def curate_with_claude(raw_articles, existing_urls=None, excluded_categories=None):
+    """Select and rewrite the best articles with Stephen's personal tone.
+
+    excluded_categories: list of categories already covered by pending_actu
+    injection — Claude will skip them and only fill the remaining slots.
+    """
+    excluded_categories = excluded_categories or []
     client = anthropic.Anthropic()
 
     # Filtrer en amont les articles deja publies sur le site
@@ -138,7 +143,28 @@ def curate_with_claude(raw_articles, existing_urls=None):
 
     today = datetime.now(PARIS_TZ).strftime("%Y-%m-%d")
 
+    # Build dynamic exclusion instruction (when a pending_actu already covers a category)
+    cat_labels = {
+        "pharma_france": "PHARMA FRANCE",
+        "pharma_monde": "PHARMA MONDE",
+        "bonne_nouvelle": "LA BONNE NOUVELLE",
+        "avenir_pharma": "L'AVENIR DE LA PHARMA",
+    }
+    target_count = max(0, 4 - len(excluded_categories))
+    exclusion_block = ""
+    if excluded_categories:
+        excluded_names = [cat_labels.get(c, c.upper()) for c in excluded_categories]
+        exclusion_block = (
+            "\n=== OVERRIDE EXCLUSION (LIRE AVANT TOUT) ===\n"
+            f"La/les categorie(s) suivante(s) sont DEJA couverte(s) aujourd'hui par un article injecte manuellement (pepite PraticoPratique) :\n"
+            f"- {', '.join(excluded_names)}\n"
+            f"NE GENERE AUCUN article dans cette/ces categorie(s). Selectionne EXACTEMENT {target_count} articles dans les categories RESTANTES uniquement.\n"
+            "Ignore les blocs '[X] OBLIGATOIRE' ci-dessous pour la/les categorie(s) exclue(s) — passe-les directement.\n"
+            "=== FIN OVERRIDE ===\n"
+        )
+
     prompt = f"""Tu es Stephen, pharmacien consultant chez Pharm'Alpha et redacteur en chef de Pharm'Actus.
+{exclusion_block}
 
 === TON STYLE ===
 - Tu parles comme un pote pharmacien qui briefe ses confreres entre deux clients
@@ -159,7 +185,7 @@ Pharmaciens d'officine en France (PAS le grand public)
 
 ---
 
-Selectionne et redige EXACTEMENT 4 articles dans ces 4 categories (1 article par categorie, ni plus ni moins) :
+Selectionne et redige EXACTEMENT {target_count} articles dans les categories ci-dessous (1 article par categorie, ni plus ni moins, en sautant celles listees dans l'OVERRIDE EXCLUSION en haut s'il y en a) :
 
 **[1] PHARMA FRANCE** (1 article OBLIGATOIRE) — Actu reglementaire/economique/metier francaise
 - Impact direct sur l'exercice officinal : LFSS, conventions, ROSP, missions, marges, Ordre, ARS, HAS, ANSM, Assurance Maladie
@@ -1270,16 +1296,24 @@ def main():
         print("  Aucun article RSS. Arret.")
         return
 
-    # 2. Curate 4 articles (pharma_france + pharma_monde + bonne_nouvelle + avenir_pharma)
-    existing_urls = get_existing_source_urls()
-    print(f"\n[2/6] Curation via Claude ({len(raw_articles)} articles, {len(existing_urls)} deja publies)...")
-    curated = curate_with_claude(raw_articles, existing_urls)
-    print(f"  {len(curated)} articles selectionnes (hors business et LSV)")
-
-    # 2.5 Inject any pending manual actus (highest priority — pepites PraticoPratique)
+    # 2.0 Charger les pending actus AVANT curation pour exclure leurs categories
+    #     (cap newsletter a 6 cartes : 4 actus + 1 business + 1 LSV max).
     pending_actus = load_pending_actus()
+    pending_categories = [a.get("categorie") for a in pending_actus if a.get("categorie")]
+
+    # 2.1 Curate les slots restants
+    existing_urls = get_existing_source_urls()
+    target_count = max(0, 4 - len(pending_categories))
+    print(f"\n[2/6] Curation via Claude ({len(raw_articles)} articles, {len(existing_urls)} deja publies, {target_count} slot(s) a remplir)...")
+    if target_count > 0:
+        curated = curate_with_claude(raw_articles, existing_urls, excluded_categories=pending_categories)
+        print(f"  {len(curated)} articles selectionnes (hors business, LSV et pending)")
+    else:
+        curated = []
+        print(f"  Aucun slot a remplir (pending_actus couvrent {len(pending_categories)} categories)")
+
+    # 2.2 Prepend pending pour qu'ils apparaissent en tete (newsletter + site)
     if pending_actus:
-        # Prepend so they appear first in newsletter and on site
         curated = pending_actus + curated
         print(f"  [ACTU-PENDING] {len(pending_actus)} actu(s) prependee(s) au curated")
 
