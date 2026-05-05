@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? La cocaïne a été le premier anesthésique local",
-  "resume": "Avant la lidocaïne et la novocaïne, les chirurgiens utilisaient de la cocaïne pure pour endormir leurs patients. Une révolution née d'une feuille de coca mâchée par les Incas.",
-  "full_text": "Imagine un peu : en 1884, les chirurgiens opéraient encore à vif ou avec du chloroforme qui tuait un patient sur dix. Carl Koller, un jeune médecin viennois passionné d'ophtalmologie, cherchait désespérément un moyen d'anesthésier l'œil sans endormir tout le patient.\n\nTout bascule quand son pote Sigmund Freud (eh oui, LE Freud !) lui refile de la cocaïne qu'il étudie pour ses effets antidépresseurs. Koller remarque que sa langue devient insensible après avoir goûté la poudre blanche. Eureka !\n\nLe 15 septembre 1884, il teste sur l'œil d'une grenouille, puis sur celui d'un chien, et enfin sur le sien. Miracle : anesthésie parfaite, patient conscient. En quelques mois, la cocaïne révolutionne la chirurgie mondiale.\n\nMais le revers de la médaille arrive vite : addiction, overdoses, morts suspectes. Les chirurgiens réalisent qu'ils ont créé un monstre. En 1905, Alfred Einhorn invente la procaïne (Novocaïne), puis vient la lidocaïne en 1943.\n\nAujourd'hui, quand tu vends de la crème à la lidocaïne ou que ton dentiste t'injecte un anesthésique local, tu peux remercier cette découverte accidentelle. Heureusement, on a gardé l'efficacité et viré l'addiction !",
-  "image_keywords": "cocaine medical history",
+  "titre": "Le saviez-vous ? Le premier défibrillateur était alimenté par le secteur",
+  "resume": "En 1947, un chirurgien américain sauve une vie avec 110 volts branchés directement sur le cœur. L'ancêtre de nos DEA modernes était un monstre électrique qui pesait 40 kilos et nécessitait d'ouvrir la cage thoracique.",
+  "full_text": "Picture this : nous sommes en novembre 1947 à l'hôpital Johns Hopkins de Baltimore. Le chirurgien Claude Beck opère un garçon de 14 ans quand soudain, fibrillation ventriculaire. Le cœur se met à trembler comme une gelée au lieu de battre.\n\nBeck sort alors son invention révolutionnaire : deux électrodes métalliques reliées à... une prise électrique ! Il applique directement 110 volts sur le cœur ouvert du patient. Premier choc, rien. Deuxième tentative, miracle : le cœur repart normalement.\n\nL'engin pesait 40 kilos, fallait l'ouvrir en grand pour l'utiliser, et personne ne maîtrisait vraiment le voltage optimal. Beck avait testé sur des chiens pendant des années, variant entre 60 et 1000 volts selon son humeur du jour.\n\nLe plus dingue ? Les premiers défibrillateurs \"portables\" des années 60 pesaient encore 20 kilos, nécessitaient une formation d'ingénieur électricien, et coûtaient l'équivalent de 50 000 euros actuels.\n\nCe jour-là, Beck venait d'inventer la défibrillation électrique moderne. Son patient a survécu et vécu encore 40 ans.\n\nQuand tu croises un DEA aujourd'hui dans ton officine ou en ville, pense à ce gamin de Baltimore : il doit sa vie à un chirurgien qui a eu le culot de brancher un cœur sur le 110 volts !",
+  "image_keywords": "defibrillator medical vintage",
   "tags": [
     "histoire",
-    "anesthesie",
     "chirurgie",
-    "decouverte",
-    "addiction"
+    "cardiologie",
+    "invention",
+    "urgence"
   ],
-  "date": "2026-05-04",
+  "date": "2026-05-05",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",
