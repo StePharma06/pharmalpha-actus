@@ -99,6 +99,7 @@ def fetch_rss_articles():
                         "link": link,
                         "source": feed_cfg["name"],
                         "categorie": feed_cfg["categorie"],
+                        "pratico_pratique": feed_cfg.get("pratico_pratique", False),
                         "date": published.strftime("%Y-%m-%d") if published else datetime.now(PARIS_TZ).strftime("%Y-%m-%d"),
                     })
         except Exception as e:
@@ -136,10 +137,17 @@ def curate_with_claude(raw_articles, existing_urls=None, excluded_categories=Non
         if skipped:
             print(f"  {skipped} articles RSS deja publies, exclus de la curation")
 
-    articles_text = "\n\n".join(
-        f"[{i+1}] {a['title']}\nSource: {a['source']} | Cat: {a['categorie']} | Date: {a['date']}\nResume: {a['summary']}\nLien: {a['link']}"
-        for i, a in enumerate(raw_articles)
-    )
+    def _format_article(i, a):
+        marker = " ⭐ PEPITE_PRATICO_PRATIQUE" if a.get("pratico_pratique") else ""
+        return (
+            f"[{i+1}]{marker} {a['title']}\n"
+            f"Source: {a['source']} | Cat: {a['categorie']} | Date: {a['date']}\n"
+            f"Resume: {a['summary']}\n"
+            f"Lien: {a['link']}"
+        )
+
+    articles_text = "\n\n".join(_format_article(i, a) for i, a in enumerate(raw_articles))
+    has_pratico = any(a.get("pratico_pratique") for a in raw_articles)
 
     today = datetime.now(PARIS_TZ).strftime("%Y-%m-%d")
 
@@ -163,8 +171,19 @@ def curate_with_claude(raw_articles, existing_urls=None, excluded_categories=Non
             "=== FIN OVERRIDE ===\n"
         )
 
+    pratico_block = ""
+    if has_pratico and "pharma_france" not in excluded_categories:
+        pratico_block = (
+            "\n=== PRIORITE ABSOLUE PEPITE PRATICOPRATIQUE ===\n"
+            "Si un ou plusieurs articles ci-dessous sont marques '⭐ PEPITE_PRATICO_PRATIQUE' (sources ANSM Informations de securite, ANSM Disponibilite/ruptures/rappels), ils ont PRIORITE ABSOLUE pour le slot [1] PHARMA FRANCE.\n"
+            "Ces articles concernent : DHPC, rappels de lots, ruptures, alertes securite, modifications de formulation, retraits AMM. Ce sont des coms operationnelles ultra-utiles au comptoir.\n"
+            "Choisis l'article PRATICO le plus impactant pour les pharmaciens (gros volume, large diffusion, action immediate au comptoir) et redige-le avec un angle 'voici ce qui change concretement pour toi demain matin' (CIP, dates, action attendue, ce qui change/ne change pas).\n"
+            "Si AUCUN article PRATICO ne correspond clairement a une com PraticoPratique (ex: une simple actualite ANSM macro), reviens a la curation pharma_france classique.\n"
+            "=== FIN PRIORITE PRATICO ===\n"
+        )
+
     prompt = f"""Tu es Stephen, pharmacien consultant chez Pharm'Alpha et redacteur en chef de Pharm'Actus.
-{exclusion_block}
+{exclusion_block}{pratico_block}
 
 === TON STYLE ===
 - Tu parles comme un pote pharmacien qui briefe ses confreres entre deux clients
