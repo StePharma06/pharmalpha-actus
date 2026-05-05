@@ -589,6 +589,7 @@ _stock_usage = {}  # track which stock photos are used this run
 
 NEWSLETTER_SENT_FILE = ROOT_DIR / "output" / "newsletter_sent.json"
 PENDING_LSV_FILE = ROOT_DIR / "output" / "pending_lsv.json"
+PENDING_ACTU_FILE = ROOT_DIR / "output" / "pending_actu.json"
 
 
 def get_fallback_photo(categorie):
@@ -650,6 +651,34 @@ def load_pending_lsv():
         except Exception as e:
             print(f"  [LSV-PENDING] Erreur: {e}")
     return None
+
+
+def load_pending_actus():
+    """Load actus manually injected via output/pending_actu.json.
+
+    Format accepted: a single article dict OR a list of dicts.
+    Each article must contain at least titre/resume/full_text/categorie.
+    Used for "PraticoPratique" pepites (com labos, recall, change formulation,
+    ANSM alerts) that won't be picked up by RSS curation.
+    """
+    if not PENDING_ACTU_FILE.exists():
+        return []
+    try:
+        data = json.loads(PENDING_ACTU_FILE.read_text(encoding="utf-8"))
+        actus = data if isinstance(data, list) else [data]
+        today = datetime.now(PARIS_TZ).strftime("%Y-%m-%d")
+        for a in actus:
+            a["date"] = today
+            a.setdefault("categorie", "pharma_france")
+            a.setdefault("badge_label", "Pharma France")
+            a.setdefault("source", "Pharm'Alpha")
+            a.setdefault("source_url", "")
+            a.setdefault("tags", [])
+        print(f"  [ACTU-PENDING] {len(actus)} actu(s) en attente injectee(s) : {actus[0].get('titre','')[:60]}...")
+        return actus
+    except Exception as e:
+        print(f"  [ACTU-PENDING] Erreur: {e}")
+        return []
 
 
 # ── HTML : insertion des articles ─────────────────────────────────────
@@ -1247,6 +1276,13 @@ def main():
     curated = curate_with_claude(raw_articles, existing_urls)
     print(f"  {len(curated)} articles selectionnes (hors business et LSV)")
 
+    # 2.5 Inject any pending manual actus (highest priority — pepites PraticoPratique)
+    pending_actus = load_pending_actus()
+    if pending_actus:
+        # Prepend so they appear first in newsletter and on site
+        curated = pending_actus + curated
+        print(f"  [ACTU-PENDING] {len(pending_actus)} actu(s) prependee(s) au curated")
+
     # Extraire les sources + sujets deja utilises pour eviter doublons dans business
     used_sources_today = [a.get("source", "") for a in curated if a.get("source")]
     used_titles_today = [a.get("titre", "") for a in curated if a.get("titre")]
@@ -1300,6 +1336,13 @@ def main():
         added = [a for a in curated if a.get("id")]
         print(f"\n[6/6] Envoi newsletter Brevo ({len(added)} articles)...")
         send_newsletter(added)
+        # Cleanup pending_actu.json apres usage reussi
+        if PENDING_ACTU_FILE.exists():
+            try:
+                PENDING_ACTU_FILE.unlink()
+                print("  [ACTU-PENDING] Fichier pending supprime apres utilisation")
+            except Exception as e:
+                print(f"  [ACTU-PENDING] Erreur suppression: {e}")
         print("\n=== Mise a jour terminee avec succes ===")
     else:
         print("\n=== Aucune mise a jour effectuee ===")
