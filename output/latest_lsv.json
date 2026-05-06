@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? Le premier défibrillateur était alimenté par le secteur",
-  "resume": "En 1947, un chirurgien américain sauve une vie avec 110 volts branchés directement sur le cœur. L'ancêtre de nos DEA modernes était un monstre électrique qui pesait 40 kilos et nécessitait d'ouvrir la cage thoracique.",
-  "full_text": "Picture this : nous sommes en novembre 1947 à l'hôpital Johns Hopkins de Baltimore. Le chirurgien Claude Beck opère un garçon de 14 ans quand soudain, fibrillation ventriculaire. Le cœur se met à trembler comme une gelée au lieu de battre.\n\nBeck sort alors son invention révolutionnaire : deux électrodes métalliques reliées à... une prise électrique ! Il applique directement 110 volts sur le cœur ouvert du patient. Premier choc, rien. Deuxième tentative, miracle : le cœur repart normalement.\n\nL'engin pesait 40 kilos, fallait l'ouvrir en grand pour l'utiliser, et personne ne maîtrisait vraiment le voltage optimal. Beck avait testé sur des chiens pendant des années, variant entre 60 et 1000 volts selon son humeur du jour.\n\nLe plus dingue ? Les premiers défibrillateurs \"portables\" des années 60 pesaient encore 20 kilos, nécessitaient une formation d'ingénieur électricien, et coûtaient l'équivalent de 50 000 euros actuels.\n\nCe jour-là, Beck venait d'inventer la défibrillation électrique moderne. Son patient a survécu et vécu encore 40 ans.\n\nQuand tu croises un DEA aujourd'hui dans ton officine ou en ville, pense à ce gamin de Baltimore : il doit sa vie à un chirurgien qui a eu le culot de brancher un cœur sur le 110 volts !",
-  "image_keywords": "defibrillator medical vintage",
+  "titre": "Le saviez-vous ? La lobotomie a été inventée par accident sur un chimpanzé",
+  "resume": "En 1935, un neurologue portugais assiste à une conférence sur les chimpanzés. Ce qu'il y découvre va révolutionner la psychiatrie... et horrifier le monde médical 50 ans plus tard.",
+  "full_text": "Lisbonne, 1935. Egas Moniz, neurologue portugais de 61 ans, assiste à une conférence sur le comportement des primates. Les chercheurs américains présentent leurs travaux sur Becky, une chimpanzé colérique qui piquait des crises terribles quand elle ratait ses exercices.\n\nLe twist ? Après qu'on lui ait retiré ses lobes frontaux, Becky était devenue d'un calme olympien. Plus jamais de colère, plus de frustration. Moniz a un déclic : \"Et si on faisait pareil chez l'homme ?\"\n\nEn novembre 1935, il pratique la première lobotomie préfrontale sur un patient portugais. L'intervention consiste à sectionner les connexions entre les lobes frontaux et le reste du cerveau. Résultat : les malades mentaux agités deviennent dociles, presque léthargiques.\n\nLa technique traverse l'Atlantique. Walter Freeman, neurochirurgien américain, la popularise avec sa \"lobotomie à la glace pilée\" : il enfonce un pic à glace sous la paupière, le fait pénétrer dans le cerveau et sectionne les fibres nerveuses. Dix minutes chrono, pas besoin d'anesthésie générale.\n\nEntre 1936 et 1967, plus de 50 000 lobotomies sont pratiquées aux États-Unis. Egas Moniz reçoit le prix Nobel de médecine en 1949. Puis arrivent les neuroleptiques dans les années 60, et on réalise l'horreur : des milliers de patients transformés en légumes.\n\nAujourd'hui, quand tu délivres un antipsychotique moderne, tu participes à cette révolution qui a rendu obsolète le pic à glace de Freeman.",
+  "image_keywords": "brain surgery vintage",
   "tags": [
     "histoire",
+    "neurologie",
     "chirurgie",
-    "cardiologie",
-    "invention",
-    "urgence"
+    "psychiatrie",
+    "controverse"
   ],
-  "date": "2026-05-05",
+  "date": "2026-05-06",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",
