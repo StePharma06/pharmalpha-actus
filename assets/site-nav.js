@@ -39,12 +39,12 @@
     'body.pa-has-nav{padding-top:clamp(80px,calc(6vw + 20px),130px);}' +
     'body.pa-has-nav .header,body.pa-has-nav header.header,body.pa-has-nav .site-header,body.pa-has-nav header.site-header{position:relative !important;top:auto !important;}' +
     '@media (max-width:968px){' +
-      'body.pa-has-nav{padding-top:132px;}' +
+      'body.pa-has-nav{padding-top:100px;}' +
       '.pa-site-nav{padding:10px 0;}' +
-      '.pa-site-nav-inner{position:relative;}' +
+      '.pa-site-nav-inner{position:relative;min-height:80px;justify-content:flex-end;}' +
       '.pa-site-nav-logo{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);}' +
-      '.pa-site-nav-logo img{height:112px !important;}' +
-      '.pa-site-nav.solid .pa-site-nav-logo img{height:112px !important;}' +
+      '.pa-site-nav-logo img{height:80px !important;width:auto !important;}' +
+      '.pa-site-nav.solid .pa-site-nav-logo img{height:80px !important;}' +
       '.pa-site-nav-links{display:none;}' +
       '.pa-site-nav-right .pa-site-nav-btn-ghost{display:none;}' +
       '.pa-site-nav-right .pa-site-nav-btn-orange{padding:11px 13px;gap:0;}' +
