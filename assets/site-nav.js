@@ -41,15 +41,16 @@
     '@media (max-width:968px){' +
       'body.pa-has-nav{padding-top:100px;}' +
       '.pa-site-nav{padding:10px 0;}' +
-      '.pa-site-nav-inner{position:relative;min-height:80px;justify-content:flex-end;}' +
+      '.pa-site-nav-inner{position:relative;min-height:80px;justify-content:space-between;}' +
       '.pa-site-nav-logo{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);}' +
       '.pa-site-nav-logo img{height:80px !important;width:auto !important;}' +
       '.pa-site-nav.solid .pa-site-nav-logo img{height:80px !important;}' +
       '.pa-site-nav-links{display:none;}' +
+      '.pa-site-nav-right{display:contents;}' +
       '.pa-site-nav-right .pa-site-nav-btn-ghost{display:none;}' +
-      '.pa-site-nav-right .pa-site-nav-btn-orange{padding:11px 13px;gap:0;}' +
+      '.pa-site-nav-right .pa-site-nav-btn-orange{order:-1;padding:11px 13px;gap:0;}' +
       '.pa-site-nav-right .pa-site-nav-btn-text{display:none;}' +
-      '.pa-site-nav-hamburger{display:flex;}' +
+      '.pa-site-nav-hamburger{order:1;display:flex;}' +
     '}' +
     '.pa-mobile-menu{display:none;position:fixed;inset:0;z-index:950;background:#0a0a0a;flex-direction:column;align-items:center;justify-content:center;gap:28px;}' +
     '.pa-mobile-menu.open{display:flex;}' +
@@ -86,7 +87,7 @@
         '</ul>' +
         '<div class="pa-site-nav-right">' +
           '<a href="' + ROOT + '/espace" class="pa-site-nav-btn pa-site-nav-btn-ghost">eLearning</a>' +
-          '<a href="' + ROOT + '/#contact" class="pa-site-nav-btn pa-site-nav-btn-orange" aria-label="Me contacter">' +
+          '<a href="' + ROOT + '/#contactForm" class="pa-site-nav-btn pa-site-nav-btn-orange" aria-label="Me contacter">' +
             '<svg class="pa-site-nav-btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>' +
             '<span class="pa-site-nav-btn-text">Me contacter</span>' +
           '</a>' +
