@@ -1,6 +1,127 @@
 {
   "articles": [
     {
+      "id": "actu_2026_05_07_5",
+      "date": "2026-05-07",
+      "type": "actu",
+      "categorie": "business_officine",
+      "titre": "Thérapies par la nature : 2,8 Md€ d'économies de santé à saisir pour l'officine",
+      "resume": "Les prescriptions vertes réduisent de 25% les consultations médicales selon une méta-analyse britannique. Un marché émergent à 2,8 milliards d'euros d'économies annuelles.",
+      "full_text": "Les prescriptions vertes réduisent de 25% les consultations médicales selon une méta-analyse britannique. Un marché émergent à 2,8 milliards d'euros d'économies annuelles.\n\n## Contexte\n\nLes « prescriptions vertes » ou thérapies par la nature gagnent du terrain en Europe. Au Royaume-Uni, 5 000 médecins prescrivent déjà des activités en plein air contre l'anxiété, la dépression et l'hypertension. En France, le concept émerge via les maisons de santé pluriprofessionnelles et les réseaux de soins. L'OMS a validé en 2021 les bénéfices sanitaires de la nature sur 100 pathologies chroniques. Les Pays-Bas intègrent ces approches dans leur système de soins depuis 2019, avec un remboursement partiel par les assurances complémentaires. La Sécurité sociale française étudie une expérimentation similaire pour 2027, dans le cadre de l'article 51 (innovations organisationnelles). Ce mouvement s'inscrit dans la stratégie gouvernementale de prévention, qui vise 5% d'économies sur les dépenses de santé d'ici 2030.\n\n## Analyse business\n\nL'impact économique est colossal : une étude de l'IRDES estime à 2,8 milliards d'euros les économies potentielles si 15% des patients chroniques adoptaient ces thérapies complémentaires. Les données britanniques montrent une réduction de 25% des consultations médicales et 18% des arrêts maladie chez les participants. En Allemagne, où 12 000 pharmacies proposent des programmes « nature-santé », le chiffre d'affaires additionnel atteint 340€ par officine/mois selon la fédération ABDA. Pour l'officine française, l'opportunité se dessine sur plusieurs axes : accompagnement des patients chroniques (diabète, hypertension), vente d'équipements de plein air adaptés (tensiomètres de terrain, trousses de secours), et surtout développement de services. Les honoraires de suivi pharmaceutique pourraient s'élargir aux « bilans nature-santé », rémunérés 25€ en moyenne en Europe du Nord. Avec 21 700 officines et 15 millions de patients chroniques en France, le potentiel de marché dépasse 320 millions d'euros annuels.\n\n## Recommandations actionnables\n\n1. Formation équipes — Anticipe la tendance en formant ton équipe aux liens nature-santé, via les modules de formation continue DPC (prise en charge à 100%)\n\n2. Partenariats locaux — Noue des contacts avec les associations de randonnée, jardins thérapeutiques et centres de thalasso de ta zone pour créer un réseau d'orientation\n\n3. Gamme bien-être outdoor — Développe un rayon équipements de plein air santé : podomètres connectés, gourdes isothermes, crèmes solaires dermatologiques (marges 35-45%)\n\n4. Veille réglementaire — Suis les expérimentations article 51 sur ton ARS : les premières seront lancées en 2027 avec rémunération spécifique\n\n5. Services nouveaux — Prépare un « bilan nature-santé » avec questionnaire validé et conseils personnalisés, modèle économique à 25-30€ par consultation\n\n## Sources citees\n\n- Le Monde Sante",
+      "source": "Pharm'Actus",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Business",
+      "image_url": "assets/img_actu_2026_05_07_5.jpg",
+      "tags": [
+        "therapies-naturelles",
+        "prevention",
+        "services-officinaux",
+        "innovation-sante"
+      ]
+    },
+    {
+      "id": "actu_2026_05_07_4",
+      "date": "2026-05-07",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "CAR-T dans l'auto-immun : Kyverna recrute pour une première historique",
+      "resume": "La biotech Kyverna se prépare à une première mondiale : faire approuver une CAR-T dans une maladie auto-immune. Recrutement commercial en cours pour cette révolution thérapeutique qui pourrait changer la donne.",
+      "full_text": "Kyverna Therapeutics recrute son directeur commercial pour une mission historique : lancer la première CAR-T approuvée dans une maladie auto-immune. La biotech sent la ligne d'arrivée approcher.\n\nLes CAR-T, ces thérapies cellulaires qui reprogramment les lymphocytes T du patient, ont déjà révolutionné l'oncologie. Leur extension aux pathologies auto-immunes ouvre un champ thérapeutique gigantesque.\n\nConcrètement, au lieu de détruire des cellules cancéreuses, ces CAR-T iraient \"rééduquer\" le système immunitaire défaillant. Sclérose en plaques, lupus, polyarthrite... les applications potentielles donnent le vertige.\n\nLe défi commercial sera énorme : expliquer cette technologie complexe aux rhumatos, neurologues et internistes. Les pharmaciens hospitaliers aussi devront se former à ces nouveaux protocoles.\n\nAu comptoir demain : préparez-vous à expliquer pourquoi certains patients auto-immuns vont disparaître quelques semaines pour une \"reprogrammation cellulaire\". L'avenir frappe à la porte.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/marketing/eyeing-car-t-autoimmune-first-kyverna-therapeutics-hires-pharma-veteran-commercial-lead",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_05_07_4.jpg",
+      "tags": [
+        "car-t",
+        "autoimmun",
+        "therapie",
+        "cellulaire"
+      ]
+    },
+    {
+      "id": "actu_2026_05_07_3",
+      "date": "2026-05-07",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "Belgique : la dispensation à l'unité des antibiotiques se concrétise enfin",
+      "resume": "Nos voisins belges passent à l'acte. Dans quelques mois, leurs pharmaciens pourront délivrer le nombre exact de comprimés d'antibiotiques prescrits. Une révolution qui nous tend un miroir.",
+      "full_text": "La Belgique franchit le cap que nous attendons encore en France : la dispensation à l'unité des antibiotiques devient réalité dans quelques mois. Les pharmaciens belges pourront enfin délivrer le nombre exact de comprimés depuis le comptoir.\n\nUne petite révolution confirmée par le ministère belge de la santé. Exit les boîtes complètes systématiques, place à la logique thérapeutique pure.\n\nLe contraste avec la France fait mal. Ici, nos confrères Prioux et Castagné écopent de 6 mois d'interdiction d'exercer (dont 4 avec sursis) pour avoir osé le faire. Le Conseil de l'Ordre a confirmé la sanction en avril.\n\nEt devinez quoi ? Pendant que nous sanctionnons l'innovation, nos voisins l'institutionnalisent. L'antibiorésistance ne connaît pourtant pas les frontières.\n\nAu comptoir demain : on continue de jeter des antibiotiques entamés pendant que la Belgique passe en mode logique. Frustrant, non ?",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/business/international/belgique-la-dispensation-a-lunite-des-antibiotiques-va-entrer-en-vigueur",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_05_07_3.jpg",
+      "tags": [
+        "dispensation",
+        "unite",
+        "antibiotique",
+        "belgique"
+      ]
+    },
+    {
+      "id": "actu_2026_05_07_2",
+      "date": "2026-05-07",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "Novo vs Lilly : amende française pour promo excessive des anti-obésité",
+      "resume": "Le régulateur français tape sur les doigts des deux géants du GLP-1. Novo Nordisk et Eli Lilly écoppent d'amendes pour promotion abusive de leurs traitements anti-obésité. La guerre commerciale a ses limites.",
+      "full_text": "Les autorités françaises viennent de rappeler à l'ordre Novo Nordisk et Eli Lilly pour promotion excessive de leurs blockbusters anti-obésité. Les deux géants du GLP-1 se sont fait taper sur les doigts par le régulateur.\n\nLa bataille commerciale entre Wegovy (Novo) et les futures armes de Lilly a visiblement franchi les lignes rouges réglementaires. Quand la guerre des parts de marché pousse trop loin la promo, les autorités recadrent.\n\nCa te rappelle quelque chose ? En France, la promotion des médicaments sur prescription reste ultra-encadrée. Les labos l'oublient parfois dans leur euphorie commerciale sur ces marchés juteux.\n\nPour nous, c'est un rappel utile : ces molécules restent des médicaments sur prescription, pas des produits de confort. La rigueur dans le conseil et la délivrance reste de mise.\n\nAu comptoir demain : gardez le cap déontologique, même sur les blockbusters qui font fantasmer les actionnaires.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/marketing/novo-nordisk-eli-lilly-fined-french-regulators-over-obesity-drug-promotions",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/img_actu_2026_05_07_2.jpg",
+      "tags": [
+        "glp1",
+        "promotion",
+        "regulation",
+        "amende"
+      ]
+    },
+    {
+      "id": "actu_2026_05_07_1",
+      "date": "2026-05-07",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "Stelara substituable : les biosimilaires d'ustekinumab arrivent au comptoir",
+      "resume": "L'ustékinumab devient le 11e groupe biosimilaire substituable par le pharmacien. Particularité : les indications varient selon la spécialité et le dispositif d'administration. De quoi complexifier la substitution.",
+      "full_text": "Stelara et ses 8 biosimilaires (Imuldosa, Otulfi, Pyzchiva, Steqeyma, Usrenty, Uzpruvo, Wezenla, Yesintek) rejoignent officiellement la liste des groupes biologiques substituables depuis le 14 avril.\n\nLe piège ? Contrairement aux autres biosimilaires, les indications autorisées varient selon la spécialité et le dispositif d'administration. Pas question de substituer à l'aveugle comme pour l'adalimumab.\n\nConcrètement, il faudra vérifier que le biosimilaire choisi couvre bien l'indication prescrite. Certains ne sont pas autorisés dans toutes les pathologies inflammatoires du Stelara original.\n\nEt devinez quoi ? Les dispositifs d'injection diffèrent aussi entre les biosimilaires. Seringue préremplie, stylo auto-injecteur... L'éducation thérapeutique du patient va prendre une nouvelle dimension.\n\nAu comptoir demain : sortez vos tableaux de correspondance. Cette substitution-là ne se fera pas les yeux fermés.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/stelara-substituable-par-le-pharmacien-attention-aux-indications-autorisees",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_05_07_1.jpg",
+      "tags": [
+        "biosimilaire",
+        "substitution",
+        "ustekinumab",
+        "stelara"
+      ]
+    },
+    {
+      "id": "lsv_2026_05_07",
+      "date": "2026-05-07",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? Le premier antibiotique était fabriqué avec de la moisissure de pain",
+      "resume": "Bien avant Fleming et sa pénicilline, les Égyptiens soignaient déjà les infections avec du pain moisi. Une pratique ancestrale qui cachait une vérité scientifique révolutionnaire.",
+      "full_text": "Imagine la scène : nous sommes en 1500 avant J.-C., dans l'Égypte antique. Un médecin applique du pain moisi sur une plaie infectée. Complètement fou ? Pas du tout !\n\nLes papyrus d'Ebers, datés de cette époque, décrivent précisément cette technique. Les Égyptiens avaient remarqué que certaines moisissures accéléraient la guérison des blessures. Ils fabriquaient même des cataplasmes à base de pain rassis laissé volontairement à moisir.\n\nEt devine quoi ? Ils avaient totalement raison ! Cette moisissure contenait naturellement des substances antimicrobiennes. Les Chinois utilisaient aussi du soja fermenté pour les mêmes raisons, et les peuples des Balkans appliquaient de la terre moisie sur les coupures.\n\nLe truc hallucinant, c'est qu'Alexander Fleming n'a \"découvert\" la pénicilline qu'en 1928. Soit 3400 ans plus tard ! Il a juste eu le génie de comprendre le mécanisme et de l'isoler scientifiquement.\n\nCertaines de ces moisissures traditionnelles contenaient effectivement des souches de Penicillium, le même champignon que Fleming a étudié. Les anciens faisaient de l'antibiothérapie sans le savoir.\n\nAujourd'hui, quand tu délivres de l'amoxicilline ou de la pénicilline G, tu perpétues une tradition vieille de plus de trois millénaires !",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_05_07.jpg",
+      "tags": [
+        "histoire",
+        "antibiotique",
+        "penicilline",
+        "egypte",
+        "decouverte"
+      ]
+    },
+    {
       "id": "actu_2026_05_06_5",
       "date": "2026-05-06",
       "type": "actu",
@@ -2518,6 +2639,6 @@
       ]
     }
   ],
-  "count": 122,
-  "updated_at": "2026-05-06T06:39:00.249892+02:00"
+  "count": 128,
+  "updated_at": "2026-05-07T06:40:02.862765+02:00"
 }
