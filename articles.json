@@ -1,6 +1,131 @@
 {
   "articles": [
     {
+      "id": "actu_2026_05_09_5",
+      "date": "2026-05-09",
+      "type": "actu",
+      "categorie": "business_officine",
+      "titre": "RH officine : ces erreurs de timing sur les CDD qui te coûtent cher aux prud'hommes",
+      "resume": "Antidater un renouvellement de CDD peut coûter plusieurs milliers d'euros en dommages et intérêts. Les tribunaux sont de plus en plus stricts sur les formalités.",
+      "full_text": "Antidater un renouvellement de CDD peut coûter plusieurs milliers d'euros en dommages et intérêts. Les tribunaux sont de plus en plus stricts sur les formalités.\n\n## Contexte\n\nLes pharmacies d'officine emploient massivement en CDD : remplacements congés, surcroît d'activité, ou couverture des absences maladie. Avec 22 400 pharmacies en France et une moyenne de 4,2 salariés par officine selon l'Ordre, soit près de 95 000 emplois, les enjeux RH sont colossaux. Un arrêt récent des prud'hommes illustre un piège classique : l'antidatage des contrats. Une salariée en CDD de remplacement a saisi la justice après que son employeur ait renouvelé son contrat le 20 janvier 2020, alors qu'elle était en congé ce jour-là. Le tribunal a considéré cette irrégularité comme une faute grave de l'employeur, malgré le caractère apparemment mineur de l'infraction.\n\n## Analyse business\n\nLes sanctions financières des erreurs de timing sur les CDD peuvent être lourdes. Les dommages et intérêts pour requalification abusive oscillent entre 3000€ et 8000€ selon les tribunaux, auxquels s'ajoutent les indemnités de licenciement sans cause réelle (6 mois de salaire minimum). Pour une pharmacie employant un adjoint à 2800€ brut/mois, l'addition dépasse facilement 15 000€. Les prud'hommes sont particulièrement vigilants sur 3 points : la signature effective à la date indiquée (35% des contentieux), le respect du délai de carence entre deux CDD (8 jours minimum, sauf urgence), et la justification du motif de recours. Le Code du travail impose des formalités strictes : écrit obligatoire, terme précis, et signature avant prise de poste. Les pharmacies qui gèrent mal ces aspects s'exposent à une requalification automatique en CDI. Selon les statistiques prud'homales 2023, 67% des recours sur les CDD aboutissent à une condamnation de l'employeur, avec un coût moyen de 12 400€ par dossier.\n\n## Recommandations actionnables\n\n1. Digitalise tes contrats — Utilise un logiciel RH qui horodate automatiquement les signatures électroniques et bloque les antidatages.\n\n2. Forme ton équipe administrative — Organise une formation annuelle sur les formalités CDD avec ton expert-comptable, budget 800€.\n\n3. Crée un process anti-erreur — Check-list obligatoire avant chaque signature : salarié présent, motif justifié, durée conforme.\n\n4. Constitue un dossier de preuves — Archive systématiquement emails, SMS et témoignages qui prouvent la date réelle de signature.\n\n5. Anticipe les renouvellements — Prépare les avenants 48h avant l'échéance pour éviter les signatures dans l'urgence.\n\n## Sources citees\n\n- Le Moniteur des Pharmacies",
+      "source": "Pharm'Actus",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Business",
+      "image_url": "assets/img_actu_2026_05_09_5.jpg",
+      "tags": [
+        "rh",
+        "cdd",
+        "contentieux",
+        "gestion"
+      ]
+    },
+    {
+      "id": "actu_2026_05_09_4",
+      "date": "2026-05-09",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "La dégradation ciblée des protéines révolutionne la recherche",
+      "resume": "Nouvelle frontière thérapeutique : la dégradation ciblée des protéines (TPD) permet enfin de s'attaquer aux cibles \"indruggables\". Cette technologie émergente ouvre des perspectives inédites pour traiter des pathologies jusqu'ici sans solution.",
+      "full_text": "La dégradation ciblée des protéines (TPD) fait son entrée dans l'arsenal thérapeutique de demain. Cette approche révolutionnaire permet de détruire sélectivement des protéines pathologiques au lieu de simplement les inhiber.\n\nLe principe ? Recruter la machinerie cellulaire naturelle pour éliminer les protéines responsables de maladies. Les PROTAC et autres dégradeurs moléculaires s'attaquent enfin aux fameuses cibles \"indruggables\" qui résistaient aux approches classiques.\n\nOncologie, neurologie, maladies rares : tous les domaines thérapeutiques sont concernés. Cette technologie offre des perspectives inédites pour des pathologies sans solution satisfaisante aujourd'hui.\n\nLes premiers médicaments TPD arrivent en phase clinique avancée. Dans 5 à 10 ans, on devrait voir débarquer en officine des traitements issus de cette approche. Une révolution silencieuse qui va redéfinir notre conception du médicament.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/sponsored/targeted-protein-degradation-and-novel-modalities-getting-frontline",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_05_09_4.jpg",
+      "tags": [
+        "protac",
+        "recherche",
+        "innovation",
+        "cibles",
+        "technologie"
+      ]
+    },
+    {
+      "id": "actu_2026_05_09_3",
+      "date": "2026-05-09",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "UCB mise 2 milliards sur Candid et ses assets chinois prometteurs",
+      "resume": "Le belge UCB sort le chéquier : 2 milliards de dollars upfront pour racheter Candid Therapeutics et son portfolio d'assets chinois. Une stratégie audacieuse qui mise sur les innovations venues d'Asie pour enrichir son pipeline.",
+      "full_text": "UCB frappe fort avec l'acquisition de Candid Therapeutics pour 2 milliards de dollars d'upfront. Cette biotech a intelligemment agrégé un portefeuille d'assets chinois particulièrement prometteurs.\n\nLa stratégie est maligne : plutôt que de développer from scratch, UCB récupère des molécules déjà avancées issues de la R&D asiatique. Un raccourci efficace vers de nouveaux traitements, notamment en oncologie et neurologie.\n\nCette opération illustre parfaitement la nouvelle géographie de l'innovation pharma. La Chine n'est plus seulement l'atelier du monde, mais devient un véritable réservoir de molécules innovantes.\n\nPour le marché français, ça signifie potentiellement de nouveaux traitements dans nos rayons d'ici quelques années. UCB mise gros sur cette stratégie d'acquisition d'innovation externe, et les premières AMM pourraient bien nous surprendre.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/pharma/summit-surprise-interim-trial-miss-ucb-2b-candid-buy-jj-car-t-cuts",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_05_09_3.jpg",
+      "tags": [
+        "ucb",
+        "acquisition",
+        "chine",
+        "pipeline",
+        "biotech"
+      ]
+    },
+    {
+      "id": "actu_2026_05_09_2",
+      "date": "2026-05-09",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "Gilead explose les compteurs avec son injectable PrEP à 1 milliard",
+      "resume": "Yeztugo cartonne outre-Atlantique ! Gilead révise ses prévisions à la hausse : 1 milliard de dollars dès la première année au lieu des 800 millions annoncés. L'injectable longue durée pour la prophylaxie VIH séduit massivement.",
+      "full_text": "Gilead vient de revoir ses ambitions à la hausse pour Yeztugo, son injectable PrEP longue durée. Exit les 800 millions prévus, direction le milliard de dollars dès la première année ! Une trajectoire de lancement qualifiée de \"sans précédent\" par le labo.\n\nCet injectable révolutionne la prophylaxie VIH en proposant une alternative aux comprimés quotidiens. Une injection tous les deux mois, et le tour est joué. L'adhérence thérapeutique s'en trouve considérablement améliorée.\n\nPour nous en France, c'est un signal fort sur l'évolution des stratégies de prévention. Les formes galéniques longue durée séduisent de plus en plus, que ce soit pour le VIH, la contraception ou bientôt d'autres pathologies.\n\nUn marché qui explose et qui confirme une tendance : les patients plébiscitent les solutions qui simplifient leur quotidien. À surveiller de près pour les prochaines AMM européennes.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/pharma/gilead-cranks-yeztugo-first-year-sales-forecast-1b-unprecedented-launch-trajectory",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/img_actu_2026_05_09_2.jpg",
+      "tags": [
+        "prep",
+        "vih",
+        "injectable",
+        "gilead",
+        "prevention"
+      ]
+    },
+    {
+      "id": "actu_2026_05_09_1",
+      "date": "2026-05-09",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "L'ANSM sanctionne Novo et Lilly pour leurs campagnes GLP-1 déguisées",
+      "resume": "L'Agence du médicament a tapé du poing sur la table. Novo Nordisk et Eli Lilly sanctionnés pour avoir transformé leurs prétendues campagnes de sensibilisation en pub déguisée pour Ozempic et Mounjaro. Le message est clair : la promo grand public reste interdite en France.",
+      "full_text": "L'ANSM vient de remettre les pendules à l'heure avec Novo Nordisk et Eli Lilly. Les deux géants ont écopé de sanctions pour leurs campagnes sur l'obésité, officiellement présentées comme de la \"sensibilisation\" mais assimilées à de la promotion déguisée.\n\nConcrètement, l'Agence considère que ces campagnes orientaient directement vers leurs molécules GLP-1. Un détournement de l'article L.5122 du Code de la santé publique qui interdit formellement la pub grand public pour les médicaments de prescription.\n\nCôté officine, ça ne change rien à la demande explosive qu'on connaît tous. Mais ça rappelle le cadre : ces traitements restent sur prescription uniquement, avec des indications précises.\n\nLa leçon ? Les labos peuvent communiquer sur les pathologies, mais pas faire du teasing produit déguisé. L'ANSM veille au grain et n'hésite plus à sévir quand les limites sont franchies.",
+      "source": "Le Monde Santé",
+      "source_url": "https://www.lemonde.fr/economie/article/2026/05/08/traitements-antiobesite-pourquoi-l-agence-du-medicament-a-sanctionne-deux-laboratoires-pour-des-publicites-deguisees_6687061_3234.html",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_05_09_1.jpg",
+      "tags": [
+        "ansm",
+        "glp1",
+        "reglementation",
+        "promotion",
+        "semaglutide"
+      ]
+    },
+    {
+      "id": "lsv_2026_05_09",
+      "date": "2026-05-09",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? La première césarienne a été pratiquée par un cochon",
+      "resume": "En 1500, un éleveur suisse désespéré a sauvé sa femme et son bébé avec les outils qu'il utilisait pour ses truies. Cette opération impossible est devenue légende.",
+      "full_text": "Imagine un peu la scène : nous sommes en 1500, dans un petit village suisse perdu. Élisabeth Alespachin agonise depuis des jours, impossible d'accoucher. Les sages-femmes ont renoncé, le chirurgien aussi.\n\nSon mari, Jacob Nufer, est éleveur de cochons. Et quand ses truies ont des problèmes lors de la mise-bas, il sait quoi faire : ouvrir le ventre, sortir les petits, recoudre. Alors pourquoi pas sur sa femme ?\n\nAvec ses couteaux de boucher et ses aiguilles à coudre les peaux, il ouvre le ventre d'Élisabeth. Pas d'anesthésie bien sûr, juste quatre voisins pour la maintenir. Il sort le bébé vivant, referme tant bien que mal.\n\nLe miracle ? Élisabeth survit ET elle aura encore cinq enfants par voie naturelle ! Le premier, celui de la césarienne, vécut jusqu'à 77 ans - un record pour l'époque.\n\nCette histoire, rapportée par le médecin Caspar Bauhin en 1581, fait polémique. Certains crient au mythe. Mais les détails sont trop précis pour être inventés.\n\nAujourd'hui, une césarienne sur cinq naissances nous paraît banal. Mais rappelle-toi qu'avant l'antisepsie de Semmelweis, ouvrir un ventre revenait à signer un arrêt de mort dans 99% des cas.",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_05_09.jpg",
+      "tags": [
+        "histoire",
+        "chirurgie",
+        "obstetrique",
+        "cesarienne",
+        "moyen-age"
+      ]
+    },
+    {
       "id": "actu_2026_05_08_5",
       "date": "2026-05-08",
       "type": "actu",
@@ -2764,6 +2889,6 @@
       ]
     }
   ],
-  "count": 134,
-  "updated_at": "2026-05-08T06:21:15.237094+02:00"
+  "count": 140,
+  "updated_at": "2026-05-09T06:30:49.101741+02:00"
 }
