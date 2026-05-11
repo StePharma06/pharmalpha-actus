@@ -994,8 +994,131 @@ def generate_articles_json(index_html):
     print(f"  articles.json genere ({len(merged)} articles total : {len(current_articles)} depuis index.html + {historical_count} historiques)")
 
 
+def _build_article_page_html(article_id: str, titre_raw: str, resume_raw: str, image_url: str, date_str: str, categorie: str) -> str:
+    """Build a single article stub HTML with full SEO metadata.
+
+    The canonical and og:url both point to pharmalpha.fr/actus (Vercel target),
+    not actus.pharmalpha.fr, to avoid duplicate signal during dual-push period.
+    The http-equiv redirect still points to actus.pharmalpha.fr so GH Pages
+    visitors land correctly; sync_to_vercel.py rewrites it for Vercel.
+    """
+    titre = titre_raw.replace('"', "&quot;").replace("'", "&#39;")
+    resume = resume_raw.replace('"', "&quot;").replace("'", "&#39;")
+
+    # Meta description: resume truncated to 155 chars max
+    meta_desc_raw = resume_raw.replace('"', "&quot;").replace("'", "&#39;")
+    if len(meta_desc_raw) > 155:
+        meta_desc = meta_desc_raw[:152] + "..."
+    else:
+        meta_desc = meta_desc_raw
+
+    # OG image: prefer article image, fallback to default actus OG
+    if image_url:
+        og_image = f"https://actus.pharmalpha.fr/{image_url}"
+    else:
+        og_image = "https://pharmalpha.fr/assets/og-default-actus.png"
+
+    # Canonical URL (Vercel target - avoids duplicate signal during dual-push)
+    canonical_url = f"https://pharmalpha.fr/actus/articles/{article_id}.html"
+
+    # Date ISO for schema (article date is YYYY-MM-DD, no time known)
+    date_published = f"{date_str}T06:00:00+02:00" if date_str else ""
+    date_modified = date_published  # no separate modified date available
+
+    # Schema: map internal categorie to a human-readable articleSection
+    section_map = {
+        "pharma_france": "Pharmacie France",
+        "pharma_monde": "Pharmacie Monde",
+        "bonne_nouvelle": "Bonne Nouvelle",
+        "avenir_pharma": "Avenir de la Pharmacie",
+        "business_officine": "Business Officine",
+        "lsv": "Le Saviez-Vous",
+        "sante": "Sante",
+    }
+    article_section = section_map.get(categorie, "Pharmacie")
+
+    schema = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": titre_raw[:110],
+        "description": resume_raw[:200],
+        "datePublished": date_published,
+        "dateModified": date_modified,
+        "author": {
+            "@type": "Person",
+            "name": "Stephen Robert",
+            "url": "https://pharmalpha.fr/stephen-robert",
+            "jobTitle": "Docteur en Pharmacie",
+            "sameAs": ["https://www.linkedin.com/in/stephen-robert-pharm/"]
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Pharm'Alpha",
+            "url": "https://pharmalpha.fr",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://pharmalpha.fr/assets/logo-pharmalpha.png"
+            }
+        },
+        "image": og_image,
+        "articleSection": article_section,
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": canonical_url
+        },
+        "inLanguage": "fr-FR",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "Pharm'Actus",
+            "url": "https://pharmalpha.fr/actus"
+        }
+    }
+
+    import json as _json
+    schema_json = _json.dumps(schema, ensure_ascii=False, indent=2)
+
+    return f'''<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{titre} - Pharm'Actus</title>
+<link rel="canonical" href="{canonical_url}" />
+<meta name="description" content="{meta_desc}" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="{titre}" />
+<meta property="og:description" content="{meta_desc}" />
+<meta property="og:url" content="{canonical_url}" />
+<meta property="og:image" content="{og_image}" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:site_name" content="Pharm'Actus" />
+<meta property="article:published_time" content="{date_published}" />
+<meta property="article:author" content="https://pharmalpha.fr/stephen-robert" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{titre}" />
+<meta name="twitter:description" content="{meta_desc}" />
+<meta name="twitter:image" content="{og_image}" />
+<script type="application/ld+json">
+{schema_json}
+</script>
+<meta http-equiv="refresh" content="0;url=https://actus.pharmalpha.fr/?a={article_id}" />
+</head>
+<body>
+<article>
+  <h1>{titre}</h1>
+  <p>{resume}</p>
+  <footer class="article-footer">
+    <p>Article redige par <a href="https://pharmalpha.fr/stephen-robert">Stephen Robert, Docteur en Pharmacie</a>.</p>
+    <p>Decouvrir <a href="https://pharmalpha.fr/formations">les formations Pharm'Alpha</a>.</p>
+  </footer>
+</article>
+<script>window.location.replace("https://actus.pharmalpha.fr/?a={article_id}");</script>
+</body>
+</html>'''
+
+
 def generate_article_pages(articles):
-    """Generate individual HTML pages for each article (og:tags for social sharing)."""
+    """Generate individual HTML pages for each article with full SEO metadata."""
     articles_dir = ROOT_DIR / "articles"
     articles_dir.mkdir(exist_ok=True)
 
@@ -1004,37 +1127,14 @@ def generate_article_pages(articles):
         if not article_id:
             continue
 
-        titre = a.get("titre", "").replace('"', "&quot;")
-        resume = a.get("resume", "").replace('"', "&quot;")
-        image_url = a.get("image_url", "")
-        if image_url:
-            og_image = f"https://actus.pharmalpha.fr/{image_url}"
-        else:
-            og_image = "https://actus.pharmalpha.fr/assets/og_image.png"
-
-        page_html = f'''<!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{titre} - Pharm'Actus</title>
-<meta property="og:title" content="{titre}" />
-<meta property="og:description" content="{resume}" />
-<meta property="og:image" content="{og_image}" />
-<meta property="og:url" content="https://actus.pharmalpha.fr/articles/{article_id}.html" />
-<meta property="og:type" content="article" />
-<meta property="og:site_name" content="Pharm'Actus" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="{titre}" />
-<meta name="twitter:description" content="{resume}" />
-<meta name="twitter:image" content="{og_image}" />
-<meta http-equiv="refresh" content="0;url=https://actus.pharmalpha.fr/?a={article_id}" />
-</head>
-<body>
-<p>Redirection vers <a href="https://actus.pharmalpha.fr/?a={article_id}">Pharm'Actus</a>...</p>
-</body>
-</html>'''
-
+        page_html = _build_article_page_html(
+            article_id=article_id,
+            titre_raw=a.get("titre", ""),
+            resume_raw=a.get("resume", ""),
+            image_url=a.get("image_url", ""),
+            date_str=a.get("date", ""),
+            categorie=a.get("categorie", ""),
+        )
         page_path = articles_dir / f"{article_id}.html"
         page_path.write_text(page_html, encoding="utf-8")
 
