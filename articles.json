@@ -1,6 +1,131 @@
 {
   "articles": [
     {
+      "id": "actu_2026_05_11_5",
+      "date": "2026-05-11",
+      "type": "actu",
+      "categorie": "business_officine",
+      "titre": "Hantavirus : isolation obligatoire et nouveau protocole qui va coûter cher à l'État",
+      "resume": "Un décret officialise la quarantaine obligatoire pour les cas contacts d'Hantavirus. L'État prend en charge les frais d'isolement dans un contexte d'urgence sanitaire mondiale.",
+      "full_text": "Un décret officialise la quarantaine obligatoire pour les cas contacts d'Hantavirus. L'État prend en charge les frais d'isolement dans un contexte d'urgence sanitaire mondiale.\n\n## Contexte\n\nLe gouvernement vient de publier un décret précisant les modalités d'isolement obligatoire pour les passagers français rapatriés du navire MV Hondius, touché par plusieurs cas d'Hantavirus. Cette mesure d'urgence sanitaire fait suite aux 5 rapatriements français hospitalisés à Paris, dont l'un présente des symptômes. L'Hantavirus, virus émergent à forte mortalité (jusqu'à 60% selon les souches), nécessite des protocoles d'isolement stricts similaires à ceux déployés lors du COVID-19. L'extension internationale de l'épidémie - avec des parachutistes britanniques dépêchés sur l'île Tristan da Cunha - confirme l'ampleur du défi sanitaire. Ce nouveau cadre réglementaire d'urgence sanitaire pourrait servir de modèle pour de futures épidémies et impacte directement l'organisation des pharmacies en cas d'activation du plan sanitaire national.\n\n## Analyse business\n\nLe coût de gestion de cette crise sanitaire émergente s'annonce considérable pour les finances publiques. Les mesures d'isolement obligatoire, prises en charge par l'État, incluent l'hébergement, la surveillance médicale 24h/24 et les tests de dépistage répétés. Pour contexte, l'isolement COVID avait coûté en moyenne 150€/jour/personne en structure dédiée, soit plus de 2 100€ pour une quarantaine de 14 jours. Avec 5 cas français actuellement isolés, on peut estimer le coût initial à plus de 10 000€, sans compter les frais de rapatriement médical depuis les Canaries (environ 50 000€ par vol sanitaire). L'impact business pour les pharmacies pourrait être significatif si le protocole s'étend. Lors de la crise COVID, les pharmacies avaient bénéficié d'une enveloppe de 400M€ en 2020 pour les missions d'urgence sanitaire (dépistage, vaccination, distribution masques). Le nouveau cadre réglementaire d'isolement obligatoire ouvre la possibilité de missions pharmaceutiques rémunérées : livraison de traitements aux isolés, dispensation en structure de quarantaine, conseil télépharmacie. Les 21 000 officines françaises pourraient être sollicitées selon les mêmes modalités que les 'pharmacies COVID' de 2020-2022.\n\n## Recommandations actionnables\n\n1. Veille réglementaire — Surveille les textes d'application du décret isolement pour identifier les missions pharmaceutiques rémunérées possibles\n2. Formation équipes — Forme tes collaborateurs aux protocoles d'urgence sanitaire et gestion des épidémies émergentes\n3. Partenariats locaux — Noue des contacts avec l'ARS et les structures d'hébergement d'urgence de ton secteur\n4. Stock stratégique — Constitue un stock de produits de première nécessité (EPI, antiseptiques) en cas d'activation rapide\n5. Outils numériques — Prépare tes solutions de télépharmacie et livraison pour servir les populations isolées\n\n## Sources citees\n\n- Le Monde Sante\n- Le Monde Sante (Live)",
+      "source": "Pharm'Actus",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Business",
+      "image_url": "assets/img_actu_2026_05_11_5.jpg",
+      "tags": [
+        "urgence-sanitaire",
+        "reglementation",
+        "missions-pharmaceutiques",
+        "crise-epidemique"
+      ]
+    },
+    {
+      "id": "actu_2026_05_11_4",
+      "date": "2026-05-11",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "Amortissement fonds de commerce : pourquoi foncer dès la 1ère acquisition",
+      "resume": "La mesure d'amortissement sur 10 ans des fonds acquis entre 2022-2025 change tout pour les primo-installants. Sur un rachat à 1,5M€, l'impact fiscal est énorme. Les chiffres vont te surprendre.",
+      "full_text": "Tu hésites encore à racheter ? La mesure d'amortissement du fonds sur 10 ans, c'est du bonus fiscal qui ne se refuse pas.\n\nPrenons un exemple concret : fonds racheté 1,5M€ en société à l'IS. Avec l'amortissement dégressif sur 10 ans, tu économises 375 000€ d'impôt sur la période. Pas mal, non ?\n\nSans cette mesure, ton fonds reste immobilisé en valeur comptable jusqu'à la revente. Avec, tu dégages de la trésorerie année après année pour investir ou rembourser tes emprunts.\n\nLa mesure court jusqu'aux acquisitions 2025. Si tu trainasses jusqu'en 2026, tu passes à côté. Et vu l'inflation des prix des fonds, ce sera encore plus douloureux.\n\nAu final, cette niche fiscale rend l'installation plus accessible. C'est le moment ou jamais de concrétiser ton projet.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/business/transactions/acquisition/pourquoi-amortir-son-fonds-de-commerce-des-la-premiere-acquisition",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_05_11_4.jpg",
+      "tags": [
+        "fonds",
+        "amortissement",
+        "acquisition",
+        "fiscal",
+        "installation"
+      ]
+    },
+    {
+      "id": "actu_2026_05_11_3",
+      "date": "2026-05-11",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "Camcevi arrive : leuproréline 6 mois pour simplifier le cancer prostate",
+      "resume": "Accord Healthcare lance Camcevi, une leuproréline injectable tous les 6 mois au lieu de 1 ou 3 mois. Une vraie amélioration de confort pour nos patients sous hormonothérapie. L'observance va s'améliorer.",
+      "full_text": "Enfin une bonne nouvelle pour nos patients en hormonothérapie ! Camcevi débarque avec sa leuproréline à libération prolongée sur 6 mois.\n\nFini les injections mensuelles ou trimestrielles. Deux piqûres par an, c'est tout. Pour un mec de 75 ans sous traitement au long cours, c'est un vrai soulagement.\n\nLe produit vise les cancers de prostate avancés hormonodépendants, plus l'association avec la radiothérapie dans certaines formes. Administration sous responsabilité du professionnel de santé, comme d'hab.\n\nCôté observance, c'est du bonus pur. Moins de contraintes, moins d'oublis, moins de stress pour le patient et sa famille. Et pour les médecins, ça simplifie le suivi.\n\nAu final, on progresse vers plus d'humanité dans les traitements lourds. C'est exactement ce genre d'innovation qui fait du sens au comptoir.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/therapeutique/medicaments/fiches-medicaments/cancer-de-la-prostate-camcevi-une-leuproreline-injectable-tous-les-6-mois",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_05_11_3.jpg",
+      "tags": [
+        "cancer",
+        "prostate",
+        "leuproreline",
+        "observance",
+        "injection"
+      ]
+    },
+    {
+      "id": "actu_2026_05_11_2",
+      "date": "2026-05-11",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "Trump vire le patron de la FDA : Makary dégage après 4 mois",
+      "resume": "Donald Trump prépare le limogeage de Marty Makary, commissaire de la FDA depuis janvier. Quatre mois au poste, c'est du record même pour l'administration Trump. Les remous réglementaires américains vont secouer notre filière.",
+      "full_text": "Coup de théâtre à Washington : Trump s'apprête à virer Marty Makary, le patron de la FDA nommé en janvier. Le Wall Street Journal balance l'info ce matin.\n\nQuatre mois au poste pour Makary, chirurgien de Johns Hopkins pourtant acquis aux idées trumpistes. Même pour l'administration Trump, c'est du grand n'importe quoi niveau stabilité.\n\nCette instabilité à la tête de la FDA, ça nous concerne direct. L'agence américaine donne souvent le la pour les décisions européennes, surtout sur les nouvelles molécules et les AMM.\n\nConcrètement ? Retards possibles sur les autorisations, changements de doctrine réglementaire, remise en cause de dossiers en cours. Les labos vont naviguer à vue.\n\nAu comptoir demain matin, on va peut-être voir des retards d'approvisionnement sur certaines nouveautés. Encore une fois, l'instabilité politique américaine va percuter notre quotidien d'officine.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/pharma/trump-plans-fire-fda-chief-makary-report",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/img_actu_2026_05_11_2.jpg",
+      "tags": [
+        "fda",
+        "trump",
+        "regulation",
+        "usa",
+        "makary"
+      ]
+    },
+    {
+      "id": "actu_2026_05_11_1",
+      "date": "2026-05-11",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "L'IA débarque chez Novo Nordisk : ChatGPT dans la R&D pharma",
+      "resume": "Novo Nordisk s'associe avec OpenAI pour déployer l'IA générative sur toute sa chaîne, de la découverte à la production. Une révolution qui va changer la donne dans le développement médicament. Et ça, ça nous concerne tous.",
+      "full_text": "L'IA générative débarque en force dans la pharma américaine. Novo Nordisk vient de signer avec OpenAI pour intégrer ChatGPT et consorts dans toute sa chaîne de valeur.\n\nOn parle de quoi exactement ? IA en recherche pour identifier de nouvelles molécules, optimisation des processus de production, et même support aux opérations commerciales. Les pilotes sont déjà en cours.\n\nAWS et Anthropic surfent aussi sur la vague avec des partenariats similaires chez d'autres labos. L'objectif : réduire les délais de développement de 10 à 15 ans à... beaucoup moins.\n\nPour nous au comptoir ? Cette accélération va mécaniquement augmenter le nombre de nouvelles molécules qui vont arriver. Plus de spécialités, plus de formation à prévoir, plus d'expertise à développer.\n\nL'industrie pharma est en train de basculer dans une nouvelle ère. Et devinez quoi ? On va être aux premières loges pour en voir les effets.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/business/international/openai-anthropic-aws-la-pharma-americaine-accelere-sur-lia-generative",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_05_11_1.jpg",
+      "tags": [
+        "ia",
+        "recherche",
+        "innovation",
+        "novo",
+        "developpement"
+      ]
+    },
+    {
+      "id": "lsv_2026_05_11",
+      "date": "2026-05-11",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? La première greffe de visage a duré 15 heures",
+      "resume": "En 2005, une femme défigurée par son chien reçoit le premier visage greffé au monde. Une prouesse technique qui révolutionne la chirurgie reconstructrice mais soulève des questions éthiques inédites.",
+      "full_text": "Imagine recevoir le visage d'une autre personne. C'était impensable jusqu'au 27 novembre 2005, quand Isabelle Dinoire devient la première greffée de la face au monde.\n\nTout commence tragiquement : cette Française de 38 ans est défigurée par son chien après avoir perdu connaissance sous médicaments. Nez, lèvres, menton... la moitié de son visage a disparu. Les chirurgiens plasticiens sont impuissants.\n\nLe professeur Devauchelle à Amiens tente l'impossible : greffer le visage d'une donneuse en état de mort cérébrale. Quinze heures d'opération, deux équipes chirurgicales, des milliers de sutures microscopiques. Le défi technique est titanesque.\n\nMais voici le twist : contrairement aux autres greffes, celle-ci pose un problème identitaire unique. Isabelle ne ressemble ni à elle-même, ni à la donneuse. Elle devient quelqu'un de nouveau, entre deux identités. Les psychiatres découvrent un territoire inconnu.\n\nL'opération réussit. Isabelle retrouve sourire, parole et goût. Mais elle développe deux cancers liés aux anti-rejet et meurt en 2016. Success story ou échec ? Le débat divise encore.\n\nDepuis, une quarantaine de greffes faciales ont eu lieu dans le monde. Aujourd'hui, on maîtrise mieux les protocoles immunosuppresseurs, et cette chirurgie extrême redonne espoir aux grands brûlés que tu croises parfois au comptoir.",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_05_11.jpg",
+      "tags": [
+        "chirurgie",
+        "greffe",
+        "visage",
+        "transplantation",
+        "innovation"
+      ]
+    },
+    {
       "id": "actu_2026_05_10_5",
       "date": "2026-05-10",
       "type": "actu",
@@ -3014,6 +3139,6 @@
       ]
     }
   ],
-  "count": 146,
-  "updated_at": "2026-05-10T06:51:58.352767+02:00"
+  "count": 152,
+  "updated_at": "2026-05-11T07:04:37.563413+02:00"
 }
