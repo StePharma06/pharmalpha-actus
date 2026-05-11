@@ -27,50 +27,32 @@ sys.path.insert(0, str(SCRIPT_DIR))
 from update_actus import _build_article_page_html
 
 
-def patch_orphan_stub(path: Path, article_id: str) -> bool:
-    """Patch a legacy stub that has no JSON data.
+def _build_orphan_stub_html(article_id: str, titre_raw: str, resume_raw: str, og_image: str) -> str:
+    """Build a clean HTML stub for an orphan article (no articles.json entry).
 
-    Reads og:title and og:description from the existing file and injects:
-    - canonical (pharmalpha.fr/actus)
-    - meta description
-    - minimal Article JSON-LD
-
-    Returns True if patched, False if already has canonical (skip).
+    Uses the same template as _build_article_page_html to ensure consistent,
+    well-formed HTML across all stubs.
     """
-    from bs4 import BeautifulSoup
+    # Escape for HTML attributes
+    titre = titre_raw.replace('"', "&quot;").replace("'", "&#39;")
+    resume = resume_raw.replace('"', "&quot;").replace("'", "&#39;") if resume_raw else ""
 
-    text = path.read_text(encoding="utf-8")
+    meta_desc_raw = resume
+    if len(meta_desc_raw) > 155:
+        meta_desc = meta_desc_raw[:152] + "..."
+    else:
+        meta_desc = meta_desc_raw
 
-    # Already patched in a previous run
-    if 'rel="canonical"' in text:
-        return False
-
-    soup = BeautifulSoup(text, "html.parser")
-    head = soup.find("head")
-    if not head:
-        return False
-
-    # Extract data from existing OG tags
-    def og(prop):
-        tag = soup.find("meta", property=prop)
-        return tag.get("content", "") if tag else ""
-
-    titre_raw = og("og:title")
-    resume_raw = og("og:description")
-    og_image = og("og:image")
-
-    if not titre_raw:
-        return False
+    # OG image: prefer article image, fallback to default
+    if og_image:
+        # Normalize: replace actus.pharmalpha.fr with pharmalpha.fr/actus (Vercel target)
+        image_url = og_image.replace("https://actus.pharmalpha.fr", "https://pharmalpha.fr/actus")
+    else:
+        image_url = "https://pharmalpha.fr/assets/og-default-actus.png"
 
     canonical_url = f"https://pharmalpha.fr/actus/articles/{article_id}.html"
 
-    # meta description: resume truncated to 155 chars
-    if resume_raw and len(resume_raw) > 155:
-        meta_desc = resume_raw[:152] + "..."
-    else:
-        meta_desc = resume_raw
-
-    # Extract date from article_id pattern: actu_YYYY_MM_DD_N or lsv_YYYY_MM_DD
+    # Date from article_id: actu_YYYY_MM_DD_N or lsv_YYYY_MM_DD
     date_published = ""
     m = re.search(r"(\d{4})_(\d{2})_(\d{2})", article_id)
     if m:
@@ -99,7 +81,7 @@ def patch_orphan_stub(path: Path, article_id: str) -> bool:
                 "url": "https://pharmalpha.fr/assets/logo-pharmalpha.png"
             }
         },
-        "image": og_image,
+        "image": image_url,
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": canonical_url
@@ -113,55 +95,72 @@ def patch_orphan_stub(path: Path, article_id: str) -> bool:
     }
     schema_json = json.dumps(schema, ensure_ascii=False, indent=2)
 
-    # Insert canonical just after charset meta
-    charset_tag = head.find("meta", attrs={"charset": True})
-    insert_after = charset_tag if charset_tag else head
+    return f'''<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{titre} - Pharm'Actus</title>
+<link rel="canonical" href="{canonical_url}" />
+<meta name="description" content="{meta_desc}" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="{titre}" />
+<meta property="og:description" content="{meta_desc}" />
+<meta property="og:url" content="{canonical_url}" />
+<meta property="og:image" content="{image_url}" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:site_name" content="Pharm'Actus" />
+<meta property="article:published_time" content="{date_published}" />
+<meta property="article:author" content="https://pharmalpha.fr/stephen-robert" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{titre}" />
+<meta name="twitter:description" content="{meta_desc}" />
+<meta name="twitter:image" content="{image_url}" />
+<script type="application/ld+json">
+{schema_json}
+</script>
+<meta http-equiv="refresh" content="0;url=https://actus.pharmalpha.fr/?a={article_id}" />
+</head>
+<body>
+<article>
+  <h1>{titre}</h1>
+  <p>{resume}</p>
+  <footer class="article-footer">
+    <p>Article redige par <a href="https://pharmalpha.fr/stephen-robert">Stephen Robert, Docteur en Pharmacie</a>.</p>
+    <p>Decouvrir <a href="https://pharmalpha.fr/formations">les formations Pharm'Alpha</a>.</p>
+  </footer>
+</article>
+<script>window.location.replace("https://actus.pharmalpha.fr/?a={article_id}");</script>
+</body>
+</html>'''
 
-    # Build new tags as strings then insert via BeautifulSoup
-    canonical_tag = soup.new_tag("link", rel="canonical", href=canonical_url)
-    desc_tag = soup.new_tag("meta")
-    desc_tag["name"] = "description"
-    desc_tag["content"] = meta_desc
-    schema_script = soup.new_tag("script", type="application/ld+json")
-    schema_script.string = "\n" + schema_json + "\n"
 
-    # og:url: update to point to pharmalpha.fr if still on actus.pharmalpha.fr
-    og_url_tag = soup.find("meta", property="og:url")
-    if og_url_tag:
-        og_url_tag["content"] = canonical_url
+def patch_orphan_stub(path: Path, article_id: str) -> bool:
+    """Rebuild a legacy orphan stub (no articles.json entry) using a clean template.
 
-    # Insert at end of head (before closing tag)
-    head.append(canonical_tag)
-    head.append(desc_tag)
-    head.append(schema_script)
+    Extracts og:title, og:description, og:image from the existing file,
+    then rewrites the stub entirely with _build_orphan_stub_html.
 
-    # Add og:locale if missing
-    if not soup.find("meta", property="og:locale"):
-        locale_tag = soup.new_tag("meta")
-        locale_tag["property"] = "og:locale"
-        locale_tag["content"] = "fr_FR"
-        head.append(locale_tag)
+    Always rewrites (idempotent). Returns True if written, False on missing data.
+    """
+    from bs4 import BeautifulSoup
 
-    # Add article:published_time if missing and we have a date
-    if date_published and not soup.find("meta", property="article:published_time"):
-        pub_tag = soup.new_tag("meta")
-        pub_tag["property"] = "article:published_time"
-        pub_tag["content"] = date_published
-        head.append(pub_tag)
+    text = path.read_text(encoding="utf-8")
+    soup = BeautifulSoup(text, "html.parser")
 
-    # Add internal links footer to body if not present
-    body = soup.find("body")
-    if body and "pharmalpha.fr/formations" not in str(body):
-        footer_html = (
-            '<footer class="article-footer">'
-            '<p>Article redige par <a href="https://pharmalpha.fr/stephen-robert">Stephen Robert, Docteur en Pharmacie</a>.</p>'
-            '<p>Decouvrir <a href="https://pharmalpha.fr/formations">les formations Pharm\'Alpha</a>.</p>'
-            "</footer>"
-        )
-        footer_soup = BeautifulSoup(footer_html, "html.parser")
-        body.append(footer_soup)
+    def og(prop):
+        tag = soup.find("meta", property=prop)
+        return tag.get("content", "").strip() if tag else ""
 
-    path.write_text(str(soup), encoding="utf-8")
+    titre_raw = og("og:title")
+    resume_raw = og("og:description")
+    og_image = og("og:image")
+
+    if not titre_raw:
+        return False
+
+    html = _build_orphan_stub_html(article_id, titre_raw, resume_raw, og_image)
+    path.write_text(html, encoding="utf-8")
     return True
 
 
@@ -231,7 +230,7 @@ def main() -> None:
             print(f"  [WARN] Failed to patch {orphan_id}.html: {e}")
             patch_failed += 1
 
-    print(f"Pass 2 - Orphan stubs: {patched} patched, {already_ok} already had canonical, {patch_failed} failed")
+    print(f"Pass 2 - Orphan stubs: {patched} rebuilt, {already_ok} skipped (no og:title), {patch_failed} failed")
 
     # --- Spot-check ---
     if articles:
