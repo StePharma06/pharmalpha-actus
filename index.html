@@ -1176,7 +1176,7 @@ body {
       <img src="assets/logo_pharmactus.png" alt="Pharm'Actus">
     </div>
     <div class="header-right">
-      <a href="archives.html" class="header-link header-link-archives">
+      <a href="/actus/archives.html" class="header-link header-link-archives">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 8v13H3V8"/><path d="M1 3h22v5H1z"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
         Archives
       </a>
@@ -1257,7 +1257,7 @@ body {
         Recherche par mot-cl&eacute;, filtres par cat&eacute;gorie et <strong>tags th&eacute;matiques</strong> pour retrouver n'importe quelle actu en quelques clics.
       </div>
     </div>
-    <a href="archives.html" class="archives-cta-btn">
+    <a href="/actus/archives.html" class="archives-cta-btn">
       Voir les archives
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
     </a>
@@ -2134,7 +2134,7 @@ const CARDS_COUNT = 6; // Nombre de cards affichees en grille
 function renderCardTags(a) {
   if (!a.tags || a.tags.length === 0) return '';
   const tags = a.tags.slice(0, 4).map(t =>
-    `<a href="archives.html?tag=${encodeURIComponent(t)}" class="card-tag" onclick="event.stopPropagation()">#${t}</a>`
+    `<a href="/actus/archives.html?tag=${encodeURIComponent(t)}" class="card-tag" onclick="event.stopPropagation()">#${t}</a>`
   ).join('');
   return `<div class="card-tags">${tags}</div>`;
 }
