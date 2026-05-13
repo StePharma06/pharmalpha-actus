@@ -1,6 +1,131 @@
 {
   "articles": [
     {
+      "id": "actu_2026_05_13_5",
+      "date": "2026-05-13",
+      "type": "actu",
+      "categorie": "business_officine",
+      "titre": "Absentéisme en entreprise : un marché de 25 Md€ qui s'ouvre aux pharmaciens",
+      "resume": "L'absentéisme coûte 25 milliards d'euros par an aux entreprises françaises. Les assureurs mobilisent les professionnels de santé pour des solutions préventives.",
+      "full_text": "L'absentéisme coûte 25 milliards d'euros par an aux entreprises françaises. Les assureurs mobilisent les professionnels de santé pour des solutions préventives.\n\n## Contexte\n\nL'absentéisme explose dans les entreprises françaises, atteignant un taux moyen de 5,11% en 2025 selon Malakoff Humanis, soit +0,3 point en un an. Coût total estimé : 25 milliards d'euros annuels pour l'économie française. Face à cette hémorragie, les assureurs santé entreprise changent de stratégie. Fini le simple remboursement : ils deviennent consultants en prévention santé pour leurs clients employeurs. Axa, Malakoff Humanis, Harmonie Mutuelle proposent désormais des audits d'absentéisme, des programmes de prévention sur mesure et surtout, ils mobilisent les professionnels de santé de proximité. Un virage qui ouvre de nouveaux marchés aux pharmaciens, positionnés comme acteurs clés de la santé au travail.\n\n## Analyse business\n\nLes chiffres parlent : 60% de l'absentéisme est lié aux troubles musculo-squelettiques (TMS) et au stress, selon l'INRS. Deux domaines où l'officine peut intervenir efficacement. Le marché de la santé au travail pèse déjà 2,8 milliards d'euros en France, avec une croissance de +7% par an depuis 2022. Les assureurs y voient une mine d'or : chaque euro investi en prévention génère 2,2€ d'économies sur les arrêts de travail, d'après une étude McKinsey 2025. Concrètement, Malakoff Humanis a signé 340 contrats de prévention entreprise en 2025 (+45% vs 2024), intégrant systématiquement un volet 'pharmacien référent'. Axa Entreprises teste depuis janvier 2026 des partenariats avec 150 pharmacies sur 5 régions pour des bilans de médication préventifs. Objectif : réduire de 15% l'absentéisme lié aux effets indésirables médicamenteux, responsable de 8% des arrêts selon l'ANSM. Le modèle économique ? 85€ par salarié et par an pour un programme complet prévention-pharmacien, facturé directement à l'assureur.\n\n## Recommandations actionnables\n\n1. Contractualiser avec les assureurs — Contacte Malakoff Humanis, Axa Entreprises et Harmonie Mutuelle pour intégrer leurs réseaux prévention santé au travail, rémunération garantie 85€/salarié/an.\n\n2. Former ton équipe aux TMS — 60% de l'absentéisme vient des troubles musculo-squelettiques. Développe ton expertise ergonomie et prévention dos/articulations.\n\n3. Proposer des bilans de médication — 8% des arrêts sont dus aux effets indésirables. Lance un service 'Bilan Thérapeutique Salarié' facturé 45€ aux entreprises locales.\n\n4. Cibler les PME de ton secteur — Démoche les entreprises de 50-300 salariés, celles qui ont le plus besoin d'externaliser leur prévention santé.\n\n## Sources citees\n\n- Le Monde Santé",
+      "source": "Pharm'Actus",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Business",
+      "image_url": "assets/img_actu_2026_05_13_5.jpg",
+      "tags": [
+        "sante-travail",
+        "absenteisme",
+        "assureurs",
+        "prevention"
+      ]
+    },
+    {
+      "id": "actu_2026_05_13_4",
+      "date": "2026-05-13",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "Orforglipron oral : le GLP-1 en comprimé qui change tout",
+      "resume": "Fini les injections ? Cette nouvelle molécule de Lilly prouve qu'on peut maintenir la perte de poids avec un GLP-1 oral. Phase 3b concluante dans l'essai ATTAIN-MAINTAIN.",
+      "full_text": "Révolution en vue : Eli Lilly vient de prouver qu'un GLP-1 oral peut maintenir efficacement la perte de poids obtenue avec les injections. L'essai ATTAIN-MAINTAIN en phase 3b vient de tomber.\n\nL'orforglipron, premier GLP-1 non-peptidique par voie orale, a démontré qu'il conserve tous les bénéfices cardiométaboliques des versions injectables. Un game-changer pour l'observance !\n\nImagine l'impact au comptoir : plus de problèmes d'aiguilles, de conservation au frigo, ou de patients qui abandonnent à cause des piqûres. Un simple comprimé quotidien.\n\nCette avancée pourrait démocratiser l'accès aux GLP-1 pour tous ces patients réticents aux injections. On parle potentiellement de millions de diabétiques et d'obèses supplémentaires qui pourraient bénéficier du traitement.\n\nSi les résultats se confirment jusqu'à l'AMM, on tient là une vraie rupture technologique. Les laboratoires concurrents vont devoir suivre rapidement.",
+      "source": "Nature Medicine",
+      "source_url": "https://www.nature.com/articles/s41591-026-04386-7",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_05_13_4.jpg",
+      "tags": [
+        "glp1",
+        "oral",
+        "orforglipron",
+        "obesite",
+        "innovation"
+      ]
+    },
+    {
+      "id": "actu_2026_05_13_3",
+      "date": "2026-05-13",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "Mounjaro explose : premier médicament mondial avec 8,66 Md$",
+      "resume": "Le tirzépatide d'Eli Lilly vient de détrôner Keytruda au sommet. Une croissance de +125% qui confirme la révolution GLP-1 en cours. L'obésité et le diabète boostent les ventes comme jamais.",
+      "full_text": "C'est officiel : Mounjaro (tirzépatide) devient LE médicament le plus vendu au monde au premier trimestre 2026. Avec 8,66 milliards de dollars, il dépasse même Keytruda d'un cheveu.\n\nLa croissance ? Stratosphérique : +125% en un an, contre \"seulement\" +12% pour l'ex-champion Keytruda. Cette explosion s'explique par la double indication diabète-obésité qui élargit considérablement la patientèle.\n\nPour nous pharmaciens, c'est la confirmation que les GLP-1 révolutionnent notre métier. Ces molécules transforment la prise en charge du diabète ET redéfinissent l'approche de l'obésité comme maladie chronique.\n\nEt devinez quoi ? On n'est qu'au début. Avec les nouvelles indications cardiovasculaires à venir et l'arrivée des formes orales, cette catégorie va encore exploser.\n\nUne révolution thérapeutique qui change la donne pour des millions de patients. Pas mal pour une petite molécule qui imite une hormone intestinale, non ?",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/business/economie/vente/mounjaro-devient-le-medicament-le-plus-vendu-au-monde",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_05_13_3.jpg",
+      "tags": [
+        "mounjaro",
+        "glp1",
+        "diabete",
+        "obesite",
+        "succes"
+      ]
+    },
+    {
+      "id": "actu_2026_05_13_2",
+      "date": "2026-05-13",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "Big Pharma : quand Daiichi Sankyo vise le top 5 mondial en onco",
+      "resume": "Le japonais dévoile son plan quinquennal : devenir n°5 mondial en oncologie d'ici 2035, porté par ses ADC révolutionnaires. Avec 1,3 Md$ d'économies au programme et une stratégie agressive.",
+      "full_text": "Daiichi Sankyo ne fait pas dans la demi-mesure. Le laboratoire japonais vient de dévoiler son nouveau plan stratégique 5 ans avec un objectif XXL : intégrer le top 5 mondial en oncologie avant 2035.\n\nLeur arme secrète ? Les anticorps-médicaments conjugués (ADC), une technologie où ils excellent déjà. Ces « missiles guidés » qui visent spécifiquement les cellules cancéreuses leur donnent une longueur d'avance considérable.\n\nPour financer cette ambition, ils lancent un plan d'optimisation de 1,3 milliard de dollars. Du jamais vu dans l'industrie.\n\nCe qui nous intéresse : cette course à l'innovation en onco va multiplier les nouveaux traitements dans nos rayons. Des thérapies plus ciblées, potentiellement moins d'effets indésirables pour nos patients.\n\nLa bataille des géants pharmaceutiques s'intensifie. Et au final, c'est le patient qui y gagne.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/pharma/daiichi-sankyo-targets-global-top-5-oncology-rank-2035-13b-efficiency-drive-new-5-year-plan",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/img_actu_2026_05_13_2.jpg",
+      "tags": [
+        "oncologie",
+        "adc",
+        "daiichi",
+        "innovation",
+        "strategie"
+      ]
+    },
+    {
+      "id": "actu_2026_05_13_1",
+      "date": "2026-05-13",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "Souveraineté pharma : Bruxelles muscle sa riposte contre les pénuries",
+      "resume": "L'UE vient d'adopter son règlement sur les médicaments critiques. Objectif : sécuriser l'approvisionnement européen face aux 50% de pénuries liées à la dépendance asiatique. Un tournant majeur pour ton stock.",
+      "full_text": "Ça y est, l'Europe sort l'artillerie lourde contre les pénuries. Dans la nuit du 11 au 12 mai, le Parlement et le Conseil ont bouclé l'accord sur le futur règlement « médicaments critiques ».\n\nLe constat est brutal : plus de 50% des ruptures qu'on se tape au quotidien viennent de notre dépendance aux sites de production asiatiques. Fini de subir ?\n\nLe texte vise à relocaliser la production européenne des molécules essentielles. Traduction concrète : des incitations fiscales pour ramener les chaînes d'approvisionnement plus près de chez nous.\n\nPour toi au comptoir, ça signifie potentiellement moins de galères avec les substitutions impossibles et les clients frustrés. Mais attention, cette stratégie « acheter européen » va prendre du temps à se déployer.\n\nEn attendant, continue à diversifier tes fournisseurs et à surveiller tes stocks critiques comme le lait sur le feu.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/acheter-europeen-lunion-europeenne-muscle-sa-riposte-contre-les-penuries-de-medicaments",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_05_13_1.jpg",
+      "tags": [
+        "penuries",
+        "souverainete",
+        "approvisionnement",
+        "europe",
+        "production"
+      ]
+    },
+    {
+      "id": "lsv_2026_05_13",
+      "date": "2026-05-13",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? Le premier test de grossesse se faisait avec des grenouilles",
+      "resume": "Avant les bandelettes, il fallait une semaine et une pauvre grenouille sud-africaine pour savoir si madame était enceinte. L'histoire du test Hogben va te surprendre !",
+      "full_text": "Imagine un peu : en 1930, pour savoir si une femme était enceinte, on injectait ses urines dans une grenouille ! C'est l'histoire délirante du test Hogben, du nom du biologiste britannique Lancelot Hogben.\n\nLe principe ? On injectait l'urine de la patiente dans les muscles dorsaux d'une grenouille femelle Xenopus laevis. Si la femme était enceinte, les hormones HCG présentes dans ses urines déclenchaient l'ovulation chez la grenouille en 12 à 24 heures. Pas enceinte ? Rien ne se passait.\n\nLe truc génial : cette méthode était fiable à 98% ! Problème : il fallait une semaine pour avoir le résultat, et surtout... une grenouille par test. Les laboratoires se sont mis à élever des milliers de Xenopus. Ces pauvres batraciens sont devenus les cobayes de la maternité mondiale.\n\nLe plus fou ? Ce test a été utilisé jusqu'aux années 1960 ! Avant ça, on testait sur des lapines (qu'il fallait tuer pour examiner leurs ovaires) ou des souris. Au moins, les grenouilles survivaient à l'opération.\n\nAujourd'hui, quand une cliente achète son test de grossesse en 2 minutes au comptoir, elle ne se doute pas qu'il y a 70 ans, il fallait kidnapper une grenouille pour le même résultat !",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_05_13.jpg",
+      "tags": [
+        "histoire",
+        "diagnostic",
+        "grossesse",
+        "laboratoire",
+        "hormone"
+      ]
+    },
+    {
       "id": "actu_2026_05_12_5",
       "date": "2026-05-12",
       "type": "actu",
@@ -3264,6 +3389,6 @@
       ]
     }
   ],
-  "count": 158,
-  "updated_at": "2026-05-12T06:43:36.882840+02:00"
+  "count": 164,
+  "updated_at": "2026-05-13T06:55:42.037345+02:00"
 }
