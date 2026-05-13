@@ -1,23 +1,29 @@
 /**
- * Site Navbar Injector (cohesion pharmalpha.fr)
- * Injecte la navbar du site principal en haut de chaque page Pharm'Actus
- * Inclure via : <script defer src="/actus/assets/site-nav.js"></script>
- *               OU <script defer src="assets/site-nav.js"></script>
+ * Site Navbar Injector - pages Pharm'Actus (variante de pharmalpha.fr/assets/site-nav.js)
+ * Rendu strictement identique à la nav principale du site.
+ * Inclure via : <script defer src="/assets/site-nav.js?v=20260513a"></script>
+ *
+ * Spécificités actus (vs nav principale) :
+ *   - ROOT absolu (compat actus.pharmalpha.fr en dual push)
+ *   - Default __paNavActive = 'actus' si non défini
+ *   - Règle CSS défensive pour neutraliser headers natifs des pages d'articles
+ *
+ * Override lien actif : <script>window.__paNavActive='formations'</script> avant ce script.
+ * Valeurs : 'services' | 'services-labos' | 'formations' | 'actus' | 'stephen' | 'inscription'
  */
 (function () {
   if (window.__paSiteNavInjected) return;
   window.__paSiteNavInjected = true;
 
+  if (!window.__paNavActive) window.__paNavActive = 'actus';
   var ROOT = 'https://pharmalpha.fr';
 
-  // ===== CSS =====
-  // Aligne sur /assets/site-nav.css (nav home pharmalpha.fr) — autorite : site-nav.css
   var css = '' +
     '.pa-site-nav{position:fixed;top:0;left:0;right:0;z-index:900;padding:10px 0;background:#0a0a0a;transition:background .35s,padding .35s,box-shadow .35s;}' +
     '.pa-site-nav.solid{background:#fff;padding:6px 0;box-shadow:0 1px 24px rgba(0,0,0,.07);}' +
     '.pa-site-nav-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:nowrap;max-width:1480px;margin:0 auto;padding:0 28px;gap:18px;}' +
     '.pa-site-nav-logo{flex-shrink:0;display:flex;align-items:center;}' +
-    '.pa-site-nav-logo img{height:clamp(60px,6vw,110px) !important;width:auto !important;filter:invert(1);transition:filter .35s,height .3s;}' +
+    '.pa-site-nav-logo img{height:clamp(51px,5.1vw,93px) !important;width:auto !important;filter:invert(1);transition:filter .35s,height .3s;}' +
     '.pa-site-nav.solid .pa-site-nav-logo img{height:clamp(40px,3vw,52px) !important;filter:none;}' +
     '.pa-site-nav-links{display:flex;align-items:center;gap:4px;list-style:none;padding:0;margin:0;flex-wrap:nowrap;}' +
     '.pa-site-nav-links a{padding:8px 14px;font-size:14px;font-weight:500;color:rgba(255,255,255,.8);border-radius:6px;text-decoration:none;transition:all .3s ease;white-space:nowrap;}' +
@@ -25,6 +31,7 @@
     '.pa-site-nav.solid .pa-site-nav-links a{color:#0a0a0a;}' +
     '.pa-site-nav.solid .pa-site-nav-links a:hover{color:#ff914d;background:transparent;}' +
     '.pa-site-nav-links a.active{color:#ff914d;font-weight:700;}' +
+    '.pa-site-nav.solid .pa-site-nav-links a.active{color:#ff914d;}' +
     '.pa-site-nav-right{flex-shrink:0;display:flex;align-items:center;gap:12px;}' +
     '.pa-site-nav-btn{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:8px;font-size:14px;font-weight:600;letter-spacing:0.01em;text-decoration:none;transition:all .3s ease;white-space:nowrap;cursor:pointer;}' +
     '.pa-site-nav-btn-orange{background:#ff914d;color:#fff;}' +
@@ -63,14 +70,18 @@
   style.textContent = css;
   document.head.appendChild(style);
 
-  // ===== HTML =====
+  function a(key, label, href) {
+    var active = (window.__paNavActive === key) ? ' class="active"' : '';
+    return '<li><a href="' + href + '"' + active + '>' + label + '</a></li>';
+  }
+
   var html = '' +
     '<div class="pa-mobile-menu" id="paMobileMenu">' +
       '<button class="pa-mm-close" aria-label="Fermer" onclick="paCloseMM()">&times;</button>' +
       '<a href="' + ROOT + '/#services" onclick="paCloseMM()">Services Officine</a>' +
       '<a href="' + ROOT + '/#services-labos" onclick="paCloseMM()">Services Laboratoires</a>' +
       '<a href="' + ROOT + '/#formations" onclick="paCloseMM()">Formations</a>' +
-      '<a href="/actus" onclick="paCloseMM()">Pharm\'Actus</a>' +
+      '<a href="' + ROOT + '/actus" onclick="paCloseMM()">Pharm\'Actus</a>' +
       '<a href="' + ROOT + '/stephen-robert" onclick="paCloseMM()">Stephen Robert</a>' +
     '</div>' +
     '<nav class="pa-site-nav" id="paSiteNav">' +
@@ -79,14 +90,14 @@
           '<img src="' + ROOT + '/Logos/Logo sans fond/2-tight.png" alt="Pharm\'Alpha Consulting">' +
         '</a>' +
         '<ul class="pa-site-nav-links">' +
-          '<li><a href="' + ROOT + '/#services">Services Officine</a></li>' +
-          '<li><a href="' + ROOT + '/#services-labos">Services Laboratoires</a></li>' +
-          '<li><a href="' + ROOT + '/#formations">Formations</a></li>' +
-          '<li><a href="/actus" class="active">Pharm\'Actus</a></li>' +
-          '<li><a href="' + ROOT + '/stephen-robert">Stephen Robert</a></li>' +
+          a('services', 'Services Officine', ROOT + '/#services') +
+          a('services-labos', 'Services Laboratoires', ROOT + '/#services-labos') +
+          a('formations', 'Formations', ROOT + '/#formations') +
+          a('actus', 'Pharm\'Actus', ROOT + '/actus') +
+          a('stephen', 'Stephen Robert', ROOT + '/stephen-robert') +
         '</ul>' +
         '<div class="pa-site-nav-right">' +
-          '<a href="' + ROOT + '/espace" class="pa-site-nav-btn pa-site-nav-btn-ghost">eLearning</a>' +
+          '<a href="' + ROOT + '/inscription" class="pa-site-nav-btn pa-site-nav-btn-ghost' + (window.__paNavActive === 'inscription' ? ' active' : '') + '">M\'inscrire à une formation</a>' +
           '<a href="' + ROOT + '/#contactForm" class="pa-site-nav-btn pa-site-nav-btn-orange" aria-label="Me contacter">' +
             '<svg class="pa-site-nav-btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>' +
             '<span class="pa-site-nav-btn-text">Me contacter</span>' +
@@ -106,8 +117,7 @@
 
     var nav = document.getElementById('paSiteNav');
     function onScroll() {
-      if (window.scrollY > 50) nav.classList.add('solid');
-      else nav.classList.remove('solid');
+      nav.classList.toggle('solid', window.scrollY > 50);
     }
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
