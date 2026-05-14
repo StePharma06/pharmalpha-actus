@@ -8,7 +8,7 @@ Usage:
 
 Two passes:
   1. Articles in articles.json  -> full rebuild via _build_article_page_html
-  2. Orphan stubs (no JSON data) -> patch canonical + meta description + JSON-LD minimal
+  2. Orphan stubs (no JSON data) -> patch canonical + noindex,follow + meta description + JSON-LD minimal
                                     using existing og:title / og:description
 
 Marc SEO P0 - 2026-05-11
@@ -102,6 +102,7 @@ def _build_orphan_stub_html(article_id: str, titre_raw: str, resume_raw: str, og
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{titre} - Pharm'Actus</title>
 <link rel="canonical" href="{canonical_url}" />
+<meta name="robots" content="noindex, follow" />
 <meta name="description" content="{meta_desc}" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="{titre}" />
