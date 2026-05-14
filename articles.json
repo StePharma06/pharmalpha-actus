@@ -1,6 +1,131 @@
 {
   "articles": [
     {
+      "id": "actu_2026_05_14_5",
+      "date": "2026-05-14",
+      "type": "actu",
+      "categorie": "business_officine",
+      "titre": "Avenant 3 : l'USPO veut 300M€ de plus après le rapport IGAS choc",
+      "resume": "Le rapport IGAS-IGF enterre le modèle actuel. L'USPO réclame l'ouverture immédiate de l'avenant 3 pour sauver la rentabilité des 21 000 officines françaises.",
+      "full_text": "Le rapport IGAS-IGF enterre le modèle actuel. L'USPO réclame l'ouverture immédiate de l'avenant 3 pour sauver la rentabilité des 21 000 officines françaises.\n\n## Contexte\n\nLe rapport IGAS-IGF vient de confirmer ce que tu savais déjà : le modèle économique de l'officine est à bout de souffle. Depuis 4 ans, l'USPO demande une refonte complète via un avenant 3 à la convention pharmaceutique. Les conclusions officielles du rapport donnent enfin raison aux syndicats qui dénoncent l'érosion des marges et l'explosion des charges. La convention actuelle, signée en 2019, ne correspond plus aux réalités économiques de 2026. Entre l'inflation (+18% sur 4 ans), la hausse des charges sociales et la baisse du nombre de boîtes vendues (-3,2% en 2025), les 21 000 officines françaises voient leur rentabilité s'effondrer. L'USPO mise sur ce rapport pour forcer l'Assurance Maladie à négocier rapidement.\n\n## Analyse business\n\nLe timing est parfait pour l'USPO. Le rapport IGAS-IGF chiffre précisément l'impasse : le résultat courant moyen des officines a chuté de 23% entre 2019 et 2024, passant de 156 000€ à 120 000€. Pire, 31% des pharmacies affichent désormais un résultat inférieur à 80 000€, seuil critique pour la viabilité. L'USPO table sur une revalorisation globale de 300M€ via l'avenant 3, soit +14 300€ par officine en moyenne. Concrètement, cela passerait par une hausse de +0,15€ de l'honoraire de dispensation (actuellement 1,02€), une majoration de +25% des ROSP (4,2 milliards en 2024) et la création de nouveaux honoraires pour les missions de santé publique. Le syndicat s'appuie aussi sur les chiffres d'activité : 3,2 milliards de boîtes dispensées en 2024 pour un chiffre d'affaires total de 58,4 milliards. Avec une marge commerciale moyenne de 26,1%, l'équation ne tient plus face à des charges qui explosent (+31% depuis 2019). L'enjeu dépasse le simple business : c'est la survie du maillage territorial qui est en jeu, avec déjà 847 cessations d'activité en 2024.\n\n## Recommandations actionnables\n\n1. Prépare tes comptes — Sors tes bilans 2019-2024 pour quantifier la baisse de rentabilité et alimenter les négociations locales\n\n2. Rejoins la mobilisation — L'USPO mise sur la pression collective pour forcer l'ouverture de l'avenant 3 avant l'été\n\n3. Diversifie tes revenus — En attendant l'avenant, développe vaccination (+45€/acte) et bilans de médication (+60€) pour compenser\n\n4. Optimise ta gestion — Réduis les frais généraux de 2-3% et négocie avec tes fournisseurs sur les délais de paiement\n\n5. Anticipe les changements — L'avenant 3 pourrait conditionner certains honoraires à des indicateurs qualité, prépare-toi\n\n## Sources citees\n\n- Le Quotidien du Pharmacien",
+      "source": "Pharm'Actus",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Business",
+      "image_url": "assets/img_actu_2026_05_14_5.jpg",
+      "tags": [
+        "avenant",
+        "uspo",
+        "rentabilite",
+        "convention"
+      ]
+    },
+    {
+      "id": "actu_2026_05_14_4",
+      "date": "2026-05-14",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "Alkermes frappe fort sur les troubles du sommeil",
+      "resume": "Lumryz cartonne en phase 3 sur un nouveau trouble du sommeil. L'acquisition d'Avadel à 2,4 milliards se révèle payante. Le sodium oxybate élargit son territoire.",
+      "full_text": "Alkermes voit son pari sur Avadel se concrétiser. Lumryz vient de réussir haut la main sa phase 3 dans une nouvelle indication de trouble du sommeil rare.\n\nL'acquisition à 2,37 milliards de dollars porte déjà ses fruits. Tous les critères primaires et secondaires clés ont été atteints. De quoi rassurer les actionnaires qui doutaient du prix payé.\n\nLe sodium oxybate étend son domaine d'application. Après la narcolepsie, voilà une nouvelle pathologie du sommeil qui pourrait enrichir le pipeline. Les troubles du sommeil représentent un marché en pleine expansion.\n\nCôté recherche, cette réussite valide l'approche thérapeutique. D'autres indications pourraient suivre si les résultats se confirment en vraie vie.\n\nPour ton officine ? Garde un œil sur l'évolution de ce dossier. Les spécialités sommeil ont souvent de beaux potentiels, même sur des niches.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/pharma/alkermes-lumryz-hits-phase-3-mark-another-sleep-disorder-fueling-momentum-24b-avadel",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_05_14_4.jpg",
+      "tags": [
+        "alkermes",
+        "lumryz",
+        "sommeil",
+        "phase3",
+        "sodium-oxybate"
+      ]
+    },
+    {
+      "id": "actu_2026_05_14_3",
+      "date": "2026-05-14",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "Pfizer décroche l'Europe pour son hémophilie",
+      "resume": "Hympavzi élargit ses indications en Europe. Une victoire de plus pour Pfizer sur l'hémophilie A et B. Les patients européens vont enfin pouvoir en bénéficier.",
+      "full_text": "Pfizer marque des points en Europe. L'EMA vient d'approuver l'extension d'indication d'Hympavzi pour l'hémophilie, ouvrant de nouvelles perspectives thérapeutiques.\n\nCette expansion géographique était très attendue. Les patients européens d'hémophilie A et B sans inhibiteur vont enfin accéder à cette innovation. Le traitement prophylactique s'enrichit d'une option de plus.\n\nPour les officines spécialisées, c'est une bonne nouvelle économique. Hympavzi représente un marché porteur avec des prix de traitement significatifs. La rétrocession va s'étoffer.\n\nLa concurrence s'intensifie sur ce segment. Mais chaque nouvelle molécule disponible améliore la prise en charge des patients. Et ça, c'est toujours bon à prendre.\n\nDemain au comptoir ? Commence à te former sur ce nouveau player de l'hémophilie. Tes patients spécialisés vont poser des questions.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/pharma/fierce-pharma-regulatory-tracker-2026",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_05_14_3.jpg",
+      "tags": [
+        "pfizer",
+        "hemophilie",
+        "europe",
+        "ema",
+        "hympavzi"
+      ]
+    },
+    {
+      "id": "actu_2026_05_14_2",
+      "date": "2026-05-14",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "Makary démissionne : la FDA dans la tourmente",
+      "resume": "Le patron de la FDA jette l'éponge après un mandat chaotique. Critiqué de tous bords, Marty Makary tire sa révérence. L'agence américaine cherche maintenant sa voie entre politique et science.",
+      "full_text": "Marty Makary claque la porte de la FDA. Le commissaire démissionne ce mardi, mettant fin à un mandat tumultueux qui aura secoué l'agence américaine de fond en comble.\n\nLes critiques pleuvaient de partout. Industrie pharma, associations de patients, scientifiques : personne n'était épargné par ses décisions controversées. Sa gestion des dossiers vaccins et sa proximité avec RFK Jr. ont fini par user ses soutiens.\n\nCette démission ouvre une période d'incertitude. L'administration Trump doit maintenant trouver un successeur capable de réconcilier l'agence avec ses missions. Pas gagné dans le contexte politique actuel.\n\nPour nous en France ? Cette instabilité américaine peut retarder les harmonisations réglementaires. Les AMM européennes pourraient prendre plus de temps si les référentiels FDA bougent trop.\n\nUn poste qui brûle les doigts, visiblement. Le prochain aura du boulot pour redorer le blason de l'institution.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/pharma/fda-commissioner-marty-makary-resigns-capping-turbulent-tenure",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/img_actu_2026_05_14_2.jpg",
+      "tags": [
+        "fda",
+        "makary",
+        "demission",
+        "regulation",
+        "etats-unis"
+      ]
+    },
+    {
+      "id": "actu_2026_05_14_1",
+      "date": "2026-05-14",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "Remises génériques : l'IGAS sort l'artillerie lourde",
+      "resume": "Le rapport IGAS-IGF met les groupements dans le viseur et questionne l'équilibre économique des officines. L'USPO demande l'ouverture immédiate d'un avenant 3 pour sauver le modèle. Zone de turbulences garantie.",
+      "full_text": "Les inspections tapent fort. Le rapport IGAS-IGF sur les remises génériques fait trembler tout l'écosystème pharmaceutique.\n\nLes groupements se retrouvent directement dans le collimateur. Leurs pratiques de négociation avec les laboratoires sont scrutées à la loupe. Et ça ne sent pas bon pour certains montages financiers.\n\nL'USPO ne perd pas de temps. Confortée par les conclusions du rapport, elle exige l'ouverture immédiate d'un avenant 3 à la convention. Objectif : faire évoluer un modèle économique \"à bout de souffle\". Cela fait quatre ans qu'ils demandent cette refonte.\n\nLes chiffres contestés par les syndicats montrent l'ampleur du problème. Les remises sont devenues vitales pour l'équilibre de ton officine. Sans elles, beaucoup d'entre nous seraient dans le rouge.\n\nDemain matin ? Surveille tes négociations de près. Les règles du jeu pourraient changer plus vite que prévu.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/remises-generiques-en-pharmacie-zone-de-turbulences-en-vue",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_05_14_1.jpg",
+      "tags": [
+        "remises",
+        "generiques",
+        "groupements",
+        "igas",
+        "convention"
+      ]
+    },
+    {
+      "id": "lsv_2026_05_14",
+      "date": "2026-05-14",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? La première pilule contraceptive a été testée sur des femmes qui ne le savaient pas",
+      "resume": "En 1956, Gregory Pincus lance les premiers essais cliniques de la pilule contraceptive à Porto Rico. Le problème ? Les 200 femmes cobaye ignoraient totalement participer à une expérimentation révolutionnaire.",
+      "full_text": "Imagine un peu la scène : Porto Rico, 1956. Le biologiste Gregory Pincus débarque avec sa pilule révolutionnaire à base de progestérone synthétique. Il lui faut des cobayes humaines, mais comment convaincre des femmes de tester un contraceptif dans une société ultra-catholique ?\n\nSa solution ? Mentir par omission. Pincus s'associe avec des médecins locaux qui recrutent 200 femmes des bidonvilles de San Juan. On leur explique qu'on teste un nouveau \"régulateur de cycle menstruel\" pour améliorer leur fertilité. Aucune mention de contraception.\n\nLe twist ? Ça marche parfaitement ! Zéro grossesse pendant l'essai. Mais les effets secondaires sont terribles : nausées, maux de tête, caillots sanguins. Le dosage d'hormones était 10 fois supérieur aux pilules actuelles. Plusieurs femmes abandonnent, d'autres tombent malades.\n\nMalgré ces problèmes, Pincus fonce. Il présente ses résultats en cachant soigneusement le vrai objectif de l'étude. La FDA approuve \"Enovid\" en 1957... mais officiellement pour traiter les troubles menstruels.\n\nIl faudra attendre 1960 pour que la pilule soit autorisée comme contraceptif aux États-Unis. Entre-temps, des milliers de femmes américaines se la faisaient prescrire pour de mystérieux \"troubles du cycle\".\n\nAujourd'hui, quand tu délivres une contraception, pense à ces pionnières involontaires qui ont révolutionné la société sans même le savoir.",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_05_14.jpg",
+      "tags": [
+        "histoire",
+        "contraception",
+        "essai-clinique",
+        "gynecologie",
+        "ethique"
+      ]
+    },
+    {
       "id": "actu_2026_05_13_5",
       "date": "2026-05-13",
       "type": "actu",
@@ -3389,6 +3514,6 @@
       ]
     }
   ],
-  "count": 164,
-  "updated_at": "2026-05-13T06:55:42.037345+02:00"
+  "count": 170,
+  "updated_at": "2026-05-14T06:54:40.696163+02:00"
 }
