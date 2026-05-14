@@ -994,13 +994,15 @@ def generate_articles_json(index_html):
     print(f"  articles.json genere ({len(merged)} articles total : {len(current_articles)} depuis index.html + {historical_count} historiques)")
 
 
-def _build_article_page_html(article_id: str, titre_raw: str, resume_raw: str, image_url: str, date_str: str, categorie: str) -> str:
+def _build_article_page_html(article_id: str, titre_raw: str, resume_raw: str, image_url: str, date_str: str, categorie: str, full_text_raw: str = "", source_url: str = "", source_name: str = "") -> str:
     """Build a single article stub HTML with full SEO metadata.
 
     The canonical and og:url both point to pharmalpha.fr/actus (Vercel target),
     not actus.pharmalpha.fr, to avoid duplicate signal during dual-push period.
-    The http-equiv redirect still points to actus.pharmalpha.fr so GH Pages
-    visitors land correctly; sync_to_vercel.py rewrites it for Vercel.
+    The meta-refresh is removed from <head>: the JS redirect at bottom of <body>
+    handles UX for real visitors; Googlebot sees the full article body.
+    full_text_raw: complete article body (300-500 words). Paragraphs separated by
+    \n\n are each rendered as a <p>. If empty, falls back to resume.
     """
     titre = titre_raw.replace('"', "&quot;").replace("'", "&#39;")
     resume = resume_raw.replace('"', "&quot;").replace("'", "&#39;")
@@ -1077,6 +1079,37 @@ def _build_article_page_html(article_id: str, titre_raw: str, resume_raw: str, i
     import json as _json
     schema_json = _json.dumps(schema, ensure_ascii=False, indent=2)
 
+    # Build article body HTML from full_text (paragraphs separated by \n\n).
+    # Converts minimal Markdown: ## h2, ### h3, **bold**.
+    # Falls back to empty string if no full_text provided (resume is already
+    # rendered as article-lead above the body_html slot).
+    def _para_to_html(para: str) -> str:
+        """Convert a single paragraph (already stripped) to an HTML element."""
+        import re as _re
+        if para.startswith("### "):
+            text = para[4:].strip()
+            return f"  <h3>{text}</h3>"
+        if para.startswith("## "):
+            text = para[3:].strip()
+            return f"  <h2>{text}</h2>"
+        # Escape HTML special chars, then convert **bold**
+        escaped = para.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+        bolded = _re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", escaped)
+        return f"  <p>{bolded}</p>"
+
+    if full_text_raw and full_text_raw.strip():
+        paras = [p.strip() for p in full_text_raw.split("\n\n") if p.strip()]
+        # Skip first paragraph if it duplicates the resume (e.g. business_officine format)
+        if paras and not paras[0].startswith("#") and paras[0][:80] == (resume_raw or "")[:80]:
+            paras = paras[1:]
+        body_html = "\n".join(_para_to_html(p) for p in paras)
+    else:
+        body_html = ""
+
+    # Source link for footer attribution
+    source_url_attr = source_url or "#"
+    source_label = source_name or "Source"
+
     return f'''<!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -1101,12 +1134,13 @@ def _build_article_page_html(article_id: str, titre_raw: str, resume_raw: str, i
 <script type="application/ld+json">
 {schema_json}
 </script>
-<meta http-equiv="refresh" content="0;url=https://actus.pharmalpha.fr/?a={article_id}" />
 </head>
 <body>
 <article>
   <h1>{titre}</h1>
-  <p>{resume}</p>
+  <p class="article-lead">{resume}</p>
+  {body_html}
+  <p><strong>Source :</strong> <a href="{source_url_attr}" rel="nofollow noopener">{source_label}</a></p>
   <footer class="article-footer">
     <p>Article redige par <a href="https://pharmalpha.fr/stephen-robert">Stephen Robert, Docteur en Pharmacie</a>.</p>
     <p>Decouvrir <a href="https://pharmalpha.fr/formations">les formations Pharm'Alpha</a>.</p>
@@ -1134,6 +1168,9 @@ def generate_article_pages(articles):
             image_url=a.get("image_url", ""),
             date_str=a.get("date", ""),
             categorie=a.get("categorie", ""),
+            full_text_raw=a.get("full_text", ""),
+            source_url=a.get("source_url", ""),
+            source_name=a.get("source", ""),
         )
         page_path = articles_dir / f"{article_id}.html"
         page_path.write_text(page_html, encoding="utf-8")

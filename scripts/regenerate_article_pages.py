@@ -119,12 +119,11 @@ def _build_orphan_stub_html(article_id: str, titre_raw: str, resume_raw: str, og
 <script type="application/ld+json">
 {schema_json}
 </script>
-<meta http-equiv="refresh" content="0;url=https://actus.pharmalpha.fr/?a={article_id}" />
 </head>
 <body>
 <article>
   <h1>{titre}</h1>
-  <p>{resume}</p>
+  <p class="article-lead">{resume}</p>
   <footer class="article-footer">
     <p>Article redige par <a href="https://pharmalpha.fr/stephen-robert">Stephen Robert, Docteur en Pharmacie</a>.</p>
     <p>Decouvrir <a href="https://pharmalpha.fr/formations">les formations Pharm'Alpha</a>.</p>
@@ -201,6 +200,9 @@ def main() -> None:
             image_url=a.get("image_url", ""),
             date_str=a.get("date", ""),
             categorie=a.get("categorie", ""),
+            full_text_raw=a.get("full_text", ""),
+            source_url=a.get("source_url", ""),
+            source_name=a.get("source", ""),
         )
         page_path = articles_dir / f"{article_id}.html"
         page_path.write_text(page_html, encoding="utf-8")

@@ -1165,6 +1165,17 @@ body {
 }
 </style>
 <script defer src="assets/site-nav.js"></script>
+<script>
+(function() {
+  var p = new URLSearchParams(window.location.search).get('a');
+  var l = document.createElement('link');
+  l.rel = 'canonical';
+  l.href = p
+    ? 'https://pharmalpha.fr/actus/articles/' + p + '.html'
+    : 'https://pharmalpha.fr/actus';
+  document.head.appendChild(l);
+})();
+</script>
 </head>
 <body>
 <div class="caduceus-bg" id="caduceus-bg"></div>

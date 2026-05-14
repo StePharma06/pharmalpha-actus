@@ -1,0 +1,42 @@
+name: Regenerate Article Stubs (SEO)
+
+# One-shot workflow: rebuilds all article stub pages with full_text body content.
+# Run manually after any change to _build_article_page_html or after bulk data fix.
+# Does NOT touch index.html, newsletter, TikTok pipeline or sync-to-vercel.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install beautifulsoup4
+
+      - name: Regenerate all article stub pages
+        run: python scripts/regenerate_article_pages.py
+
+      - name: Commit & push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add articles/
+          if git diff --staged --quiet; then
+            echo "No changes — stubs already up to date"
+          else
+            CHANGED=$(git diff --staged --name-only | wc -l)
+            git commit -m "seo: regenerate ${CHANGED} article stubs with full_text body"
+            git push
+          fi
