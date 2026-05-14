@@ -9,7 +9,7 @@
  *   - Règle CSS défensive pour neutraliser headers natifs des pages d'articles
  *
  * Override lien actif : <script>window.__paNavActive='formations'</script> avant ce script.
- * Valeurs : 'services' | 'services-labos' | 'formations' | 'actus' | 'stephen' | 'inscription'
+ * Valeurs : 'missions' | 'formations' | 'actus' | 'jirai' | 'stephen' | 'inscription'
  */
 (function () {
   if (window.__paSiteNavInjected) return;
@@ -78,10 +78,10 @@
   var html = '' +
     '<div class="pa-mobile-menu" id="paMobileMenu">' +
       '<button class="pa-mm-close" aria-label="Fermer" onclick="paCloseMM()">&times;</button>' +
-      '<a href="' + ROOT + '/#services" onclick="paCloseMM()">Services Officine</a>' +
-      '<a href="' + ROOT + '/#services-labos" onclick="paCloseMM()">Services Laboratoires</a>' +
+      '<a href="' + ROOT + '/#services" onclick="paCloseMM()">Mes missions</a>' +
       '<a href="' + ROOT + '/#formations" onclick="paCloseMM()">Formations</a>' +
       '<a href="' + ROOT + '/actus" onclick="paCloseMM()">Pharm\'Actus</a>' +
+      '<a href="' + ROOT + '/#jirai" onclick="paCloseMM()">J\'irai dans votre pharmacie</a>' +
       '<a href="' + ROOT + '/stephen-robert" onclick="paCloseMM()">Stephen Robert</a>' +
     '</div>' +
     '<nav class="pa-site-nav" id="paSiteNav">' +
@@ -90,10 +90,10 @@
           '<img src="' + ROOT + '/Logos/Logo sans fond/2-tight.png" alt="Pharm\'Alpha Consulting">' +
         '</a>' +
         '<ul class="pa-site-nav-links">' +
-          a('services', 'Services Officine', ROOT + '/#services') +
-          a('services-labos', 'Services Laboratoires', ROOT + '/#services-labos') +
+          a('missions', 'Mes missions', ROOT + '/#services') +
           a('formations', 'Formations', ROOT + '/#formations') +
           a('actus', 'Pharm\'Actus', ROOT + '/actus') +
+          a('jirai', 'J\'irai dans votre pharmacie', ROOT + '/#jirai') +
           a('stephen', 'Stephen Robert', ROOT + '/stephen-robert') +
         '</ul>' +
         '<div class="pa-site-nav-right">' +
