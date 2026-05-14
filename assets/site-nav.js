@@ -25,8 +25,8 @@
     '.pa-site-nav-logo{flex-shrink:0;display:flex;align-items:center;}' +
     '.pa-site-nav-logo img{height:clamp(51px,5.1vw,93px) !important;width:auto !important;filter:invert(1);transition:filter .35s,height .3s;}' +
     '.pa-site-nav.solid .pa-site-nav-logo img{height:clamp(40px,3vw,52px) !important;filter:none;}' +
-    '.pa-site-nav-links{display:flex;align-items:center;gap:4px;list-style:none;padding:0;margin:0;flex-wrap:nowrap;}' +
-    '.pa-site-nav-links a{padding:8px 14px;font-size:14px;font-weight:500;color:rgba(255,255,255,.8);border-radius:6px;text-decoration:none;transition:all .3s ease;white-space:nowrap;}' +
+    '.pa-site-nav-links{display:flex;align-items:center;gap:2px;list-style:none;padding:0;margin:0;flex-wrap:nowrap;}' +
+    '.pa-site-nav-links a{padding:8px 9px;font-size:14px;font-weight:500;color:rgba(255,255,255,.8);border-radius:6px;text-decoration:none;transition:all .3s ease;white-space:nowrap;}' +
     '.pa-site-nav-links a:hover{color:#fff;background:rgba(255,255,255,.07);}' +
     '.pa-site-nav.solid .pa-site-nav-links a{color:#0a0a0a;}' +
     '.pa-site-nav.solid .pa-site-nav-links a:hover{color:#ff914d;background:transparent;}' +
