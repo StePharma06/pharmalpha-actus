@@ -23,7 +23,11 @@ jobs:
           python-version: '3.12'
 
       - name: Install dependencies
-        run: pip install beautifulsoup4
+        # anthropic + feedparser are required because regenerate_article_pages.py
+        # imports _build_article_page_html from update_actus.py, which has
+        # top-level imports of both modules.
+        # beautifulsoup4 is needed for orphan stub patching (Pass 2).
+        run: pip install anthropic feedparser beautifulsoup4
 
       - name: Regenerate all article stub pages
         run: python scripts/regenerate_article_pages.py
