@@ -87,7 +87,7 @@
     '<nav class="pa-site-nav" id="paSiteNav">' +
       '<div class="pa-site-nav-inner">' +
         '<a href="' + ROOT + '/" class="pa-site-nav-logo" aria-label="Retour Pharm\'Alpha">' +
-          '<img src="' + ROOT + '/Logos/Logo sans fond/2-tight.png" alt="Pharm\'Alpha Consulting">' +
+          '<img src="' + ROOT + '/Logos/Logo sans fond/2-tight.png" alt="Pharm\'Alpha Consulting" width="1234" height="821">' +
         '</a>' +
         '<ul class="pa-site-nav-links">' +
           a('missions', 'Mes missions', ROOT + '/#services') +
