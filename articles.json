@@ -1,6 +1,131 @@
 {
   "articles": [
     {
+      "id": "actu_2026_05_17_5",
+      "date": "2026-05-17",
+      "type": "actu",
+      "categorie": "business_officine",
+      "titre": "Aliments protéinés : 10 millions de tonnes de gaspillage, l'opportunité OTC",
+      "resume": "Pendant que les Français jettent 10 millions de tonnes d'aliments par an, le marché des produits protéinés explose sans justification nutritionnelle selon les experts.",
+      "full_text": "Pendant que les Français jettent 10 millions de tonnes d'aliments par an, le marché des produits protéinés explose sans justification nutritionnelle selon les experts.\n\n## Contexte\n\nLe phénomène prend de l'ampleur : les rayons se remplissent d'aliments « boostés en protéines », du yaourt au pain en passant par les céréales. Parallèlement, la France jette 10 millions de tonnes d'aliments chaque année, un gaspillage colossal qui interroge sur nos habitudes de consommation. L'enquête de France Info révèle que cette tendance protéinée relève plus du marketing que de la réalité nutritionnelle. Les nutritionnistes sont formels : aucune carence généralisée en protéines n'existe en France, et les produits « enrichis » n'en contiennent souvent guère plus que leurs versions classiques. Cette double actualité - engouement protéiné et gaspillage alimentaire - dessine un nouveau paysage pour l'officine, entre compléments alimentaires légitimes et éducation nutritionnelle des patients.\n\n## Analyse business\n\nLes chiffres parlent : 10 millions de tonnes d'aliments gaspillés représentent environ 150 kg par habitant et par an, soit un coût estimé à 16 milliards d'euros pour l'économie française. Côté protéines, le marché français des compléments alimentaires pèse 2,8 milliards d'euros en 2025, avec une croissance de 4,2% annuelle portée notamment par cette tendance « high-protein ». Pourtant, l'apport protéique moyen des Français (1,4 g/kg/jour) dépasse déjà les recommandations de l'ANSES (0,83 g/kg/jour). Pour l'officine, cette contradiction ouvre des opportunités. D'un côté, la demande en compléments protéinés légitimes (sportifs, seniors dénutris, végétaliens) représente un marché de niche à 340 millions d'euros. De l'autre, le conseil nutritionnel devient un service différenciant : 78% des Français déclarent faire confiance au pharmacien pour leurs questions nutrition. Le gaspillage alimentaire touche aussi l'officine : selon la FSPF, 2,3% du CA parapharmacie (compléments alimentaires inclus) part en péremption, soit environ 580 euros par an pour une officine moyenne.\n\n## Recommandations actionnables\n\n1. Audit compléments protéinés — Identifie les références légitimes (BCAA, whey pour sportifs, protéines senior) vs produits marketing, optimise ton mix avec 15-20% de marge supérieure sur les références à valeur ajoutée réelle.\n\n2. Service conseil nutritionnel — Lance des entretiens nutrition à 25€, cible les sportifs et seniors, forme ton équipe sur les ANC protéiques (0,83g/kg/jour) pour argumenter face aux idées reçues.\n\n3. Gestion anti-gaspi — Met en place une procédure FIFO stricte, négocie avec tes fournisseurs un échange à 3 mois de la DLC, propose 20% de remise sur les compléments à 6 mois de péremption.\n\n4. Partenariat local — Rapproche-toi des salles de sport (conseil protéines post-training) et EHPAD (prévention dénutrition), deux segments où le besoin protéique est réellement accru.\n\n## Sources citees\n\n- France Info Sante\n- France Info Sante",
+      "source": "Pharm'Actus",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Business",
+      "image_url": "assets/img_actu_2026_05_17_5.jpg",
+      "tags": [
+        "complementsalimentaires",
+        "nutrition",
+        "antigaspi",
+        "conseil"
+      ]
+    },
+    {
+      "id": "actu_2026_05_17_4",
+      "date": "2026-05-17",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "AstraZeneca cartonne encore en oncologie avec Imfinzi",
+      "resume": "Nouvel essai Phase III positif pour Imfinzi dans le cancer de vessie. AstraZeneca continue de grignoter des parts à Keytruda de Merck. La guerre des anti-PD1 fait rage.",
+      "full_text": "AstraZeneca ne lâche rien sur l'oncologie. Après une AMM récente dans le cancer de vessie avec chimio, voilà un nouvel essai Phase III qui cartonne.\n\nCette fois, Imfinzi + Padcev montre son efficacité chez les patients inéligibles au cisplatine. Une population qu'on voit régulièrement au comptoir, souvent fragile et poly-médicamentée.\n\nL'anti-PD1 d'AZ grignote méthodiquement le territoire de Keytruda. Merck avait pris une avance énorme, mais la concurrence rattrape sur chaque indication.\n\nPour nos patients oncologie, ça signifie plus d'options thérapeutiques. Et pour nous, plus de molécules à maîtriser dans nos conseils et interactions.\n\nLe pipeline immuno-oncologie va exploser les prochaines années. Autant s'y préparer dès maintenant.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/pharma/astrazeneca-scores-imfinzi-another-bladder-cancer-trial",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_05_17_4.jpg",
+      "tags": [
+        "imfinzi",
+        "oncologie",
+        "astrazeneca",
+        "vessie",
+        "immunotherapie"
+      ]
+    },
+    {
+      "id": "actu_2026_05_17_3",
+      "date": "2026-05-17",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "Eli Lilly met 50M$ sur la santé pédiatrique mondiale",
+      "resume": "Six ans, 50 millions de dollars pour l'UNICEF. Eli Lilly mise gros sur la prévention des maladies chroniques chez les enfants. Un engagement qui pourrait changer la donne.",
+      "full_text": "50 millions de dollars sur six ans, ça en jette ! Eli Lilly vient d'annoncer son partenariat XXL avec l'UNICEF USA pour booster la santé pédiatrique.\n\nL'objectif : améliorer la prévention, le dépistage et la prise en charge des maladies non transmissibles chez les gosses. Diabète, obésité, maladies cardiovasculaires... les fléaux qui explosent partout.\n\nPour nous, ça annonce probablement de nouveaux protocoles de dépistage précoce et des outils de prévention qu'on verra arriver dans nos officines.\n\nQuand un géant comme Lilly investit autant dans la pédiatrie préventive, c'est rarement par pure philanthropie. Ils préparent l'écosystème pour leurs futures innovations.\n\nLes missions de dépistage en pharmacie pourraient bien s'étendre aux plus jeunes dans les années qui viennent.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/marketing/eli-lilly-delivers-50m-boost-unicefs-pediatric-health-push",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_05_17_3.jpg",
+      "tags": [
+        "pediatrie",
+        "prevention",
+        "lilly",
+        "unicef",
+        "investissement"
+      ]
+    },
+    {
+      "id": "actu_2026_05_17_2",
+      "date": "2026-05-17",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "Tarifs US à 100% : Big Pharma sous pression extrême",
+      "resume": "Les labos qui refusent les prix négociés avec Washington écopent de 100% de droits de douane. Pour éviter la catastrophe, ils doivent révéler tous leurs plans de production. Tension maximale.",
+      "full_text": "Trump ne plaisante plus avec les prix. Les labos qui refusent les accords \"Most Favored Nation\" se prennent 100% de tarifs douaniers sur leurs imports aux USA.\n\nPour éviter le massacre, une seule échappatoire : tout déballer. Plans d'investissement, sites de production, stratégies industrielles... Le Département du Commerce veut tout savoir.\n\nEn échange ? Une \"ristourne\" à 20% de droits au lieu de 100%. Autant dire que les boardrooms de Bâle et Courbevoie chauffent en ce moment.\n\nCôté français, nos labos exportateurs vers les USA vont devoir choisir : transparence totale ou tarifs prohibitifs. L'industrie pharma mondiale entre dans une nouvelle ère de négociations musclées.\n\nNos génériqueurs qui jouent sur les prix risquent d'être les premiers touchés.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/pharma/gain-tariff-exemptions-drugmakers-will-have-reveal-all-their-us-plans",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/img_actu_2026_05_17_2.jpg",
+      "tags": [
+        "tarifs",
+        "usa",
+        "industrie",
+        "prix",
+        "export"
+      ]
+    },
+    {
+      "id": "actu_2026_05_17_1",
+      "date": "2026-05-17",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "Rachat d'officine : les Selas explosent la fiscalité traditionnelle",
+      "resume": "Fini les droits de mutation classiques à 5% ! Les Selas changent complètement la donne fiscale pour les reprises d'officine. Un avantage énorme que beaucoup ignorent encore.",
+      "full_text": "Les droits de mutation à 5% sur la tranche au-dessus de 200 000€, ça te dit quelque chose ? C'est le tarif classique pour racheter un fonds d'officine en nom propre ou en SARL.\n\nMais avec une Sela, tout change. La reprise se fait par apport du fonds, pas par vente. Résultat : exit les droits de mutation ! Tu ne paies que l'enregistrement symbolique.\n\nSur une officine à 800 000€, ça représente 30 000€ d'économie directe. Pas négligeable quand on monte son business plan.\n\nSeul bémol : la Sela impose des contraintes de capital et de gouvernance. Mais pour une reprise, l'avantage fiscal peut largement compenser.\n\nÀ méditer avant ton prochain rdv notaire.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/business/transactions/acquisition/rachat-dofficine-pourquoi-les-selas-changent-la-donne-fiscale",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_05_17_1.jpg",
+      "tags": [
+        "sela",
+        "rachat",
+        "fiscalite",
+        "officine",
+        "transmission"
+      ]
+    },
+    {
+      "id": "lsv_2026_05_17",
+      "date": "2026-05-17",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? La première pilule était grosse comme un œuf de pigeon",
+      "resume": "En 1884, un pharmacien parisien invente la première gélule moderne pour masquer le goût atroce de la quinine. Le problème ? Elle faisait 3 centimètres de long et pesait 15 grammes.",
+      "full_text": "Imagine-toi en train d'avaler une balle de ping-pong. C'est exactement ce qu'ont vécu les premiers patients de Stanislas Limousin en 1884.\n\nCe pharmacien parisien en avait marre de voir ses clients vomir à cause du goût épouvantable de la quinine. Il a donc eu l'idée géniale d'enfermer le médicament dans une capsule de gélatine. Révolutionnaire ! Sauf qu'il avait oublié un petit détail : la taille.\n\nSa première gélule mesurait 3 centimètres de long sur 1,5 de large. Les patients devaient littéralement se déloquer la mâchoire pour l'avaler. Certains la coupaient en morceaux, d'autres la faisaient ramollir dans l'eau tiède pendant une heure.\n\nLe pire ? Limousin était fier de son invention. Il l'a présentée à l'Académie de Médecine en expliquant que \"la déglutition, bien que laborieuse, reste techniquement possible\". Les médecins ont applaudi poliment tout en se demandant s'il était sérieux.\n\nIl faudra attendre 1897 et l'arrivée des machines américaines pour que les gélules deviennent enfin avalables. La taille a été divisée par dix en quelques années.\n\nAujourd'hui, quand un patient te dit qu'un comprimé est \"trop gros\", tu peux lui raconter l'histoire de Limousin !",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_05_17.jpg",
+      "tags": [
+        "histoire",
+        "gelule",
+        "pharmacie",
+        "invention",
+        "medicament"
+      ]
+    },
+    {
       "id": "actu_2026_05_16_5",
       "date": "2026-05-16",
       "type": "actu",
@@ -3764,6 +3889,6 @@
       ]
     }
   ],
-  "count": 182,
-  "updated_at": "2026-05-16T06:35:09.337042+02:00"
+  "count": 188,
+  "updated_at": "2026-05-17T06:59:08.076895+02:00"
 }
