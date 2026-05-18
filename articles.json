@@ -1,6 +1,127 @@
 {
   "articles": [
     {
+      "id": "actu_2026_05_18_5",
+      "date": "2026-05-18",
+      "type": "actu",
+      "categorie": "business_officine",
+      "titre": "CBD alimentaire interdit : un marché de 200M€ qui s'évapore pour les pharmacies",
+      "resume": "L'interdiction totale du CBD dans les aliments fait perdre aux officines un segment porteur. Les pharmacies vont devoir repenser leur stratégie cannabidiol.",
+      "full_text": "L'interdiction totale du CBD dans les aliments fait perdre aux officines un segment porteur. Les pharmacies vont devoir repenser leur stratégie cannabidiol.\n\n## Contexte\n\nDepuis le 17 mai 2026, la commercialisation de CBD dans les produits alimentaires est définitivement interdite en France. Tisanes, bonbons, huiles alimentaires, compléments : tout doit disparaître des rayons. Cette mesure fait suite aux recommandations de l'ANSM qui pointait l'absence d'évaluation de sécurité pour la consommation alimentaire du cannabidiol. Le marché français du CBD pesait environ 200 millions d'euros en 2025, avec une croissance de 15% par an. Les pharmacies représentaient 25% de ce marché selon les données du SYNADIET, soit environ 50 millions d'euros de chiffre d'affaires annuel. Les officines avaient massivement investi ce segment depuis la légalisation du CBD en 2022, y voyant une opportunité de diversification face à la baisse du remboursement des médicaments. Beaucoup avaient développé des gammes complètes : huiles sublinguales, tisanes bien-être, bonbons relaxants, compléments anti-stress. Cette interdiction brutal remet en question toute la stratégie CBD des pharmacies françaises.\n\n## Analyse business\n\nL'impact financier est immédiat pour les 21 000 officines françaises. En moyenne, une pharmacie réalisait 2 400€ de CA annuel sur le CBD alimentaire, avec des marges comprises entre 40 et 60%. Les pharmacies urbaines étaient les plus exposées, certaines générant jusqu'à 8 000€/an sur ce segment. Les stocks invendus représentent une perte sèche estimée à 15 millions d'euros pour l'ensemble de la profession. Côté réglementaire, seuls restent autorisés les cosmétiques au CBD (crèmes, baumes) et les fleurs à fumer, marchés bien plus restreints. Le cosmétique CBD ne pèse que 30 millions d'euros en France, soit 6 fois moins que l'alimentaire. Les grossistes-répartiteurs comme Pharmastock ou Alliance Healthcare doivent également déstocuer en urgence. Cette interdiction profite indirectement au marché noir : les consommateurs de CBD se tournent vers des circuits parallèles ou des achats en ligne depuis l'étranger. L'Allemagne et l'Espagne maintiennent la légalité du CBD alimentaire, créant une distorsion de concurrence européenne. Les pharmaciens doivent désormais expliquer à leur clientèle pourquoi des produits vendus hier sont interdits aujourd'hui, situation délicate pour la relation client.\n\n## Recommandations actionnables\n\n1. Audit de stocks — Faire immédiatement l'inventaire de tous les produits CBD alimentaires et négocier leur reprise avec les fournisseurs avant qu'ils ne deviennent invendables. 2. Repositionnement cosmétique — Réorienter l'offre vers les cosmétiques CBD (crèmes anti-douleur, baumes articulaires) qui restent légaux et porteurs, avec des marges similaires de 45-55%. 3. Formation équipe — Brief urgent des équipes sur la nouvelle réglementation pour éviter toute vente illégale et savoir répondre aux questions clients sur cette interdiction. 4. Communication client — Préparer un argumentaire commercial vers des alternatives légales : phytothérapie relaxante, magnésium, mélatonine pour remplacer l'usage bien-être du CBD. 5. Veille réglementaire — S'abonner aux alertes ANSM car d'autres restrictions sur les cannabinoïdes pourraient suivre (CBG, CBN).\n\n## Sources citees\n\n- France Info Santé",
+      "source": "Pharm'Actus",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Business",
+      "image_url": "assets/img_actu_2026_05_18_5.jpg",
+      "tags": [
+        "cbd",
+        "reglementation",
+        "pharmacie",
+        "interdiction"
+      ]
+    },
+    {
+      "id": "actu_2026_05_18_4",
+      "date": "2026-05-18",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "Leqembi d'Eisai approche du milliard : Alzheimer devient rentable",
+      "resume": "Le traitement anti-Alzheimer de Biogen/Eisai table sur 900 millions de dollars en 2026. Après des débuts poussifs, les ventes décollent enfin aux États-Unis.",
+      "full_text": "Eisai voit grand pour son Leqembi : 900 millions de dollars de ventes prévues cette année. Le traitement anti-Alzheimer co-développé avec Biogen trouve enfin son public.\n\nLes ventes ont doublé sur l'exercice 2025, après des débuts très lents liés aux contraintes d'administration (perfusion bimensuelle, surveillance IRM obligatoire).\n\nCe décollage marque un tournant : les thérapies anti-amyloïde deviennent enfin commercialement viables. Ça va motiver d'autres labos à investir massivement dans Alzheimer.\n\nPour nous, c'est l'annonce d'un pipeline qui va se remplir. D'autres molécules similaires arriveront probablement en Europe d'ici 2-3 ans.\n\nL'enjeu officinal : se former sur ces nouveaux traitements complexes. Les familles vont nous bombarder de questions quand ces molécules débarqueront chez nous via l'EMA.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/pharma/eisais-slow-walk-blockbuster-leqembi-sales-inches-closer-900m-26-sales-forecast",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_05_18_4.jpg",
+      "tags": [
+        "alzheimer",
+        "leqembi",
+        "innovation",
+        "recherche"
+      ]
+    },
+    {
+      "id": "actu_2026_05_18_3",
+      "date": "2026-05-18",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "Greffe trouvée pour le petit Elio : la mobilisation a payé",
+      "resume": "Après un élan de solidarité national, un donneur compatible a été trouvé pour Elio, atteint de leucémie. La greffe de moelle osseuse peut enfin avoir lieu.",
+      "full_text": "Excellente nouvelle pour le petit Elio : un donneur de moelle osseuse compatible a été trouvé. La famille a annoncé la bonne nouvelle dimanche.\n\nRappel des faits : ce gamin de quelques années, atteint d'une leucémie, avait besoin d'une greffe urgente. L'appel à la mobilisation nationale avait touché des milliers de personnes.\n\nRésultat : une vague d'inscriptions sur le registre des donneurs de moelle osseuse. Et bingo, un profil HLA compatible dans le tas.\n\nAu-delà du cas personnel, c'est un boost énorme pour le don de moelle. Beaucoup de nos clients nous demandent encore comment s'inscrire sur les registres.\n\nNotre rôle : continuer à informer sur ces démarches vitales. Une simple prise de sang peut sauver une vie, et ça commence souvent par une question posée au comptoir.",
+      "source": "France Info Santé",
+      "source_url": "https://www.franceinfo.fr/sante/apres-la-mobilisation-nationale-enfin-une-greffe-pour-le-petit-elio_8010155.html#xtor=RSS-3-%5Bgeneral%5D",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_05_18_3.jpg",
+      "tags": [
+        "greffe",
+        "leucemie",
+        "don",
+        "solidarite"
+      ]
+    },
+    {
+      "id": "actu_2026_05_18_2",
+      "date": "2026-05-18",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "FDA en plein chamboulement : après Makary, la chef du CDER sur le départ",
+      "resume": "Tracy Beth Høeg, directrice du centre d'évaluation des médicaments de la FDA, pourrait quitter ses fonctions. Après la démission du commissaire Makary, l'agence américaine traverse une période d'instabilité.",
+      "full_text": "La FDA perd ses cadres dirigeants les uns après les autres. Après la démission du commissaire Marty Makary, c'est au tour de Tracy Beth Høeg, directrice du CDER, de préparer ses cartons.\n\nLe CDER, c'est le centre névralgique qui évalue tous les médicaments avant leur mise sur le marché américain. Son départ créerait un vide au sommet de l'autorité sanitaire.\n\nPour nous pharmaciens français, ça sent la pagaille réglementaire outre-Atlantique. Les décisions de la FDA influencent souvent l'EMA et donc nos AMM européennes avec 6-12 mois de décalage.\n\nCette instabilité politique risque de ralentir l'évaluation des nouveaux traitements. Et devinez quoi ? Les labos vont probablement reporter certains dossiers en attendant que ça se stabilise.\n\nConcrètement : on risque d'attendre plus longtemps les innovations thérapeutiques américaines en Europe.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/pharma/after-makary-departure-cder-chief-tracy-beth-hoeg-headed-out-door-fda-report",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/img_actu_2026_05_18_2.jpg",
+      "tags": [
+        "fda",
+        "regulation",
+        "cder",
+        "amm"
+      ]
+    },
+    {
+      "id": "actu_2026_05_18_1",
+      "date": "2026-05-18",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "Fresenius Kabi lance Conexxence, biosimilaire du Prolia à 60 mg",
+      "resume": "Nouveau biosimilaire du dénosumab disponible en officine. Seringue préremplie pour l'ostéoporose post-ménopausique. La concurrence s'intensifie sur ce marché de niche rentable.",
+      "full_text": "Fresenius Kabi débarque sur le marché de l'ostéoporose avec Conexxence, son biosimilaire du Prolia (dénosumab 60 mg).\n\nSeringue préremplie disponible dès maintenant en ville. Mêmes indications que la spécialité de référence : ostéoporose chez les femmes ménopausées et perte osseuse liée aux traitements hormonaux.\n\nPour nous, ça veut dire une alternative de plus à proposer aux patients. Le dénosumab reste un traitement de seconde ligne après les bisphosphonates, mais avec une clientèle fidèle.\n\nAttention au conseil : injection sous-cutanée tous les 6 mois, surveillance du calcium obligatoire. Et comme tous les biosimilaires, substitution possible si le prescripteur n'a pas mentionné \"non substituable\".\n\nImpact concret : diversification de l'offre sur un segment à forte marge. Les patients vont probablement poser des questions sur les différences avec Prolia.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/therapeutique/medicaments/fiches-medicaments/fresenius-kabi-arrive-dans-losteoporose-avec-son-biosimilaire-conexxence",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_05_18_1.jpg",
+      "tags": [
+        "biosimilaire",
+        "osteoporose",
+        "denosumab",
+        "substitution"
+      ]
+    },
+    {
+      "id": "lsv_2026_05_18",
+      "date": "2026-05-18",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? Le premier électrocardiogramme a duré 5 minutes par battement",
+      "resume": "En 1887, Augustus Waller a inventé l'ECG en plongeant les mains et les pieds de son patient dans des bacs d'eau salée. Chaque tracé prenait un temps fou et nécessitait un équipement digne d'un laboratoire de physique.",
+      "full_text": "Picture ça : Londres, 1887. Augustus Waller, physiologiste anglais, vient de brancher son collègue Thomas Goswell à une machine bizarre. Quatre bacs d'eau salée, un électromètre capillaire, et un appareil photo pour fixer le tracé sur plaque de verre.\n\nLe pauvre Goswell doit plonger ses mains dans deux bacs, ses pieds dans deux autres, et rester parfaitement immobile. Chaque battement cardiaque fait bouger une fine colonne de mercure dans un tube de verre. Waller photographie le mouvement, seconde par seconde.\n\nLe truc dingue ? Un seul ECG prenait 5 minutes par battement de cœur à enregistrer ! Pour avoir un tracé de 10 secondes, il fallait presque une heure de manipulation. Et encore, ça ne marchait que si le patient ne bougeait pas d'un millimètre.\n\nEn 1903, Willem Einthoven révolutionne tout avec son galvanomètre à corde. L'appareil pèse 270 kilos, nécessite 5 personnes pour fonctionner, mais réduit l'examen à... 10 minutes seulement. Un exploit !\n\nLe premier ECG \"portable\" de 1928 pesait encore 30 kilos et se transportait en camionnette. Les médecins devaient venir à domicile avec un technicien et une rallonge électrique de 50 mètres.\n\nAujourd'hui, ton smartphone peut faire un ECG en 30 secondes avec une app dédiée. On est passés de 5 minutes par battement à 5 battements par seconde d'analyse – même nos montres connectées font mieux que l'équipement hospitalier d'il y a 50 ans !",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_05_18.jpg",
+      "tags": [
+        "histoire",
+        "diagnostic",
+        "cardiologie",
+        "instrument",
+        "technologie"
+      ]
+    },
+    {
       "id": "actu_2026_05_17_5",
       "date": "2026-05-17",
       "type": "actu",
@@ -3889,6 +4010,6 @@
       ]
     }
   ],
-  "count": 188,
-  "updated_at": "2026-05-17T06:59:08.076895+02:00"
+  "count": 194,
+  "updated_at": "2026-05-18T07:14:43.649603+02:00"
 }

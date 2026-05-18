@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? La première pilule était grosse comme un œuf de pigeon",
-  "resume": "En 1884, un pharmacien parisien invente la première gélule moderne pour masquer le goût atroce de la quinine. Le problème ? Elle faisait 3 centimètres de long et pesait 15 grammes.",
-  "full_text": "Imagine-toi en train d'avaler une balle de ping-pong. C'est exactement ce qu'ont vécu les premiers patients de Stanislas Limousin en 1884.\n\nCe pharmacien parisien en avait marre de voir ses clients vomir à cause du goût épouvantable de la quinine. Il a donc eu l'idée géniale d'enfermer le médicament dans une capsule de gélatine. Révolutionnaire ! Sauf qu'il avait oublié un petit détail : la taille.\n\nSa première gélule mesurait 3 centimètres de long sur 1,5 de large. Les patients devaient littéralement se déloquer la mâchoire pour l'avaler. Certains la coupaient en morceaux, d'autres la faisaient ramollir dans l'eau tiède pendant une heure.\n\nLe pire ? Limousin était fier de son invention. Il l'a présentée à l'Académie de Médecine en expliquant que \"la déglutition, bien que laborieuse, reste techniquement possible\". Les médecins ont applaudi poliment tout en se demandant s'il était sérieux.\n\nIl faudra attendre 1897 et l'arrivée des machines américaines pour que les gélules deviennent enfin avalables. La taille a été divisée par dix en quelques années.\n\nAujourd'hui, quand un patient te dit qu'un comprimé est \"trop gros\", tu peux lui raconter l'histoire de Limousin !",
-  "image_keywords": "vintage pills capsules",
+  "titre": "Le saviez-vous ? Le premier électrocardiogramme a duré 5 minutes par battement",
+  "resume": "En 1887, Augustus Waller a inventé l'ECG en plongeant les mains et les pieds de son patient dans des bacs d'eau salée. Chaque tracé prenait un temps fou et nécessitait un équipement digne d'un laboratoire de physique.",
+  "full_text": "Picture ça : Londres, 1887. Augustus Waller, physiologiste anglais, vient de brancher son collègue Thomas Goswell à une machine bizarre. Quatre bacs d'eau salée, un électromètre capillaire, et un appareil photo pour fixer le tracé sur plaque de verre.\n\nLe pauvre Goswell doit plonger ses mains dans deux bacs, ses pieds dans deux autres, et rester parfaitement immobile. Chaque battement cardiaque fait bouger une fine colonne de mercure dans un tube de verre. Waller photographie le mouvement, seconde par seconde.\n\nLe truc dingue ? Un seul ECG prenait 5 minutes par battement de cœur à enregistrer ! Pour avoir un tracé de 10 secondes, il fallait presque une heure de manipulation. Et encore, ça ne marchait que si le patient ne bougeait pas d'un millimètre.\n\nEn 1903, Willem Einthoven révolutionne tout avec son galvanomètre à corde. L'appareil pèse 270 kilos, nécessite 5 personnes pour fonctionner, mais réduit l'examen à... 10 minutes seulement. Un exploit !\n\nLe premier ECG \"portable\" de 1928 pesait encore 30 kilos et se transportait en camionnette. Les médecins devaient venir à domicile avec un technicien et une rallonge électrique de 50 mètres.\n\nAujourd'hui, ton smartphone peut faire un ECG en 30 secondes avec une app dédiée. On est passés de 5 minutes par battement à 5 battements par seconde d'analyse – même nos montres connectées font mieux que l'équipement hospitalier d'il y a 50 ans !",
+  "image_keywords": "electrocardiogram vintage medical",
   "tags": [
     "histoire",
-    "gelule",
-    "pharmacie",
-    "invention",
-    "medicament"
+    "diagnostic",
+    "cardiologie",
+    "instrument",
+    "technologie"
   ],
-  "date": "2026-05-17",
+  "date": "2026-05-18",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",
