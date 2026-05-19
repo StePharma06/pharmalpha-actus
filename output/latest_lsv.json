@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? Le premier électrocardiogramme a duré 5 minutes par battement",
-  "resume": "En 1887, Augustus Waller a inventé l'ECG en plongeant les mains et les pieds de son patient dans des bacs d'eau salée. Chaque tracé prenait un temps fou et nécessitait un équipement digne d'un laboratoire de physique.",
-  "full_text": "Picture ça : Londres, 1887. Augustus Waller, physiologiste anglais, vient de brancher son collègue Thomas Goswell à une machine bizarre. Quatre bacs d'eau salée, un électromètre capillaire, et un appareil photo pour fixer le tracé sur plaque de verre.\n\nLe pauvre Goswell doit plonger ses mains dans deux bacs, ses pieds dans deux autres, et rester parfaitement immobile. Chaque battement cardiaque fait bouger une fine colonne de mercure dans un tube de verre. Waller photographie le mouvement, seconde par seconde.\n\nLe truc dingue ? Un seul ECG prenait 5 minutes par battement de cœur à enregistrer ! Pour avoir un tracé de 10 secondes, il fallait presque une heure de manipulation. Et encore, ça ne marchait que si le patient ne bougeait pas d'un millimètre.\n\nEn 1903, Willem Einthoven révolutionne tout avec son galvanomètre à corde. L'appareil pèse 270 kilos, nécessite 5 personnes pour fonctionner, mais réduit l'examen à... 10 minutes seulement. Un exploit !\n\nLe premier ECG \"portable\" de 1928 pesait encore 30 kilos et se transportait en camionnette. Les médecins devaient venir à domicile avec un technicien et une rallonge électrique de 50 mètres.\n\nAujourd'hui, ton smartphone peut faire un ECG en 30 secondes avec une app dédiée. On est passés de 5 minutes par battement à 5 battements par seconde d'analyse – même nos montres connectées font mieux que l'équipement hospitalier d'il y a 50 ans !",
-  "image_keywords": "electrocardiogram vintage medical",
+  "titre": "Le saviez-vous ? Le premier microscope a révélé des « petits animaux »",
+  "resume": "En 1674, un drapier hollandais observe une goutte d'eau au microscope et découvre un monde invisible. Il vient de voir les premiers microbes de l'Histoire, qu'il appelle naïvement ses « petits animaux ».",
+  "full_text": "Antoni van Leeuwenhoek était drapier à Delft, pas médecin. Mais ce bonhomme avait une obsession : polir des lentilles dans son arrière-boutique. En 1674, il fabrique un microscope artisanal qui grossit 300 fois. Du jamais vu à l'époque.\n\nLe 7 septembre 1674, il place une goutte d'eau de pluie sous sa lentille. Et là, choc total : ça grouille ! Il observe des créatures minuscules qu'il décrit comme « de très petits animaux vivants, très jolis à voir ». Il vient de découvrir les bactéries, 200 ans avant Pasteur.\n\nVan Leeuwenhoek dessine tout méticuleusement et envoie ses observations à la Royal Society de Londres. Les savants le prennent d'abord pour un fou. Comment un marchand de tissu pourrait-il voir ce qu'eux n'arrivent pas à observer ?\n\nMais le drapier ne s'arrête pas là. Il examine sa salive, son sperme, ses selles. Il découvre les globules rouges, les spermatozoïdes, les protozoaires. En 50 ans, il envoie plus de 300 lettres détaillant ses trouvailles microscopiques.\n\nLe plus dingue ? Il garde jalousement ses secrets de fabrication. À sa mort en 1723, personne ne sait reproduire ses microscopes ultra-performants. Il faudra attendre le XIXe siècle pour retrouver cette qualité optique.\n\nAujourd'hui, quand tu analyses une ECBU au comptoir, tu es l'héritier direct de ce drapier génial qui a ouvert les portes de la microbiologie.",
+  "image_keywords": "antique microscope lens",
   "tags": [
     "histoire",
-    "diagnostic",
-    "cardiologie",
-    "instrument",
-    "technologie"
+    "microscope",
+    "bacteries",
+    "decouverte",
+    "optique"
   ],
-  "date": "2026-05-18",
+  "date": "2026-05-19",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",
