@@ -231,6 +231,15 @@ Selectionne et redige EXACTEMENT {target_count} articles dans les categories ci-
 
 NE PAS generer d'article categorie "sante" (cette categorie est desactivee). NE PAS generer d'article "business" (genere separement en format analytique long).
 
+=== CHECKLIST FAITS OFFICINAUX SENSIBLES (OBLIGATOIRE avant toute affirmation) ===
+Avant toute affirmation sur le cadre officinal francais, verifier mentalement :
+- Qui paie quoi ? (Assurance Maladie / officine / patient / Etat) La reponse n'est JAMAIS symetrique entre medecins et pharmaciens.
+- Qui remunere qui ? (forfait, remuneration a l'acte, dotation, honoraire de dispensation, majoration de coordination) Ces regimes sont distincts par profession.
+- Quel est le statut conventionnel exact ? (avenant convention pharmacien, LFSS article precise, decret en Conseil d'Etat, arrete tarifaire) Citer l'acte reglementaire.
+- NE JAMAIS inferer par symetrie medecin<->pharmacien : leurs statuts conventionnels, leurs modes de financement et leurs obligations sont FONDAMENTALEMENT DIFFERENTS.
+  Exemple contre-indique : si un TROD ou une mission est gratuit pour le medecin (finance par l'AM dans son forfait), ce n'est PAS automatiquement gratuit pour l'officine (qui peut acheter les kits a sa charge ou etre rembourse differemment). Verifier la source originale.
+- En cas de doute sur un fait chiffre, un financement ou un statut conventionnel : CITER TEXTUELLEMENT la source au lieu de reformuler. Ne pas paraphraser ce qu'on ne peut pas verifier.
+
 REGLES DE SOURCES (STRICTES) :
 1. REGLE ABSOLUE : JAMAIS 2 articles du meme media dans une meme journee. 1 seul Moniteur max, 1 seul Quotidien du Pharmacien max, etc. Si Pharma France choisit Moniteur, aucune autre categorie ne peut piocher dans Moniteur.
 2. ALTERNANCE OBLIGATOIRE : Le Moniteur et Le Quotidien du Pharmacien sont des references mais NE DOIVENT PAS etre utilises TOUS les jours. Sur une semaine, varie au maximum. Alterne avec : Egora, HAS, Ordre des Pharmaciens, LEEM, Le Pharmacien de France, VIDAL, Sciences et Avenir, Pourquoi Docteur, APMnews, The Conversation, INSERM, ANSM, Medscape FR, etc.
@@ -408,6 +417,82 @@ BUSINESS_PRIORITY_SOURCES = {
 }
 
 
+def _factcheck_business_article(client, biz: dict) -> dict:
+    """Second-pass Claude fact-check on a generated business_officine article.
+
+    Detects incorrect inferences (e.g. medecin=pharmacien symmetry) and
+    injects warnings into biz['warnings'] without modifying the article text
+    (the human reviewer — Emilie — decides what to correct).
+
+    Returns the enriched biz dict (may be unchanged if no issues found).
+    """
+    text_to_check = "\n\n".join(filter(None, [
+        biz.get("chapo", ""),
+        biz.get("contexte", ""),
+        biz.get("analyse", ""),
+        biz.get("recommandations", ""),
+    ]))
+    if not text_to_check.strip():
+        return biz
+
+    factcheck_prompt = f"""Tu es Emilie, juriste-reglementaire specialisee en droit pharmaceutique francais.
+On te soumet un article "Business Officine" pour relecture AVANT publication.
+
+=== ARTICLE A VERIFIER ===
+{text_to_check}
+
+=== TA MISSION ===
+Relire chaque affirmation factuelle touchant :
+1. Le financement et la remuneration de l'officine (qui paie quoi, combien, selon quel texte)
+2. Les conventions pharmaciens (avenants, honoraires, ROSP, dotations, forfaits)
+3. Les TROD, missions et actes pharmaceutiques (financement, statut conventionnel, prix)
+4. Toute symetrie implicite avec le statut du medecin : les droits/obligations des pharmaciens NE SONT PAS un miroir de ceux des medecins.
+
+Pour CHAQUE affirmation douteuse ou incorrecte que tu detectes, note :
+- La phrase exacte problematique
+- Ce qui est incorrect ou invérifiable
+- Ce qu'il faudrait verifier ou corriger
+
+Sois directe et precis. Si l'article est correct sur tous les points, reponds uniquement "RAS".
+
+JSON UNIQUEMENT :
+{{
+  "issues_found": true|false,
+  "warnings": [
+    "FACT-CHECK: [phrase] → [probleme detecte / a verifier]"
+  ]
+}}
+
+Si aucun probleme : {{"issues_found": false, "warnings": []}}"""
+
+    try:
+        response = claude_create(
+            client,
+            model="claude-sonnet-4-20250514",
+            max_tokens=800,
+            messages=[{"role": "user", "content": factcheck_prompt}],
+        )
+        text = response.content[0].text.strip()
+        json_match = re.search(r"\{[\s\S]*\}", text)
+        if json_match:
+            fc = json.loads(json_match.group())
+            new_warnings = fc.get("warnings", [])
+            if new_warnings:
+                existing_warnings = biz.get("warnings", [])
+                biz["warnings"] = existing_warnings + new_warnings
+                biz["factcheck_issues"] = True
+                print(f"  [FACTCHECK] {len(new_warnings)} probleme(s) detecte(s) par le second-pass")
+                for w in new_warnings:
+                    print(f"    - {w[:100]}")
+            else:
+                print("  [FACTCHECK] Second-pass OK, aucun probleme detecte")
+    except Exception as e:
+        # Le fact-check est non-bloquant : on logue et on continue
+        print(f"  [FACTCHECK] Erreur second-pass (non bloquant): {e}")
+
+    return biz
+
+
 def generate_business_article(raw_articles, existing_urls=None, used_sources=None, used_titles=None):
     """Generate a daily Business Officine analytical article (long format).
 
@@ -492,6 +577,14 @@ C'est CE qui fait que les pharmaciens s'abonnent et partagent. Il NE DOIT JAMAIS
 Si aucun angle business evident n'emerge de l'actu, extrais la dimension business d'un sujet reglementaire, economique ou structurel.
 Donne-toi a fond sur cet article : chiffres precis, comparaisons, ton consultant.
 
+=== CHECKLIST FAITS OFFICINAUX SENSIBLES (OBLIGATOIRE avant toute affirmation) ===
+Avant toute affirmation sur le cadre officinal francais, verifier :
+- Qui paie quoi ? (Assurance Maladie / officine / patient) La reponse n'est JAMAIS symetrique entre professions de sante.
+- Qui remunere qui ? (forfait, honoraire de dispensation, dotation, ROSP, avenant convention) Ces regimes sont distincts par profession.
+- Quel statut conventionnel exact s'applique ? Citer l'acte reglementaire (avenant, LFSS, decret, arrete tarifaire).
+- NE JAMAIS inferer par symetrie medecin<->pharmacien. Exemple : un TROD gratuit pour le medecin (inclus dans son forfait AM) peut tres bien etre achete a sa charge par l'officine ou rembourse selon un mecanisme different. Verifier la source.
+- En cas de doute sur un chiffre, un financement ou un statut conventionnel : CITER TEXTUELLEMENT la source officielle. Ne pas reformuler ce qu'on ne peut pas garantir.
+
 === REGLE LEGALE CRITIQUE (PUBLICITE Rx INTERDITE - L.5122) ===
 INTERDICTION ABSOLUE de proposer des recommandations type "merch", "mise en avant", "promotion", "communication client", "vitrine", "linéaire", "ILV" sur un MEDICAMENT A PRESCRIPTION identifie (GLP-1 type Ozempic/Wegovy/Mounjaro, antibiotiques, antidiabetiques, antihypertenseurs, antidepresseurs, tout Rx rembourse par l'Assurance Maladie).
 
@@ -557,6 +650,9 @@ Le confidence_score (0-1) reflete ton niveau de certitude sur la qualite des chi
     except json.JSONDecodeError as e:
         print(f"  [ERROR] JSON business parse: {e}")
         return None
+
+    # Second-pass fact-check : Claude relit l'article business comme Emilie le ferait.
+    biz = _factcheck_business_article(client, biz)
 
     # Assemble into the standard article format for downstream injection
     sources_list = biz.get("sources", [])
@@ -635,6 +731,84 @@ _stock_usage = {}  # track which stock photos are used this run
 NEWSLETTER_SENT_FILE = ROOT_DIR / "output" / "newsletter_sent.json"
 PENDING_LSV_FILE = ROOT_DIR / "output" / "pending_lsv.json"
 PENDING_ACTU_FILE = ROOT_DIR / "output" / "pending_actu.json"
+
+
+# Mots-cles declenchant une review manuelle Emilie sur les articles officinaux sensibles.
+# Logique : toute affirmation sur le financement, la remuneration ou le statut conventionnel
+# officinal est susceptible d'etre incorrecte si Claude infere par symetrie medecin<->pharmacien.
+OFFICINAL_SENSITIVE_KEYWORDS = {
+    "convention", "conventionnel", "conventionnelle",
+    "remuneration", "remunere", "remuneree",
+    "honoraire", "honoraires",
+    "rosp", "forfait", "dotation",
+    "trod", "test rapide",
+    "avenant",
+    "marge officinale", "marge",
+    "remboursement officine", "prise en charge",
+    "assurance maladie finance", "assurance maladie prend en charge",
+    "gratuit pour le pharmacien", "gratuit pour l'officine",
+    "pharmacien prend en charge", "officine prend en charge",
+    "lfss",
+}
+
+
+def flag_officinal_articles(articles, run_date: str) -> list[dict]:
+    """Detect articles touching sensitive officinal facts and write a review file.
+
+    An article is flagged if it belongs to 'business_officine' OR contains
+    at least one keyword from OFFICINAL_SENSITIVE_KEYWORDS in its text fields.
+
+    Returns the list of flagged articles (may be empty).
+    Writes output/_REVIEW_EMILIE_{run_date}.json if any flagged articles found.
+    """
+    flagged = []
+    for a in articles:
+        is_business = a.get("categorie") == "business_officine"
+        text_blob = " ".join([
+            a.get("titre", ""),
+            a.get("resume", ""),
+            a.get("full_text", ""),
+        ]).lower()
+        has_keyword = any(kw in text_blob for kw in OFFICINAL_SENSITIVE_KEYWORDS)
+
+        if is_business or has_keyword:
+            flagged.append({
+                "id": a.get("id", ""),
+                "categorie": a.get("categorie", ""),
+                "titre": a.get("titre", ""),
+                "resume": a.get("resume", ""),
+                "source": a.get("source", ""),
+                "source_url": a.get("source_url", ""),
+                "confidence_score": a.get("confidence_score"),
+                "warnings": a.get("warnings", []),
+                "flag_reason": "business_officine" if is_business else "keyword_match",
+            })
+
+    if flagged:
+        review_dir = ROOT_DIR / "output"
+        review_dir.mkdir(exist_ok=True)
+        review_path = review_dir / f"_REVIEW_EMILIE_{run_date}.json"
+        review_payload = {
+            "generated_at": datetime.now(PARIS_TZ).isoformat(),
+            "run_date": run_date,
+            "instructions": (
+                "Ces articles contiennent des affirmations sur le cadre officinal francais "
+                "(financement, remuneration, convention, TROD, marge...). "
+                "Verifier chaque fait avant publication ou envoyer la newsletter. "
+                "En cas d'erreur detectee : corriger dans output/pending_actu.json "
+                "ou notifier Stephen immediatement."
+            ),
+            "articles_to_review": flagged,
+        }
+        review_path.write_text(
+            json.dumps(review_payload, ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
+        print(f"  [REVIEW-EMILIE] {len(flagged)} article(s) flagge(s) → {review_path.name}")
+    else:
+        print("  [REVIEW-EMILIE] Aucun article a risque officinal detecte")
+
+    return flagged
 
 
 def get_fallback_photo(categorie):
@@ -1516,6 +1690,11 @@ def main():
     if not curated:
         print("  Rien a publier. Arret.")
         return
+
+    # 4.5 Flag articles officinaux sensibles pour review Emilie
+    run_date = datetime.now(PARIS_TZ).strftime("%Y-%m-%d")
+    print(f"\n[4.5/6] Verification articles officinaux sensibles...")
+    flag_officinal_articles(curated, run_date)
 
     # 5. Photos + insertion HTML
     print("\n[5/6] Photos + mise a jour index.html...")
