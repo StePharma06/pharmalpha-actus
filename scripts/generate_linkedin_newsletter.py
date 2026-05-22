@@ -630,19 +630,20 @@ def generate_cover_image():
         GREY = "#555555"
         FOOTER_H = 60
 
-        # Compute LAST completed week (lundi-dimanche just past)
+        # Compute CURRENT ISO week (lundi-dimanche) = semaine recapee, publiee le lundi suivant.
+        # La newsletter est generee le vendredi pour publication le lundi : on libelle donc
+        # la cover avec la semaine EN COURS (ex W21), coherente avec le sujet de l'email.
         today = datetime.now(PARIS_TZ)
-        days_since_monday = today.weekday()
-        last_sunday = today - timedelta(days=days_since_monday + 1)
-        last_monday = last_sunday - timedelta(days=6)
-        week_num = last_monday.isocalendar()[1]
+        this_monday = today - timedelta(days=today.weekday())
+        this_sunday = this_monday + timedelta(days=6)
+        week_num = this_monday.isocalendar()[1]
 
         months_fr = ["", "JANVIER", "FÉVRIER", "MARS", "AVRIL", "MAI", "JUIN", "JUILLET", "AOÛT", "SEPTEMBRE", "OCTOBRE", "NOVEMBRE", "DÉCEMBRE"]
         # ALWAYS full month names (no truncation)
-        if last_monday.month == last_sunday.month:
-            date_str = f"{last_monday.day} - {last_sunday.day} {months_fr[last_sunday.month]} {last_sunday.year}"
+        if this_monday.month == this_sunday.month:
+            date_str = f"{this_monday.day} - {this_sunday.day} {months_fr[this_sunday.month]} {this_sunday.year}"
         else:
-            date_str = f"{last_monday.day} {months_fr[last_monday.month]} - {last_sunday.day} {months_fr[last_sunday.month]} {last_sunday.year}"
+            date_str = f"{this_monday.day} {months_fr[this_monday.month]} - {this_sunday.day} {months_fr[this_sunday.month]} {this_sunday.year}"
 
         bg = Image.new("RGB", (W, H), BG)
         draw = ImageDraw.Draw(bg)
@@ -711,13 +712,13 @@ def generate_cover_image():
         dates_h = bbox_d[3] - bbox_d[1]
 
         tagline_y = dates_y + dates_h + 30
-        draw.text((right_x, tagline_y), "5 actus pharma + 1 saviez-vous + l'angle Stephen.", font=font_sub, fill=GREY)
-        draw.text((right_x, tagline_y + 30), "L'essentiel de la semaine, sans le bruit.", font=font_sub, fill=GREY)
+        draw.text((right_x, tagline_y), "5 actus pharma + 1 saviez-vous.", font=font_sub, fill=GREY)
+        draw.text((right_x, tagline_y + 30), "Je vous résume l'actus de la semaine en 5min chrono.", font=font_sub, fill=GREY)
 
         # Footer
         footer_y = H - FOOTER_H + 22
         draw.text((40, footer_y), "STEPHEN ROBERT  |  PHARM'ALPHA", font=font_footer, fill="#FFFFFF")
-        url = "actus.pharmalpha.fr"
+        url = "pharmalpha.fr/actus"
         bbox_url = draw.textbbox((0, 0), url, font=font_footer)
         draw.text((W - 40 - (bbox_url[2] - bbox_url[0]), footer_y), url, font=font_footer, fill=ORANGE)
 
