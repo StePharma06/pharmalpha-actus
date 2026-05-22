@@ -130,7 +130,6 @@ def _build_orphan_stub_html(article_id: str, titre_raw: str, resume_raw: str, og
     <p>Decouvrir <a href="https://pharmalpha.fr/formations">les formations Pharm'Alpha</a>.</p>
   </footer>
 </article>
-<script>window.location.replace("https://actus.pharmalpha.fr/?a={article_id}");</script>
 </body>
 </html>'''
 

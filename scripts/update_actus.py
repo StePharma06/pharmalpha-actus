@@ -274,7 +274,7 @@ Le merch / promotion commerciale n'est OK QUE pour : OTC, complements alimentair
 Pour chaque article, genere :
 - "titre" : accrocheur, max 80 car, style direct de Stephen
 - "resume" : 2-3 phrases percutantes, angle pharmacien
-- "full_text" : 150-250 mots, 4-5 paragraphes separes par \\n\\n. Style Stephen : phrases courtes, chiffres concrets, impact officine, humour si pertinent. 1ere phrase = accroche forte.
+- "full_text" : 300-450 mots, 5-7 paragraphes separes par \\n\\n. Style Stephen : phrases courtes, chiffres concrets, impact officine, humour si pertinent. 1ere phrase = accroche forte. Ce texte est la version COMPLETE indexable par Google : developpe chaque argument, cite les chiffres cles, evite les formules vagues.
 - "categorie" : voir ci-dessus
 - "badge_label" : voir ci-dessus
 - "source" et "source_url"
@@ -1320,7 +1320,6 @@ def _build_article_page_html(article_id: str, titre_raw: str, resume_raw: str, i
     <p>Decouvrir <a href="https://pharmalpha.fr/formations">les formations Pharm'Alpha</a>.</p>
   </footer>
 </article>
-<script>window.location.replace("https://actus.pharmalpha.fr/?a={article_id}");</script>
 </body>
 </html>'''
 
