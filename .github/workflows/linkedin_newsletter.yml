@@ -2,8 +2,10 @@ name: LinkedIn Newsletter Weekly
 
 on:
   schedule:
-    - cron: '0 5 * * 5'  # Vendredi 05h00 UTC = 07h00 Paris
+    - cron: '0 5 * * 5'  # Vendredi 05h00 UTC = 07h00 Paris (cron GitHub = best-effort, peut decaler)
   workflow_dispatch:
+  repository_dispatch:
+    types: [send-linkedin-newsletter]  # backup fiable via cron-job.org (heure pile)
 
 jobs:
   newsletter:
