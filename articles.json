@@ -1,6 +1,127 @@
 {
   "articles": [
     {
+      "id": "actu_2026_05_22_5",
+      "date": "2026-05-22",
+      "type": "actu",
+      "categorie": "business_officine",
+      "titre": "Aide 20 000€ territoires fragiles : 1000 officines éligibles, les dossiers urgents",
+      "resume": "L'avenant 2 élargit le dispositif d'aide aux pharmacies en difficulté. Près de 1000 officines peuvent désormais toucher 20 000€, mais les dépôts de dossiers traînent.",
+      "full_text": "L'avenant 2 élargit le dispositif d'aide aux pharmacies en difficulté. Près de 1000 officines peuvent désormais toucher 20 000€, mais les dépôts de dossiers traînent.\n\n## Contexte\n\nL'avenant 2 à la convention pharmaceutique vient d'être publié au JO du 21 mai 2026, étendant significativement le dispositif d'aide financière aux pharmacies en territoires fragiles. Cette mesure d'urgence, négociée dans le cadre des discussions conventionnelles, vise à soutenir les officines confrontées à des difficultés économiques structurelles liées à leur implantation géographique. Le dispositif initial, plus restrictif, concernait principalement les zones sous-denses et les quartiers prioritaires. Avec cet élargissement, ce sont désormais près de 1000 pharmacies qui peuvent prétendre à cette aide de 20 000 euros, soit plus du triple des bénéficiaires potentiels initiaux. L'enjeu est majeur : éviter les fermetures d'officines dans des territoires déjà fragilisés par la désertification médicale et maintenir l'accès aux soins de proximité pour 2,5 millions de Français résidant dans ces zones.\n\n## Analyse business\n\nLes chiffres révèlent l'ampleur du défi. Sur les 21 000 pharmacies françaises, environ 4,8% peuvent désormais bénéficier de cette aide exceptionnelle de 20 000€, représentant un engagement financier de l'Assurance Maladie pouvant atteindre 20 millions d'euros si toutes les officines éligibles déposent leur dossier. Cette enveloppe s'inscrit dans le Fonds d'intervention pour la qualité et la coordination des soins (FIQCS), abondé à hauteur de 150 millions d'euros annuels pour l'ensemble des mesures d'accompagnement des professionnels de santé. L'aide de 20 000€ correspond en moyenne à 2,5 mois de marge brute pour une pharmacie de territoire (marge moyenne estimée à 8 000€/mois), un montant significatif mais non récurrent. Les critères d'éligibilité intègrent désormais les communes de moins de 2 500 habitants avec un indice de vitalité commerciale inférieur à 0,3, les quartiers en politique de la ville, et les zones de revitalisation rurale avec un chiffre d'affaires inférieur à 1,2 million d'euros. Cette aide ponctuelle doit être analysée comme un palliatif face à l'érosion structurelle des marges : -1,2% en moyenne sur les territoires fragiles selon les données FSPF 2025.\n\n## Recommandations actionnables\n\n\n\n## Sources citees\n\n- Le Quotidien du Pharmacien",
+      "source": "Pharm'Actus",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Business",
+      "image_url": "assets/img_actu_2026_05_22_5.jpg",
+      "tags": [
+        "aide-financiere",
+        "territoires-fragiles",
+        "convention-pharmaceutique",
+        "avenant"
+      ]
+    },
+    {
+      "id": "actu_2026_05_22_4",
+      "date": "2026-05-22",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "Voxzogo s'étend : BioMarin vise l'hypochondroplasie",
+      "resume": "BioMarin prépare l'extension d'AMM de Voxzogo dans l'hypochondroplasie après des résultats phase 3 qui ont 'dépassé les attentes'. Le médicament du nanisme élargit son territoire thérapeutique.",
+      "full_text": "Voxzogo ne s'arrête plus. BioMarin vient d'annoncer des résultats phase 3 qui ont 'dépassé ses attentes' dans l'hypochondroplasie, une forme moins sévère de nanisme que l'achondroplasie actuellement traitée.\n\nLe vosoritide (Voxzogo) stimule la croissance osseuse en activant la voie du peptide natriurétique de type C. Déjà approuvé pour l'achondroplasie, il pourrait bientôt traiter une population plus large d'enfants avec des troubles de croissance.\n\nPour nous pharmaciens ? Cette extension va multiplier les prescriptions. L'hypochondroplasie est moins rare que l'achondroplasie. Plus de familles vont découvrir cette option thérapeutique via les consultations spécialisées.\n\nL'enjeu : maîtriser ce médicament ultra-spécialisé. Conservation, reconstitution, suivi des effets indésiraires... Voxzogo demande une expertise pointue. Et avec cette extension, ça va devenir incontournable dans certaines officines de secteur.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/pharma/biomarin-will-file-voxzogo-expansion-after-scoring-hch-study",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_05_22_4.jpg",
+      "tags": [
+        "voxzogo",
+        "nanisme",
+        "pediatrie",
+        "biomarin"
+      ]
+    },
+    {
+      "id": "actu_2026_05_22_3",
+      "date": "2026-05-22",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "Vaccination zona : 1,5 million de seniors déjà protégés à l'officine",
+      "resume": "Le vaccin zona cartonne ! Plus de 1,5 million de personnes vaccinées en pharmacie. Il devient l'un des vaccins adultes les plus demandés spontanément. Et cerise sur le gâteau : il fait revenir les seniors pour leurs autres rappels.",
+      "full_text": "Le zona, cette maladie qui faisait peur à nos grands-parents, devient notre allié vaccination. Plus de 1,5 million de personnes sont déjà complètement vaccinées contre le zona en pharmacie. Du jamais vu pour un vaccin adulte !\n\nLe truc génial ? Les patients viennent spontanément demander ce vaccin. Pas besoin de les convaincre. La douleur du zona, ils connaissent par leur entourage. Ça motive plus que tous nos discours préventifs.\n\nMieux encore : cette vaccination devient notre porte d'entrée pour rattraper les retards. Un senior qui vient pour le zona, on vérifie son carnet. DTP en retard ? Covid pas à jour ? On repart avec plusieurs actes.\n\nLes pharmaciens témoignent : le zona a installé les seniors dans un vrai parcours vaccinal officinal. C'est notre nouveau cheval de Troie de la prévention. Et ça marche !",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/nouvelles-missions/prevention/zona-le-vaccin-qui-a-installe-les-seniors-dans-le-parcours-vaccinal-officinal",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_05_22_3.jpg",
+      "tags": [
+        "zona",
+        "vaccination",
+        "prevention",
+        "seniors"
+      ]
+    },
+    {
+      "id": "actu_2026_05_22_2",
+      "date": "2026-05-22",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "Keytruda + ADC : -65% de progression en première ligne pulmonaire",
+      "resume": "Le combo Keytruda + sac-TMT (ADC anti-TROP2) de Merck/Kelun cartonne dans le cancer du poumon. Réduction de 65% du risque de progression versus Keytruda seul. L'immunothérapie franchit un cap.",
+      "full_text": "L'ASCO 2026 vient de lâcher une bombe. Le combo Keytruda + sac-TMT réduit de 65% le risque de progression par rapport au Keytruda en monothérapie dans le cancer pulmonaire non à petites cellules PD-L1+ en première ligne.\n\nSac-TMT, c'est un ADC (antibody-drug conjugate) qui cible TROP2. En gros, un missile guidé qui livre sa chimiothérapie directement dans la cellule cancéreuse. Kelun, le partenaire chinois de Merck, maîtrise cette technologie.\n\nPour nous pharmaciens français ? Cette approche combo va devenir la nouvelle référence. Exit le Keytruda seul en première intention. Les protocoles vont évoluer, les coûts exploser, et les effets indésirables se complexifier.\n\nL'immunothérapie + ADC, c'est le futur qui arrive à grands pas. Nos patients vont vivre plus longtemps, mais nos conseils d'accompagnement vont devenir cruciaux face à ces nouvelles toxicités combinées.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/pharma/merck-kelun-sac-tmt-adc-combo-beats-keytruda-65-progression-first-line-lung-cancer",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/img_actu_2026_05_22_2.jpg",
+      "tags": [
+        "cancer",
+        "immunotherapie",
+        "adc",
+        "keytruda"
+      ]
+    },
+    {
+      "id": "actu_2026_05_22_1",
+      "date": "2026-05-22",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "Xurta TDAH : les règles de délivrance qui changent ton quotidien",
+      "resume": "Nouveau stupéfiant dans le TDAH, Xurta suit les règles des psychostimulants. 28 jours max, prescription spécialisée, ordonnance sécurisée obligatoire. Le point sur ce qui t'attend au comptoir.",
+      "full_text": "Xurta débarque dans ton radar des stupéfiants TDAH. Et comme tous ses confrères psychostimulants, il respecte les règles à la lettre.\n\nPrescription limitée à 28 jours maximum. Renouvellement impossible. Le spécialiste (neuro, pédiatre ou psy) doit rédiger une nouvelle prescription à chaque fois. Ça va faire du volume de consultations.\n\nCôté délivrance, ordonnance sécurisée papier obligatoire ou prescription dématérialisée via les téléservices AM. Le prescripteur doit indiquer le dosage en toutes lettres. Sinon, tu renvoies.\n\nLe stock en coffre, la traçabilité renforcée, les registres... Tu connais la chanson des stupéfiants. Mais avec le TDAH qui explose chez les adultes, prépare-toi à voir passer plus de Xurta que prévu.\n\nDemain matin ? Vérifie que ton équipe maîtrise ces règles. Un Xurta mal délivré, c'est l'inspection garantie.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/therapeutique/medicaments/mieux-delivrer/tdah-mieux-delivrer-xurta",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_05_22_1.jpg",
+      "tags": [
+        "tdah",
+        "stupefiant",
+        "prescription",
+        "delivrance"
+      ]
+    },
+    {
+      "id": "lsv_2026_05_22",
+      "date": "2026-05-22",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? La première vaccination s'est faite avec du pus de vache",
+      "resume": "En 1796, un médecin anglais a eu l'idée géniale d'inoculer la variole de vache à un enfant de 8 ans. Une expérience qui semblait folle mais qui a révolutionné la médecine pour toujours.",
+      "full_text": "Imagine la scène : nous sommes en mai 1796 dans le petit village de Berkeley, en Angleterre. Edward Jenner, médecin de campagne, vient de gratter le bras du petit James Phipps avec une lancette trempée dans le pus d'une pustule de variole bovine. Les parents regardent, inquiets mais confiants.\n\nJenner avait remarqué quelque chose d'étrange : les fermières qui trayaient les vaches infectées par la variole bovine ne contractaient jamais la variole humaine, cette maladie qui tuait 30% de ses victimes. Une observation de bon sens qui allait changer le monde.\n\nHuit semaines plus tard, le moment de vérité : Jenner inocule volontairement la vraie variole à James. Le gamin reste en parfaite santé ! La première vaccination de l'histoire venait de réussir. Le terme vient d'ailleurs de \"vacca\", vache en latin.\n\nMais attention, l'accueil fut glacial. La Royal Society refuse de publier ses travaux, jugeant ses idées \"trop révolutionnaires\". Les caricaturistes se moquent, imaginant des gens qui développent des cornes après vaccination. Jenner doit autofinancer ses recherches.\n\nPourtant, en 1980, l'Organisation mondiale de la santé déclare officiellement la variole éradiquée de la planète. La dernière maladie humaine complètement vaincue grâce à la vaccination.\n\nAujourd'hui, quand un patient te demande pourquoi il faut vacciner son enfant, tu peux lui raconter l'histoire de ce petit James qui a ouvert la voie à tous les vaccins modernes.",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_05_22.jpg",
+      "tags": [
+        "histoire",
+        "vaccin",
+        "variole",
+        "jenner",
+        "prevention"
+      ]
+    },
+    {
       "id": "actu_2026_05_21_5",
       "date": "2026-05-21",
       "type": "actu",
@@ -4380,6 +4501,6 @@
       ]
     }
   ],
-  "count": 212,
-  "updated_at": "2026-05-21T07:15:58.373294+02:00"
+  "count": 218,
+  "updated_at": "2026-05-22T07:09:58.706756+02:00"
 }

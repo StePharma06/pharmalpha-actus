@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? La première biopsie a été faite avec une cuillère",
-  "resume": "En 1879, un médecin allemand a eu l'idée géniale de prélever un morceau de tissu vivant pour l'examiner au microscope. Son instrument ? Une simple cuillère à café stérilisée.",
-  "full_text": "Imagine un peu la scène : nous sommes à Berlin en 1879, et le docteur Rudolf Virchow se gratte la tête devant un patient avec une tumeur suspecte. Comment savoir si c'est cancéreux sans ouvrir le ventre en grand ?\n\nL'illumination lui vient en buvant son café. Il prend une petite cuillère, la stérilise au feu, et creuse délicatement dans la masse tumorale pour en extraire un minuscule échantillon. Révolutionnaire ! Pour la première fois dans l'histoire, on peut diagnostiquer un cancer sans chirurgie lourde.\n\nLe truc marrant ? Ses collègues l'ont pris pour un fou furieux. \"Mutiler les patients avec des couverts, quelle hérésie !\" Virchow a tenu bon, perfectionnant sa technique avec des cuillères de plus en plus fines.\n\nEn 1883, il présente sa \"Löffel-Biopsie\" (biopsie à la cuillère) devant l'Académie de médecine. Succès immédiat ! En quelques années, toute l'Europe adopte la méthode. Les premiers vrais instruments de biopsie n'arriveront qu'en 1920.\n\nLe plus dingue dans l'histoire ? Virchow a aussi inventé le terme \"leucémie\" et découvert l'embolie pulmonaire. Un génie qui a révolutionné la médecine avec... de la vaisselle.\n\nAujourd'hui, quand tu vois passer une ordonnance suite à une biopsie hépatique ou cutanée, pense à ce brave Rudolf et à sa petite cuillère qui a ouvert la voie au diagnostic moderne.",
-  "image_keywords": "medical biopsy microscope",
+  "titre": "Le saviez-vous ? La première vaccination s'est faite avec du pus de vache",
+  "resume": "En 1796, un médecin anglais a eu l'idée géniale d'inoculer la variole de vache à un enfant de 8 ans. Une expérience qui semblait folle mais qui a révolutionné la médecine pour toujours.",
+  "full_text": "Imagine la scène : nous sommes en mai 1796 dans le petit village de Berkeley, en Angleterre. Edward Jenner, médecin de campagne, vient de gratter le bras du petit James Phipps avec une lancette trempée dans le pus d'une pustule de variole bovine. Les parents regardent, inquiets mais confiants.\n\nJenner avait remarqué quelque chose d'étrange : les fermières qui trayaient les vaches infectées par la variole bovine ne contractaient jamais la variole humaine, cette maladie qui tuait 30% de ses victimes. Une observation de bon sens qui allait changer le monde.\n\nHuit semaines plus tard, le moment de vérité : Jenner inocule volontairement la vraie variole à James. Le gamin reste en parfaite santé ! La première vaccination de l'histoire venait de réussir. Le terme vient d'ailleurs de \"vacca\", vache en latin.\n\nMais attention, l'accueil fut glacial. La Royal Society refuse de publier ses travaux, jugeant ses idées \"trop révolutionnaires\". Les caricaturistes se moquent, imaginant des gens qui développent des cornes après vaccination. Jenner doit autofinancer ses recherches.\n\nPourtant, en 1980, l'Organisation mondiale de la santé déclare officiellement la variole éradiquée de la planète. La dernière maladie humaine complètement vaincue grâce à la vaccination.\n\nAujourd'hui, quand un patient te demande pourquoi il faut vacciner son enfant, tu peux lui raconter l'histoire de ce petit James qui a ouvert la voie à tous les vaccins modernes.",
+  "image_keywords": "vaccination syringe",
   "tags": [
     "histoire",
-    "diagnostic",
-    "chirurgie",
-    "cancer",
-    "instrument"
+    "vaccin",
+    "variole",
+    "jenner",
+    "prevention"
   ],
-  "date": "2026-05-21",
+  "date": "2026-05-22",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",

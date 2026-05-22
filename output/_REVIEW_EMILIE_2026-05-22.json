@@ -1,0 +1,27 @@
+{
+  "generated_at": "2026-05-22T07:09:53.023485+02:00",
+  "run_date": "2026-05-22",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Aide 20 000€ territoires fragiles : 1000 officines éligibles, les dossiers urgents",
+      "resume": "L'avenant 2 élargit le dispositif d'aide aux pharmacies en difficulté. Près de 1000 officines peuvent désormais toucher 20 000€, mais les dépôts de dossiers traînent.",
+      "source": "Pharm'Actus",
+      "source_url": "",
+      "confidence_score": 0.7,
+      "warnings": [
+        "Date limite exacte de dépôt des dossiers à confirmer",
+        "Montant total de l'enveloppe FIQCS estimé d'après données antérieures",
+        "Critères d'éligibilité précis à vérifier dans l'avenant publié",
+        "FACT-CHECK: 'L'avenant 2 à la convention pharmaceutique vient d'être publié au JO du 21 mai 2026' → Date future inexistante - vérifier la date réelle de publication",
+        "FACT-CHECK: 'Cette enveloppe s'inscrit dans le Fonds d'intervention pour la qualité et la coordination des soins (FIQCS), abondé à hauteur de 150 millions d'euros annuels' → Le FIQCS concerne les médecins, pas les pharmaciens - vérifier le fonds réel d'abondement des aides aux officines",
+        "FACT-CHECK: 'selon les données FSPF 2025' → Date future - vérifier l'existence et la validité de ces données statistiques",
+        "FACT-CHECK: 'marge moyenne estimée à 8 000€/mois' → Chiffre très précis sans source réglementaire - vérifier la méthodologie de calcul et la source officielle",
+        "FACT-CHECK: 'Les critères d'éligibilité intègrent désormais les communes de moins de 2 500 habitants avec un indice de vitalité commerciale inférieur à 0,3' → Critères très précis - vérifier l'exactitude des seuils dans le texte officiel de l'avenant"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}
