@@ -1,0 +1,60 @@
+{
+  "generated_at": "2026-05-23T06:50:10.594475+02:00",
+  "run_date": "2026-05-23",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "75 millions d'euros de ROSP numérique en retard : l'Assurance Maladie va-t-elle payer des pénalités ?",
+      "resume": "La ROSP numérique 2025 ne sera versée qu'en juin au lieu de mai. Philippe Besset évoque des indemnités de retard contre l'AM. Pendant ce temps, la ROSP vaccination explose grâce à la prescription officinale.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/75-millions-deuros-en-attente-lexasperation-monte-autour-du-retard-de-la-rosp-numerique",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "Les pharmaciens deviennent des machines à vacciner : +72% d'actes au T1 2026 !",
+      "resume": "2,1 millions de vaccinations au premier trimestre, dont 22% prescrites directement par les pharmaciens. Le zona cartonne, la grippe explose, les rappels décollent.",
+      "source": "Le Pharmacien de France",
+      "source_url": "https://lepharmaciendefrance.fr/le-pharmacien-supervaccinateur/",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "avenir_pharma",
+      "titre": "GLP-1 oraux : Novo et Lilly lancent le combat des pilules anti-obésité",
+      "resume": "Wegovy en comprimés face à Foundayo de Lilly : la guerre des GLP-1 oraux commence. Un tracker hebdomadaire va suivre cette bataille de titans qui va révolutionner l'obésité.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/pharma/oral-glp-1-tracker-launch-trajectories-lilly-foundayo-novo-wegovy-pill",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Naloxone obligatoire avec méthadone : nouveau marché de 2,4M€ pour les officines ?",
+      "resume": "L'ANSM pousse la prescription systématique de naloxone avec la méthadone. 40 000 patients sous traitement de substitution = potentiel business à chiffrer.",
+      "source": "Pharm'Actus",
+      "source_url": "",
+      "confidence_score": 0.7,
+      "warnings": [
+        "Chiffre 40 000 patients méthadone à vérifier via OFDT",
+        "Taux 15% accès naloxone à confirmer",
+        "Marge exacte sur Nalscue non remboursé à valider",
+        "CA 180M€ méthadone officine nécessite source GERS 2025",
+        "FACT-CHECK: 'la marge sur Nalscue (non remboursé) s'élève à environ 26,5%, soit 15,87€ par boîte' → Le calcul de marge pharmaceutique ne suit pas cette logique simpliste. Il faut vérifier le statut exact de Nalscue (médicament de prescription facultaire, OTC, etc.) et les règles de marge applicables selon l'arrêté sur les prix des médicaments non remboursés",
+        "FACT-CHECK: 'Propose des entretiens pharmaceutiques spécifiques TSO (non rémunérés mais fidélisation client forte)' → Affirmation péremptoire sur l'absence de rémunération. Il faut vérifier si des entretiens pharmaceutiques TSO peuvent entrer dans le cadre des entretiens pharmaceutiques rémunérés existants (avenant 12 de la convention pharmaceutique) ou faire l'objet d'une dotation spécifique",
+        "FACT-CHECK: 'disponible sans prescription depuis 2019' → Vérifier le statut réglementaire exact de Nalscue : prescription facultaire ou réellement OTC, et les conditions de délivrance en officine",
+        "FACT-CHECK: 'données GERS 2025' et 'enquête OFDT 2025' → Sources datées de 2025 alors que nous sommes en 2024, ce qui rend ces références invérifiables et probablement fictives"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}
