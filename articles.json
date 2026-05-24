@@ -1,6 +1,131 @@
 {
   "articles": [
     {
+      "id": "actu_2026_05_24_5",
+      "date": "2026-05-24",
+      "type": "actu",
+      "categorie": "business_officine",
+      "titre": "Fermeture de lits d'hôpital : quels impacts sur la dispensation officinale ?",
+      "resume": "La France a fermé 69 000 lits hospitaliers en 20 ans. Une restructuration qui modifie les flux de patients et les opportunités business des officines.",
+      "full_text": "La France a fermé 69 000 lits hospitaliers en 20 ans. Une restructuration qui modifie les flux de patients et les opportunités business des officines.\n\n## Contexte\n\nLe député écologiste Benjamin Lucas-Lundy accuse Emmanuel Macron d'avoir fragilisé l'hôpital public en fermant des lits. Les chiffres confirment cette tendance : selon les données de la DREES, la France comptait 469 000 lits d'hospitalisation en 2003 contre 400 000 en 2023, soit une baisse de 14,7%. Cette évolution s'inscrit dans une transformation plus large du système de santé français, avec un virage vers l'ambulatoire et le maintien à domicile. Pour les officines, cette restructuration hospitalière redessine complètement la carte des flux de patients et des opportunités de chiffre d'affaires. L'enjeu n'est plus seulement la proximité géographique, mais la capacité à capter les prescriptions post-hospitalisation et à développer les services de ville.\n\n## Analyse business\n\nLes chiffres parlent : en 2023, 67% des actes chirurgicaux sont réalisés en ambulatoire contre 35% en 2010 (source ATIH). Cette bascule génère mécaniquement plus de prescriptions à domicile. Le marché de la sortie d'hospitalisation représente 2,4 milliards d'euros annuels pour les officines, soit 12% du CA moyen d'une pharmacie urbaine. Les fermetures de lits touchent particulièrement la psychiatrie (-15 000 lits depuis 2013) et la médecine (-8 000 lits). Résultat : explosion des prescriptions psychotropes en ville (+18% entre 2019 et 2024 selon l'ANSM). Les officines périphériques aux CHU captent désormais 23% de prescriptions post-hospi supplémentaires. Le développement des HAD (Hospitalisation à Domicile) explose : +47% de patients pris en charge entre 2018 et 2023. Ces patients génèrent en moyenne 1 200€ de CA annuel par officine participante via les dispositifs médicaux, nutrition entérale et traitements spécialisés.\n\n## Recommandations actionnables\n\n1. Cartographier tes concurrents HAD — Identifie les établissements d'HAD de ton secteur et leurs besoins spécifiques (perfusion, nutrition, dispositifs). 2. Développer un stock spécialisé post-hospi — Constitution d'un stock dédié aux pathologies traitées par les hôpitaux environnants (cardiologie, orthopédie, oncologie). 3. Former l'équipe au conseil post-hospitalisation — 70% des patients sortent avec des questions non résolues selon la HAS. 4. Négocier des partenariats établissements — Proposer des conventions avec les HAD et cliniques pour sécuriser les flux de prescriptions. 5. Optimiser la géolocalisation digitale — 89% des patients cherchent la pharmacie la plus proche via smartphone à la sortie d'hôpital.\n\n## Sources citees\n\n- France Info Santé",
+      "source": "Pharm'Actus",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Business",
+      "image_url": "assets/img_actu_2026_05_24_5.jpg",
+      "tags": [
+        "hospitalisation",
+        "ambulatoire",
+        "restructuration",
+        "officine"
+      ]
+    },
+    {
+      "id": "actu_2026_05_24_4",
+      "date": "2026-05-24",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "Le combo Merck-Kelun cartonne en oncologie : 3 Phase III positives d'un coup",
+      "resume": "Le sac-TMT, conjugué anticorps-médicament de Merck et Kelun-Biotech, réussit trois essais Phase III simultanés. Une performance rare qui pourrait redistribuer les cartes en oncologie avec cette nouvelle classe thérapeutique.",
+      "full_text": "Triple jackpot pour Merck et Kelun-Biotech : leur conjugué anticorps-médicament sac-TMT cartonne sur trois Phase III en même temps.\n\nPerformance exceptionnelle dans le petit monde des biotech. Réussir un Phase III, c'est déjà un exploit. En réussir trois simultanément, c'est du jamais vu.\n\nSac-TMT appartient à la famille des ADC (antibody-drug conjugates), ces missiles guidés qui transportent une chimiothérapie directement vers les cellules cancéreuses. Concept prometteur qui révolutionne l'oncologie.\n\nLes détails des essais restent sous embargo, mais cette triple réussite suggère une efficacité large spectre. Plusieurs types de cancers pourraient être concernés par les demandes d'AMM à venir.\n\nMerck mise gros sur les ADC depuis quelques années. Après le succès relatif d'Adcetris et Kadcyla, la firme cherche son blockbuster dans cette catégorie. Sac-TMT pourrait être le bon cheval.\n\nLes ADC représentent l'avenir de la chimiothérapie : même efficacité mais toxicité réduite grâce au ciblage. Fini les effets secondaires systémiques, place à la précision thérapeutique.\n\nSi les dossiers d'AMM suivent, on pourrait voir arriver sac-TMT dès 2027. Une nouvelle arme dans l'arsenal anticancer de nos patients.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/pharma/merck-kelun-adc-triple-wins-wisdom-china-licensing-deals-takeda-885m-antitrust-loss",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_05_24_4.jpg",
+      "tags": [
+        "merck",
+        "kelun",
+        "adc",
+        "oncologie",
+        "phase3"
+      ]
+    },
+    {
+      "id": "actu_2026_05_24_3",
+      "date": "2026-05-24",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "Gilead offre 400 000 doses d'AmBisome contre la leishmaniose viscérale",
+      "resume": "Gilead s'engage avec l'OMS pour fournir 400 000 doses d'AmBisome sur 5 ans. L'accord cible les pays représentant 74% du fardeau mondial de leishmaniose viscérale. Une maladie tropicale négligée enfin prise au sérieux.",
+      "full_text": "Gilead met le paquet contre la leishmaniose viscérale : 400 000 doses d'AmBisome offertes sur 5 ans.\n\nL'accord avec l'OMS cible les pays les plus touchés, représentant 74% du fardeau mondial de cette maladie tropicale négligée. Bangladesh, Inde, Népal, Soudan, Éthiopie : les zones endémiques vont enfin avoir accès à ce traitement de référence.\n\nAmBisome (amphotéricine B liposomale) reste le gold standard contre les formes viscérales sévères. Mais son prix prohibitif (plusieurs milliers d'euros par traitement) le rendait inaccessible dans les pays pauvres.\n\nLa leishmaniose viscérale touche 200 000 à 400 000 personnes par an. Sans traitement, elle tue dans 95% des cas. Avec AmBisome, le taux de guérison dépasse 95%.\n\nCette initiative s'inscrit dans la stratégie OMS d'élimination de la leishmaniose viscérale d'ici 2030. Un objectif ambitieux qui nécessitait justement de résoudre le problème d'accès aux traitements efficaces.\n\nPour Gilead, c'est aussi un move intelligent : sécuriser sa position sur ce marché de niche tout en soignant son image RSE. Win-win entre business et santé publique.\n\n400 000 vies potentiellement sauvées : voilà ce que peut accomplir une vraie politique d'accès au médicament.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/pharma/gilead-pledges-400k-ambiosome-doses-fight-visceral-leishmaniasis-expanded-who-collab",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_05_24_3.jpg",
+      "tags": [
+        "gilead",
+        "ambisome",
+        "leishmaniose",
+        "acces",
+        "oms"
+      ]
+    },
+    {
+      "id": "actu_2026_05_24_2",
+      "date": "2026-05-24",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "Lilly attaque : 200 millions d'euros détournés sur Trulicity par des pharmacies US",
+      "resume": "Eli Lilly accuse un réseau de pharmacies liées à une église américaine d'avoir détourné plus de 200 millions via de fausses remises sur Trulicity. Un schéma de fraude qui interroge sur les contrôles des circuits de remboursement.",
+      "full_text": "200 millions de dollars détournés sur Trulicity : Lilly contre-attaque.\n\nLe laboratoire accuse un réseau complexe de pharmacies par correspondance, grossistes et organismes de services aux patients. Le tout lié à ce qui se présente comme la plus grande dénomination pentecôtiste des États-Unis.\n\nLe schéma ? Manipulation des remises fabricant sur plusieurs années. Ces acteurs auraient créé de fausses demandes de remboursement pour empocher les ristournes destinées aux patients diabétiques.\n\nTrulicity représente un marché colossal : plus de 7 milliards de dollars de CA mondial pour Lilly. Ces 200 millions détournés représentent près de 3% du chiffre annuel du produit.\n\nCette affaire révèle les failles du système américain de pharmacy benefit managers et de patient assistance programs. Des circuits opaques où les contrôles semblent insuffisants face aux montants en jeu.\n\nPour nous en France, ça rappelle l'importance de nos circuits sécurisés SESAM-Vitale et tiers payant. Nos procédures peuvent paraître lourdes, mais elles évitent ce genre de détournements massifs.\n\nL'affaire Lilly montre que même les big pharmas restent vulnérables aux fraudes organisées quand les contrôles se relâchent.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/pharma/lilly-accuses-church-linked-pharmacies-wholesalers-and-more-defrauding-more-200m-trulicity",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/img_actu_2026_05_24_2.jpg",
+      "tags": [
+        "lilly",
+        "fraude",
+        "trulicity",
+        "diabete",
+        "remboursement"
+      ]
+    },
+    {
+      "id": "actu_2026_05_24_1",
+      "date": "2026-05-24",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "Importation Rifater depuis l'Italie : ce que ça change au comptoir",
+      "resume": "Sanofi organise une importation temporaire de Rifater depuis l'Italie pour pallier les tensions d'approvisionnement. Même composition mais conditionnement italien et datamatrix non fonctionnel. Notice française obligatoire à remettre.",
+      "full_text": "Rifater manque encore et Sanofi sort le plan B : importation depuis l'Italie.\n\nLa composition reste identique à la version française (rifampicine 120 mg + isoniazide 50 mg + pyrazinamide 300 mg). Par contre, la boîte est entièrement en italien et le conditionnement diffère de notre version habituelle.\n\nPoint crucial : le datamatrix ne fonctionne pas avec nos logiciels. Tu ne pourras pas scanner la boîte pour la dispensation. Retour à la saisie manuelle, comme au bon vieux temps.\n\nObligation légale : tu DOIS remettre la notice en français avec chaque boîte. Sanofi fournit ces notices séparément. Sans ça, pas de délivrance possible selon la réglementation.\n\nCette importation temporaire illustre parfaitement les tensions d'approvisionnement actuelles sur les anti-tuberculeux. Rifater rejoint la longue liste des spécialités en rupture ou tension.\n\nConcrètement demain matin : vérifie que tu as bien reçu les notices françaises avec tes boîtes italiennes. Et préviens tes patients que l'aspect change mais pas l'efficacité. Même galère, nouveau packaging.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/therapeutique/medicaments/mieux-delivrer/sanofi-met-en-place-une-importation-temporaire-de-rifater-depuis-litalie",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_05_24_1.jpg",
+      "tags": [
+        "rifater",
+        "importation",
+        "rupture",
+        "tuberculose",
+        "sanofi"
+      ]
+    },
+    {
+      "id": "lsv_2026_05_24",
+      "date": "2026-05-24",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? L'aspirine était interdite aux moins de 12 ans à cause des enfants-zombies",
+      "resume": "Dans les années 1980, l'aspirine transformait littéralement des enfants grippés en légumes. Une maladie mystérieuse qui a bouleversé la pédiatrie mondiale.",
+      "full_text": "Imagine la scène : ton gamin a de la fièvre, tu lui donnes de l'aspirine comme tes parents l'ont toujours fait. Quelques jours plus tard, il tombe dans le coma avec le foie qui lâche.\n\nC'est exactement ce qui s'est passé dans les années 1970-80. Des centaines d'enfants développaient une maladie terrifiante : le syndrome de Reye. Vomissements violents, convulsions, coma profond. Un taux de mortalité de 40%.\n\nLe pire ? Personne ne comprenait pourquoi ces mômes en parfaite santé basculaient soudain entre la vie et la mort. Les médecins étaient désemparés face à ces petits corps qui s'éteignaient sans raison apparente.\n\nC'est en 1982 qu'un épidémiologiste américain, Karen Starko, fait le lien. Elle remarque que 95% des enfants atteints avaient pris de l'aspirine pendant une infection virale. La varicelle et la grippe, combinées à l'aspirine, créaient un cocktail mortel.\n\nLe mécanisme ? L'acide salicylique bloque le métabolisme des graisses dans le foie immature des enfants. Résultat : une défaillance hépatique fulgurante et un œdème cérébral.\n\nDepuis, l'aspirine est formellement contre-indiquée chez les moins de 16 ans en cas d'infection virale. Un rappel quotidien que nos médicaments les plus banals peuvent cacher des pièges mortels selon l'âge du patient.",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_05_24.jpg",
+      "tags": [
+        "histoire",
+        "pediatrie",
+        "aspirine",
+        "toxicologie",
+        "syndrome"
+      ]
+    },
+    {
       "id": "actu_2026_05_23_5",
       "date": "2026-05-23",
       "type": "actu",
@@ -4626,6 +4751,6 @@
       ]
     }
   ],
-  "count": 224,
-  "updated_at": "2026-05-23T06:50:15.103268+02:00"
+  "count": 230,
+  "updated_at": "2026-05-24T07:09:27.232789+02:00"
 }

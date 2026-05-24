@@ -1,0 +1,25 @@
+{
+  "generated_at": "2026-05-24T07:09:25.215015+02:00",
+  "run_date": "2026-05-24",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Fermeture de lits d'hôpital : quels impacts sur la dispensation officinale ?",
+      "resume": "La France a fermé 69 000 lits hospitaliers en 20 ans. Une restructuration qui modifie les flux de patients et les opportunités business des officines.",
+      "source": "Pharm'Actus",
+      "source_url": "",
+      "confidence_score": 0.7,
+      "warnings": [
+        "Certains chiffres sur les montants CA officines sont des estimations basées sur les moyennes sectorielles",
+        "Les données HAD nécessiteraient une source ATIH plus récente pour confirmation",
+        "FACT-CHECK: 'Le marché de la sortie d'hospitalisation représente 2,4 milliards d'euros annuels pour les officines, soit 12% du CA moyen d'une pharmacie urbaine' → Chiffre invérifiable et méthodologie floue. Le CA moyen d'une officine urbaine tournerait autour de 1,5-2M€, ce qui donnerait 180-240k€ par officine, soit un marché total bien supérieur à 2,4Md€ pour 22000 officines.",
+        "FACT-CHECK: 'Ces patients génèrent en moyenne 1 200€ de CA annuel par officine participante via les dispositifs médicaux, nutrition entérale et traitements spécialisés' → Chiffre très spécifique non sourcé. Les modalités de rémunération HAD (forfaits, honoraires de dispensation, marges) ne sont pas détaillées alors qu'elles diffèrent du régime classique.",
+        "FACT-CHECK: 'Proposer des conventions avec les HAD et cliniques pour sécuriser les flux de prescriptions' → Imprécis sur le cadre réglementaire. Les conventions officine-HAD obéissent à des règles strictes (article L.5125-23 CSP, cahier des charges ARS) et ne peuvent garantir de 'flux sécurisés' - risque de captation de clientèle.",
+        "FACT-CHECK: 'Constitution d'un stock dédié aux pathologies traitées par les hôpitaux environnants' → Ne précise pas les obligations de stock réglementaire ni les contraintes de financement (avances de trésorerie, délais de remboursement différents selon les dispositifs médicaux vs médicaments)."
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}
