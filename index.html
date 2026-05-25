@@ -1163,59 +1163,78 @@ body {
   .nl-form button { width: 100%; }
   .nl-captcha { transform: scale(0.85); transform-origin: center; }
 }
-/* === EXPRESSION DU JOUR === */
-.expression-bandeau {
-  max-width: 1200px;
-  margin: 0 auto 20px;
-  padding: 0 24px;
+/* === EXPRESSION DU JOUR — bandeau éditorial === */
+.expression-du-jour {
+  background: #ffffff;
+  border: 1px solid #e8e8ec;
+  border-left: 4px solid #4f46e5;
+  border-radius: 6px;
+  padding: 20px 24px;
+  margin: 0 0 28px 0;
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
-.expression-bandeau > * {
-  background: linear-gradient(135deg, #92400e 0%, #b45309 100%);
-  border-left: 4px solid #f59e0b;
-  border-radius: 12px;
-  padding: 16px 20px;
-  color: white;
-}
-.expression-inner {
-  display: flex;
-  gap: 14px;
-  align-items: flex-start;
-}
-.expression-emoji {
-  font-size: 2rem;
-  flex-shrink: 0;
-  line-height: 1;
-  margin-top: 2px;
-}
-.expression-content {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
+
 .expression-label {
-  font-size: 0.7rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10px;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  opacity: 0.8;
-  color: #fef3c7;
+  color: #4f46e5;
+  margin-bottom: 10px;
+  line-height: 1;
 }
-.expression-titre {
-  font-size: 1.05rem;
-  font-weight: 800;
-  color: #fef3c7;
-  display: block;
-}
-.expression-texte {
-  font-size: 0.875rem;
-  line-height: 1.5;
+
+.expression-label-icon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
   opacity: 0.9;
-  margin: 0;
-  color: #fef3c7;
 }
-@media (max-width: 420px) {
-  .expression-bandeau { padding-left: 16px; padding-right: 16px; }
-  .expression-emoji { font-size: 1.6rem; }
+
+.expression-titre {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111118;
+  margin: 0 0 10px 0;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.expression-titre em {
+  font-style: italic;
+  font-weight: 400;
+  color: #4f46e5;
+  font-size: 0.85em;
+  letter-spacing: 0;
+}
+
+.expression-corps {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #3a3a4a;
+  margin: 0;
+  max-width: 68ch;
+}
+
+.expression-corps strong {
+  font-weight: 600;
+  color: #111118;
+}
+
+@media (max-width: 600px) {
+  .expression-du-jour {
+    padding: 16px 18px;
+    margin: 0 0 20px 0;
+  }
+  .expression-titre {
+    font-size: 18px;
+  }
+  .expression-corps {
+    font-size: 14px;
+  }
 }
 </style>
 <script defer src="assets/site-nav.js"></script>
@@ -1310,7 +1329,7 @@ body {
 </div>
 
 <!-- EXPRESSION DU JOUR (injectée par update_actus.py à chaque run) -->
-<div class="expression-bandeau"><div class="expression-inner"><span class="expression-emoji">📅</span><div class="expression-content"><span class="expression-label">Expression du jour</span><strong class="expression-titre">Chronique (maladie ou article)</strong><p class="expression-texte">Du grec *khronos*, le temps. En médecine grecque, une maladie *chronique* durait dans le temps, par opposition à une maladie *aiguë* (soudaine et intense). Les journalistes du XVIIIe siècle ont emprunté le terme pour désigner leurs articles réguliers — textes qui reviennent périodiquement, comme une maladie chronique.</p></div></div></div>
+<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Chronique (maladie ou article)</h2><p class="expression-corps">Du grec <em>khronos</em>, le temps. En médecine grecque, une maladie <em>chronique</em> durait dans le temps, par opposition à une maladie <em>aiguë</em> (soudaine et intense). Les journalistes du XVIIIe siècle ont emprunté le terme pour désigner leurs articles réguliers — textes qui reviennent périodiquement, comme une maladie chronique.</p></aside>
 
 <!-- ARTICLES (groupes par date) -->
 <div id="articles-container"></div>

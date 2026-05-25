@@ -1117,21 +1117,24 @@ def update_index_html(new_articles):
         # are not escaped. esc_html is only applied to plain-text fields (expression title).
         texte_html = md_to_html(expr["texte"])
         bandeau_html = (
-            '<div class="expression-bandeau">'
-            '<div class="expression-inner">'
-            f'<span class="expression-emoji">{expr["emoji"]}</span>'
-            '<div class="expression-content">'
-            '<span class="expression-label">Expression du jour</span>'
-            f'<strong class="expression-titre">{esc_html(expr["expression"])}</strong>'
-            f'<p class="expression-texte">{texte_html}</p>'
+            '<aside class="expression-du-jour" aria-label="Expression du jour : étymologie">'
+            '<div class="expression-label">'
+            '<svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">'
+            '<circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/>'
+            '<path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/>'
+            '<line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/>'
+            '<line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/>'
+            '</svg>'
+            'Expression du jour'
             '</div>'
-            '</div>'
-            '</div>'
+            f'<h2 class="expression-titre">{esc_html(expr["expression"])}</h2>'
+            f'<p class="expression-corps">{texte_html}</p>'
+            '</aside>'
         )
-        # Replace existing rendered div (regex) — handles re-runs after first injection.
+        # Replace existing rendered aside (regex) — handles re-runs after first injection.
         # Fallback: replace static placeholder comment (first run only).
         replaced, n = re.subn(
-            r'<div class="expression-bandeau">[\s\S]*?</div>\s*</div>\s*</div>',
+            r'<aside class="expression-du-jour"[^>]*>[\s\S]*?</aside>',
             bandeau_html,
             updated_html,
             count=1,
@@ -1139,7 +1142,17 @@ def update_index_html(new_articles):
         if n:
             updated_html = replaced
         else:
-            updated_html = updated_html.replace("<!-- EXPRESSION_DU_JOUR -->", bandeau_html, 1)
+            # Legacy fallback: old div-based markup from before the redesign.
+            replaced_legacy, n_legacy = re.subn(
+                r'<div class="expression-bandeau">[\s\S]*?</div>\s*</div>\s*</div>',
+                bandeau_html,
+                updated_html,
+                count=1,
+            )
+            if n_legacy:
+                updated_html = replaced_legacy
+            else:
+                updated_html = updated_html.replace("<!-- EXPRESSION_DU_JOUR -->", bandeau_html, 1)
 
     INDEX_HTML.write_text(updated_html, encoding="utf-8")
 
@@ -1477,18 +1490,23 @@ def _build_expression_email_block(expr):
     texte_html = md_to_html(expr["texte"])
 
     return f'''  <tr><td style="padding:20px 32px 0;">
-    <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation" style="margin-bottom:24px;">
       <tr>
-        <td style="background:linear-gradient(135deg,#92400e,#b45309);border-left:4px solid #f59e0b;border-radius:12px;padding:16px 20px;">
-          <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
-            <tr>
-              <td width="44" valign="top" style="font-size:32px;line-height:1;padding-right:14px;">{expr["emoji"]}</td>
-              <td valign="top">
-                <div style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#fef3c7;opacity:0.8;margin-bottom:4px;">Expression du jour</div>
-                <div style="font-size:16px;font-weight:800;color:#fef3c7;margin-bottom:6px;">{esc(expr["expression"])}</div>
-                <div style="font-size:13px;line-height:1.5;color:#fef3c7;">{texte_html}</div>
-              </td>
-            </tr>
+        <td width="4" bgcolor="#4f46e5" style="background-color:#4f46e5;width:4px;">&nbsp;</td>
+        <td width="12" style="width:12px;">&nbsp;</td>
+        <td style="padding:18px 0;border:1px solid #e8e8ec;border-left:none;border-radius:0 6px 6px 0;background-color:#ffffff;">
+          <table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">
+            <tr><td style="padding:0 20px 10px 20px;">
+              <p style="margin:0;font-family:'Space Grotesk',Arial,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#4f46e5;line-height:1;">&#9673;&nbsp; Expression du jour</p>
+            </td></tr>
+            <tr><td style="padding:0 20px 10px 20px;">
+              <h2 style="margin:0;font-family:'Space Grotesk',Arial,sans-serif;font-size:19px;font-weight:700;color:#111118;line-height:1.25;">
+                {esc(expr["expression"])}
+              </h2>
+            </td></tr>
+            <tr><td style="padding:0 20px 0 20px;">
+              <p style="margin:0;font-family:'Space Grotesk',Arial,sans-serif;font-size:14px;line-height:1.65;color:#3a3a4a;">{texte_html}</p>
+            </td></tr>
           </table>
         </td>
       </tr>
