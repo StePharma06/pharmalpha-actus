@@ -25,6 +25,16 @@ SENDER_NAME = "Pharm'Actus"
 REPLY_TO_EMAIL = "stephen.pharmacien@gmail.com"
 
 
+def md_to_html(text: str) -> str:
+    """Convertit **bold** en <strong>bold</strong> et *italic* en <em>italic</em>.
+
+    Bold avant italic (ordre important pour eviter collision patterns).
+    """
+    text = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', text)
+    text = re.sub(r'\*(.+?)\*', r'<em>\1</em>', text)
+    return text
+
+
 # ── Expression du jour ────────────────────────────────────────────────
 
 def get_expression_du_jour():
@@ -1096,11 +1106,16 @@ def update_index_html(new_articles):
 
     updated_html = html[:match.start(1)] + updated_block + html[match.end(1):]
 
-    # Inject "Expression du jour" banner into the placeholder
+    # Inject "Expression du jour" banner.
+    # The placeholder <!-- EXPRESSION_DU_JOUR --> only exists on the first run;
+    # subsequent runs contain the rendered div — we replace it via regex.
     expr = get_expression_du_jour()
     if expr:
         def esc_html(s):
             return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
+        # md_to_html applied BEFORE esc_html so the generated <em>/<strong> tags
+        # are not escaped. esc_html is only applied to plain-text fields (expression title).
+        texte_html = md_to_html(expr["texte"])
         bandeau_html = (
             '<div class="expression-bandeau">'
             '<div class="expression-inner">'
@@ -1108,12 +1123,23 @@ def update_index_html(new_articles):
             '<div class="expression-content">'
             '<span class="expression-label">Expression du jour</span>'
             f'<strong class="expression-titre">{esc_html(expr["expression"])}</strong>'
-            f'<p class="expression-texte">{esc_html(expr["texte"])}</p>'
+            f'<p class="expression-texte">{texte_html}</p>'
             '</div>'
             '</div>'
             '</div>'
         )
-        updated_html = updated_html.replace("<!-- EXPRESSION_DU_JOUR -->", bandeau_html, 1)
+        # Replace existing rendered div (regex) — handles re-runs after first injection.
+        # Fallback: replace static placeholder comment (first run only).
+        replaced, n = re.subn(
+            r'<div class="expression-bandeau">[\s\S]*?</div>\s*</div>\s*</div>',
+            bandeau_html,
+            updated_html,
+            count=1,
+        )
+        if n:
+            updated_html = replaced
+        else:
+            updated_html = updated_html.replace("<!-- EXPRESSION_DU_JOUR -->", bandeau_html, 1)
 
     INDEX_HTML.write_text(updated_html, encoding="utf-8")
 
@@ -1447,6 +1473,9 @@ def _build_expression_email_block(expr):
     def esc(s):
         return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
 
+    # md_to_html BEFORE esc so <em>/<strong> tags survive; esc only on plain text fields.
+    texte_html = md_to_html(expr["texte"])
+
     return f'''  <tr><td style="padding:20px 32px 0;">
     <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
       <tr>
@@ -1457,7 +1486,7 @@ def _build_expression_email_block(expr):
               <td valign="top">
                 <div style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#fef3c7;opacity:0.8;margin-bottom:4px;">Expression du jour</div>
                 <div style="font-size:16px;font-weight:800;color:#fef3c7;margin-bottom:6px;">{esc(expr["expression"])}</div>
-                <div style="font-size:13px;line-height:1.5;color:#fef3c7;">{esc(expr["texte"])}</div>
+                <div style="font-size:13px;line-height:1.5;color:#fef3c7;">{texte_html}</div>
               </td>
             </tr>
           </table>
