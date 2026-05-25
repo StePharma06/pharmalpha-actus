@@ -1310,7 +1310,7 @@ body {
 </div>
 
 <!-- EXPRESSION DU JOUR (injectée par update_actus.py à chaque run) -->
-<!-- EXPRESSION_DU_JOUR -->
+<div class="expression-bandeau"><div class="expression-inner"><span class="expression-emoji">📅</span><div class="expression-content"><span class="expression-label">Expression du jour</span><strong class="expression-titre">Chronique (maladie ou article)</strong><p class="expression-texte">Du grec *khronos*, le temps. En médecine grecque, une maladie *chronique* durait dans le temps, par opposition à une maladie *aiguë* (soudaine et intense). Les journalistes du XVIIIe siècle ont emprunté le terme pour désigner leurs articles réguliers — textes qui reviennent périodiquement, comme une maladie chronique.</p></div></div></div>
 
 <!-- ARTICLES (groupes par date) -->
 <div id="articles-container"></div>
@@ -1414,6 +1414,96 @@ body {
 // Mis a jour automatiquement par n8n chaque semaine
 // ============================================================
 const ARTICLES = [
+{
+    id: "actu_2026_05_26_1",
+    date: "2026-05-26",
+    type: "actu",
+    categorie: "pharma_france",
+    titre: "E-commerce pharma : 4% du réseau seulement, la réglementation freine tout",
+    resume: "Seulement 800 officines vendent en ligne en France. Chaque dossier d'autorisation doit être monté individuellement, un parcours du combattant qui décourage. Le digital reste marginal face au comptoir.",
+    full_text: "Alors que tout le monde parle de digitalisation, la réalité du e-commerce officinal fait mal : 4% du réseau seulement, soit 800 pharmacies environ.\n\nLe problème ? Un cadre réglementaire qui décourage. Chaque officine doit constituer son propre dossier pour être autorisée à vendre des médicaments sans ordonnance en ligne. Pas de procédure simplifiée, pas de guichet unique.\n\nConcrètement, tu dois monter un dossier technique complet, prouver la sécurité de ton site, démontrer la traçabilité... Un investissement en temps et en argent que peu d'officines peuvent se permettre.\n\nRésultat : pendant que les plateformes étrangères grignotent sur la parapharmacie, on reste coincés dans un système administratif d'un autre âge. Les quelques pharmacies qui s'y risquent restent marginales sur ce segment.\n\nL'ironie ? Les patients nous demandent de plus en plus de services digitaux. Prise de RDV en ligne, click & collect, conseils à distance... Mais dès qu'on touche au médicament, même en OTC, c'est l'obstacle course.\n\nAu final, cette réglementation protège-t-elle vraiment le patient ou freine-t-elle juste l'évolution normale de notre métier ? Demain matin, ça ne change rien au comptoir. Mais dans 5 ans, on risque de le payer cher.",
+    source: "Le Moniteur des Pharmacies",
+    source_url: "https://www.lemoniteurdespharmacies.fr/business/economie/strategie-et-gestion/e-commerce-en-pharmacie-pourquoi-le-digital-ne-remplace-pas-le-comptoir",
+    tiktok_url: "",
+    badge_label: "Pharma France",
+    image_url: "assets/img_actu_2026_05_26_1.jpg",
+    tags: ["ecommerce", "reglementation", "digital", "otc"]
+  },
+{
+    id: "actu_2026_05_26_2",
+    date: "2026-05-26",
+    type: "actu",
+    categorie: "pharma_monde",
+    titre: "AbbVie et Novartis taillent dans leurs effectifs : 160 postes supprimés",
+    resume: "AbbVie vire 85 personnes de sa division Allergan en Californie, Novartis en fait autant avec 76 postes dans le New Jersey. Les labos continuent de s'adapter après leurs restructurations post-COVID.",
+    full_text: "L'été va être chaud pour les salariés de Big Pharma. AbbVie annonce 85 licenciements dans sa division Allergan Aesthetics en Californie, effectifs dès le 20 juillet. Novartis suit avec 76 suppressions de postes dans son QG américain du New Jersey.\n\nPour AbbVie, c'est la suite logique de l'intégration d'Allergan, rachetée il y a quelques années. Les doublons administratifs sautent, classique après une acquisition de cette taille.\n\nChez Novartis, c'est plus symptomatique d'une industrie qui s'adapte. Après l'explosion des budgets R&D pendant le COVID, les labos reviennent à une gestion plus serrée. Les fonctions support trinquent en premier.\n\nL'ironie ? Pendant ce temps, AbbVie et GSK caracolent en tête des classements de réputation auprès des associations de patients britanniques. Couper dans les coûts tout en soignant son image, l'équation moderne de Big Pharma.\n\nPour nous en officine, ça se traduit comment ? Moins de visiteurs médicaux, des budgets marketing plus serrés, peut-être des tensions sur certains approvisionnements si les équipes commerciales sont touchées.\n\nLe message est clair : même les géants se serrent la ceinture. Notre propre gestion doit être encore plus rigoureuse.",
+    source: "Fierce Pharma",
+    source_url: "https://www.fiercepharma.com/pharma/novartis-unleash-another-76-cuts-nj-while-abbvie-plots-85-layoffs-ca",
+    tiktok_url: "",
+    badge_label: "Pharma Monde",
+    image_url: "assets/img_actu_2026_05_26_2.jpg",
+    tags: ["abbvie", "novartis", "restructuration", "emploi"]
+  },
+{
+    id: "actu_2026_05_26_3",
+    date: "2026-05-26",
+    type: "actu",
+    categorie: "bonne_nouvelle",
+    titre: "Délivrance à l'unité : enfin du concret pour réduire les restes",
+    resume: "Antibiotiques toute l'année, stupéfiants obligatoirement, médicaments en pénurie depuis 2024 : la délivrance à l'unité se généralise. Un vrai service patient et une gestion des stocks plus fine.",
+    full_text: "Fini les boîtes d'antibiotiques entamées qui finissent au fond des tiroirs. La délivrance à l'unité prend enfin de l'ampleur dans nos officines.\n\nLe cadre s'est clarifié : antibiotiques dispensables à l'unité toute l'année, même sans pénurie. Condition : que le médicament soit en blister ou sachet-dose. Logique, on ne va pas casser l'étanchité d'un flacon.\n\nPour les stupéfiants, c'est même devenu obligatoire. Plus question de donner une boîte entière de morphine pour 3 comprimés prescrits. L'ANSM a été claire là-dessus.\n\nDepuis 2024, ça s'impose aussi pour certains médicaments en tension d'approvisionnement. Une façon intelligente de faire durer les stocks quand ça coince chez les labos.\n\nConcrètement au comptoir ? Tu peux enfin adapter la délivrance au traitement réel. Prescription de 7 jours d'amoxicilline ? Tu donnes 21 gélules, pas 24. Le patient économise, tu optimises tes stocks, et on évite l'automédication avec les restes.\n\nSeul bémol : ça prend plus de temps au comptoir. Mais franchement, entre ça et expliquer pourquoi on donne 3 boîtes pour 10 comprimés prescrits...\n\nDemain matin, vérifie tes blisters d'antibiotiques. C'est parti.",
+    source: "Le Moniteur des Pharmacies",
+    source_url: "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/antibiotiques-stupefiants-penuries-ce-que-le-pharmacien-peut-delivrer-comprime-par-comprime",
+    tiktok_url: "",
+    badge_label: "La bonne nouvelle",
+    image_url: "assets/img_actu_2026_05_26_3.jpg",
+    tags: ["delivrance", "antibiotiques", "stupefiants", "penuries"]
+  },
+{
+    id: "actu_2026_05_26_4",
+    date: "2026-05-26",
+    type: "actu",
+    categorie: "avenir_pharma",
+    titre: "Tavneos d'Amgen reprend au Japon après l'alerte hépatique",
+    resume: "Le médicament contre les vascularites ANCA peut être à nouveau prescrit au Japon, mais avec un RCP durci sur les risques hépatiques. Une leçon de pharmacovigilance en temps réel.",
+    full_text: "Tavneos (avacopan) d'Amgen sort de sa pause forcée au Japon. Les nouvelles prescriptions peuvent reprendre, mais avec un RCP sérieusement remanié côté sécurité hépatique.\n\nRappel des faits : la semaine dernière, le titulaire local de l'AMM avait stoppé net les nouvelles initiations. Des cas d'atteintes hépatiques graves remontaient via la pharmacovigilance.\n\nLe médicament traite les vascularites ANCA, des maladies auto-immunes rares mais graves. Pas vraiment le genre de pathologie où on peut se permettre d'arrêter le traitement sur un coup de tête.\n\nDu coup, les autorités nippones ont tranché : on reprend, mais en serrant la vis. Surveillance hépatique renforcée, contre-indications précisées, mise en garde sur les populations à risque.\n\nC'est exactement comme ça que doit fonctionner la pharmacovigilance moderne. Signal détecté, pause le temps d'analyser, adaptation du RCP si besoin, reprise sous surveillance.\n\nPour nous, c'est un rappel : même sur les médicaments récents et bien étudiés, les effets indésirables graves peuvent apparaître après la commercialisation. L'AMM n'est jamais la fin de l'histoire.\n\nEt ça montre que les labos n'hésitent plus à taper le frein quand ça sent le roussi. Mieux vaut une pause de quelques jours qu'un scandale sanitaire.",
+    source: "Fierce Pharma",
+    source_url: "https://www.fiercepharma.com/pharma/amgens-tavneos-facing-liver-injury-scrutiny-gets-label-update-patient-starts-resume-japan",
+    tiktok_url: "",
+    badge_label: "L'avenir de la pharma",
+    image_url: "assets/img_actu_2026_05_26_4.jpg",
+    tags: ["tavneos", "amgen", "pharmacovigilance", "hepatique"]
+  },
+{
+    id: "actu_2026_05_26_5",
+    date: "2026-05-26",
+    type: "actu",
+    categorie: "business_officine",
+    titre: "Canicule : boom des ventes officine, ta marge s'envole sur l'hydratation",
+    resume: "Avec 30°C à Paris (+13° vs normales), les vagues de chaleur dopent tes ventes de solutés, protections solaires et conseils. L'occasion de booster ta marge.",
+    full_text: "Avec 30°C à Paris (+13° vs normales), les vagues de chaleur dopent tes ventes de solutés, protections solaires et conseils. L'occasion de booster ta marge.\n\n## Contexte\n\nLes températures caniculaires frappent la France avec un record depuis 1944 : 30°C à Paris, soit 13°C au-dessus des normales saisonnières. Cette vague de chaleur exceptionnelle s'accompagne d'une dégradation de la qualité de l'air et multiplie les risques sanitaires : déshydratation, hyperthermie, coups de chaleur. Les populations fragiles (personnes âgées, enfants, malades chroniques) sont particulièrement exposées. Pour l'officine, ces épisodes caniculaires représentent un pic d'activité majeur avec une demande explosive sur plusieurs segments produits. L'enjeu ? Transformer cette urgence sanitaire en opportunité business tout en assurant ton rôle de conseil. Car derrière chaque alerte canicule se cache un potentiel de chiffre d'affaires non négligeable, à condition de bien s'organiser.\n\n## Analyse business\n\nLes vagues de chaleur génèrent un effet business immédiat sur 4 segments clés de ton officine. Premier poste : l'hydratation. Les solutés de réhydratation orale (SRO) voient leurs ventes bondir de 300% en période caniculaire selon les données du GERS. Avec une marge moyenne de 35% sur ces produits (prix public 8-12€), c'est du cash direct. Deuxième segment : la protection solaire. Les écrans solaires affichent une marge confortable de 45% en moyenne, avec un panier moyen qui grimpe à 25€ par client pendant les pics de chaleur. Troisième opportunité : les dispositifs de refroidissement (brumisateurs, lingettes rafraîchissantes). Marge de 50% sur du petit matériel médical qui se vend comme des petits pains. Enfin, l'activité conseil explose. Les entretiens pharmaceutiques liés aux pathologies chroniques (diabète, hypertension) sont rémunérés 30€ par l'Assurance Maladie. Or les patients sous traitement sont particulièrement vulnérables à la chaleur et consultent massivement. Résultat : une officine moyennement préparée peut voir son CA quotidien augmenter de 15-20% pendant une canicule de 5 jours.\n\n## Recommandations actionnables\n\n1. Stock anticipé — Constitue dès avril tes stocks de SRO (+200% vs stock habituel), crèmes solaires SPF 30+ et dispositifs rafraîchissants pour éviter les ruptures coûteuses.\n\n2. Merchandising ciblé — Place en tête de gondole tes solutions hydratation/protection avec une PLV claire. Marge de 35-50% à ne pas rater.\n\n3. Conseil proactif — Forme ton équipe sur les signes de déshydratation pour déclencher des ventes conseil. Chaque interaction = potentiel de panier à 20-30€.\n\n4. Entretiens pharma — Sollicite tes patients chroniques (diabète, cardio) pour des entretiens rémunérés 30€. La canicule justifie un suivi renforcé.\n\n5. Partenariats locaux — Noue des liens avec EHPAD et centres de soins pour livrer en urgence tes solutions hydratation. Volume et fidélisation garantis.\n\n## Sources citees\n\n- Le Monde Sante\n- France Info Sante",
+    source: "Pharm'Actus",
+    source_url: "",
+    tiktok_url: "",
+    badge_label: "Business",
+    image_url: "assets/img_actu_2026_05_26_5.jpg",
+    tags: ["canicule", "merchandising", "conseil", "marge"]
+  },
+{
+    id: "lsv_2026_05_26",
+    date: "2026-05-26",
+    type: "lsv",
+    categorie: "lsv",
+    titre: "Le saviez-vous ? Le premier traitement antidépresseur était un médicament contre la tuberculose",
+    resume: "En 1952, des médecins remarquent que leurs patients tuberculeux sous iproniazide dansent dans les couloirs. Cette découverte accidentelle va révolutionner la psychiatrie et donner naissance aux premiers antidépresseurs.",
+    full_text: "1952, hôpital Sea View de New York. Les médecins Irving Selikoff et Edward Robitzek testent un nouveau traitement contre la tuberculose : l'iproniazide. Ils s'attendaient à soigner les poumons, pas le moral.\n\nMais voilà qu'ils observent un phénomène étrange. Leurs patients tuberculeux, habituellement épuisés et moroses, se mettent à danser dans les couloirs, à rire, à retrouver l'appétit. Certains organisent même des fêtes improvisées ! Les médecins parlent d'« euphorie inappropriée ».\n\nLe psychiatre Nathan Kline entend parler de ces comportements bizarres. Il comprend immédiatement le potentiel : et si ce médicament pouvait traiter la dépression ? En 1957, il lance les premiers essais psychiatriques.\n\nL'iproniazide devient le premier IMAO (inhibiteur de la monoamine oxydase) antidépresseur. Il révolutionne la prise en charge de la dépression, jusqu'alors traitée par électrochocs ou coma insulinique. Problème : ce pionnier provoque des hépatites graves et sera retiré du marché.\n\nMais la voie est ouverte. Dans les années 60, arrivent les tricycliques, puis dans les 80, le Prozac et les ISRS. Une cascade de découvertes née d'une observation inattendue sur des patients tuberculeux euphoriques.\n\nQuand tu délivres aujourd'hui un antidépresseur au comptoir, dis-toi que tout a commencé par des malades qui dansaient au lieu de tousser.",
+    source: "Pharm'Alpha",
+    source_url: "",
+    tiktok_url: "",
+    badge_label: "Le Saviez-Vous",
+    image_url: "assets/img_lsv_2026_05_26.jpg",
+    tags: ["histoire", "antidepresseur", "psychiatrie", "decouverte", "tuberculose"]
+  },
 {
     id: "actu_2026_05_25_1",
     date: "2026-05-25",
@@ -2073,96 +2163,6 @@ const ARTICLES = [
     badge_label: "Pharma Monde",
     image_url: "assets/img_actu_2026_05_18_2.jpg",
     tags: ["fda", "regulation", "cder", "amm"]
-  },
-{
-    id: "actu_2026_05_18_3",
-    date: "2026-05-18",
-    type: "actu",
-    categorie: "bonne_nouvelle",
-    titre: "Greffe trouvée pour le petit Elio : la mobilisation a payé",
-    resume: "Après un élan de solidarité national, un donneur compatible a été trouvé pour Elio, atteint de leucémie. La greffe de moelle osseuse peut enfin avoir lieu.",
-    full_text: "Excellente nouvelle pour le petit Elio : un donneur de moelle osseuse compatible a été trouvé. La famille a annoncé la bonne nouvelle dimanche.\n\nRappel des faits : ce gamin de quelques années, atteint d'une leucémie, avait besoin d'une greffe urgente. L'appel à la mobilisation nationale avait touché des milliers de personnes.\n\nRésultat : une vague d'inscriptions sur le registre des donneurs de moelle osseuse. Et bingo, un profil HLA compatible dans le tas.\n\nAu-delà du cas personnel, c'est un boost énorme pour le don de moelle. Beaucoup de nos clients nous demandent encore comment s'inscrire sur les registres.\n\nNotre rôle : continuer à informer sur ces démarches vitales. Une simple prise de sang peut sauver une vie, et ça commence souvent par une question posée au comptoir.",
-    source: "France Info Santé",
-    source_url: "https://www.franceinfo.fr/sante/apres-la-mobilisation-nationale-enfin-une-greffe-pour-le-petit-elio_8010155.html#xtor=RSS-3-%5Bgeneral%5D",
-    tiktok_url: "",
-    badge_label: "La bonne nouvelle",
-    image_url: "assets/img_actu_2026_05_18_3.jpg",
-    tags: ["greffe", "leucemie", "don", "solidarite"]
-  },
-{
-    id: "actu_2026_05_18_4",
-    date: "2026-05-18",
-    type: "actu",
-    categorie: "avenir_pharma",
-    titre: "Leqembi d'Eisai approche du milliard : Alzheimer devient rentable",
-    resume: "Le traitement anti-Alzheimer de Biogen/Eisai table sur 900 millions de dollars en 2026. Après des débuts poussifs, les ventes décollent enfin aux États-Unis.",
-    full_text: "Eisai voit grand pour son Leqembi : 900 millions de dollars de ventes prévues cette année. Le traitement anti-Alzheimer co-développé avec Biogen trouve enfin son public.\n\nLes ventes ont doublé sur l'exercice 2025, après des débuts très lents liés aux contraintes d'administration (perfusion bimensuelle, surveillance IRM obligatoire).\n\nCe décollage marque un tournant : les thérapies anti-amyloïde deviennent enfin commercialement viables. Ça va motiver d'autres labos à investir massivement dans Alzheimer.\n\nPour nous, c'est l'annonce d'un pipeline qui va se remplir. D'autres molécules similaires arriveront probablement en Europe d'ici 2-3 ans.\n\nL'enjeu officinal : se former sur ces nouveaux traitements complexes. Les familles vont nous bombarder de questions quand ces molécules débarqueront chez nous via l'EMA.",
-    source: "Fierce Pharma",
-    source_url: "https://www.fiercepharma.com/pharma/eisais-slow-walk-blockbuster-leqembi-sales-inches-closer-900m-26-sales-forecast",
-    tiktok_url: "",
-    badge_label: "L'avenir de la pharma",
-    image_url: "assets/img_actu_2026_05_18_4.jpg",
-    tags: ["alzheimer", "leqembi", "innovation", "recherche"]
-  },
-{
-    id: "actu_2026_05_18_5",
-    date: "2026-05-18",
-    type: "actu",
-    categorie: "business_officine",
-    titre: "CBD alimentaire interdit : un marché de 200M€ qui s'évapore pour les pharmacies",
-    resume: "L'interdiction totale du CBD dans les aliments fait perdre aux officines un segment porteur. Les pharmacies vont devoir repenser leur stratégie cannabidiol.",
-    full_text: "L'interdiction totale du CBD dans les aliments fait perdre aux officines un segment porteur. Les pharmacies vont devoir repenser leur stratégie cannabidiol.\n\n## Contexte\n\nDepuis le 17 mai 2026, la commercialisation de CBD dans les produits alimentaires est définitivement interdite en France. Tisanes, bonbons, huiles alimentaires, compléments : tout doit disparaître des rayons. Cette mesure fait suite aux recommandations de l'ANSM qui pointait l'absence d'évaluation de sécurité pour la consommation alimentaire du cannabidiol. Le marché français du CBD pesait environ 200 millions d'euros en 2025, avec une croissance de 15% par an. Les pharmacies représentaient 25% de ce marché selon les données du SYNADIET, soit environ 50 millions d'euros de chiffre d'affaires annuel. Les officines avaient massivement investi ce segment depuis la légalisation du CBD en 2022, y voyant une opportunité de diversification face à la baisse du remboursement des médicaments. Beaucoup avaient développé des gammes complètes : huiles sublinguales, tisanes bien-être, bonbons relaxants, compléments anti-stress. Cette interdiction brutal remet en question toute la stratégie CBD des pharmacies françaises.\n\n## Analyse business\n\nL'impact financier est immédiat pour les 21 000 officines françaises. En moyenne, une pharmacie réalisait 2 400€ de CA annuel sur le CBD alimentaire, avec des marges comprises entre 40 et 60%. Les pharmacies urbaines étaient les plus exposées, certaines générant jusqu'à 8 000€/an sur ce segment. Les stocks invendus représentent une perte sèche estimée à 15 millions d'euros pour l'ensemble de la profession. Côté réglementaire, seuls restent autorisés les cosmétiques au CBD (crèmes, baumes) et les fleurs à fumer, marchés bien plus restreints. Le cosmétique CBD ne pèse que 30 millions d'euros en France, soit 6 fois moins que l'alimentaire. Les grossistes-répartiteurs comme Pharmastock ou Alliance Healthcare doivent également déstocuer en urgence. Cette interdiction profite indirectement au marché noir : les consommateurs de CBD se tournent vers des circuits parallèles ou des achats en ligne depuis l'étranger. L'Allemagne et l'Espagne maintiennent la légalité du CBD alimentaire, créant une distorsion de concurrence européenne. Les pharmaciens doivent désormais expliquer à leur clientèle pourquoi des produits vendus hier sont interdits aujourd'hui, situation délicate pour la relation client.\n\n## Recommandations actionnables\n\n1. Audit de stocks — Faire immédiatement l'inventaire de tous les produits CBD alimentaires et négocier leur reprise avec les fournisseurs avant qu'ils ne deviennent invendables. 2. Repositionnement cosmétique — Réorienter l'offre vers les cosmétiques CBD (crèmes anti-douleur, baumes articulaires) qui restent légaux et porteurs, avec des marges similaires de 45-55%. 3. Formation équipe — Brief urgent des équipes sur la nouvelle réglementation pour éviter toute vente illégale et savoir répondre aux questions clients sur cette interdiction. 4. Communication client — Préparer un argumentaire commercial vers des alternatives légales : phytothérapie relaxante, magnésium, mélatonine pour remplacer l'usage bien-être du CBD. 5. Veille réglementaire — S'abonner aux alertes ANSM car d'autres restrictions sur les cannabinoïdes pourraient suivre (CBG, CBN).\n\n## Sources citees\n\n- France Info Santé",
-    source: "Pharm'Actus",
-    source_url: "",
-    tiktok_url: "",
-    badge_label: "Business",
-    image_url: "assets/img_actu_2026_05_18_5.jpg",
-    tags: ["cbd", "reglementation", "pharmacie", "interdiction"]
-  },
-{
-    id: "lsv_2026_05_18",
-    date: "2026-05-18",
-    type: "lsv",
-    categorie: "lsv",
-    titre: "Le saviez-vous ? Le premier électrocardiogramme a duré 5 minutes par battement",
-    resume: "En 1887, Augustus Waller a inventé l'ECG en plongeant les mains et les pieds de son patient dans des bacs d'eau salée. Chaque tracé prenait un temps fou et nécessitait un équipement digne d'un laboratoire de physique.",
-    full_text: "Picture ça : Londres, 1887. Augustus Waller, physiologiste anglais, vient de brancher son collègue Thomas Goswell à une machine bizarre. Quatre bacs d'eau salée, un électromètre capillaire, et un appareil photo pour fixer le tracé sur plaque de verre.\n\nLe pauvre Goswell doit plonger ses mains dans deux bacs, ses pieds dans deux autres, et rester parfaitement immobile. Chaque battement cardiaque fait bouger une fine colonne de mercure dans un tube de verre. Waller photographie le mouvement, seconde par seconde.\n\nLe truc dingue ? Un seul ECG prenait 5 minutes par battement de cœur à enregistrer ! Pour avoir un tracé de 10 secondes, il fallait presque une heure de manipulation. Et encore, ça ne marchait que si le patient ne bougeait pas d'un millimètre.\n\nEn 1903, Willem Einthoven révolutionne tout avec son galvanomètre à corde. L'appareil pèse 270 kilos, nécessite 5 personnes pour fonctionner, mais réduit l'examen à... 10 minutes seulement. Un exploit !\n\nLe premier ECG \"portable\" de 1928 pesait encore 30 kilos et se transportait en camionnette. Les médecins devaient venir à domicile avec un technicien et une rallonge électrique de 50 mètres.\n\nAujourd'hui, ton smartphone peut faire un ECG en 30 secondes avec une app dédiée. On est passés de 5 minutes par battement à 5 battements par seconde d'analyse – même nos montres connectées font mieux que l'équipement hospitalier d'il y a 50 ans !",
-    source: "Pharm'Alpha",
-    source_url: "",
-    tiktok_url: "",
-    badge_label: "Le Saviez-Vous",
-    image_url: "assets/img_lsv_2026_05_18.jpg",
-    tags: ["histoire", "diagnostic", "cardiologie", "instrument", "technologie"]
-  },
-{
-    id: "actu_2026_05_17_1",
-    date: "2026-05-17",
-    type: "actu",
-    categorie: "pharma_france",
-    titre: "Rachat d'officine : les Selas explosent la fiscalité traditionnelle",
-    resume: "Fini les droits de mutation classiques à 5% ! Les Selas changent complètement la donne fiscale pour les reprises d'officine. Un avantage énorme que beaucoup ignorent encore.",
-    full_text: "Les droits de mutation à 5% sur la tranche au-dessus de 200 000€, ça te dit quelque chose ? C'est le tarif classique pour racheter un fonds d'officine en nom propre ou en SARL.\n\nMais avec une Sela, tout change. La reprise se fait par apport du fonds, pas par vente. Résultat : exit les droits de mutation ! Tu ne paies que l'enregistrement symbolique.\n\nSur une officine à 800 000€, ça représente 30 000€ d'économie directe. Pas négligeable quand on monte son business plan.\n\nSeul bémol : la Sela impose des contraintes de capital et de gouvernance. Mais pour une reprise, l'avantage fiscal peut largement compenser.\n\nÀ méditer avant ton prochain rdv notaire.",
-    source: "Le Moniteur des Pharmacies",
-    source_url: "https://www.lemoniteurdespharmacies.fr/business/transactions/acquisition/rachat-dofficine-pourquoi-les-selas-changent-la-donne-fiscale",
-    tiktok_url: "",
-    badge_label: "Pharma France",
-    image_url: "assets/img_actu_2026_05_17_1.jpg",
-    tags: ["sela", "rachat", "fiscalite", "officine", "transmission"]
-  },
-{
-    id: "actu_2026_05_17_2",
-    date: "2026-05-17",
-    type: "actu",
-    categorie: "pharma_monde",
-    titre: "Tarifs US à 100% : Big Pharma sous pression extrême",
-    resume: "Les labos qui refusent les prix négociés avec Washington écopent de 100% de droits de douane. Pour éviter la catastrophe, ils doivent révéler tous leurs plans de production. Tension maximale.",
-    full_text: "Trump ne plaisante plus avec les prix. Les labos qui refusent les accords \"Most Favored Nation\" se prennent 100% de tarifs douaniers sur leurs imports aux USA.\n\nPour éviter le massacre, une seule échappatoire : tout déballer. Plans d'investissement, sites de production, stratégies industrielles... Le Département du Commerce veut tout savoir.\n\nEn échange ? Une \"ristourne\" à 20% de droits au lieu de 100%. Autant dire que les boardrooms de Bâle et Courbevoie chauffent en ce moment.\n\nCôté français, nos labos exportateurs vers les USA vont devoir choisir : transparence totale ou tarifs prohibitifs. L'industrie pharma mondiale entre dans une nouvelle ère de négociations musclées.\n\nNos génériqueurs qui jouent sur les prix risquent d'être les premiers touchés.",
-    source: "Fierce Pharma",
-    source_url: "https://www.fiercepharma.com/pharma/gain-tariff-exemptions-drugmakers-will-have-reveal-all-their-us-plans",
-    tiktok_url: "",
-    badge_label: "Pharma Monde",
-    image_url: "assets/img_actu_2026_05_17_2.jpg",
-    tags: ["tarifs", "usa", "industrie", "prix", "export"]
   }
 ];
 
