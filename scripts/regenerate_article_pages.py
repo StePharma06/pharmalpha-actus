@@ -70,7 +70,7 @@ def _build_orphan_stub_html(article_id: str, titre_raw: str, resume_raw: str, og
             "name": "Stephen Robert",
             "url": "https://pharmalpha.fr/stephen-robert",
             "jobTitle": "Docteur en Pharmacie",
-            "sameAs": ["https://www.linkedin.com/in/stephen-robert-pharm/"]
+            "sameAs": ["https://www.linkedin.com/in/stephen-robert-pharmalpha/"]
         },
         "publisher": {
             "@type": "Organization",
