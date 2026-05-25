@@ -1220,22 +1220,8 @@ def _build_article_page_html(article_id: str, titre_raw: str, resume_raw: str, i
         "description": resume_raw[:200],
         "datePublished": date_published,
         "dateModified": date_modified,
-        "author": {
-            "@type": "Person",
-            "name": "Stephen Robert",
-            "url": "https://pharmalpha.fr/stephen-robert",
-            "jobTitle": "Docteur en Pharmacie",
-            "sameAs": ["https://www.linkedin.com/in/stephen-robert-pharm/"]
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "Pharm'Alpha",
-            "url": "https://pharmalpha.fr",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://pharmalpha.fr/assets/logo-pharmalpha.png"
-            }
-        },
+        "author": { "@id": "https://pharmalpha.fr/#stephen" },
+        "publisher": { "@id": "https://pharmalpha.fr/#org" },
         "image": og_image,
         "articleSection": article_section,
         "mainEntityOfPage": {
@@ -1245,6 +1231,7 @@ def _build_article_page_html(article_id: str, titre_raw: str, resume_raw: str, i
         "inLanguage": "fr-FR",
         "isPartOf": {
             "@type": "WebSite",
+            "@id": "https://pharmalpha.fr/#website",
             "name": "Pharm'Actus",
             "url": "https://pharmalpha.fr/actus"
         }
@@ -1614,6 +1601,58 @@ def send_newsletter(articles):
 
 # ── MAIN ──────────────────────────────────────────────────────────────
 
+INDEXNOW_KEY = "55aa442d1ea247c6bcada066b207629a"
+INDEXNOW_HOST = "pharmalpha.fr"
+INDEXNOW_ENDPOINT = "https://api.indexnow.org/indexnow"
+
+
+def ping_indexnow(article_ids: list) -> None:
+    """Notify IndexNow (Bing/Yandex/Copilot) of newly published article URLs.
+
+    Sends a single batch POST with all new article URLs.
+    IndexNow spec: https://www.indexnow.org/documentation
+    Key file must be live at https://pharmalpha.fr/{INDEXNOW_KEY}.txt
+    (deployed in pharmalpha-site root, served by Vercel).
+    Non-blocking: logs result but never raises on failure.
+    """
+    if not article_ids:
+        return
+
+    urls = [
+        f"https://{INDEXNOW_HOST}/actus/articles/{aid}.html"
+        for aid in article_ids
+    ]
+
+    payload = {
+        "host": INDEXNOW_HOST,
+        "key": INDEXNOW_KEY,
+        "keyLocation": f"https://{INDEXNOW_HOST}/{INDEXNOW_KEY}.txt",
+        "urlList": urls,
+    }
+
+    body = json.dumps(payload).encode("utf-8")
+    req = urllib.request.Request(
+        INDEXNOW_ENDPOINT,
+        data=body,
+        headers={"Content-Type": "application/json; charset=utf-8"},
+        method="POST",
+    )
+
+    try:
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            code = resp.getcode()
+            # 200 = accepted, 202 = queued (both OK per spec)
+            if code in (200, 202):
+                print(f"  [INDEXNOW] Ping OK ({code}) — {len(urls)} URL(s) soumises")
+            else:
+                print(f"  [INDEXNOW] Ping retourne HTTP {code} (inattendu)")
+    except urllib.error.HTTPError as e:
+        # 422 = URLs invalides, 429 = rate-limited, 403 = cle incorrecte/absente
+        print(f"  [INDEXNOW] Erreur HTTP {e.code}: {e.reason} — verifier que le fichier cle est live sur pharmalpha.fr")
+    except Exception as e:
+        print(f"  [INDEXNOW] Echec ping (non bloquant): {e}")
+
+
 def main():
     print("=== Pharm'Actus - Mise a jour quotidienne ===")
     print(f"  Date: {datetime.now(PARIS_TZ).strftime('%Y-%m-%d %H:%M')}")
@@ -1702,6 +1741,13 @@ def main():
     if updated:
         # 6. Send newsletter (uniquement les articles effectivement ajoutes)
         added = [a for a in curated if a.get("id")]
+
+        # 5.5 Ping IndexNow avec les URLs des nouveaux articles
+        new_ids = [a["id"] for a in added if a.get("id")]
+        if new_ids:
+            print(f"\n[5.5/6] Ping IndexNow ({len(new_ids)} URL(s))...")
+            ping_indexnow(new_ids)
+
         print(f"\n[6/6] Envoi newsletter Brevo ({len(added)} articles)...")
         send_newsletter(added)
         # Cleanup pending_actu.json apres usage reussi
