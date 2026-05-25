@@ -1,0 +1,33 @@
+{
+  "generated_at": "2026-05-25T07:28:35.655226+02:00",
+  "run_date": "2026-05-25",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "PharmVax Aura : 80% de patients vaccinés le jour même de l'entretien",
+      "resume": "L'expérimentation en Auvergne-Rhône-Alpes cartonne : 80% des patients sont repartis vaccinés le jour de l'entretien vaccinal. Et 88% ont accepté après discussion. Preuve que notre expertise change la donne sur l'hésitation vaccinale.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/nouvelles-missions/vaccination/experimentation-pharmvax-aura-80-des-patients-vaccines-le-jour-meme-apres-un-entretien-en-parmacie",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Crème solaire : 29% des Français non protégés, ton rayon parapharmacie en danger",
+      "resume": "29% des Français ne se protègent plus du soleil selon la Febea. Une chute qui menace directement tes ventes parapharmacie estivales.",
+      "source": "Pharm'Actus",
+      "source_url": "",
+      "confidence_score": 0.7,
+      "warnings": [
+        "Chiffres marché et marges estimés à partir de données sectorielles générales",
+        "Panier moyen 18-34 ans à confirmer par source officielle",
+        "Pourcentages de répartition officine/autres circuits à vérifier"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}
