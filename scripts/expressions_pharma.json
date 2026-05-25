@@ -1,0 +1,619 @@
+{
+  "meta": {
+    "version": "1.0",
+    "derniere_maj": "2026-05-22",
+    "total": 99,
+    "start_date": "2026-05-26",
+    "categories": {
+      "expression_quotidien": "Expressions du quotidien à origine pharma",
+      "etymologie_pharma": "Étymologie mots pharma/médicaux courants",
+      "anatomie_expression": "Anatomie dans les expressions"
+    },
+    "note": "Index sélectionné par (date.today() - start_date).days % total"
+  },
+  "expressions": [
+
+    {
+      "id": "avaler-pilule",
+      "expression": "Avaler la pilule",
+      "categorie": "expression_quotidien",
+      "texte": "Aux XVIIe et XVIIIe siècles, les apothicaires façonnaient les médicaments à la main sous forme de petites boules — les pilules — souvent amères et difficiles à avaler. L'expression pour désigner ce qu'on accepte à contrecœur est née directement de ce geste quotidien du comptoir.",
+      "emoji": "💊"
+    },
+    {
+      "id": "vaccin",
+      "expression": "Vaccin",
+      "categorie": "etymologie_pharma",
+      "texte": "Du latin *vacca*, la vache. En 1796, Edward Jenner immunise contre la variole humaine en inoculant le virus de la variole bovine. Le nom de la vache est ainsi entré pour toujours dans le vocabulaire médical mondial.",
+      "emoji": "🐄"
+    },
+    {
+      "id": "sang-froid",
+      "expression": "Avoir du sang-froid",
+      "categorie": "anatomie_expression",
+      "texte": "Pendant des siècles, la médecine grecque puis européenne croyait que les émotions chauffaient le sang : la colère, la peur, l'enthousiasme le rendaient bouillant. Garder le sang froid, c'était donc rester calme quand tout le monde perdait la tête — littéralement.",
+      "emoji": "🧊"
+    },
+    {
+      "id": "faire-pommade",
+      "expression": "Faire de la pommade",
+      "categorie": "expression_quotidien",
+      "texte": "La pommade était une préparation médicale à base de graisse animale fondue, que les apothicaires appliquaient en massant longuement la peau — avec des gestes lents, doux, répétitifs. Flatter quelqu'un en passant de la pommade vient directement de ce geste onctueux.",
+      "emoji": "🫙"
+    },
+    {
+      "id": "alcool",
+      "expression": "Alcool",
+      "categorie": "etymologie_pharma",
+      "texte": "De l'arabe *al-kuhul*, la poudre d'antimoine finement broyée utilisée pour noircir les yeux dans le monde arabe médiéval. Les alchimistes ont étendu le terme à toute substance purifiée par distillation — d'où l'alcool éthylique.",
+      "emoji": "⚗️"
+    },
+    {
+      "id": "bile-bonne-humeur",
+      "expression": "Être de bonne humeur",
+      "categorie": "anatomie_expression",
+      "texte": "Les médecins grecs croyaient que le corps produisait quatre « humeurs » — sang, bile jaune, bile noire et phlegme — dont l'équilibre déterminait l'état d'esprit. Être de bonne humeur, c'était avoir ses humeurs bien équilibrées. Le mot est resté, la théorie non.",
+      "emoji": "😊"
+    },
+    {
+      "id": "quarantaine",
+      "expression": "Mettre en quarantaine",
+      "categorie": "expression_quotidien",
+      "texte": "Venise, XIVe siècle : face à la peste noire, la République impose aux navires suspects 40 jours d'isolement au large — *quaranta giorni* en italien. Ce fut le premier protocole de santé publique de l'histoire, et son nom a traversé les siècles.",
+      "emoji": "⚓"
+    },
+    {
+      "id": "morphine",
+      "expression": "Morphine",
+      "categorie": "etymologie_pharma",
+      "texte": "Isolée en 1804 par le pharmacien allemand Friedrich Sertürner, elle fut baptisée d'après Morphée, dieu grec des songes, dont les pavots décoraient le sanctuaire. Son effet soporifique semblait répondre directement à l'invocation du dieu du sommeil.",
+      "emoji": "😴"
+    },
+    {
+      "id": "flegmatique",
+      "expression": "Être flegmatique",
+      "categorie": "anatomie_expression",
+      "texte": "Dans la médecine des humeurs, le phlegme était l'humeur froide et humide associée au calme, à la lenteur, à l'impassibilité. Un tempérament dominé par le phlegme était dit flegmatique — et rien, pas même l'urgence, ne semblait l'agiter.",
+      "emoji": "🧊"
+    },
+    {
+      "id": "remede-cheval",
+      "expression": "Un remède de cheval",
+      "categorie": "expression_quotidien",
+      "texte": "Jusqu'au XIXe siècle, les vétérinaires prescrivaient des doses de médicament bien supérieures à celles des humains — les chevaux, lourds et résistants, exigeaient des traitements massifs. Un remède de cheval, c'est donc une médication aussi radicale qu'efficace.",
+      "emoji": "🐴"
+    },
+    {
+      "id": "sirop",
+      "expression": "Sirop",
+      "categorie": "etymologie_pharma",
+      "texte": "De l'arabe *sharab*, boisson sucrée. Les médecins arabes médiévaux dissolvaient leurs principes actifs dans du miel ou du sucre pour en masquer l'amertume — une technique qui a donné naissance à toute la galénique des sirops pharmaceutiques.",
+      "emoji": "🍯"
+    },
+    {
+      "id": "tripes",
+      "expression": "Avoir les tripes",
+      "categorie": "anatomie_expression",
+      "texte": "Dans l'Antiquité et le Moyen Âge, le ventre — et surtout les intestins — était considéré comme le siège du courage et de la force vitale. Les haruspices romains lisaient l'avenir dans les entrailles des animaux sacrifiés. Avoir les tripes, c'était posséder cette force viscérale.",
+      "emoji": "💪"
+    },
+    {
+      "id": "nicotine",
+      "expression": "Nicotine",
+      "categorie": "etymologie_pharma",
+      "texte": "Jean Nicot, diplomate français au Portugal, envoie du tabac à la reine Catherine de Médicis en 1561 comme remède contre la migraine. Le botaniste Linné immortalisera son nom en baptisant la plante *Nicotiana tabacum* — et l'alcaloïde principal fut logiquement nommé nicotine.",
+      "emoji": "🌿"
+    },
+    {
+      "id": "melancolique",
+      "expression": "Être mélancolique",
+      "categorie": "anatomie_expression",
+      "texte": "Du grec *mélas* (noir) et *kholé* (bile). Les médecins grecs attribuaient la tristesse profonde à un excès de bile noire, sécrétée par la rate. Cette humeur sombre, froide et lourde donnait au tempérament mélancolique sa teinte si particulière.",
+      "emoji": "🖤"
+    },
+    {
+      "id": "aspirine",
+      "expression": "Aspirine",
+      "categorie": "etymologie_pharma",
+      "texte": "Le préfixe *a-* pour acétyl, et *spirine* de *Spiraea ulmaria* — la reine-des-prés dont l'acide salicylique fut extrait au XIXe siècle. Bayer déposa la marque en 1899, inventant au passage le concept de médicament de marque.",
+      "emoji": "🌸"
+    },
+    {
+      "id": "cachet",
+      "expression": "Avoir du cachet",
+      "categorie": "expression_quotidien",
+      "texte": "Le cachet pharmaceutique était une petite enveloppe de pain azyme dans laquelle les apothicaires plaçaient une dose précise de médicament — identifiée, mesurée, distinctive. Avoir du cachet, c'est avoir ce caractère particulier qui vous distingue, comme la marque de l'apothicaire sur son préparation.",
+      "emoji": "🏷️"
+    },
+    {
+      "id": "pharmacie",
+      "expression": "Pharmacie",
+      "categorie": "etymologie_pharma",
+      "texte": "Du grec *pharmakon*, mot à double sens : remède et poison. Les Grecs n'opposaient pas les deux — la même plante pouvait soigner ou tuer selon la dose. Paracelse l'a formulé 2000 ans plus tard : « La dose fait le poison. »",
+      "emoji": "⚗️"
+    },
+    {
+      "id": "coeur-main",
+      "expression": "Avoir le cœur sur la main",
+      "categorie": "anatomie_expression",
+      "texte": "Au Moyen Âge, le cœur était unanimement considéré comme le siège de l'âme et des sentiments — pas le cerveau. Montrer son cœur ouvertement, comme on ouvre la main, c'était donc exposer son être le plus profond sans défense.",
+      "emoji": "🤲"
+    },
+    {
+      "id": "viral",
+      "expression": "Viral",
+      "categorie": "expression_quotidien",
+      "texte": "Du latin *virus*, poison ou venin. Les épidémiologistes utilisaient l'adjectif *viral* pour décrire une propagation rapide par contamination de proche en proche. Internet a emprunté le terme exactement pour la même raison : un contenu qui se répand comme un agent infectieux.",
+      "emoji": "🦠"
+    },
+    {
+      "id": "penicilline",
+      "expression": "Pénicilline",
+      "categorie": "etymologie_pharma",
+      "texte": "Du latin *penicillus*, petit pinceau. Fleming nomma ainsi la moisissure *Penicillium notatum* en 1928 parce que ses spores, vues au microscope, ressemblaient à de minuscules pinceaux. Le plus grand antibiotique de l'histoire doit son nom à un outil de peinture.",
+      "emoji": "🖌️"
+    },
+    {
+      "id": "nerf",
+      "expression": "Ça me tape sur les nerfs",
+      "categorie": "anatomie_expression",
+      "texte": "Jusqu'au XVIIe siècle, les médecins croyaient que les nerfs étaient des tubes creux à travers lesquels circulait un « esprit animal » — une sorte de fluide nerveux qui transmettait les sensations. Une stimulation répétée sur les nerfs créait une irritation que les anatomistes décrivaient littéralement comme un choc.",
+      "emoji": "⚡"
+    },
+    {
+      "id": "elixir",
+      "expression": "Élixir",
+      "categorie": "etymologie_pharma",
+      "texte": "De l'arabe *al-iksir*, lui-même du grec *xêrion*, poudre sèche pour les plaies. Les alchimistes arabes médiévaux appelaient ainsi leur préparation universelle capable de transformer les métaux et de guérir toutes les maladies. De là, l'élixir de longue vie — et plus généralement, toute préparation liquide concentrée.",
+      "emoji": "✨"
+    },
+    {
+      "id": "bile",
+      "expression": "Se faire de la bile",
+      "categorie": "anatomie_expression",
+      "texte": "La bile jaune était, dans la médecine des humeurs, l'humeur chaude et sèche associée à l'anxiété, à l'agitation et à l'inquiétude. Se faire de la bile, c'était laisser cette humeur s'emballer dans le corps — synonyme de s'angoisser pour des raisons souvent futiles.",
+      "emoji": "😟"
+    },
+    {
+      "id": "antibiotique",
+      "expression": "Antibiotique",
+      "categorie": "etymologie_pharma",
+      "texte": "Forgé en 1942 par le microbiologiste Selman Waksman à partir du grec *anti* (contre) et *bios* (vie). Un antibiotique est donc littéralement « ce qui va contre la vie » — la vie bactérienne en l'occurrence. Le mot est apparu la même année que la streptomycine, premier antibiotique contre la tuberculose.",
+      "emoji": "🔬"
+    },
+    {
+      "id": "baume-coeur",
+      "expression": "Mettre du baume au cœur",
+      "categorie": "expression_quotidien",
+      "texte": "Le baume était une préparation aromatique à base de résines végétales, utilisée depuis l'Antiquité pour ses vertus apaisantes et cicatrisantes. Appliquer du baume, c'était réparer et calmer — d'où l'usage figuré pour désigner ce qui console et réconforte.",
+      "emoji": "🌿"
+    },
+    {
+      "id": "drogue",
+      "expression": "Drogue",
+      "categorie": "etymologie_pharma",
+      "texte": "Du néerlandais *droog*, sec. Les premières « drogues » étaient simplement les plantes et épices séchées vendues par les droguistes — poivre, cannelle, camphre, séné. Le sens actuel, associé aux substances psychoactives, n'est apparu que bien plus tard.",
+      "emoji": "🧺"
+    },
+    {
+      "id": "colérique",
+      "expression": "Être colérique",
+      "categorie": "anatomie_expression",
+      "texte": "Du grec *kholê*, la bile. La bile jaune — chaude, sèche et légère — était l'humeur associée à la colère, à l'emportement et à l'énergie débordante. Un tempérament colérique signifiait littéralement : un corps produit trop de bile jaune.",
+      "emoji": "😤"
+    },
+    {
+      "id": "sevrage",
+      "expression": "Sevrage (des écrans, du sucre…)",
+      "categorie": "expression_quotidien",
+      "texte": "En médecine, le sevrage désignait à l'origine l'arrêt progressif de l'allaitement pour le nourrisson — un retrait doux mais difficile d'une substance dont on dépendait. La pharmacologie l'a ensuite étendu à l'arrêt de tout produit addictif, et le langage courant l'a adopté pour n'importe quelle dépendance.",
+      "emoji": "📵"
+    },
+    {
+      "id": "atropine",
+      "expression": "Atropine",
+      "categorie": "etymologie_pharma",
+      "texte": "De *Atropos*, la plus redoutée des trois Parques grecques — celle qui coupait le fil de la vie. L'atropine est extraite de l'*Atropa belladona* : une plante dont la toxicité mortelle valait bien le nom de la Parque implacable.",
+      "emoji": "✂️"
+    },
+    {
+      "id": "dents-longues",
+      "expression": "Avoir les dents longues",
+      "categorie": "anatomie_expression",
+      "texte": "Les médecins et vétérinaires de la Renaissance estimaient l'âge et l'état de santé d'un animal — puis d'un homme — à l'usure de ses dents. Des dents longues, peu usées, signalaient un individu jeune et vigoureux, prêt à mordre dans la vie avec appétit.",
+      "emoji": "🦷"
+    },
+    {
+      "id": "placebo",
+      "expression": "Effet placebo",
+      "categorie": "expression_quotidien",
+      "texte": "Du latin *placebo*, « je plairai » — premier mot d'un verset des vêpres des morts chanté par des pleureuses professionnelles. Les médecins médiévaux appelaient ironiquement ces fausses prières des « placebo ». En pharmacologie, le terme a désigné dès le XVIIIe siècle un remède inactif donné pour satisfaire le patient.",
+      "emoji": "💆"
+    },
+    {
+      "id": "insuline",
+      "expression": "Insuline",
+      "categorie": "etymologie_pharma",
+      "texte": "Du latin *insula*, île. En 1869, le médecin Paul Langerhans découvre dans le pancréas de petits amas cellulaires isolés qui ressemblent à des îles dans une mer de tissu — les îlots de Langerhans. L'hormone qu'ils sécrètent fut naturellement baptisée insuline.",
+      "emoji": "🏝️"
+    },
+    {
+      "id": "overdose",
+      "expression": "Overdose de (travail, informations…)",
+      "categorie": "expression_quotidien",
+      "texte": "En pharmacologie, une overdose est le dépassement du seuil toxique d'une substance — la dose qui soigne devient celle qui tue. Le terme a glissé vers le langage courant dès les années 1960 pour désigner toute saturation excessive, qu'il s'agisse de travail, d'informations ou de réseaux sociaux.",
+      "emoji": "📊"
+    },
+    {
+      "id": "virus",
+      "expression": "Virus",
+      "categorie": "etymologie_pharma",
+      "texte": "Du latin *virus*, venin ou poison. Les médecins romains l'utilisaient pour désigner les liquides corporels infectieux. Pasteur et Koch ont repris le terme au XIXe siècle pour les agents infectieux invisibles au microscope. Les informaticiens l'ont emprunté en 1974 pour les programmes auto-réplicants.",
+      "emoji": "☣️"
+    },
+    {
+      "id": "fiel",
+      "expression": "Avoir du fiel",
+      "categorie": "anatomie_expression",
+      "texte": "Le fiel — ou bile — était perçu depuis l'Antiquité comme une substance amère et corrosive. Une personne « pleine de fiel » était quelqu'un dont les paroles brûlaient comme la bile, dont l'amertume intérieure transparaissait dans chaque mot.",
+      "emoji": "🐍"
+    },
+    {
+      "id": "toxique",
+      "expression": "Toxique",
+      "categorie": "etymologie_pharma",
+      "texte": "Du grec *toxikon pharmakon*, littéralement « le poison pour les flèches » — *toxon* signifiant arc. Les archers anciens enduisaient leurs pointes de substances létales. Le terme a ensuite désigné tout poison, puis, dans le langage courant moderne, toute relation ou situation délétère.",
+      "emoji": "🏹"
+    },
+    {
+      "id": "immunise",
+      "expression": "Être immunisé contre",
+      "categorie": "expression_quotidien",
+      "texte": "Du latin *immunis*, exempté d'impôt ou de service — *munus* désignant la charge ou le service dû. En médecine, être immunisé c'est être « exempté » de la maladie. L'expression a glissé vers tout ce face à quoi on reste insensible — une critique, une mauvaise nouvelle.",
+      "emoji": "🛡️"
+    },
+    {
+      "id": "belladone",
+      "expression": "Belladone",
+      "categorie": "etymologie_pharma",
+      "texte": "De l'italien *bella donna*, belle femme. À la Renaissance, les aristocrates italiennes instillaient le suc de cette plante dans leurs yeux pour dilater les pupilles — effet jugé séduisant à l'époque. La plante est hautement toxique mais son nom évoque toujours la coquetterie.",
+      "emoji": "👁️"
+    },
+    {
+      "id": "contagieux",
+      "expression": "Contagieux (rire, enthousiasme…)",
+      "categorie": "expression_quotidien",
+      "texte": "Du latin *contagio*, contact — *tangere*, toucher. La contagion désignait la transmission d'une maladie par contact physique. Au XIXe siècle, les neurologues ont observé que certaines émotions se transmettaient de personne à personne de façon quasi-réflexe — d'où le rire contagieux.",
+      "emoji": "😂"
+    },
+    {
+      "id": "chirurgie",
+      "expression": "Chirurgie",
+      "categorie": "etymologie_pharma",
+      "texte": "Du grec *kheirourgía* — *kheir* (main) et *ergon* (travail). La chirurgie était littéralement le « travail des mains », par opposition à la médecine qui soignait par des remèdes. Au Moyen Âge, les chirurgiens étaient considérés comme des artisans, bien en dessous des médecins dans la hiérarchie.",
+      "emoji": "🖐️"
+    },
+    {
+      "id": "ventre-mou",
+      "expression": "Avoir le ventre mou",
+      "categorie": "anatomie_expression",
+      "texte": "En anatomie militaire médiévale, le ventre était la partie la plus vulnérable du corps — sans armure, sans os protecteur. Un flanc mou désignait une position faible face à l'ennemi. L'expression a survécu pour désigner toute faiblesse structurelle dans un argument ou une organisation.",
+      "emoji": "🎯"
+    },
+    {
+      "id": "anesthesie",
+      "expression": "Anesthésie",
+      "categorie": "etymologie_pharma",
+      "texte": "Forgé en 1846 par Oliver Wendell Holmes à partir du grec *an-* (sans) et *aisthêsis* (sensation). Le terme fut proposé au médecin Morton qui venait de réussir la première opération sous éther. Avant ce mot, il n'existait pas de concept pour désigner l'absence totale de douleur — parce que cela n'existait pas.",
+      "emoji": "😶"
+    },
+    {
+      "id": "epidemie",
+      "expression": "Épidémie (de rires, de grippe des réseaux…)",
+      "categorie": "expression_quotidien",
+      "texte": "Du grec *epi* (sur) et *dêmos* (peuple). Une épidémie est littéralement ce qui « tombe sur le peuple » — une maladie qui se pose sur une population entière. Hippocrate utilisait déjà le terme au Ve siècle avant J.-C. pour décrire les maladies saisonnières à large diffusion.",
+      "emoji": "🌍"
+    },
+    {
+      "id": "microbe",
+      "expression": "Microbe",
+      "categorie": "etymologie_pharma",
+      "texte": "Forgé en 1878 par le chirurgien français Charles-Emmanuel Sédillot à partir du grec *mikros* (petit) et *bios* (vie). Pasteur adopta immédiatement le terme pour désigner ces « petites vies » invisibles à l'œil nu qui causaient les infections — un mot inventé en France pour une révolution scientifique mondiale.",
+      "emoji": "🔬"
+    },
+    {
+      "id": "cran",
+      "expression": "Avoir du cran",
+      "categorie": "anatomie_expression",
+      "texte": "Le mot « cran » désignait à l'origine une entaille, une encoche dans une lame ou un os — notamment la dentelure du sternum que les chirurgiens militaires utilisaient comme repère anatomique. Par métaphore, le cran est devenu le ressort intérieur, la résistance viscérale face au danger.",
+      "emoji": "🦾"
+    },
+    {
+      "id": "pasteurisation",
+      "expression": "Pasteurisation",
+      "categorie": "etymologie_pharma",
+      "texte": "Louis Pasteur démontra en 1864 que chauffer le vin à 55°C pendant quelques minutes détruisait les micro-organismes qui le faisaient tourner. La technique fut appliquée au lait et à la bière, puis baptisée « pasteurisation » — l'un des rares cas où le nom d'un vivant est devenu un verbe universel.",
+      "emoji": "🍶"
+    },
+    {
+      "id": "dos",
+      "expression": "En avoir plein le dos",
+      "categorie": "anatomie_expression",
+      "texte": "Les médecins médiévaux localisaient les états de stress, de surmenage et d'épuisement dans la région lombaire — le dos portait littéralement le poids du travail physique. En avoir plein le dos, c'était d'abord une description médicale avant d'être une métaphore de la saturation.",
+      "emoji": "😩"
+    },
+    {
+      "id": "opium",
+      "expression": "Opium",
+      "categorie": "etymologie_pharma",
+      "texte": "Du grec *opos*, le suc de plante. Les Grecs récoltaient le latex du pavot en incisant ses capsules et nommaient ce liquide épais *opos tou mêkônos* — le suc du pavot. L'opium est ainsi simplement le « jus » d'une plante, utilisé comme analgésique depuis plus de 5 000 ans.",
+      "emoji": "🌺"
+    },
+    {
+      "id": "catharsis",
+      "expression": "Catharsis",
+      "categorie": "expression_quotidien",
+      "texte": "Du grec *katharsis*, purification. Hippocrate utilisait le terme pour désigner la purgation médicale — évacuer les humeurs toxiques du corps. Aristote l'a repris pour la tragédie : en vivant les émotions des personnages, le spectateur purgeait ses propres passions. Freud en a fait un concept psychanalytique.",
+      "emoji": "🎭"
+    },
+    {
+      "id": "quinine",
+      "expression": "Quinine",
+      "categorie": "etymologie_pharma",
+      "texte": "Du quechua *kina-kina*, écorce des écorces. Les peuples andins utilisaient l'écorce du quinquina pour traiter les fièvres depuis des siècles avant que les Espagnols ne la ramènent en Europe au XVIIe siècle. Pendant 200 ans, ce fut l'unique traitement efficace contre le paludisme.",
+      "emoji": "🌿"
+    },
+    {
+      "id": "pied-plat",
+      "expression": "Mettre les pieds dans le plat",
+      "categorie": "anatomie_expression",
+      "texte": "Les chirurgiens du XVIIIe siècle désignaient par « pied-plat » ou « pied dans le plat » la maladresse technique qui consistait à appuyer là où il ne fallait pas pendant une opération — causant une blessure supplémentaire. L'expression a gardé son sens de geste maladroit aux conséquences involontaires.",
+      "emoji": "🦶"
+    },
+    {
+      "id": "laudanum",
+      "expression": "Laudanum",
+      "categorie": "etymologie_pharma",
+      "texte": "Du latin *laudare*, louer. Paracelse baptisa ainsi au XVIe siècle sa préparation d'opium dissous dans de l'alcool, qu'il considérait comme « digne de toutes les louanges ». Pendant trois siècles, le laudanum fut l'analgésique universel — vendu en pharmacie sans ordonnance.",
+      "emoji": "🏅"
+    },
+    {
+      "id": "purger-dettes",
+      "expression": "Purger ses dettes",
+      "categorie": "expression_quotidien",
+      "texte": "La purge médicale — administrer un purgatif pour évacuer les toxines — était l'un des traitements les plus courants depuis Hippocrate. L'idée d'éliminer ce qui encombre, de « nettoyer » un passif, a glissé naturellement vers le vocabulaire juridique et financier.",
+      "emoji": "🧹"
+    },
+    {
+      "id": "bacterie",
+      "expression": "Bactérie",
+      "categorie": "etymologie_pharma",
+      "texte": "Du grec *baktêria*, bâton ou canne. Les premières bactéries observées au microscope par Ehrenberg en 1838 avaient une forme allongée, bâtonnée — comme de minuscules cannes. Le nom est resté, même pour les bactéries sphériques (coques) ou en spirale découvertes plus tard.",
+      "emoji": "🦠"
+    },
+    {
+      "id": "nez",
+      "expression": "Avoir du nez",
+      "categorie": "anatomie_expression",
+      "texte": "Les apothicaires et herboristes de la Renaissance reconnaissaient les plantes, épices et drogues à leur odeur avant tout autre chose. Avoir du nez, c'était d'abord une compétence professionnelle réelle — savoir identifier, distinguer, anticiper — avant de désigner l'intuition en général.",
+      "emoji": "👃"
+    },
+    {
+      "id": "panacee",
+      "expression": "Panacée",
+      "categorie": "expression_quotidien",
+      "texte": "De *Panacea*, fille d'Asclépios, dieu grec de la médecine. Son prénom signifie « qui guérit tout » — *pan* (tout) + *akos* (remède). Les alchimistes cherchaient depuis des siècles ce remède universel. Aujourd'hui, une panacée désigne toute solution présentée comme applicable à tous les problèmes.",
+      "emoji": "🌟"
+    },
+    {
+      "id": "serum",
+      "expression": "Sérum",
+      "categorie": "etymologie_pharma",
+      "texte": "Du latin *serum*, le petit-lait — ce liquide clair qui se sépare du lait caillé. Les anatomistes ont emprunté le terme pour désigner la partie liquide du sang après coagulation, de même couleur et consistance. Le sérum physiologique, lui, imite la composition de ce liquide biologique.",
+      "emoji": "🥛"
+    },
+    {
+      "id": "peau-dure",
+      "expression": "Avoir la peau dure",
+      "categorie": "anatomie_expression",
+      "texte": "En anatomie de combat médiéval, la qualité de la peau — épaisseur, résistance aux blessures — était une donnée médicale réelle. Les médecins militaires notaient que certains combattants semblaient résister physiquement mieux que d'autres. L'expression a gardé le sens de résistance face aux coups, physiques ou symboliques.",
+      "emoji": "🛡️"
+    },
+    {
+      "id": "mithridate",
+      "expression": "Mithridatisation",
+      "categorie": "etymologie_pharma",
+      "texte": "Mithridate VI, roi du Pont au Ier siècle av. J.-C., craignait tellement d'être empoisonné qu'il s'administrait quotidiennement de petites doses de poisons pour s'y habituer. Ce processus d'immunisation progressive par exposition répétée porte encore son nom.",
+      "emoji": "👑"
+    },
+    {
+      "id": "bras-long",
+      "expression": "Avoir le bras long",
+      "categorie": "anatomie_expression",
+      "texte": "Les chirurgiens médiévaux et de la Renaissance admiraient la portée d'un bras long comme avantage technique lors des opérations ou des accouchements difficiles. Cette métaphore anatomique a ensuite désigné l'étendue de l'influence et du pouvoir — la capacité à « atteindre » loin.",
+      "emoji": "💪"
+    },
+    {
+      "id": "antidote",
+      "expression": "Antidote",
+      "categorie": "etymologie_pharma",
+      "texte": "Du grec *anti* (contre) et *doton* (ce qui est donné) — littéralement, ce qu'on donne en retour du poison. Les antidotes de l'Antiquité étaient souvent des préparations de charbon végétal, d'argile ou de lait. Le terme s'emploie aujourd'hui pour tout remède à un problème — l'humour comme antidote au stress.",
+      "emoji": "⚗️"
+    },
+    {
+      "id": "coeur",
+      "expression": "Avoir du cœur",
+      "categorie": "anatomie_expression",
+      "texte": "Pour Aristote, le cœur — et non le cerveau — était le siège de l'intelligence, des émotions et de l'âme. Cette croyance a dominé la médecine pendant quinze siècles. Avoir du cœur, c'était donc posséder toutes les vertus humaines réunies dans cet organe central.",
+      "emoji": "❤️"
+    },
+    {
+      "id": "pandémie",
+      "expression": "Pandémie",
+      "categorie": "etymologie_pharma",
+      "texte": "Du grec *pan* (tout) et *dêmos* (peuple). Si une épidémie touche une région, une pandémie concerne « tout le peuple » — l'ensemble de la planète. Hippocrate avait posé la distinction, mais le terme de pandémie n'est entré dans l'usage courant qu'au XIXe siècle avec les grandes épidémies de choléra.",
+      "emoji": "🌐"
+    },
+    {
+      "id": "convalescence",
+      "expression": "Être en convalescence",
+      "categorie": "expression_quotidien",
+      "texte": "Du latin *convalescere* — *con* (ensemble, entièrement) et *valescere* (se renforcer, de *valere* = valoir, être en bonne santé). La convalescence désignait la période où le corps récupère progressivement ses forces. L'expression s'applique aujourd'hui à toute situation de rétablissement lent après une crise.",
+      "emoji": "🌱"
+    },
+    {
+      "id": "digitale",
+      "expression": "Digitaline",
+      "categorie": "etymologie_pharma",
+      "texte": "Du latin *digitalis*, qui appartient au doigt — *digitus*. Le botaniste Leonhart Fuchs nomma ainsi la plante en 1542 parce que ses fleurs en forme de dés à coudre s'enfilaient parfaitement sur les doigts. La digitaline, extraite de cette fleur, reste aujourd'hui un médicament cardiaque majeur.",
+      "emoji": "💜"
+    },
+    {
+      "id": "tete",
+      "expression": "Perdre la tête",
+      "categorie": "anatomie_expression",
+      "texte": "Les médecins de l'Antiquité tardive et médiévaux localisaient la raison dans le cerveau — siège des « esprits animaux ». Perdre la tête, c'était médicalement perdre le contrôle de ces esprits, sombrer dans la démence ou la passion incontrôlable. L'expression a conservé ce sens de perte totale du contrôle.",
+      "emoji": "🌀"
+    },
+    {
+      "id": "syndrome",
+      "expression": "Syndrome (de l'imposteur, de Stockholm…)",
+      "categorie": "expression_quotidien",
+      "texte": "Du grec *syn* (ensemble) et *dromos* (courir). Un syndrome est littéralement un ensemble de symptômes qui « courent ensemble » — qui apparaissent simultanément. La psychiatrie du XXe siècle a popularisé le terme pour décrire des profils comportementaux : une constellation de signes reconnaissables.",
+      "emoji": "🔍"
+    },
+    {
+      "id": "camphre",
+      "expression": "Camphre",
+      "categorie": "etymologie_pharma",
+      "texte": "De l'arabe *kafur*, lui-même du sanskrit *karpura*. Connu en Asie depuis l'Antiquité, le camphre fut introduit en Europe médiévale par les marchands arabes comme médicament contre la peste et les épidémies. Son odeur pénétrante lui valut d'être utilisé dans les masques des médecins de la peste.",
+      "emoji": "🏺"
+    },
+    {
+      "id": "coude",
+      "expression": "Lever le coude",
+      "categorie": "anatomie_expression",
+      "texte": "Les médecins de Galien observaient que le mouvement de flexion du coude pour porter un verre à la bouche sollicitait le biceps de façon visible et répétée. Les aubergistes repéraient leurs clients réguliers à ce geste mécanique. L'expression est restée pour désigner l'habitude de boire.",
+      "emoji": "🍺"
+    },
+    {
+      "id": "doper",
+      "expression": "Se doper",
+      "categorie": "expression_quotidien",
+      "texte": "Du néerlandais *doop*, sauce épaisse — une préparation semi-liquide à base de plantes et d'alcool que les esclavagistes donnaient aux travailleurs africains pour accroître leur résistance. Les premiers « dopes » anglais étaient des préparations pharmacologiques stimulantes avant de désigner tout usage de substances dopantes.",
+      "emoji": "💉"
+    },
+    {
+      "id": "prophylaxie",
+      "expression": "Prophylaxie",
+      "categorie": "etymologie_pharma",
+      "texte": "Du grec *pro* (avant) et *phylassein* (garder, protéger). La prophylaxie est littéralement la « garde préventive » — l'ensemble des mesures pour empêcher une maladie avant qu'elle n'apparaisse. Terme clé de la santé publique, il désigne tout ce qui protège en amont plutôt qu'en aval.",
+      "emoji": "🛡️"
+    },
+    {
+      "id": "pieds-terre",
+      "expression": "Avoir les pieds sur terre",
+      "categorie": "anatomie_expression",
+      "texte": "Les médecins grecs distinguaient les tempéraments « aériens » — portés vers l'abstraction, la rêverie, le détachement du réel — des tempéraments « terrestres ». Garder les pieds sur terre, c'était rester dans les humeurs équilibrées, ancrées dans le concret, sans s'envoler vers les spéculations vaines.",
+      "emoji": "🌍"
+    },
+    {
+      "id": "narcotique",
+      "expression": "Narcotique",
+      "categorie": "etymologie_pharma",
+      "texte": "Du grec *narkê*, engourdissement. Les Grecs utilisaient le terme pour décrire l'effet de la torpille électrique (le poisson) sur le bras du pêcheur — une paralysie soudaine et totale. Le narcisse, lui aussi, vient de *narkê* : la fleur dont l'odeur entêtante provoque une somnolence.",
+      "emoji": "💤"
+    },
+    {
+      "id": "pansement",
+      "expression": "Pansement",
+      "categorie": "etymologie_pharma",
+      "texte": "Du vieux français *panser*, prendre soin — lui-même du latin *pensare*, peser, évaluer. Panser une blessure, c'était d'abord l'examiner attentivement, la « peser » du regard avant d'agir. Le mot *pensée* (la réflexion) partage la même racine : on pèse ses mots comme on évalue une plaie.",
+      "emoji": "🩹"
+    },
+    {
+      "id": "therapeutique",
+      "expression": "Thérapeutique / Thérapie",
+      "categorie": "etymologie_pharma",
+      "texte": "Du grec *therapeuein*, soigner, servir, prendre soin de. Les *therapeutai* étaient à la fois les médecins et les serviteurs du temple — soigner était un acte de service autant que de technique. La racine est restée dans *thérapie*, *thérapeute* et dans le prénom *Thérèse*.",
+      "emoji": "🤝"
+    },
+    {
+      "id": "tete-epaules",
+      "expression": "Avoir la tête sur les épaules",
+      "categorie": "anatomie_expression",
+      "texte": "Les chirurgiens médiévaux voyaient régulièrement des patients en état de choc traumatique avec une posture effondrée, la tête basculant sur le côté. Avoir littéralement la tête bien posée sur les épaules signifiait une stabilité physique qui symbolisait rapidement l'équilibre mental.",
+      "emoji": "🧠"
+    },
+    {
+      "id": "homéopathique",
+      "expression": "Augmentation homéopathique",
+      "categorie": "expression_quotidien",
+      "texte": "L'homéopathie, créée par Hahnemann en 1796, repose sur des dilutions si extrêmes — jusqu'à 30CH, soit $10^{-60}$ — qu'aucune molécule active ne subsiste théoriquement. Une augmentation homéopathique est donc une augmentation si infime qu'elle frôle le zéro — le terme est devenu synonyme d'inefficacité ou de geste symbolique.",
+      "emoji": "💧"
+    },
+    {
+      "id": "ventre",
+      "expression": "Avoir du ventre",
+      "categorie": "anatomie_expression",
+      "texte": "Dans la tradition médicale hébraïque et arabe, le ventre — notamment le bas-ventre — était le siège de la sagesse pratique et du courage intérieur. Cette conception a influencé le judaïsme et l'islam médiéval avant de passer en français : avoir du ventre, c'est avoir de l'audace et de la détermination.",
+      "emoji": "💪"
+    },
+    {
+      "id": "thériaque",
+      "expression": "Thériaque",
+      "categorie": "etymologie_pharma",
+      "texte": "Du grec *thêrion*, bête sauvage. La thériaque était un antidote universel préparé contre les morsures d'animaux venimeux, composé parfois de plus de 60 ingrédients. Pendant 1500 ans, de Galien jusqu'au XVIIIe siècle, ce fut la préparation pharmaceutique la plus complexe et la plus précieuse de l'histoire.",
+      "emoji": "🐍"
+    },
+    {
+      "id": "cou",
+      "expression": "En avoir jusqu'au cou",
+      "categorie": "anatomie_expression",
+      "texte": "Les chirurgiens décrivaient les plaies et lésions par leur profondeur et leur extension sur le corps. Être blessé jusqu'au cou signifiait être touché dans une zone critique, à la limite du vital. L'expression a conservé ce sens d'une situation critique dont on ne voit pas comment se dégager.",
+      "emoji": "😰"
+    },
+    {
+      "id": "incuber",
+      "expression": "Incuber (une idée)",
+      "categorie": "expression_quotidien",
+      "texte": "En médecine, la période d'incubation est le temps entre l'infection et l'apparition des premiers symptômes — la maladie se développe en silence dans l'organisme. Le terme vient du latin *incubare*, couver. Une idée qui « s'incube » suit le même cheminement invisible avant d'éclore.",
+      "emoji": "🥚"
+    },
+    {
+      "id": "symptôme",
+      "expression": "Le symptôme d'un problème",
+      "categorie": "expression_quotidien",
+      "texte": "Du grec *symptôma*, coïncidence ou concours de circonstances — *sym* (avec) + *piptein* (tomber). En médecine grecque, un symptôme était un signe qui « tombait avec » la maladie sans en être nécessairement la cause. L'expression a glissé vers tout signe révélateur d'un problème plus profond.",
+      "emoji": "🔎"
+    },
+    {
+      "id": "piqûre-rappel",
+      "expression": "Piqûre de rappel",
+      "categorie": "expression_quotidien",
+      "texte": "En vaccinologie, le rappel est une injection supplémentaire pour réactiver l'immunité qui décline avec le temps. Introduit dans les campagnes de vaccination du XXe siècle, le terme s'est étendu à tout ce qui réactive une mémoire ou une attention — une piqûre de rappel pour ne pas oublier.",
+      "emoji": "💉"
+    },
+    {
+      "id": "cure",
+      "expression": "Faire une cure",
+      "categorie": "expression_quotidien",
+      "texte": "Du latin *cura*, soin, souci, attention. La cure désignait initialement l'ensemble du traitement médical — *cura* donnera aussi *cure* en anglais et *curé* (celui qui a soin des âmes). En France, « faire une cure » a désigné le séjour thermal dès le XVIIIe siècle — un repos médicalement prescrit.",
+      "emoji": "♨️"
+    },
+    {
+      "id": "euphorbe",
+      "expression": "Euphorisant",
+      "categorie": "etymologie_pharma",
+      "texte": "Du nom d'Euphorbos, médecin du roi Juba Ier de Mauritanie au Ier siècle av. J.-C. La plante *Euphorbia* fut baptisée en son honneur. Son latex, fortement irritant, provoquait paradoxalement une sensation d'euphorie transitoire — d'où *euphorisant* pour toute substance qui procure un bien-être artificiel.",
+      "emoji": "🌵"
+    },
+    {
+      "id": "chronique",
+      "expression": "Chronique (maladie ou article)",
+      "categorie": "expression_quotidien",
+      "texte": "Du grec *khronos*, le temps. En médecine grecque, une maladie *chronique* durait dans le temps, par opposition à une maladie *aiguë* (soudaine et intense). Les journalistes du XVIIIe siècle ont emprunté le terme pour désigner leurs articles réguliers — textes qui reviennent périodiquement, comme une maladie chronique.",
+      "emoji": "📅"
+    }
+  ]
+}

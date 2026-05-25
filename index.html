@@ -1163,6 +1163,60 @@ body {
   .nl-form button { width: 100%; }
   .nl-captcha { transform: scale(0.85); transform-origin: center; }
 }
+/* === EXPRESSION DU JOUR === */
+.expression-bandeau {
+  max-width: 1200px;
+  margin: 0 auto 20px;
+  padding: 0 24px;
+}
+.expression-bandeau > * {
+  background: linear-gradient(135deg, #92400e 0%, #b45309 100%);
+  border-left: 4px solid #f59e0b;
+  border-radius: 12px;
+  padding: 16px 20px;
+  color: white;
+}
+.expression-inner {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.expression-emoji {
+  font-size: 2rem;
+  flex-shrink: 0;
+  line-height: 1;
+  margin-top: 2px;
+}
+.expression-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.expression-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.8;
+  color: #fef3c7;
+}
+.expression-titre {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #fef3c7;
+  display: block;
+}
+.expression-texte {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  opacity: 0.9;
+  margin: 0;
+  color: #fef3c7;
+}
+@media (max-width: 420px) {
+  .expression-bandeau { padding-left: 16px; padding-right: 16px; }
+  .expression-emoji { font-size: 1.6rem; }
+}
 </style>
 <script defer src="assets/site-nav.js"></script>
 <script>
@@ -1254,6 +1308,9 @@ body {
   <span id="stats-count"></span>
   <span>Dernière mise à jour : <strong id="stats-date"></strong></span>
 </div>
+
+<!-- EXPRESSION DU JOUR (injectée par update_actus.py à chaque run) -->
+<!-- EXPRESSION_DU_JOUR -->
 
 <!-- ARTICLES (groupes par date) -->
 <div id="articles-container"></div>

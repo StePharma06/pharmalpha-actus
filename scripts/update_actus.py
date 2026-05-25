@@ -25,6 +25,37 @@ SENDER_NAME = "Pharm'Actus"
 REPLY_TO_EMAIL = "stephen.pharmacien@gmail.com"
 
 
+# ── Expression du jour ────────────────────────────────────────────────
+
+def get_expression_du_jour():
+    """Return today's expression via a cyclic index based on the date.
+
+    Start date: 2026-05-26 → index 0.
+    Negative offset (before start_date) falls back to index 0.
+    Returns None if the JSON file is missing or empty.
+    """
+    from datetime import date
+
+    expr_file = Path(__file__).parent / "expressions_pharma.json"
+    if not expr_file.exists():
+        return None
+
+    with open(expr_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    expressions = data.get("expressions", [])
+    if not expressions:
+        return None
+
+    start_date = date(2026, 5, 26)
+    today = date.today()
+    idx = (today - start_date).days % len(expressions)
+    if idx < 0:
+        idx = 0
+
+    return expressions[idx]
+
+
 FALLBACK_MODEL = "claude-haiku-4-5-20251001"
 
 
@@ -1064,6 +1095,26 @@ def update_index_html(new_articles):
         updated_block = "\n" + ",\n".join(kept) + "\n"
 
     updated_html = html[:match.start(1)] + updated_block + html[match.end(1):]
+
+    # Inject "Expression du jour" banner into the placeholder
+    expr = get_expression_du_jour()
+    if expr:
+        def esc_html(s):
+            return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
+        bandeau_html = (
+            '<div class="expression-bandeau">'
+            '<div class="expression-inner">'
+            f'<span class="expression-emoji">{expr["emoji"]}</span>'
+            '<div class="expression-content">'
+            '<span class="expression-label">Expression du jour</span>'
+            f'<strong class="expression-titre">{esc_html(expr["expression"])}</strong>'
+            f'<p class="expression-texte">{esc_html(expr["texte"])}</p>'
+            '</div>'
+            '</div>'
+            '</div>'
+        )
+        updated_html = updated_html.replace("<!-- EXPRESSION_DU_JOUR -->", bandeau_html, 1)
+
     INDEX_HTML.write_text(updated_html, encoding="utf-8")
 
     print(f"  {len(new_js_entries)} articles ajoutes a index.html")
@@ -1384,6 +1435,39 @@ ATTENTION ORTHOGRAPHE : relis-toi avant de repondre. ZERO faute tolere.
         return None
 
 
+def _build_expression_email_block(expr):
+    """Build a table-based email block for 'Expression du jour'.
+
+    Uses only table/td layout (no flexbox) for maximum email client compat.
+    Returns an empty string if expr is None.
+    """
+    if not expr:
+        return ""
+
+    def esc(s):
+        return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
+
+    return f'''  <tr><td style="padding:20px 32px 0;">
+    <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
+      <tr>
+        <td style="background:linear-gradient(135deg,#92400e,#b45309);border-left:4px solid #f59e0b;border-radius:12px;padding:16px 20px;">
+          <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
+            <tr>
+              <td width="44" valign="top" style="font-size:32px;line-height:1;padding-right:14px;">{expr["emoji"]}</td>
+              <td valign="top">
+                <div style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#fef3c7;opacity:0.8;margin-bottom:4px;">Expression du jour</div>
+                <div style="font-size:16px;font-weight:800;color:#fef3c7;margin-bottom:6px;">{esc(expr["expression"])}</div>
+                <div style="font-size:13px;line-height:1.5;color:#fef3c7;">{esc(expr["texte"])}</div>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </td></tr>
+  <tr><td style="padding:20px 32px 0;"><div style="border-top:1px solid #e5e5e5;"></div></td></tr>'''
+
+
 def build_newsletter_html(articles, custom_intro=None):
     """Build newsletter HTML from today's articles."""
     today = datetime.now(PARIS_TZ)
@@ -1447,6 +1531,9 @@ def build_newsletter_html(articles, custom_intro=None):
     </table>
   </td></tr>'''
 
+    # Expression du jour email block (computed here so it's available in the f-string)
+    expression_email_block = _build_expression_email_block(get_expression_du_jour())
+
     return f'''<!DOCTYPE html>
 <html lang="fr">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
@@ -1472,6 +1559,7 @@ def build_newsletter_html(articles, custom_intro=None):
     </p>
   </td></tr>
   <tr><td style="padding:0 32px;"><div style="border-top:1px solid #e5e5e5;"></div></td></tr>
+  {expression_email_block}
   {articles_html}
   <tr><td style="padding:28px 32px 0;" align="center">
     <table role="presentation" cellpadding="0" cellspacing="0"><tr>
