@@ -1,6 +1,26 @@
 {
   "articles": [
     {
+      "id": "actu_2026_05_26_5_b",
+      "date": "2026-05-26",
+      "type": "actu",
+      "categorie": "business_officine",
+      "titre": "Canicule : ton officine face à un boom business de +30% sur les produits d'été",
+      "resume": "Paris bat un record thermique depuis 1944 avec 13°C d'écart aux normales. Les pharmaciens doivent anticiper la ruée sur l'hydratation et la protection solaire.",
+      "full_text": "Paris bat un record thermique depuis 1944 avec 13°C d'écart aux normales. Les pharmaciens doivent anticiper la ruée sur l'hydratation et la protection solaire.\n\n## Contexte\n\nLa France traverse une vague de chaleur exceptionnelle avec des températures dépassant 30°C à Paris, soit 13 degrés au-dessus des normales saisonnières pour un 25 mai. C'est le pic le plus élevé enregistré depuis 1944 selon Météo-France. Cette canicule précoce s'accompagne d'une dégradation de la qualité de l'air avec des pics d'ozone, créant une \"double peine\" pour les pathologies respiratoires selon l'association Santé Respiratoire France. Les autorités sanitaires alertent sur les risques d'hyperthermie, de déshydratation et de coups de chaleur, particulièrement chez les personnes fragiles (nourrissons, seniors, patients chroniques).\n\n## Analyse business\n\nCette canicule précoce représente un enjeu business majeur pour ton officine. Historiquement, chaque épisode caniculaire génère une hausse de 25 à 40% des ventes de produits estivaux selon les données GERS. Les solutés de réhydratation orale (SRO) voient leurs ventes multipliées par 3 lors des pics de chaleur. Les crèmes solaires SPF30+ enregistrent une progression de +35% en moyenne sur les 3 jours suivant une alerte météo. Côté prescription, les pharmaciens observent une hausse de 20% des délivrances d'antispasmodiques et de pansements digestifs liés aux troubles hydro-électrolytiques. L'impact sur les pathologies chroniques est aussi business : les patients BPCO et asthmatiques multiplient par 2 leurs achats de bronchodilatateurs d'urgence selon l'ANSM. Avec 13°C d'écart aux normales, cette canicule s'annonce particulièrement intense. Tes marges sur les produits OTC estivaux oscillent entre 25% (SRO) et 45% (solaires premium), soit un CA additionnel potentiel de 800 à 1200€ par semaine d'épisode caniculaire pour une officine moyenne.\n\n## Recommandations actionnables\n\n1. Stock d'urgence — Commande immédiatement +50% de SRO, brumisateurs, crèmes solaires SPF30+ et textiles rafraîchissants. Négocie avec tes grossistes une livraison express.\n\n2. Merchandising chaud — Place en tête de gondole les produits hydratation, ventilateurs portables et lunettes de soleil. Crée un corner \"canicule\" visible dès l'entrée.\n\n3. Conseil proactif — Forme ton équipe aux signes d'hyperthermie. Propose systématiquement SRO + protection solaire aux clients achetant des médicaments chroniques.\n\n4. Communication ciblée — Diffuse sur tes réseaux les conseils hydratation avec tes produits. Lance une opération SMS vers tes patients âgés pour un bilan médicaments/chaleur.\n\n## Sources citees\n\n- France Info Santé\n- France Info Santé - Pollution ozone\n- Le Monde Santé",
+      "source": "Pharm'Actus",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Business",
+      "image_url": "assets/img_actu_2026_05_26_5_b.jpg",
+      "tags": [
+        "canicule",
+        "business",
+        "otc",
+        "merchandising"
+      ]
+    },
+    {
       "id": "actu_2026_05_26_5",
       "date": "2026-05-26",
       "type": "actu",
@@ -18,6 +38,27 @@
         "merchandising",
         "conseil",
         "marge"
+      ]
+    },
+    {
+      "id": "actu_2026_05_26_4_b",
+      "date": "2026-05-26",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "Tyra crée une journée mondiale contre un cancer ultra-rare",
+      "resume": "Tyra Biosciences s'associe aux patients pour créer une journée de sensibilisation au cancer urothélial des voies hautes. Leur molécule en développement cible cette tumeur rare. L'avenir se dessine par la mobilisation collective.",
+      "full_text": "Tyra Biosciences fait du neuf : créer une journée mondiale de sensibilisation pour un cancer qu'on connaît à peine. Le cancer urothélial des voies hautes, leur cible thérapeutique prioritaire.\n\nPourquoi c'est malin ? Parce qu'avant de sortir leur molécule lead, ils mobilisent patients et soignants autour d'une pathologie ultra-rare. Diagnostic tardif, options limitées, pronostic sombre : tout ce qui justifie un traitement innovant.\n\nLa stratégie patient-first devient la norme chez les biotechs. Plus question de développer en vase clos pendant 10 ans puis de découvrir que personne ne comprend l'indication. Tyra implique les associations dès maintenant.\n\nCôté R&D, leur molécule vise les mutations spécifiques de ces tumeurs rares. On entre dans l'ère de la médecine ultra-personnalisée : un cancer, un gène, un traitement. Fini le one-size-fits-all.\n\nPour nous pharmaciens ? Ces cancers rares vont multiplier les demandes d'ATU, les importations, les préparations hospitalières. Il faut qu'on se forme sur ces indications pointues qu'on verra arriver.\n\nL'avenir se dessine : des labos qui co-construisent avec les patients, des traitements sur-mesure génétiquement, et nous au centre pour expliquer des thérapies de plus en plus sophistiquées.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/marketing/tyra-creates-awareness-day-patient-advocates-shine-light-rare-cancer",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_05_26_4_b.jpg",
+      "tags": [
+        "tyra",
+        "cancer",
+        "rare",
+        "innovation",
+        "patients"
       ]
     },
     {
@@ -41,6 +82,27 @@
       ]
     },
     {
+      "id": "actu_2026_05_26_3_b",
+      "date": "2026-05-26",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "Philippe Besset au CESE : la pharma entre au conseil national",
+      "resume": "Le président de la FSPF rejoint le Conseil économique, social et environnemental. Une première pour représenter directement la pharmacie d'officine dans les débats nationaux. Enfin une voix officinale au plus haut niveau ?",
+      "full_text": "Philippe Besset cumule : président FSPF ET membre du CESE. Une double casquette qui propulse la pharmacie d'officine dans les débats institutionnels de haut niveau.\n\nCe qui change ? Pour la première fois, un pharmacien siège officiellement au Conseil économique, social et environnemental. Fini les couloirs, place aux tribunes nationales pour défendre nos positions.\n\nBesset assume le pari : élargir le champ d'action vers les enjeux interprofessionnels. Santé environnementale, accès aux soins, financement du système... autant de dossiers où la vision officinale manquait cruellement.\n\nMais attention à l'équilibre. Présider la FSPF ET siéger au CESE, c'est jongler entre défense corporatiste et vision d'intérêt général. Besset le reconnaît : tout dépendra du \"niveau réel de contraintes\".\n\nCôté terrain, ça nous donne un relais direct vers les instances décisionnelles. Plus besoin de multiplier les courriers au ministère : on a désormais une voix institutionnelle qui porte.\n\nL'enjeu maintenant ? Que cette représentation serve concrètement l'officine de base. Pas juste du prestige parisien, mais des avancées tangibles pour nos conditions d'exercice quotidiennes.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/interview-philippe-besset-president-de-la-sfpf-annonce-son-election-au-cese-et-devoile-sa-vision-politique",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_05_26_3_b.jpg",
+      "tags": [
+        "besset",
+        "fspf",
+        "cese",
+        "representation",
+        "politique"
+      ]
+    },
+    {
       "id": "actu_2026_05_26_3",
       "date": "2026-05-26",
       "type": "actu",
@@ -58,6 +120,27 @@
         "antibiotiques",
         "stupefiants",
         "penuries"
+      ]
+    },
+    {
+      "id": "actu_2026_05_26_2_b",
+      "date": "2026-05-26",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "AbbVie-GSK : la bataille de l'image patient au Royaume-Uni",
+      "resume": "AbbVie et GSK grimpent dans le classement réputation auprès des associations de patients britanniques. Une course à l'image qui redistribue les cartes du top pharma UK. Et en France, on en est où de cette relation patient ?",
+      "full_text": "Révolution dans le baromètre réputation pharma UK : AbbVie et GSK remontent comme des fusées dans l'estime des associations de patients britanniques. Un bouleversement qui change la donne.\n\nPourquoi ça nous concerne ? Parce que ces labos qui misent sur la relation patient, on les retrouve dans nos frigos et nos tiroirs français. AbbVie avec Humira et sa galaxie anti-TNF, GSK avec ses vaccins et ses respi.\n\nLa stratégie gagnante ? Transparence sur les essais, accès facilité aux traitements, dialogue direct avec les assos de patients. Pas du marketing paillettes, du concret qui améliore l'accès aux soins.\n\nEt nous, pharmaciens français, on récupère les bénéfices : meilleure information patient, programmes d'accompagnement plus solides, parfois même des outils d'aide à l'observance qui marchent vraiment.\n\nCa contraste avec d'autres labos qui dégringolent au classement pour manque d'écoute ou promesses non tenues. Les patients britanniques votent avec leurs pieds, et ça se ressent sur les parts de marché.\n\nDemain au comptoir ? Cette bataille de réputation se traduit par des patients mieux informés, des traitements mieux acceptés, et pour nous, des dispensations plus fluides quand la confiance est au rendez-vous.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/marketing/abbvie-gsk-race-patient-reputation-leaderboard-uk",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/img_actu_2026_05_26_2_b.jpg",
+      "tags": [
+        "abbvie",
+        "gsk",
+        "reputation",
+        "patients",
+        "uk"
       ]
     },
     {
@@ -81,6 +164,27 @@
       ]
     },
     {
+      "id": "actu_2026_05_26_1_b",
+      "date": "2026-05-26",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "Miansérine : nouvelles torsades de pointe dans le RCP",
+      "resume": "L'ANSM vient de modifier le RCP de la miansérine après réévaluation. Cet antidépresseur peut désormais officiellement provoquer des torsades de pointe par allongement du QT. Un risque à surveiller de près au comptoir.",
+      "full_text": "La miansérine rejoint officiellement la liste des médicaments à risque de torsades de pointe. L'ANSM vient de mettre à jour le RCP après réévaluation complète du dossier.\n\nConcrètement ? Cet antidépresseur peut allonger l'intervalle QT et déclencher des arythmies ventriculaires potentiellement létales. Un effet indésirable qui passe maintenant du statut \"suspecté\" à \"confirmé\" dans la documentation officielle.\n\nAu comptoir, ça change quoi ? D'abord, on surveille les interactions. Miansérine + autres QT-long = combo à éviter absolument. Ensuite, on brieffe le patient sur les signes d'alerte : palpitations, vertiges, malaises.\n\nLes populations à risque restent les mêmes : cardiaques, personnes âgées, déséquilibres électrolytiques. Mais maintenant, on a la paperasse officielle qui confirme nos craintes.\n\nEt devinez quoi ? Cette mise à jour du RCP va sûrement générer des questions anxieuses de patients qui googlelisent. Prépare-toi à expliquer que oui, c'est un risque réel, mais non, il ne faut pas arrêter brutalement sans avis médical.\n\nDemain matin, tu vérifies tes stocks de miansérine et tu notes mentalement : surveillance renforcée, interactions à checker systématiquement, et patient education obligatoire à chaque délivrance.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/therapeutique/vigilances/la-mianserine-peut-elle-etre-a-lorigine-de-torsades-de-pointe",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_05_26_1_b.jpg",
+      "tags": [
+        "mianserine",
+        "torsades",
+        "ansm",
+        "rcp",
+        "antidepresseur"
+      ]
+    },
+    {
       "id": "actu_2026_05_26_1",
       "date": "2026-05-26",
       "type": "actu",
@@ -98,6 +202,27 @@
         "reglementation",
         "digital",
         "otc"
+      ]
+    },
+    {
+      "id": "lsv_2026_05_26_b",
+      "date": "2026-05-26",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? La première échographie a été testée sur des steaks",
+      "resume": "En 1957, un obstétricien écossais a détourné un détecteur de failles industriel pour voir à travers le ventre des femmes enceintes. Ses premiers tests ? Sur de la viande de boucherie.",
+      "full_text": "Ian Donald était obstétricien à Glasgow en 1957 quand il a eu une idée complètement folle. Il venait de voir une démonstration d'un détecteur de failles industriel chez Kelvin & Hughes, une entreprise qui fabriquait des sonars pour détecter les défauts dans les métaux.\n\nEn rentrant chez lui, Donald s'est dit : \"Et si ça marchait sur les humains ?\" Premier problème : impossible de tester directement sur des patientes. Solution de génie ? Direction la boucherie du coin pour acheter des steaks et des côtes de bœuf.\n\nPendant des semaines, Donald et son équipe ont scanné de la viande dans tous les sens. Ils testaient différentes fréquences, différents angles, pour voir ce que l'appareil pouvait révéler des structures internes. Les voisins devaient se demander pourquoi l'hôpital sentait le barbecue.\n\nLe premier \"vrai\" test sur une patiente a eu lieu quelques mois plus tard. Une femme avec une tumeur abdominale suspecte. Donald a posé sa sonde sur son ventre et... miracle ! Il voyait les contours de la masse, sa taille, sa position. Révolution.\n\nEn 1958, il publie ses résultats dans The Lancet. Ses collègues sont sceptiques : \"Tu veux examiner nos patientes avec un truc à détecter les fissures dans l'acier ?\" Donald s'en fiche, il continue. Premier cliché d'un fœtus en 1958, première échographie obstétricale de routine en 1960.\n\nAujourd'hui, 60 ans après ces expériences sur steaks, l'échographie est devenue l'examen le plus prescrit au monde. Et dire que tout a commencé dans une boucherie écossaise !",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_05_26_b.jpg",
+      "tags": [
+        "histoire",
+        "diagnostic",
+        "obstetrique",
+        "innovation",
+        "decouverte"
       ]
     },
     {
@@ -4997,6 +5122,6 @@
       ]
     }
   ],
-  "count": 242,
-  "updated_at": "2026-05-26T00:18:11.327128+02:00"
+  "count": 248,
+  "updated_at": "2026-05-26T01:09:28.484901+02:00"
 }

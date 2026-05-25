@@ -1,36 +1,22 @@
 {
-  "generated_at": "2026-05-26T00:18:08.379727+02:00",
+  "generated_at": "2026-05-26T01:09:25.722419+02:00",
   "run_date": "2026-05-26",
   "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
   "articles_to_review": [
     {
       "id": "",
       "categorie": "business_officine",
-      "titre": "Canicule : boom des ventes officine, ta marge s'envole sur l'hydratation",
-      "resume": "Avec 30°C à Paris (+13° vs normales), les vagues de chaleur dopent tes ventes de solutés, protections solaires et conseils. L'occasion de booster ta marge.",
+      "titre": "Canicule : ton officine face à un boom business de +30% sur les produits d'été",
+      "resume": "Paris bat un record thermique depuis 1944 avec 13°C d'écart aux normales. Les pharmaciens doivent anticiper la ruée sur l'hydratation et la protection solaire.",
       "source": "Pharm'Actus",
       "source_url": "",
       "confidence_score": 0.7,
       "warnings": [
-        "Chiffres de marge estimés selon moyennes sectorielles",
-        "Données GERS non vérifiées directement",
-        "Rémunération entretiens pharma à confirmer selon avenant en vigueur",
-        "FACT-CHECK: «Les entretiens pharmaceutiques liés aux pathologies chroniques (diabète, hypertension) sont rémunérés 30€ par l'Assurance Maladie» → Montant incorrect. Les entretiens pharmaceutiques sont rémunérés selon un barème différent (généralement 15€ pour un bilan de médication, 20€ pour certains entretiens spécifiques selon l'avenant 21 à la convention pharmaceutique)",
-        "FACT-CHECK: «Sollicite tes patients chroniques (diabète, cardio) pour des entretiens rémunérés 30€» → Double problème : montant erroné + les entretiens pharmaceutiques ne peuvent être sollicités de manière commerciale, ils répondent à un cadre réglementaire strict avec des critères d'éligibilité précis définis par la convention",
-        "FACT-CHECK: «La canicule justifie un suivi renforcé» dans le contexte des entretiens pharmaceutiques → Les entretiens pharmaceutiques suivent des indications réglementaires précises et ne peuvent être déclenchés arbitrairement par des conditions météorologiques"
+        "Chiffres de progression des ventes estimés sur la base d'observations sectorielles, pas de données GERS officielles citées",
+        "Marges produits variables selon négociations grossistes",
+        "CA additionnel dépendant de la zone géographique et clientèle"
       ],
       "flag_reason": "business_officine"
-    },
-    {
-      "id": "",
-      "categorie": "lsv",
-      "titre": "Le saviez-vous ? Le premier traitement antidépresseur était un médicament contre la tuberculose",
-      "resume": "En 1952, des médecins remarquent que leurs patients tuberculeux sous iproniazide dansent dans les couloirs. Cette découverte accidentelle va révolutionner la psychiatrie et donner naissance aux premiers antidépresseurs.",
-      "source": "Pharm'Alpha",
-      "source_url": "",
-      "confidence_score": null,
-      "warnings": [],
-      "flag_reason": "keyword_match"
     }
   ]
 }
