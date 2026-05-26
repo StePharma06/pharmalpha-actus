@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-05-26T07:11:07.679870+02:00",
+  "generated_at": "2026-05-26T10:40:30.795562+02:00",
   "run_date": "2026-05-26",
   "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
   "articles_to_review": [
     {
       "id": "",
-      "categorie": "pharma_france",
-      "titre": "E-commerce pharma : la taxe colis va taper fort dès mars 2026",
-      "resume": "2 euros par petit colis, nouvelles exigences environnementales, encadrement du numérique : 2026 marque un tournant pour l'e-commerce. La Fevad tire déjà la sonnette d'alarme sur ce durcissement réglementaire qui va chambouler les modèles économiques.",
-      "source": "Le Moniteur des Pharmacies",
-      "source_url": "https://www.lemoniteurdespharmacies.fr/business/retail/officine/e-commerce-2026-une-annee-de-bascule-reglementaire",
+      "categorie": "bonne_nouvelle",
+      "titre": "Dépistage cancer du poumon : 20 000 volontaires recherchés",
+      "resume": "Un programme pilote lance le dépistage précoce du cancer du poumon. Objectif : détecter avant les symptômes et sauver des vies. L'officine, maillon clé pour identifier les patients éligibles.",
+      "source": "France Info Santé",
+      "source_url": "https://www.franceinfo.fr/sante/cancer/reportage-si-on-peut-guerir-il-ne-faut-pas-attendre-qu-il-soit-trop-tard-un-programme-pilote-de-depistage-du-cancer-du-poumon-recherche-20-000-volontaires_8027510.html#xtor=RSS-3-%5Bgeneral%5D",
       "confidence_score": null,
       "warnings": [],
       "flag_reason": "keyword_match"
@@ -17,15 +17,19 @@
     {
       "id": "",
       "categorie": "business_officine",
-      "titre": "Canicule : tes ventes OTC vont flamber de 15-25% cet été",
-      "resume": "Les épisodes caniculaires dopent systématiquement les ventes d'OTC thermorégulateurs et d'hydratation. Prépare ton stock et tes conseils.",
+      "titre": "SantExpo 2026 : LEEM mise sur les essais cliniques français, 1,4M€ l'enjeu",
+      "resume": "Le LEEM a axé sa présence à SantExpo sur l'attractivité de la recherche clinique française. Un secteur qui pèse 1,4 milliard d'euros et où les pharmaciens peuvent jouer un rôle clé.",
       "source": "Pharm'Actus",
       "source_url": "",
-      "confidence_score": 0.8,
+      "confidence_score": 0.6,
       "warnings": [
-        "Chiffres de ventes OTC estimés sur base historique 2023",
-        "Marges moyennes approximatives selon segment",
-        "Données INSEE îlots chaleur à vérifier pour année courante"
+        "Chiffres sur les honoraires d'essais cliniques estimés sur base secteur 2025",
+        "Parts de marché européen à vérifier avec données EMA",
+        "Montants forfaits AM à confirmer avec textes 2026",
+        "FACT-CHECK: 'Les honoraires pour participation à un essai observationnel oscillent entre 150€ et 400€ par patient inclus selon la complexité du protocole.' → Aucun texte conventionnel ne prévoit d'honoraires forfaitaires pour participation aux essais observationnels. Les modalités de rémunération relèvent du droit privé (contrats avec promoteurs/CRO), pas de la convention pharmaceutique.",
+        "FACT-CHECK: 'L'Assurance Maladie encourage cette dynamique via des forfaits spécifiques : 75€ par trimestre pour le suivi pharmaceutique renforcé des patients en essai, dispositif étendu en 2026.' → Ce forfait n'existe pas dans la convention pharmaceutique actuelle ni dans les avenants publiés. Le bilan de médication (60€) et l'entretien pharmaceutique existent mais ne sont pas spécifiquement liés aux essais cliniques.",
+        "FACT-CHECK: 'Avec 3 200 essais cliniques autorisés en France en 2025 (+8% vs 2024), le potentiel business pour les officines partenaires représente 12 à 35 millions d'euros de revenus supplémentaires.' → Calcul basé sur des honoraires non conventionnels hypothétiques. La participation aux essais cliniques n'est pas encadrée par la convention pharmaceutique en termes de rémunération.",
+        "FACT-CHECK: 'Forme ton équipe aux Bonnes Pratiques Cliniques (certification obligatoire, 450€). Éligible au crédit d'impôt formation.' → La certification BPC n'est pas obligatoire pour tous les pharmaciens d'officine, seulement pour ceux participant effectivement aux essais cliniques en tant qu'investigateurs. L'éligibilité au crédit d'impôt formation doit être vérifiée selon les conditions fiscales en vigueur."
       ],
       "flag_reason": "business_officine"
     }

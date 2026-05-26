@@ -1,14 +1,13 @@
 {
-  "titre": "Le saviez-vous ? La première machine à dialyse était faite de saucisses et de boîtes de conserve",
-  "resume": "En 1943, un médecin néerlandais invente la première machine à dialyse avec des boyaux de saucisses, du cellophane et des boîtes de bière. Un bricolage de fortune qui sauvera des millions de vies.",
-  "full_text": "Picture ça : Pays-Bas, 1943, pleine Seconde Guerre mondiale. Willem Kolff, jeune médecin de 32 ans, voit ses patients mourir d'insuffisance rénale sans rien pouvoir faire. Alors il décide de construire une machine pour nettoyer leur sang.\n\nAvec quoi ? Des boyaux de saucisses ! Il récupère des mètres de boyaux naturels, les bourre de cellophane (nouveau matériau à l'époque), et les enroule autour d'un tambour fait de lattes de bois. Le tout tourne dans une cuve remplie de liquide, actionnée par un moteur de machine à laver.\n\nLe truc dingue ? Ses 15 premiers patients meurent tous. Kolff persévère, améliore sa machine artisanale. En 1945, Sofia Schafstadt, 67 ans, devient la première patiente sauvée par dialyse. Elle vivra encore 7 ans.\n\nMais attention, le traitement durait 11 heures ! Et fallait être costaud : pas d'anesthésie, juste deux gros tubes plantés dans les artères. La machine pesait 100 kilos et faisait un boucan d'enfer.\n\nAprès la guerre, Kolff offre GRATUITEMENT ses plans à tous les médecins du monde. « Si ça peut sauver des vies, prenez ! » Un geste qui démocratisera la dialyse partout.\n\nAujourd'hui, 3 millions de personnes survivent grâce à la dialyse dans le monde. Et quand tu vois nos machines ultramodernes à la pharmacie, dis-toi que tout a commencé avec des saucisses et de la débrouille !",
-  "image_keywords": "medical machine vintage",
+  "titre": "Le saviez-vous ? Le premier antiseptique était un vin qu'on buvait avant d'opérer",
+  "resume": "En 1867, Joseph Lister révolutionne la chirurgie avec l'acide phénique. Mais avant lui, les chirurgiens se contentaient de boire du vin... et d'en verser sur les plaies !",
+  "full_text": "Imagine la scène : salle d'opération en 1860, le chirurgien arrive avec une bouteille de bordeaux. Il en boit un coup pour se donner du courage, et verse le reste sur la plaie du patient. \"Antisepsie\" à l'ancienne !\n\nAvant Lister, on pensait que l'alcool fort purifiait tout. Eau-de-vie, vin rouge corsé, même du rhum : tout y passait. Les chirurgiens en arrosaient généreusement les instruments, les mains, et surtout les blessures. Le patient hurlait, mais au moins \"c'était désinfecté\".\n\nTout bascule quand Joseph Lister, chirurgien écossais, découvre les travaux de Pasteur sur les microbes. En 1867, il teste l'acide phénique (extrait du goudron de houille) sur un gamin de 11 ans avec une fracture ouverte. Miracle : pas d'infection ! La plaie cicatrise proprement.\n\nMais ses collègues se moquent : \"Lister et son acide puant !\" L'odeur était effectivement infecte, et ça brûlait la peau des chirurgiens. Certains préféraient encore leur petit verre de cognac d'avant-opération.\n\nIl faudra 20 ans pour que l'antisepsie de Lister s'impose. Résultat : la mortalité post-opératoire chute de 50% à 15%. Fini le temps où on amputait par principe \"pour éviter la gangrène\".\n\nAujourd'hui, quand tu vends une solution antiseptique à base de chlorhexidine ou d'alcool modifié, pense à ce bon vieux Joseph qui a remplacé le pinard par la chimie !",
+  "image_keywords": "antiseptic surgery",
   "tags": [
     "histoire",
-    "dialyse",
-    "invention",
-    "guerre",
-    "bricolage"
+    "chirurgie",
+    "antisepsie",
+    "lister"
   ],
   "date": "2026-05-26",
   "categorie": "lsv",
