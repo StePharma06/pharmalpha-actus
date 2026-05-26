@@ -1,20 +1,44 @@
 {
-  "generated_at": "2026-05-26T01:09:25.722419+02:00",
+  "generated_at": "2026-05-26T04:03:32.960512+02:00",
   "run_date": "2026-05-26",
   "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
   "articles_to_review": [
     {
       "id": "",
+      "categorie": "pharma_monde",
+      "titre": "AbbVie supprime 85 postes dans l'esthétique : Allergan fait du ménage",
+      "resume": "Le géant pharmaceutique liquide 85 emplois en Californie cet été, tous liés à sa division Allergan Aesthetics. Les restructurations post-acquisition continuent 7 ans après le rachat.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/pharma/abbvie-plots-85-summer-layoffs-tied-allergan-aesthetics-workforce-california",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "SOPK devient SMOP : enfin un nom qui n'exclut personne",
+      "resume": "Le syndrome des ovaires polykystiques change de nom pour Syndrome métabolique des ovaires polykystiques. Une évolution qui reconnaît la complexité de cette pathologie qui touche 1 femme sur 10.",
+      "source": "France Info Santé",
+      "source_url": "https://www.franceinfo.fr/sante/pourquoi-le-syndrome-des-ovaires-polykystiques-devient-le-smop_8027066.html",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
       "categorie": "business_officine",
-      "titre": "Canicule : ton officine face à un boom business de +30% sur les produits d'été",
-      "resume": "Paris bat un record thermique depuis 1944 avec 13°C d'écart aux normales. Les pharmaciens doivent anticiper la ruée sur l'hydratation et la protection solaire.",
+      "titre": "Canicule : ton officine face à 30% de demandes en plus de produits d'hydratation",
+      "resume": "Record de chaleur depuis 1944 : écart de 13°C avec les normales. Opportunité business majeure sur l'hydratation et la protection solaire.",
       "source": "Pharm'Actus",
       "source_url": "",
       "confidence_score": 0.7,
       "warnings": [
-        "Chiffres de progression des ventes estimés sur la base d'observations sectorielles, pas de données GERS officielles citées",
-        "Marges produits variables selon négociations grossistes",
-        "CA additionnel dépendant de la zone géographique et clientèle"
+        "Marges et prix SRO à vérifier selon fournisseurs",
+        "Tarif entretien pharmaceutique ROSP 2026 à confirmer",
+        "Statistiques coups de chaleur 75+ basées sur données antérieures",
+        "FACT-CHECK: 'une opportunité pour valoriser tes entretiens pharmaceutiques à 30€ HT via la ROSP' → Le montant de 30€ HT pour les entretiens pharmaceutiques est incorrect. Les entretiens pharmaceutiques sont rémunérés 30€ TTC (et non HT) selon l'avenant n°12 à la convention pharmaceutique. De plus, ce n'est pas via la ROSP mais via une facturation directe à l'Assurance Maladie.",
+        "FACT-CHECK: 'proposer un entretien pharmaceutique rémunéré 30€' → Formulation ambiguë qui laisse penser que le pharmacien peut proposer librement des entretiens rémunérés. Les entretiens pharmaceutiques sont strictement encadrés : ils concernent des pathologies spécifiques (anticoagulants, asthme, BPCO sous corticoïdes inhalés) et nécessitent une prescription médicale ou des conditions d'éligibilité précises selon l'arrêté du 24 juin 2014."
       ],
       "flag_reason": "business_officine"
     }
