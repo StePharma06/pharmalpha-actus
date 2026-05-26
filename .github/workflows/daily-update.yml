@@ -3,9 +3,6 @@ name: Daily Actus Update
 on:
   repository_dispatch:
     types: [daily-update]  # Declenche via API externe (cron-job.org) → heure exacte garantie
-  schedule:
-    # Filet de securite uniquement (retards GitHub free tier ~2-6h)
-    - cron: '0 1 * * *'
   workflow_dispatch:  # Lancement manuel possible
 
 permissions:
