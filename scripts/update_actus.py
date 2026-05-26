@@ -970,8 +970,51 @@ def get_existing_lsv_titles():
     return re.findall(r'titre:\s*"(Le saviez-vous[^"]*)"', html, re.IGNORECASE)
 
 
+def _parse_entries(block: str) -> list:
+    """Extract individual JS object literals from an ARTICLES array block.
+
+    Uses brace-depth tracking (string-aware) so nested braces inside string
+    values don't confuse the parser.
+    """
+    entries = []
+    depth = 0
+    entry_start = None
+    in_str = False
+    esc = False
+
+    for i, c in enumerate(block):
+        if esc:
+            esc = False
+            continue
+        if c == "\\":
+            esc = True
+            continue
+        if c == '"':
+            in_str = not in_str
+            continue
+        if in_str:
+            continue
+        if c == "{":
+            if depth == 0:
+                entry_start = i
+            depth += 1
+        elif c == "}":
+            depth -= 1
+            if depth == 0 and entry_start is not None:
+                entries.append(block[entry_start:i + 1])
+                entry_start = None
+
+    return entries
+
+
 def update_index_html(new_articles):
-    """Insert new articles into index.html ARTICLES array."""
+    """Insert new articles into index.html ARTICLES array.
+
+    Multi-run safety: all existing articles whose date matches today are
+    removed before the new batch is inserted.  A single pipeline run on
+    a given day therefore always REPLACES the day's content instead of
+    accumulating duplicate entries.
+    """
     html = INDEX_HTML.read_text(encoding="utf-8")
 
     match = re.search(r"const ARTICLES = \[([\s\S]*?)\];", html)
@@ -979,18 +1022,37 @@ def update_index_html(new_articles):
         print("  [ERROR] ARTICLES array introuvable dans index.html")
         return False
 
+    today = datetime.now(PARIS_TZ).strftime("%Y-%m-%d")
+
     existing_block = match.group(1)
+
+    # --- Purge today's articles (idempotent re-run) ---
+    all_existing_entries = _parse_entries(existing_block)
+    kept_entries = []
+    purged = 0
+    for entry in all_existing_entries:
+        m = re.search(r'date:\s*"([^"]+)"', entry)
+        if m and m.group(1) == today:
+            purged += 1
+        else:
+            kept_entries.append(entry)
+
+    if purged:
+        print(f"  [DEDUP] {purged} article(s) du {today} purges avant re-insertion")
+        # Rebuild existing_block without today's entries
+        existing_block = "\n" + ",\n".join(kept_entries) + "\n" if kept_entries else ""
+
+    # Recompute existing_ids / existing_urls from the purged block
     existing_ids = set(re.findall(r'id:\s*"([^"]+)"', existing_block))
     existing_urls = set(re.findall(r'source_url:\s*"([^"]+)"', existing_block))
 
-    today = datetime.now(PARIS_TZ).strftime("%Y-%m-%d")
     ASSETS_DIR.mkdir(exist_ok=True)
 
     new_js_entries = []
     actu_idx = 0
 
     for a in new_articles:
-        # Skip if same source URL already exists (avoid duplicates)
+        # Skip if same source URL already exists (avoid duplicates across days)
         src_url = a.get("source_url", "")
         if src_url and src_url in existing_urls:
             print(f"  [SKIP] Doublon source_url: {a.get('titre', '')[:50]}...")
@@ -1002,6 +1064,8 @@ def update_index_html(new_articles):
         else:
             actu_idx += 1
             article_id = f"actu_{today.replace('-', '_')}_{actu_idx}"
+        # No suffix loop needed: today's articles were purged above.
+        # Keep the loop as a safety net only (e.g. duplicate LSV from pending).
         while article_id in existing_ids:
             article_id += "_b"
 
