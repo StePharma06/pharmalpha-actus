@@ -82,6 +82,60 @@ a { color: inherit; text-decoration: none; }
 }
 .hero h1 { font-size: 32px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 6px; }
 .hero p { color: var(--text-muted); font-size: 14px; }
+.hero-nl {
+  margin-top: 16px;
+  max-width: 520px;
+  background: var(--orange-light);
+  border: 1px solid #fed7aa;
+  border-left: 3px solid var(--orange);
+  border-radius: var(--radius-sm, 8px);
+  padding: 14px 18px;
+}
+.hero-nl-label {
+  font-size: 13px;
+  color: var(--text-dim);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.hero-nl-label svg { width: 16px; height: 16px; flex-shrink: 0; }
+.hero-nl-row { display: flex; gap: 8px; }
+.hero-nl input {
+  flex: 1;
+  padding: 10px 16px;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+  background: var(--bg-card);
+}
+.hero-nl input:focus { border-color: var(--orange); }
+.hero-nl input::placeholder { color: var(--text-dim); }
+.hero-nl button {
+  padding: 10px 20px;
+  border-radius: 100px;
+  border: none;
+  background: var(--orange);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+.hero-nl button:hover { background: var(--orange-hover); }
+.hero-nl button:disabled { opacity: 0.6; cursor: not-allowed; }
+.hero-nl-msg { font-size: 13px; margin-top: 6px; display: none; }
+.hero-nl-msg.success { color: var(--green); display: block; }
+.hero-nl-msg.error { color: #dc2626; display: block; }
+@media (max-width: 480px) {
+  .hero-nl-row { flex-direction: column; }
+  .hero-nl button { width: 100%; }
+}
 
 /* SEARCH + FILTERS */
 .controls {
@@ -465,6 +519,19 @@ a { color: inherit; text-decoration: none; }
 <section class="hero">
   <h1>Archives</h1>
   <p id="hero-subtitle">Toutes les actus publi&eacute;es sur Pharm'Actus. Recherche, filtres et tags th&eacute;matiques.</p>
+  <div class="hero-nl" id="hero-nl">
+    <p class="hero-nl-label">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,7 12,13 2,7"/></svg>
+      Re&ccedil;ois les actus chaque jour par mail :
+    </p>
+    <form onsubmit="submitHeroNL(event)">
+      <div class="hero-nl-row">
+        <input type="email" id="hero-nl-email" placeholder="ton@email.com" required>
+        <button type="submit" id="hero-nl-btn">S'abonner</button>
+      </div>
+    </form>
+    <div class="hero-nl-msg" id="hero-nl-msg"></div>
+  </div>
 </section>
 
 <section class="controls">
@@ -846,6 +913,49 @@ document.getElementById('reset-filters').addEventListener('click', () => {
 });
 
 loadArticles();
+
+// === NEWSLETTER ABONNEMENT ===
+const BREVO_FORM_URL = 'https://d62a61bf.sibforms.com/serve/MUIFABdrcLOgXvWIMTQmdKonNYSBSpG_-4LzQgb5KXKLX0PpNal4KBNqBfYfg-A45xyqA87TyS4cM4rArjkuU6IY0l';
+const NL_KEY = 'pharmalpha_nl';
+
+if (localStorage.getItem(NL_KEY) === 'subscribed') {
+  const heroNl = document.getElementById('hero-nl');
+  if (heroNl) heroNl.style.display = 'none';
+}
+
+async function submitToBrevo(email, btn, msg) {
+  btn.disabled = true;
+  btn.textContent = 'Envoi...';
+  msg.className = msg.className.replace(/ ?(success|error)/g, '');
+  try {
+    const formData = new FormData();
+    formData.append('EMAIL', email);
+    formData.append('email_address_check', '');
+    formData.append('locale', 'fr');
+    await fetch(BREVO_FORM_URL, { method: 'POST', body: formData, mode: 'no-cors' });
+    track('generate_lead', { method: 'newsletter_brevo', value: 1, currency: 'EUR' });
+    msg.textContent = 'Merci ! Tu recevras les actus chaque matin.';
+    msg.className = msg.className.replace(/ ?(success|error)/g, '') + ' success';
+    localStorage.setItem(NL_KEY, 'subscribed');
+    document.getElementById('hero-nl').style.display = 'none';
+  } catch (err) {
+    msg.textContent = 'Erreur. Reessaie dans quelques instants.';
+    msg.className = msg.className.replace(/ ?(success|error)/g, '') + ' error';
+    btn.disabled = false;
+    btn.textContent = "S'abonner";
+  }
+}
+
+async function submitHeroNL(e) {
+  e.preventDefault();
+  const email = document.getElementById('hero-nl-email').value.trim();
+  if (!email) return;
+  await submitToBrevo(
+    email,
+    document.getElementById('hero-nl-btn'),
+    document.getElementById('hero-nl-msg')
+  );
+}
 </script>
 </body>
 </html>
