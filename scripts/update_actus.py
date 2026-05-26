@@ -1298,6 +1298,10 @@ def generate_articles_json(index_html):
         except Exception as e:
             print(f"  [WARN] Lecture articles.json existant : {e}")
 
+    # Purge today's articles from existing archive (idempotency: multi-run = no accumulation)
+    today_str = datetime.now(PARIS_TZ).strftime("%Y-%m-%d")
+    existing_articles = [a for a in existing_articles if a.get("date") != today_str]
+
     # Dedupe by id : les articles courants (fraîchement générés) priment sur l'historique
     current_ids = {a["id"] for a in current_articles}
     merged = list(current_articles)
