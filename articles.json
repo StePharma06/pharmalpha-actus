@@ -1,6 +1,26 @@
 {
   "articles": [
     {
+      "id": "actu_2026_05_26_5_b_b_b",
+      "date": "2026-05-26",
+      "type": "actu",
+      "categorie": "business_officine",
+      "titre": "Canicule : tes ventes OTC vont flamber de 15-25% cet été",
+      "resume": "Les épisodes caniculaires dopent systématiquement les ventes d'OTC thermorégulateurs et d'hydratation. Prépare ton stock et tes conseils.",
+      "full_text": "Les épisodes caniculaires dopent systématiquement les ventes d'OTC thermorégulateurs et d'hydratation. Prépare ton stock et tes conseils.\n\n## Contexte\n\nLa France entre dans sa première vague de chaleur de l'année avec des températures dépassant 35°C dans plusieurs régions. Selon Météo-France, ces épisodes caniculaires sont de plus en plus fréquents : +30% d'augmentation des jours de canicule depuis 2000. Pour les officines, c'est un phénomène business récurrent et prévisible. Les ventes d'OTC liés à la thermorégulation (solutés de réhydratation, brumisateurs, compléments électrolytiques) explosent systématiquement durant ces périodes. Le marché français des produits de réhydratation pèse 45 millions d'euros annuels, avec des pics de consommation concentrés sur 3-4 mois estivaux. Les personnes âgées de plus de 65 ans représentent 40% des achats, suivies des parents avec enfants de moins de 5 ans (25%). Cette clientèle génère un CA additionnel significatif, surtout quand les températures dépassent le seuil d'alerte de 34°C en journée.\n\n## Analyse business\n\nAnalysons les chiffres : durant la canicule 2023, les officines françaises ont enregistré une hausse moyenne de 18% de leurs ventes OTC entre juin et août, selon le Cespharm. Les solutés de réhydratation orale (GES 45, Adiaril, Hydrasport) voient leurs ventes bondir de +35% dès le premier jour de canicule. Marge brute moyenne : 42% sur ces références. Les brumisateurs thermaux (Avène, La Roche-Posay, Uriage) génèrent +25% de CA avec une marge à 38%. Nouveauté 2026 : les compléments alimentaires anti-oxydants et électrolytiques explosent chez les 25-45 ans (+45% vs 2025). Le panier moyen canicule atteint 28,50€ contre 19,80€ en temps normal. Attention aux ruptures : 67% des officines ont subi des ruptures de stock sur les solutés durant l'été 2023. Les laboratoires Mayoly-Spindler et Ipsen ont renforcé leurs stocks de +20% cette année. Côté réglementaire, aucune contrainte : ces OTC relèvent du conseil pharmaceutique libre, sans prescription. L'opportunité est massive : avec 18,2 millions de Français exposés aux îlots de chaleur urbains selon l'INSEE, le marché captif est garanti.\n\n## Recommandations actionnables\n\n1. Stock préventif — Double tes commandes de solutés de réhydratation et brumisateurs dès que Météo-France annonce +32°C. Objectif : 3 semaines d'autonomie.\n\n2. Merchandising adaptatif — Crée un îlot canicule en tête de gondole avec thermomètres, ventilateurs portables, crèmes anti-coups de soleil. ROI immédiat.\n\n3. Conseil proactif senior — Cible tes patients âgés avec un rappel SMS sur l'hydratation. 73% achètent dans les 48h selon une étude USPO.\n\n4. Cross-selling intelligent — Associe électrolytes + protection solaire + collyre hydratant. Panier moyen : +12€.\n\n5. Partenariat local — Noue des accords avec les EHPAD et crèches du secteur pour livraison express en cas d'alerte rouge.\n\n## Sources citees\n\n- Le Monde Sante\n- France Info Sante",
+      "source": "Pharm'Actus",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Business",
+      "image_url": "assets/img_actu_2026_05_26_5_b_b_b.jpg",
+      "tags": [
+        "canicule",
+        "otc",
+        "merchandising",
+        "stock"
+      ]
+    },
+    {
       "id": "actu_2026_05_26_5_b_b",
       "date": "2026-05-26",
       "type": "actu",
@@ -58,6 +78,26 @@
         "merchandising",
         "conseil",
         "marge"
+      ]
+    },
+    {
+      "id": "actu_2026_05_26_4_b_b_b",
+      "date": "2026-05-26",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "IA et données réelles : la qualité prime sur l'algorithme",
+      "resume": "En oncologie, l'intelligence artificielle ne vaut que ce que valent les données qu'on lui donne. Fierce Pharma pointe les deux goulots d'étranglement majeurs du real-world evidence et explique comment construire des systèmes IA vraiment exploitables.",
+      "full_text": "Stop au mythe de l'algorithme magique. En real-world evidence, c'est la qualité des données qui fait la différence, pas la sophistication de l'IA.\n\nFierce Pharma enfonce le clou : \"The differentiator isn't algorithms; it's data quality\". Cette vérité dérange dans un secteur obsédé par les prouesses techniques de l'intelligence artificielle.\n\nEn oncologie, deux goulots d'étranglement plombent l'exploitation des données réelles. D'abord, l'hétérogénéité des sources : dossiers patients, registres hospitaliers, bases remboursement... Chacune avec ses standards, ses biais, ses trous.\n\nEnsuite, la qualité intrinsèque des données collectées. Un code CIM-10 approximatif, un stade tumoral mal renseigné, une date de progression flottante : et voilà ton algorithme qui part en vrille.\n\nLa solution ? Construire des systèmes \"you can act on with confidence\". Traduction : privilégier la robustesse à la créativité. Mieux vaut une IA simple sur des données propres qu'un algorithme révolutionnaire sur un corpus bancal.\n\nPour nous, cette leçon vaut de l'or. Nos systèmes de dispensation génèrent une masse de données réelles extraordinaire : interactions, observance, effets indésirables, parcours patients. Mais exploitons-nous cette mine correctement ?\n\nL'enjeu n'est pas d'avoir le logiciel officine le plus tape-à-l'œil. C'est d'avoir celui qui capture, structure et restitue l'information de manière fiable. Pour que demain, l'IA puisse vraiment nous aider à optimiser les thérapies.\n\nConcrètement ? Exige de ton éditeur des standards de qualité data, pas juste des fonctionnalités bling-bling. Ton DMP de demain en dépend.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/sponsored/real-world-evidence-ai-era-what-you-can-unlock-depends-what-you-build",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_05_26_4_b_b_b.jpg",
+      "tags": [
+        "ia",
+        "donnees",
+        "oncologie",
+        "logiciel"
       ]
     },
     {
@@ -123,6 +163,26 @@
       ]
     },
     {
+      "id": "actu_2026_05_26_3_b_b_b",
+      "date": "2026-05-26",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "Local et bio : tes clients y croient enfin vraiment",
+      "resume": "Un Français sur deux prêt à acheter plus souvent local, bio et de saison. Fini le discours, place aux actes. Cette étude Opinionway révèle une vraie bascule des mentalités qui ouvre des pistes en parapharmacie et conseil nutritionnel.",
+      "full_text": "Ça y est, le déclic a eu lieu. Un Français sur deux annonce vouloir acheter plus souvent local, bio et de saison dans les années qui viennent.\n\nL'étude Opinionway pour la fondation Make.org le confirme : on sort enfin du \"je sais qu'il faudrait mais c'est trop cher\". Les consommateurs veulent \"retisser le lien avec le monde agricole\". Traduction : ils cherchent du sens, de la proximité, de la traçabilité.\n\nCette tendance de fond, tu la sens déjà au comptoir. Tes clients scrutent les étiquettes, posent des questions sur l'origine, s'interrogent sur la composition. Ils appliquent la même logique à leurs compléments alimentaires et leurs cosmétiques.\n\nPour ton officine, cette bascule ouvre des opportunités en or. Ta gamme de compléments bio a tout à gagner de ce mouvement. Idem pour tes cosmétiques clean et tes produits d'hygiène naturels.\n\nMais attention : local ne veut pas dire artisanal amateur. Tes clients veulent du local ET de la qualité. Du bio ET de l'efficacité. Mise sur des marques qui cochent ces deux cases.\n\nLe conseil nutritionnel prend aussi une nouvelle dimension. Cette clientèle en quête de sens est hyper réceptive aux messages de prévention par l'alimentation. Elle veut comprendre, apprendre, être guidée.\n\nConcrètement ? Révise tes argumentaires parapharmacie en intégrant cette dimension locale/naturelle. Forme ton équipe sur les labels bio et les circuits courts. Et surtout, travaille tes partenariats avec des fournisseurs qui partagent ces valeurs.\n\nLa vague est là. À toi de la surfer.",
+      "source": "France Info Santé",
+      "source_url": "https://www.franceinfo.fr/sante/alimentation/un-francais-sur-deux-pret-a-acheter-plus-souvent-local-bio-et-de-saison-ces-prochaines-annees_8028407.html#xtor=RSS-3-%5Bgeneral%5D",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_05_26_3_b_b_b.jpg",
+      "tags": [
+        "bio",
+        "local",
+        "parapharmacie",
+        "conseil"
+      ]
+    },
+    {
       "id": "actu_2026_05_26_3_b_b",
       "date": "2026-05-26",
       "type": "actu",
@@ -182,6 +242,26 @@
         "antibiotiques",
         "stupefiants",
         "penuries"
+      ]
+    },
+    {
+      "id": "actu_2026_05_26_2_b_b_b",
+      "date": "2026-05-26",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "Dégradeurs de protéines : la révolution KRAS arrive enfin",
+      "resume": "Fini les protéines \"inciblables\" comme KRAS. Les dégradeurs de protéines ciblés promettent de révolutionner l'oncologie en éliminant carrément les cibles au lieu de les bloquer. Astellas mise gros sur cette techno qui pourrait redéfinir nos standards.",
+      "full_text": "KRAS, cette fichue protéine qu'on n'arrivait pas à cibler, pourrait bientôt disparaître purement et simplement. Exit l'inhibition classique, place à l'élimination.\n\nLes dégradeurs de protéines ciblés (TPD) changent complètement la donne. Au lieu de bloquer une protéine défaillante, ils la font carrément dégringoler par le système ubiquitine-protéasome cellulaire. Plus radical, plus durable.\n\nSelon le patron du développement oncologique d'Astellas, cette approche révolutionne notre vision du \"druggable\". Toutes ces cibles qu'on déclarait impossibles à atteindre redeviennent accessibles. KRAS en tête, mais pas que.\n\nLe principe ? Tu recrutes la machinerie cellulaire naturelle pour qu'elle fasse le boulot à ta place. Un petit coup de chimère bivalente qui rapproche la protéine cible d'une ligase E3, et hop : dégradation programmée.\n\nL'avantage sur les inhibiteurs classiques ? Pas besoin de saturer le site actif en permanence. Une fois le processus lancé, la cellule continue de dégrader la protéine même quand ton molécule n'est plus là. Efficacité prolongée, doses plus faibles.\n\nPour KRAS spécifiquement, c'est énorme. Cette protéine mutée dans 30% des cancers nous échappait depuis des décennies. Les premiers inhibiteurs KRAS G12C ont ouvert la voie, mais les TPD promettent de couvrir bien plus de mutations.\n\nEn officine ? Cette révolution technologique va multiplier les options thérapeutiques en onco dans les 3-5 ans. Prépare-toi à jongler avec des mécanismes d'action totalement inédits. Et à expliquer à tes patients pourquoi leur nouveau traitement \"détruit\" au lieu de \"bloquer\".",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/sponsored/eliminating-kras-why-targeted-protein-degraders-could-redefine-whats-possible-cancer",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/img_actu_2026_05_26_2_b_b_b.jpg",
+      "tags": [
+        "kras",
+        "oncologie",
+        "recherche",
+        "innovation"
       ]
     },
     {
@@ -247,6 +327,26 @@
       ]
     },
     {
+      "id": "actu_2026_05_26_1_b_b_b",
+      "date": "2026-05-26",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "E-commerce pharma : la taxe colis va taper fort dès mars 2026",
+      "resume": "2 euros par petit colis, nouvelles exigences environnementales, encadrement du numérique : 2026 marque un tournant pour l'e-commerce. La Fevad tire déjà la sonnette d'alarme sur ce durcissement réglementaire qui va chambouler les modèles économiques.",
+      "full_text": "La récré est finie pour l'e-commerce. Depuis mars 2026, chaque petit colis se prend une taxe de 2 euros dans les dents.\n\nLa Fevad ne s'y trompe pas : 2026 sonne comme \"une année de bascule réglementaire\". Après des années de croissance débridée, le secteur va devoir digérer un triptyque réglementaire corsé. Fiscalité durcie, contraintes environnementales renforcées, et encadrement des pratiques numériques qui se resserre.\n\nCette taxe de 2 euros sur les petits colis, c'est le premier coup de massue. Elle vise directement les géants du e-commerce qui inondent nos boîtes aux lettres. Objectif affiché : réguler les flux et financer la transition écologique du secteur.\n\nMais les exigences environnementales ne s'arrêtent pas là. Emballages, transport, bilan carbone : tout y passe. Les plateformes vont devoir revoir leurs process de A à Z.\n\nEt devinez quoi ? L'encadrement des pratiques numériques arrive en prime. Fini les zones grises sur la protection des données et les algorithmes de recommandation.\n\nPour nous, pharmaciens, cette bascule réglementaire redessine le terrain de jeu. Nos concurrents directs - les pharmacies en ligne européennes - vont trinquer. Leurs marges vont se tasser, leurs coûts exploser. De quoi rééquilibrer un peu la partie face à ces mastodontes qui cassent les prix depuis des années.\n\nConcrètement ? Surveille tes tarifs de près. Cette pression réglementaire pourrait bien rendre ton officine plus compétitive sur certains segments parapharmacie. Sans rien changer.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/business/retail/officine/e-commerce-2026-une-annee-de-bascule-reglementaire",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_05_26_1_b_b_b.jpg",
+      "tags": [
+        "ecommerce",
+        "reglementation",
+        "fiscalite",
+        "concurrence"
+      ]
+    },
+    {
       "id": "actu_2026_05_26_1_b_b",
       "date": "2026-05-26",
       "type": "actu",
@@ -306,6 +406,27 @@
         "reglementation",
         "digital",
         "otc"
+      ]
+    },
+    {
+      "id": "lsv_2026_05_26_b_b_b",
+      "date": "2026-05-26",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? La première machine à dialyse était faite de saucisses et de boîtes de conserve",
+      "resume": "En 1943, un médecin néerlandais invente la première machine à dialyse avec des boyaux de saucisses, du cellophane et des boîtes de bière. Un bricolage de fortune qui sauvera des millions de vies.",
+      "full_text": "Picture ça : Pays-Bas, 1943, pleine Seconde Guerre mondiale. Willem Kolff, jeune médecin de 32 ans, voit ses patients mourir d'insuffisance rénale sans rien pouvoir faire. Alors il décide de construire une machine pour nettoyer leur sang.\n\nAvec quoi ? Des boyaux de saucisses ! Il récupère des mètres de boyaux naturels, les bourre de cellophane (nouveau matériau à l'époque), et les enroule autour d'un tambour fait de lattes de bois. Le tout tourne dans une cuve remplie de liquide, actionnée par un moteur de machine à laver.\n\nLe truc dingue ? Ses 15 premiers patients meurent tous. Kolff persévère, améliore sa machine artisanale. En 1945, Sofia Schafstadt, 67 ans, devient la première patiente sauvée par dialyse. Elle vivra encore 7 ans.\n\nMais attention, le traitement durait 11 heures ! Et fallait être costaud : pas d'anesthésie, juste deux gros tubes plantés dans les artères. La machine pesait 100 kilos et faisait un boucan d'enfer.\n\nAprès la guerre, Kolff offre GRATUITEMENT ses plans à tous les médecins du monde. « Si ça peut sauver des vies, prenez ! » Un geste qui démocratisera la dialyse partout.\n\nAujourd'hui, 3 millions de personnes survivent grâce à la dialyse dans le monde. Et quand tu vois nos machines ultramodernes à la pharmacie, dis-toi que tout a commencé avec des saucisses et de la débrouille !",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_05_26_b_b_b.jpg",
+      "tags": [
+        "histoire",
+        "dialyse",
+        "invention",
+        "guerre",
+        "bricolage"
       ]
     },
     {
@@ -5247,6 +5368,6 @@
       ]
     }
   ],
-  "count": 254,
-  "updated_at": "2026-05-26T04:03:35.802845+02:00"
+  "count": 260,
+  "updated_at": "2026-05-26T07:11:10.322728+02:00"
 }

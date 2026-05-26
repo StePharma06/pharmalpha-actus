@@ -1,14 +1,14 @@
 {
-  "titre": "Le saviez-vous ? La première IRM a duré 5 heures pour une seule image",
-  "resume": "En 1977, il fallait 5 heures pour obtenir une seule image floue du corps humain. Aujourd'hui, on fait un scanner complet en 20 minutes. L'histoire rocambolesque de l'IRM, cette révolution née dans un garage.",
-  "full_text": "Imagine un peu : en 1977, Raymond Damadian installe sa première machine IRM dans un hangar de Brooklyn. Son cobaye ? Lui-même, coincé 5 heures dans un tube artisanal pour obtenir une image floue de son torse.\n\nLe truc dingue, c'est que Damadian n'était même pas radiologue ! Médecin interniste passionné de physique, il avait eu l'intuition que les tissus cancéreux réagiraient différemment aux champs magnétiques. Ses collègues le prenaient pour un fou.\n\nSa première machine pesait 5 tonnes et nécessitait un aimant si puissant qu'il aspirait les objets métalliques à 3 mètres. Les infirmières perdaient leurs épingles à cheveux, les médecins leurs stylos. Un jour, un chariot de nettoyage s'est écrasé contre l'appareil !\n\nL'ironie ? Damadian n'a jamais eu le Nobel pour son invention. Le prix est allé à Paul Lauterbur et Peter Mansfield en 2003, qui ont perfectionné la technique. Damadian était furieux et a même payé une page de pub dans le New York Times pour protester.\n\nAujourd'hui, on réalise une IRM corps entier en 20 minutes avec des images d'une précision hallucinante. Et dire qu'au comptoir, on envoie nos patients passer cet examen révolutionnaire comme si c'était normal !",
-  "image_keywords": "MRI scanner vintage",
+  "titre": "Le saviez-vous ? La première machine à dialyse était faite de saucisses et de boîtes de conserve",
+  "resume": "En 1943, un médecin néerlandais invente la première machine à dialyse avec des boyaux de saucisses, du cellophane et des boîtes de bière. Un bricolage de fortune qui sauvera des millions de vies.",
+  "full_text": "Picture ça : Pays-Bas, 1943, pleine Seconde Guerre mondiale. Willem Kolff, jeune médecin de 32 ans, voit ses patients mourir d'insuffisance rénale sans rien pouvoir faire. Alors il décide de construire une machine pour nettoyer leur sang.\n\nAvec quoi ? Des boyaux de saucisses ! Il récupère des mètres de boyaux naturels, les bourre de cellophane (nouveau matériau à l'époque), et les enroule autour d'un tambour fait de lattes de bois. Le tout tourne dans une cuve remplie de liquide, actionnée par un moteur de machine à laver.\n\nLe truc dingue ? Ses 15 premiers patients meurent tous. Kolff persévère, améliore sa machine artisanale. En 1945, Sofia Schafstadt, 67 ans, devient la première patiente sauvée par dialyse. Elle vivra encore 7 ans.\n\nMais attention, le traitement durait 11 heures ! Et fallait être costaud : pas d'anesthésie, juste deux gros tubes plantés dans les artères. La machine pesait 100 kilos et faisait un boucan d'enfer.\n\nAprès la guerre, Kolff offre GRATUITEMENT ses plans à tous les médecins du monde. « Si ça peut sauver des vies, prenez ! » Un geste qui démocratisera la dialyse partout.\n\nAujourd'hui, 3 millions de personnes survivent grâce à la dialyse dans le monde. Et quand tu vois nos machines ultramodernes à la pharmacie, dis-toi que tout a commencé avec des saucisses et de la débrouille !",
+  "image_keywords": "medical machine vintage",
   "tags": [
     "histoire",
-    "diagnostic",
-    "imagerie",
+    "dialyse",
     "invention",
-    "technologie"
+    "guerre",
+    "bricolage"
   ],
   "date": "2026-05-26",
   "categorie": "lsv",
