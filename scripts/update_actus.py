@@ -35,6 +35,211 @@ def md_to_html(text: str) -> str:
     return text
 
 
+# ── Marque tendance ───────────────────────────────────────────────────
+
+def load_trends_data():
+    """Charge output/trends_latest.json si disponible. Retourne None sinon."""
+    path = Path(__file__).parent.parent / "output" / "trends_latest.json"
+    if not path.exists():
+        return None
+    try:
+        with open(path, encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return None
+
+
+def _build_trends_site_block(data):
+    """Génère la <section class="marque-tendance"> pour injection dans index.html.
+
+    Affiche le top 10. Retourne une chaîne vide si data est None.
+    CSS inline uniquement pour ne pas polluer le site.
+    """
+    if not data:
+        return ""
+
+    top10 = data.get("top20", [])[:10]
+    if not top10:
+        return ""
+
+    # Calcul plage de dates de la semaine (lundi → dimanche)
+    week_label = data.get("week", "")
+    week_dates = ""
+    if week_label:
+        try:
+            # week_label = "2026-W22" — parser via strptime
+            from datetime import datetime as _dt
+            monday = _dt.strptime(week_label + "-1", "%G-W%V-%u")
+            sunday = monday + __import__("datetime").timedelta(days=6)
+            mois = ["", "jan.", "fév.", "mars", "avr.", "mai", "juin",
+                    "juil.", "août", "sept.", "oct.", "nov.", "déc."]
+            week_dates = (
+                f"{monday.day} {mois[monday.month]} "
+                f"— {sunday.day} {mois[sunday.month]} {sunday.year}"
+            )
+        except Exception:
+            week_dates = week_label
+
+    def _var_color(var_str):
+        """Retourne (text_color, bg_color) selon la variation."""
+        if var_str == "N/A":
+            return "#f97316", "#fff7ed"  # orange NEW
+        if var_str.startswith("+"):
+            try:
+                pct = int(var_str[1:].replace("%", "").replace("∞", "999"))
+            except ValueError:
+                pct = 0
+            if pct >= 30:
+                return "#15803d", "#dcfce7"   # vert fort
+            elif pct >= 10:
+                return "#16a34a", "#f0fdf4"   # vert clair
+            else:
+                return "#6b7280", "#f3f4f6"   # stable/gris
+        if var_str.startswith("-"):
+            return "#dc2626", "#fef2f2"       # rouge baisse
+        return "#6b7280", "#f3f4f6"
+
+    rows = ""
+    for item in top10:
+        var_s1 = item.get("var_s1", "N/A")
+        var_m1 = item.get("var_m1", "N/A")
+        is_new = var_s1 == "N/A"
+
+        s1_color, s1_bg = _var_color(var_s1)
+        m1_color, m1_bg = _var_color(var_m1)
+
+        badge_new = (
+            '<span style="display:inline-block;background:#f97316;color:#fff;'
+            'font-size:10px;font-weight:700;padding:1px 6px;border-radius:4px;'
+            'margin-left:6px;vertical-align:middle;letter-spacing:0.05em;">NEW</span>'
+            if is_new else ""
+        )
+        cat_badge = (
+            f'<span style="display:inline-block;background:#f3f4f6;color:#6b7280;'
+            f'font-size:10px;padding:1px 6px;border-radius:4px;margin-left:4px;'
+            f'vertical-align:middle;">{item.get("category", "")}</span>'
+        )
+
+        s1_cell = (
+            f'<td style="text-align:center;padding:10px 8px;">'
+            f'<span style="display:inline-block;background:{s1_bg};color:{s1_color};'
+            f'font-size:12px;font-weight:700;padding:2px 8px;border-radius:100px;">'
+            f'{"NEW" if is_new else var_s1}</span></td>'
+        )
+        m1_cell = (
+            f'<td style="text-align:center;padding:10px 8px;">'
+            f'<span style="display:inline-block;background:{m1_bg};color:{m1_color};'
+            f'font-size:12px;font-weight:700;padding:2px 8px;border-radius:100px;">'
+            f'{"—" if var_m1 == "N/A" else var_m1}</span></td>'
+        )
+
+        rows += (
+            f'<tr style="border-bottom:1px solid #f3f4f6;">'
+            f'<td style="padding:10px 8px;font-size:13px;font-weight:700;color:#9ca3af;'
+            f'text-align:center;min-width:32px;">#{item["rank"]}</td>'
+            f'<td style="padding:10px 8px;font-size:14px;font-weight:600;color:#111118;">'
+            f'{item["display"]}{cat_badge}{badge_new}</td>'
+            f'{s1_cell}'
+            f'{m1_cell}'
+            f'</tr>\n'
+        )
+
+    return (
+        f'<section class="marque-tendance" aria-labelledby="mt-titre" '
+        f'style="margin:32px 0;padding:24px;background:#fff;border-radius:12px;'
+        f'border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);">'
+        f'<div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">'
+        f'<span style="display:inline-block;background:#f97316;color:#fff;font-size:11px;'
+        f'font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;'
+        f'letter-spacing:0.08em;">Tendances</span>'
+        f'<h2 id="mt-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">'
+        f'Marque tendance'
+        f'<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">'
+        f'Semaine du {week_dates}</span></h2></div>'
+        f'<div style="overflow-x:auto;">'
+        f'<table style="width:100%;border-collapse:collapse;min-width:380px;">'
+        f'<thead><tr style="border-bottom:2px solid #e5e7eb;">'
+        f'<th style="padding:8px;font-size:11px;font-weight:700;color:#9ca3af;'
+        f'text-transform:uppercase;letter-spacing:0.08em;text-align:center;">#</th>'
+        f'<th style="padding:8px;font-size:11px;font-weight:700;color:#9ca3af;'
+        f'text-transform:uppercase;letter-spacing:0.08em;text-align:left;">Marque</th>'
+        f'<th style="padding:8px;font-size:11px;font-weight:700;color:#9ca3af;'
+        f'text-transform:uppercase;letter-spacing:0.08em;text-align:center;">Var. S-1</th>'
+        f'<th style="padding:8px;font-size:11px;font-weight:700;color:#9ca3af;'
+        f'text-transform:uppercase;letter-spacing:0.08em;text-align:center;">Var. M-1</th>'
+        f'</tr></thead>'
+        f'<tbody>\n{rows}</tbody>'
+        f'</table></div>'
+        f'<p style="margin:12px 0 0;font-size:11px;color:#9ca3af;text-align:right;">'
+        f'Données Google Trends France — mise à jour hebdomadaire</p>'
+        f'</section>'
+    )
+
+
+def _build_trends_email_block(data):
+    """Génère un bloc email table-based (compatible Outlook) avec le top 5.
+
+    Retourne une chaîne vide si data est None.
+    """
+    if not data:
+        return ""
+
+    top5 = data.get("top20", [])[:5]
+    if not top5:
+        return ""
+
+    def _var_color_email(var_str):
+        """Retourne la couleur texte pour l'email (pas de bg, compatible Outlook)."""
+        if var_str == "N/A":
+            return "#f97316"
+        if var_str.startswith("+"):
+            return "#15803d"
+        if var_str.startswith("-"):
+            return "#dc2626"
+        return "#6b7280"
+
+    rows = ""
+    for item in top5:
+        var_s1 = item.get("var_s1", "N/A")
+        display_var = "NEW" if var_s1 == "N/A" else var_s1
+        var_color = _var_color_email(var_s1)
+        rows += (
+            f'<tr style="border-bottom:1px solid #f3f4f6;">'
+            f'<td style="padding:8px 12px;font-size:13px;color:#9ca3af;'
+            f'font-weight:700;text-align:center;width:32px;">#{item["rank"]}</td>'
+            f'<td style="padding:8px 12px;font-size:14px;font-weight:600;color:#111118;">'
+            f'{item["display"]}'
+            f'<span style="font-size:11px;color:#9ca3af;margin-left:6px;">'
+            f'{item.get("category", "")}</span></td>'
+            f'<td style="padding:8px 12px;font-size:13px;font-weight:700;'
+            f'color:{var_color};text-align:center;white-space:nowrap;">'
+            f'{display_var}</td>'
+            f'</tr>\n'
+        )
+
+    return (
+        f'  <tr><td style="padding:20px 32px 0;">'
+        f'<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation" '
+        f'style="border-radius:8px;overflow:hidden;border:1px solid #e5e7eb;">'
+        f'<tr><td style="background:#fff7ed;padding:12px 16px;">'
+        f'<p style="margin:0;font-family:\'Space Grotesk\',Arial,sans-serif;'
+        f'font-size:13px;font-weight:700;color:#f97316;letter-spacing:0.04em;">'
+        f'&#128200;&nbsp; Tendances de la semaine — Top 5 marques</p>'
+        f'</td></tr>'
+        f'<tr><td style="background:#ffffff;padding:0;">'
+        f'<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">'
+        f'{rows}'
+        f'</table></td></tr>'
+        f'<tr><td style="background:#fafafa;padding:8px 16px;border-top:1px solid #f3f4f6;">'
+        f'<p style="margin:0;font-family:\'Space Grotesk\',Arial,sans-serif;'
+        f'font-size:11px;color:#9ca3af;">Mise à jour chaque lundi — Google Trends France</p>'
+        f'</td></tr>'
+        f'</table></td></tr>'
+        f'  <tr><td style="padding:20px 32px 0;">'
+        f'<div style="border-top:1px solid #e5e5e5;"></div></td></tr>'
+    )
+
+
 # ── Expression du jour ────────────────────────────────────────────────
 
 def get_expression_du_jour():
@@ -1218,6 +1423,29 @@ def update_index_html(new_articles):
             else:
                 updated_html = updated_html.replace("<!-- EXPRESSION_DU_JOUR -->", bandeau_html, 1)
 
+    # Injection section Marque tendance (après articles, avant archives CTA)
+    trends_data = load_trends_data()
+    trends_html = _build_trends_site_block(trends_data)
+    if trends_html:
+        if "<!-- MARQUE_TENDANCE -->" in updated_html:
+            # Premier run ou placeholder explicite : remplace le commentaire
+            updated_html = updated_html.replace("<!-- MARQUE_TENDANCE -->", trends_html, 1)
+        else:
+            # Runs suivants : remplace le bloc <section> existant
+            updated_html, n = re.subn(
+                r'<section class="marque-tendance"[\s\S]*?</section>',
+                trends_html,
+                updated_html,
+                count=1,
+            )
+            if not n:
+                # Fallback : premier run sans placeholder — injecte avant archives CTA
+                updated_html = updated_html.replace(
+                    "<!-- ARCHIVES CTA -->",
+                    f"{trends_html}\n\n<!-- ARCHIVES CTA -->",
+                    1,
+                )
+
     INDEX_HTML.write_text(updated_html, encoding="utf-8")
 
     print(f"  {len(new_js_entries)} articles ajoutes a index.html")
@@ -1649,6 +1877,9 @@ def build_newsletter_html(articles, custom_intro=None):
     # Expression du jour email block (computed here so it's available in the f-string)
     expression_email_block = _build_expression_email_block(get_expression_du_jour())
 
+    # Tendances email block (top 5, compact)
+    trends_email_block = _build_trends_email_block(load_trends_data())
+
     return f'''<!DOCTYPE html>
 <html lang="fr">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
@@ -1676,6 +1907,7 @@ def build_newsletter_html(articles, custom_intro=None):
   <tr><td style="padding:0 32px;"><div style="border-top:1px solid #e5e5e5;"></div></td></tr>
   {expression_email_block}
   {articles_html}
+  {trends_email_block}
   <tr><td style="padding:28px 32px 0;" align="center">
     <table role="presentation" cellpadding="0" cellspacing="0"><tr>
       <td style="background:#f97316;border-radius:8px;">
