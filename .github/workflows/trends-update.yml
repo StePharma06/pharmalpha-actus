@@ -20,7 +20,7 @@ jobs:
           python-version: '3.12'
 
       - name: Install pytrends
-        run: pip install pytrends
+        run: pip install pytrends "urllib3<2"
 
       - name: Run weekly trends
         run: python scripts/weekly_trends.py
