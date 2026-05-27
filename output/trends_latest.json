@@ -1,0 +1,818 @@
+{
+  "week": "2026-W22",
+  "generated_at": "2026-05-27T13:48:08",
+  "top20": [
+    {
+      "query": "Hydratis",
+      "display": "Hydratis",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 1
+    },
+    {
+      "query": "Pileje Lactibiane",
+      "display": "Pileje Lactibiane",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 2
+    },
+    {
+      "query": "Novoma",
+      "display": "Novoma",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 3
+    },
+    {
+      "query": "Granions",
+      "display": "Granions",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 4
+    },
+    {
+      "query": "Oenobiol",
+      "display": "Oenobiol",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 5
+    },
+    {
+      "query": "Forte Pharma",
+      "display": "Forté Pharma",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 6
+    },
+    {
+      "query": "Vitarmonyl",
+      "display": "Vitarmonyl",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 7
+    },
+    {
+      "query": "Juvamine",
+      "display": "Juvamine",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 8
+    },
+    {
+      "query": "Sunday Natural",
+      "display": "Sunday Natural",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 9
+    },
+    {
+      "query": "Mium Lab",
+      "display": "Mium Lab",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 10
+    },
+    {
+      "query": "Dynveo",
+      "display": "Dynveo",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 11
+    },
+    {
+      "query": "Nutergia",
+      "display": "Nutergia",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 12
+    },
+    {
+      "query": "Vitavea",
+      "display": "Vitavea",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 13
+    },
+    {
+      "query": "Ineldea",
+      "display": "Ineldea",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 14
+    },
+    {
+      "query": "Alvityl",
+      "display": "Alvityl",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 15
+    },
+    {
+      "query": "Azinc",
+      "display": "Azinc",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 16
+    },
+    {
+      "query": "Bion3",
+      "display": "Bion3",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 17
+    },
+    {
+      "query": "Supradyn",
+      "display": "Supradyn",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 18
+    },
+    {
+      "query": "Berocca",
+      "display": "Berocca",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 19
+    },
+    {
+      "query": "Biocyte",
+      "display": "Biocyte",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 20
+    }
+  ],
+  "all_ranked": [
+    {
+      "query": "Hydratis",
+      "display": "Hydratis",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 1
+    },
+    {
+      "query": "Pileje Lactibiane",
+      "display": "Pileje Lactibiane",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 2
+    },
+    {
+      "query": "Novoma",
+      "display": "Novoma",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 3
+    },
+    {
+      "query": "Granions",
+      "display": "Granions",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 4
+    },
+    {
+      "query": "Oenobiol",
+      "display": "Oenobiol",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 5
+    },
+    {
+      "query": "Forte Pharma",
+      "display": "Forté Pharma",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 6
+    },
+    {
+      "query": "Vitarmonyl",
+      "display": "Vitarmonyl",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 7
+    },
+    {
+      "query": "Juvamine",
+      "display": "Juvamine",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 8
+    },
+    {
+      "query": "Sunday Natural",
+      "display": "Sunday Natural",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 9
+    },
+    {
+      "query": "Mium Lab",
+      "display": "Mium Lab",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 10
+    },
+    {
+      "query": "Dynveo",
+      "display": "Dynveo",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 11
+    },
+    {
+      "query": "Nutergia",
+      "display": "Nutergia",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 12
+    },
+    {
+      "query": "Vitavea",
+      "display": "Vitavea",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 13
+    },
+    {
+      "query": "Ineldea",
+      "display": "Ineldea",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 14
+    },
+    {
+      "query": "Alvityl",
+      "display": "Alvityl",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 15
+    },
+    {
+      "query": "Azinc",
+      "display": "Azinc",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 16
+    },
+    {
+      "query": "Bion3",
+      "display": "Bion3",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 17
+    },
+    {
+      "query": "Supradyn",
+      "display": "Supradyn",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 18
+    },
+    {
+      "query": "Berocca",
+      "display": "Berocca",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 19
+    },
+    {
+      "query": "Biocyte",
+      "display": "Biocyte",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 20
+    },
+    {
+      "query": "Arkopharma",
+      "display": "Arkopharma",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 21
+    },
+    {
+      "query": "Arkorelax",
+      "display": "Arkorelax",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 22
+    },
+    {
+      "query": "Naturactive",
+      "display": "Naturactive",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 23
+    },
+    {
+      "query": "Herbesan",
+      "display": "Herbesan",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 24
+    },
+    {
+      "query": "Santarome",
+      "display": "Santarome",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 25
+    },
+    {
+      "query": "Propolia",
+      "display": "Propolia",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 26
+    },
+    {
+      "query": "Jolly Mama",
+      "display": "Jolly Mama",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 27
+    },
+    {
+      "query": "Synactifs",
+      "display": "Synactifs",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 28
+    },
+    {
+      "query": "D-Stress Synergia",
+      "display": "D-Stress",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 29
+    },
+    {
+      "query": "Physiomance",
+      "display": "Physiomance",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 30
+    },
+    {
+      "query": "Phytea",
+      "display": "Phytea",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 31
+    },
+    {
+      "query": "Solgar",
+      "display": "Solgar",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 32
+    },
+    {
+      "query": "Lehning",
+      "display": "Lehning",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 33
+    },
+    {
+      "query": "Bonjour Drink",
+      "display": "Bonjour Drink",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 34
+    },
+    {
+      "query": "Biocyte Keratin",
+      "display": "Biocyte Keratin",
+      "category": "CA",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 35
+    },
+    {
+      "query": "CeraVe",
+      "display": "CeraVe",
+      "category": "Cosméto",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 36
+    },
+    {
+      "query": "Bioderma Sensibio",
+      "display": "Bioderma Sensibio",
+      "category": "Cosméto",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 37
+    },
+    {
+      "query": "Bioderma Atoderm",
+      "display": "Bioderma Atoderm",
+      "category": "Cosméto",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 38
+    },
+    {
+      "query": "Avene Cicalfate",
+      "display": "Avène Cicalfate",
+      "category": "Cosméto",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 39
+    },
+    {
+      "query": "La Roche-Posay Cicaplast",
+      "display": "LRP Cicaplast",
+      "category": "Cosméto",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 40
+    },
+    {
+      "query": "La Roche-Posay Effaclar",
+      "display": "LRP Effaclar",
+      "category": "Cosméto",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 41
+    },
+    {
+      "query": "Nuxe Huile Prodigieuse",
+      "display": "Nuxe Huile Prodigieuse",
+      "category": "Cosméto",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 42
+    },
+    {
+      "query": "SVR Cicavit",
+      "display": "SVR Cicavit",
+      "category": "Cosméto",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 43
+    },
+    {
+      "query": "SVR Sebiaclear",
+      "display": "SVR Sebiaclear",
+      "category": "Cosméto",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 44
+    },
+    {
+      "query": "Eucerin",
+      "display": "Eucerin",
+      "category": "Cosméto",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 45
+    },
+    {
+      "query": "Uriage",
+      "display": "Uriage",
+      "category": "Cosméto",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 46
+    },
+    {
+      "query": "Vichy Dercos",
+      "display": "Vichy Dercos",
+      "category": "Cosméto",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 47
+    },
+    {
+      "query": "Vichy Liftactiv",
+      "display": "Vichy Liftactiv",
+      "category": "Cosméto",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 48
+    },
+    {
+      "query": "Ducray",
+      "display": "Ducray",
+      "category": "Cosméto",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 49
+    },
+    {
+      "query": "Klorane",
+      "display": "Klorane",
+      "category": "Cosméto",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 50
+    },
+    {
+      "query": "Rene Furterer",
+      "display": "René Furterer",
+      "category": "Cosméto",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 51
+    },
+    {
+      "query": "Filorga",
+      "display": "Filorga",
+      "category": "Cosméto",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 52
+    },
+    {
+      "query": "Caudalie",
+      "display": "Caudalie",
+      "category": "Cosméto",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 53
+    },
+    {
+      "query": "Embryolisse",
+      "display": "Embryolisse",
+      "category": "Cosméto",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 54
+    },
+    {
+      "query": "Mustela",
+      "display": "Mustela",
+      "category": "Cosméto",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 55
+    },
+    {
+      "query": "Nuxe Reve de Miel",
+      "display": "Nuxe Rêve de Miel",
+      "category": "Cosméto",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 56
+    },
+    {
+      "query": "Lierac",
+      "display": "Lierac",
+      "category": "Cosméto",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 57
+    },
+    {
+      "query": "Institut Esthederm",
+      "display": "Institut Esthederm",
+      "category": "Cosméto",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 58
+    },
+    {
+      "query": "A-Derma",
+      "display": "A-Derma",
+      "category": "Cosméto",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 59
+    },
+    {
+      "query": "Aderma Exomega",
+      "display": "Aderma Exomega",
+      "category": "Cosméto",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 60
+    },
+    {
+      "query": "Topicrem",
+      "display": "Topicrem",
+      "category": "Cosméto",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 61
+    },
+    {
+      "query": "Homeoplasmine",
+      "display": "Homeoplasmine",
+      "category": "Cosméto",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 62
+    },
+    {
+      "query": "Synactifs Actipur",
+      "display": "Actipur",
+      "category": "Cosméto",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 63
+    },
+    {
+      "query": "SkinCeuticals",
+      "display": "SkinCeuticals",
+      "category": "Cosméto",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 64
+    },
+    {
+      "query": "Bepanthen",
+      "display": "Bepanthen",
+      "category": "Cosméto",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 65
+    },
+    {
+      "query": "Phyto capillaire",
+      "display": "Phyto",
+      "category": "Cosméto",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 66
+    },
+    {
+      "query": "Jonzac",
+      "display": "Jonzac",
+      "category": "Cosméto",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 67
+    },
+    {
+      "query": "Cattier",
+      "display": "Cattier",
+      "category": "Cosméto",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 68
+    },
+    {
+      "query": "Meme Cosmetics",
+      "display": "Même Cosmetics",
+      "category": "Cosméto",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 69
+    },
+    {
+      "query": "Melvita",
+      "display": "Melvita",
+      "category": "Cosméto",
+      "score": 0.0,
+      "var_s1": "N/A",
+      "var_m1": "N/A",
+      "rank": 70
+    }
+  ]
+}
