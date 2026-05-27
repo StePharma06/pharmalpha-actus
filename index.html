@@ -1335,7 +1335,7 @@ body {
 </div>
 
 <!-- EXPRESSION DU JOUR (injectée par update_actus.py à chaque run) -->
-<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Avaler la pilule</h2><p class="expression-corps">Aux XVIIe et XVIIIe siècles, les apothicaires façonnaient les médicaments à la main sous forme de petites boules — les pilules — souvent amères et difficiles à avaler. L'expression pour désigner ce qu'on accepte à contrecœur est née directement de ce geste quotidien du comptoir.</p></aside>
+<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Vaccin</h2><p class="expression-corps">Du latin <em>vacca</em>, la vache. En 1796, Edward Jenner immunise contre la variole humaine en inoculant le virus de la variole bovine. Le nom de la vache est ainsi entré pour toujours dans le vocabulaire médical mondial.</p></aside>
 
 <!-- ARTICLES (groupes par date) -->
 <div id="articles-container"></div>
@@ -1440,6 +1440,96 @@ body {
 // ============================================================
 const ARTICLES = [
   {
+    id: "actu_2026_05_27_1",
+    date: "2026-05-27",
+    type: "actu",
+    categorie: "pharma_france",
+    titre: "CBD : sortez TOUT de vos rayons avant les contrôles",
+    resume: "Fini de jouer avec le CBD. Les compléments alimentaires au cannabidiol doivent disparaître de ton officine, point final. Seules les graines de chanvre et leurs huiles restent tolérées.",
+    full_text: "L'heure du grand ménage a sonné. Le ministère de l'Agriculture vient de clarifier sa position : tous les compléments alimentaires contenant du CBD doivent être retirés immédiatement du marché.\n\nPas de zone grise cette fois. La réglementation européenne est formelle : le CBD n'a jamais été autorisé comme ingrédient alimentaire. Tu peux garder uniquement les graines de chanvre, leurs huiles et les feuilles pour infusion, mais sans aucun ajout de cannabinoïdes.\n\nConcrètement ? Vire tes huiles CBD, tes gélules \"bien-être\" et tes bonbons au chanvre de tes étagères. Les contrôles vont se multiplier et personne ne veut se retrouver avec une amende pour quelques euros de marge.\n\nLe piège ? Certains fournisseurs continuent de proposer ces produits en mode \"tant qu'on nous dit rien\". Sauf que maintenant, c'est dit officiellement. Et devinez qui sera responsable en cas de contrôle ? Toi, pas ton grossiste.\n\nGarde les factures de tes retours fournisseur. Certains distributeurs acceptent les reprises, d'autres font la sourde oreille. Dans tous les cas, mieux vaut perdre quelques centaines d'euros que risquer une fermeture administrative.\n\nAu comptoir demain matin ? Explique à tes clients que c'est la réglementation européenne qui s'applique, pas un caprice français. Et propose-leur les alternatives autorisées pour leurs troubles du sommeil ou leur stress.",
+    source: "Le Moniteur des Pharmacies",
+    source_url: "https://www.lemoniteurdespharmacies.fr/therapeutique/produits/phytotherapie/produits-a-base-de-cbd-faites-le-menage-sur-vos-etageres",
+    tiktok_url: "",
+    badge_label: "Pharma France",
+    image_url: "assets/img_actu_2026_05_27_1.jpg",
+    tags: ["cbd", "complement", "retrait", "reglementation", "controle"]
+  },
+  {
+    id: "actu_2026_05_27_2",
+    date: "2026-05-27",
+    type: "actu",
+    categorie: "pharma_monde",
+    titre: "Gilead récupère son hépatite D après 3 ans de galère avec la FDA",
+    resume: "Hepcludex vient enfin d'obtenir son AMM américaine après un refus cinglant en 2023. Un comeback qui prouve qu'on peut rebondir même après un plantage monumental côté production.",
+    full_text: "Trois ans que Gilead rongeait son frein. En 2023, la FDA avait envoyé Hepcludex (bulevirtide) au tapis pour des problèmes de fabrication et de formulation. Un camouflet rare pour un labo de cette envergure.\n\nMais Gilead a su encaisser le coup et remettre l'ouvrage sur le métier. L'autorisation accélérée vient de tomber pour traiter l'hépatite D chronique chez l'adulte. Une pathologie orpheline qui touche environ 15 millions de personnes dans le monde.\n\nCôté français, ça change quoi ? Hepcludex était déjà autorisé en Europe depuis 2020. Mais cette validation FDA va booster la recherche et potentiellement faire baisser les coûts de production. Plus de patients traités = économies d'échelle.\n\nLe plus intéressant ? Cette molécule bloque l'entrée du virus dans les hépatocytes. Un mécanisme d'action totalement différent des antiviraux classiques. De quoi enrichir notre arsenal thérapeutique pour ces patients en impasse.\n\nPour ton officine, les prescriptions restent ultra-rares. L'hépatite D ne se voit qu'en co-infection avec l'hépatite B. Mais garde ça en tête : quand un patient arrive avec cette prescription, c'est probablement son dernier espoir.\n\nLa leçon ? Même les géants peuvent se planter sur la qualité pharmaceutique. Mais avec de la persévérance, on peut toujours corriger le tir.",
+    source: "Fierce Pharma",
+    source_url: "https://www.fiercepharma.com/pharma/after-prior-fda-manufacturing-snub-gileads-hepcludex-nabs-accelerated-hepatitis-d-nod-us",
+    tiktok_url: "",
+    badge_label: "Pharma Monde",
+    image_url: "assets/img_actu_2026_05_27_2.jpg",
+    tags: ["hepatite", "fda", "amm", "gilead", "bulevirtide"]
+  },
+  {
+    id: "actu_2026_05_27_3",
+    date: "2026-05-27",
+    type: "actu",
+    categorie: "bonne_nouvelle",
+    titre: "Wegovy oral : l'EMA dit oui, les patients vont enfin sourire",
+    resume: "Fini les piqûres quotidiennes pour perdre du poids. Le CHMP recommande l'autorisation du Wegovy en comprimé avec 13,6% de perte de poids en moyenne. Une révolution pour nos patients obèses.",
+    full_text: "C'est un game changer qui arrive. L'EMA vient de donner son feu vert pour le Wegovy en version orale. Exit les injections hebdomadaires qui faisaient grimacer tes patients.\n\nLes chiffres parlent d'eux-mêmes : 13,61% de perte de poids moyenne contre 2,18% avec placebo. Du jamais vu pour un traitement oral de l'obésité. On est loin des 3-4% des anciennes molécules qui ont fini par être retirées du marché.\n\nPourquoi c'est une excellente nouvelle ? Parce que tes patients te demandent Wegovy depuis des mois, mais beaucoup craquent devant la seringue. Entre la peur de l'aiguille et les oublis de frigo, l'observance n'était pas terrible.\n\nLa Commission européenne doit encore valider, mais c'est généralement acquis après l'avis du CHMP. Resta la question du remboursement en France. Avec une obésité qui explose et des coûts de santé publique astronomiques, l'argument économique tient la route.\n\nTon rôle va évoluer. Plus de formation sur l'injection, mais un accompagnement renforcé sur l'hygiène de vie. Car même avec 13% de perte de poids, sans changement durable des habitudes, les kilos reviennent.\n\nAu comptoir demain ? Patience encore quelques mois. Mais prépare-toi : cette molécule va révolutionner ta patientèle obèse.",
+    source: "Le Moniteur des Pharmacies",
+    source_url: "https://www.lemoniteurdespharmacies.fr/therapeutique/medicaments/recherche-et-innovation/obesite-wegovy-en-comprime-bientot-autorise-en-europe",
+    tiktok_url: "",
+    badge_label: "La bonne nouvelle",
+    image_url: "assets/img_actu_2026_05_27_3.jpg",
+    tags: ["wegovy", "obesite", "oral", "ema", "semaglutide"]
+  },
+  {
+    id: "actu_2026_05_27_4",
+    date: "2026-05-27",
+    type: "actu",
+    categorie: "avenir_pharma",
+    titre: "Radiopharmaceutiques : la guerre des isotopes fait rage aux États-Unis",
+    resume: "Lantheus dans le viseur de Curium pour 7 milliards de dollars. Pendant ce temps, Niowave investit 75 millions dans une usine d'Actinium-225. Le futur de l'oncologie se joue maintenant.",
+    full_text: "Le marché des radiopharmaceutiques s'emballe outre-Atlantique. Curium lorgne sur Lantheus pour un rachat à 7 milliards de dollars, pendant que Niowave lance la construction d'une usine d'isotopes de 75 millions dans le Michigan.\n\nPourquoi cette fièvre ? L'Actinium-225 produit par Niowave est l'isotope star de la médecine nucléaire. Capable de cibler précisément les cellules cancéreuses sans massacrer les tissus sains. Une révolution pour traiter les métastases osseuses et certains cancers résistants.\n\nL'usine de Lansing doit ouvrir en 2028 et employer 70 personnes. Objectif : sécuriser l'approvisionnement américain en isotopes thérapeutiques, aujourd'hui trop dépendant de l'Europe et de la Russie.\n\nCôté français, on accuse un retard préoccupant. Nos services de médecine nucléaire galèrent pour obtenir ces nouveaux isotopes. Les patients français doivent parfois attendre des mois pour accéder à ces thérapies révolutionnaires.\n\nTon officine sera-t-elle concernée ? Pas directement. Ces molécules restent hospitalières vu leur radioactivité. Mais tes patients oncologiques vont de plus en plus te poser des questions sur ces \"nouveaux traitements miracle\" qu'ils voient sur internet.\n\nL'enjeu géopolitique est énorme. Qui contrôlera la production d'isotopes thérapeutiques contrôlera une partie de l'oncologie de demain. Et pour l'instant, l'Europe peine à suivre le rythme américain.",
+    source: "Fierce Pharma",
+    source_url: "https://www.fiercepharma.com/manufacturing/niowave-kicks-construction-75m-radiopharmaceuticals-plant-michigan",
+    tiktok_url: "",
+    badge_label: "L'avenir de la pharma",
+    image_url: "assets/img_actu_2026_05_27_4.jpg",
+    tags: ["radiopharmaceutique", "isotope", "actinium", "oncologie", "nucleaire"]
+  },
+  {
+    id: "actu_2026_05_27_5",
+    date: "2026-05-27",
+    type: "actu",
+    categorie: "business_officine",
+    titre: "Cyberattaque Almerys : quand la télétransmission fait trembler ton CA",
+    resume: "Le prestataire de tiers payant Almerys victime d'une cyberattaque le 24 mai. Heureusement, Visiodroits et télétransmission restent fonctionnels à l'officine.",
+    full_text: "Le prestataire de tiers payant Almerys victime d'une cyberattaque le 24 mai. Heureusement, Visiodroits et télétransmission restent fonctionnels à l'officine.\n\n## Contexte\n\nAlmerys, l'un des principaux opérateurs de tiers payant en France, a subi une cyberattaque majeure le 24 mai 2026. Cette entreprise traite quotidiennement des millions de factures de soins et gère la télétransmission pour des milliers de professionnels de santé. Face à cette menace, Almerys a pris la décision de fermer temporairement certains de ses systèmes d'information pour limiter les dégâts. Pour les pharmaciens, cette situation rappelle brutalement leur dépendance aux infrastructures numériques. En 2025, selon les données de l'Assurance Maladie, 98,7% des ordonnances étaient télétransmises en officine, représentant un enjeu financier colossal. Une panne prolongée pourrait paralyser l'activité et retarder les remboursements, avec un impact direct sur la trésorerie.\n\n## Analyse business\n\nL'impact d'une panne de télétransmission sur une officine est dramatique. Avec un CA moyen de 2,1 millions d'euros par an selon le Conseil national de l'Ordre, une officine traite environ 5 750 euros de chiffre d'affaires quotidien. En cas de dysfonctionnement du tiers payant, les patients reportent leurs achats ou paient comptant, créant un décalage de trésorerie pouvant atteindre 70% du CA journalier. Pour une pharmacie moyenne, cela représente plus de 4 000 euros bloqués par jour. Le secteur des prestataires de tiers payant est ultra-concentré : Almerys détient environ 35% de parts de marché, suivi de Santéclair (25%) et d'autres acteurs plus petits. Cette concentration amplifie les risques systémiques. Heureusement, dans le cas présent, les services critiques (Visiodroits, télétransmission) continuent de fonctionner normalement. Mais l'incident révèle la fragilité du système. En 2024, selon l'ANSSI, les cyberattaques contre les infrastructures de santé ont augmenté de 47%, avec un coût moyen de 180 000 euros par incident pour les entreprises touchées.\n\n## Recommandations actionnables\n\n1. Diversification technique — Négocie avec ton logiciel de gestion officinal pour avoir au moins 2 prestataires de tiers payant configurés en parallèle, même si cela coûte 50-80 euros/mois supplémentaires.\n\n2. Plan de continuité — Prépare une procédure dégradée : formulaires papier pré-imprimés, calculette pour les taux de remboursement courants, et surtout informe tes patients réguliers de tes solutions de secours.\n\n3. Monitoring proactif — Abonne-toi aux alertes de tes prestataires (Almerys, Santéclair, etc.) et suis leurs comptes officiels sur les réseaux sociaux pour être prévenu en temps réel.\n\n4. Trésorerie de sécurité — Constitue une réserve de cash équivalente à 3 jours de CA pour absorber un décalage temporaire des remboursements tiers payant.\n\n## Sources citees\n\n- Le Quotidien du Pharmacien",
+    source: "Pharm'Actus",
+    source_url: "",
+    tiktok_url: "",
+    badge_label: "Business",
+    image_url: "assets/img_actu_2026_05_27_5.jpg",
+    tags: ["cybersecurite", "teletransmission", "tiers-payant", "tresorerie"]
+  },
+  {
+    id: "lsv_2026_05_27",
+    date: "2026-05-27",
+    type: "lsv",
+    categorie: "lsv",
+    titre: "Le saviez-vous ? Le premier échographe a été testé sur des steaks",
+    resume: "Dans les années 1940, un ingénieur écossais utilisait des ultrasons pour détecter les failles dans le métal. Il a eu l'idée géniale de pointer son appareil sur des steaks pour voir s'il pouvait détecter les tumeurs.",
+    full_text: "Ian Donald, ingénieur devenu gynécologue, avait un problème en 1956 : comment voir à l'intérieur du ventre de ses patientes sans les ouvrir ? Ce type avait travaillé pendant la guerre sur les sonars pour détecter les sous-marins allemands.\n\nUn jour, il se dit : \"Et si je testais ça sur de la viande ?\" Direction la boucherie du coin. Il achète des steaks, des rognons, et même une tumeur d'ovaire qu'un collègue chirurgien lui avait gardée au frais.\n\nDans son garage transformé en labo, il pose ses morceaux de viande sur une plaque métallique et braque dessus son détecteur à ultrasons. Miracle ! L'appareil arrive à distinguer les tissus sains des tissus malades. Les contours apparaissent sur un écran verdâtre, comme des fantômes.\n\nLe plus drôle ? Ses collègues médecins le prenaient pour un fou. \"Donald et ses bidules électroniques\", qu'ils disaient. Quand il a voulu tester sur sa première patiente enceinte, tout l'hôpital pensait qu'il allait griller le bébé.\n\nLe 21 juillet 1957, première échographie de l'histoire sur une femme enceinte. L'image était floue, pixellisée, mais on distinguait une forme humaine. Donald venait d'inventer l'un des examens les plus courants de la médecine moderne.\n\nAujourd'hui, chaque grossesse a droit à ses échographies en 3D haute définition. Mais tout a commencé avec des steaks dans un garage écossais !",
+    source: "Pharm'Alpha",
+    source_url: "",
+    tiktok_url: "",
+    badge_label: "Le Saviez-Vous",
+    image_url: "assets/img_lsv_2026_05_27.jpg",
+    tags: ["histoire", "diagnostic", "grossesse", "invention", "echographie"]
+  },
+{
     id: "actu_2026_05_26_1",
     date: "2026-05-26",
     type: "actu",

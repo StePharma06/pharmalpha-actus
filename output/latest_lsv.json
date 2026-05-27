@@ -1,15 +1,16 @@
 {
-  "titre": "Le saviez-vous ? Le premier antiseptique était un vin qu'on buvait avant d'opérer",
-  "resume": "En 1867, Joseph Lister révolutionne la chirurgie avec l'acide phénique. Mais avant lui, les chirurgiens se contentaient de boire du vin... et d'en verser sur les plaies !",
-  "full_text": "Imagine la scène : salle d'opération en 1860, le chirurgien arrive avec une bouteille de bordeaux. Il en boit un coup pour se donner du courage, et verse le reste sur la plaie du patient. \"Antisepsie\" à l'ancienne !\n\nAvant Lister, on pensait que l'alcool fort purifiait tout. Eau-de-vie, vin rouge corsé, même du rhum : tout y passait. Les chirurgiens en arrosaient généreusement les instruments, les mains, et surtout les blessures. Le patient hurlait, mais au moins \"c'était désinfecté\".\n\nTout bascule quand Joseph Lister, chirurgien écossais, découvre les travaux de Pasteur sur les microbes. En 1867, il teste l'acide phénique (extrait du goudron de houille) sur un gamin de 11 ans avec une fracture ouverte. Miracle : pas d'infection ! La plaie cicatrise proprement.\n\nMais ses collègues se moquent : \"Lister et son acide puant !\" L'odeur était effectivement infecte, et ça brûlait la peau des chirurgiens. Certains préféraient encore leur petit verre de cognac d'avant-opération.\n\nIl faudra 20 ans pour que l'antisepsie de Lister s'impose. Résultat : la mortalité post-opératoire chute de 50% à 15%. Fini le temps où on amputait par principe \"pour éviter la gangrène\".\n\nAujourd'hui, quand tu vends une solution antiseptique à base de chlorhexidine ou d'alcool modifié, pense à ce bon vieux Joseph qui a remplacé le pinard par la chimie !",
-  "image_keywords": "antiseptic surgery",
+  "titre": "Le saviez-vous ? Le premier échographe a été testé sur des steaks",
+  "resume": "Dans les années 1940, un ingénieur écossais utilisait des ultrasons pour détecter les failles dans le métal. Il a eu l'idée géniale de pointer son appareil sur des steaks pour voir s'il pouvait détecter les tumeurs.",
+  "full_text": "Ian Donald, ingénieur devenu gynécologue, avait un problème en 1956 : comment voir à l'intérieur du ventre de ses patientes sans les ouvrir ? Ce type avait travaillé pendant la guerre sur les sonars pour détecter les sous-marins allemands.\n\nUn jour, il se dit : \"Et si je testais ça sur de la viande ?\" Direction la boucherie du coin. Il achète des steaks, des rognons, et même une tumeur d'ovaire qu'un collègue chirurgien lui avait gardée au frais.\n\nDans son garage transformé en labo, il pose ses morceaux de viande sur une plaque métallique et braque dessus son détecteur à ultrasons. Miracle ! L'appareil arrive à distinguer les tissus sains des tissus malades. Les contours apparaissent sur un écran verdâtre, comme des fantômes.\n\nLe plus drôle ? Ses collègues médecins le prenaient pour un fou. \"Donald et ses bidules électroniques\", qu'ils disaient. Quand il a voulu tester sur sa première patiente enceinte, tout l'hôpital pensait qu'il allait griller le bébé.\n\nLe 21 juillet 1957, première échographie de l'histoire sur une femme enceinte. L'image était floue, pixellisée, mais on distinguait une forme humaine. Donald venait d'inventer l'un des examens les plus courants de la médecine moderne.\n\nAujourd'hui, chaque grossesse a droit à ses échographies en 3D haute définition. Mais tout a commencé avec des steaks dans un garage écossais !",
+  "image_keywords": "ultrasound medical",
   "tags": [
     "histoire",
-    "chirurgie",
-    "antisepsie",
-    "lister"
+    "diagnostic",
+    "grossesse",
+    "invention",
+    "echographie"
   ],
-  "date": "2026-05-26",
+  "date": "2026-05-27",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",

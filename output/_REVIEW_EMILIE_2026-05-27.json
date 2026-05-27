@@ -1,0 +1,39 @@
+{
+  "generated_at": "2026-05-27T04:03:32.982926+02:00",
+  "run_date": "2026-05-27",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "CBD : sortez TOUT de vos rayons avant les contrôles",
+      "resume": "Fini de jouer avec le CBD. Les compléments alimentaires au cannabidiol doivent disparaître de ton officine, point final. Seules les graines de chanvre et leurs huiles restent tolérées.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/therapeutique/produits/phytotherapie/produits-a-base-de-cbd-faites-le-menage-sur-vos-etageres",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Cyberattaque Almerys : quand la télétransmission fait trembler ton CA",
+      "resume": "Le prestataire de tiers payant Almerys victime d'une cyberattaque le 24 mai. Heureusement, Visiodroits et télétransmission restent fonctionnels à l'officine.",
+      "source": "Pharm'Actus",
+      "source_url": "",
+      "confidence_score": 0.7,
+      "warnings": [
+        "Chiffres de parts de marché Almerys à vérifier",
+        "CA moyen officine basé sur données antérieures",
+        "Coût des prestataires multiples à confirmer",
+        "FACT-CHECK: 'Avec un CA moyen de 2,1 millions d'euros par an selon le Conseil national de l'Ordre' → Cette donnée chiffrée précise nécessite vérification de la source et de l'année de référence, le CNOP ne publiant pas nécessairement ces statistiques sous cette forme",
+        "FACT-CHECK: 'une officine traite environ 5 750 euros de chiffre d'affaires quotidien' → Calcul approximatif (2,1M€/365j = 5753€) mais la répartition du CA n'est pas uniforme sur l'année (congés, saisonnalité), ce qui rend cette moyenne journalière peu représentative",
+        "FACT-CHECK: 'créant un décalage de trésorerie pouvant atteindre 70% du CA journalier' → Pourcentage très précis sans source ni base réglementaire identifiable, à vérifier",
+        "FACT-CHECK: 'Almerys détient environ 35% de parts de marché, suivi de Santéclair (25%)' → Données de parts de marché précises sans source officielle identifiée, secteur où les données peuvent être confidentielles",
+        "FACT-CHECK: 'selon l'ANSSI, les cyberattaques contre les infrastructures de santé ont augmenté de 47%' → Statistique précise nécessitant vérification de la source ANSSI exacte et de l'année de référence",
+        "FACT-CHECK: 'coût moyen de 180 000 euros par incident pour les entreprises touchées' → Chiffrage très précis sans référence claire à vérifier"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}
