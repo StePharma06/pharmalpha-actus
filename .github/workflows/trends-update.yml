@@ -1,4 +1,5 @@
 name: Weekly Trends Update
+# Classement hebdomadaire marques CA + Cosméto via Google Trends
 
 on:
   schedule:
