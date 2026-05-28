@@ -25,6 +25,9 @@ jobs:
       - name: Install dependencies
         run: pip install anthropic feedparser
 
+      - name: Radar pharmacien (Google News 7j glissants)
+        run: python scripts/daily_trends.py
+
       - name: Fetch RSS, curate articles, generate LSV, fetch photos & send newsletter
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}

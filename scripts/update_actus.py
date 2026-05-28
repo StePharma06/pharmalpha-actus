@@ -38,8 +38,8 @@ def md_to_html(text: str) -> str:
 # ── Marque tendance ───────────────────────────────────────────────────
 
 def load_trends_data():
-    """Charge output/trends_latest.json si disponible. Retourne None sinon."""
-    path = Path(__file__).parent.parent / "output" / "trends_latest.json"
+    """Charge output/trends_daily.json si disponible. Retourne None sinon."""
+    path = Path(__file__).parent.parent / "output" / "trends_daily.json"
     if not path.exists():
         return None
     try:
@@ -50,170 +50,146 @@ def load_trends_data():
 
 
 def _build_trends_site_block(data):
-    """Génère la <section class="marque-tendance"> pour injection dans index.html.
+    """Génère la <section class="radar-pharmacien"> pour injection dans index.html.
 
-    Affiche le top 10. Retourne une chaîne vide si data est None.
-    CSS inline uniquement pour ne pas polluer le site.
+    Tableau 4 colonnes : Pathologie | Evol. S-1 | Marque para | Evol. S-1
+    Fenetre 7 jours glissants, mise a jour quotidienne.
+    Retourne une chaine vide si data est None.
     """
     if not data:
         return ""
 
-    top10 = data.get("top20", [])[:10]
-    if not top10:
+    patho_list  = data.get("pathologies", [])
+    marque_list = data.get("marques", [])
+    if not patho_list and not marque_list:
         return ""
 
-    # Calcul plage de dates de la semaine (lundi → dimanche)
-    week_label = data.get("week", "")
-    week_dates = ""
-    if week_label:
-        try:
-            # week_label = "2026-W22" — parser via strptime
-            from datetime import datetime as _dt
-            monday = _dt.strptime(week_label + "-1", "%G-W%V-%u")
-            sunday = monday + __import__("datetime").timedelta(days=6)
-            mois = ["", "jan.", "fév.", "mars", "avr.", "mai", "juin",
-                    "juil.", "août", "sept.", "oct.", "nov.", "déc."]
-            week_dates = (
-                f"{monday.day} {mois[monday.month]} "
-                f"— {sunday.day} {mois[sunday.month]} {sunday.year}"
-            )
-        except Exception:
-            week_dates = week_label
+    window_label = data.get("window_label", "")
+    has_history  = data.get("has_history", False)
 
-    def _var_color(var_str):
-        """Retourne (text_color, bg_color) selon la variation."""
-        if var_str == "N/A":
-            return "#f97316", "#fff7ed"  # orange NEW
-        if var_str.startswith("+"):
-            try:
-                pct = int(var_str[1:].replace("%", "").replace("∞", "999"))
-            except ValueError:
-                pct = 0
-            if pct >= 30:
-                return "#15803d", "#dcfce7"   # vert fort
-            elif pct >= 10:
-                return "#16a34a", "#f0fdf4"   # vert clair
-            else:
-                return "#6b7280", "#f3f4f6"   # stable/gris
-        if var_str.startswith("-"):
-            return "#dc2626", "#fef2f2"       # rouge baisse
-        return "#6b7280", "#f3f4f6"
+    def _delta_style(trend):
+        if trend == "up":
+            return "color:#15803d;font-weight:700;"
+        if trend == "down":
+            return "color:#dc2626;font-weight:700;"
+        return "color:#9ca3af;font-weight:600;"
 
-    rows = ""
-    for item in top10:
-        var_s1 = item.get("var_s1", "N/A")
-        var_m1 = item.get("var_m1", "N/A")
-        is_new = var_s1 == "N/A"
+    rows_count = max(len(patho_list), len(marque_list))
+    rows_html  = ""
+    for i in range(rows_count):
+        p = patho_list[i]  if i < len(patho_list)  else None
+        m = marque_list[i] if i < len(marque_list) else None
 
-        s1_color, s1_bg = _var_color(var_s1)
-        m1_color, m1_bg = _var_color(var_m1)
+        p_name  = p["display"]     if p else ""
+        p_delta = p["delta_label"] if p else ""
+        p_style = _delta_style(p["trend"] if p else "neutral")
 
-        badge_new = (
-            '<span style="display:inline-block;background:#f97316;color:#fff;'
-            'font-size:10px;font-weight:700;padding:1px 6px;border-radius:4px;'
-            'margin-left:6px;vertical-align:middle;letter-spacing:0.05em;">NEW</span>'
-            if is_new else ""
-        )
-        cat_badge = (
-            f'<span style="display:inline-block;background:#f3f4f6;color:#6b7280;'
-            f'font-size:10px;padding:1px 6px;border-radius:4px;margin-left:4px;'
-            f'vertical-align:middle;">{item.get("category", "")}</span>'
-        )
+        m_name  = m["display"]     if m else ""
+        m_delta = m["delta_label"] if m else ""
+        m_style = _delta_style(m["trend"] if m else "neutral")
 
-        s1_cell = (
-            f'<td style="text-align:center;padding:10px 8px;">'
-            f'<span style="display:inline-block;background:{s1_bg};color:{s1_color};'
-            f'font-size:12px;font-weight:700;padding:2px 8px;border-radius:100px;">'
-            f'{"NEW" if is_new else var_s1}</span></td>'
-        )
-        m1_cell = (
-            f'<td style="text-align:center;padding:10px 8px;">'
-            f'<span style="display:inline-block;background:{m1_bg};color:{m1_color};'
-            f'font-size:12px;font-weight:700;padding:2px 8px;border-radius:100px;">'
-            f'{"—" if var_m1 == "N/A" else var_m1}</span></td>'
-        )
-
-        rows += (
+        rows_html += (
             f'<tr style="border-bottom:1px solid #f3f4f6;">'
-            f'<td style="padding:10px 8px;font-size:13px;font-weight:700;color:#9ca3af;'
-            f'text-align:center;min-width:32px;">#{item["rank"]}</td>'
-            f'<td style="padding:10px 8px;font-size:14px;font-weight:600;color:#111118;">'
-            f'{item["display"]}{cat_badge}{badge_new}</td>'
-            f'{s1_cell}'
-            f'{m1_cell}'
+            f'<td style="padding:10px 14px;font-size:14px;color:#374151;">{p_name}</td>'
+            f'<td style="padding:10px 10px;font-size:13px;text-align:right;{p_style}">{p_delta}</td>'
+            f'<td style="padding:10px 14px;font-size:14px;color:#374151;'
+            f'border-left:2px solid #f3f4f6;">{m_name}</td>'
+            f'<td style="padding:10px 10px;font-size:13px;text-align:right;{m_style}">{m_delta}</td>'
             f'</tr>\n'
         )
 
+    disclaimer = (
+        '<p style="margin:10px 0 0;font-size:11px;color:#f97316;font-style:italic;">'
+        '&#9889; 1er run — les variations S-1 seront disponibles dans 7 jours.</p>'
+        if not has_history else ""
+    )
+
     return (
-        f'<section class="marque-tendance" aria-labelledby="mt-titre" '
+        f'<section class="radar-pharmacien" aria-labelledby="rp-titre" '
         f'style="margin:32px 0;padding:24px;background:#fff;border-radius:12px;'
         f'border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);">'
-        f'<div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">'
-        f'<span style="display:inline-block;background:#f97316;color:#fff;font-size:11px;'
+
+        f'<div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;">'
+        f'<span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;'
         f'font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;'
-        f'letter-spacing:0.08em;">Tendances</span>'
-        f'<h2 id="mt-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">'
-        f'Marque tendance'
+        f'letter-spacing:0.08em;">&#128225; Radar</span>'
+        f'<h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">'
+        f'Radar pharmacien'
         f'<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">'
-        f'Semaine du {week_dates}</span></h2></div>'
+        f'{window_label}</span>'
+        f'</h2></div>'
+
+        f'<p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">'
+        f'Fenetre 7 jours glissants &middot; Mise a jour quotidienne &middot; Variation vs S&#8209;1</p>'
+
         f'<div style="overflow-x:auto;">'
-        f'<table style="width:100%;border-collapse:collapse;min-width:380px;">'
-        f'<thead><tr style="border-bottom:2px solid #e5e7eb;">'
-        f'<th style="padding:8px;font-size:11px;font-weight:700;color:#9ca3af;'
-        f'text-transform:uppercase;letter-spacing:0.08em;text-align:center;">#</th>'
-        f'<th style="padding:8px;font-size:11px;font-weight:700;color:#9ca3af;'
-        f'text-transform:uppercase;letter-spacing:0.08em;text-align:left;">Marque</th>'
-        f'<th style="padding:8px;font-size:11px;font-weight:700;color:#9ca3af;'
-        f'text-transform:uppercase;letter-spacing:0.08em;text-align:center;">Var. S-1</th>'
-        f'<th style="padding:8px;font-size:11px;font-weight:700;color:#9ca3af;'
-        f'text-transform:uppercase;letter-spacing:0.08em;text-align:center;">Var. M-1</th>'
+        f'<table style="width:100%;border-collapse:collapse;min-width:400px;">'
+        f'<thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;">'
+        f'<th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;'
+        f'text-transform:uppercase;letter-spacing:0.07em;text-align:left;">'
+        f'Pathologie / Besoin patient</th>'
+        f'<th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;'
+        f'text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Evol. S&#8209;1</th>'
+        f'<th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;'
+        f'text-transform:uppercase;letter-spacing:0.07em;text-align:left;'
+        f'border-left:2px solid #e5e7eb;">Marque para</th>'
+        f'<th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;'
+        f'text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Evol. S&#8209;1</th>'
         f'</tr></thead>'
-        f'<tbody>\n{rows}</tbody>'
+        f'<tbody>\n{rows_html}</tbody>'
         f'</table></div>'
+
+        f'{disclaimer}'
         f'<p style="margin:12px 0 0;font-size:11px;color:#9ca3af;text-align:right;">'
-        f'Données Google Trends France — mise à jour hebdomadaire</p>'
+        f'Source&nbsp;: Google News France &middot; donnees estimatives</p>'
         f'</section>'
     )
 
 
 def _build_trends_email_block(data):
-    """Génère un bloc email table-based (compatible Outlook) avec le top 5.
+    """Génère un bloc email table-based (compatible Outlook) — Radar pharmacien.
 
-    Retourne une chaîne vide si data est None.
+    Tableau 4 colonnes : Pathologie | Evol. | Marque para | Evol.
+    Retourne une chaine vide si data est None.
     """
     if not data:
         return ""
 
-    top5 = data.get("top20", [])[:5]
-    if not top5:
+    patho_list  = data.get("pathologies", [])
+    marque_list = data.get("marques", [])
+    if not patho_list and not marque_list:
         return ""
 
-    def _var_color_email(var_str):
-        """Retourne la couleur texte pour l'email (pas de bg, compatible Outlook)."""
-        if var_str == "N/A":
-            return "#f97316"
-        if var_str.startswith("+"):
-            return "#15803d"
-        if var_str.startswith("-"):
-            return "#dc2626"
-        return "#6b7280"
+    window_label = data.get("window_label", "")
 
-    rows = ""
-    for item in top5:
-        var_s1 = item.get("var_s1", "N/A")
-        display_var = "NEW" if var_s1 == "N/A" else var_s1
-        var_color = _var_color_email(var_s1)
-        rows += (
+    def _color(trend):
+        if trend == "up":   return "#15803d"
+        if trend == "down": return "#dc2626"
+        return "#9ca3af"
+
+    rows_count = max(len(patho_list), len(marque_list))
+    rows_html  = ""
+    for i in range(rows_count):
+        p = patho_list[i]  if i < len(patho_list)  else None
+        m = marque_list[i] if i < len(marque_list) else None
+
+        p_name  = p["display"]     if p else ""
+        p_delta = p["delta_label"] if p else ""
+        p_color = _color(p["trend"] if p else "neutral")
+
+        m_name  = m["display"]     if m else ""
+        m_delta = m["delta_label"] if m else ""
+        m_color = _color(m["trend"] if m else "neutral")
+
+        rows_html += (
             f'<tr style="border-bottom:1px solid #f3f4f6;">'
-            f'<td style="padding:8px 12px;font-size:13px;color:#9ca3af;'
-            f'font-weight:700;text-align:center;width:32px;">#{item["rank"]}</td>'
-            f'<td style="padding:8px 12px;font-size:14px;font-weight:600;color:#111118;">'
-            f'{item["display"]}'
-            f'<span style="font-size:11px;color:#9ca3af;margin-left:6px;">'
-            f'{item.get("category", "")}</span></td>'
-            f'<td style="padding:8px 12px;font-size:13px;font-weight:700;'
-            f'color:{var_color};text-align:center;white-space:nowrap;">'
-            f'{display_var}</td>'
+            f'<td style="padding:7px 12px;font-size:13px;color:#374151;">{p_name}</td>'
+            f'<td style="padding:7px 8px;font-size:12px;font-weight:700;color:{p_color};'
+            f'text-align:right;white-space:nowrap;">{p_delta}</td>'
+            f'<td style="padding:7px 12px;font-size:13px;color:#374151;'
+            f'border-left:2px solid #e5e7eb;">{m_name}</td>'
+            f'<td style="padding:7px 8px;font-size:12px;font-weight:700;color:{m_color};'
+            f'text-align:right;white-space:nowrap;">{m_delta}</td>'
             f'</tr>\n'
         )
 
@@ -221,19 +197,34 @@ def _build_trends_email_block(data):
         f'  <tr><td style="padding:20px 32px 0;">'
         f'<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation" '
         f'style="border-radius:8px;overflow:hidden;border:1px solid #e5e7eb;">'
-        f'<tr><td style="background:#fff7ed;padding:12px 16px;">'
+
+        f'<tr><td style="background:#e0f2fe;padding:12px 16px;">'
         f'<p style="margin:0;font-family:\'Space Grotesk\',Arial,sans-serif;'
-        f'font-size:13px;font-weight:700;color:#f97316;letter-spacing:0.04em;">'
-        f'&#128200;&nbsp; Tendances de la semaine — Top 5 marques</p>'
+        f'font-size:13px;font-weight:700;color:#0284c7;letter-spacing:0.04em;">'
+        f'&#128225;&nbsp; Radar pharmacien &mdash; {window_label}</p>'
         f'</td></tr>'
+
         f'<tr><td style="background:#ffffff;padding:0;">'
         f'<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">'
-        f'{rows}'
+        f'<tr style="background:#f9fafb;">'
+        f'<th style="padding:6px 12px;font-size:10px;font-weight:700;color:#9ca3af;'
+        f'text-align:left;text-transform:uppercase;letter-spacing:0.06em;">Pathologie</th>'
+        f'<th style="padding:6px 8px;font-size:10px;font-weight:700;color:#9ca3af;'
+        f'text-align:right;text-transform:uppercase;">Evol.</th>'
+        f'<th style="padding:6px 12px;font-size:10px;font-weight:700;color:#9ca3af;'
+        f'text-align:left;text-transform:uppercase;letter-spacing:0.06em;'
+        f'border-left:2px solid #e5e7eb;">Marque para</th>'
+        f'<th style="padding:6px 8px;font-size:10px;font-weight:700;color:#9ca3af;'
+        f'text-align:right;text-transform:uppercase;">Evol.</th>'
+        f'</tr>'
+        f'{rows_html}'
         f'</table></td></tr>'
+
         f'<tr><td style="background:#fafafa;padding:8px 16px;border-top:1px solid #f3f4f6;">'
         f'<p style="margin:0;font-family:\'Space Grotesk\',Arial,sans-serif;'
-        f'font-size:11px;color:#9ca3af;">Mise à jour chaque lundi — Google Trends France</p>'
+        f'font-size:11px;color:#9ca3af;">Google News France &middot; estimatif &middot; 7j glissants</p>'
         f'</td></tr>'
+
         f'</table></td></tr>'
         f'  <tr><td style="padding:20px 32px 0;">'
         f'<div style="border-top:1px solid #e5e5e5;"></div></td></tr>'
@@ -1433,7 +1424,7 @@ def update_index_html(new_articles):
         else:
             # Runs suivants : remplace le bloc <section> existant
             updated_html, n = re.subn(
-                r'<section class="marque-tendance"[\s\S]*?</section>',
+                r'<section class="(?:radar-pharmacien|marque-tendance)"[\s\S]*?</section>',
                 trends_html,
                 updated_html,
                 count=1,
