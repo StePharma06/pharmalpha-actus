@@ -81,8 +81,8 @@ MARQUES = [
 
 # ── Helpers ───────────────────────────────────────────────────────────
 
-def build_url(query: str) -> str:
-    full_query = f"{query} when:7d"
+def build_url(query: str, period: str = "7d") -> str:
+    full_query = f"{query} when:{period}"
     encoded = urllib.parse.quote(full_query)
     return f"https://news.google.com/rss/search?q={encoded}&hl=fr&gl=FR&ceid=FR:fr"
 
@@ -96,6 +96,22 @@ def fetch_count(url: str) -> int:
         return len(feed.entries)
     except Exception:
         return 0
+
+
+def fetch_two_windows(query: str) -> tuple:
+    """Retourne (count_7d, count_prev_week).
+
+    count_prev_week = count_14d - count_7d
+    = estimation des articles publiés entre j-14 et j-7 (semaine precedente).
+    Permet un delta S-1 immediat des le 1er run, sans historique.
+    Limite : approximatif si RSS depasse 100 (cap Google News) — acceptable
+    pour des requetes specifiques (marques / pathologies + pharmacie).
+    """
+    count_7d  = fetch_count(build_url(query, "7d"))
+    time.sleep(SLEEP_BETWEEN)
+    count_14d = fetch_count(build_url(query, "14d"))
+    count_prev = max(0, count_14d - count_7d)
+    return count_7d, count_prev
 
 
 def load_history() -> dict:
@@ -130,12 +146,23 @@ def compute_delta(current: int, previous) -> tuple:
     return pct, label, trend
 
 
-def build_items(catalogue, today_data: dict, prev_data: dict) -> list:
-    """Construit la liste d'items trié par delta desc, puis count desc."""
+def build_items(catalogue, today_data: dict, prev_data: dict,
+                live_prev_data: dict = None) -> list:
+    """Construit la liste d'items triée par delta desc, puis count desc.
+
+    Priorite pour 'previous' :
+      1. prev_data  (historique stocke J-7) — le plus fiable
+      2. live_prev_data (proxy 14d-7d)      — disponible des le 1er run
+      3. None                               — pas de comparaison possible
+    """
     items = []
     for query, display in catalogue:
-        count    = today_data.get(query, 0)
-        previous = prev_data.get(query) if prev_data else None
+        count = today_data.get(query, 0)
+        previous = (
+            prev_data.get(query)      if prev_data
+            else live_prev_data.get(query) if live_prev_data
+            else None
+        )
         pct, label, trend = compute_delta(count, previous)
         items.append({
             "query":       query,
@@ -146,7 +173,7 @@ def build_items(catalogue, today_data: dict, prev_data: dict) -> list:
             "trend":       trend,
         })
 
-    # Tri : delta desc (None = pas d'historique → en bas), puis count desc
+    # Tri : delta desc (None en bas), puis count desc
     def sort_key(x):
         d = x["delta_pct"]
         return (-(d if d is not None else -9999), -x["count"])
@@ -168,23 +195,39 @@ def main():
 
     all_queries = PATHOLOGIES + MARQUES
     total = len(all_queries)
-    print(f"Radar pharmacien — {today_key} ({total} requetes)")
+    # 2 fenetres par requete (7d + 14d) sauf si historique deja dispo
+    nb_req = total * (1 if has_prev else 2)
+    print(f"Radar pharmacien — {today_key} ({nb_req} requetes, "
+          f"source S-1 : {'historique' if has_prev else 'proxy 14d-7d'})")
 
-    today_data: dict = {}
+    today_data: dict     = {}   # count 7d (pour historique)
+    live_prev_data: dict = {}   # count prev week via 14d-7d (fallback 1er run)
+
     for i, (query, display) in enumerate(all_queries, start=1):
-        url   = build_url(query)
-        count = fetch_count(url)
-        today_data[query] = count
-        print(f"  [{i:2}/{total}] {display:35s} : {count}")
-        time.sleep(SLEEP_BETWEEN)
+        if has_prev:
+            # Historique dispo → 1 seule requete (7d)
+            count = fetch_count(build_url(query, "7d"))
+            time.sleep(SLEEP_BETWEEN)
+            today_data[query]     = count
+            print(f"  [{i:2}/{total}] {display:35s} : {count}")
+        else:
+            # Pas d'historique → 2 requetes (7d + 14d)
+            count_7d, count_prev = fetch_two_windows(query)
+            today_data[query]     = count_7d
+            live_prev_data[query] = count_prev
+            print(f"  [{i:2}/{total}] {display:35s} : {count_7d} (prev≈{count_prev})")
 
-    # Sauvegarde historique avant de l'ecraser
+    # Sauvegarde historique (uniquement count_7d)
     history[today_key] = today_data
     save_history(history)
 
     # Construction tops
-    patho_top  = build_items(PATHOLOGIES, today_data, prev_data)
-    marque_top = build_items(MARQUES,     today_data, prev_data)
+    # has_prev=True  → prev_data depuis historique, live_prev_data ignoré
+    # has_prev=False → prev_data vide, live_prev_data = proxy 14d-7d
+    patho_top  = build_items(PATHOLOGIES, today_data, prev_data,
+                             live_prev_data if not has_prev else None)
+    marque_top = build_items(MARQUES,     today_data, prev_data,
+                             live_prev_data if not has_prev else None)
 
     # Plage de dates lisible (ex : "22 mai — 28 mai 2026")
     start = today - datetime.timedelta(days=6)
@@ -196,11 +239,12 @@ def main():
     )
 
     output = {
-        "generated_at": today_key,
-        "window_label": window_label,
-        "has_history":  has_prev,
-        "pathologies":  patho_top,
-        "marques":      marque_top,
+        "generated_at":   today_key,
+        "window_label":   window_label,
+        "has_history":    has_prev,
+        "delta_source":   "historique" if has_prev else "proxy_14d_minus_7d",
+        "pathologies":    patho_top,
+        "marques":        marque_top,
     }
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
@@ -208,8 +252,7 @@ def main():
         json.dump(output, f, ensure_ascii=False, indent=2)
 
     print(f"\nOK -> {OUTPUT_FILE}")
-    if not has_prev:
-        print("  Note: 1er run — deltas S-1 disponibles a partir du 7e jour")
+    print(f"  Source S-1 : {'historique (precise)' if has_prev else 'proxy 14d-7d (approx — passe en historique a J+7)'}")
 
 
 if __name__ == "__main__":

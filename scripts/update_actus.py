@@ -98,10 +98,11 @@ def _build_trends_site_block(data):
             f'</tr>\n'
         )
 
+    delta_source = data.get("delta_source", "")
     disclaimer = (
-        '<p style="margin:10px 0 0;font-size:11px;color:#f97316;font-style:italic;">'
-        '&#9889; 1er run — les variations S-1 seront disponibles dans 7 jours.</p>'
-        if not has_history else ""
+        '<p style="margin:10px 0 0;font-size:11px;color:#9ca3af;font-style:italic;">'
+        '* Evol. S&#8209;1 : estimation via fenetre 14j — affinage a J+7 (historique).</p>'
+        if delta_source == "proxy_14d_minus_7d" else ""
     )
 
     return (
