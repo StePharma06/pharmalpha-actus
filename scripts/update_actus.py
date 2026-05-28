@@ -121,28 +121,29 @@ def _build_trends_site_block(data):
         f'</h2></div>'
 
         f'<p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">'
-        f'Fenetre 7 jours glissants &middot; Mise a jour quotidienne &middot; Variation vs S&#8209;1</p>'
+        f'Requetes en forte hausse cette semaine en France &middot; '
+        f'Decouverte automatique &middot; Mise a jour quotidienne</p>'
 
         f'<div style="overflow-x:auto;">'
         f'<table style="width:100%;border-collapse:collapse;min-width:400px;">'
         f'<thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;">'
         f'<th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;'
         f'text-transform:uppercase;letter-spacing:0.07em;text-align:left;">'
-        f'Pathologie / Besoin patient</th>'
+        f'Besoin / Recherche patient</th>'
         f'<th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;'
-        f'text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Evol. S&#8209;1</th>'
+        f'text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Hausse</th>'
         f'<th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;'
         f'text-transform:uppercase;letter-spacing:0.07em;text-align:left;'
-        f'border-left:2px solid #e5e7eb;">Marque para</th>'
+        f'border-left:2px solid #e5e7eb;">Produit / Marque para</th>'
         f'<th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;'
-        f'text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Evol. S&#8209;1</th>'
+        f'text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Hausse</th>'
         f'</tr></thead>'
         f'<tbody>\n{rows_html}</tbody>'
         f'</table></div>'
 
         f'{disclaimer}'
         f'<p style="margin:12px 0 0;font-size:11px;color:#9ca3af;text-align:right;">'
-        f'Source&nbsp;: Google News France &middot; donnees estimatives</p>'
+        f'Source&nbsp;: Google Trends France (pytrends) &middot; 7 jours glissants</p>'
         f'</section>'
     )
 
@@ -223,7 +224,7 @@ def _build_trends_email_block(data):
 
         f'<tr><td style="background:#fafafa;padding:8px 16px;border-top:1px solid #f3f4f6;">'
         f'<p style="margin:0;font-family:\'Space Grotesk\',Arial,sans-serif;'
-        f'font-size:11px;color:#9ca3af;">Google News France &middot; estimatif &middot; 7j glissants</p>'
+        f'font-size:11px;color:#9ca3af;">Google Trends France (pytrends) &middot; 7j glissants</p>'
         f'</td></tr>'
 
         f'</table></td></tr>'

@@ -23,7 +23,7 @@ jobs:
           python-version: '3.12'
 
       - name: Install dependencies
-        run: pip install anthropic feedparser
+        run: pip install anthropic feedparser pytrends "urllib3<2"
 
       - name: Radar pharmacien (Google News 7j glissants)
         run: python scripts/daily_trends.py
