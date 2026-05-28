@@ -1,0 +1,48 @@
+{
+  "generated_at": "2026-05-28T04:03:33.025605+02:00",
+  "run_date": "2026-05-28",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Le CEPS baisse unilatéralement le prix de Truvada, les laboratoires crient au scandale",
+      "resume": "Décision choc au JO : le CEPS impose une baisse de prix sur Truvada sans négociation avec Gilead. Une procédure rare qui fait trembler toute la filière. Et si c'était le début d'une nouvelle ère tarifaire ?",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/business/economie/achat/vih-et-truvada-une-decision-rare-du-ceps-secoue-le-marche-des-antiretroviraux",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "pharma_monde",
+      "titre": "CordenPharma mise 1 milliard sur les GLP-1, la ruée vers l'or des peptides continue",
+      "resume": "Le CDMO allemand double la mise sur sa capacité peptides avec de nouveaux sites aux US et en Chine. Objectif : surfer sur la vague GLP-1 qui explose partout. Même les façonniers sentent le filon.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/manufacturing/glp-1-manufacturer-cordenpharma-strikes-deal-peptide-cdmo-lining-new-production-sites",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "1 officine sur 2 passe en groupement coopératif : la nouvelle stratégie anti-fonds",
+      "resume": "Le baromètre 2026 de la FCA révèle que la santé représente 50% du commerce coopératif, premier secteur devant l'alimentaire.",
+      "source": "Pharm'Actus",
+      "source_url": "",
+      "confidence_score": 0.7,
+      "warnings": [
+        "Chiffres de remises laboratoires basés sur estimations secteur",
+        "Valorisation 2,1x EBE moyenne approximative",
+        "Nombre 3000 départs retraite à vérifier sources Ordre",
+        "FACT-CHECK: 'une officine isolée obtient typiquement 2-4% de remise laboratoire, contre 8-12% pour un groupement de 500+ pharmacies' → Ces pourcentages de remises semblent surévalués et non sourcés. Les remises laboratoires réelles sont généralement plus faibles et encadrées par la réglementation sur les avantages commerciaux.",
+        "FACT-CHECK: 'Sur un CA moyen de 1,2M€, cela représente 48 000 à 96 000€ de marge brute supplémentaire annuelle' → Calcul incorrect car les remises ne s'appliquent pas au CA total mais uniquement aux médicaments concernés, et non à l'ensemble du chiffre d'affaires incluant les prestations conventionnées.",
+        "FACT-CHECK: '3 000 pharmaciens partiront en retraite d'ici 2030 selon l'Ordre' → Chiffre à vérifier auprès des sources officielles de l'Ordre des pharmaciens, semble imprécis sans référence temporelle de départ.",
+        "FACT-CHECK: 'avec une officine moyenne valorisée 2,1 fois son excédent brut d'exploitation' → Multiple de valorisation à sourcer précisément, car il varie selon les zones géographiques et critères de l'officine."
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}
