@@ -1,0 +1,18 @@
+{
+  "generated_at": "2026-05-29T04:04:22.587300+02:00",
+  "run_date": "2026-05-29",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Wegovy et Mounjaro : remboursés dès le 15 juin mais gare aux indus au comptoir",
+      "resume": "Les anti-obésité débarquent en remboursement avec un dispositif de prescription ultra-encadré. L'USPO redoute une nouvelle mécanique d'indus impossible à contrôler au comptoir. Impact économique majeur en vue.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/wegovy-et-mounjaro-les-pharmacies-face-au-risque-dune-nouvelle-mecanique-dindus",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    }
+  ]
+}
