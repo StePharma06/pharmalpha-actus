@@ -40,7 +40,10 @@ TOP_N          = 5     # lignes dans le tableau
 SLEEP_BATCHES  = 68    # secondes entre les 2 appels pytrends (evite 429)
 SLEEP_RETRY    = 130   # pause si premier 429
 MAX_RETRIES    = 2
-TIMEFRAME      = "now 7-d"  # fenetre Google Trends
+# today 1-m = 30 jours glissants, granularite quotidienne.
+# Beaucoup plus de points de donnees que "now 7-d" → related_queries fonctionnel.
+# "Rising" = requetes dont la croissance est la plus forte sur ce mois.
+TIMEFRAME      = "today 1-m"
 GEO            = "FR"
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -50,22 +53,24 @@ OUTPUT_FILE = os.path.join(OUTPUT_DIR, "trends_daily.json")
 
 # ── Seeds ─────────────────────────────────────────────────────────────
 # Seeds BESOINS / PATHOLOGIES
-# -> ce que les patients cherchent avant d'aller en pharmacie
+# Termes a fort volume de recherche en France (>10K/mois estimés).
+# Volume eleve = Google Trends peut calculer des related_queries "rising".
+# Seeds trop niche → DataFrames vides (experience du 2026-05-29).
 SEEDS_PATHO = [
-    "symptome traitement naturel",
-    "soin peau pharmacie",
-    "allergie infection traitement",
-    "fatigue carence vitamine",
-    "douleur remede pharmacie",
+    "pharmacie",              # seed #1 : fort volume, univers large
+    "vitamine",               # complementation, tres cherche
+    "allergie",               # saisonnier, fort volume printemps-ete
+    "fatigue",                # concern sante permanent
+    "peau soin",              # dermatologie / cosmetique
 ]
 
 # Seeds PRODUITS / MARQUES para
-# -> produits, marques, ingredients tendance dans l'univers pharma/para
+# Meme logique : fort volume + pertinence pharmacie/para.
 SEEDS_MARQUE = [
-    "complement alimentaire pharmacie avis",
-    "cosmetique pharmacie tendance",
-    "parapharmacie produit soin",
-    "serum creme pharmacie",
+    "parapharmacie",          # seed #1 : fort volume
+    "complement alimentaire", # categorie large, grosse recherche
+    "creme solaire",          # saisonnier, tres fort en ete
+    "serum visage",           # cosmetique tendance
 ]
 
 # ── Filtrage bruit ────────────────────────────────────────────────────
@@ -113,11 +118,59 @@ def _format_value(val) -> tuple:
 
 # ── Decouverte rising ─────────────────────────────────────────────────
 
+def _extract_items(related: dict, seeds: list, query_type: str) -> list:
+    """Extrait et deduplique les items rising/top depuis le dict related_queries."""
+    seen: set  = set()
+    items: list = []
+
+    for seed in seeds[:5]:
+        seed_result = related.get(seed)
+        if not seed_result:
+            print(f"    [DEBUG] seed '{seed}' → pas de resultat")
+            continue
+        df = seed_result.get(query_type)
+        if df is None or (hasattr(df, "empty") and df.empty):
+            print(f"    [DEBUG] seed '{seed}' type='{query_type}' → DataFrame vide")
+            continue
+
+        print(f"    [DEBUG] seed '{seed}' type='{query_type}' → {len(df)} lignes")
+        for _, row in df.iterrows():
+            raw_query = str(row.get("query", "")).strip()
+            val       = row.get("value", 0)
+
+            if not raw_query or len(raw_query) < 3:
+                continue
+            if _is_noise(raw_query):
+                continue
+
+            key = raw_query.lower()
+            if key in seen:
+                continue
+            seen.add(key)
+
+            sort_val = 99999 if str(val) == "Breakout" else (
+                int(val) if str(val).isdigit() else 0
+            )
+            delta_label, trend = _format_value(val)
+
+            items.append({
+                "display":     _clean_display(raw_query),
+                "delta_label": delta_label,
+                "trend":       trend,
+                "_sort":       sort_val,
+            })
+
+    items.sort(key=lambda x: -x["_sort"])
+    for item in items:
+        del item["_sort"]
+    return items[:TOP_N]
+
+
 def discover_rising(seeds: list, pt: TrendReq, label: str) -> list:
     """
-    Lance build_payload + related_queries("rising") sur les seeds fournis.
-    Retourne une liste de dicts [{display, delta_label, trend, _sort}]
-    triee par valeur descending, depourvue des doublons et du bruit.
+    Lance build_payload + related_queries sur les seeds fournis.
+    Essaie d'abord type='rising'. Si vide, fallback sur type='top'.
+    Retourne une liste de dicts [{display, delta_label, trend}].
     """
     for attempt in range(1, MAX_RETRIES + 1):
         try:
@@ -136,51 +189,16 @@ def discover_rising(seeds: list, pt: TrendReq, label: str) -> list:
             print(f"  [ERR] {label} : {e}")
             return []
 
-    seen: set = set()
-    items: list = []
+    # Essai 1 : rising (termes en forte hausse → le plus interessant)
+    items = _extract_items(related, seeds, "rising")
 
-    for seed in seeds[:5]:
-        seed_result = related.get(seed)
-        if not seed_result:
-            continue
-        df = seed_result.get("rising")
-        if df is None or (hasattr(df, "empty") and df.empty):
-            continue
+    if not items:
+        # Essai 2 : top (requetes les plus populaires liees aux seeds)
+        # Moins dynamique mais garantit un resultat
+        print(f"  [INFO] rising vide pour {label} → fallback sur 'top'")
+        items = _extract_items(related, seeds, "top")
 
-        for _, row in df.iterrows():
-            raw_query = str(row.get("query", "")).strip()
-            val       = row.get("value", 0)
-
-            if not raw_query or len(raw_query) < 3:
-                continue
-            if _is_noise(raw_query):
-                continue
-
-            key = raw_query.lower()
-            if key in seen:
-                continue
-            seen.add(key)
-
-            # Sort key : Breakout = 99999, sinon valeur numerique
-            sort_val = 99999 if str(val) == "Breakout" else (
-                int(val) if str(val).isdigit() else 0
-            )
-            delta_label, trend = _format_value(val)
-
-            items.append({
-                "display":     _clean_display(raw_query),
-                "delta_label": delta_label,
-                "trend":       trend,
-                "_sort":       sort_val,
-            })
-
-    # Tri par valeur descending
-    items.sort(key=lambda x: -x["_sort"])
-    # Nettoyage cle interne
-    for item in items:
-        del item["_sort"]
-
-    return items[:TOP_N]
+    return items
 
 
 # ── Main ─────────────────────────────────────────────────────────────
