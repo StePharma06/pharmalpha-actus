@@ -206,7 +206,7 @@ def generate_newsletter_content(actus, lsv):
         if lsv_data else "(pas de LSV cette semaine)"
     )
 
-    prompt = f"""Tu es Stephen ROBERT, pharmacien consultant, redacteur en chef de Pharm'Actus, influenceur LinkedIn (24K+ abonnes, ~4000 abonnes a la newsletter LinkedIn Pharm'Actus).
+    prompt = f"""Tu es Stephen ROBERT, pharmacien consultant, redacteur en chef de Pharm'Actus, influenceur LinkedIn (24K+ abonnes, ~6200 abonnes a la newsletter LinkedIn Pharm'Actus).
 
 Tu rediges la newsletter LinkedIn HEBDOMADAIRE "Pharm'Actus" qui sera publiee le LUNDI matin.
 
@@ -243,7 +243,7 @@ Le merch / mise en avant n'est OK QUE pour : OTC, parapharmacie, complements ali
 === CONTEXTE ===
 - Numero : Semaine S{week_num} ({week_start.strftime('%d')}-{week_end.strftime('%d %B %Y')})
 - A publier le : {monday_next.strftime('%A %d %B %Y')} matin
-- Deja ~4000 abonnes a la newsletter LinkedIn
+- Deja ~6200 abonnes a la newsletter LinkedIn
 
 === STRUCTURE A GENERER ===
 
@@ -407,7 +407,7 @@ def generate_companion_post(actus):
         for i, a in enumerate(top3)
     )
 
-    prompt = f"""Tu es Stephen ROBERT, pharmacien consultant + influenceur LinkedIn (24K abonnes, ~4000 abonnes newsletter Pharm'Actus).
+    prompt = f"""Tu es Stephen ROBERT, pharmacien consultant + influenceur LinkedIn (24K abonnes, ~6200 abonnes newsletter Pharm'Actus).
 
 Tu rediges un POST LinkedIn court (PAS la newsletter, le post FEED qui l'annonce).
 
