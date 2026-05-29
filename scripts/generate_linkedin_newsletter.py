@@ -49,6 +49,17 @@ EMAIL_RECIPIENT = "stephen.pharmacien@gmail.com"
 
 FALLBACK_MODEL = "claude-haiku-4-5-20251001"
 
+MONTHS_FR = ["", "Janvier", "Février", "Mars", "Avril", "Mai", "Juin",
+             "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"]
+
+
+def format_date_range_fr(start, end):
+    """Formate une plage de dates en français: 'X au Y Mois YYYY' ou 'X Mois au Y Mois YYYY'."""
+    if start.month == end.month:
+        return f"{start.day} au {end.day} {MONTHS_FR[end.month]} {end.year}"
+    else:
+        return f"{start.day} {MONTHS_FR[start.month]} au {end.day} {MONTHS_FR[end.month]} {end.year}"
+
 
 def claude_create(client, **kwargs):
     """Call Claude API with retry + fallback to Haiku."""
@@ -155,6 +166,8 @@ def generate_newsletter_content(actus, lsv):
     monday_next = today + timedelta(days=(7 - today.weekday()) % 7 or 7)
     week_start = today - timedelta(days=today.weekday())  # lundi de la semaine ecoulee
     week_end = week_start + timedelta(days=6)
+    date_range = format_date_range_fr(week_start, week_end)
+    newsletter_title = f"Pharm'Actus - Actus du {date_range}"
 
     # Fournir les articles a Claude (avec liens Pharm'Actus + sources)
     actus_data = []
@@ -245,10 +258,10 @@ Retourne le markdown complet ci-dessous. Le format est aere, SANS separateurs �
 
 ---
 
-## TITRE LinkedIn (max 80 chars)
+## TITRE LinkedIn (titre EXACT ci-dessous, ne pas modifier)
 
 ```
-Pharm'Actus — [titre punchy resumant la semaine]
+{newsletter_title}
 ```
 
 ## SOUS-TITRE
@@ -510,6 +523,8 @@ def send_newsletter_email(markdown, actus, lsv, companion_post=""):
     today = datetime.now(PARIS_TZ)
     week_num = today.isocalendar()[1]
     monday_next = today + timedelta(days=(7 - today.weekday()) % 7 or 7)
+    week_start = today - timedelta(days=today.weekday())
+    week_end = week_start + timedelta(days=6)
 
     # HTML wrapper around the markdown (preformatted, copyable)
     md_escaped = markdown.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
@@ -580,7 +595,7 @@ def send_newsletter_email(markdown, actus, lsv, companion_post=""):
     payload = {
         "sender": {"name": SENDER_NAME, "email": SENDER_EMAIL},
         "to": [{"email": EMAIL_RECIPIENT, "name": "Stephen"}],
-        "subject": f"📰 Newsletter LinkedIn W{week_num} - Brouillon pret pour lundi",
+        "subject": f"📰 Pharm'Actus - Actus du {format_date_range_fr(week_start, week_end)} - Brouillon lundi",
         "htmlContent": html,
     }
 
