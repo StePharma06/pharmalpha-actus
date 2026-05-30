@@ -1,6 +1,111 @@
 {
   "articles": [
     {
+      "id": "actu_2026_05_30_4",
+      "date": "2026-05-30",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "Cancer du poumon : Dizal défie J&J avec sa molécule anti-EGFR prometteuse",
+      "resume": "Trois ans après l'échec de Takeda, Dizal Pharma présente à l'ASCO des données encourageantes pour traiter les cancers du poumon EGFR exon 20. Sa petite molécule pourrait concurrencer l'anticorps de Johnson & Johnson en première ligne.",
+      "full_text": "Dizal Pharma relance la bataille contre les cancers du poumon EGFR exon 20. Cette biotech présente à l'ASCO 2026 des résultats prometteurs pour sa molécule, trois ans après que Takeda ait jeté l'éponge avec Exkivity.\n\nRappel du contexte : les mutations EGFR exon 20 représentent 2-3% des cancers pulmonaires non à petites cellules, soit environ 800 nouveaux cas par an en France. Ces tumeurs résistent aux inhibiteurs EGFR classiques comme l'erlotinib ou le gefitinib. Johnson & Johnson domine ce créneau avec son anticorps monoclonal.\n\nLa stratégie de Dizal ? Développer une petite molécule administrable par voie orale, plus pratique qu'une perfusion d'anticorps. Les données de phase 2 montrent une efficacité comparable avec un profil de tolérance intéressant en première ligne de traitement.\n\nCe qui change la donne : contrairement à Exkivity qui avait échoué face au standard de soins, Dizal vise directement la première ligne. L'objectif est de devenir le traitement de référence avant même la chimiothérapie ou l'immunothérapie.\n\nPour les patients français, c'est l'espoir d'un traitement oral efficace dans cette indication orpheline. Si les essais de phase 3 confirment, on pourrait avoir une nouvelle option thérapeutique d'ici 2028-2029.\n\nDemain matin au comptoir ? Garde cette info pour tes patients concernés par le cancer du poumon. Ces avancées en oncologie ciblée redonnent de l'espoir dans des situations jusqu'alors désespérées.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/pharma/after-takedas-defeat-dizal-picks-baton-take-jj-egfr-lung-cancer-subtype",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_05_30_4.jpg",
+      "tags": [
+        "cancer",
+        "poumon",
+        "egfr",
+        "recherche",
+        "oncologie"
+      ]
+    },
+    {
+      "id": "actu_2026_05_30_3",
+      "date": "2026-05-30",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "Wegovy et Mounjaro remboursés dès le 15 juin : enfin l'obésité reconnue",
+      "resume": "Les anti-obésité à base de GLP-1 entrent dans la liste des médicaments remboursés pour l'obésité sévère. Une révolution pour des millions de patients qui n'avaient accès qu'aux régimes et à la chirurgie.",
+      "full_text": "Le 15 juin marque un tournant historique dans la prise en charge de l'obésité en France. Wegovy (sémaglutide) et Mounjaro (tirzépatide) deviennent remboursables sous certaines conditions pour l'obésité sévère.\n\nC'est une victoire pour les 8 millions de Français obèses, dont beaucoup n'avaient que deux options : les régimes (échec dans 95% des cas à long terme) ou la chirurgie bariatrique. Désormais, une troisième voie s'ouvre avec ces agonistes du GLP-1.\n\nLes conditions de remboursement restent strictes : IMC supérieur à 35 avec comorbidités ou IMC supérieur à 40, échec des mesures hygiéno-diététiques, prescription hospitalière initiale. Mais c'est déjà un pas de géant par rapport à l'ancien désert thérapeutique.\n\nPour les patients, c'est l'espoir de perdre 15 à 20% de leur poids corporel. Fini les 600 à 800 euros par mois à débourser de leur poche. L'Assurance Maladie prend enfin le relais sur une pathologie chronique longtemps stigmatisée.\n\nCôté pharmaciens, préparez-vous à un afflux de demandes. Ces médicaments resteront accessibles sans remboursement dans le cadre de leur AMM plus large. Vigilance sur les prescriptions : vérifiez les conditions de prise en charge pour éviter les mauvaises surprises au patient.\n\nDemain matin au comptoir ? Tu vas voir débarquer des patients avec des ordonnances d'endocrino pour du Wegovy remboursé. Vérifie bien la mention \"obésité sévère\" et les codes de prise en charge. L'obésité sort enfin de l'ombre.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/medicament-parapharmacie/medicament/obesite-comment-delivrer-mounjaro-et-wegovy-partir-du-15-juin",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_05_30_3.jpg",
+      "tags": [
+        "obesite",
+        "remboursement",
+        "glp1",
+        "wegovy",
+        "mounjaro"
+      ]
+    },
+    {
+      "id": "actu_2026_05_30_2",
+      "date": "2026-05-30",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "Insuline inhalée : MannKind mise tout sur les enfants pour relancer Afrezza",
+      "resume": "Après plus de 10 ans de galère commerciale, l'insuline inhalée Afrezza obtient enfin son autorisation pédiatrique aux États-Unis. Une dernière chance pour MannKind de percer dans un marché dominé par les stylos.",
+      "full_text": "MannKind vient de décrocher l'extension pédiatrique d'Afrezza, son insuline en poudre inhalée. Après plus d'une décennie d'échecs commerciaux, la biotech californienne espère enfin faire décoller ses ventes.\n\nAfrezza, c'est l'histoire d'une révolution technologique qui n'a jamais trouvé son public. Lancée en 2015 pour les adultes diabétiques de type 1 et 2, cette insuline ultra-rapide par inhalation promettait de remplacer les injections. Sauf que les patients et les médecins n'ont pas suivi.\n\nPourquoi ce flop ? Plusieurs facteurs. D'abord, la FDA a exigé des tests de fonction pulmonaire réguliers. Ensuite, l'assurance santé américaine rechignait à rembourser. Enfin, les diabétiques étaient habitués à leurs stylos et réticents au changement.\n\nLe pari pédiatrique change la donne. Les enfants détestent les piqûres, et les parents sont prêts à tout pour leur éviter la souffrance. L'administration par inhalateur pourrait séduire cette population, surtout avec l'explosion du diabète de type 1 chez les jeunes.\n\nEn France, on n'en est pas encore là. Afrezza n'a toujours pas d'AMM européenne. Mais garde ça dans un coin de ta tête : si ça marche outre-Atlantique, l'EMA pourrait suivre. Et tu auras peut-être un jour des gamins diabétiques qui \"sniffent\" leur insuline au lieu de se piquer.\n\nDemain matin au comptoir ? Rien ne change. Mais surveille l'évolution des dispositifs d'administration. L'innovation en diabétologie, ça passe aussi par le confort d'utilisation.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/pharma/can-pediatric-expansion-finally-boost-sales-inhaled-insulin-afrezza",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/img_actu_2026_05_30_2.jpg",
+      "tags": [
+        "diabete",
+        "pediatrie",
+        "innovation",
+        "fda",
+        "insuline"
+      ]
+    },
+    {
+      "id": "actu_2026_05_30_1",
+      "date": "2026-05-30",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "Seringues Covid : des officines jettent l'éponge, la DGS sous pression",
+      "resume": "Faute de seringues pour vacciner contre le Covid, certaines pharmacies arrêtent la campagne de printemps. Les stocks d'État arrivent à péremption, les grossistes sont en rupture et les officines refusent d'avancer les frais.",
+      "full_text": "La campagne de vaccination Covid de printemps vire au fiasco logistique. Des officines menacent d'arrêter de vacciner par manque de seringues.\n\nLe problème ? Triple peine pour les pharmaciens. Les stocks de seringues fournis par l'État arrivent à péremption. Les grossistes-répartiteurs sont en rupture d'approvisionnement. Et cerise sur le gâteau : quand tu en trouves, c'est à tes frais.\n\nLa profession a saisi la Direction générale de la santé pour une \"solution d'urgence\". Les syndicats réclament des vaccins monodoses distribués via les circuits habituels. Logique : pourquoi se compliquer la vie avec des seringues quand Pfizer fait du prêt-à-injecter ?\n\nCôté terrain, c'est l'incompréhension totale. Tu acceptes de faire une mission de santé publique et on te laisse gérer la logistique comme un grand. Résultat : certains confrères préfèrent jeter l'éponge plutôt que d'avancer 3-4 euros par injection.\n\nLa campagne de printemps, commencée le 20 avril, risque de capoter avant l'été. Pas top pour l'image de la vaccination en pharmacie, alors qu'on vient de décrocher les rappels grippe sans prescription médicale.\n\nDemain matin au comptoir ? Si tu vaccines encore, vérifie tes stocks de seringues. Sinon, prépare-toi à expliquer aux patients pourquoi la pharmacie d'à côté vaccine et pas toi.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/nous-avons-besoin-dune-solution-durgence-faute-de-seringues-certaines-pharmacies-stoppent-la-vaccination-covid",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_05_30_1.jpg",
+      "tags": [
+        "vaccination",
+        "covid",
+        "rupture",
+        "dgs",
+        "logistique"
+      ]
+    },
+    {
+      "id": "lsv_2026_05_30",
+      "date": "2026-05-30",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? La première IRM a scanné... un poivron",
+      "resume": "En 1973, quand Raymond Damadian a voulu tester sa révolutionnaire machine à résonance magnétique, il n'avait pas de patient sous la main. Il a donc glissé un légume dans son prototype, lançant une révolution médicale qui allait changer le diagnostic à jamais.",
+      "full_text": "Picture this : 1973, laboratoire de l'université Stony Brook, New York. Raymond Damadian, médecin et chercheur obstiné, vient de terminer son premier prototype d'IRM après des années de galère et de scepticisme général.\n\nProblème : il faut tester cette machine de 2 tonnes qui ressemble plus à un engin de torture qu'à un outil médical. Damadian n'a pas l'autorisation de scanner des humains, alors il fait avec les moyens du bord. Direction le frigo du labo.\n\nIl en sort un poivron vert parfaitement banal et le glisse dans sa machine. Quarante-cinq minutes plus tard, miracle ! La première image par résonance magnétique de l'histoire s'imprime : on distingue parfaitement l'intérieur du légume, ses différentes textures, sa structure interne.\n\nLe twist ? Cette même technique qu'il venait de tester sur un poivron allait révolutionner le diagnostic médical. Damadian avait compris que les tissus cancéreux réagissaient différemment au champ magnétique que les tissus sains.\n\nTrois ans plus tard, il scannait le premier patient humain : Larry Minkoff, un de ses collègues suffisamment fou pour se glisser dans cette machine expérimentale. L'examen a duré 5 heures pour produire une seule image floue du thorax.\n\nAujourd'hui, ton patient passe une IRM en 30 minutes chrono et repart avec des images d'une précision chirurgicale. Tout ça a commencé avec un poivron qui traînait dans un frigo de labo !",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_05_30.jpg",
+      "tags": [
+        "histoire",
+        "diagnostic",
+        "imagerie",
+        "innovation",
+        "decouverte"
+      ]
+    },
+    {
       "id": "actu_2026_05_29_4",
       "date": "2026-05-29",
       "type": "actu",
@@ -5347,6 +5452,6 @@
       ]
     }
   ],
-  "count": 259,
-  "updated_at": "2026-05-29T04:04:25.806544+02:00"
+  "count": 264,
+  "updated_at": "2026-05-30T04:04:32.390003+02:00"
 }

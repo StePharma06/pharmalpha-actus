@@ -1,0 +1,18 @@
+{
+  "generated_at": "2026-05-30T04:04:26.874217+02:00",
+  "run_date": "2026-05-30",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "Wegovy et Mounjaro remboursés dès le 15 juin : enfin l'obésité reconnue",
+      "resume": "Les anti-obésité à base de GLP-1 entrent dans la liste des médicaments remboursés pour l'obésité sévère. Une révolution pour des millions de patients qui n'avaient accès qu'aux régimes et à la chirurgie.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/medicament-parapharmacie/medicament/obesite-comment-delivrer-mounjaro-et-wegovy-partir-du-15-juin",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    }
+  ]
+}

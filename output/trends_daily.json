@@ -1,8 +1,60 @@
 {
-  "generated_at": "2026-05-29",
-  "window_label": "23 mai — 29 mai 2026",
+  "generated_at": "2026-05-30",
+  "window_label": "24 mai — 30 mai 2026",
   "has_history": true,
   "delta_source": "pytrends_rising",
-  "pathologies": [],
-  "marques": []
+  "pathologies": [
+    {
+      "display": "Fracture de fatigue dos",
+      "delta_label": "+14500%",
+      "trend": "up"
+    },
+    {
+      "display": "Vitamines contre la fatigue",
+      "delta_label": "+11650%",
+      "trend": "up"
+    },
+    {
+      "display": "Teste allergie",
+      "delta_label": "+9800%",
+      "trend": "up"
+    },
+    {
+      "display": "Fourmillement dans les jambes et grosse ",
+      "delta_label": "+8650%",
+      "trend": "up"
+    },
+    {
+      "display": "Kyste ovaire symptôme fatigue",
+      "delta_label": "+7100%",
+      "trend": "up"
+    }
+  ],
+  "marques": [
+    {
+      "display": "Parapharmacie roissy en brie",
+      "delta_label": "+26700%",
+      "trend": "up"
+    },
+    {
+      "display": "Meilleure creme solaire",
+      "delta_label": "+18000%",
+      "trend": "up"
+    },
+    {
+      "display": "Creme solaire bebe 3 mois",
+      "delta_label": "+16700%",
+      "trend": "up"
+    },
+    {
+      "display": "Creme solaire pour chat",
+      "delta_label": "+14200%",
+      "trend": "up"
+    },
+    {
+      "display": "Parapharmacie leclerc beynost",
+      "delta_label": "+11350%",
+      "trend": "up"
+    }
+  ]
 }
