@@ -1,0 +1,48 @@
+{
+  "generated_at": "2026-05-31T04:07:18.497187+02:00",
+  "run_date": "2026-05-31",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_monde",
+      "titre": "ASCO 2026 : Pfizer surpasse J&J avec sa combo Talzenna dans le cancer prostatique",
+      "resume": "La phase 3 de l'association Talzenna-Xtandi élargit les indications face au cancer de la prostate hormono-sensible. Pfizer prend une longueur d'avance sur le PARP inhibiteur Akeega de J&J. Pipeline oncologique qui se densifie.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/pharma/pfizer-one-ups-jj-talzenna-combo-claims-broad-castration-sensitive-prostate-cancer-win",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "Cancer du pancréas : le daraxonrasib multiplie par deux l'espérance de vie",
+      "resume": "Ce nouvel anticancéreux révolutionne la prise en charge de l'un des cancers les plus mortels. Les résultats présentés dimanche à l'ASCO suscitent un espoir inédit pour les patients et leurs familles.",
+      "source": "France Info Santé",
+      "source_url": "https://www.franceinfo.fr/sante/cancer/c-est-une-revolution-pourquoi-le-daraxonrasib-un-nouveau-traitement-contre-le-cancer-du-pancreas-suscite-de-grands-espoirs_8014325.html#xtor=RSS-3-%5Bgeneral%5D",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Mayotte : 171 cas de paludisme ouvrent un marché de prophylaxie de 280k€",
+      "resume": "L'explosion du paludisme à Mayotte (171 cas en 5 mois) relance le marché de la prophylaxie antipaludique et redéfinit les missions officinales en zone tropicale.",
+      "source": "Pharm'Actus",
+      "source_url": "",
+      "confidence_score": 0.7,
+      "warnings": [
+        "Chiffres de marché estimés sur base démographique",
+        "Tarifs TROD et consultations à vérifier dans convention pharmaceutique 2025",
+        "Données de marge sur antipaludiques basées sur coefficients généraux",
+        "FACT-CHECK: 'l'Assurance Maladie finance désormais à 100% les TROD paludisme (15€ l'unité)' → Les TROD paludisme ne sont pas financés par l'Assurance Maladie. Les TROD remboursés sont limités à angine, grippe, COVID-19. Vérifier l'existence d'un TROD paludisme remboursé.",
+        "FACT-CHECK: 'les consultations pharmaceutiques de prévention voyage (25€ l'acte, nouveau depuis 2025)' → Aucune consultation pharmaceutique de prévention voyage n'existe dans la nomenclature. Les entretiens pharmaceutiques sont limités à des pathologies spécifiques (asthme, AOD, etc.). Vérifier l'existence de cette prestation.",
+        "FACT-CHECK: 'Valorise les consultations pharma voyage (25€) nouvellement remboursées' → Même problème que ci-dessus. Cette prestation n'existe pas dans la réglementation française.",
+        "FACT-CHECK: 'coefficient multiplicateur de 2,15 sur la doxycycline, 1,8 sur le Malarone' → Les médicaments remboursables sont soumis au régime de marge réglementaire dégressive, pas à un coefficient multiplicateur fixe. Vérifier si ces médicaments sont hors nomenclature pour justifier une marge libre."
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

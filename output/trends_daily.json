@@ -1,59 +1,59 @@
 {
-  "generated_at": "2026-05-30",
-  "window_label": "24 mai — 30 mai 2026",
+  "generated_at": "2026-05-31",
+  "window_label": "25 mai — 31 mai 2026",
   "has_history": true,
   "delta_source": "pytrends_rising",
   "pathologies": [
     {
+      "display": "Allergie graminées periode",
+      "delta_label": "+20450%",
+      "trend": "up"
+    },
+    {
+      "display": "Saignement de nez et fatigue",
+      "delta_label": "+10000%",
+      "trend": "up"
+    },
+    {
       "display": "Fracture de fatigue dos",
-      "delta_label": "+14500%",
+      "delta_label": "+8150%",
       "trend": "up"
     },
     {
-      "display": "Vitamines contre la fatigue",
-      "delta_label": "+11650%",
+      "display": "Fatigue manque energie",
+      "delta_label": "+6950%",
       "trend": "up"
     },
     {
-      "display": "Teste allergie",
-      "delta_label": "+9800%",
-      "trend": "up"
-    },
-    {
-      "display": "Fourmillement dans les jambes et grosse ",
-      "delta_label": "+8650%",
-      "trend": "up"
-    },
-    {
-      "display": "Kyste ovaire symptôme fatigue",
-      "delta_label": "+7100%",
+      "display": "Est ce que la chaleur fatigue",
+      "delta_label": "+6150%",
       "trend": "up"
     }
   ],
   "marques": [
     {
-      "display": "Parapharmacie roissy en brie",
-      "delta_label": "+26700%",
+      "display": "Complement alimentaire prostate",
+      "delta_label": "+106450%",
       "trend": "up"
     },
     {
-      "display": "Meilleure creme solaire",
-      "delta_label": "+18000%",
+      "display": "Parapharmacie carre senart",
+      "delta_label": "+16300%",
       "trend": "up"
     },
     {
-      "display": "Creme solaire bebe 3 mois",
-      "delta_label": "+16700%",
+      "display": "Parapharmacie parly 2",
+      "delta_label": "+13600%",
       "trend": "up"
     },
     {
-      "display": "Creme solaire pour chat",
-      "delta_label": "+14200%",
+      "display": "Comment appliquer un serum visage",
+      "delta_label": "+13600%",
       "trend": "up"
     },
     {
-      "display": "Parapharmacie leclerc beynost",
-      "delta_label": "+11350%",
+      "display": "Parapharmacie forum des halles",
+      "delta_label": "+10800%",
       "trend": "up"
     }
   ]

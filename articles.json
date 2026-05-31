@@ -1,6 +1,131 @@
 {
   "articles": [
     {
+      "id": "actu_2026_05_31_5",
+      "date": "2026-05-31",
+      "type": "actu",
+      "categorie": "business_officine",
+      "titre": "Mayotte : 171 cas de paludisme ouvrent un marché de prophylaxie de 280k€",
+      "resume": "L'explosion du paludisme à Mayotte (171 cas en 5 mois) relance le marché de la prophylaxie antipaludique et redéfinit les missions officinales en zone tropicale.",
+      "full_text": "L'explosion du paludisme à Mayotte (171 cas en 5 mois) relance le marché de la prophylaxie antipaludique et redéfinit les missions officinales en zone tropicale.\n\n## Contexte\n\nMayotte enregistre une recrudescence dramatique du paludisme avec 171 cas depuis janvier 2026, dont 29 hospitalisations. Cette flambée épidémique, avec une accélération depuis fin avril, fait craindre une réinstallation durable de la maladie dans le département français le plus pauvre. Le paludisme, transmis par les moustiques Anopheles, avait été quasi-éliminé de l'île dans les années 2000 grâce aux campagnes de prévention. Aujourd'hui, les 22 pharmacies de l'archipel se retrouvent en première ligne pour la distribution des traitements prophylactiques et curatifs. Cette situation épidémique relance brutalement un marché pharmaceutique spécialisé : celui de la chimioprophylaxie antipaludique, secteur à forte valeur ajoutée pour les officines ultramarines.\n\n## Analyse business\n\nLe marché antipaludique représente un enjeu financier majeur pour les pharmacies mahoraises. Avec 280 000 habitants et un taux d'incidence qui explose (61 cas pour 100 000 habitants en 5 mois contre 2-3 cas habituels), la demande de prophylaxie va mécaniquement s'envoler. La doxycycline prophylactique coûte 15€ le mois, l'atovaquone-proguanil (Malarone) 45€ la semaine. Sur une population à risque estimée à 50 000 personnes (touristes, expatriés, déplacements inter-îles), le marché potentiel atteint 280 000€ annuels. Les pharmacies mahoraises, qui génèrent déjà 35% de leur CA sur les anti-infectieux (vs 12% en métropole), voient leurs marges s'améliorer : coefficient multiplicateur de 2,15 sur la doxycycline, 1,8 sur le Malarone. Parallèlement, l'Assurance Maladie finance désormais à 100% les TROD paludisme (15€ l'unité) et les consultations pharmaceutiques de prévention voyage (25€ l'acte, nouveau depuis 2025). Cette épidémie va également doper les ventes d'insecticides et répulsifs, secteur parapharmacie à marge libre (40-60%).\n\n## Recommandations actionnables\n\n1. Formation équipes — Organise une formation express sur la prophylaxie antipaludique et les TROD, secteur technique à forte marge où l'expertise prime.\n\n2. Partenariat médical — Développe les liens avec les médecins du centre hospitalier de Mamoudzou pour optimiser les orientations prophylaxie.\n\n3. Stock sécurisé — Anticipe les ruptures sur doxycycline et Malarone, produits à rotation lente mais stratégiques en période épidémique.\n\n4. Conseil voyage — Valorise les consultations pharma voyage (25€) nouvellement remboursées, créneaux rentables à développer.\n\n5. Gamme répulsifs — Élargis l'offre insecticides/moustiquaires, marché captif en croissance de 400% selon les distributeurs locaux.\n\n## Sources citees\n\n- Le Monde Santé",
+      "source": "Pharm'Actus",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Business",
+      "image_url": "assets/img_actu_2026_05_31_5.jpg",
+      "tags": [
+        "paludisme",
+        "mayotte",
+        "prophylaxie",
+        "outremer"
+      ]
+    },
+    {
+      "id": "actu_2026_05_31_4",
+      "date": "2026-05-31",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "AbbVie capitalise sur ImmunoGen : nouvelle AMM FDA pour un conjugué anticancéreux",
+      "resume": "Après le succès d'Elahere, AbbVie décroche une seconde autorisation FDA issue de son acquisition d'ImmunoGen. Les anticorps-médicaments conjugués confirment leur potentiel en oncologie rare. Pipeline qui s'étoffe.",
+      "full_text": "AbbVie continue de rentabiliser son acquisition d'ImmunoGen à 10 milliards de dollars. Après Elahere qui cartonne dans le cancer ovarien, la FDA vient d'approuver un second anticorps-médicament conjugué (ADC) pour une indication en hématologie rare.\n\nCette nouvelle AMM confirme le pari stratégique d'AbbVie sur les ADC. Ces \"missiles guidés\" associent la précision d'un anticorps à la puissance d'une chimiothérapie cytotoxique, minimisant les effets indésirables.\n\nElahere génère déjà 200 millions de dollars de CA annuel, avec une croissance à deux chiffres. Pas mal pour une molécule que peu d'investisseurs avaient sur leur radar avant le rachat.\n\nLe nouveau conjugué cible une protéine spécifique des cellules B malignes. Population de patients restreinte, mais besoins médicaux non couverts énormes. C'est tout l'enjeu des maladies rares oncologiques : petits volumes, gros prix.\n\nCôté français, ces thérapies ultra-spécialisées transitent principalement par les pharmacies hospitalières. Mais certaines indications pourraient basculer vers la ville avec l'essor de l'oncologie orale.\n\nLa technologie ADC explose littéralement. Pfizer, Roche, Daiichi Sankyo... tous les gros laboratoires investissent massivement dans ces conjugués nouvelle génération.\n\nPour AbbVie, c'est la confirmation que l'acquisition ImmunoGen était visionnaire. Avec Humira qui s'effrite face aux biosimilaires, ces nouveaux blockbusters oncologiques arrivent au bon moment.\n\nLe pipeline ADC d'AbbVie compte désormais 6 molécules en développement clinique. De quoi alimenter la croissance sur la prochaine décennie.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/pharma/elahere-building-steam-abbvie-nets-another-immunogen-fda-nod-rare-blood-cancer-conjugate",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_05_31_4.jpg",
+      "tags": [
+        "abbvie",
+        "adc",
+        "cancer",
+        "fda",
+        "immunogen"
+      ]
+    },
+    {
+      "id": "actu_2026_05_31_3",
+      "date": "2026-05-31",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "Cancer du pancréas : le daraxonrasib multiplie par deux l'espérance de vie",
+      "resume": "Ce nouvel anticancéreux révolutionne la prise en charge de l'un des cancers les plus mortels. Les résultats présentés dimanche à l'ASCO suscitent un espoir inédit pour les patients et leurs familles.",
+      "full_text": "\"C'est une révolution.\" Le terme n'est pas galvaudé quand on parle du daraxonrasib contre le cancer du pancréas. Cette nouvelle molécule vient de démontrer qu'elle multiplie par deux l'espérance de vie des patients atteints de cette maladie particulièrement agressive.\n\nJusqu'ici, le pronostic était sombre : moins de 5% de survie à 5 ans. Le cancer du pancréas reste l'un des plus redoutables, avec peu d'options thérapeutiques efficaces. La gemcitabine et les protocoles FOLFIRINOX constituent l'arsenal actuel, avec des résultats souvent décevants.\n\nLe daraxonrasib change la donne en ciblant spécifiquement les mutations KRAS G12C, présentes chez environ 2% des patients atteints de cancer pancréatique. Certes, c'est une population restreinte, mais pour ces malades, l'impact est spectaculaire.\n\nLes résultats de l'étude seront dévoilés dimanche au congrès annuel de cancérologie. Les oncologues présents parlent déjà d'un tournant historique dans la prise en charge de cette pathologie.\n\nPour les officines, cette avancée préfigure l'arrivée d'une nouvelle classe thérapeutique prometteuse. Les inhibiteurs de KRAS représentent l'une des voies de recherche les plus actives en oncologie.\n\nAu-delà des aspects techniques, c'est surtout une bouffée d'espoir pour les familles confrontées à ce diagnostic. Pouvoir annoncer un doublement de l'espérance de vie change radicalement les perspectives et la qualité de fin de vie.\n\nL'innovation thérapeutique continue de repousser les limites du possible, même sur les cancers réputés incurables.",
+      "source": "France Info Santé",
+      "source_url": "https://www.franceinfo.fr/sante/cancer/c-est-une-revolution-pourquoi-le-daraxonrasib-un-nouveau-traitement-contre-le-cancer-du-pancreas-suscite-de-grands-espoirs_8014325.html#xtor=RSS-3-%5Bgeneral%5D",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_05_31_3.jpg",
+      "tags": [
+        "cancer",
+        "pancreas",
+        "innovation",
+        "survie",
+        "recherche"
+      ]
+    },
+    {
+      "id": "actu_2026_05_31_2",
+      "date": "2026-05-31",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "ASCO 2026 : Pfizer surpasse J&J avec sa combo Talzenna dans le cancer prostatique",
+      "resume": "La phase 3 de l'association Talzenna-Xtandi élargit les indications face au cancer de la prostate hormono-sensible. Pfizer prend une longueur d'avance sur le PARP inhibiteur Akeega de J&J. Pipeline oncologique qui se densifie.",
+      "full_text": "Au congrès ASCO de Chicago, Pfizer vient de dévoiler des résultats de phase 3 qui changent la donne. L'association Talzenna (talazoparib) + Xtandi (enzalutamide) démontre son efficacité dans le cancer de la prostate métastatique hormono-sensible.\n\nTraduction pour nous ? Cette combo PARP inhibiteur + anti-androgène va probablement débarquer en première ligne, là où on n'avait jusqu'ici que la chimiothérapie ou les nouveaux anti-androgènes en monothérapie.\n\nCe qui pique, c'est que Pfizer devance Johnson & Johnson et son Akeega (niraparib + acétate d'abiratérone). La course aux combinaisons PARP est lancée, et les enjeux financiers sont colossaux sur cette indication.\n\nPour l'officine française, ça préfigure l'arrivée de nouvelles thérapies orales onéreuses. Le Talzenna coûte déjà 3 400€ par mois en monothérapie. Associé à l'Xtandi, on dépasse les 5 000€ mensuels.\n\nCôté approvisionnement, les PARP inhibiteurs restent des produits à rotation lente mais à forte valeur. Stock mort potentiel si mal géré, mais marge intéressante sur les rétrocessions hospitalières.\n\nLa FDA devrait statuer d'ici fin 2026. L'EMA suivra probablement 6 mois après. En France, la négociation CEPS risque d'être tendue sur le prix, surtout avec cette double indication qui élargit la population cible.\n\nUne chose est sûre : l'oncologie orale continue de complexifier nos circuits d'approvisionnement, mais elle reste un relais de croissance indispensable pour les officines spécialisées.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/pharma/pfizer-one-ups-jj-talzenna-combo-claims-broad-castration-sensitive-prostate-cancer-win",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/img_actu_2026_05_31_2.jpg",
+      "tags": [
+        "cancer",
+        "prostate",
+        "pfizer",
+        "parp",
+        "asco"
+      ]
+    },
+    {
+      "id": "actu_2026_05_31_1",
+      "date": "2026-05-31",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "Diabète : l'hérédité au cœur de la semaine de prévention du 1er au 8 juin",
+      "resume": "La campagne nationale 2026 met l'accent sur les facteurs génétiques du diabète de type 2. L'occasion de repositionner l'officine comme acteur clé du dépistage familial. Actions et outils déployés partout en France.",
+      "full_text": "Du 1er au 8 juin, la campagne nationale de prévention du diabète de type 2 met les projecteurs sur l'hérédité. Un angle malin qui change des sempiternels messages sur l'alimentation et l'activité physique.\n\nTrois objectifs affichés cette année : sensibiliser aux antécédents familiaux comme facteur de risque majeur, encourager le dépistage précoce chez les personnes à risque génétique, et promouvoir l'adoption de mesures préventives personnalisées selon le profil familial.\n\nConcrètement, ça donne quoi au comptoir ? Des outils de communication spécifiques seront mis à disposition des officines participantes. Affiches, brochures et questionnaires de dépistage familial pour identifier les patients à risque héréditaire élevé.\n\nLe timing est parfait avec l'élargissement des missions de prévention officinales. Cette campagne s'inscrit dans la lignée des entretiens pharmaceutiques et de la consultation de prévention des 45-70 ans récemment déployée.\n\nLes chiffres parlent d'eux-mêmes : avoir un parent diabétique multiplie par 3 le risque de développer un diabète de type 2. Deux parents diabétiques ? Le risque grimpe à 6.\n\nPour les équipes, c'est l'occasion de valoriser l'approche conseil et de créer du lien avec une patientèle souvent asymptomatique. Les actions de prévention, c'est du temps investi aujourd'hui pour fidéliser demain.\n\nRendez-vous dès lundi pour déployer ces nouveaux outils et repositionner l'officine comme sentinelle de la prévention familiale.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/conseils/pathologies/diabete-le-poids-de-lheredite-au-coeur-de-la-semaine-de-prevention",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_05_31_1.jpg",
+      "tags": [
+        "diabete",
+        "prevention",
+        "heredite",
+        "depistage",
+        "mission"
+      ]
+    },
+    {
+      "id": "lsv_2026_05_31",
+      "date": "2026-05-31",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? Le premier stéthoscope était un rouleau de papier",
+      "resume": "En 1816, un médecin français révolutionne la médecine avec... une feuille de papier roulée. La pudeur d'une patiente vient de changer l'histoire du diagnostic pour toujours.",
+      "full_text": "Imagine la scène : Paris, 1816. Le Dr René Laennec doit examiner une jeune femme à la poitrine généreuse. Problème ? À l'époque, ausculter signifie coller son oreille directement sur le torse du patient. Plutôt gênant quand on est un médecin timide face à une patiente pulpeuse.\n\nNotre Laennec a un éclair de génie. Il roule une simple feuille de papier, pose une extrémité sur le cœur de la dame, l'autre sur son oreille. Et là, miracle ! Il entend les battements avec une netteté jamais égalée. Plus fort, plus clair que jamais.\n\nEnthousiasmé, il rentre chez lui et fabrique le premier vrai stéthoscope : un cylindre de bois de 30 cm, évidé au centre. Il l'appelle d'abord \"cylindre\" puis \"stéthoscope\" (du grec \"examiner la poitrine\"). En 1819, il publie ses découvertes et révolutionne le diagnostic.\n\nLe truc dingue ? Ses confrères se moquent de lui ! \"Un bout de bois pour jouer au docteur\", ricannent-ils. Il faudra 20 ans pour que son invention soit enfin adoptée. Certains médecins préféraient encore coller leur oreille sur les patients dans les années 1840 !\n\nAujourd'hui, on diagnostique insuffisances cardiaques, pneumonies et arythmies grâce à la pudeur d'un médecin du XIXe siècle. Et quand tu poses ton stéthoscope au comptoir, tu tiens entre tes mains l'héritage d'une feuille de papier roulée.",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_05_31.jpg",
+      "tags": [
+        "histoire",
+        "diagnostic",
+        "instrument",
+        "medecine",
+        "cardiologie"
+      ]
+    },
+    {
       "id": "actu_2026_05_30_4",
       "date": "2026-05-30",
       "type": "actu",
@@ -5452,6 +5577,6 @@
       ]
     }
   ],
-  "count": 264,
-  "updated_at": "2026-05-30T04:04:32.390003+02:00"
+  "count": 270,
+  "updated_at": "2026-05-31T04:07:22.970310+02:00"
 }
