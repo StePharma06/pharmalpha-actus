@@ -60,7 +60,7 @@ def _build_trends_site_block(data):
         return ""
 
     patho_list  = data.get("pathologies", [])
-    marque_list = data.get("marques", [])
+    marque_list = data.get("soins", [])
     if not patho_list and not marque_list:
         return ""
 
@@ -129,14 +129,14 @@ def _build_trends_site_block(data):
         f'<thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;">'
         f'<th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;'
         f'text-transform:uppercase;letter-spacing:0.07em;text-align:left;">'
-        f'Besoin / Recherche patient</th>'
+        f'Pathologie / Symptôme</th>'
         f'<th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;'
-        f'text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Hausse</th>'
+        f'text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th>'
         f'<th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;'
         f'text-transform:uppercase;letter-spacing:0.07em;text-align:left;'
-        f'border-left:2px solid #e5e7eb;">Produit / Marque para</th>'
+        f'border-left:2px solid #e5e7eb;">Soin & Bien-être</th>'
         f'<th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;'
-        f'text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Hausse</th>'
+        f'text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th>'
         f'</tr></thead>'
         f'<tbody>\n{rows_html}</tbody>'
         f'</table></div>'
@@ -158,7 +158,7 @@ def _build_trends_email_block(data):
         return ""
 
     patho_list  = data.get("pathologies", [])
-    marque_list = data.get("marques", [])
+    marque_list = data.get("soins", [])
     if not patho_list and not marque_list:
         return ""
 
@@ -210,14 +210,14 @@ def _build_trends_email_block(data):
         f'<table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation">'
         f'<tr style="background:#f9fafb;">'
         f'<th style="padding:6px 12px;font-size:10px;font-weight:700;color:#9ca3af;'
-        f'text-align:left;text-transform:uppercase;letter-spacing:0.06em;">Pathologie</th>'
+        f'text-align:left;text-transform:uppercase;letter-spacing:0.06em;">Pathologie / Symptôme</th>'
         f'<th style="padding:6px 8px;font-size:10px;font-weight:700;color:#9ca3af;'
-        f'text-align:right;text-transform:uppercase;">Evol.</th>'
+        f'text-align:right;text-transform:uppercase;">Tendance</th>'
         f'<th style="padding:6px 12px;font-size:10px;font-weight:700;color:#9ca3af;'
         f'text-align:left;text-transform:uppercase;letter-spacing:0.06em;'
-        f'border-left:2px solid #e5e7eb;">Marque para</th>'
+        f'border-left:2px solid #e5e7eb;">Soin & Bien-être</th>'
         f'<th style="padding:6px 8px;font-size:10px;font-weight:700;color:#9ca3af;'
-        f'text-align:right;text-transform:uppercase;">Evol.</th>'
+        f'text-align:right;text-transform:uppercase;">Tendance</th>'
         f'</tr>'
         f'{rows_html}'
         f'</table></td></tr>'

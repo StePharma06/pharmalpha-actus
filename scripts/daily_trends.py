@@ -64,13 +64,15 @@ SEEDS_PATHO = [
     "peau soin",              # dermatologie / cosmetique
 ]
 
-# Seeds PRODUITS / MARQUES para
-# Meme logique : fort volume + pertinence pharmacie/para.
-SEEDS_MARQUE = [
-    "parapharmacie",          # seed #1 : fort volume
-    "complement alimentaire", # categorie large, grosse recherche
-    "creme solaire",          # saisonnier, tres fort en ete
-    "serum visage",           # cosmetique tendance
+# Seeds SOINS / BIEN-ETRE (2e colonne du radar)
+# Focus sur les categories OTC / complements / bien-etre.
+# Seeds differents de SEEDS_PATHO pour diversifier les resultats.
+SEEDS_SOIN = [
+    "sommeil",               # insomnie, troubles du sommeil
+    "stress anxiete",        # bien-etre mental
+    "digestion",             # gastro, ballonnements
+    "douleur",               # antidouleur, anti-inflammatoire OTC
+    "immunite",              # defenses immunitaires
 ]
 
 # ── Filtrage bruit ────────────────────────────────────────────────────
@@ -105,15 +107,18 @@ def _clean_display(query: str) -> str:
 
 
 def _format_value(val) -> tuple:
-    """Retourne (delta_label, trend) depuis la valeur pytrends."""
+    """Retourne (delta_label, trend) depuis la valeur pytrends — indicateurs lisibles."""
     s = str(val)
     if s == "Breakout":
-        return ("Nouveau !", "up")
+        return ("🔥 Nouveau", "up")
     try:
         n = int(s)
-        return (f"+{n}%", "up")
+        if n >= 500:
+            return ("↑↑ Fort", "up")
+        else:
+            return ("↑ Hausse", "up")
     except (ValueError, TypeError):
-        return (s, "up")
+        return ("↑ Hausse", "up")
 
 
 # ── Decouverte rising ─────────────────────────────────────────────────
@@ -231,12 +236,12 @@ def main():
         print(f"\nPause {SLEEP_BATCHES}s (rate limit pytrends)...")
         time.sleep(SLEEP_BATCHES)
 
-    # ── Batch 2 : produits / marques ─────────────────────────────────
-    print(f"\n[2/2] Seeds produits/marques ({len(SEEDS_MARQUE)} seeds)...")
-    marque_top = discover_rising(SEEDS_MARQUE, pt, "marque")
-    print(f"  -> {len(marque_top)} termes remontes")
-    for m in marque_top:
-        print(f"     {m['display']:38s} {m['delta_label']}")
+    # ── Batch 2 : soins / bien-etre ──────────────────────────────────
+    print(f"\n[2/2] Seeds soins/bien-etre ({len(SEEDS_SOIN)} seeds)...")
+    soin_top = discover_rising(SEEDS_SOIN, pt, "soin")
+    print(f"  -> {len(soin_top)} termes remontes")
+    for s in soin_top:
+        print(f"     {s['display']:38s} {s['delta_label']}")
 
     # ── Sauvegarde ────────────────────────────────────────────────────
     output = {
@@ -245,7 +250,7 @@ def main():
         "has_history":  True,   # pytrends rising = deja relatif, pas besoin d'historique
         "delta_source": "pytrends_rising",
         "pathologies":  patho_top,
-        "marques":      marque_top,
+        "soins":        soin_top,
     }
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
