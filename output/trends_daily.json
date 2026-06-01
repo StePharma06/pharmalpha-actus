@@ -1,59 +1,33 @@
 {
-  "generated_at": "2026-05-31",
-  "window_label": "25 mai — 31 mai 2026",
+  "generated_at": "2026-06-01",
+  "window_label": "26 mai — 1 juin 2026",
   "has_history": true,
   "delta_source": "pytrends_rising",
-  "pathologies": [
+  "pathologies": [],
+  "soins": [
     {
-      "display": "Allergie graminées periode",
-      "delta_label": "+20450%",
+      "display": "Azinc immunite",
+      "delta_label": "↑↑ Fort",
       "trend": "up"
     },
     {
-      "display": "Saignement de nez et fatigue",
-      "delta_label": "+10000%",
+      "display": "Complément alimentaire digestion",
+      "delta_label": "↑↑ Fort",
       "trend": "up"
     },
     {
-      "display": "Fracture de fatigue dos",
-      "delta_label": "+8150%",
+      "display": "Eau gazeuse digestion",
+      "delta_label": "↑↑ Fort",
       "trend": "up"
     },
     {
-      "display": "Fatigue manque energie",
-      "delta_label": "+6950%",
+      "display": "Vinaigre de cidre digestion",
+      "delta_label": "↑↑ Fort",
       "trend": "up"
     },
     {
-      "display": "Est ce que la chaleur fatigue",
-      "delta_label": "+6150%",
-      "trend": "up"
-    }
-  ],
-  "marques": [
-    {
-      "display": "Complement alimentaire prostate",
-      "delta_label": "+106450%",
-      "trend": "up"
-    },
-    {
-      "display": "Parapharmacie carre senart",
-      "delta_label": "+16300%",
-      "trend": "up"
-    },
-    {
-      "display": "Parapharmacie parly 2",
-      "delta_label": "+13600%",
-      "trend": "up"
-    },
-    {
-      "display": "Comment appliquer un serum visage",
-      "delta_label": "+13600%",
-      "trend": "up"
-    },
-    {
-      "display": "Parapharmacie forum des halles",
-      "delta_label": "+10800%",
+      "display": "Calmosine digestion bébé",
+      "delta_label": "↑↑ Fort",
       "trend": "up"
     }
   ]

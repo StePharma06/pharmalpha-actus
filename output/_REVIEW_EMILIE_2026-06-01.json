@@ -1,0 +1,39 @@
+{
+  "generated_at": "2026-06-01T04:09:21.047935+02:00",
+  "run_date": "2026-06-01",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_monde",
+      "titre": "Cancer du poumon : Lilly cartonne avec Retevmo en adjuvant",
+      "resume": "Dans l'essai Libretto-432, Retevmo réduit de 83% le risque de récidive en traitement adjuvant chez les patients avec fusion RET. Des résultats qui vont redéfinir la prise en charge précoce.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/pharma/asco-lilly-ties-retevmo-dramatic-outcomes-early-stage-lung-cancer-rare-ret-biomarker",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "GLP-1 : effet anticancer confirmé, un marché de 100 milliards en vue",
+      "resume": "Les anti-obésité GLP-1 réduisent aussi les métastases selon une étude présentée à Chicago. Un double effet qui pourrait révolutionner leur prescription.",
+      "source": "Pharm'Actus",
+      "source_url": "",
+      "confidence_score": 0.8,
+      "warnings": [
+        "Chiffres de CA par officine estimés selon moyennes GERS",
+        "Forfait 50€ d'entretien pharmaceutique encore en phase de test",
+        "Calendrier de remboursement LFSS 2027 non définitivement voté",
+        "FACT-CHECK: 'Avec le remboursement à 65% prévu dans la LFSS 2027' → Le taux de remboursement de 65% et l'année 2027 dans la LFSS ne sont pas vérifiables. Aucune confirmation officielle de ces modalités spécifiques pour les GLP-1.",
+        "FACT-CHECK: 'Le prix public de Mounjaro (289€ pour 4 stylos) et Wegovy (320€) génère une marge réglementaire de 6,85€ par boîte' → La marge réglementaire de 6,85€ par boîte doit être vérifiée selon le barème officiel des marges pharmacie en vigueur pour ces prix.",
+        "FACT-CHECK: 'l'honoraire de dispensation (1€ par ligne)' → L'honoraire de dispensation n'est pas de 1€ par ligne. Il convient de vérifier le montant exact selon la convention pharmaceutique en vigueur.",
+        "FACT-CHECK: 'l'Assurance Maladie teste un forfait de 50€ par patient pour le suivi des GLP-1, calqué sur les anticoagulants' → Cette information sur un forfait de 50€ en test n'est pas vérifiable officiellement. Les conditions d'un éventuel entretien pharmaceutique spécialisé pour les GLP-1 ne sont pas encore définies réglementairement.",
+        "FACT-CHECK: 'Avec 500 000 patients attendus sous GLP-1 remboursés d'ici fin 2027, cela représente 25 millions d'euros d'honoraires à répartir entre les 21 000 officines' → Calcul basé sur des hypothèses non vérifiées (forfait 50€ non confirmé, nombre de patients estimatif).",
+        "FACT-CHECK: 'un suivi mensuel réglementaire' → Il n'existe pas encore de cadre réglementaire définissant un suivi mensuel obligatoire pour les GLP-1 en officine."
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

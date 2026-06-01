@@ -1,6 +1,127 @@
 {
   "articles": [
     {
+      "id": "actu_2026_06_01_5",
+      "date": "2026-06-01",
+      "type": "actu",
+      "categorie": "business_officine",
+      "titre": "GLP-1 : effet anticancer confirmé, un marché de 100 milliards en vue",
+      "resume": "Les anti-obésité GLP-1 réduisent aussi les métastases selon une étude présentée à Chicago. Un double effet qui pourrait révolutionner leur prescription.",
+      "full_text": "Les anti-obésité GLP-1 réduisent aussi les métastases selon une étude présentée à Chicago. Un double effet qui pourrait révolutionner leur prescription.\n\n## Contexte\n\nLe congrès annuel de l'ASCO (American Society of Clinical Oncology) à Chicago vient de révéler une découverte majeure : les médicaments GLP-1 comme Mounjaro (tirzépatide) et Wegovy (sémaglutide) auraient un effet protecteur contre le développement des métastases cancéreuses. Cette révélation intervient pile au moment où la France s'apprête à rembourser ces traitements pour l'obésité. Le marché mondial des GLP-1 pèse déjà 42 milliards de dollars en 2024 selon Goldman Sachs, et pourrait atteindre 100 milliards d'ici 2030. Novo Nordisk (Ozempic, Wegovy) et Eli Lilly (Mounjaro) se partagent 95% de ce marché en explosion. En France, 8,5 millions d'adultes sont en situation d'obésité (IMC>30), soit 17% de la population selon l'INSERM. Le remboursement imminent de ces traitements à 300-400€ par mois va transformer la donne économique pour les officines.\n\n## Analyse business\n\nCette double indication obésité-cancer change complètement la perspective business. Actuellement, les GLP-1 représentent moins de 2% du CA moyen des pharmacies françaises, soit environ 4 000€ annuels par officine selon l'GERS. Avec le remboursement à 65% prévu dans la LFSS 2027, ce chiffre pourrait bondir à 15 000-20 000€ par officine d'ici 2028. L'effet anticancer révélé à Chicago élargit considérablement la population cible : aux 8,5 millions d'obèses s'ajoutent potentiellement 3,8 millions de Français avec antécédents de cancer selon l'Institut national du cancer. Le prix public de Mounjaro (289€ pour 4 stylos) et Wegovy (320€) génère une marge réglementaire de 6,85€ par boîte pour l'officine, soit 82€ annuels par patient traité en continu. Mais c'est l'honoraire de dispensation (1€ par ligne) et surtout les entretiens pharmaceutiques spécialisés qui pourraient exploser : l'Assurance Maladie teste un forfait de 50€ par patient pour le suivi des GLP-1, calqué sur les anticoagulants. Avec 500 000 patients attendus sous GLP-1 remboursés d'ici fin 2027, cela représente 25 millions d'euros d'honoraires à répartir entre les 21 000 officines.\n\n## Recommandations actionnables\n\n1. Formation équipes — Organise dès maintenant une formation sur les GLP-1 et leurs nouveaux effets : obésité, diabète et prévention cancer. L'UTIP propose un module de 7h validant DPC.\n\n2. Partenariat endocrino — Noue des contacts avec les endocrinologues et oncologues locaux pour les orientations de patients. Le parcours de soins sera obligatoire.\n\n3. Espace conseil dédié — Aménage un espace confidentiel pour les entretiens GLP-1 : ces patients nécessiteront un suivi mensuel réglementaire.\n\n4. Stock sécurisé — Anticipe les ruptures avec un stock de sécurité de 15 jours minimum. Novo Nordisk annonce des tensions d'approvisionnement jusqu'en 2028.\n\n5. Outils de suivi — Investis dans un logiciel de suivi patient compatible avec Mon Espace Santé pour tracer les effets indésirables et l'observance.\n\n## Sources citees\n\n- France Info Sante",
+      "source": "Pharm'Actus",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Business",
+      "image_url": "assets/img_actu_2026_06_01_5.jpg",
+      "tags": [
+        "glp1",
+        "obesite",
+        "cancer",
+        "remboursement"
+      ]
+    },
+    {
+      "id": "actu_2026_06_01_4",
+      "date": "2026-06-01",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "Anticorps bispécifiques : Revolution Medicines garde son avance sur RAS",
+      "resume": "À l'ASCO, Revolution Medicines confirme son leadership sur les inhibiteurs RAS malgré la concurrence qui se réveille. Leurs données pancréas de début 2026 restent la référence du domaine.",
+      "full_text": "L'ASCO 2026 bruisse de discussions autour des inhibiteurs RAS, et Revolution Medicines compte bien garder sa couronne. Leurs données pancréas publiées plus tôt cette année restent la référence absolue du secteur.\n\nPourquoi RAS fait fantasmer ? Ces mutations touchent 30% des cancers humains, notamment pancréas (90%), côlon (50%) et poumon (30%). Longtemps considérées comme \"non-druggables\", ces cibles s'ouvrent enfin aux thérapies ciblées.\n\nRevolution Medicines a ouvert la voie avec des résultats spectaculaires dans le cancer du pancréas métastatique. On parle de doublement de survie dans certaines populations. Leurs molécules RMC-6236 et RMC-6291 ciblent différentes mutations KRAS.\n\nLa concurrence s'organise : Amgen pousse son LUMAKRAS (sotorasib), Mirati développe adagrasib, et les big pharma investissent massivement. Mais RevMed garde son avance technologique sur les inhibiteurs de nouvelle génération.\n\nCôté timeline, les premières AMM sont attendues vers 2027-2028. Prix prévisible ? Autour de 10-15 000€ par mois, dans la lignée des autres thérapies ciblées oncologiques. Impact majeur attendu en cancérologie.\n\nPour l'officine française, ça veut dire nouvelles molécules à haute valeur ajoutée, nouveaux protocoles de surveillance, et formation des équipes sur ces mécanismes d'action révolutionnaires. L'oncologie de précision continue sa mutation.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/biotech/asco-revolution-medicines-confident-ras-leadership-rivals-square",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_06_01_4.jpg",
+      "tags": [
+        "ras",
+        "cancer",
+        "recherche",
+        "innovation"
+      ]
+    },
+    {
+      "id": "actu_2026_06_01_3",
+      "date": "2026-06-01",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "55% des fumeurs veulent arrêter : ton comptoir peut faire la différence",
+      "resume": "À l'occasion de la Journée mondiale sans tabac, rappel d'une évidence : 4 millions de fumeurs quotidiens ont disparu en 10 ans. Ton officine reste un maillon clé pour accompagner les 55% qui veulent décrocher.",
+      "full_text": "Hier, c'était la Journée mondiale sans tabac et les chiffres donnent le sourire. En dix ans, 4 millions de fumeurs quotidiens ont raccroché. Mais 18% des Français fument encore chaque jour, soit environ 12 millions de personnes.\n\nLa bonne nouvelle ? 55% d'entre eux veulent arrêter. C'est là que ton comptoir devient stratégique. Tu as tous les outils : substituts nicotiniques remboursés, Champix de retour, et surtout ton expertise pour personnaliser l'accompagnement.\n\nL'entretien pharmaceutique tabac est enfin rémunéré depuis 2023 : 30€ pour l'entretien initial, puis 15€ pour chaque suivi. Pas révolutionnaire niveau tarif, mais ça reconnaît officiellement ton rôle dans le sevrage.\n\nConcrètement au comptoir ? Ne pas se contenter de vendre des patchs. Évaluer la dépendance, adapter le dosage, prévenir des effets du manque, programmer les rendez-vous de suivi. Et rappeler que l'arrêt reste bénéfique même après des années de tabagisme.\n\nLe tabac tue 75 000 personnes par an en France, c'est la première cause de mortalité évitable. Chaque patient qui arrête grâce à ton accompagnement, c'est une victoire concrète de santé publique.\n\nL'objectif gouvernemental ? Passer sous la barre des 20% de fumeurs d'ici 2032. Avec 55% de fumeurs motivés pour arrêter, l'objectif semble atteignable si l'accompagnement suit.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/nouvelles-missions/prevention/tabac-55-des-fumeurs-veulent-arreter-lofficine-peut-les-aider",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_06_01_3.jpg",
+      "tags": [
+        "tabac",
+        "sevrage",
+        "prevention",
+        "accompagnement"
+      ]
+    },
+    {
+      "id": "actu_2026_06_01_2",
+      "date": "2026-06-01",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "Cancer du poumon : Lilly cartonne avec Retevmo en adjuvant",
+      "resume": "Dans l'essai Libretto-432, Retevmo réduit de 83% le risque de récidive en traitement adjuvant chez les patients avec fusion RET. Des résultats qui vont redéfinir la prise en charge précoce.",
+      "full_text": "Lilly vient de frapper fort à l'ASCO avec des résultats \"dramatiques\" pour Retevmo (selpercatinib) dans le cancer du poumon précoce. On parle d'une réduction de 83% du risque de progression ou de décès en adjuvant.\n\nL'essai Libretto-432 a testé Retevmo chez des patients avec cancer du poumon à fusion RET opéré. Cette mutation concerne 1 à 2% des cancers du poumon non à petites cellules, mais c'est un biomarqueur majeur pour cibler le traitement.\n\nPourquoi c'est révolutionnaire ? Jusqu'à présent, ces patients n'avaient que la chimiothérapie classique en adjuvant. Avec Retevmo, on passe dans l'ère de la thérapie ciblée post-opératoire.\n\nCôté officine française, Retevmo est déjà disponible en métastatique sous ATU depuis 2021, puis AMM européenne en 2022. Prix de vente hospitalier autour de 15 000€ par mois de traitement. Si l'extension en adjuvant est validée, ça va exploser les volumes.\n\nL'impact pour toi ? Ces patients vont arriver avec des prescriptions de sortie d'hospitalisation. Il faut maîtriser les effets indésirables (diarrhées, hypertension, fatigue) et les interactions médicamenteuses avec les IPP notamment.\n\nCes résultats positionnent Lilly en leader sur le créneau RET, devant Roche avec Gavreto. La course aux biomarqueurs rare s'intensifie et transforme la cancérologie en médecine de précision.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/pharma/asco-lilly-ties-retevmo-dramatic-outcomes-early-stage-lung-cancer-rare-ret-biomarker",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/img_actu_2026_06_01_2.jpg",
+      "tags": [
+        "retevmo",
+        "cancer",
+        "lilly",
+        "ret"
+      ]
+    },
+    {
+      "id": "actu_2026_06_01_1",
+      "date": "2026-06-01",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "Substitution : les excipients à effets notoires remettent tout en jeu",
+      "resume": "Les EEN compliquent ta vie au comptoir mais c'est la règle : si le princeps en contient, tu peux substituer par un générique avec les mêmes EEN. Si le princeps en est exempt, direction un générique sans EEN.",
+      "full_text": "Les excipients à effets notoires te donnent des sueurs froides au moment de la substitution ? Normal, c'est un piège réglementaire où beaucoup se plantent.\n\nLa règle officielle : si le médicament prescrit ne contient pas d'EEN, tu dois choisir une spécialité sans aucun EEN. Si le princeps en contient un ou plusieurs, tu peux substituer par un générique avec les mêmes excipients à risque.\n\nConcrètement, ça change quoi demain matin ? Fini de substituer à l'aveugle. Il faut d'abord vérifier la composition en excipients sur le RCP ou Thériaque. Un Doliprane sans aspartame ne peut pas être remplacé par un générique qui en contient.\n\nL'enjeu n'est pas que réglementaire. Ces excipients peuvent provoquer des réactions chez tes patients sensibles : troubles digestifs avec le lactose, réactions allergiques avec certains colorants, problèmes chez les diabétiques avec les sucres.\n\nLe piège du quotidien ? Les laboratoires ne mettent pas toujours en avant ces excipients sur l'emballage. Il faut creuser dans la notice ou les bases de données. Et expliquer au patient pourquoi tu ne peux pas lui donner \"n'importe quel générique\".\n\nRésultat : plus de temps passé par substitution, mais une dispensation sécurisée qui protège ton patient et ton officine d'un éventuel effet indésirable évitable.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/therapeutique/medicaments/mieux-delivrer/les-effets-notoires-des-excipients",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_06_01_1.jpg",
+      "tags": [
+        "substitution",
+        "excipients",
+        "generique",
+        "dispensation"
+      ]
+    },
+    {
+      "id": "lsv_2026_06_01",
+      "date": "2026-06-01",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? La première opération au laser a été testée sur l'œil d'un lapin",
+      "resume": "1960 : Theodore Maiman invente le laser. Quelques mois plus tard, un ophtalmologiste audacieux pointe ce rayon mystérieux vers la rétine d'un lapin. L'ère de la chirurgie laser venait de naître.",
+      "full_text": "Mai 1960. Theodore Maiman allume le premier laser de l'histoire dans son laboratoire californien. Un faisceau de lumière rouge intense jaillit du cristal de rubis. Personne ne sait encore à quoi ça peut servir.\n\nSix mois plus tard, Charles Campbell, ophtalmologiste à l'Institut d'ophtalmologie de Londres, a une idée folle. Et si ce rayon pouvait cautériser la rétine sans ouvrir l'œil ? Il installe un laser dans son cabinet et commence ses expériences sur des lapins anesthésiés.\n\nLe 1er février 1961, premier essai. Le faisceau traverse la cornée, l'humeur vitrée, et frappe précisément la rétine du lapin. Miracle : les vaisseaux sanguins se soudent instantanément, sans aucune incision ! Campbell vient d'inventer la photocoagulation rétinienne.\n\nMais voici le twist : Campbell était daltonien. Il ne voyait pas le rouge de son laser ! Il travaillait entièrement au jugé, guidé par ses assistants qui lui décrivaient ce qu'ils observaient au fond de l'œil.\n\nSix mois plus tard, il traite son premier patient humain : un homme avec un décollement de rétine. Succès total. En 1962, Campbell opère déjà 200 patients par an avec son laser.\n\nAujourd'hui, tu vois passer des patients traités au laser pour leurs diabète, leur myopie, leurs rides. Tout ça a commencé avec un ophtalmologiste daltonien et un lapin cobaye dans un cabinet londonien !",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_06_01.jpg",
+      "tags": [
+        "histoire",
+        "chirurgie",
+        "laser",
+        "ophtalmologie",
+        "decouverte"
+      ]
+    },
+    {
       "id": "actu_2026_05_31_5",
       "date": "2026-05-31",
       "type": "actu",
@@ -5577,6 +5698,6 @@
       ]
     }
   ],
-  "count": 270,
-  "updated_at": "2026-05-31T04:07:22.970310+02:00"
+  "count": 276,
+  "updated_at": "2026-06-01T04:09:23.619099+02:00"
 }
