@@ -69,10 +69,10 @@ def _build_trends_site_block(data):
 
     def _delta_style(trend):
         if trend == "up":
-            return "color:#15803d;font-weight:700;"
+            return "color:#15803d;font-weight:700;white-space:nowrap;"
         if trend == "down":
-            return "color:#dc2626;font-weight:700;"
-        return "color:#9ca3af;font-weight:600;"
+            return "color:#dc2626;font-weight:700;white-space:nowrap;"
+        return "color:#9ca3af;font-weight:600;white-space:nowrap;"
 
     rows_count = max(len(patho_list), len(marque_list))
     rows_html  = ""
@@ -98,11 +98,9 @@ def _build_trends_site_block(data):
             f'</tr>\n'
         )
 
-    delta_source = data.get("delta_source", "")
     disclaimer = (
         '<p style="margin:10px 0 0;font-size:11px;color:#9ca3af;font-style:italic;">'
-        '* Evol. S&#8209;1 : estimation via fenetre 14j — affinage a J+7 (historique).</p>'
-        if delta_source == "proxy_14d_minus_7d" else ""
+        'Indice de tendance : intensite de hausse Google Trends (non comparable a un volume absolu).</p>'
     )
 
     return (

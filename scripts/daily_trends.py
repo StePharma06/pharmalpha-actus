@@ -37,9 +37,10 @@ except ImportError:
 
 # ── Config ────────────────────────────────────────────────────────────
 TOP_N          = 5     # lignes dans le tableau
+SLEEP_BEFORE_BATCH1 = 20   # pause avant le 1er batch (evite 429 immediate)
 SLEEP_BATCHES  = 68    # secondes entre les 2 appels pytrends (evite 429)
 SLEEP_RETRY    = 130   # pause si premier 429
-MAX_RETRIES    = 2
+MAX_RETRIES    = 3     # augmente de 2 à 3 pour robustesse
 # today 1-m = 30 jours glissants, granularite quotidienne.
 # Beaucoup plus de points de donnees que "now 7-d" → related_queries fonctionnel.
 # "Rising" = requetes dont la croissance est la plus forte sur ce mois.
@@ -107,16 +108,22 @@ def _clean_display(query: str) -> str:
 
 
 def _format_value(val) -> tuple:
-    """Retourne (delta_label, trend) depuis la valeur pytrends — indicateurs lisibles."""
+    """Retourne (delta_label, trend) depuis la valeur pytrends.
+
+    Affiche l'indice brut pytrends (intensite de la hausse) avec une fleche :
+      - Breakout → 🔥 Nouveau (terme en explosion, hors echelle)
+      - Entier    → ↑ {valeur} (ex: ↑ 3 420 — plus c'est haut, plus ca monte fort)
+    Note : l'indice n'est PAS un nb de recherches absolu, c'est un score de
+    croissance relative Google Trends (plus eleve = hausse plus intense).
+    """
     s = str(val)
     if s == "Breakout":
         return ("🔥 Nouveau", "up")
     try:
         n = int(s)
-        if n >= 500:
-            return ("↑↑ Fort", "up")
-        else:
-            return ("↑ Hausse", "up")
+        # Formatage avec espace comme separateur de milliers (lisibilite FR)
+        formatted = f"{n:,}".replace(",", " ")  # espace fine insecable
+        return (f"↑ {formatted}", "up")
     except (ValueError, TypeError):
         return ("↑ Hausse", "up")
 
@@ -223,6 +230,10 @@ def main():
     print("-" * 60)
 
     pt = TrendReq(hl="fr-FR", tz=60)
+
+    # ── Pause initiale (evite 429 immediate au demarrage CI) ──────────
+    print(f"Pause initiale {SLEEP_BEFORE_BATCH1}s (anti rate-limit)...")
+    time.sleep(SLEEP_BEFORE_BATCH1)
 
     # ── Batch 1 : besoins / pathologies ──────────────────────────────
     print(f"[1/2] Seeds besoins patients ({len(SEEDS_PATHO)} seeds)...")
