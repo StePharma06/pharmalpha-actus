@@ -67,10 +67,15 @@ def _build_orphan_stub_html(article_id: str, titre_raw: str, resume_raw: str, og
         "dateModified": date_published,
         "author": {
             "@type": "Person",
+            "@id": "https://pharmalpha.fr/#stephen",
             "name": "Stephen Robert",
-            "url": "https://pharmalpha.fr/stephen-robert",
             "jobTitle": "Docteur en Pharmacie",
-            "sameAs": ["https://www.linkedin.com/in/stephen-robert-pharmalpha/"]
+            "url": "https://pharmalpha.fr/stephen-robert",
+            "image": "https://pharmalpha.fr/assets/stephen-portrait.jpg",
+            "sameAs": [
+                "https://www.wikidata.org/wiki/Q139997965",
+                "https://www.linkedin.com/in/stephen-robert-pharmalpha/"
+            ]
         },
         "publisher": {
             "@type": "Organization",
