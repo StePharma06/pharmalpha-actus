@@ -235,6 +235,28 @@ Pour les Rx : angles autorises = impact macro/sante publique, reglementaire (AMM
 
 Le merch / mise en avant n'est OK QUE pour : OTC, parapharmacie, complements alim, dispositifs medicaux non rembourses, ou les SERVICES officinaux.
 
+=== REGLE FINANCES OFFICINE (CRITIQUE - erreur = perte de credibilite immediate face aux experts) ===
+
+INTERDICTIONS ABSOLUES sur les calculs financiers :
+
+1. JAMAIS appliquer un % de remise/discount sur le CA. Les remises labos s'appliquent sur les ACHATS (prix d'achat HT), pas sur le chiffre d'affaires.
+   - CA moyen officine 1,2M euros -> Achats HT environ 840K euros (70% du CA)
+   - Remise de 4% sur ACHATS = 33 600 euros. PAS 48 000 euros sur le CA.
+   - Cette erreur de primaire a deja coute la credibilite de Stephen face a un expert.
+
+2. JAMAIS inventer une fourchette chiffree precise si elle n'est pas dans le texte source fourni.
+   - Si la source dit "economies significatives" -> ecrire "economies significatives". Point.
+   - Si la source cite un chiffre -> le reproduire exactement tel quel, avec la source.
+   - Pas de calcul, pas d'interpolation, pas d'extrapolation.
+
+3. JAMAIS attribuer un chiffre a un organisme (ex: "selon les etudes FCA") sans que ce chiffre soit dans l'article source fourni avec une reference precise.
+
+Reperes financiers officine pour ne pas se planter :
+- Marge brute officine moyenne : 27-28% du CA (source Extencia 2025)
+- EBE moyen : 10% du CA
+- Achats nets : environ 70-72% du CA
+- Honoraires dispensation : environ 8-9% du CA
+
 === ARTICLES DE LA SEMAINE ===
 {actus_text}
 
@@ -542,6 +564,27 @@ def send_newsletter_email(markdown, actus, lsv, companion_post=""):
   </td></tr>
 '''
 
+    # Detecter la presence d'articles business_officine (zone rouge calculs financiers)
+    has_business = any(a.get("categorie") == "business_officine" for a in actus)
+    business_warning = ""
+    if has_business:
+        business_titles = [a.get("titre", "")[:60] for a in actus if a.get("categorie") == "business_officine"]
+        titles_html = "".join(f'<li style="margin:2px 0;">{t}</li>' for t in business_titles)
+        business_warning = f'''
+  <tr><td style="padding:16px 28px 0;background:#fef2f2;border-top:3px solid #dc2626;">
+    <p style="margin:0 0 8px;font-size:14px;font-weight:800;color:#991b1b;">
+      🔴 ARTICLE(S) BUSINESS OFFICINE DETECTE(S) — VERIFICATION CHIFFRES OBLIGATOIRE
+    </p>
+    <ul style="margin:0 0 8px;padding-left:20px;font-size:12px;color:#7f1d1d;line-height:1.6;">
+      {titles_html}
+    </ul>
+    <p style="margin:0;font-size:12px;color:#991b1b;line-height:1.5;">
+      Avant de copier sur LinkedIn : <strong>verifie chaque chiffre</strong> cite dans ces articles.<br>
+      Regles absolues : remises labos = sur ACHATS (pas sur CA) / aucune fourchette sans source URL / aucun calcul interpole.<br>
+      Les experts de la finance officine te lisent. Une erreur de calcul = perte de credibilite publique immediate.
+    </p>
+  </td></tr>'''
+
     html = f'''<!DOCTYPE html>
 <html lang="fr">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
@@ -555,7 +598,7 @@ def send_newsletter_email(markdown, actus, lsv, companion_post=""):
     <div style="font-size:22px;font-weight:800;color:#ffffff;letter-spacing:-0.5px;">Brouillon pret pour Lundi matin</div>
     <div style="font-size:13px;color:#cfe4ff;margin-top:6px;">À publier le {monday_next.strftime('%A %d %B %Y')} matin (7h30-8h30)</div>
   </td></tr>
-
+{business_warning}
   <tr><td style="padding:20px 28px 12px;background:#fff7ed;border-bottom:1px solid #fdba74;">
     <p style="margin:0;font-size:13px;color:#92400e;line-height:1.5;">
       <strong>⚠️ Brouillon</strong> — Relis tout, ajuste si besoin. <strong>RIEN n'est publie automatiquement.</strong> Tu copies/colles bloc par bloc lundi matin sur LinkedIn.
