@@ -179,7 +179,7 @@ def generate_newsletter_content(actus, lsv):
             "titre": a.get("titre", ""),
             "resume": a.get("resume", ""),
             "categorie": a.get("badge_label", ""),
-            "full_text": a.get("full_text", "")[:1500],
+            "full_text": a.get("full_text", "")[:4000],
             "source": a.get("source", "Pharm'Actus"),
             "source_url": a.get("source_url", ""),
             "pharmactus_url": f"{SITE_URL}/articles/{a.get('id', '')}.html" if a.get("id") else SITE_URL,
@@ -564,27 +564,6 @@ def send_newsletter_email(markdown, actus, lsv, companion_post=""):
   </td></tr>
 '''
 
-    # Detecter la presence d'articles business_officine (zone rouge calculs financiers)
-    has_business = any(a.get("categorie") == "business_officine" for a in actus)
-    business_warning = ""
-    if has_business:
-        business_titles = [a.get("titre", "")[:60] for a in actus if a.get("categorie") == "business_officine"]
-        titles_html = "".join(f'<li style="margin:2px 0;">{t}</li>' for t in business_titles)
-        business_warning = f'''
-  <tr><td style="padding:16px 28px 0;background:#fef2f2;border-top:3px solid #dc2626;">
-    <p style="margin:0 0 8px;font-size:14px;font-weight:800;color:#991b1b;">
-      🔴 ARTICLE(S) BUSINESS OFFICINE DETECTE(S) — VERIFICATION CHIFFRES OBLIGATOIRE
-    </p>
-    <ul style="margin:0 0 8px;padding-left:20px;font-size:12px;color:#7f1d1d;line-height:1.6;">
-      {titles_html}
-    </ul>
-    <p style="margin:0;font-size:12px;color:#991b1b;line-height:1.5;">
-      Avant de copier sur LinkedIn : <strong>verifie chaque chiffre</strong> cite dans ces articles.<br>
-      Regles absolues : remises labos = sur ACHATS (pas sur CA) / aucune fourchette sans source URL / aucun calcul interpole.<br>
-      Les experts de la finance officine te lisent. Une erreur de calcul = perte de credibilite publique immediate.
-    </p>
-  </td></tr>'''
-
     html = f'''<!DOCTYPE html>
 <html lang="fr">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
@@ -598,7 +577,7 @@ def send_newsletter_email(markdown, actus, lsv, companion_post=""):
     <div style="font-size:22px;font-weight:800;color:#ffffff;letter-spacing:-0.5px;">Brouillon pret pour Lundi matin</div>
     <div style="font-size:13px;color:#cfe4ff;margin-top:6px;">À publier le {monday_next.strftime('%A %d %B %Y')} matin (7h30-8h30)</div>
   </td></tr>
-{business_warning}
+
   <tr><td style="padding:20px 28px 12px;background:#fff7ed;border-bottom:1px solid #fdba74;">
     <p style="margin:0;font-size:13px;color:#92400e;line-height:1.5;">
       <strong>⚠️ Brouillon</strong> — Relis tout, ajuste si besoin. <strong>RIEN n'est publie automatiquement.</strong> Tu copies/colles bloc par bloc lundi matin sur LinkedIn.
