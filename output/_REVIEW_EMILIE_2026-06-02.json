@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-06-02T04:07:18.271439+02:00",
+  "run_date": "2026-06-02",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Smic +2,41% : 10 coefficients de la grille salariale rattrapés",
+      "resume": "La hausse mécanique du Smic au 1er juin bouleverse la grille salariale officinale. Dix coefficients se retrouvent sous le nouveau plancher à 1 767 euros. Les équipes vont négocier des revalorisations.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/grille-des-salaires-10-coefficients-rattrapes-par-la-hausse-du-smic",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "ALBEY étend sa gamme désensibilisation : le marché des venins explose",
+      "resume": "Stallergenes Greer ajoute deux nouvelles références ALBEY à base de venin de guêpe polistes. Un marché de niche mais rentable pour l'officine.",
+      "source": "Pharm'Actus",
+      "source_url": "",
+      "confidence_score": 0.7,
+      "warnings": [
+        "Chiffres marché désensibilisation estimés",
+        "Parts de marché Stallergenes à vérifier",
+        "Données progression consultations allergologie approximatives",
+        "FACT-CHECK: 'marge officinale standard sur médicament remboursé à 65%' → Formulation imprécise : il faut distinguer la marge officinale (fixée par arrêté selon le prix fabricant HT) du taux de remboursement par l'Assurance Maladie (65%). Ces deux éléments sont indépendants et la formulation suggère à tort un lien direct.",
+        "FACT-CHECK: 'Propose des entretiens pharmaceutiques pour optimiser l'observance, facturable 15 euros par l'Assurance Maladie' → Montant à vérifier : les tarifs des entretiens pharmaceutiques sont fixés par arrêté et peuvent varier selon le type d'entretien. Le montant de 15 euros doit être vérifié au regard de la réglementation en vigueur.",
+        "FACT-CHECK: 'Une cure complète coûte entre 800 et 1 200 euros sur 3 ans, soit un CA moyen de 350 euros par patient et par an pour la pharmacie' → Calcul de marge à vérifier : le chiffre d'affaires pharmacie ne peut pas être déduit directement du coût total du traitement sans connaître précisément les prix fabricant HT et l'application du barème de marge officinale."
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

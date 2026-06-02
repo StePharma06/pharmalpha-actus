@@ -1,33 +1,59 @@
 {
-  "generated_at": "2026-06-01",
-  "window_label": "26 mai — 1 juin 2026",
+  "generated_at": "2026-06-02",
+  "window_label": "27 mai — 2 juin 2026",
   "has_history": true,
   "delta_source": "pytrends_rising",
-  "pathologies": [],
+  "pathologies": [
+    {
+      "display": "Fatigue oculaire que faire",
+      "delta_label": "↑ 16 650",
+      "trend": "up"
+    },
+    {
+      "display": "Tension basse fatigue",
+      "delta_label": "↑ 14 400",
+      "trend": "up"
+    },
+    {
+      "display": "Allergie bouton moustique",
+      "delta_label": "↑ 10 200",
+      "trend": "up"
+    },
+    {
+      "display": "Monocytes élevés et fatigue",
+      "delta_label": "↑ 8 950",
+      "trend": "up"
+    },
+    {
+      "display": "Est ce que la chaleur fatigue",
+      "delta_label": "↑ 7 100",
+      "trend": "up"
+    }
+  ],
   "soins": [
     {
       "display": "Azinc immunite",
-      "delta_label": "↑↑ Fort",
+      "delta_label": "↑ 68 400",
       "trend": "up"
     },
     {
-      "display": "Complément alimentaire digestion",
-      "delta_label": "↑↑ Fort",
-      "trend": "up"
-    },
-    {
-      "display": "Eau gazeuse digestion",
-      "delta_label": "↑↑ Fort",
+      "display": "Chaleur et digestion",
+      "delta_label": "↑ 67 350",
       "trend": "up"
     },
     {
       "display": "Vinaigre de cidre digestion",
-      "delta_label": "↑↑ Fort",
+      "delta_label": "↑ 36 500",
       "trend": "up"
     },
     {
-      "display": "Calmosine digestion bébé",
-      "delta_label": "↑↑ Fort",
+      "display": "Fabien olicard sommeil",
+      "delta_label": "↑ 27 600",
+      "trend": "up"
+    },
+    {
+      "display": "Massage ventre digestion",
+      "delta_label": "↑ 26 800",
       "trend": "up"
     }
   ]
