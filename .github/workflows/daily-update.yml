@@ -11,7 +11,25 @@ permissions:
   id-token: write
 
 jobs:
+  check-day:
+    runs-on: ubuntu-latest
+    outputs:
+      skip: ${{ steps.day-check.outputs.skip }}
+    steps:
+      - id: day-check
+        run: |
+          DAY=$(date -u +%u)   # 1=lundi ... 7=dimanche
+          if [ "$DAY" = "7" ]; then
+            echo "skip=true"  >> $GITHUB_OUTPUT
+            echo "Dimanche detecte — envoi suspendu (regle Stephen)"
+          else
+            echo "skip=false" >> $GITHUB_OUTPUT
+            echo "Jour ouvrable ($DAY/7) — pipeline actif"
+          fi
+
   update:
+    needs: check-day
+    if: needs.check-day.outputs.skip != 'true'
     runs-on: ubuntu-latest
     outputs:
       has_changes: ${{ steps.commit.outputs.has_changes }}
@@ -59,7 +77,8 @@ jobs:
           path: .
 
   deploy:
-    needs: update
+    needs: [check-day, update]
+    if: needs.check-day.outputs.skip != 'true'
     runs-on: ubuntu-latest
     concurrency:
       group: pages
