@@ -1,0 +1,47 @@
+{
+  "generated_at": "2026-06-03T04:07:33.363376+02:00",
+  "run_date": "2026-06-03",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "OSyS se généralise : le décret arrive pour révolutionner l'orientation des patients",
+      "resume": "Le ministère de la Santé vient de transmettre le projet de décret pour généraliser OSyS partout en France. Fini l'expérimentation : le dispositif d'orientation dans le système de soins devient du droit commun. Une révolution pour ton rôle de premier recours.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/premier-recours-un-projet-de-decret-pour-la-generalisation-dosys",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "Cancer du pancréas : le daraxonrasib double la survie des patients métastatiques",
+      "resume": "Enfin une lueur d'espoir contre ce cancer redoutable ! Le daraxonrasib vient de démontrer qu'il double quasi la survie médiane : 13,2 mois contre 6,7 mois. Cette thérapie ciblée s'attaque directement à la mutation KRAS présente chez 90% des patients.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/therapeutique/medicaments/recherche-et-innovation/cancer-du-pancreas-le-daraxonrasib-double-la-duree-de-survie-des-patients",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Permanence de soins : 40,2% de médecins participent, quelle répercussion officine ?",
+      "resume": "Seulement 40,2% des généralistes participent à la PDSA en 2025. Impact direct sur l'afflux nocturne et week-end en officine.",
+      "source": "Pharm'Actus",
+      "source_url": "",
+      "confidence_score": 0.7,
+      "warnings": [
+        "Montant exact indemnité garde 2026 à vérifier",
+        "Nombre exact pharmacies de garde simultanées à confirmer",
+        "Estimation surcoût 8000€ basée sur extrapolation",
+        "FACT-CHECK: 'L'impact financier officinal est double : d'une part, une augmentation mécanique de l'activité garde (rémunérée forfaitairement 304€ par pharmacie selon l'arrêté du 4 mai 2012)' → Le montant de 304€ et la référence à l'arrêté du 4 mai 2012 sont à vérifier. La rémunération des gardes pharmaceutiques relève de conventions départementales variables et a évolué depuis 2012.",
+        "FACT-CHECK: 'Cette situation génère un surcoût opérationnel estimé à 8 000€ annuels par pharmacie (personnel, stocks d'urgence, formation), sans compensation tarifaire équivalente' → Affirmation de surcoût chiffrée sans source ni base réglementaire. Les pharmaciens de garde sont rémunérés selon des barèmes conventionnels départementaux.",
+        "FACT-CHECK: 'Documenter précisément les consultations détournées vers l'officine pour négocier une revalorisation de l'indemnité garde' → Confusion sur les mécanismes de négociation. Les indemnités de garde pharmaceutique sont fixées par conventions départementales, pas par négociation individuelle basée sur l'activité médicale détournée."
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

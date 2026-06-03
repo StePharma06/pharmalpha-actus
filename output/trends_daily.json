@@ -1,59 +1,59 @@
 {
-  "generated_at": "2026-06-02",
-  "window_label": "27 mai — 2 juin 2026",
+  "generated_at": "2026-06-03",
+  "window_label": "28 mai — 3 juin 2026",
   "has_history": true,
   "delta_source": "pytrends_rising",
   "pathologies": [
     {
-      "display": "Fatigue oculaire que faire",
-      "delta_label": "↑ 16 650",
+      "display": "Allergie au nickel",
+      "delta_label": "↑ 29 650",
       "trend": "up"
     },
     {
-      "display": "Tension basse fatigue",
-      "delta_label": "↑ 14 400",
+      "display": "Arret tabac fatigue",
+      "delta_label": "↑ 12 650",
       "trend": "up"
     },
     {
-      "display": "Allergie bouton moustique",
-      "delta_label": "↑ 10 200",
+      "display": "Vitamines contre la fatigue",
+      "delta_label": "↑ 8 750",
       "trend": "up"
     },
     {
-      "display": "Monocytes élevés et fatigue",
-      "delta_label": "↑ 8 950",
+      "display": "Fatigue manque energie",
+      "delta_label": "↑ 7 550",
       "trend": "up"
     },
     {
-      "display": "Est ce que la chaleur fatigue",
-      "delta_label": "↑ 7 100",
+      "display": "Pourquoi la chaleur fatigue",
+      "delta_label": "↑ 6 650",
       "trend": "up"
     }
   ],
   "soins": [
     {
       "display": "Azinc immunite",
-      "delta_label": "↑ 68 400",
+      "delta_label": "↑ 512 100",
       "trend": "up"
     },
     {
-      "display": "Chaleur et digestion",
-      "delta_label": "↑ 67 350",
+      "display": "Immunite diplomatique",
+      "delta_label": "↑ 47 650",
       "trend": "up"
     },
     {
-      "display": "Vinaigre de cidre digestion",
-      "delta_label": "↑ 36 500",
+      "display": "Cerise digestion",
+      "delta_label": "↑ 29 400",
       "trend": "up"
     },
     {
       "display": "Fabien olicard sommeil",
-      "delta_label": "↑ 27 600",
+      "delta_label": "↑ 28 900",
       "trend": "up"
     },
     {
-      "display": "Massage ventre digestion",
-      "delta_label": "↑ 26 800",
+      "display": "Digestion trop rapide",
+      "delta_label": "↑ 28 000",
       "trend": "up"
     }
   ]
