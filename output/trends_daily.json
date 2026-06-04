@@ -1,59 +1,59 @@
 {
-  "generated_at": "2026-06-03",
-  "window_label": "28 mai — 3 juin 2026",
+  "generated_at": "2026-06-04",
+  "window_label": "29 mai — 4 juin 2026",
   "has_history": true,
   "delta_source": "pytrends_rising",
   "pathologies": [
     {
+      "display": "Quelle vitamine pour la fatigue",
+      "delta_label": "↑ 15 900",
+      "trend": "up"
+    },
+    {
+      "display": "Fatigue chronique que faire",
+      "delta_label": "↑ 13 950",
+      "trend": "up"
+    },
+    {
+      "display": "Fracture de fatigue pied",
+      "delta_label": "↑ 12 250",
+      "trend": "up"
+    },
+    {
+      "display": "Fatigue oculaire que faire",
+      "delta_label": "↑ 11 350",
+      "trend": "up"
+    },
+    {
       "display": "Allergie au nickel",
-      "delta_label": "↑ 29 650",
-      "trend": "up"
-    },
-    {
-      "display": "Arret tabac fatigue",
-      "delta_label": "↑ 12 650",
-      "trend": "up"
-    },
-    {
-      "display": "Vitamines contre la fatigue",
-      "delta_label": "↑ 8 750",
-      "trend": "up"
-    },
-    {
-      "display": "Fatigue manque energie",
-      "delta_label": "↑ 7 550",
-      "trend": "up"
-    },
-    {
-      "display": "Pourquoi la chaleur fatigue",
-      "delta_label": "↑ 6 650",
+      "delta_label": "↑ 10 750",
       "trend": "up"
     }
   ],
   "soins": [
     {
-      "display": "Azinc immunite",
-      "delta_label": "↑ 512 100",
+      "display": "Immunite innee",
+      "delta_label": "↑ 491 850",
       "trend": "up"
     },
     {
-      "display": "Immunite diplomatique",
-      "delta_label": "↑ 47 650",
+      "display": "La digestion cm1",
+      "delta_label": "↑ 68 450",
       "trend": "up"
     },
     {
-      "display": "Cerise digestion",
-      "delta_label": "↑ 29 400",
+      "display": "Vinaigre de cidre digestion",
+      "delta_label": "↑ 57 750",
       "trend": "up"
     },
     {
-      "display": "Fabien olicard sommeil",
-      "delta_label": "↑ 28 900",
+      "display": "Tisane pour la digestion",
+      "delta_label": "↑ 35 600",
       "trend": "up"
     },
     {
-      "display": "Digestion trop rapide",
-      "delta_label": "↑ 28 000",
+      "display": "Immunite cellulaire",
+      "delta_label": "↑ 32 200",
       "trend": "up"
     }
   ]
