@@ -1,6 +1,131 @@
 {
   "articles": [
     {
+      "id": "actu_2026_06_05_5",
+      "date": "2026-06-05",
+      "type": "actu",
+      "categorie": "business_officine",
+      "titre": "Substitution des DM : un marché de 6Md€ en jeu pour ton officine",
+      "resume": "L'arrêté sur la substitution des dispositifs médicaux traîne depuis 3 ans. Enjeu : optimiser tes marges sur un segment qui pèse 6 milliards d'euros.",
+      "full_text": "L'arrêté sur la substitution des dispositifs médicaux traîne depuis 3 ans. Enjeu : optimiser tes marges sur un segment qui pèse 6 milliards d'euros.\n\n## Contexte\n\nTrois ans après le vote de la loi autorisant les pharmaciens à substituer les dispositifs médicaux, l'arrêté d'application est toujours en cours de rédaction. Cette substitution, sur le modèle des génériques, permettrait aux officines de proposer des DM équivalents mais potentiellement plus rentables. Le marché français des DM vendus en officine représente environ 6 milliards d'euros annuels, soit près de 20% du CA moyen d'une pharmacie. La HAS vient de rendre un avis favorable avec réserves, mais pharmaciens et industriels restent divisés sur les modalités. Les fabricants craignent une guerre des prix, tandis que les pharmaciens y voient un levier d'optimisation de leurs marges, actuellement bridées par l'absence de liberté de choix fournisseur.\n\n## Analyse business\n\nL'enjeu financier est colossal pour ta rentabilité. Sur les DM remboursés, ta marge est plafonnée : 35% sur la tranche jusqu'à 150€, puis dégressif. Sur un fauteuil roulant à 800€, tu gagnes 162€. Avec la substitution, tu pourrais choisir un équivalent à 650€ et garder une marge similaire tout en économisant 150€ à l'Assurance Maladie. Le segment orthopédie-maintien à domicile représente 45% du marché DM officinal (2,7Md€). Tes concurrents directs - Bastide, Coloplast Store - appliquent déjà des stratégies d'optimisation sur leurs DM non remboursés. Les industriels redoutent une baisse de 15-20% des prix comme observée sur les génériques. Pour toi, c'est l'opportunité d'augmenter ton taux de marge DM de 28% actuellement à 32-35%, soit 15 000€ supplémentaires par an sur une officine moyenne. La résistance vient des gros fabricants (Medtronic, Abbott) qui dominent certains segments avec des marges confortables.\n\n## Recommandations actionnables\n\n1. Anticiper la réglementation — Identifie dès maintenant tes fournisseurs DM alternatifs sur les segments rentables (orthèses, pansements, matériel respiratoire). 2. Négocier tes conditions — Renforce ton pouvoir de négociation avec tes grossistes actuels en mettant en avant la future concurrence par substitution. 3. Former ton équipe — Maîtrise les équivalences thérapeutiques pour conseiller efficacement tes patients sans perdre en qualité de service. 4. Digitaliser ta gestion — Investis dans un logiciel de gestion DM qui intégrera les futures tables de substitution dès leur publication. 5. Sécuriser juridiquement — Prépare tes protocoles de traçabilité et d'information patient pour être conforme dès l'entrée en vigueur.\n\n## Sources citees\n\n- Le Quotidien du Pharmacien",
+      "source": "Pharm'Actus",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Business",
+      "image_url": "assets/img_actu_2026_06_05_5.jpg",
+      "tags": [
+        "dispositifs-medicaux",
+        "substitution",
+        "marges-officine",
+        "reglementation"
+      ]
+    },
+    {
+      "id": "actu_2026_06_05_4",
+      "date": "2026-06-05",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "CAR-T : Gilead étend son réseau de centres avec Cencora",
+      "resume": "Le partenariat entre Gilead et Cencora va faciliter l'accès aux thérapies CAR-T Yescarta et Tecartus. Une logistique complexe qui se structure pour démocratiser ces traitements révolutionnaires.",
+      "full_text": "Les CAR-T sortent de leur niche hospitalière. Gilead vient de signer un accord avec Cencora pour élargir le réseau de centres capables d'administrer Yescarta et Tecartus.\n\nCes thérapies géniques révolutionnaires reprogramment les lymphocytes T du patient pour attaquer son cancer. Efficacité spectaculaire, mais logistique de cauchemar : prélèvement, transport, modification génétique, réinfusion.\n\nCencora, géant américain de la distribution pharmaceutique, va coordonner cette chaîne ultra-complexe. L'objectif ? Passer de quelques centres experts à un réseau élargi accessible à plus de patients.\n\nLes CAR-T représentent l'avenir de l'oncologie personnalisée. Mais leur prix (plusieurs centaines de milliers d'euros) et leur complexité logistique freinent leur diffusion. Ce type de partenariat change la donne.\n\nEn France, on compte encore sur les doigts d'une main les centres autorisés. Mais la dynamique américaine va influencer l'Europe. L'EMA pousse pour simplifier les procédures d'agrément.\n\nLa supply chain des CAR-T nécessite une expertise pointue : conservation à -80°C, traçabilité patient unique, délais critiques. Un métier à part entière.\n\nAu comptoir demain : tu ne verras pas ces traitements, mais leurs patients oui. Préparation cutanée, prémédications, surveillance post-traitement... Un nouveau pan de l'accompagnement pharmaceutique s'ouvre.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/pharma/deal-cencora-gilead-expands-car-t-treatment-center-network",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_06_05_4.jpg",
+      "tags": [
+        "car-t",
+        "gilead",
+        "therapie",
+        "oncologie",
+        "logistique"
+      ]
+    },
+    {
+      "id": "actu_2026_06_05_3",
+      "date": "2026-06-05",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "Nemluvio disponible en ville : enfin une solution pour le prurigo nodulaire",
+      "resume": "Le traitement de Galderma arrive en officine avec un remboursement à 65%. Une vraie avancée pour les patients atteints de prurigo nodulaire modéré à sévère, enfin pris en charge.",
+      "full_text": "Excellente nouvelle pour tes patients qui grattent. Nemluvio (nemolizumab) de Galderma débarque en officine avec une prise en charge Assurance maladie à 65%.\n\nAMM européenne obtenue en février 2025, le voilà maintenant accessible en ville. Et c'est une vraie révolution pour le prurigo nodulaire, cette pathologie de la peau qui transforme la vie en enfer.\n\nLe prurigo nodulaire, tu connais ? Ces nodules qui démangent atrocement, résistants à tout. Jusqu'ici, tes patients naviguaient entre dermocorticoïdes et antihistaminiques avec des résultats décevants.\n\nNemluvio cible l'interleukine-31, responsable des démangeaisons. Une approche ciblée qui change la donne. Il s'adresse aussi à la dermatite atopique modérée à sévère dès 12 ans.\n\nLe traitement nécessite un suivi par un dermatologue, mais l'arrivée en ville facilite l'accès. Fini les allers-retours à l'hôpital pour tes patients.\n\nSeul bémol : le prix. Compter 35% de reste à charge sur une thérapie au long cours. Mais pour des patients en souffrance chronique, c'est souvent acceptable.\n\nAu comptoir demain : prépare-toi à voir arriver les premières ordonnances. Et surtout, forme ton équipe sur cette nouvelle classe thérapeutique qui va changer la vie de nombreux patients.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/therapeutique/medicaments/fiches-medicaments/prurigo-nodulaire-et-dermatite-atopique-5-points-cles-sur-nemluvio",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_06_05_3.jpg",
+      "tags": [
+        "nemluvio",
+        "prurigo",
+        "dermatite",
+        "galderma",
+        "remboursement"
+      ]
+    },
+    {
+      "id": "actu_2026_06_05_2",
+      "date": "2026-06-05",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "Brevets pharma : la Cour suprême US redonne de l'air aux génériques",
+      "resume": "Victoire unanime pour Hikma face à Amarin sur les brevets Vascepa. Une décision qui pourrait faciliter l'arrivée des génériques aux États-Unis et influencer les stratégies brevets en Europe.",
+      "full_text": "Coup de tonnerre à Washington. La Cour suprême américaine vient de donner raison à Hikma dans son bras de fer avec Amarin sur les brevets de Vascepa (huile de poisson cardiovasculaire).\n\nLe vote ? Unanime. Rare pour une décision de cette importance. Les juges ont estimé que la version générique d'Hikma avec étiquetage restreint (\"skinny label\") n'enfreint pas les brevets de l'irlandais Amarin.\n\nCette technique du \"skinny label\" permet aux génériqueurs de commercialiser leur version en excluant les indications brevetées les plus récentes. Malin et parfaitement légal selon la haute cour.\n\nPourquoi ça nous concerne en France ? Cette jurisprudence va encourager les génériqueurs mondiaux à adopter des stratégies plus agressives face aux brevets secondaires. Les laboratoires de princeps devront revoir leur copie.\n\nL'action Amarin a plongé, celle d'Hikma s'envole. Le message est clair : les tentatives de verrouillage tardif par de nouveaux brevets sur d'anciens médicaments ont du plomb dans l'aile.\n\nAu comptoir demain : attends-toi à voir arriver plus rapidement certains génériques, notamment sur les spécialités cardiovasculaires où cette stratégie fait école.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/pharma/its-unanimous-scotus-agrees-hikma-skinny-label-case-vs-amarin",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/img_actu_2026_06_05_2.jpg",
+      "tags": [
+        "brevets",
+        "generiques",
+        "hikma",
+        "vascepa",
+        "juridique"
+      ]
+    },
+    {
+      "id": "actu_2026_06_05_1",
+      "date": "2026-06-05",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "Réforme de la rémunération officinale : six mois de retard et déjà des tensions",
+      "resume": "Les travaux de la réforme du modèle économique des officines démarrent avec six mois de retard. Les syndicats montent au créneau face à l'optimisme affiché de l'Assurance maladie qui cache 38 millions d'euros manquants.",
+      "full_text": "Six mois de retard pour une réforme cruciale. Les travaux préparatoires de la réforme du modèle économique des officines patinent depuis janvier.\n\nLe rapport IGF-IGAS a été remis en janvier et la première réunion n'a eu lieu que cette semaine. Un timing qui agace les syndicats, d'autant que les chiffres 2025 de l'Assurance maladie cachent mal la réalité économique du réseau.\n\nLa marge réglementée a certes progressé de 2,1% pour atteindre 159 millions d'euros (missions Covid comprises). Mais Pierre-Olivier Variot, président de l'UPSO, pointe un manque à gagner de 38 millions par rapport aux prévisions de l'avenant n°1.\n\nUn écart qui révèle l'optimisme délibéré de la Cnam ? Les syndicats le pensent et comptent bien le faire valoir dans les négociations à venir. D'autant que cette sous-estimation récurrente fragilise la crédibilité des projections économiques.\n\nLe calendrier serré inquiète aussi. Comment bâtir un nouveau modèle de rémunération solide avec six mois de retard sur un dossier aussi complexe ?\n\nAu comptoir demain : cette réforme déterminera tes revenus des prochaines années. Les négociations s'annoncent tendues entre des syndicats remontés et une Assurance maladie aux projections hasardeuses.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/reforme-de-la-remuneration-un-lancement-trop-poussif-au-gout-des-syndicats",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_06_05_1.jpg",
+      "tags": [
+        "remuneration",
+        "reforme",
+        "syndicats",
+        "cnam",
+        "marge"
+      ]
+    },
+    {
+      "id": "lsv_2026_06_05",
+      "date": "2026-06-05",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? Le premier oxymètre fonctionnait avec des ampoules colorées",
+      "resume": "En 1935, un ingénieur allemand révolutionne la médecine en inventant un appareil capable de mesurer l'oxygène dans le sang... sans prise de sang ! Son secret ? Des lumières rouge et infrarouge qui traversent l'oreille.",
+      "full_text": "Karl Matthes, ingénieur berlinois, cherche en 1935 un moyen de surveiller l'oxygénation des pilotes d'altitude. Son eureka ? Il remarque que le sang change de couleur selon sa teneur en oxygène.\n\nSon premier prototype ressemble à une lampe de bureau bricolée. Deux ampoules colorées - une rouge, une infrarouge - éclairent le lobe de l'oreille du patient. Un photodétecteur de l'autre côté capte la lumière qui traverse les tissus. Génial mais encombrant : l'appareil pèse 30 kilos !\n\nLe twist ? Pendant la Seconde Guerre mondiale, les Alliés récupèrent cette technologie allemande pour équiper leurs sous-marins. Problème : ils ne comprennent pas tout le principe et bricolent des versions approximatives.\n\nIl faudra attendre 1972 pour que Takuo Aoyagi, ingénieur japonais, perfectionne le système. Il découvre qu'en mesurant les pulsations, on peut ignorer les tissus et ne mesurer que le sang artériel. Révolutionnaire !\n\nAujourd'hui, ce petit clip qu'on pose sur ton doigt au moindre passage aux urgences descend directement de ces ampoules berlinoises. Et quand tu vois un patient avec une saturation à 85%, tu peux remercier Karl et ses bricolages lumineux !\n\nDe l'oreille éclairée au bout du doigt : parfois, les plus grandes révolutions médicales naissent des idées les plus simples.",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_06_05.jpg",
+      "tags": [
+        "histoire",
+        "diagnostic",
+        "instrument",
+        "innovation",
+        "mesure"
+      ]
+    },
+    {
       "id": "actu_2026_06_04_4",
       "date": "2026-06-04",
       "type": "actu",
@@ -6051,6 +6176,6 @@
       ]
     }
   ],
-  "count": 293,
-  "updated_at": "2026-06-04T04:09:29.783045+02:00"
+  "count": 299,
+  "updated_at": "2026-06-05T04:12:07.498176+02:00"
 }

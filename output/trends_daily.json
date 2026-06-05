@@ -1,59 +1,59 @@
 {
-  "generated_at": "2026-06-04",
-  "window_label": "29 mai — 4 juin 2026",
+  "generated_at": "2026-06-05",
+  "window_label": "30 mai — 5 juin 2026",
   "has_history": true,
   "delta_source": "pytrends_rising",
   "pathologies": [
     {
-      "display": "Quelle vitamine pour la fatigue",
-      "delta_label": "↑ 15 900",
+      "display": "Vitamine a 7 lettres",
+      "delta_label": "↑ 8 150",
       "trend": "up"
     },
     {
-      "display": "Fatigue chronique que faire",
-      "delta_label": "↑ 13 950",
+      "display": "Vitamine b12 effet immédiat",
+      "delta_label": "↑ 7 800",
       "trend": "up"
     },
     {
-      "display": "Fracture de fatigue pied",
-      "delta_label": "↑ 12 250",
+      "display": "Fourmillement dans les jambes et grosse ",
+      "delta_label": "↑ 7 500",
       "trend": "up"
     },
     {
-      "display": "Fatigue oculaire que faire",
-      "delta_label": "↑ 11 350",
+      "display": "Pourquoi la chaleur fatigue",
+      "delta_label": "↑ 7 000",
       "trend": "up"
     },
     {
-      "display": "Allergie au nickel",
-      "delta_label": "↑ 10 750",
+      "display": "Ictus amnésique et fatigue",
+      "delta_label": "↑ 6 950",
       "trend": "up"
     }
   ],
   "soins": [
     {
-      "display": "Immunite innee",
-      "delta_label": "↑ 491 850",
-      "trend": "up"
-    },
-    {
-      "display": "La digestion cm1",
-      "delta_label": "↑ 68 450",
-      "trend": "up"
-    },
-    {
-      "display": "Vinaigre de cidre digestion",
-      "delta_label": "↑ 57 750",
-      "trend": "up"
-    },
-    {
-      "display": "Tisane pour la digestion",
-      "delta_label": "↑ 35 600",
-      "trend": "up"
-    },
-    {
       "display": "Immunite cellulaire",
-      "delta_label": "↑ 32 200",
+      "delta_label": "↑ 176 150",
+      "trend": "up"
+    },
+    {
+      "display": "La digestion cm2",
+      "delta_label": "↑ 56 600",
+      "trend": "up"
+    },
+    {
+      "display": "Azinc immunite",
+      "delta_label": "↑ 40 850",
+      "trend": "up"
+    },
+    {
+      "display": "Immunite familiale",
+      "delta_label": "↑ 40 600",
+      "trend": "up"
+    },
+    {
+      "display": "Menthe poivrée digestion",
+      "delta_label": "↑ 36 050",
       "trend": "up"
     }
   ]

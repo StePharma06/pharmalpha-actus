@@ -1,0 +1,48 @@
+{
+  "generated_at": "2026-06-05T04:12:03.903918+02:00",
+  "run_date": "2026-06-05",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Réforme de la rémunération officinale : six mois de retard et déjà des tensions",
+      "resume": "Les travaux de la réforme du modèle économique des officines démarrent avec six mois de retard. Les syndicats montent au créneau face à l'optimisme affiché de l'Assurance maladie qui cache 38 millions d'euros manquants.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/reforme-de-la-remuneration-un-lancement-trop-poussif-au-gout-des-syndicats",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "Nemluvio disponible en ville : enfin une solution pour le prurigo nodulaire",
+      "resume": "Le traitement de Galderma arrive en officine avec un remboursement à 65%. Une vraie avancée pour les patients atteints de prurigo nodulaire modéré à sévère, enfin pris en charge.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/therapeutique/medicaments/fiches-medicaments/prurigo-nodulaire-et-dermatite-atopique-5-points-cles-sur-nemluvio",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Substitution des DM : un marché de 6Md€ en jeu pour ton officine",
+      "resume": "L'arrêté sur la substitution des dispositifs médicaux traîne depuis 3 ans. Enjeu : optimiser tes marges sur un segment qui pèse 6 milliards d'euros.",
+      "source": "Pharm'Actus",
+      "source_url": "",
+      "confidence_score": 0.7,
+      "warnings": [
+        "Chiffres de marché DM estimés à partir de données sectorielles",
+        "Calculs de marge basés sur grilles tarifaires actuelles",
+        "Impact financier projeté sur hypothèses d'économies génériques",
+        "FACT-CHECK: 'Sur les DM remboursés, ta marge est plafonnée : 35% sur la tranche jusqu'à 150€, puis dégressif' → Les modalités de rémunération sur DM remboursés sont complexes et varient selon le type de DM et leur inscription à la LPPR. Il faut vérifier les taux exacts et tranches selon les arrêtés tarifaires en vigueur",
+        "FACT-CHECK: 'Sur un fauteuil roulant à 800€, tu gagnes 162€' → Calcul à vérifier selon la grille tarifaire LPPR applicable aux fauteuils roulants, qui peut différer du taux général annoncé",
+        "FACT-CHECK: 'augmenter ton taux de marge DM de 28% actuellement à 32-35%, soit 15 000€ supplémentaires par an sur une officine moyenne' → Ces projections chiffrées sur l'impact de la substitution sont spéculatives car l'arrêté d'application n'existe pas encore. Les modalités de rémunération en cas de substitution DM ne sont pas définies",
+        "FACT-CHECK: 'Avec la substitution, tu pourrais choisir un équivalent à 650€ et garder une marge similaire tout en économisant 150€ à l'Assurance Maladie' → Mécanisme hypothétique : rien ne garantit que la substitution DM fonctionnera comme la substitution générique. Les modalités de tarification et rémunération restent à définir par l'arrêté manquant"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}
