@@ -1,13 +1,11 @@
 name: LinkedIn Newsletter Weekly
 
 on:
+  schedule:
+    - cron: '0 5 * * 5'   # Vendredi 05h00 UTC = 07h00 Paris
   repository_dispatch:
-    types: [send-linkedin-newsletter]  # Declencheur principal : cron-job.org (vendredi 05h00 UTC)
-  workflow_dispatch:                   # Lancement manuel si besoin
-  # NOTE : cron GitHub natif SUPPRIME (best-effort, derivait de +1h a +3h chaque semaine).
-  # Utiliser cron-job.org → POST https://api.github.com/repos/StePharma06/pharmalpha-actus/dispatches
-  # Body: {"event_type":"send-linkedin-newsletter"} | Header: Authorization: Bearer <PAT>
-  # Reglage cron-job.org : 0 5 * * 5 (vendredi 5h UTC = 7h Paris)
+    types: [send-linkedin-newsletter]  # Declencheur alternatif cron-job.org si besoin
+  workflow_dispatch:                   # Lancement manuel possible
 
 jobs:
   newsletter:
