@@ -1,59 +1,59 @@
 {
-  "generated_at": "2026-06-05",
-  "window_label": "30 mai — 5 juin 2026",
+  "generated_at": "2026-06-06",
+  "window_label": "31 mai — 6 juin 2026",
   "has_history": true,
   "delta_source": "pytrends_rising",
   "pathologies": [
     {
-      "display": "Vitamine a 7 lettres",
-      "delta_label": "↑ 8 150",
+      "display": "Est ce que la chaleur fatigue",
+      "delta_label": "↑ 10 150",
       "trend": "up"
     },
     {
-      "display": "Vitamine b12 effet immédiat",
-      "delta_label": "↑ 7 800",
+      "display": "Fatigue oculaire que faire",
+      "delta_label": "↑ 9 600",
       "trend": "up"
     },
     {
-      "display": "Fourmillement dans les jambes et grosse ",
-      "delta_label": "↑ 7 500",
+      "display": "La fatigue d'être soi",
+      "delta_label": "↑ 8 850",
       "trend": "up"
     },
     {
-      "display": "Pourquoi la chaleur fatigue",
-      "delta_label": "↑ 7 000",
+      "display": "Vgm élevé et fatigue",
+      "delta_label": "↑ 8 250",
       "trend": "up"
     },
     {
-      "display": "Ictus amnésique et fatigue",
-      "delta_label": "↑ 6 950",
+      "display": "Vitamines contre la fatigue",
+      "delta_label": "↑ 6 600",
       "trend": "up"
     }
   ],
   "soins": [
     {
-      "display": "Immunite cellulaire",
-      "delta_label": "↑ 176 150",
-      "trend": "up"
-    },
-    {
-      "display": "La digestion cm2",
-      "delta_label": "↑ 56 600",
+      "display": "Temps de digestion humain",
+      "delta_label": "↑ 57 650",
       "trend": "up"
     },
     {
       "display": "Azinc immunite",
-      "delta_label": "↑ 40 850",
+      "delta_label": "↑ 37 400",
       "trend": "up"
     },
     {
-      "display": "Immunite familiale",
-      "delta_label": "↑ 40 600",
+      "display": "Fabien olicard sommeil",
+      "delta_label": "↑ 31 700",
       "trend": "up"
     },
     {
-      "display": "Menthe poivrée digestion",
-      "delta_label": "↑ 36 050",
+      "display": "Calmosine digestion bébé",
+      "delta_label": "↑ 27 650",
+      "trend": "up"
+    },
+    {
+      "display": "Vinaigre de cidre digestion",
+      "delta_label": "↑ 21 450",
       "trend": "up"
     }
   ]

@@ -1,0 +1,31 @@
+{
+  "generated_at": "2026-06-06T04:07:36.682744+02:00",
+  "run_date": "2026-06-06",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Observatoire économique : trajectoire 4 ans sur la table, tes marges décryptées",
+      "resume": "L'Assurance maladie dévoile ses données 2025 aux syndicats. L'avenant prévoit une trajectoire sur 4 ans.",
+      "source": "Pharm'Actus",
+      "source_url": "",
+      "confidence_score": 0.7,
+      "warnings": [
+        "Chiffres CA moyen et marge brute estimés sur base historique",
+        "Montants ROSP max à confirmer selon derniers avenants",
+        "Données 2025 détaillées non encore publiques",
+        "FACT-CHECK: 'L'avenant conventionnel n°1 signé récemment prévoit une trajectoire économique pluriannuelle' → Nécessite vérification de l'existence et du contenu exact de cet avenant n°1, ainsi que de sa date de signature",
+        "FACT-CHECK: 'Cette approche sur 4 ans vise à donner plus de visibilité aux pharmaciens' → À vérifier si la durée de 4 ans est exacte selon les termes de l'avenant mentionné",
+        "FACT-CHECK: '8,2 milliards d'euros de chiffre d'affaires total pour les officines en 2024' → Chiffre à vérifier auprès des données officielles CNAM 2024",
+        "FACT-CHECK: 'la marge brute moyenne des officines stagne autour de 26,5% depuis 3 ans, selon les données FSPF' → Vérifier la source et l'exactitude de ce pourcentage",
+        "FACT-CHECK: 'Les honoraires de dispensation ont rapporté en moyenne 156 000€ par officine en 2024' → Montant à vérifier auprès des données officielles CNAM",
+        "FACT-CHECK: 'La ROSP atteint désormais 8 400€ par an en moyenne pour les pharmacies les plus performantes' → Vérifier le montant exact et les conditions d'attribution ROSP 2024-2025",
+        "FACT-CHECK: 'jusqu'à 12 000€ selon performance' (ROSP 2026) → Vérifier les plafonds ROSP prévus pour 2026 dans les textes conventionnels",
+        "FACT-CHECK: 'inflation des charges (+ 4,2% en 2025)' → Pourcentage d'inflation spécifique aux officines à vérifier",
+        "FACT-CHECK: 'médicament en baisse de volume (-2,1% en unités)' → Statistique précise à vérifier auprès des données GERS/CNAM"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

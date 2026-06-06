@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? Le premier oxymètre fonctionnait avec des ampoules colorées",
-  "resume": "En 1935, un ingénieur allemand révolutionne la médecine en inventant un appareil capable de mesurer l'oxygène dans le sang... sans prise de sang ! Son secret ? Des lumières rouge et infrarouge qui traversent l'oreille.",
-  "full_text": "Karl Matthes, ingénieur berlinois, cherche en 1935 un moyen de surveiller l'oxygénation des pilotes d'altitude. Son eureka ? Il remarque que le sang change de couleur selon sa teneur en oxygène.\n\nSon premier prototype ressemble à une lampe de bureau bricolée. Deux ampoules colorées - une rouge, une infrarouge - éclairent le lobe de l'oreille du patient. Un photodétecteur de l'autre côté capte la lumière qui traverse les tissus. Génial mais encombrant : l'appareil pèse 30 kilos !\n\nLe twist ? Pendant la Seconde Guerre mondiale, les Alliés récupèrent cette technologie allemande pour équiper leurs sous-marins. Problème : ils ne comprennent pas tout le principe et bricolent des versions approximatives.\n\nIl faudra attendre 1972 pour que Takuo Aoyagi, ingénieur japonais, perfectionne le système. Il découvre qu'en mesurant les pulsations, on peut ignorer les tissus et ne mesurer que le sang artériel. Révolutionnaire !\n\nAujourd'hui, ce petit clip qu'on pose sur ton doigt au moindre passage aux urgences descend directement de ces ampoules berlinoises. Et quand tu vois un patient avec une saturation à 85%, tu peux remercier Karl et ses bricolages lumineux !\n\nDe l'oreille éclairée au bout du doigt : parfois, les plus grandes révolutions médicales naissent des idées les plus simples.",
-  "image_keywords": "oximeter medical device",
+  "titre": "Le saviez-vous ? La première prothèse de jambe était en cuir bouilli",
+  "resume": "En 1529, un chevalier français révolutionne la médecine en créant la première prothèse articulée de l'histoire. Son secret ? Du cuir bouilli, du métal et une ingéniosité qui défie son époque.",
+  "full_text": "Imagine un peu : tu perds ta jambe au combat et ton médecin te propose... une jambe de bois avec un crochet. Bienvenue en 1529 !\n\nC'est exactement ce qui arrive à Ambroise Paré, chirurgien-barbier du roi Henri II. Sauf qu'au lieu d'accepter les prothèses rudimentaires de l'époque, il décide de révolutionner le truc. Il crée la première jambe artificielle articulée de l'histoire, surnommée \"la jambe de Paré\".\n\nSon génie ? Il utilise du cuir bouilli qu'il moule pour épouser parfaitement le moignon. À l'intérieur, un système de ressorts et de sangles permet de fléchir le genou et la cheville. Le pied peut même se lever pour monter les escaliers ! En 1529, c'est de la pure science-fiction.\n\nLe plus dingue ? Cette prothèse est si efficace que des soldats mutilés reprennent du service. Paré perfectionne sa technique et crée même des mains articulées avec des doigts mobiles actionnés par des câbles.\n\nMais attention, le truc coûte une fortune : l'équivalent de 3 ans de salaire d'un ouvrier ! Seuls les nobles peuvent se l'offrir. Les autres continuent avec leur pilon en bois.\n\nAujourd'hui, quand tu vois passer un patient avec sa prothèse myoélectrique contrôlée par la pensée, rappelle-toi qu'il y a 500 ans, un barbier français posait déjà les bases de l'orthopédie moderne avec du cuir et des ressorts.",
+  "image_keywords": "prosthetic leg historical",
   "tags": [
     "histoire",
-    "diagnostic",
-    "instrument",
-    "innovation",
-    "mesure"
+    "chirurgie",
+    "prothese",
+    "orthopédie",
+    "innovation"
   ],
-  "date": "2026-06-05",
+  "date": "2026-06-06",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",
