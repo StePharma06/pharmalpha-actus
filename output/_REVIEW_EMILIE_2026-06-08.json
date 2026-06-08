@@ -1,0 +1,25 @@
+{
+  "generated_at": "2026-06-08T04:14:06.198040+02:00",
+  "run_date": "2026-06-08",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Coupe du monde : 15M de Français vont craquer, ton officine doit s'y préparer",
+      "resume": "Un mois de matchs = explosion des ventes d'antiacides, somnifères et produits détox. Les pharmacies doivent anticiper la demande.",
+      "source": "Pharm'Actus",
+      "source_url": "",
+      "confidence_score": 0.7,
+      "warnings": [
+        "Chiffres IMS Health et GERS basés sur Euro 2021, à actualiser avec données 2026",
+        "CA supplémentaire estimé sur base pharmacie moyenne, peut varier selon localisation",
+        "FACT-CHECK: 'Mise en avant autorisée (OTC)' → Affirmation trop générale et potentiellement incorrecte. La mise en avant de médicaments OTC est strictement encadrée par l'art. L.5122-6 CSP et les règles de publicité. Tous les OTC ne peuvent pas faire l'objet de mise en avant libre.",
+        "FACT-CHECK: 'soit environ 2 500€ de CA supplémentaire pour une pharmacie moyenne (base 200 000€ de CA OTC annuel)' → Calcul invérifiable et données de référence non sourcées. Qu'est-ce qui définit une 'pharmacie moyenne' et cette base de CA ?",
+        "FACT-CHECK: 'Les marges sont attractives : 35% sur les antiacides, 45% sur la parapharmacie détox, 28% sur les compléments sommeil' → Données de marges non vérifiables et potentiellement confidentielles. Les marges officinales ne sont pas publiques.",
+        "FACT-CHECK: 'L'Euro 2021 avait généré +35% de ventes [...] selon IMS Health' et 'selon les données GERS' → Sources non vérifiables et données potentiellement confidentielles. Ces organismes ne publient pas nécessairement ces données spécifiques."
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

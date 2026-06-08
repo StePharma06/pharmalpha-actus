@@ -1,60 +1,8 @@
 {
-  "generated_at": "2026-06-06",
-  "window_label": "31 mai — 6 juin 2026",
+  "generated_at": "2026-06-08",
+  "window_label": "2 juin — 8 juin 2026",
   "has_history": true,
   "delta_source": "pytrends_rising",
-  "pathologies": [
-    {
-      "display": "Est ce que la chaleur fatigue",
-      "delta_label": "↑ 10 150",
-      "trend": "up"
-    },
-    {
-      "display": "Fatigue oculaire que faire",
-      "delta_label": "↑ 9 600",
-      "trend": "up"
-    },
-    {
-      "display": "La fatigue d'être soi",
-      "delta_label": "↑ 8 850",
-      "trend": "up"
-    },
-    {
-      "display": "Vgm élevé et fatigue",
-      "delta_label": "↑ 8 250",
-      "trend": "up"
-    },
-    {
-      "display": "Vitamines contre la fatigue",
-      "delta_label": "↑ 6 600",
-      "trend": "up"
-    }
-  ],
-  "soins": [
-    {
-      "display": "Temps de digestion humain",
-      "delta_label": "↑ 57 650",
-      "trend": "up"
-    },
-    {
-      "display": "Azinc immunite",
-      "delta_label": "↑ 37 400",
-      "trend": "up"
-    },
-    {
-      "display": "Fabien olicard sommeil",
-      "delta_label": "↑ 31 700",
-      "trend": "up"
-    },
-    {
-      "display": "Calmosine digestion bébé",
-      "delta_label": "↑ 27 650",
-      "trend": "up"
-    },
-    {
-      "display": "Vinaigre de cidre digestion",
-      "delta_label": "↑ 21 450",
-      "trend": "up"
-    }
-  ]
+  "pathologies": [],
+  "soins": []
 }
