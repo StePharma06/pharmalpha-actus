@@ -1,0 +1,37 @@
+{
+  "generated_at": "2026-06-09T04:14:06.044143+02:00",
+  "run_date": "2026-06-09",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "L'économie officinale décolle : +100M€ grâce aux nouvelles missions",
+      "resume": "Sur 200 millions de croissance en 2025, près de 100 millions viennent des nouvelles missions, notamment la vaccination. Pour la première fois, un euro sur deux de croissance ne vient plus du médicament. Historic !",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/economie-officinale-la-moitie-de-la-croissance-portee-par-les-nouvelles-missions",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Crise au Moyen-Orient : +15 à 25% sur tes coûts d'achat médicaments",
+      "resume": "La paralysie du détroit d'Ormuz depuis février 2026 fait flamber les prix des principes actifs. Impact direct sur tes marges officinales.",
+      "source": "Pharm'Actus",
+      "source_url": "",
+      "confidence_score": 0.7,
+      "warnings": [
+        "Chiffres d'impact exact sur les prix à confirmer",
+        "Délai de répercussion CEPS à vérifier",
+        "Pourcentage exact de médicaments concernés par zone géographique manquant",
+        "FACT-CHECK: 'marge officinale déjà comprimée à 26,1% en moyenne' → Chiffre de marge moyenne très précis non sourcé et potentiellement inexact - nécessite vérification avec données officielles LEEM/FSPF",
+        "FACT-CHECK: 'CA moyen officinal de 2,1M€, les médicaments représentent 85% du volume' → Données statistiques précises non sourcées - vérifier avec observatoire économique officiel de la profession",
+        "FACT-CHECK: 'les prix administrés (remboursables) ne bougeront qu'avec 6 à 12 mois de décalage via les négociations CEPS' → Simplification du mécanisme de fixation des prix - le CEPS ne négocie pas tous les prix remboursables, certains relèvent du TFR ou d'autres mécanismes",
+        "FACT-CHECK: 'mais tes achats, eux, flambent immédiatement' → Affirmation sur la répercussion immédiate des hausses de coûts fabricants vers les pharmaciens - vérifier les mécanismes contractuels réels entre grossistes/laboratoires et officines"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

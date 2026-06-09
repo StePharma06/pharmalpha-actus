@@ -1,6 +1,127 @@
 {
   "articles": [
     {
+      "id": "actu_2026_06_09_5",
+      "date": "2026-06-09",
+      "type": "actu",
+      "categorie": "business_officine",
+      "titre": "Crise au Moyen-Orient : +15 à 25% sur tes coûts d'achat médicaments",
+      "resume": "La paralysie du détroit d'Ormuz depuis février 2026 fait flamber les prix des principes actifs. Impact direct sur tes marges officinales.",
+      "full_text": "La paralysie du détroit d'Ormuz depuis février 2026 fait flamber les prix des principes actifs. Impact direct sur tes marges officinales.\n\n## Contexte\n\nDepuis fin février 2026, l'escalade militaire au Moyen-Orient paralyse le détroit d'Ormuz, passage obligé de 20 à 26% du pétrole mondial et d'une part significative des intrants chimiques pharmaceutiques. Cette crise géopolitique frappe de plein fouet la chaîne d'approvisionnement mondiale du médicament. Les laboratoires du LEEM alertent sur l'impact immédiat sur leurs coûts de production, répercutés mécaniquement sur les prix fabricants. Pour ton officine, c'est un double coup dur : hausse des coûts d'achat sur les génériques ET sur les principes actifs des spécialités, dans un contexte où tes marges sont déjà sous pression depuis la réforme de 2024.\n\n## Analyse business\n\nLes chiffres du LEEM sont sans appel : +15 à 25% sur les coûts de production des principes actifs en provenance d'Asie, soit 60% de la production mondiale selon l'analyse. Cette hausse touche prioritairement les génériques (marge officinale déjà comprimée à 26,1% en moyenne) et les biosimilaires. Sur un CA moyen officinal de 2,1M€, les médicaments représentent 85% du volume, soit 1,785M€. Une hausse de 20% des coûts d'achat sur ne serait-ce que 30% de ton stock (produits concernés par la crise) représente 107.000€ de surcoût annuel. Le mécanisme de répercussion n'est pas symétrique : les prix administrés (remboursables) ne bougeront qu'avec 6 à 12 mois de décalage via les négociations CEPS, mais tes achats, eux, flambent immédiatement. Sur les OTC et parapharmacie (15% de ton CA), tu peux répercuter plus rapidement, mais au risque de perdre des clients sur un marché hyper-concurrentiel face aux e-commerce.\n\n## Recommandations actionnables\n\n1. Audit stock — Identifie immédiatement tes références à forte rotation issues de laboratoires asiatiques (génériques, vitamines, parapharmacie) pour anticiper les hausses\n2. Négociation groupements — Active tes accords avec ton groupement pour bénéficier du pouvoir d'achat collectif face aux labos, crucial sur les 6 prochains mois\n3. Diversification fournisseurs — Prospecte des alternatives européennes sur tes top références OTC, même si plus chères à court terme\n4. Communication patient — Prépare tes équipes à expliquer les ruptures temporaires et hausses tarifaires sans créer de panique\n5. Trésorerie renforcée — Constitue une réserve de cash pour absorber la hausse du BFR liée à l'inflation des stocks\n\n## Sources citees\n\n- LEEM",
+      "source": "Pharm'Actus",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Business",
+      "image_url": "assets/img_actu_2026_06_09_5.jpg",
+      "tags": [
+        "couts",
+        "approvisionnement",
+        "geopolitique",
+        "marges"
+      ]
+    },
+    {
+      "id": "actu_2026_06_09_4",
+      "date": "2026-06-09",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "CAR-T in vivo : les données \"dingues\" qui révolutionnent l'oncologie",
+      "resume": "À l'ASCO 2026, les thérapies cellulaires in vivo font sensation. Plus besoin d'extraction cellulaire : on reprogramme directement les cellules T dans l'organisme. Les premiers résultats sur le myélome multiple impressionnent.",
+      "full_text": "L'ASCO 2026 vient de nous sortir des données \"nutty\" (complètement dingues, selon nos confrères de Fierce Biotech) sur les CAR-T in vivo. Et effectivement, ça change tout.\n\nPour rappel : les CAR-T classiques, on prélève tes cellules T, on les modifie en labo, on te les réinjecte. Lourd, cher, compliqué. Les CAR-T in vivo ? On injecte directement le vecteur qui va reprogrammer tes cellules T dans ton organisme.\n\nRésultat : fini les plateaux techniques ultra-spécialisés, les délais de fabrication, les coûts astronomiques. On passe d'un traitement personnalisé ultra-complexe à une injection \"simple\".\n\nLes premières données sur le myélome multiple montrent des taux de réponse encourageants. Pas encore au niveau des CAR-T classiques, mais on n'en est qu'au début.\n\nPourquoi ça nous concerne en officine ? Parce que les CAR-T actuelles, on n'en voit jamais : elles restent en intra-hospitalier, circuit fermé, prix pharaonique. Les CAR-T in vivo pourraient démocratiser ces thérapies.\n\nImagine : des injections qu'on pourrait faire en ambulatoire, avec un suivi officinal possible. Des traitements révolutionnaires accessibles au plus grand nombre, pas réservés aux quelques centres ultra-spécialisés.\n\nOn n'en est pas encore là, mais les signaux sont clairs : l'immunothérapie sort de ses tours d'ivoire hospitalières. Dans 5-10 ans, on pourrait voir débarquer des thérapies géniques en ville.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/pharma/behind-headlines-asco-2026",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_06_09_4.jpg",
+      "tags": [
+        "car-t",
+        "oncologie",
+        "immunotherapie",
+        "innovation"
+      ]
+    },
+    {
+      "id": "actu_2026_06_09_3",
+      "date": "2026-06-09",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "L'économie officinale décolle : +100M€ grâce aux nouvelles missions",
+      "resume": "Sur 200 millions de croissance en 2025, près de 100 millions viennent des nouvelles missions, notamment la vaccination. Pour la première fois, un euro sur deux de croissance ne vient plus du médicament. Historic !",
+      "full_text": "Alors là, on tient du lourd : sur les 200 millions d'euros de croissance officinale en 2025, près de 98 millions proviennent des nouvelles missions. Soit pratiquement un euro sur deux.\n\nLa vaccination tire le game : elle représente à elle seule l'essentiel de ces 98 millions. Logique quand on sait qu'on vaccine contre la grippe, le Covid, et maintenant d'autres pathologies selon les autorisations.\n\nCette répartition marque une rupture historique. Avant, notre croissance reposait quasi exclusivement sur le médicament : hausses de prix, nouveaux traitements, volumes en hausse. Là, c'est fini.\n\nConcrètement ? Ça veut dire que l'officine se transforme vraiment en centre de soins. Plus seulement un point de vente, mais un vrai lieu de prévention et de suivi.\n\nLe message est clair : les pharmaciens qui ne jouent pas le jeu des nouvelles missions passent à côté de la moitié de la croissance du secteur. Vaccination, bilans, dépistages, accompagnement... tout ça rapporte maintenant autant que la dispensation classique.\n\nPour toi titulaire, ça change la donne sur ton business model. Fini de compter uniquement sur les marges médicament qui stagnent. L'avenir, c'est la diversification des services.\n\nEt pour les équipes ? Il faut monter en compétences sur ces missions. Parce que 100 millions d'euros, ça se partage pas tout seul entre 21 000 officines.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/economie-officinale-la-moitie-de-la-croissance-portee-par-les-nouvelles-missions",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_06_09_3.jpg",
+      "tags": [
+        "nouvelles-missions",
+        "vaccination",
+        "economie",
+        "croissance"
+      ]
+    },
+    {
+      "id": "actu_2026_06_09_2",
+      "date": "2026-06-09",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "Lilly écrase tout sur les GLP-1 oraux : l'orforglipron cartonne",
+      "resume": "Aux sessions ADA 2026, Lilly dévoile des données explosives sur l'orforglipron (Foundayo) qui surpasse le sémaglutide oral. Après l'obésité, cap sur le diabète de type 2. Les analystes parlent d'une \"avance qui se creuse\".",
+      "full_text": "Lilly vient de claquer un grand coup aux sessions de l'American Diabetes Association. Leur orforglipron (Foundayo) explose littéralement les performances du sémaglutide oral de Novo.\n\nLes chiffres parlent d'eux-mêmes : l'orforglipron surpasse nettement le Rybelsus (sémaglutide oral) de Novo Nordisk sur tous les critères d'efficacité. Déjà approuvé pour l'obésité, Lilly pousse maintenant vers une indication diabète de type 2.\n\nEt pendant ce temps, Novo riposte avec son Wegovy oral qui cartonne : 3 millions d'ordonnances depuis le début 2026. Pas mal pour une première forme orale anti-obésité, mais Lilly garde une longueur d'avance.\n\nSelon RBC Capital Markets, \"Lilly est clairement le vainqueur de l'ADA\" et \"creuse son avance\" malgré une concurrence qui se densifie. Traduction : ils dominent le marché des incrétines orales.\n\nPourquoi ça nous concerne ? Parce qu'en France, on attend toujours le remboursement des anti-obésité. Wegovy et Mounjaro en injection sont enfin remboursés, mais les formes orales vont révolutionner l'observance.\n\nPatients réfractaires aux injections, peur des aiguilles, facilité d'usage : les GLP-1 oraux vont exploser la demande. Et avec Lilly qui prend une avance technologique sur Novo, on va avoir des patients qui demanderont spécifiquement l'orforglipron.\n\nAu comptoir, prépare-toi : la guerre des GLP-1 oraux ne fait que commencer. Et Lilly semble avoir les meilleures cartes en main.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/pharma/ada-lilly-posts-oral-semaglutide-topping-data-foundayo-speeds-toward-2nd-potential-nod",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/img_actu_2026_06_09_2.jpg",
+      "tags": [
+        "glp1",
+        "diabete",
+        "obesite",
+        "lilly"
+      ]
+    },
+    {
+      "id": "actu_2026_06_09_1",
+      "date": "2026-06-09",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "Paracétamol 100% français : enfin l'indépendance en janvier 2027",
+      "resume": "UPSA et Seqens lancent les premières boîtes de paracétamol entièrement produites en France début 2027. Six ans après les engagements de souveraineté pharmaceutique, une vraie révolution pour sécuriser nos approvisionnements.",
+      "full_text": "Six ans après les promesses, ça y est : le paracétamol 100% français débarque en janvier 2027.\n\nUPSA (fabricant du Dafalgan) s'associe à Seqens pour produire intégralement en France : principe actif, fabrication ET conditionnement. Seqens va sortir le principe actif de son site de Roussillon, dans l'Isère. Fini la dépendance totale à l'Asie qui nous a mis dans la mouise pendant le Covid.\n\nRappel des faits : en 2020, Emmanuel Macron lançait sa stratégie de souveraineté pharmaceutique après les pénuries. Résultat concret six ans plus tard ? On va enfin avoir du paracétamol français dans nos rayons.\n\nPourquoi ça change tout ? Parce que le paracétamol, c'est 500 millions de boîtes vendues par an en France. Et qu'on dépend à 100% de l'étranger aujourd'hui. Chaque crise géopolitique nous met en tension d'approvisionnement.\n\nLe timing n'est pas anodin non plus. Avec les crises au Moyen-Orient qui impactent déjà les coûts de transport des matières premières asiatiques, avoir une filière française devient stratégique.\n\nConcrètement au comptoir ? Tu auras enfin un argument souveraineté à donner aux patients qui s'inquiètent des ruptures. Et accessoirement, ça devrait stabiliser nos approvisionnements sur le long terme.\n\nSeul bémol : aucune info sur les prix. Mais franchement, après toutes les galères d'approvisionnement qu'on se tape, avoir du stock fiable, ça n'a pas de prix.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/le-paracetamol-100-francais-arrive-en-2027",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_06_09_1.jpg",
+      "tags": [
+        "paracetamol",
+        "souverainete",
+        "approvisionnement",
+        "upsa"
+      ]
+    },
+    {
+      "id": "lsv_2026_06_09",
+      "date": "2026-06-09",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? La première machine à dialyse était fabriquée avec des boyaux de saucisse",
+      "resume": "En 1943, un médecin hollandais a sauvé une jeune femme avec une machine révolutionnaire construite dans sa cuisine. Les composants ? Du cellophane, des tubes d'arrosage et des boyaux de charcutier.",
+      "full_text": "Imagine la scène : nous sommes en 1943, en pleine occupation allemande aux Pays-Bas. Willem Kolff, un jeune médecin de 32 ans, voit mourir ses patients d'insuffisance rénale sans pouvoir rien faire. Alors il décide de construire lui-même une machine pour nettoyer le sang.\n\nSon laboratoire ? Sa propre cuisine. Ses matériaux ? Du cellophane récupéré chez un fabricant de saucisses, des tubes d'arrosage de jardin, et un tambour de machine à laver bricolé. Le tout assemblé avec des moyens de fortune, sous le nez des nazis qui ignorent qu'une révolution médicale se prépare dans cette cuisine hollandaise.\n\nLa première patiente à survivre grâce à cette machine de fortune s'appelle Sofia Schafstadt. Cette collaboratrice nazie de 67 ans arrive mourante à l'hôpital en septembre 1945. Kolff hésite : doit-il sauver quelqu'un qui a trahi son pays ? Il choisit la médecine avant la politique.\n\nLe traitement dure 11 heures. Sofia sort de son coma, ses reins se remettent à fonctionner. Elle vivra encore 7 ans. Kolff vient d'inventer la dialyse moderne avec des boyaux de charcuterie.\n\nLe plus fou dans l'histoire ? Kolff a ensuite donné gratuitement ses plans à quiconque voulait reproduire sa machine. Aucun brevet, aucun profit. Juste l'envie de sauver des vies.\n\nAujourd'hui, plus de 3 millions de personnes dans le monde dépendent de la dialyse pour survivre, grâce à cette machine née dans une cuisine avec des restes de charcuterie.",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_06_09.jpg",
+      "tags": [
+        "histoire",
+        "dialyse",
+        "invention",
+        "rein",
+        "guerre"
+      ]
+    },
+    {
       "id": "actu_2026_06_08_5",
       "date": "2026-06-08",
       "type": "actu",
@@ -6422,6 +6543,6 @@
       ]
     }
   ],
-  "count": 311,
-  "updated_at": "2026-06-08T04:14:08.443717+02:00"
+  "count": 317,
+  "updated_at": "2026-06-09T04:14:08.527764+02:00"
 }
