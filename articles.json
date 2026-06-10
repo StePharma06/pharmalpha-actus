@@ -1,6 +1,128 @@
 {
   "articles": [
     {
+      "id": "actu_2026_06_10_5",
+      "date": "2026-06-10",
+      "type": "actu",
+      "categorie": "business_officine",
+      "titre": "Jean-François Brochard (Merck) prend le LEEM : quel impact sur les 115 Md€ du marché ?",
+      "resume": "L'ancien patron de Merck France devient président du lobby pharma français. Un changement de cap pour défendre les 115 milliards d'euros de chiffre d'affaires du secteur face aux pressions tarifaires.",
+      "full_text": "L'ancien patron de Merck France devient président du lobby pharma français. Un changement de cap pour défendre les 115 milliards d'euros de chiffre d'affaires du secteur face aux pressions tarifaires.\n\n## Contexte\n\nJean-François Brochard vient d'être élu président du LEEM pour un mandat de trois ans. Cet ancien dirigeant de Merck France succède à la tête de l'organisation qui représente 270 entreprises pharmaceutiques françaises. Le LEEM pèse lourd dans les négociations avec l'Assurance Maladie : ses adhérents génèrent 115 milliards d'euros de chiffre d'affaires annuel et emploient 105 000 personnes. Pour les officines, ce changement de leadership arrive à un moment critique. Les laboratoires subissent une pression tarifaire croissante (-2,5% sur les prix en moyenne chaque année depuis 2018) qui se répercute directement sur les marges officinales. Le LEEM négocie aussi les accords-cadres qui définissent les conditions de distribution en pharmacie.\n\n## Analyse business\n\nCette nomination intervient dans un contexte économique tendu pour le médicament. Les remises obligatoires des laboratoires à l'Assurance Maladie ont bondi de 890 millions d'euros en 2022 à 1,2 milliard en 2025, soit +35% en trois ans. Pour les officines, cette pression se traduit par une érosion des marges : la marge moyenne sur le médicament remboursé est passée de 26,8% en 2019 à 25,1% en 2024 selon l'ANSM. Brochard devra aussi gérer le dossier des génériques, où la France accuse un retard coûteux. Avec seulement 67% de taux de généricage contre 85% en Allemagne, le manque à gagner pour l'Assurance Maladie dépasse 2 milliards d'euros par an. Cette situation profite paradoxalement aux officines qui conservent des marges plus élevées sur les princeps. Enfin, le LEEM pilote les négociations sur les nouveaux honoraires de dispensation : après les 1,02€ par boîte obtenus en 2023, l'enjeu est de décrocher une revalorisation supplémentaire face à l'inflation des coûts de structure (+8,2% depuis 2022).\n\n## Recommandations actionnables\n\n1. Anticiper les baisses tarifaires — Diversifie tes sources de revenus avec les services (vaccination, BPM) moins sensibles aux négociations LEEM-Assurance Maladie.\n2. Optimiser le généricage — Forme tes équipes sur les nouveaux génériques pour capter les 0,53€ d'honoraires de dispensation par substitution.\n3. Surveiller les accords-cadres — Les négociations LEEM impactent directement tes conditions d'achat et délais de paiement fournisseurs.\n4. Préparer la digitalisation — Brochard pousse l'e-santé : investis dans les outils numériques avant qu'ils deviennent obligatoires.\n\n## Sources citees\n\n- LEEM",
+      "source": "Pharm'Actus",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Business",
+      "image_url": "assets/img_actu_2026_06_10_5.jpg",
+      "tags": [
+        "leem",
+        "laboratoires",
+        "marges",
+        "negociations"
+      ]
+    },
+    {
+      "id": "actu_2026_06_10_4",
+      "date": "2026-06-10",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "Pfizer élargit Hympavzi aux enfants dès 6 ans dans l'hémophilie",
+      "resume": "La FDA vient d'étendre Hympavzi aux patients de 6 ans et plus, avec ou sans inhibiteurs. Cette extension pédiatrique ouvre de nouveaux horizons thérapeutiques pour tes jeunes patients hémophiles.",
+      "full_text": "Pfizer frappe fort dans l'hémophilie pédiatrique. La FDA vient d'élargir l'AMM d'Hympavzi aux patients dès 6 ans, qu'ils aient ou non des inhibiteurs.\n\nConcrètement, Hympavzi couvre désormais tous les patients de 6 ans et plus avec hémophilie A ou B. L'extension inclut même les 12 ans et plus qui ont développé des inhibiteurs, situation particulièrement complexe à traiter.\n\nPourquoi c'est révolutionnaire ? Hympavzi n'est pas un facteur de coagulation classique. C'est un anticorps bispécifique qui mime l'action du facteur VIII en reliant les facteurs IX et X. Résultat : il fonctionne même chez les patients avec inhibiteurs.\n\nPour tes familles concernées, cette extension change tout. Les enfants hémophiles peuvent enfin bénéficier d'un traitement prophylactique efficace, sans se soucier du statut inhibiteur.\n\nCôté dispensation, prépare-toi à gérer une thérapeutique complexe. Formation des équipes indispensable, suivi rapproché des familles, coordination avec les centres de traitement de l'hémophilie.\n\nCette extension pédiatrique confirme le potentiel d'Hympavzi. Une innovation qui va transformer la prise en charge de l'hémophilie chez l'enfant en France d'ici 2027.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/pharma/pfizer-scores-fda-pediatric-expansion-hemophilia-treatment-hympavzi",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_06_10_4.jpg",
+      "tags": [
+        "hemophilie",
+        "pediatrie",
+        "pfizer",
+        "innovation"
+      ]
+    },
+    {
+      "id": "actu_2026_06_10_3",
+      "date": "2026-06-10",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "T3 25 µg arrive enfin pour remplacer Cynomel chez les intolérants à Thybon",
+      "resume": "Sanofi avait stoppé Cynomel fin 2025, Thybon le remplaçait mais certains patients ne le tolèrent pas. Eurodep lance T3 25 µg, disponible dès maintenant. Tes patients thyroïdiens ont enfin une solution.",
+      "full_text": "Enfin une solution pour tes patients intolérants à Thybon. Eurodep vient de lancer T3 25 µg, disponible à la commande depuis le 8 juin.\n\nPour rappel, Sanofi a arrêté Cynomel 0,025 mg fin octobre 2025. Thybon 20 Henning l'a remplacé, mais certains patients développent des intolérances. Problèmes digestifs, malaises, déséquilibres thyroïdiens.\n\nT3 25 µg d'Eurodep change la donne. Même dosage que l'ancien Cynomel, excipients différents de Thybon. Pour tes patients qui galèrent depuis des mois, c'est un soulagement.\n\nAttention aux modalités de prescription. T3 25 µg se distingue de Thybon par sa composition et son profil de tolérance. Le médecin doit prescrire explicitement cette spécialité.\n\nAu comptoir, explique bien la différence à tes patients. Ce n'est ni Cynomel ni Thybon, mais une alternative spécialement développée pour les intolérants.\n\nStock-le dès maintenant. Tes patients thyroïdiens en galère depuis l'arrêt de Cynomel vont te remercier. Cette fois, ils ont enfin une vraie solution de remplacement qui leur convient.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/medicament-parapharmacie/medicament/intolerance-thybon-la-solution-de-remplacement-est-arrivee",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_06_10_3.jpg",
+      "tags": [
+        "thyroide",
+        "substitution",
+        "intolerance",
+        "cynomel"
+      ]
+    },
+    {
+      "id": "actu_2026_06_10_2",
+      "date": "2026-06-10",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "Merck et Gilead créent la première pilule anti-VIH hebdomadaire",
+      "resume": "L'association islatravir + lenacapavir vient de réussir deux essais de phase 3. Un comprimé par semaine pour traiter le VIH, c'est du jamais vu. Cette révolution va changer ta dispensation et l'observance de tes patients.",
+      "full_text": "Du jamais vu dans le VIH. L'association de l'islatravir (Merck) et du lenacapavir (Gilead) vient de passer avec succès deux essais de phase 3.\n\nUn comprimé par semaine au lieu d'un par jour. Cette prouesse pharmaceutique va révolutionner l'observance de tes patients séropositifs. Fini les oublis quotidiens, les week-ends ratés, les voyages compliqués.\n\nComment ça marche ? L'islatravir bloque la transcriptase inverse, le lenacapavir inhibe la capside virale. Cette combinaison inédite permet une action prolongée avec une seule prise hebdomadaire.\n\nPour tes patients, c'est un game changer. L'observance reste le talon d'Achille des trithérapies classiques. Passer de 365 prises par an à 52, ça change tout psychologiquement.\n\nCôté officine, prépare-toi à une dispensation différente. Stock de sécurité plus léger, conseils d'observance à adapter, suivi des patients à réorganiser.\n\nL'AMM européenne est attendue dans les prochains mois. Cette innovation française devrait rapidement transformer ta file active VIH.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/pharma/merck-gilead-score-effort-develop-first-weekly-hiv-pill",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/img_actu_2026_06_10_2.jpg",
+      "tags": [
+        "vih",
+        "innovation",
+        "observance",
+        "gilead",
+        "merck"
+      ]
+    },
+    {
+      "id": "actu_2026_06_10_1",
+      "date": "2026-06-10",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "Testostérone Besins et Androtardyl : stop aux erreurs de substitution fatales",
+      "resume": "Le CRPV de Nice alerte sur des erreurs graves de substitution entre ces deux testostérones. Leurs pharmacocinétiques et rythmes d'administration diffèrent totalement. Une confusion qui peut coûter cher à tes patients.",
+      "full_text": "Le CRPV de Nice tire la sonnette d'alarme. Plusieurs cas d'erreurs de substitution entre Testostérone Besins 1000 mg/4 ml et Androtardyl 250 mg/ml viennent d'être recensés.\n\nPourquoi c'est grave ? Ces deux spécialités n'ont pas du tout les mêmes propriétés pharmacocinétiques. Testostérone Besins se libère différemment et son schéma d'administration n'est pas identique à Androtardyl. Une substitution sauvage peut dérégler complètement l'équilibre hormonal du patient.\n\nAu comptoir, vigilance maximum. Même DCI, même indication, mais deux galéniques distinctes. Le prescripteur doit valider tout changement entre ces deux formes.\n\nLe piège ? Ces erreurs surviennent souvent lors de ruptures de stock ou de changements de fournisseur. Tu penses rendre service en dépannant, mais tu peux créer un déséquilibre thérapeutique.\n\nConcrètement demain matin : vérifie systématiquement la spécialité exacte prescrite. En cas de doute ou de substitution nécessaire, appelle le médecin. Pas d'improvisation sur les traitements hormonaux.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/therapeutique/vigilances/ne-pas-substituer-testosterone-besins-par-androtardyl-sans-validation-medicale",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_06_10_1.jpg",
+      "tags": [
+        "substitution",
+        "vigilance",
+        "testosterone",
+        "crpv"
+      ]
+    },
+    {
+      "id": "lsv_2026_06_10",
+      "date": "2026-06-10",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? La première chimiothérapie était de l'ypérite recyclée",
+      "resume": "Quand les armes chimiques de 14-18 se sont reconverties en médicaments anticancer. L'histoire d'une découverte aussi macabre qu'accidentelle qui a sauvé des millions de vies.",
+      "full_text": "Imagine un peu : le premier traitement contre le cancer vient directement des tranchées de 1918. L'ypérite, ce gaz moutarde qui a terrorisé les soldats, allait devenir l'arme secrète des oncologues.\n\nTout commence en 1943 à Bari, en Italie. Un cargo américain bourré de munitions à l'ypérite explose dans le port. Les médecins militaires remarquent un truc bizarre : les survivants exposés au gaz ont leurs globules blancs qui chutent dramatiquement. Eurêka ! Si ça détruit les cellules qui se multiplient vite, pourquoi pas les cellules cancéreuses ?\n\nLouis Goodman et Alfred Gilman, deux pharmacologues de Yale, se penchent sur l'affaire. Ils modifient légèrement la molécule d'ypérite et créent la méchlorethamine. Premier test en août 1942 : un patient avec un lymphome généralisé. Résultat ? La tumeur fond littéralement.\n\nLe truc le plus dingue ? Pendant des années, les recherches restent top secret. Les publications parlent de \"substance X\" ou de \"composé 14\". Il faut attendre 1946 pour que le monde découvre que la chimiothérapie vient des armes chimiques.\n\nAujourd'hui, quand tu délivres du cyclophosphamide ou du chlorambucil au comptoir, tu prolonges cette histoire improbable. Ces molécules descendent directement de l'ypérite de 1918, transformant l'horreur des gaz de combat en espoir thérapeutique.",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_06_10.jpg",
+      "tags": [
+        "histoire",
+        "chimie",
+        "cancer",
+        "guerre",
+        "decouverte"
+      ]
+    },
+    {
       "id": "actu_2026_06_09_5",
       "date": "2026-06-09",
       "type": "actu",
@@ -6543,6 +6665,6 @@
       ]
     }
   ],
-  "count": 317,
-  "updated_at": "2026-06-09T04:14:08.527764+02:00"
+  "count": 323,
+  "updated_at": "2026-06-10T04:15:02.389474+02:00"
 }

@@ -1338,7 +1338,7 @@ body {
 </div>
 
 <!-- EXPRESSION DU JOUR (injectée par update_actus.py à chaque run) -->
-<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Aspirine</h2><p class="expression-corps">Le préfixe <em>a-</em> pour acétyl, et <em>spirine</em> de <em>Spiraea ulmaria</em> — la reine-des-prés dont l'acide salicylique fut extrait au XIXe siècle. Bayer déposa la marque en 1899, inventant au passage le concept de médicament de marque.</p></aside>
+<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Avoir du cachet</h2><p class="expression-corps">Le cachet pharmaceutique était une petite enveloppe de pain azyme dans laquelle les apothicaires plaçaient une dose précise de médicament — identifiée, mesurée, distinctive. Avoir du cachet, c'est avoir ce caractère particulier qui vous distingue, comme la marque de l'apothicaire sur son préparation.</p></aside>
 
 <!-- ARTICLES (groupes par date) -->
 <div id="articles-container"></div>
@@ -1451,6 +1451,96 @@ body {
 // Mis a jour automatiquement par n8n chaque semaine
 // ============================================================
 const ARTICLES = [
+{
+    id: "actu_2026_06_10_1",
+    date: "2026-06-10",
+    type: "actu",
+    categorie: "pharma_france",
+    titre: "Testostérone Besins et Androtardyl : stop aux erreurs de substitution fatales",
+    resume: "Le CRPV de Nice alerte sur des erreurs graves de substitution entre ces deux testostérones. Leurs pharmacocinétiques et rythmes d'administration diffèrent totalement. Une confusion qui peut coûter cher à tes patients.",
+    full_text: "Le CRPV de Nice tire la sonnette d'alarme. Plusieurs cas d'erreurs de substitution entre Testostérone Besins 1000 mg/4 ml et Androtardyl 250 mg/ml viennent d'être recensés.\n\nPourquoi c'est grave ? Ces deux spécialités n'ont pas du tout les mêmes propriétés pharmacocinétiques. Testostérone Besins se libère différemment et son schéma d'administration n'est pas identique à Androtardyl. Une substitution sauvage peut dérégler complètement l'équilibre hormonal du patient.\n\nAu comptoir, vigilance maximum. Même DCI, même indication, mais deux galéniques distinctes. Le prescripteur doit valider tout changement entre ces deux formes.\n\nLe piège ? Ces erreurs surviennent souvent lors de ruptures de stock ou de changements de fournisseur. Tu penses rendre service en dépannant, mais tu peux créer un déséquilibre thérapeutique.\n\nConcrètement demain matin : vérifie systématiquement la spécialité exacte prescrite. En cas de doute ou de substitution nécessaire, appelle le médecin. Pas d'improvisation sur les traitements hormonaux.",
+    source: "Le Moniteur des Pharmacies",
+    source_url: "https://www.lemoniteurdespharmacies.fr/therapeutique/vigilances/ne-pas-substituer-testosterone-besins-par-androtardyl-sans-validation-medicale",
+    tiktok_url: "",
+    badge_label: "Pharma France",
+    image_url: "assets/img_actu_2026_06_10_1.jpg",
+    tags: ["substitution", "vigilance", "testosterone", "crpv"]
+  },
+{
+    id: "actu_2026_06_10_2",
+    date: "2026-06-10",
+    type: "actu",
+    categorie: "pharma_monde",
+    titre: "Merck et Gilead créent la première pilule anti-VIH hebdomadaire",
+    resume: "L'association islatravir + lenacapavir vient de réussir deux essais de phase 3. Un comprimé par semaine pour traiter le VIH, c'est du jamais vu. Cette révolution va changer ta dispensation et l'observance de tes patients.",
+    full_text: "Du jamais vu dans le VIH. L'association de l'islatravir (Merck) et du lenacapavir (Gilead) vient de passer avec succès deux essais de phase 3.\n\nUn comprimé par semaine au lieu d'un par jour. Cette prouesse pharmaceutique va révolutionner l'observance de tes patients séropositifs. Fini les oublis quotidiens, les week-ends ratés, les voyages compliqués.\n\nComment ça marche ? L'islatravir bloque la transcriptase inverse, le lenacapavir inhibe la capside virale. Cette combinaison inédite permet une action prolongée avec une seule prise hebdomadaire.\n\nPour tes patients, c'est un game changer. L'observance reste le talon d'Achille des trithérapies classiques. Passer de 365 prises par an à 52, ça change tout psychologiquement.\n\nCôté officine, prépare-toi à une dispensation différente. Stock de sécurité plus léger, conseils d'observance à adapter, suivi des patients à réorganiser.\n\nL'AMM européenne est attendue dans les prochains mois. Cette innovation française devrait rapidement transformer ta file active VIH.",
+    source: "Fierce Pharma",
+    source_url: "https://www.fiercepharma.com/pharma/merck-gilead-score-effort-develop-first-weekly-hiv-pill",
+    tiktok_url: "",
+    badge_label: "Pharma Monde",
+    image_url: "assets/img_actu_2026_06_10_2.jpg",
+    tags: ["vih", "innovation", "observance", "gilead", "merck"]
+  },
+{
+    id: "actu_2026_06_10_3",
+    date: "2026-06-10",
+    type: "actu",
+    categorie: "bonne_nouvelle",
+    titre: "T3 25 µg arrive enfin pour remplacer Cynomel chez les intolérants à Thybon",
+    resume: "Sanofi avait stoppé Cynomel fin 2025, Thybon le remplaçait mais certains patients ne le tolèrent pas. Eurodep lance T3 25 µg, disponible dès maintenant. Tes patients thyroïdiens ont enfin une solution.",
+    full_text: "Enfin une solution pour tes patients intolérants à Thybon. Eurodep vient de lancer T3 25 µg, disponible à la commande depuis le 8 juin.\n\nPour rappel, Sanofi a arrêté Cynomel 0,025 mg fin octobre 2025. Thybon 20 Henning l'a remplacé, mais certains patients développent des intolérances. Problèmes digestifs, malaises, déséquilibres thyroïdiens.\n\nT3 25 µg d'Eurodep change la donne. Même dosage que l'ancien Cynomel, excipients différents de Thybon. Pour tes patients qui galèrent depuis des mois, c'est un soulagement.\n\nAttention aux modalités de prescription. T3 25 µg se distingue de Thybon par sa composition et son profil de tolérance. Le médecin doit prescrire explicitement cette spécialité.\n\nAu comptoir, explique bien la différence à tes patients. Ce n'est ni Cynomel ni Thybon, mais une alternative spécialement développée pour les intolérants.\n\nStock-le dès maintenant. Tes patients thyroïdiens en galère depuis l'arrêt de Cynomel vont te remercier. Cette fois, ils ont enfin une vraie solution de remplacement qui leur convient.",
+    source: "Le Quotidien du Pharmacien",
+    source_url: "http://www.lequotidiendupharmacien.fr/medicament-parapharmacie/medicament/intolerance-thybon-la-solution-de-remplacement-est-arrivee",
+    tiktok_url: "",
+    badge_label: "La bonne nouvelle",
+    image_url: "assets/img_actu_2026_06_10_3.jpg",
+    tags: ["thyroide", "substitution", "intolerance", "cynomel"]
+  },
+{
+    id: "actu_2026_06_10_4",
+    date: "2026-06-10",
+    type: "actu",
+    categorie: "avenir_pharma",
+    titre: "Pfizer élargit Hympavzi aux enfants dès 6 ans dans l'hémophilie",
+    resume: "La FDA vient d'étendre Hympavzi aux patients de 6 ans et plus, avec ou sans inhibiteurs. Cette extension pédiatrique ouvre de nouveaux horizons thérapeutiques pour tes jeunes patients hémophiles.",
+    full_text: "Pfizer frappe fort dans l'hémophilie pédiatrique. La FDA vient d'élargir l'AMM d'Hympavzi aux patients dès 6 ans, qu'ils aient ou non des inhibiteurs.\n\nConcrètement, Hympavzi couvre désormais tous les patients de 6 ans et plus avec hémophilie A ou B. L'extension inclut même les 12 ans et plus qui ont développé des inhibiteurs, situation particulièrement complexe à traiter.\n\nPourquoi c'est révolutionnaire ? Hympavzi n'est pas un facteur de coagulation classique. C'est un anticorps bispécifique qui mime l'action du facteur VIII en reliant les facteurs IX et X. Résultat : il fonctionne même chez les patients avec inhibiteurs.\n\nPour tes familles concernées, cette extension change tout. Les enfants hémophiles peuvent enfin bénéficier d'un traitement prophylactique efficace, sans se soucier du statut inhibiteur.\n\nCôté dispensation, prépare-toi à gérer une thérapeutique complexe. Formation des équipes indispensable, suivi rapproché des familles, coordination avec les centres de traitement de l'hémophilie.\n\nCette extension pédiatrique confirme le potentiel d'Hympavzi. Une innovation qui va transformer la prise en charge de l'hémophilie chez l'enfant en France d'ici 2027.",
+    source: "Fierce Pharma",
+    source_url: "https://www.fiercepharma.com/pharma/pfizer-scores-fda-pediatric-expansion-hemophilia-treatment-hympavzi",
+    tiktok_url: "",
+    badge_label: "L'avenir de la pharma",
+    image_url: "assets/img_actu_2026_06_10_4.jpg",
+    tags: ["hemophilie", "pediatrie", "pfizer", "innovation"]
+  },
+{
+    id: "actu_2026_06_10_5",
+    date: "2026-06-10",
+    type: "actu",
+    categorie: "business_officine",
+    titre: "Jean-François Brochard (Merck) prend le LEEM : quel impact sur les 115 Md€ du marché ?",
+    resume: "L'ancien patron de Merck France devient président du lobby pharma français. Un changement de cap pour défendre les 115 milliards d'euros de chiffre d'affaires du secteur face aux pressions tarifaires.",
+    full_text: "L'ancien patron de Merck France devient président du lobby pharma français. Un changement de cap pour défendre les 115 milliards d'euros de chiffre d'affaires du secteur face aux pressions tarifaires.\n\n## Contexte\n\nJean-François Brochard vient d'être élu président du LEEM pour un mandat de trois ans. Cet ancien dirigeant de Merck France succède à la tête de l'organisation qui représente 270 entreprises pharmaceutiques françaises. Le LEEM pèse lourd dans les négociations avec l'Assurance Maladie : ses adhérents génèrent 115 milliards d'euros de chiffre d'affaires annuel et emploient 105 000 personnes. Pour les officines, ce changement de leadership arrive à un moment critique. Les laboratoires subissent une pression tarifaire croissante (-2,5% sur les prix en moyenne chaque année depuis 2018) qui se répercute directement sur les marges officinales. Le LEEM négocie aussi les accords-cadres qui définissent les conditions de distribution en pharmacie.\n\n## Analyse business\n\nCette nomination intervient dans un contexte économique tendu pour le médicament. Les remises obligatoires des laboratoires à l'Assurance Maladie ont bondi de 890 millions d'euros en 2022 à 1,2 milliard en 2025, soit +35% en trois ans. Pour les officines, cette pression se traduit par une érosion des marges : la marge moyenne sur le médicament remboursé est passée de 26,8% en 2019 à 25,1% en 2024 selon l'ANSM. Brochard devra aussi gérer le dossier des génériques, où la France accuse un retard coûteux. Avec seulement 67% de taux de généricage contre 85% en Allemagne, le manque à gagner pour l'Assurance Maladie dépasse 2 milliards d'euros par an. Cette situation profite paradoxalement aux officines qui conservent des marges plus élevées sur les princeps. Enfin, le LEEM pilote les négociations sur les nouveaux honoraires de dispensation : après les 1,02€ par boîte obtenus en 2023, l'enjeu est de décrocher une revalorisation supplémentaire face à l'inflation des coûts de structure (+8,2% depuis 2022).\n\n## Recommandations actionnables\n\n1. Anticiper les baisses tarifaires — Diversifie tes sources de revenus avec les services (vaccination, BPM) moins sensibles aux négociations LEEM-Assurance Maladie.\n2. Optimiser le généricage — Forme tes équipes sur les nouveaux génériques pour capter les 0,53€ d'honoraires de dispensation par substitution.\n3. Surveiller les accords-cadres — Les négociations LEEM impactent directement tes conditions d'achat et délais de paiement fournisseurs.\n4. Préparer la digitalisation — Brochard pousse l'e-santé : investis dans les outils numériques avant qu'ils deviennent obligatoires.\n\n## Sources citees\n\n- LEEM",
+    source: "Pharm'Actus",
+    source_url: "",
+    tiktok_url: "",
+    badge_label: "Business",
+    image_url: "assets/img_actu_2026_06_10_5.jpg",
+    tags: ["leem", "laboratoires", "marges", "negociations"]
+  },
+{
+    id: "lsv_2026_06_10",
+    date: "2026-06-10",
+    type: "lsv",
+    categorie: "lsv",
+    titre: "Le saviez-vous ? La première chimiothérapie était de l'ypérite recyclée",
+    resume: "Quand les armes chimiques de 14-18 se sont reconverties en médicaments anticancer. L'histoire d'une découverte aussi macabre qu'accidentelle qui a sauvé des millions de vies.",
+    full_text: "Imagine un peu : le premier traitement contre le cancer vient directement des tranchées de 1918. L'ypérite, ce gaz moutarde qui a terrorisé les soldats, allait devenir l'arme secrète des oncologues.\n\nTout commence en 1943 à Bari, en Italie. Un cargo américain bourré de munitions à l'ypérite explose dans le port. Les médecins militaires remarquent un truc bizarre : les survivants exposés au gaz ont leurs globules blancs qui chutent dramatiquement. Eurêka ! Si ça détruit les cellules qui se multiplient vite, pourquoi pas les cellules cancéreuses ?\n\nLouis Goodman et Alfred Gilman, deux pharmacologues de Yale, se penchent sur l'affaire. Ils modifient légèrement la molécule d'ypérite et créent la méchlorethamine. Premier test en août 1942 : un patient avec un lymphome généralisé. Résultat ? La tumeur fond littéralement.\n\nLe truc le plus dingue ? Pendant des années, les recherches restent top secret. Les publications parlent de \"substance X\" ou de \"composé 14\". Il faut attendre 1946 pour que le monde découvre que la chimiothérapie vient des armes chimiques.\n\nAujourd'hui, quand tu délivres du cyclophosphamide ou du chlorambucil au comptoir, tu prolonges cette histoire improbable. Ces molécules descendent directement de l'ypérite de 1918, transformant l'horreur des gaz de combat en espoir thérapeutique.",
+    source: "Pharm'Alpha",
+    source_url: "",
+    tiktok_url: "",
+    badge_label: "Le Saviez-Vous",
+    image_url: "assets/img_lsv_2026_06_10.jpg",
+    tags: ["histoire", "chimie", "cancer", "guerre", "decouverte"]
+  },
 {
     id: "actu_2026_06_09_1",
     date: "2026-06-09",
@@ -2110,96 +2200,6 @@ const ARTICLES = [
     badge_label: "La bonne nouvelle",
     image_url: "assets/img_actu_2026_06_01_3.jpg",
     tags: ["tabac", "sevrage", "prevention", "accompagnement"]
-  },
-{
-    id: "actu_2026_06_01_4",
-    date: "2026-06-01",
-    type: "actu",
-    categorie: "avenir_pharma",
-    titre: "Anticorps bispécifiques : Revolution Medicines garde son avance sur RAS",
-    resume: "À l'ASCO, Revolution Medicines confirme son leadership sur les inhibiteurs RAS malgré la concurrence qui se réveille. Leurs données pancréas de début 2026 restent la référence du domaine.",
-    full_text: "L'ASCO 2026 bruisse de discussions autour des inhibiteurs RAS, et Revolution Medicines compte bien garder sa couronne. Leurs données pancréas publiées plus tôt cette année restent la référence absolue du secteur.\n\nPourquoi RAS fait fantasmer ? Ces mutations touchent 30% des cancers humains, notamment pancréas (90%), côlon (50%) et poumon (30%). Longtemps considérées comme \"non-druggables\", ces cibles s'ouvrent enfin aux thérapies ciblées.\n\nRevolution Medicines a ouvert la voie avec des résultats spectaculaires dans le cancer du pancréas métastatique. On parle de doublement de survie dans certaines populations. Leurs molécules RMC-6236 et RMC-6291 ciblent différentes mutations KRAS.\n\nLa concurrence s'organise : Amgen pousse son LUMAKRAS (sotorasib), Mirati développe adagrasib, et les big pharma investissent massivement. Mais RevMed garde son avance technologique sur les inhibiteurs de nouvelle génération.\n\nCôté timeline, les premières AMM sont attendues vers 2027-2028. Prix prévisible ? Autour de 10-15 000€ par mois, dans la lignée des autres thérapies ciblées oncologiques. Impact majeur attendu en cancérologie.\n\nPour l'officine française, ça veut dire nouvelles molécules à haute valeur ajoutée, nouveaux protocoles de surveillance, et formation des équipes sur ces mécanismes d'action révolutionnaires. L'oncologie de précision continue sa mutation.",
-    source: "Fierce Pharma",
-    source_url: "https://www.fiercepharma.com/biotech/asco-revolution-medicines-confident-ras-leadership-rivals-square",
-    tiktok_url: "",
-    badge_label: "L'avenir de la pharma",
-    image_url: "assets/img_actu_2026_06_01_4.jpg",
-    tags: ["ras", "cancer", "recherche", "innovation"]
-  },
-{
-    id: "actu_2026_06_01_5",
-    date: "2026-06-01",
-    type: "actu",
-    categorie: "business_officine",
-    titre: "GLP-1 : effet anticancer confirmé, un marché de 100 milliards en vue",
-    resume: "Les anti-obésité GLP-1 réduisent aussi les métastases selon une étude présentée à Chicago. Un double effet qui pourrait révolutionner leur prescription.",
-    full_text: "Les anti-obésité GLP-1 réduisent aussi les métastases selon une étude présentée à Chicago. Un double effet qui pourrait révolutionner leur prescription.\n\n## Contexte\n\nLe congrès annuel de l'ASCO (American Society of Clinical Oncology) à Chicago vient de révéler une découverte majeure : les médicaments GLP-1 comme Mounjaro (tirzépatide) et Wegovy (sémaglutide) auraient un effet protecteur contre le développement des métastases cancéreuses. Cette révélation intervient pile au moment où la France s'apprête à rembourser ces traitements pour l'obésité. Le marché mondial des GLP-1 pèse déjà 42 milliards de dollars en 2024 selon Goldman Sachs, et pourrait atteindre 100 milliards d'ici 2030. Novo Nordisk (Ozempic, Wegovy) et Eli Lilly (Mounjaro) se partagent 95% de ce marché en explosion. En France, 8,5 millions d'adultes sont en situation d'obésité (IMC>30), soit 17% de la population selon l'INSERM. Le remboursement imminent de ces traitements à 300-400€ par mois va transformer la donne économique pour les officines.\n\n## Analyse business\n\nCette double indication obésité-cancer change complètement la perspective business. Actuellement, les GLP-1 représentent moins de 2% du CA moyen des pharmacies françaises, soit environ 4 000€ annuels par officine selon l'GERS. Avec le remboursement à 65% prévu dans la LFSS 2027, ce chiffre pourrait bondir à 15 000-20 000€ par officine d'ici 2028. L'effet anticancer révélé à Chicago élargit considérablement la population cible : aux 8,5 millions d'obèses s'ajoutent potentiellement 3,8 millions de Français avec antécédents de cancer selon l'Institut national du cancer. Le prix public de Mounjaro (289€ pour 4 stylos) et Wegovy (320€) génère une marge réglementaire de 6,85€ par boîte pour l'officine, soit 82€ annuels par patient traité en continu. Mais c'est l'honoraire de dispensation (1€ par ligne) et surtout les entretiens pharmaceutiques spécialisés qui pourraient exploser : l'Assurance Maladie teste un forfait de 50€ par patient pour le suivi des GLP-1, calqué sur les anticoagulants. Avec 500 000 patients attendus sous GLP-1 remboursés d'ici fin 2027, cela représente 25 millions d'euros d'honoraires à répartir entre les 21 000 officines.\n\n## Recommandations actionnables\n\n1. Formation équipes — Organise dès maintenant une formation sur les GLP-1 et leurs nouveaux effets : obésité, diabète et prévention cancer. L'UTIP propose un module de 7h validant DPC.\n\n2. Partenariat endocrino — Noue des contacts avec les endocrinologues et oncologues locaux pour les orientations de patients. Le parcours de soins sera obligatoire.\n\n3. Espace conseil dédié — Aménage un espace confidentiel pour les entretiens GLP-1 : ces patients nécessiteront un suivi mensuel réglementaire.\n\n4. Stock sécurisé — Anticipe les ruptures avec un stock de sécurité de 15 jours minimum. Novo Nordisk annonce des tensions d'approvisionnement jusqu'en 2028.\n\n5. Outils de suivi — Investis dans un logiciel de suivi patient compatible avec Mon Espace Santé pour tracer les effets indésirables et l'observance.\n\n## Sources citees\n\n- France Info Sante",
-    source: "Pharm'Actus",
-    source_url: "",
-    tiktok_url: "",
-    badge_label: "Business",
-    image_url: "assets/img_actu_2026_06_01_5.jpg",
-    tags: ["glp1", "obesite", "cancer", "remboursement"]
-  },
-{
-    id: "lsv_2026_06_01",
-    date: "2026-06-01",
-    type: "lsv",
-    categorie: "lsv",
-    titre: "Le saviez-vous ? La première opération au laser a été testée sur l'œil d'un lapin",
-    resume: "1960 : Theodore Maiman invente le laser. Quelques mois plus tard, un ophtalmologiste audacieux pointe ce rayon mystérieux vers la rétine d'un lapin. L'ère de la chirurgie laser venait de naître.",
-    full_text: "Mai 1960. Theodore Maiman allume le premier laser de l'histoire dans son laboratoire californien. Un faisceau de lumière rouge intense jaillit du cristal de rubis. Personne ne sait encore à quoi ça peut servir.\n\nSix mois plus tard, Charles Campbell, ophtalmologiste à l'Institut d'ophtalmologie de Londres, a une idée folle. Et si ce rayon pouvait cautériser la rétine sans ouvrir l'œil ? Il installe un laser dans son cabinet et commence ses expériences sur des lapins anesthésiés.\n\nLe 1er février 1961, premier essai. Le faisceau traverse la cornée, l'humeur vitrée, et frappe précisément la rétine du lapin. Miracle : les vaisseaux sanguins se soudent instantanément, sans aucune incision ! Campbell vient d'inventer la photocoagulation rétinienne.\n\nMais voici le twist : Campbell était daltonien. Il ne voyait pas le rouge de son laser ! Il travaillait entièrement au jugé, guidé par ses assistants qui lui décrivaient ce qu'ils observaient au fond de l'œil.\n\nSix mois plus tard, il traite son premier patient humain : un homme avec un décollement de rétine. Succès total. En 1962, Campbell opère déjà 200 patients par an avec son laser.\n\nAujourd'hui, tu vois passer des patients traités au laser pour leurs diabète, leur myopie, leurs rides. Tout ça a commencé avec un ophtalmologiste daltonien et un lapin cobaye dans un cabinet londonien !",
-    source: "Pharm'Alpha",
-    source_url: "",
-    tiktok_url: "",
-    badge_label: "Le Saviez-Vous",
-    image_url: "assets/img_lsv_2026_06_01.jpg",
-    tags: ["histoire", "chirurgie", "laser", "ophtalmologie", "decouverte"]
-  },
-{
-    id: "actu_2026_05_31_1",
-    date: "2026-05-31",
-    type: "actu",
-    categorie: "pharma_france",
-    titre: "Diabète : l'hérédité au cœur de la semaine de prévention du 1er au 8 juin",
-    resume: "La campagne nationale 2026 met l'accent sur les facteurs génétiques du diabète de type 2. L'occasion de repositionner l'officine comme acteur clé du dépistage familial. Actions et outils déployés partout en France.",
-    full_text: "Du 1er au 8 juin, la campagne nationale de prévention du diabète de type 2 met les projecteurs sur l'hérédité. Un angle malin qui change des sempiternels messages sur l'alimentation et l'activité physique.\n\nTrois objectifs affichés cette année : sensibiliser aux antécédents familiaux comme facteur de risque majeur, encourager le dépistage précoce chez les personnes à risque génétique, et promouvoir l'adoption de mesures préventives personnalisées selon le profil familial.\n\nConcrètement, ça donne quoi au comptoir ? Des outils de communication spécifiques seront mis à disposition des officines participantes. Affiches, brochures et questionnaires de dépistage familial pour identifier les patients à risque héréditaire élevé.\n\nLe timing est parfait avec l'élargissement des missions de prévention officinales. Cette campagne s'inscrit dans la lignée des entretiens pharmaceutiques et de la consultation de prévention des 45-70 ans récemment déployée.\n\nLes chiffres parlent d'eux-mêmes : avoir un parent diabétique multiplie par 3 le risque de développer un diabète de type 2. Deux parents diabétiques ? Le risque grimpe à 6.\n\nPour les équipes, c'est l'occasion de valoriser l'approche conseil et de créer du lien avec une patientèle souvent asymptomatique. Les actions de prévention, c'est du temps investi aujourd'hui pour fidéliser demain.\n\nRendez-vous dès lundi pour déployer ces nouveaux outils et repositionner l'officine comme sentinelle de la prévention familiale.",
-    source: "Le Moniteur des Pharmacies",
-    source_url: "https://www.lemoniteurdespharmacies.fr/conseils/pathologies/diabete-le-poids-de-lheredite-au-coeur-de-la-semaine-de-prevention",
-    tiktok_url: "",
-    badge_label: "Pharma France",
-    image_url: "assets/img_actu_2026_05_31_1.jpg",
-    tags: ["diabete", "prevention", "heredite", "depistage", "mission"]
-  },
-{
-    id: "actu_2026_05_31_2",
-    date: "2026-05-31",
-    type: "actu",
-    categorie: "pharma_monde",
-    titre: "ASCO 2026 : Pfizer surpasse J&J avec sa combo Talzenna dans le cancer prostatique",
-    resume: "La phase 3 de l'association Talzenna-Xtandi élargit les indications face au cancer de la prostate hormono-sensible. Pfizer prend une longueur d'avance sur le PARP inhibiteur Akeega de J&J. Pipeline oncologique qui se densifie.",
-    full_text: "Au congrès ASCO de Chicago, Pfizer vient de dévoiler des résultats de phase 3 qui changent la donne. L'association Talzenna (talazoparib) + Xtandi (enzalutamide) démontre son efficacité dans le cancer de la prostate métastatique hormono-sensible.\n\nTraduction pour nous ? Cette combo PARP inhibiteur + anti-androgène va probablement débarquer en première ligne, là où on n'avait jusqu'ici que la chimiothérapie ou les nouveaux anti-androgènes en monothérapie.\n\nCe qui pique, c'est que Pfizer devance Johnson & Johnson et son Akeega (niraparib + acétate d'abiratérone). La course aux combinaisons PARP est lancée, et les enjeux financiers sont colossaux sur cette indication.\n\nPour l'officine française, ça préfigure l'arrivée de nouvelles thérapies orales onéreuses. Le Talzenna coûte déjà 3 400€ par mois en monothérapie. Associé à l'Xtandi, on dépasse les 5 000€ mensuels.\n\nCôté approvisionnement, les PARP inhibiteurs restent des produits à rotation lente mais à forte valeur. Stock mort potentiel si mal géré, mais marge intéressante sur les rétrocessions hospitalières.\n\nLa FDA devrait statuer d'ici fin 2026. L'EMA suivra probablement 6 mois après. En France, la négociation CEPS risque d'être tendue sur le prix, surtout avec cette double indication qui élargit la population cible.\n\nUne chose est sûre : l'oncologie orale continue de complexifier nos circuits d'approvisionnement, mais elle reste un relais de croissance indispensable pour les officines spécialisées.",
-    source: "Fierce Pharma",
-    source_url: "https://www.fiercepharma.com/pharma/pfizer-one-ups-jj-talzenna-combo-claims-broad-castration-sensitive-prostate-cancer-win",
-    tiktok_url: "",
-    badge_label: "Pharma Monde",
-    image_url: "assets/img_actu_2026_05_31_2.jpg",
-    tags: ["cancer", "prostate", "pfizer", "parp", "asco"]
-  },
-{
-    id: "actu_2026_05_31_3",
-    date: "2026-05-31",
-    type: "actu",
-    categorie: "bonne_nouvelle",
-    titre: "Cancer du pancréas : le daraxonrasib multiplie par deux l'espérance de vie",
-    resume: "Ce nouvel anticancéreux révolutionne la prise en charge de l'un des cancers les plus mortels. Les résultats présentés dimanche à l'ASCO suscitent un espoir inédit pour les patients et leurs familles.",
-    full_text: "\"C'est une révolution.\" Le terme n'est pas galvaudé quand on parle du daraxonrasib contre le cancer du pancréas. Cette nouvelle molécule vient de démontrer qu'elle multiplie par deux l'espérance de vie des patients atteints de cette maladie particulièrement agressive.\n\nJusqu'ici, le pronostic était sombre : moins de 5% de survie à 5 ans. Le cancer du pancréas reste l'un des plus redoutables, avec peu d'options thérapeutiques efficaces. La gemcitabine et les protocoles FOLFIRINOX constituent l'arsenal actuel, avec des résultats souvent décevants.\n\nLe daraxonrasib change la donne en ciblant spécifiquement les mutations KRAS G12C, présentes chez environ 2% des patients atteints de cancer pancréatique. Certes, c'est une population restreinte, mais pour ces malades, l'impact est spectaculaire.\n\nLes résultats de l'étude seront dévoilés dimanche au congrès annuel de cancérologie. Les oncologues présents parlent déjà d'un tournant historique dans la prise en charge de cette pathologie.\n\nPour les officines, cette avancée préfigure l'arrivée d'une nouvelle classe thérapeutique prometteuse. Les inhibiteurs de KRAS représentent l'une des voies de recherche les plus actives en oncologie.\n\nAu-delà des aspects techniques, c'est surtout une bouffée d'espoir pour les familles confrontées à ce diagnostic. Pouvoir annoncer un doublement de l'espérance de vie change radicalement les perspectives et la qualité de fin de vie.\n\nL'innovation thérapeutique continue de repousser les limites du possible, même sur les cancers réputés incurables.",
-    source: "France Info Santé",
-    source_url: "https://www.franceinfo.fr/sante/cancer/c-est-une-revolution-pourquoi-le-daraxonrasib-un-nouveau-traitement-contre-le-cancer-du-pancreas-suscite-de-grands-espoirs_8014325.html#xtor=RSS-3-%5Bgeneral%5D",
-    tiktok_url: "",
-    badge_label: "La bonne nouvelle",
-    image_url: "assets/img_actu_2026_05_31_3.jpg",
-    tags: ["cancer", "pancreas", "innovation", "survie", "recherche"]
   }
 ];
 

@@ -1,34 +1,8 @@
 {
-  "generated_at": "2026-06-09",
-  "window_label": "3 juin — 9 juin 2026",
+  "generated_at": "2026-06-10",
+  "window_label": "4 juin — 10 juin 2026",
   "has_history": true,
   "delta_source": "pytrends_rising",
   "pathologies": [],
-  "soins": [
-    {
-      "display": "Azinc immunite",
-      "delta_label": "↑ 591 200",
-      "trend": "up"
-    },
-    {
-      "display": "Calmosine digestion bébé",
-      "delta_label": "↑ 21 100",
-      "trend": "up"
-    },
-    {
-      "display": "Artichaut digestion",
-      "delta_label": "↑ 14 700",
-      "trend": "up"
-    },
-    {
-      "display": "Hill's perfect digestion",
-      "delta_label": "↑ 12 500",
-      "trend": "up"
-    },
-    {
-      "display": "Digestion difficile que faire",
-      "delta_label": "↑ 12 500",
-      "trend": "up"
-    }
-  ]
+  "soins": []
 }

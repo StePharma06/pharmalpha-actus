@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-06-10T04:14:58.215459+02:00",
+  "run_date": "2026-06-10",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "avenir_pharma",
+      "titre": "Pfizer élargit Hympavzi aux enfants dès 6 ans dans l'hémophilie",
+      "resume": "La FDA vient d'étendre Hympavzi aux patients de 6 ans et plus, avec ou sans inhibiteurs. Cette extension pédiatrique ouvre de nouveaux horizons thérapeutiques pour tes jeunes patients hémophiles.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/pharma/pfizer-scores-fda-pediatric-expansion-hemophilia-treatment-hympavzi",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Jean-François Brochard (Merck) prend le LEEM : quel impact sur les 115 Md€ du marché ?",
+      "resume": "L'ancien patron de Merck France devient président du lobby pharma français. Un changement de cap pour défendre les 115 milliards d'euros de chiffre d'affaires du secteur face aux pressions tarifaires.",
+      "source": "Pharm'Actus",
+      "source_url": "",
+      "confidence_score": 0.7,
+      "warnings": [
+        "Chiffres sectoriels estimés à partir de données publiques antérieures",
+        "Détails du mandat de Brochard non précisés dans la source",
+        "FACT-CHECK: 'la marge moyenne sur le médicament remboursé est passée de 26,8% en 2019 à 25,1% en 2024 selon l'ANSM' → L'ANSM ne produit pas de statistiques sur les marges officinales. Cette donnée relève de l'USPO, du CESPHARM ou de l'observatoire économique de la pharmacie",
+        "FACT-CHECK: 'après les 1,02€ par boîte obtenus en 2023' → Les honoraires de dispensation sont de 1,02€ par ligne d'ordonnance, pas par boîte. Une ligne peut contenir plusieurs boîtes du même médicament",
+        "FACT-CHECK: 'capter les 0,53€ d'honoraires de dispensation par substitution' → Montant à vérifier dans l'avenant 21 à la convention pharmaceutique. Les honoraires de substitution ont des modalités spécifiques selon le type de substitution",
+        "FACT-CHECK: 'le LEEM pilote les négociations sur les nouveaux honoraires de dispensation' → Les honoraires pharmaceutiques sont négociés entre l'Assurance Maladie et les syndicats de pharmaciens (FSPF, USPO), pas par le LEEM qui représente les laboratoires"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}
