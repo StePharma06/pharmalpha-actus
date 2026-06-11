@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? La première chimiothérapie était de l'ypérite recyclée",
-  "resume": "Quand les armes chimiques de 14-18 se sont reconverties en médicaments anticancer. L'histoire d'une découverte aussi macabre qu'accidentelle qui a sauvé des millions de vies.",
-  "full_text": "Imagine un peu : le premier traitement contre le cancer vient directement des tranchées de 1918. L'ypérite, ce gaz moutarde qui a terrorisé les soldats, allait devenir l'arme secrète des oncologues.\n\nTout commence en 1943 à Bari, en Italie. Un cargo américain bourré de munitions à l'ypérite explose dans le port. Les médecins militaires remarquent un truc bizarre : les survivants exposés au gaz ont leurs globules blancs qui chutent dramatiquement. Eurêka ! Si ça détruit les cellules qui se multiplient vite, pourquoi pas les cellules cancéreuses ?\n\nLouis Goodman et Alfred Gilman, deux pharmacologues de Yale, se penchent sur l'affaire. Ils modifient légèrement la molécule d'ypérite et créent la méchlorethamine. Premier test en août 1942 : un patient avec un lymphome généralisé. Résultat ? La tumeur fond littéralement.\n\nLe truc le plus dingue ? Pendant des années, les recherches restent top secret. Les publications parlent de \"substance X\" ou de \"composé 14\". Il faut attendre 1946 pour que le monde découvre que la chimiothérapie vient des armes chimiques.\n\nAujourd'hui, quand tu délivres du cyclophosphamide ou du chlorambucil au comptoir, tu prolonges cette histoire improbable. Ces molécules descendent directement de l'ypérite de 1918, transformant l'horreur des gaz de combat en espoir thérapeutique.",
-  "image_keywords": "chemical warfare medicine",
+  "titre": "Le saviez-vous ? La première échographie a failli révéler des sous-marins",
+  "resume": "En 1941, un neurologue autrichien invente l'échographie pour détecter les tumeurs cérébrales. Mais sa technique s'inspire directement du sonar militaire utilisé pour traquer les U-Boot allemands !",
+  "full_text": "Imagine un neurologue qui observe les radars de la marine et se dit : \"Et si on utilisait ça pour voir à l'intérieur du crâne ?\" C'est exactement ce qui s'est passé en 1941 avec Karl Dussik, médecin autrichien passionné de physique.\n\nDussik venait d'étudier les nouvelles techniques de sonar développées pour la guerre sous-marine. Le principe était génial : envoyer des ondes sonores et analyser leur écho pour localiser les objets cachés. Pourquoi pas les tumeurs cérébrales ?\n\nIl installe son frère Friedrich (qui avait la malchance d'être physicien) dans un bac d'eau, pose des transducteurs de chaque côté de sa tête, et lance les premières ondes ultrasonores. Résultat : des images floues mais prometteuses du cerveau humain ! La première échographie médicale était née.\n\nLe hic ? La technique était tellement expérimentale que Dussik a passé des années à scanner des têtes de cadavres dans des cuves d'eau. Ses collègues le prenaient pour fou. Il a fallu attendre 1958 pour que l'obstétricien Ian Donald perfectionne la méthode et révolutionne le suivi de grossesse.\n\nLe plus dingue ? Dussik n'a jamais vu d'échographie moderne de sa vie. Il est mort en 1968, juste avant l'explosion de sa découverte.\n\nAujourd'hui, chaque fois qu'on fait une écho au comptoir pour vérifier une grossesse ou dépister une pathologie, on utilise la même physique que les chasseurs de sous-marins de 1941 !",
+  "image_keywords": "ultrasound medical equipment",
   "tags": [
     "histoire",
-    "chimie",
-    "cancer",
-    "guerre",
-    "decouverte"
+    "diagnostic",
+    "echographie",
+    "invention",
+    "guerre"
   ],
-  "date": "2026-06-10",
+  "date": "2026-06-11",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",

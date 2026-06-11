@@ -1,0 +1,50 @@
+{
+  "generated_at": "2026-06-11T04:14:11.264074+02:00",
+  "run_date": "2026-06-11",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Le dépistage de l'hypertension en officine bientôt rémunéré",
+      "resume": "Le Sénat vient d'adopter la proposition de loi Neuder qui autorise les pharmaciens à mesurer la tension artérielle dans un cadre préventif. Une nouvelle mission rémunérée qui arrive enfin au comptoir.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/hypertension-arterielle-bientot-un-depistage-remunere-en-officine",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "L'alternance en pharmacie résiste à la crise du recrutement",
+      "resume": "Alors que les contrats d'alternance chutent de 12% partout en France, la pharmacie continue d'attirer les candidats. Les préparateurs sont particulièrement recherchés.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/alternance-la-pharmacie-continue-de-seduire-les-candidats",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Déserts médicaux : tes nouvelles missions arrivent avec 2,3M de patients orphelins",
+      "resume": "La fracture territoriale s'aggrave avec 2,3 millions de Français sans médecin traitant. L'officine devient le recours de première ligne.",
+      "source": "Pharm'Actus",
+      "source_url": "",
+      "confidence_score": 0.7,
+      "warnings": [
+        "Chiffre 2,3M patients sans médecin traitant à vérifier - source Le Monde",
+        "Tarifs des entretiens pharmaceutiques basés sur convention 2022, possibles évolutions",
+        "ROI de 50 actes/mois : estimation basée sur retours terrain, pas de source officielle",
+        "FACT-CHECK: 'l'explosion des entretiens pharmaceutiques (rémunérés 30€ pour l'asthme, 40€ pour les AVK, 60€ pour les AOD)' → Tarifs incorrects. Entretiens pharmaceutiques rémunérés 15€ pour asthme/BPCO, 20€ pour AVK, 30€ pour AOD selon avenant 21 à la convention pharmaceutique",
+        "FACT-CHECK: 'Les bilans partagés de médication (60€ l'acte)' → Tarif incorrect. Bilan de médication rémunéré 20€ selon avenant 21, non 60€",
+        "FACT-CHECK: 'Les vaccinations en officine (7,50€ l'acte + marge sur le vaccin)' → Tarif incorrect. Honoraire de dispensation pour vaccination : 4,30€ pour grippe, 6,30€ pour autres vaccins selon avenant 21",
+        "FACT-CHECK: 'Le dépistage rapide (TROD angine à 6€, TROD grippe à 6€)' → Tarifs et périmètre incorrects. TROD angine rémunéré 6€ exact, mais pas de TROD grippe remboursé en officine. Confusion probable avec test COVID",
+        "FACT-CHECK: 'ROI garanti dès 20 actes/mois' → Affirmation invérifiable et trompeuse sans analyse comptable précise des coûts réels par officine",
+        "FACT-CHECK: '+47% en 2025 avec 3,2 millions d'actes' → Données prospectives invérifiables, aucune source officielle ne confirme ces projections pour 2025"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

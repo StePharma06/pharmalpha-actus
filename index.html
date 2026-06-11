@@ -1338,7 +1338,7 @@ body {
 </div>
 
 <!-- EXPRESSION DU JOUR (injectée par update_actus.py à chaque run) -->
-<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Avoir du cachet</h2><p class="expression-corps">Le cachet pharmaceutique était une petite enveloppe de pain azyme dans laquelle les apothicaires plaçaient une dose précise de médicament — identifiée, mesurée, distinctive. Avoir du cachet, c'est avoir ce caractère particulier qui vous distingue, comme la marque de l'apothicaire sur son préparation.</p></aside>
+<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Pharmacie</h2><p class="expression-corps">Du grec <em>pharmakon</em>, mot à double sens : remède et poison. Les Grecs n'opposaient pas les deux — la même plante pouvait soigner ou tuer selon la dose. Paracelse l'a formulé 2000 ans plus tard : « La dose fait le poison. »</p></aside>
 
 <!-- ARTICLES (groupes par date) -->
 <div id="articles-container"></div>
@@ -1451,6 +1451,96 @@ body {
 // Mis a jour automatiquement par n8n chaque semaine
 // ============================================================
 const ARTICLES = [
+{
+    id: "actu_2026_06_11_1",
+    date: "2026-06-11",
+    type: "actu",
+    categorie: "pharma_france",
+    titre: "Le dépistage de l'hypertension en officine bientôt rémunéré",
+    resume: "Le Sénat vient d'adopter la proposition de loi Neuder qui autorise les pharmaciens à mesurer la tension artérielle dans un cadre préventif. Une nouvelle mission rémunérée qui arrive enfin au comptoir.",
+    full_text: "Ça y est, c'est voté ! Le Sénat a adopté hier la proposition de loi portée par Yannick Neuder qui ouvre officiellement le dépistage de l'hypertension artérielle aux pharmaciens.\n\nConcrètement, tu vas pouvoir « mesurer la pression artérielle de patients dans une démarche de prévention du risque cardio-neuro-vasculaire ». Les modalités pratiques seront fixées par décret en Conseil d'État, mais l'essentiel est acquis : cette mission sera rémunérée.\n\nEt c'était temps ! Avec 17 millions d'hypertendus en France et des délais d'accès au médecin qui s'allongent, on était en première ligne sans reconnaissance officielle. Beaucoup d'entre vous le font déjà officieusement depuis des années.\n\nLe texte s'inscrit dans la lignée des autres missions de prévention déjà mises en place : vaccination, TROD, entretiens pharmaceutiques. Une logique de santé publique qui valorise enfin notre expertise clinique.\n\nReste maintenant à attendre le fameux décret qui précisera tout : montant de la rémunération, conditions de formation, critères d'éligibilité des patients, modalités de facturation à l'Assurance Maladie. Les négociations avec l'UNCAM devraient commencer rapidement.\n\nL'hypertension, c'est 140/90 mmHg en consultation et 135/85 en automesure selon les dernières recommandations HAS. Un dépistage précoce peut éviter des complications cardiovasculaires majeures.\n\nAu comptoir demain matin ? Prépare-toi à équiper ton espace de santé d'un tensiomètre professionnel et à former tes équipes. Cette nouvelle mission va transformer ton quotidien et ton chiffre d'affaires.",
+    source: "Le Moniteur des Pharmacies",
+    source_url: "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/hypertension-arterielle-bientot-un-depistage-remunere-en-officine",
+    tiktok_url: "",
+    badge_label: "Pharma France",
+    image_url: "assets/img_actu_2026_06_11_1.jpg",
+    tags: ["depistage", "hypertension", "remuneration", "prevention"]
+  },
+{
+    id: "actu_2026_06_11_2",
+    date: "2026-06-11",
+    type: "actu",
+    categorie: "pharma_monde",
+    titre: "WuXi AppTec blacklisté par le Pentagone : ton CDMO chinois en danger",
+    resume: "Le géant chinois des services pharmaceutiques atterrit sur la liste noire militaire américaine. Si le Biosecure Act passe, tes labos clients vont devoir changer de sous-traitant.",
+    full_text: "Plot twist géopolitique dans l'industrie pharma ! WuXi AppTec, le mastodonte chinois des services de développement, vient d'être ajouté à la liste 1260H du Pentagone des entreprises ayant des « liens avec l'armée chinoise ».\n\nTraduction concrète ? Cette inscription automatise son inclusion dans le Biosecure Act comme « entreprise biotechnologique préoccupante ». Si cette loi passe définitivement, les labos américains devront couper les ponts avec WuXi d'ici 2032.\n\nPourquoi ça t'intéresse ? WuXi AppTec, c'est 26 milliards de dollars de chiffre d'affaires et des contrats avec la moitié des big pharma. Pfizer, Novartis, AstraZeneca... tous font appel à eux pour la production d'API, les essais cliniques ou le développement de biomédicaments.\n\nLe groupe crie évidemment au malentendu et parle d'une « erreur manifeste ». Mais Washington ne plaisante plus avec la sécurité sanitaire depuis Covid. L'objectif : relocaliser les chaînes d'approvisionnement pharmaceutiques critiques.\n\nConséquences pratiques ? Si tes fournisseurs habituels bossent avec WuXi, attends-toi à des tensions sur certaines molécules dans les prochaines années. Les labos vont devoir diversifier leurs CDMO, ce qui peut créer des ruptures temporaires.\n\nL'Europe va-t-elle suivre ? Bruxelles regarde de très près ce dossier. La souveraineté pharmaceutique, c'est devenu un enjeu stratégique majeur depuis la crise des masques.\n\nAu comptoir demain matin ? Garde un œil sur tes commandes de spécialités produites en Asie. Cette guerre commerciale va redessiner la carte mondiale du médicament.",
+    source: "Fierce Pharma",
+    source_url: "https://www.fiercepharma.com/pharma/wuxi-apptec-lands-us-government-list-companies-china-military-ties",
+    tiktok_url: "",
+    badge_label: "Pharma Monde",
+    image_url: "assets/img_actu_2026_06_11_2.jpg",
+    tags: ["geopolitique", "cdmo", "approvisionnement", "chine"]
+  },
+{
+    id: "actu_2026_06_11_3",
+    date: "2026-06-11",
+    type: "actu",
+    categorie: "bonne_nouvelle",
+    titre: "L'alternance en pharmacie résiste à la crise du recrutement",
+    resume: "Alors que les contrats d'alternance chutent de 12% partout en France, la pharmacie continue d'attirer les candidats. Les préparateurs sont particulièrement recherchés.",
+    full_text: "Contre-tendance remarquable ! Pendant que le marché de l'alternance plonge de 12% en 2025, la pharmacie garde son attractivité selon le dernier Baromètre Hellowork.\n\nLes candidatures spontanées pour des postes de préparateur en alternance représentent une part significative des demandes totales. Un signe que notre secteur garde sa réputation de filière stable et formatrice.\n\nPourquoi cette résistance ? D'abord, le statut du préparateur offre une vraie perspective de carrière avec un diplôme reconnu. Ensuite, les conditions de travail en officine ont progressé : horaires plus prévisibles, management de proximité, diversification des missions.\n\nLes candidats apprécient aussi la dimension humaine du métier. Dans un monde de plus en plus digitalisé, le contact patient reste un vrai plus. Sans compter l'expertise technique qui se développe avec la multiplication des formes galéniques et des dispositifs médicaux.\n\nCôté employeurs, vous y trouvez votre compte aussi. Un alternant préparateur, c'est une montée en compétences rapide, une motivation au top et souvent une future embauche à la clé. Le ROI formation est excellent.\n\nLe boom des services de santé en officine (vaccination, TROD, entretiens pharmaceutiques) crée aussi de nouveaux besoins en compétences. Un préparateur bien formé devient vite polyvalent.\n\nSeul bémol : la concurrence s'intensifie entre officines pour recruter les meilleurs profils. Les candidatures spontanées, c'est bien, mais n'hésitez pas à prospecter activement dans les écoles.\n\nAu comptoir demain matin ? Si tu cherches un alternant, c'est le bon moment pour publier ton annonce. Le vivier est là !",
+    source: "Le Quotidien du Pharmacien",
+    source_url: "http://www.lequotidiendupharmacien.fr/exercice-pro/alternance-la-pharmacie-continue-de-seduire-les-candidats",
+    tiktok_url: "",
+    badge_label: "La bonne nouvelle",
+    image_url: "assets/img_actu_2026_06_11_3.jpg",
+    tags: ["alternance", "preparateur", "formation", "recrutement"]
+  },
+{
+    id: "actu_2026_06_11_4",
+    date: "2026-06-11",
+    type: "actu",
+    categorie: "avenir_pharma",
+    titre: "SonoThera lève 125M$ pour révolutionner la délivrance génique par ultrasons",
+    resume: "Cette biotech californienne développe une technologie à base de microbulles pour cibler précisément les thérapies géniques. Big Pharma mise gros sur cette approche disruptive.",
+    full_text: "125 millions de dollars en série B ! SonoThera vient de boucler une levée de fonds exceptionnelle soutenue par les poids lourds de l'industrie pharmaceutique.\n\nLeur technologie ? Des microbulles activées par ultrasons pour délivrer avec précision les thérapies géniques dans les organes cibles. Fini les injections systémiques aux effets secondaires massifs.\n\nConcrètement, les microbulles chargées en matériel génétique (ARN, ADN, protéines) circulent dans le sang. Les ultrasons focalisés les font exploser exactement là où on veut : cerveau, foie, muscle cardiaque. Le contenu thérapeutique se libère localement.\n\nPourquoi c'est révolutionnaire ? Les thérapies géniques actuelles ont un problème majeur : elles touchent tout l'organisme au lieu de cibler l'organe malade. Résultat : efficacité limitée et toxicité importante.\n\nLes applications visées donnent le vertige : maladies neurologiques (Alzheimer, Parkinson), cancers, maladies génétiques rares, pathologies cardiovasculaires. Tous les domaines où l'accès des molécules aux tissus cibles reste un défi.\n\nL'intérêt des big pharma s'explique : ils ont investi des milliards dans les thérapies géniques mais butent sur la délivrance. SonoThera pourrait débloquer ce verrou technologique majeur.\n\nLes premiers essais cliniques sont prévus pour 2027 dans les glioblastomes, ces tumeurs cérébrales particulièrement agressives. Si ça marche, on tient peut-être la clé pour démocratiser les thérapies géniques.\n\nAu comptoir demain matin ? Patience ! Cette techno mettra des années à arriver en pharmacie. Mais garde un œil sur l'évolution des thérapies géniques : ça va transformer la médecine.",
+    source: "Fierce Pharma",
+    source_url: "https://www.fiercepharma.com/biotech/big-pharma-backed-sonothera-sounds-125m-series-b-bubble-based-genetic-delivery",
+    tiktok_url: "",
+    badge_label: "L'avenir de la pharma",
+    image_url: "assets/img_actu_2026_06_11_4.jpg",
+    tags: ["therapie-genique", "innovation", "ultrasons", "biotech"]
+  },
+{
+    id: "actu_2026_06_11_5",
+    date: "2026-06-11",
+    type: "actu",
+    categorie: "business_officine",
+    titre: "Déserts médicaux : tes nouvelles missions arrivent avec 2,3M de patients orphelins",
+    resume: "La fracture territoriale s'aggrave avec 2,3 millions de Français sans médecin traitant. L'officine devient le recours de première ligne.",
+    full_text: "La fracture territoriale s'aggrave avec 2,3 millions de Français sans médecin traitant. L'officine devient le recours de première ligne.\n\n## Contexte\n\nLes déserts médicaux ne touchent plus seulement les zones rurales. Selon les dernières données, 2,3 millions de Français sont désormais sans médecin traitant, une hausse de 15% en deux ans. La situation des spécialistes est encore plus critique : délais moyens de 6 mois chez un dermatologue, 4 mois chez un cardiologue. Cette fracture territoriale crée mécaniquement un report vers l'officine, première porte d'entrée accessible du système de soins. Parallèlement, les dépassements d'honoraires (pratiqués par 41% des spécialistes) créent un \"désert médical économique\" : 18% des patients renoncent aux soins pour raisons financières. Face à cette crise structurelle, le gouvernement mise sur la régulation de l'installation des médecins, mais le texte voté à l'Assemblée a été édulcoré au Sénat. Résultat : l'officine hérite de facto de nouvelles missions de première ligne, avec des patients qui s'adressent directement à elle faute d'alternative médicale accessible.\n\n## Analyse business\n\nCette situation représente une opportunité business majeure pour l'officine, mais aussi un défi organisationnel. Les 21 200 pharmacies françaises voient arriver une patientèle \"orpheline\" de 2,3 millions de personnes, soit en moyenne 108 patients supplémentaires par officine. Financièrement, cela se traduit par plusieurs leviers : d'abord, l'explosion des entretiens pharmaceutiques (rémunérés 30€ pour l'asthme, 40€ pour les AVK, 60€ pour les AOD). Ensuite, les bilans partagés de médication (60€ l'acte) deviennent indispensables quand le patient n'a plus de médecin référent. Les vaccinations en officine (7,50€ l'acte + marge sur le vaccin) explosent : +47% en 2025 avec 3,2 millions d'actes. Le dépistage rapide (TROD angine à 6€, TROD grippe à 6€) devient systématique. Mais attention aux coûts cachés : temps pharmacien multiplié par 2,5 sur ces actes, formation obligatoire (1 500€ par pharmacien pour la vaccination), assurance responsabilité civile majorée de 15%. L'équation n'est rentable qu'à partir de 50 actes/mois minimum. Les pharmacies rurales, déjà en première ligne, voient leur CA services bondir de 23% en moyenne, mais celles des centres-villes peinent encore à rentabiliser ces nouvelles missions.\n\n## Recommandations actionnables\n\n1. Formation express — Forme immédiatement ton équipe aux entretiens pharmaceutiques et bilans de médication. ROI garanti dès 20 actes/mois. 2. Signalétique dédiée — Installe un espace \"consultation\" visible depuis la rue. Les patients orphelins doivent identifier ton officine comme recours médical. 3. Partenariats médicaux — Noue des accords avec les derniers généralistes du secteur pour les bilans complexes. Partage de patientèle = fidélisation garantie. 4. Outils numériques — Équipe-toi d'un logiciel de prise de RDV en ligne pour les entretiens. Les patients sans médecin sont habitués au digital. 5. Montée en gamme — Propose des services premium (bilan cardiovasculaire complet, suivi diabète renforcé) pour capter les patients fuyant les dépassements d'honoraires des spécialistes.\n\n## Sources citees\n\n- Le Monde Santé",
+    source: "Pharm'Actus",
+    source_url: "",
+    tiktok_url: "",
+    badge_label: "Business",
+    image_url: "assets/img_actu_2026_06_11_5.jpg",
+    tags: ["deserts-medicaux", "missions-officine", "entretiens-pharmaceutiques", "rentabilite"]
+  },
+{
+    id: "lsv_2026_06_11",
+    date: "2026-06-11",
+    type: "lsv",
+    categorie: "lsv",
+    titre: "Le saviez-vous ? La première échographie a failli révéler des sous-marins",
+    resume: "En 1941, un neurologue autrichien invente l'échographie pour détecter les tumeurs cérébrales. Mais sa technique s'inspire directement du sonar militaire utilisé pour traquer les U-Boot allemands !",
+    full_text: "Imagine un neurologue qui observe les radars de la marine et se dit : \"Et si on utilisait ça pour voir à l'intérieur du crâne ?\" C'est exactement ce qui s'est passé en 1941 avec Karl Dussik, médecin autrichien passionné de physique.\n\nDussik venait d'étudier les nouvelles techniques de sonar développées pour la guerre sous-marine. Le principe était génial : envoyer des ondes sonores et analyser leur écho pour localiser les objets cachés. Pourquoi pas les tumeurs cérébrales ?\n\nIl installe son frère Friedrich (qui avait la malchance d'être physicien) dans un bac d'eau, pose des transducteurs de chaque côté de sa tête, et lance les premières ondes ultrasonores. Résultat : des images floues mais prometteuses du cerveau humain ! La première échographie médicale était née.\n\nLe hic ? La technique était tellement expérimentale que Dussik a passé des années à scanner des têtes de cadavres dans des cuves d'eau. Ses collègues le prenaient pour fou. Il a fallu attendre 1958 pour que l'obstétricien Ian Donald perfectionne la méthode et révolutionne le suivi de grossesse.\n\nLe plus dingue ? Dussik n'a jamais vu d'échographie moderne de sa vie. Il est mort en 1968, juste avant l'explosion de sa découverte.\n\nAujourd'hui, chaque fois qu'on fait une écho au comptoir pour vérifier une grossesse ou dépister une pathologie, on utilise la même physique que les chasseurs de sous-marins de 1941 !",
+    source: "Pharm'Alpha",
+    source_url: "",
+    tiktok_url: "",
+    badge_label: "Le Saviez-Vous",
+    image_url: "assets/img_lsv_2026_06_11.jpg",
+    tags: ["histoire", "diagnostic", "echographie", "invention", "guerre"]
+  },
 {
     id: "actu_2026_06_10_1",
     date: "2026-06-10",
@@ -2110,96 +2200,6 @@ const ARTICLES = [
     badge_label: "La bonne nouvelle",
     image_url: "assets/img_actu_2026_06_02_3.jpg",
     tags: ["vaccination", "voyage", "sondage", "mission", "uspo"]
-  },
-{
-    id: "actu_2026_06_02_4",
-    date: "2026-06-02",
-    type: "actu",
-    categorie: "avenir_pharma",
-    titre: "GLP-1 oraux : la bataille des pilules minceur commence vraiment",
-    resume: "Novo et Lilly se battent sur le marché des GLP-1 oraux avec Wegovy pilule et Foundayo. Fierce Pharma lance un tracker hebdomadaire pour suivre cette guerre des parts de marché en temps réel.",
-    full_text: "La guerre des GLP-1 oraux vient officiellement de commencer. Fierce Pharma lance son \"Oral GLP-1 Tracker\" pour suivre semaine par semaine la bataille entre Wegovy pilule (Novo) et Foundayo (Lilly).\n\nC'est du sérieux. Les analystes de Jefferies pensent qu'un blockbuster première année à plus d'un milliard est \"faisable\" malgré les difficultés de lancement de Foundayo.\n\nLes enjeux ? Énormes. Fini les injections hebdomadaires qui freinent l'adoption. Avec des pilules quotidiennes, le marché de l'obésité peut exploser. On parle de millions de patients potentiels.\n\nPour l'instant, Foundayo rame un peu au démarrage. Problèmes d'approvisionnement, réticences des prescripteurs... Mais Lilly ajuste le tir rapidement.\n\nCôté Wegovy oral, Novo mise sur son expérience du marché. L'injectable cartonne déjà, la version orale devrait suivre naturellement.\n\nEt nous dans tout ça ? On va être en première ligne de cette bataille commerciale. Gestion des stocks, formation des équipes, questions patients... Ces molécules vont transformer notre quotidien de dispensation.\n\nLe tracker de Fierce Pharma promet des données IQVIA chaque semaine. De quoi suivre en temps réel qui gagne cette course au Graal de la pilule minceur.",
-    source: "Fierce Pharma",
-    source_url: "https://www.fiercepharma.com/pharma/oral-glp-1-tracker-launch-trajectories-lilly-foundayo-novo-wegovy-pill",
-    tiktok_url: "",
-    badge_label: "L'avenir de la pharma",
-    image_url: "assets/img_actu_2026_06_02_4.jpg",
-    tags: ["glp1", "obesite", "oral", "novo", "lilly"]
-  },
-{
-    id: "actu_2026_06_02_5",
-    date: "2026-06-02",
-    type: "actu",
-    categorie: "business_officine",
-    titre: "ALBEY étend sa gamme désensibilisation : le marché des venins explose",
-    resume: "Stallergenes Greer ajoute deux nouvelles références ALBEY à base de venin de guêpe polistes. Un marché de niche mais rentable pour l'officine.",
-    full_text: "Stallergenes Greer ajoute deux nouvelles références ALBEY à base de venin de guêpe polistes. Un marché de niche mais rentable pour l'officine.\n\n## Contexte\n\nStallergenes Greer enrichit sa gamme ALBEY avec deux nouvelles spécialités à base de venin de guêpe polistes (Polistes dominula), rejoignant l'arsenal thérapeutique de désensibilisation aux venins d'hyménoptères. Ces médicaments s'ajoutent aux références existantes pour guêpes, abeilles et frelons. La désensibilisation aux venins reste un marché de niche mais stratégique : elle concerne environ 3% de la population française soit près de 2 millions de personnes potentiellement allergiques aux piqûres d'hyménoptères. Avec 15 à 20 décès par an liés aux piqûres d'insectes selon l'ANSES, ce segment thérapeutique répond à un vrai besoin médical. Le traitement de désensibilisation dure généralement 3 à 5 ans, créant une récurrence patient intéressante pour l'officine.\n\n## Analyse business\n\nLe marché français de la désensibilisation représente environ 180 millions d'euros selon les données IQVIA, avec Stallergenes Greer qui détient plus de 60% de parts de marché. Pour l'officine, ces spécialités présentent plusieurs avantages économiques : marge officinale standard sur médicament remboursé à 65%, récurrence patient garantie sur plusieurs années, et positionnement expert qui fidélise. Une cure complète coûte entre 800 et 1 200 euros sur 3 ans, soit un CA moyen de 350 euros par patient et par an pour la pharmacie. L'extension de gamme ALBEY répond à une demande croissante : les consultations pour allergie aux venins ont augmenté de 23% depuis 2020 selon la Société Française d'Allergologie. Cette croissance s'explique par une meilleure sensibilisation des patients et l'expansion géographique de certaines espèces comme le frelon asiatique. Avec seulement 15% des patients allergiques actuellement traités, le potentiel de développement reste énorme.\n\n## Recommandations actionnables\n\n1. Référencement prioritaire — Assure-toi d'avoir l'ensemble de la gamme ALBEY en stock, la rupture sur ce type de traitement chronique fait perdre définitivement le patient. 2. Formation équipe — Forme ton équipe sur les protocoles de désensibilisation pour accompagner les patients dans leur parcours de soins long. 3. Partenariat allergologues — Développe les relations avec les allergologues du secteur qui prescrivent ces traitements, c'est un vivier de patients fidèles. 4. Suivi pharmaceutique — Propose des entretiens pharmaceutiques pour optimiser l'observance, facturable 15 euros par l'Assurance Maladie. 5. Conseil prévention — Valorise ton expertise conseil sur la prévention des piqûres, cela renforce ta position d'expert santé.\n\n## Sources citees\n\n- VIDAL Actualités",
-    source: "Pharm'Actus",
-    source_url: "",
-    tiktok_url: "",
-    badge_label: "Business",
-    image_url: "assets/img_actu_2026_06_02_5.jpg",
-    tags: ["desensibilisation", "allergie", "stallergenes", "venins"]
-  },
-{
-    id: "lsv_2026_06_02",
-    date: "2026-06-02",
-    type: "lsv",
-    categorie: "lsv",
-    titre: "Le saviez-vous ? La première greffe de cornée s'est faite avec un œil de lapin",
-    resume: "En 1905, un ophtalmologue tchèque a tenté l'impossible : greffer la cornée d'un lapin sur un humain. L'opération a duré 3 heures et le patient a retrouvé la vue... pendant exactement 11 jours.",
-    full_text: "Imagine un peu la scène : Prague, 1905. Le Dr Eduard Zirm se retrouve face à un ouvrier qui vient de perdre la vue à cause de chaux vive. Les yeux complètement brûlés, cornées opaques. Condamné à la cécité à vie.\n\nZirm a une idée folle : pourquoi ne pas remplacer la cornée abîmée par une cornée saine ? Le problème ? Personne n'a jamais réussi cette opération. Les seules cornées disponibles viennent d'animaux, principalement de lapins d'élevage.\n\nLe 7 décembre 1905, il se lance. Trois heures d'opération à la bougie, sans microscope, avec des instruments qu'il a forgés lui-même. Il découpe méticuleusement la cornée du lapin, retire celle du patient et suture point par point. Incroyable : ça marche ! L'ouvrier retrouve la vue.\n\nMais voilà le twist : au bout de 11 jours exactement, rejet total. L'œil humain rejette violemment ce corps étranger. Zirm comprend qu'il faut absolument une cornée humaine. Il attend patiemment qu'un donneur se présente.\n\nSix mois plus tard, miracle ! Un gamin de 11 ans se présente avec les deux yeux perforés par un éclat de métal. Un œil est perdu, mais l'autre peut servir. Zirm prélève la cornée saine et la greffe sur son ouvrier. Cette fois, succès total ! La vue revient définitivement.\n\nAujourd'hui, 120 ans plus tard, on greffe 100 000 cornées par an dans le monde avec 95% de réussite. Et devine quoi ? On utilise toujours la technique de Zirm, juste avec de meilleurs outils !",
-    source: "Pharm'Alpha",
-    source_url: "",
-    tiktok_url: "",
-    badge_label: "Le Saviez-Vous",
-    image_url: "assets/img_lsv_2026_06_02.jpg",
-    tags: ["histoire", "greffe", "ophtalmologie", "chirurgie", "innovation"]
-  },
-{
-    id: "actu_2026_06_01_1",
-    date: "2026-06-01",
-    type: "actu",
-    categorie: "pharma_france",
-    titre: "Substitution : les excipients à effets notoires remettent tout en jeu",
-    resume: "Les EEN compliquent ta vie au comptoir mais c'est la règle : si le princeps en contient, tu peux substituer par un générique avec les mêmes EEN. Si le princeps en est exempt, direction un générique sans EEN.",
-    full_text: "Les excipients à effets notoires te donnent des sueurs froides au moment de la substitution ? Normal, c'est un piège réglementaire où beaucoup se plantent.\n\nLa règle officielle : si le médicament prescrit ne contient pas d'EEN, tu dois choisir une spécialité sans aucun EEN. Si le princeps en contient un ou plusieurs, tu peux substituer par un générique avec les mêmes excipients à risque.\n\nConcrètement, ça change quoi demain matin ? Fini de substituer à l'aveugle. Il faut d'abord vérifier la composition en excipients sur le RCP ou Thériaque. Un Doliprane sans aspartame ne peut pas être remplacé par un générique qui en contient.\n\nL'enjeu n'est pas que réglementaire. Ces excipients peuvent provoquer des réactions chez tes patients sensibles : troubles digestifs avec le lactose, réactions allergiques avec certains colorants, problèmes chez les diabétiques avec les sucres.\n\nLe piège du quotidien ? Les laboratoires ne mettent pas toujours en avant ces excipients sur l'emballage. Il faut creuser dans la notice ou les bases de données. Et expliquer au patient pourquoi tu ne peux pas lui donner \"n'importe quel générique\".\n\nRésultat : plus de temps passé par substitution, mais une dispensation sécurisée qui protège ton patient et ton officine d'un éventuel effet indésirable évitable.",
-    source: "Le Moniteur des Pharmacies",
-    source_url: "https://www.lemoniteurdespharmacies.fr/therapeutique/medicaments/mieux-delivrer/les-effets-notoires-des-excipients",
-    tiktok_url: "",
-    badge_label: "Pharma France",
-    image_url: "assets/img_actu_2026_06_01_1.jpg",
-    tags: ["substitution", "excipients", "generique", "dispensation"]
-  },
-{
-    id: "actu_2026_06_01_2",
-    date: "2026-06-01",
-    type: "actu",
-    categorie: "pharma_monde",
-    titre: "Cancer du poumon : Lilly cartonne avec Retevmo en adjuvant",
-    resume: "Dans l'essai Libretto-432, Retevmo réduit de 83% le risque de récidive en traitement adjuvant chez les patients avec fusion RET. Des résultats qui vont redéfinir la prise en charge précoce.",
-    full_text: "Lilly vient de frapper fort à l'ASCO avec des résultats \"dramatiques\" pour Retevmo (selpercatinib) dans le cancer du poumon précoce. On parle d'une réduction de 83% du risque de progression ou de décès en adjuvant.\n\nL'essai Libretto-432 a testé Retevmo chez des patients avec cancer du poumon à fusion RET opéré. Cette mutation concerne 1 à 2% des cancers du poumon non à petites cellules, mais c'est un biomarqueur majeur pour cibler le traitement.\n\nPourquoi c'est révolutionnaire ? Jusqu'à présent, ces patients n'avaient que la chimiothérapie classique en adjuvant. Avec Retevmo, on passe dans l'ère de la thérapie ciblée post-opératoire.\n\nCôté officine française, Retevmo est déjà disponible en métastatique sous ATU depuis 2021, puis AMM européenne en 2022. Prix de vente hospitalier autour de 15 000€ par mois de traitement. Si l'extension en adjuvant est validée, ça va exploser les volumes.\n\nL'impact pour toi ? Ces patients vont arriver avec des prescriptions de sortie d'hospitalisation. Il faut maîtriser les effets indésirables (diarrhées, hypertension, fatigue) et les interactions médicamenteuses avec les IPP notamment.\n\nCes résultats positionnent Lilly en leader sur le créneau RET, devant Roche avec Gavreto. La course aux biomarqueurs rare s'intensifie et transforme la cancérologie en médecine de précision.",
-    source: "Fierce Pharma",
-    source_url: "https://www.fiercepharma.com/pharma/asco-lilly-ties-retevmo-dramatic-outcomes-early-stage-lung-cancer-rare-ret-biomarker",
-    tiktok_url: "",
-    badge_label: "Pharma Monde",
-    image_url: "assets/img_actu_2026_06_01_2.jpg",
-    tags: ["retevmo", "cancer", "lilly", "ret"]
-  },
-{
-    id: "actu_2026_06_01_3",
-    date: "2026-06-01",
-    type: "actu",
-    categorie: "bonne_nouvelle",
-    titre: "55% des fumeurs veulent arrêter : ton comptoir peut faire la différence",
-    resume: "À l'occasion de la Journée mondiale sans tabac, rappel d'une évidence : 4 millions de fumeurs quotidiens ont disparu en 10 ans. Ton officine reste un maillon clé pour accompagner les 55% qui veulent décrocher.",
-    full_text: "Hier, c'était la Journée mondiale sans tabac et les chiffres donnent le sourire. En dix ans, 4 millions de fumeurs quotidiens ont raccroché. Mais 18% des Français fument encore chaque jour, soit environ 12 millions de personnes.\n\nLa bonne nouvelle ? 55% d'entre eux veulent arrêter. C'est là que ton comptoir devient stratégique. Tu as tous les outils : substituts nicotiniques remboursés, Champix de retour, et surtout ton expertise pour personnaliser l'accompagnement.\n\nL'entretien pharmaceutique tabac est enfin rémunéré depuis 2023 : 30€ pour l'entretien initial, puis 15€ pour chaque suivi. Pas révolutionnaire niveau tarif, mais ça reconnaît officiellement ton rôle dans le sevrage.\n\nConcrètement au comptoir ? Ne pas se contenter de vendre des patchs. Évaluer la dépendance, adapter le dosage, prévenir des effets du manque, programmer les rendez-vous de suivi. Et rappeler que l'arrêt reste bénéfique même après des années de tabagisme.\n\nLe tabac tue 75 000 personnes par an en France, c'est la première cause de mortalité évitable. Chaque patient qui arrête grâce à ton accompagnement, c'est une victoire concrète de santé publique.\n\nL'objectif gouvernemental ? Passer sous la barre des 20% de fumeurs d'ici 2032. Avec 55% de fumeurs motivés pour arrêter, l'objectif semble atteignable si l'accompagnement suit.",
-    source: "Le Moniteur des Pharmacies",
-    source_url: "https://www.lemoniteurdespharmacies.fr/nouvelles-missions/prevention/tabac-55-des-fumeurs-veulent-arreter-lofficine-peut-les-aider",
-    tiktok_url: "",
-    badge_label: "La bonne nouvelle",
-    image_url: "assets/img_actu_2026_06_01_3.jpg",
-    tags: ["tabac", "sevrage", "prevention", "accompagnement"]
   }
 ];
 
