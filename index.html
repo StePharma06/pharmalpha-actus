@@ -1338,7 +1338,7 @@ body {
 </div>
 
 <!-- EXPRESSION DU JOUR (injectée par update_actus.py à chaque run) -->
-<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Pharmacie</h2><p class="expression-corps">Du grec <em>pharmakon</em>, mot à double sens : remède et poison. Les Grecs n'opposaient pas les deux — la même plante pouvait soigner ou tuer selon la dose. Paracelse l'a formulé 2000 ans plus tard : « La dose fait le poison. »</p></aside>
+<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Avoir le cœur sur la main</h2><p class="expression-corps">Au Moyen Âge, le cœur était unanimement considéré comme le siège de l'âme et des sentiments — pas le cerveau. Montrer son cœur ouvertement, comme on ouvre la main, c'était donc exposer son être le plus profond sans défense.</p></aside>
 
 <!-- ARTICLES (groupes par date) -->
 <div id="articles-container"></div>
@@ -1451,6 +1451,96 @@ body {
 // Mis a jour automatiquement par n8n chaque semaine
 // ============================================================
 const ARTICLES = [
+{
+    id: "actu_2026_06_12_1",
+    date: "2026-06-12",
+    type: "actu",
+    categorie: "pharma_france",
+    titre: "Neuroleptiques : l'ANSM te rappelle que la constipation peut tuer",
+    resume: "L'ANSM alerte sur les constipations sévères sous neuroleptiques après de nouveaux cas graves. Tous les antipsychotiques sont concernés, du Risperdal au Solian. Check systématique des interactions et conseils hygiéno-diététiques obligatoires à chaque délivrance.",
+    full_text: "L'ANSM sort une nouvelle alerte sur un effet indésirable qu'on a tendance à banaliser : la constipation sous neuroleptiques.\n\nTous les antipsychotiques sont dans le viseur. Haloperidol, rispéridone, olanzapine, aripiprazole... La liste est longue et le mécanisme anticholinergique bien connu. Mais visiblement, on sous-estime encore trop souvent la gravité potentielle.\n\nL'Agence rappelle deux points critiques pour le comptoir. Premier réflexe : vérifier systématiquement les interactions avec tout médicament à effet anticholinergique. Les antidépresseurs tricycliques, les antihistaminiques H1, les antiparkinsoniens... L'effet cumulatif peut vite devenir dangereux.\n\nDeuxième point non négociable : les conseils hygiéno-diététiques à chaque délivrance. Hydratation renforcée, fibres alimentaires, activité physique adaptée. Et surtout, expliquer au patient quand s'inquiéter. Une constipation qui dure plus de 3 jours nécessite une consultation.\n\nL'ANSM insiste particulièrement sur les populations à risque : personnes âgées, patients poly-médiqués, antécédents gastro-intestinaux. Chez eux, la surveillance doit être renforcée dès l'instauration du traitement.\n\nConcrètement, ça change quoi demain matin ? Check systématique des interactions dans ton LGO à chaque dispensation de neuroleptique, et conseil standardisé sur la prévention de la constipation. Un réflexe qui peut éviter des complications graves.",
+    source: "Le Quotidien du Pharmacien",
+    source_url: "http://www.lequotidiendupharmacien.fr/medicament-parapharmacie/medicament/neuroleptiques-et-constipation-vigilance-au-comptoir",
+    tiktok_url: "",
+    badge_label: "Pharma France",
+    image_url: "assets/img_actu_2026_06_12_1.jpg",
+    tags: ["neuroleptiques", "constipation", "ansm", "vigilance", "interactions"]
+  },
+{
+    id: "actu_2026_06_12_2",
+    date: "2026-06-12",
+    type: "actu",
+    categorie: "pharma_monde",
+    titre: "Takeda écrase Bristol Myers sur les inhibiteurs TYK2 dans le psoriasis",
+    resume: "Bataille rangée dans le psoriasis : l'inhibiteur TYK2 de Takeda surpasse Sotyktu de Bristol Myers en phase 3. Une victoire qui repositionne complètement le marché avant le lancement prévu en 2027. Les dermatologues vont avoir le choix.",
+    full_text: "Coup de théâtre dans la course aux inhibiteurs TYK2 pour le psoriasis en plaques. Takeda vient de démolir Bristol Myers Squibb dans un face-à-face direct en phase 3.\n\nLes résultats sont sans appel. Le candidat de Takeda (nom de code TAK-279) a montré une efficacité supérieure à Sotyktu (deucravacitinib) de BMS sur tous les critères principaux. On parle d'un écart significatif sur le PASI 75 et le IGA 0/1 à 16 semaines.\n\nPour comprendre l'enjeu : Sotyktu a été approuvé par la FDA en 2022 et représente déjà plusieurs centaines de millions de dollars pour BMS. C'était le premier inhibiteur TYK2 oral sur ce marché ultra-concurrentiel du psoriasis modéré à sévère.\n\nMais Takeda vient de rebattre les cartes. Leur molécule affiche non seulement une meilleure efficacité, mais aussi un profil de tolérance comparable selon les données préliminaires. Le lancement commercial est prévu pour 2027 en Europe et aux États-Unis.\n\nCôté mécanisme, les deux molécules ciblent la même voie TYK2 mais avec des spécificités différentes. TAK-279 semble avoir une sélectivité optimisée qui pourrait expliquer cette supériorité thérapeutique.\n\nPour les pharmaciens français, ça signifie quoi ? D'abord, que le paysage thérapeutique du psoriasis va encore évoluer. Ensuite, que la concurrence entre ces nouveaux oraux va probablement faire bouger les prix et les conditions de remboursement. À suivre de près.",
+    source: "Fierce Pharma",
+    source_url: "https://www.fiercepharma.com/biotech/takedas-tyk2-inhibitor-beats-bristol-myers-sotyktu-psoriasis-showdown",
+    tiktok_url: "",
+    badge_label: "Pharma Monde",
+    image_url: "assets/img_actu_2026_06_12_2.jpg",
+    tags: ["takeda", "bristol", "psoriasis", "tyk2", "phase3"]
+  },
+{
+    id: "actu_2026_06_12_3",
+    date: "2026-06-12",
+    type: "actu",
+    categorie: "bonne_nouvelle",
+    titre: "Johnson & Johnson décroche une première mondiale dans l'anémie auto-immune",
+    resume: "Imaavy pourrait devenir le premier traitement approuvé pour l'anémie hémolytique auto-immune à anticorps chauds. J&J vient de réussir son essai pivot de phase 2/3, ouvrant la voie à une extension d'AMM pour cette maladie rare orpheline.",
+    full_text: "J&J vient de décrocher des résultats de phase 2/3 qui pourraient révolutionner la prise en charge d'une maladie rare : l'anémie hémolytique auto-immune à anticorps chauds.\n\nImaavy (nipocalimab), déjà blockbuster en devenir pour J&J, pourrait devenir le premier traitement spécifiquement approuvé pour cette pathologie. Jusqu'ici, les patients dépendaient principalement des corticoïdes et des immunosuppresseurs, avec tous les effets indésirables que tu connais.\n\nLes résultats de l'essai pivot montrent une réponse cliniquement significative sur les paramètres hématologiques clés. Amélioration du taux d'hémoglobine, réduction de l'hémolyse, diminution du recours aux transfusions. Des critères qui comptent vraiment pour ces patients souvent en errance thérapeutique.\n\nImaavy cible les récepteurs FcRn, une approche innovante qui bloque le recyclage des anticorps pathogènes. Le mécanisme d'action est élégant : au lieu de supprimer massivement le système immunitaire, on cible spécifiquement les IgG responsables de la destruction des globules rouges.\n\nPour le contexte français, cette maladie touche environ 1 à 3 personnes sur 100 000. Pas énorme en volume, mais ces patients galèrent souvent avec des traitements peu spécifiques et mal tolérés à long terme.\n\nSi l'extension d'AMM est accordée par l'EMA, on aura enfin une option thérapeutique dédiée pour ces patients. Et vu le statut de maladie rare, tu peux parier sur un prix qui va faire mal au budget de l'Assurance Maladie.",
+    source: "Fierce Pharma",
+    source_url: "https://www.fiercepharma.com/pharma/jj-shows-results-trial-could-lead-rare-disease-expansion-imaavy",
+    tiktok_url: "",
+    badge_label: "La bonne nouvelle",
+    image_url: "assets/img_actu_2026_06_12_3.jpg",
+    tags: ["johnson", "imaavy", "anemie", "autoimmune", "orpheline"]
+  },
+{
+    id: "actu_2026_06_12_4",
+    date: "2026-06-12",
+    type: "actu",
+    categorie: "avenir_pharma",
+    titre: "L'IA médicale cartonne : +148% à la FDA en 2025",
+    resume: "Explosion des cas d'usage de l'IA dans toutes les agences de santé américaines en 2025. La FDA affiche +148% d'augmentation, avec des applications qui vont de l'analyse des essais cliniques à la pharmacovigilance. L'avenir de la régulation se dessine.",
+    full_text: "Les chiffres du Bipartisan Policy Center donnent le vertige : +148% d'augmentation des cas d'usage de l'IA à la FDA en 2025. Et c'est pareil dans toutes les agences de santé américaines.\n\nConcrètement, l'IA investit tous les domaines régaliens. Analyse accélérée des dossiers d'AMM, détection de signaux de pharmacovigilance, optimisation des inspections, review automatisée des publications scientifiques... La FDA teste tout.\n\nLe plus impressionnant ? Les algorithmes d'aide à la décision pour l'évaluation des essais cliniques. L'IA peut désormais identifier des patterns dans les données que l'œil humain aurait ratés. Résultat : des AMM potentiellement plus rapides et mieux documentées.\n\nCôté pharmacovigilance, c'est une révolution silencieuse. Les outils d'IA analysent en temps réel les bases de données d'effets indésirables, les réseaux sociaux, la littérature médicale. Objectif : détecter les signaux de sécurité avant qu'ils ne deviennent des crises sanitaires.\n\nAttention quand même : les analystes notent que cette explosion des chiffres reflète aussi de nouvelles obligations de reporting. Toutes les agences fédérales doivent désormais déclarer leurs projets IA. Une partie de la hausse est donc administrative.\n\nPour nous en France ? L'EMA suit de près les expériences américaines. L'ANSM aussi commence à intégrer l'IA dans ses processus d'évaluation. Dans 5 ans, les AMM que tu vois passer au comptoir auront probablement été en partie évaluées par des algorithmes. L'avenir de la pharma se joue maintenant.",
+    source: "Fierce Pharma",
+    source_url: "https://www.fiercepharma.com/ai-and-machine-learning/all-hhs-agencies-saw-ai-use-case-increases-fy-2025-bipartisan-policy-center",
+    tiktok_url: "",
+    badge_label: "L'avenir de la pharma",
+    image_url: "assets/img_actu_2026_06_12_4.jpg",
+    tags: ["ia", "fda", "regulation", "pharmacovigilance", "amm"]
+  },
+{
+    id: "actu_2026_06_12_5",
+    date: "2026-06-12",
+    type: "actu",
+    categorie: "business_officine",
+    titre: "53% de ton EBE dépend des remises : l'analyse qui fait froid dans le dos",
+    resume: "Les remises commerciales représentent désormais plus de la moitié de l'excédent brut d'exploitation médian des officines. Les pharmacies fragiles sont les plus exposées.",
+    full_text: "Les remises commerciales représentent désormais plus de la moitié de l'excédent brut d'exploitation médian des officines. Les pharmacies fragiles sont les plus exposées.\n\n## Contexte\n\nLe Moniteur des Pharmacies publie une analyse économique inédite sur la dépendance des officines françaises aux remises commerciales. Cette étude révèle que les revenus complémentaires issus des accords avec les laboratoires et grossistes sont devenus vitaux pour l'équilibre financier des pharmacies. Les médicaments génériques constituent le principal moteur de ces revenus, mais cette dépendance expose particulièrement les officines rurales et économiquement fragiles. L'analyse souligne un paradoxe inquiétant : les pharmacies qui ont le plus besoin de ces revenus pour survivre sont aussi celles qui risquent le plus de les perdre en cas d'évolution réglementaire ou concurrentielle. Cette situation interroge sur la pérennité du modèle économique officinal actuel.\n\n## Analyse business\n\nLes chiffres sont sans appel : les remises commerciales représentent plus de 53% de l'excédent brut d'exploitation médian des officines françaises. Cette proportion dramatique révèle une transformation structurelle du secteur. Les médicaments génériques, avec leurs marges différentielles, constituent le socle de cette économie parallèle. Les officines rurales apparaissent particulièrement vulnérables dans ce schéma. Leur chiffre d'affaires plus faible les rend mécaniquement plus dépendantes aux revenus complémentaires pour maintenir leur rentabilité. L'étude révèle que les pharmacies économiquement fragiles - souvent celles des territoires isolés - affichent des taux de dépendance aux remises encore supérieurs à la moyenne. Cette situation crée un cercle vicieux : plus une officine est fragile, plus elle dépend des remises, mais moins elle a de pouvoir de négociation face aux partenaires commerciaux. Le risque systémique est réel : toute évolution réglementaire limitant ces pratiques ou toute pression concurrentielle pourrait fragiliser massivement le maillage territorial des pharmacies.\n\n## Recommandations actionnables\n\n1. Audit annuel obligatoire — Mesure précisément ta dépendance aux remises dans ton compte de résultat pour anticiper les risques. 2. Diversification des revenus — Développe tes missions rémunérées (vaccinations, BPM, entretiens) pour réduire la part des remises dans ton EBE. 3. Optimisation des achats — Renégocie tes conditions d'achat en mutualisant avec d'autres confrères via les groupements. 4. Veille réglementaire — Surveille les projets de loi sur les remises pharmaceutiques qui pourraient impacter ton modèle économique. 5. Plan de continuité — Élabore un scénario de survie économique si tes remises baissaient de 30% pour tester la résistance de ton officine.\n\n## Sources citees\n\n- Le Moniteur des Pharmacies",
+    source: "Pharm'Actus",
+    source_url: "",
+    tiktok_url: "",
+    badge_label: "Business",
+    image_url: "assets/img_actu_2026_06_12_5.jpg",
+    tags: ["remises", "rentabilite", "ebemedian", "officine"]
+  },
+{
+    id: "lsv_2026_06_12",
+    date: "2026-06-12",
+    type: "lsv",
+    categorie: "lsv",
+    titre: "Le saviez-vous ? La première greffe de tête a réussi... mais le patient pouvait pas bouger",
+    resume: "En 1970, un neurochirurgien américain a réellement greffé la tête d'un singe sur le corps d'un autre. L'opération a techniquement réussi, mais le résultat était terrifiant.",
+    full_text: "Robert White, neurochirurgien à Cleveland, était obsédé par une idée folle : greffer une tête. En 1970, il passe à l'acte avec deux macaques rhésus.\n\nL'opération dure 18 heures. White sectionne la moelle épinière, reconnecte les vaisseaux sanguins, suture les muscles du cou. Miracle : le singe « hybride » se réveille. Il peut voir, entendre, sentir, même mordre les doigts des infirmières !\n\nMais voilà le hic : impossible de reconnecter la moelle épinière. Le singe est totalement paralysé du cou jusqu'aux pieds. Une tête consciente sur un corps mort. Il survit 9 jours avant de mourir de rejet.\n\nWhite répète l'expérience plusieurs fois, avec le même résultat. Il rêve de passer à l'humain pour soigner les tétraplégiques. La communauté scientifique le traite de boucher. Les défenseurs des animaux le harcèlent.\n\nEn 2001, le chirurgien italien Sergio Canavero reprend le flambeau. Il annonce vouloir greffer la tête d'un Russe paralysé sur le corps d'un donneur. Projet abandonné... pour l'instant.\n\nHeureusement, aujourd'hui on préfère réparer qu'amputer : cellules souches, thérapie génique, exosquelettes. Bien plus éthique que ces expériences dignes de Frankenstein !",
+    source: "Pharm'Alpha",
+    source_url: "",
+    tiktok_url: "",
+    badge_label: "Le Saviez-Vous",
+    image_url: "assets/img_lsv_2026_06_12.jpg",
+    tags: ["histoire", "chirurgie", "greffe", "neurologie", "experimentation"]
+  },
 {
     id: "actu_2026_06_11_1",
     date: "2026-06-11",
@@ -2110,96 +2200,6 @@ const ARTICLES = [
     badge_label: "La bonne nouvelle",
     image_url: "assets/img_actu_2026_06_03_3.jpg",
     tags: ["cancer", "daraxonrasib", "survie", "kras", "therapie-ciblee"]
-  },
-{
-    id: "actu_2026_06_03_4",
-    date: "2026-06-03",
-    type: "actu",
-    categorie: "avenir_pharma",
-    titre: "Contraception masculine : 92,5M$ pour révolutionner la santé des hommes",
-    resume: "Contraline vient de lever 92,5 millions de dollars pour son gel contraceptif masculin révolutionnaire. Cette biotech américaine s'attaque au \"trou béant\" de la contraception masculine avec une approche topique first-in-class qui pourrait tout changer.",
-    full_text: "Enfin une vraie révolution en vue dans la contraception masculine ! Contraline, biotech de Charlottesville, vient de boucler une levée de fonds de 92,5 millions de dollars pour son candidat contraceptif topique.\n\nL'entreprise développe ce qu'elle présente comme un traitement first-in-class : un gel appliqué localement qui bloquerait temporairement la fertilité masculine. Exit les hormones systémiques et leurs effets indésirables. Cette approche topique ciblée pourrait révolutionner le marché.\n\nLes investisseurs y croient dur comme fer. Des pointures du capital-risque santé ont misé gros sur ce \"massive white space\" de la santé masculine. Le marché potentiel est colossal quand on sait que la contraception repose encore à 99% sur les femmes.\n\nPour nous, pharmaciens, c'est l'opportunité de développer enfin des conseils contraceptifs masculins concrets. Aujourd'hui, à part le préservatif et la vasectomie, on n'a rien à proposer aux hommes motivés. Ce gel pourrait combler ce vide béant.\n\nLa biotech vise les essais cliniques de phase 2 dans les prochains mois. Si les résultats confirment l'efficacité et la tolérance, on pourrait voir arriver ce produit sur le marché d'ici 5-7 ans. Révolution en marche !\n\nAu comptoir demain, quand un couple te demandera des alternatives contraceptives, tu pourras évoquer cette innovation prometteuse. La contraception masculine sort enfin de l'âge de pierre.",
-    source: "Fierce Pharma",
-    source_url: "https://www.fiercepharma.com/pharma/contraline-and-its-male-birth-control-candidate-rally-925m-series-b-amid-push-massive-white",
-    tiktok_url: "",
-    badge_label: "L'avenir de la pharma",
-    image_url: "assets/img_actu_2026_06_03_4.jpg",
-    tags: ["contraception-masculine", "innovation", "levee-fonds", "gel-topique"]
-  },
-{
-    id: "actu_2026_06_03_5",
-    date: "2026-06-03",
-    type: "actu",
-    categorie: "business_officine",
-    titre: "Permanence de soins : 40,2% de médecins participent, quelle répercussion officine ?",
-    resume: "Seulement 40,2% des généralistes participent à la PDSA en 2025. Impact direct sur l'afflux nocturne et week-end en officine.",
-    full_text: "Seulement 40,2% des généralistes participent à la PDSA en 2025. Impact direct sur l'afflux nocturne et week-end en officine.\n\n## Contexte\n\nLa permanence des soins ambulatoires (PDSA) mobilise 26 711 médecins généralistes sur 66 394 éligibles en 2025, soit un taux de participation de 40,2%. Cette donnée officielle révèle une carence structurelle dans la couverture médicale hors heures ouvrables. Avec 51% de femmes parmi les participants, la féminisation de la profession impact les modalités d'organisation. Cette sous-participation chronique des médecins génère mécaniquement un report vers les pharmacies de garde, seul recours accessible pour les patients en dehors des urgences hospitalières. Le phénomène s'accentue dans les déserts médicaux où le taux de participation PDSA chute encore davantage, transformant l'officine en premier recours de fait.\n\n## Analyse business\n\nCette participation limitée à 40,2% génère un différentiel de 39 683 médecins non participants, créant des zones blanches temporaires massives. L'impact financier officinal est double : d'une part, une augmentation mécanique de l'activité garde (rémunérée forfaitairement 304€ par pharmacie selon l'arrêté du 4 mai 2012), d'autre part, une pression accrue sur les conseils et orientations. Les 22 400 pharmacies françaises absorbent de facto cette carence médicale, particulièrement les 3 000 pharmacies de garde simultanément ouvertes chaque week-end. L'analyse géographique révèle que dans 15% des territoires ruraux, aucun médecin ne participe à la PDSA certains week-ends, reportant 100% du flux vers l'officine. Cette situation génère un surcoût opérationnel estimé à 8 000€ annuels par pharmacie (personnel, stocks d'urgence, formation), sans compensation tarifaire équivalente. La féminisation à 51% des participants PDSA corrèle avec les contraintes familiales, accentuant l'irrégularité des permanences et l'imprévisibilité des flux officinaux.\n\n## Recommandations actionnables\n\n1. Négociation conventionnelle — Documenter précisément les consultations détournées vers l'officine pour négocier une revalorisation de l'indemnité garde. 2. Formation équipe — Renforcer les protocoles d'orientation et conseils d'urgence, particulièrement sur les pathologies chroniques décompensées. 3. Gestion stocks — Adapter les commandes d'urgence selon les données locales de participation PDSA de votre secteur. 4. Partenariats locaux — Conventionner avec les médecins participants PDSA pour fluidifier les orientations et partager les astreintes. 5. Reporting activité — Tenir un registre précis des consultations détournées pour alimenter les négociations tarifaires futures.\n\n## Sources citees\n\n- Le Pharmacien de France",
-    source: "Pharm'Actus",
-    source_url: "",
-    tiktok_url: "",
-    badge_label: "Business",
-    image_url: "assets/img_actu_2026_06_03_5.jpg",
-    tags: ["permanence-soins", "garde-pharmacie", "desert-medical", "remuneration"]
-  },
-{
-    id: "lsv_2026_06_03",
-    date: "2026-06-03",
-    type: "lsv",
-    categorie: "lsv",
-    titre: "Le saviez-vous ? Le premier antidépresseur était un médicament contre la tuberculose",
-    resume: "En 1952, des médecins new-yorkais remarquent que leurs patients tuberculeux dansent dans les couloirs de l'hôpital. Ils venaient de découvrir par hasard le premier antidépresseur de l'histoire.",
-    full_text: "1952, hôpital Sea View à New York. Les médecins Irving Selikoff et Edward Robitzek testent un nouveau traitement contre la tuberculose : l'iproniazide. Problème : leurs patients censés être en fin de vie se mettent à danser, chanter et faire la fête dans les couloirs !\n\nLes infirmières sont perplexes. Ces malades, habituellement prostrés et déprimés par leur maladie mortelle, débordent soudain de joie et d'énergie. Certains organisent même des soirées dansantes improvisées dans les salles communes.\n\nSelikoff comprend vite que ce n'est pas normal. Il contacte son ami psychiatre Nathan Kline pour lui parler de ces effets bizarres. Kline a une intuition géniale : \"Et si on testait ce truc sur des patients dépressifs ?\"\n\nEn 1957, les premiers essais sur des dépressifs sont spectaculaires. L'iproniazide devient le premier antidépresseur commercialisé sous le nom de Marsilid. Une révolution : avant ça, on traitait la dépression avec des électrochocs ou des lobotomies.\n\nLe hic ? On découvre rapidement que l'iproniazide peut provoquer des hépatites mortelles. Il sera retiré du marché, mais il aura ouvert la voie à toute une famille d'antidépresseurs : les IMAO (inhibiteurs de la monoamine oxydase).\n\nAujourd'hui, quand tu délivres un Deroxat ou un Seropram au comptoir, tu peux remercier ces tuberculeux danseurs qui ont révélé par accident qu'on pouvait soigner la dépression avec une molécule.",
-    source: "Pharm'Alpha",
-    source_url: "",
-    tiktok_url: "",
-    badge_label: "Le Saviez-Vous",
-    image_url: "assets/img_lsv_2026_06_03.jpg",
-    tags: ["histoire", "antidepresseur", "tuberculose", "psychiatrie", "decouverte"]
-  },
-{
-    id: "actu_2026_06_02_1",
-    date: "2026-06-02",
-    type: "actu",
-    categorie: "pharma_france",
-    titre: "Smic +2,41% : 10 coefficients de la grille salariale rattrapés",
-    resume: "La hausse mécanique du Smic au 1er juin bouleverse la grille salariale officinale. Dix coefficients se retrouvent sous le nouveau plancher à 1 767 euros. Les équipes vont négocier des revalorisations.",
-    full_text: "Le Smic vient de prendre 44 euros d'un coup. +2,41% au 1er juin, ça fait mal au portefeuille... de l'employeur.\n\nDix coefficients de notre grille salariale passent sous le nouveau plancher de 1 767 euros bruts. Les préparateurs diplômés débutants, certains adjoints en début de carrière... Tous ces postes vont devoir être revalorisés.\n\nEt ce n'est que le début. Quand l'inflation dépasse 2%, le Smic suit automatiquement. Les partenaires sociaux avaient pourtant revu la grille il y a un an seulement.\n\nConcrètement ? Tu vas devoir ajuster tes bulletins de paie dès ce mois-ci. Pas le choix : c'est la loi. Et prépare-toi à d'autres discussions salariales dans les mois qui viennent.\n\nLe paradoxe de la profession : on gagne en missions et en responsabilités, mais nos marges se contractent. Entre les honoraires qui stagnent et les charges qui explosent, l'équation devient tendue.\n\nLa FSPF et les syndicats salariés vont devoir remettre l'ouvrage sur le métier. Parce qu'avec une inflation qui ne faiblit pas, ce rattrapage ne sera pas le dernier.",
-    source: "Le Quotidien du Pharmacien",
-    source_url: "http://www.lequotidiendupharmacien.fr/exercice-pro/grille-des-salaires-10-coefficients-rattrapes-par-la-hausse-du-smic",
-    tiktok_url: "",
-    badge_label: "Pharma France",
-    image_url: "assets/img_actu_2026_06_02_1.jpg",
-    tags: ["smic", "salaire", "grille", "charges", "personnel"]
-  },
-{
-    id: "actu_2026_06_02_2",
-    date: "2026-06-02",
-    type: "actu",
-    categorie: "pharma_monde",
-    titre: "Xocova : la FDA approuve le premier antiviral COVID en prévention",
-    resume: "Shionogi décroche l'autorisation FDA pour son ensitrelvir en prophylaxie post-exposition COVID. Un nouvel outil après les échecs en traitement. L'EMA suivra-t-elle pour l'Europe ?",
-    full_text: "Shionogi vient de décrocher le jackpot avec la FDA. Son antiviral Xocova (ensitrelvir) devient le premier inhibiteur de protéase autorisé en prévention COVID post-exposition.\n\nC'est un sacré revirement. L'ensitrelvir avait foiré en traitement curatif lors des premiers essais américains. Mais en prophylaxie, les résultats sont bien plus convaincants.\n\nLe principe ? Tu prends Xocova après exposition à un cas COVID, avant d'être symptomatique. Ça bloque la réplication virale en amont. Plus malin que d'attendre d'être malade pour traiter.\n\nPour nous, ça ouvre une nouvelle perspective. Fini de dire \"isolez-vous et attendez\" aux contacts à risque. On aurait enfin un outil pharmacologique préventif.\n\nMais attention, on parle des États-Unis pour l'instant. Il faudra voir si l'EMA suit le mouvement pour l'Europe. Et surtout, quel sera le positionnement prix.\n\nLe COVID n'a pas dit son dernier mot. Entre les variants qui évoluent et l'immunité qui décline, avoir des antiviraux efficaces en prophylaxie, c'est du concret. Shionogi a peut-être trouvé la bonne stratégie après tout.",
-    source: "Fierce Pharma",
-    source_url: "https://www.fiercepharma.com/pharma/shionogis-covid-antiviral-xocova-passes-muster-fda-post-exposure-preventative",
-    tiktok_url: "",
-    badge_label: "Pharma Monde",
-    image_url: "assets/img_actu_2026_06_02_2.jpg",
-    tags: ["covid", "antiviral", "prevention", "fda", "shionogi"]
-  },
-{
-    id: "actu_2026_06_02_3",
-    date: "2026-06-02",
-    type: "actu",
-    categorie: "bonne_nouvelle",
-    titre: "76% des Français prêts à se faire vacciner chez leur pharmacien",
-    resume: "Les vaccins du voyage pourraient débarquer en officine. Trois quarts des Français y sont favorables, surtout en région parisienne. Un parcours plus simple que les centres de vaccination voyage.",
-    full_text: "Voilà un sondage qui fait plaisir. 76% des Français se disent prêts à faire leurs vaccins du voyage directement en officine. Et le chiffre monte à 82% en région parisienne.\n\nC'est logique au fond. Entre prendre rendez-vous dans un centre de vaccination voyage, attendre trois semaines, et passer voir son pharmacien du coin... Le choix est vite fait.\n\nLes 35-49 ans sont les plus enthousiastes (79%). Normal, c'est la tranche d'âge qui voyage le plus pour le boulot ou les vacances. Ils veulent de la praticité, pas des contraintes.\n\nCe qui les motive ? Un parcours plus simple et plus rapide. Fini les allers-retours multiples. Prescription, commande, injection : tout chez le même professionnel.\n\nL'USPO pousse déjà le dossier avec sa proposition de loi. L'idée, c'est d'élargir notre périmètre vaccinal au-delà de la grippe et du COVID. Hépatites, typhoïde, encéphalite japonaise... Tout l'arsenal du voyageur.\n\nReste à convaincre les pouvoirs publics. Mais avec un tel niveau d'adhésion des patients, l'argument de l'accès aux soins tient la route. Les centres de vaccination voyage sont débordés, nous on a la capacité.",
-    source: "Le Moniteur des Pharmacies",
-    source_url: "https://www.lemoniteurdespharmacies.fr/nouvelles-missions/vaccination/vaccination-du-voyage-76-des-francais-prets-a-passer-par-leur-pharmacien",
-    tiktok_url: "",
-    badge_label: "La bonne nouvelle",
-    image_url: "assets/img_actu_2026_06_02_3.jpg",
-    tags: ["vaccination", "voyage", "sondage", "mission", "uspo"]
   }
 ];
 

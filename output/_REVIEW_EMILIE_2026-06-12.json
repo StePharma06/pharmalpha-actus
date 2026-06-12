@@ -1,0 +1,37 @@
+{
+  "generated_at": "2026-06-12T04:13:58.524184+02:00",
+  "run_date": "2026-06-12",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "Johnson & Johnson décroche une première mondiale dans l'anémie auto-immune",
+      "resume": "Imaavy pourrait devenir le premier traitement approuvé pour l'anémie hémolytique auto-immune à anticorps chauds. J&J vient de réussir son essai pivot de phase 2/3, ouvrant la voie à une extension d'AMM pour cette maladie rare orpheline.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/pharma/jj-shows-results-trial-could-lead-rare-disease-expansion-imaavy",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "53% de ton EBE dépend des remises : l'analyse qui fait froid dans le dos",
+      "resume": "Les remises commerciales représentent désormais plus de la moitié de l'excédent brut d'exploitation médian des officines. Les pharmacies fragiles sont les plus exposées.",
+      "source": "Pharm'Actus",
+      "source_url": "",
+      "confidence_score": 0.8,
+      "warnings": [
+        "Chiffre exact de 53% à vérifier dans la source",
+        "Définition précise de 'pharmacies fragiles' à clarifier",
+        "Méthodologie de l'étude non détaillée",
+        "FACT-CHECK: 'les remises commerciales représentent plus de 53% de l'excédent brut d'exploitation médian des officines françaises' → Chiffre très précis qui nécessite une source vérifiable et récente. L'article cite 'Le Moniteur des Pharmacies' mais sans référence méthodologique précise.",
+        "FACT-CHECK: 'Les médicaments génériques, avec leurs marges différentielles, constituent le socle de cette économie parallèle' → Confusion terminologique : les marges différentielles sur génériques ne sont pas des 'remises commerciales' au sens strict mais une rémunération réglementaire encadrée par l'article L.162-16-1 du CSS.",
+        "FACT-CHECK: 'Développe tes missions rémunérées (vaccinations, BPM, entretiens)' → Les vaccinations ne sont pas toutes rémunérées de la même façon (certaines relèvent de la dispensation, d'autres d'avenants spécifiques). Il faut préciser le cadre conventionnel de chaque mission.",
+        "FACT-CHECK: 'Surveille les projets de loi sur les remises pharmaceutiques qui pourraient impacter ton modèle économique' → Les remises sont principalement encadrées par des dispositions réglementaires (Code de la santé publique) et conventionnelles, pas uniquement législatives."
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

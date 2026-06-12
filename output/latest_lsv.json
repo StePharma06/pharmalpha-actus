@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? La première échographie a failli révéler des sous-marins",
-  "resume": "En 1941, un neurologue autrichien invente l'échographie pour détecter les tumeurs cérébrales. Mais sa technique s'inspire directement du sonar militaire utilisé pour traquer les U-Boot allemands !",
-  "full_text": "Imagine un neurologue qui observe les radars de la marine et se dit : \"Et si on utilisait ça pour voir à l'intérieur du crâne ?\" C'est exactement ce qui s'est passé en 1941 avec Karl Dussik, médecin autrichien passionné de physique.\n\nDussik venait d'étudier les nouvelles techniques de sonar développées pour la guerre sous-marine. Le principe était génial : envoyer des ondes sonores et analyser leur écho pour localiser les objets cachés. Pourquoi pas les tumeurs cérébrales ?\n\nIl installe son frère Friedrich (qui avait la malchance d'être physicien) dans un bac d'eau, pose des transducteurs de chaque côté de sa tête, et lance les premières ondes ultrasonores. Résultat : des images floues mais prometteuses du cerveau humain ! La première échographie médicale était née.\n\nLe hic ? La technique était tellement expérimentale que Dussik a passé des années à scanner des têtes de cadavres dans des cuves d'eau. Ses collègues le prenaient pour fou. Il a fallu attendre 1958 pour que l'obstétricien Ian Donald perfectionne la méthode et révolutionne le suivi de grossesse.\n\nLe plus dingue ? Dussik n'a jamais vu d'échographie moderne de sa vie. Il est mort en 1968, juste avant l'explosion de sa découverte.\n\nAujourd'hui, chaque fois qu'on fait une écho au comptoir pour vérifier une grossesse ou dépister une pathologie, on utilise la même physique que les chasseurs de sous-marins de 1941 !",
-  "image_keywords": "ultrasound medical equipment",
+  "titre": "Le saviez-vous ? La première greffe de tête a réussi... mais le patient pouvait pas bouger",
+  "resume": "En 1970, un neurochirurgien américain a réellement greffé la tête d'un singe sur le corps d'un autre. L'opération a techniquement réussi, mais le résultat était terrifiant.",
+  "full_text": "Robert White, neurochirurgien à Cleveland, était obsédé par une idée folle : greffer une tête. En 1970, il passe à l'acte avec deux macaques rhésus.\n\nL'opération dure 18 heures. White sectionne la moelle épinière, reconnecte les vaisseaux sanguins, suture les muscles du cou. Miracle : le singe « hybride » se réveille. Il peut voir, entendre, sentir, même mordre les doigts des infirmières !\n\nMais voilà le hic : impossible de reconnecter la moelle épinière. Le singe est totalement paralysé du cou jusqu'aux pieds. Une tête consciente sur un corps mort. Il survit 9 jours avant de mourir de rejet.\n\nWhite répète l'expérience plusieurs fois, avec le même résultat. Il rêve de passer à l'humain pour soigner les tétraplégiques. La communauté scientifique le traite de boucher. Les défenseurs des animaux le harcèlent.\n\nEn 2001, le chirurgien italien Sergio Canavero reprend le flambeau. Il annonce vouloir greffer la tête d'un Russe paralysé sur le corps d'un donneur. Projet abandonné... pour l'instant.\n\nHeureusement, aujourd'hui on préfère réparer qu'amputer : cellules souches, thérapie génique, exosquelettes. Bien plus éthique que ces expériences dignes de Frankenstein !",
+  "image_keywords": "surgery medical history",
   "tags": [
     "histoire",
-    "diagnostic",
-    "echographie",
-    "invention",
-    "guerre"
+    "chirurgie",
+    "greffe",
+    "neurologie",
+    "experimentation"
   ],
-  "date": "2026-06-11",
+  "date": "2026-06-12",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",
