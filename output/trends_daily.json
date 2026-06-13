@@ -1,8 +1,34 @@
 {
-  "generated_at": "2026-06-12",
-  "window_label": "6 juin — 12 juin 2026",
+  "generated_at": "2026-06-13",
+  "window_label": "7 juin — 13 juin 2026",
   "has_history": true,
   "delta_source": "pytrends_rising",
-  "pathologies": [],
+  "pathologies": [
+    {
+      "display": "Allergie au soleil bouton",
+      "delta_label": "↑ 32 450",
+      "trend": "up"
+    },
+    {
+      "display": "Allergie cerise",
+      "delta_label": "↑ 22 600",
+      "trend": "up"
+    },
+    {
+      "display": "La fatigue en anglais",
+      "delta_label": "↑ 11 500",
+      "trend": "up"
+    },
+    {
+      "display": "Est ce que la chaleur fatigue",
+      "delta_label": "↑ 10 800",
+      "trend": "up"
+    },
+    {
+      "display": "Fourmillement dans les jambes et grosse ",
+      "delta_label": "↑ 7 250",
+      "trend": "up"
+    }
+  ],
   "soins": []
 }

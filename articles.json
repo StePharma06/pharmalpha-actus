@@ -1,6 +1,131 @@
 {
   "articles": [
     {
+      "id": "actu_2026_06_13_5",
+      "date": "2026-06-13",
+      "type": "actu",
+      "categorie": "business_officine",
+      "titre": "Déclarations obligatoires 30 juin : éviter 1 500€ d'amende pour ta pharmacie",
+      "resume": "Chiffre d'affaires et DPC : deux télédéclarations cruciales avant le 30 juin. Les oublier coûte cher à ton officine.",
+      "full_text": "Chiffre d'affaires et DPC : deux télédéclarations cruciales avant le 30 juin. Les oublier coûte cher à ton officine.\n\n## Contexte\n\nChaque année, les pharmaciens titulaires doivent impérativement effectuer deux télédéclarations avant le 30 juin : celle du chiffre d'affaires de l'officine pour l'année précédente et celle relative au Développement Professionnel Continu (DPC). Ces obligations réglementaires, souvent négligées dans le rush quotidien, concernent 100% des 20 800 officines françaises. La déclaration CA porte sur l'ensemble des ventes de médicaments, produits de santé et honoraires perçus en 2025. Côté DPC, tu dois justifier tes 20 heures annuelles de formation obligatoire. L'ANSM et l'Ordre surveillent de près ces échéances : les contrôles se multiplient depuis 2024 avec des sanctions financières automatisées.\n\n## Analyse business\n\nL'enjeu financier est double. D'abord, le défaut de déclaration CA expose à une amende forfaitaire de 1 500€ par l'administration fiscale, sans possibilité de négociation. Ensuite, l'absence de justificatifs DPC peut déclencher une procédure ordinale pouvant aller jusqu'à 5 000€ d'amende selon le barème 2026. Au-delà des sanctions, ces déclarations conditionnent tes relations avec l'Assurance Maladie : un retard répété peut bloquer tes avenants conventionnels ou reporter tes négociations tarifaires. Les chiffres 2025 montrent que 12% des officines ratent encore ces échéances annuelles, soit environ 2 500 pharmacies concernées par des rappels administratifs. Le coût moyen d'un dossier de régularisation atteint 800€ (amende + frais de comptable + temps perdu). Côté DPC, 85% des pharmaciens respectent leurs 20h annuelles, mais 15% négligent la télédéclaration pourtant obligatoire depuis 2023. Cette négligence administrative peut aussi impacter ton dossier lors d'une cession : les repreneurs vérifient systématiquement la conformité réglementaire, et tout retard peut faire baisser le prix de 2 à 3%.\n\n## Recommandations actionnables\n\n1. Vérifier immédiatement — Connecte-toi sur le portail ANSM avant le 25 juin pour éviter les bugs de dernière minute et rassemble tes justificatifs CA 2025.\n\n2. Centraliser tes formations DPC — Récupère toutes tes attestations 2025 (présentiel, e-learning, congrès) et vérifie que tu totalises bien 20h minimum.\n\n3. Déléguer à ton comptable — Si tu n'es pas à l'aise avec les télédéclarations, confie cette mission à ton expert-comptable qui connaît les pièges techniques.\n\n4. Programmer un rappel automatique — Note dans ton agenda la date du 1er juin 2027 pour éviter le stress de l'an prochain.\n\n5. Archiver tes preuves — Garde précieusement les accusés de réception électroniques : ils te protègent en cas de contestation administrative.\n\n## Sources citees\n\n- Le Moniteur des Pharmacies",
+      "source": "Pharm'Actus",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Business",
+      "image_url": "assets/img_actu_2026_06_13_5.jpg",
+      "tags": [
+        "declarations",
+        "reglementation",
+        "sanctions",
+        "dpc"
+      ]
+    },
+    {
+      "id": "actu_2026_06_13_4",
+      "date": "2026-06-13",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "Tracker GLP-1 oraux : Fierce Pharma lance le suivi hebdo de la bataille",
+      "resume": "Un nouvel outil de veille pour suivre la guerre commerciale entre Novo et Lilly sur les GLP-1 en comprimé. Parts de marché, prescriptions, lancements : tout y passera chaque semaine.",
+      "full_text": "Fierce Pharma lance son \"Oral GLP-1 Tracker\" hebdomadaire. L'objectif ? Suivre en temps réel la bataille que se livrent Novo Nordisk et Eli Lilly sur le segment des anti-obésité oraux.\n\nLes enjeux sont colossaux. Le marché mondial de l'obésité pourrait atteindre 100 milliards de dollars d'ici 2030. Wegovy oral (Novo) contre Foundayo (Lilly) : c'est le match du siècle dans l'industrie pharma.\n\nL'outil s'appuie sur les données IQVIA et les notes d'analystes financiers. Parts de marché par pays, trajectoires de prescription, adoption par les médecins : tout sera décortiqué. Un niveau de granularité inédit pour un marché émergent.\n\nPourquoi c'est important pour nous ? Ces molécules vont transformer nos officines. Volume de prescriptions, nouveaux profils de patients, gestion des stocks, conseils associés... On doit anticiper cette révolution.\n\nLes formes orales changent complètement l'équation. Plus besoin de formation à l'injection, conservation simplifiée, meilleure acceptabilité patient. Mais aussi nouveaux défis : interactions médicamenteuses, modalités de prise complexes.\n\nLe tracker va permettre d'identifier les tendances avant qu'elles n'arrivent en France. Quel labo prend l'avantage ? Dans quels pays ? Quelles stratégies marchent ?\n\nPour l'instant, Novo a une longueur d'avance avec son AMM britannique. Mais Lilly a souvent surpris avec des lancements agressifs. La bataille ne fait que commencer, et on aura enfin un outil pour la suivre en direct.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/pharma/oral-glp-1-tracker-launch-trajectories-lilly-foundayo-novo-wegovy-pill",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_06_13_4.jpg",
+      "tags": [
+        "glp1",
+        "marche",
+        "veille",
+        "concurrence",
+        "tracker"
+      ]
+    },
+    {
+      "id": "actu_2026_06_13_3",
+      "date": "2026-06-13",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "GLP-1 oraux : Novo décroche l'AMM britannique pour sa pilule Wegovy",
+      "resume": "Grande-Bretagne valide la forme orale du sémaglutide pour l'obésité. Une révolution qui arrive : fini les injections hebdomadaires. Les patients français devront encore attendre, mais l'EMA suit de près.",
+      "full_text": "Wegovy en comprimé vient de décrocher son AMM britannique. Novo Nordisk peut commercialiser sa pilule de sémaglutide outre-Manche pour traiter l'obésité. Une première mondiale qui va changer la donne.\n\nFini les injections hebdomadaires qui freinaient certains patients. La forme orale, c'est la démocratisation des GLP-1. Plus simple à prendre, moins de résistance psychologique, meilleure observance probable.\n\nMais attention : oral ne rime pas avec facile. Il faut le prendre à jeun, 30 minutes avant le premier repas, avec un petit verre d'eau. Pas d'autres médicaments dans les 30 minutes qui suivent. L'absorption est capricieuse avec ces molécules.\n\nLe Royaume-Uni joue souvent le précurseur en Europe. L'EMA va probablement suivre dans les mois qui viennent. Pour la France, compte encore 6 à 12 mois minimum avant de voir débarquer la forme orale.\n\nCôté efficacité, les études montrent des résultats comparables aux injections. Même profil de perte de poids, mêmes bénéfices cardiovasculaires. Les effets indésirables gastro-intestinaux restent présents mais mieux tolérés selon les retours patients.\n\nPour ton officine, ça va simplifier la vie. Plus besoin d'expliquer la technique d'injection, plus de stylos défaillants ou de problèmes de conservation. Un comprimé classique, même si les modalités de prise restent contraignantes.\n\nLa bataille fait rage entre Novo et Lilly sur ce segment. Eli Lilly développe aussi sa version orale de tirzépatide. Celui qui sortira le premier en France aura un avantage concurrentiel énorme.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/pharma/fierce-pharma-regulatory-tracker-2026",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_06_13_3.jpg",
+      "tags": [
+        "glp1",
+        "oral",
+        "amm",
+        "wegovy",
+        "innovation"
+      ]
+    },
+    {
+      "id": "actu_2026_06_13_2",
+      "date": "2026-06-13",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "Novo Nordisk piraté : des données d'essais cliniques compromises",
+      "resume": "Le géant danois confirme une cyberattaque touchant des données de patients en essais cliniques. Les autorités sont prévenues, les patients alertés. Un rappel que Big Pharma reste une cible privilégiée des hackers.",
+      "full_text": "Novo Nordisk vient de confirmer une cyberattaque sur ses systèmes informatiques. Des données de patients participant à des essais cliniques ont été compromises. Le laboratoire danois a prévenu les autorités et contacte directement les patients concernés.\n\nL'industrie pharma devient une cible de choix pour les cybercriminels. Propriété intellectuelle, données cliniques, informations patients : tout intéresse les hackers. Novo rejoint la liste déjà longue des labos piratés ces dernières années.\n\nPour l'instant, l'ampleur de la fuite n'est pas précisée. Novo conseille aux patients d'essais cliniques de \"rester vigilants\" et de surveiller leurs comptes. Classique mais inquiétant : si même les géants avec des budgets sécu énormes se font pirater...\n\nCôté officine, ça ne t'impacte pas directement aujourd'hui. Mais réfléchis à tes propres pratiques numériques. Tes logiciels sont-ils à jour ? Tes mots de passe robustes ? Avec toutes les données de santé que tu manipules, tu es aussi une cible potentielle.\n\nL'ironie ? Novo cartonne avec ses GLP-1 (Ozempic, Wegovy) qui génèrent des milliards. Cette notoriété attire forcément l'attention des malfaiteurs. Plus tu es visible, plus tu es exposé.\n\nAttends-toi à voir ce genre d'incidents se multiplier. Les labos vont devoir investir massivement dans leur cybersécurité. Et nous aussi, à notre échelle d'officine, on va devoir renforcer nos défenses numériques.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/pharma/novo-reports-cybersecurity-breach-tells-clinical-trial-patients-remain-vigilant",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/img_actu_2026_06_13_2.jpg",
+      "tags": [
+        "cybersecurite",
+        "novo",
+        "piratage",
+        "donnees",
+        "essais"
+      ]
+    },
+    {
+      "id": "actu_2026_06_13_1",
+      "date": "2026-06-13",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "Wegovy et Mounjaro remboursés dès lundi : les nouvelles règles d'IMC à retenir",
+      "resume": "Deux nouveaux arrêtés précisent les conditions de remboursement des GLP-1 anti-obésité. L'IMC de référence reste inchangé mais les modalités de calcul sont clarifiées. Ça démarre lundi 15 juin au comptoir.",
+      "full_text": "Les GLP-1 anti-obésité débarquent dans tes remboursements lundi 15 juin. Deux nouveaux arrêtés publiés au JO du 12 juin remplacent ceux du 23 mai pour Wegovy et Mounjaro.\n\nPas de révolution, mais des précisions importantes sur l'IMC de référence. Les critères restent les mêmes : IMC ≥ 35 kg/m² avec au moins une comorbidité, ou IMC ≥ 40 kg/m² sans comorbidité. La nouveauté ? Les modalités de calcul de cet IMC sont mieux définies.\n\nCôté prescripteurs, rien ne change : endocrinologues, internistes, cardiologues et médecins des centres spécialisés dans l'obésité gardent la main. Le parcours de soins reste identique avec bilan préalable obligatoire.\n\nAttention à ton stock : ces molécules étaient déjà en tension d'approvisionnement avant le remboursement. Avec l'élargissement de l'accès, prépare-toi à des ruptures probables. Novo Nordisk et Lilly ont prévenu qu'ils augmentaient leur production, mais ça prendra du temps.\n\nAu comptoir, prépare tes équipes sur les effets indésirables gastro-intestinaux. Nausées, vomissements, diarrhées : c'est du classique avec ces traitements. Les patients vont avoir besoin de conseils pratiques pour gérer.\n\nL'impact sur ton CA ? Avec des prix unitaires autour de 280€ par mois avant remboursement, même avec la marge dégressif, ça peut représenter quelques euros de marge par patient. Mais c'est surtout un service de santé publique majeur pour tes patients obèses.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/medicament-parapharmacie/medicament/remboursement-de-wegovy-et-mounjaro-precision-sur-limc-de-reference-pour-y-avoir-droit",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_06_13_1.jpg",
+      "tags": [
+        "remboursement",
+        "obesite",
+        "glp1",
+        "wegovy",
+        "mounjaro"
+      ]
+    },
+    {
+      "id": "lsv_2026_06_13",
+      "date": "2026-06-13",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? Le premier cabinet dentaire était une foire aux monstres",
+      "resume": "Pierre Fauchard a révolutionné la dentisterie en 1728, mais ses patients hurlaient si fort qu'il a dû installer son cabinet loin des habitations. Les extractions se faisaient sans anesthésie, avec des pinces de maréchal-ferrant.",
+      "full_text": "Imagine un peu la scène : Paris, 1728. Pierre Fauchard, le « père de la dentisterie moderne », installe son premier cabinet... dans une baraque foraine, loin du centre-ville.\n\nPourquoi ? Parce que ses patients hurlaient si fort pendant les soins que les voisins appelaient la police ! À l'époque, pas d'anesthésie, pas d'antidouleur. Juste du courage et une bonne rasade d'alcool.\n\nFauchard utilisait des pinces de maréchal-ferrant pour arracher les dents pourries. Pour les caries, il creusait à vif avec des burins de menuisier. Les plus chanceux repartaient avec des dents d'hippopotame en guise de prothèses.\n\nLe plus dingue ? Ce type était révolutionnaire ! Il a inventé le premier dentier moderne, la première couronne, et surtout... il nettoyait ses outils entre deux patients. Un concept totalement fou pour l'époque.\n\nSa clientèle ? Principalement des prostituées et des saltimbanques. Les bourgeois préféraient encore perdre leurs dents plutôt que d'avouer qu'ils consultaient « le boucher de la foire Saint-Germain ».\n\nAujourd'hui, quand un patient se plaint d'une petite douleur après une extraction sous anesthésie locale, je repense parfois aux clients de Fauchard qui ressortaient en titubant, la bouche en sang, mais avec le sourire... enfin, ce qu'il en restait !",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_06_13.jpg",
+      "tags": [
+        "histoire",
+        "dentisterie",
+        "chirurgie",
+        "douleur",
+        "instrument"
+      ]
+    },
+    {
       "id": "actu_2026_06_12_5",
       "date": "2026-06-12",
       "type": "actu",
@@ -6911,6 +7036,6 @@
       ]
     }
   ],
-  "count": 335,
-  "updated_at": "2026-06-12T04:14:01.037231+02:00"
+  "count": 341,
+  "updated_at": "2026-06-13T04:14:10.152531+02:00"
 }

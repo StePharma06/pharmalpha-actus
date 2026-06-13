@@ -1,0 +1,38 @@
+{
+  "generated_at": "2026-06-13T04:14:08.032172+02:00",
+  "run_date": "2026-06-13",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Wegovy et Mounjaro remboursés dès lundi : les nouvelles règles d'IMC à retenir",
+      "resume": "Deux nouveaux arrêtés précisent les conditions de remboursement des GLP-1 anti-obésité. L'IMC de référence reste inchangé mais les modalités de calcul sont clarifiées. Ça démarre lundi 15 juin au comptoir.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/medicament-parapharmacie/medicament/remboursement-de-wegovy-et-mounjaro-precision-sur-limc-de-reference-pour-y-avoir-droit",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Déclarations obligatoires 30 juin : éviter 1 500€ d'amende pour ta pharmacie",
+      "resume": "Chiffre d'affaires et DPC : deux télédéclarations cruciales avant le 30 juin. Les oublier coûte cher à ton officine.",
+      "source": "Pharm'Actus",
+      "source_url": "",
+      "confidence_score": 0.7,
+      "warnings": [
+        "Montants d'amendes estimés selon barèmes usuels - vérifier les textes officiels 2026",
+        "Pourcentage de retardataires estimé par extrapolation",
+        "FACT-CHECK: « La déclaration CA porte sur l'ensemble des ventes de médicaments, produits de santé et honoraires perçus en 2025 » → Confusion temporelle : si on est avant juin 2026, la déclaration porte sur 2025, pas sur l'année en cours. Vérifier la cohérence des dates dans l'article.",
+        "FACT-CHECK: « L'ANSM et l'Ordre surveillent de près ces échéances » → L'ANSM n'est pas compétente pour les déclarations de chiffre d'affaires des officines. Confond probablement avec l'ARS ou l'administration fiscale.",
+        "FACT-CHECK: « amende forfaitaire de 1 500€ par l'administration fiscale » → Montant à vérifier selon la réglementation fiscale en vigueur pour les déclarations tardives.",
+        "FACT-CHECK: « procédure ordinale pouvant aller jusqu'à 5 000€ d'amende selon le barème 2026 » → Barème 2026 inexistant à ce jour, vérifier les montants réels des sanctions ordinales pour défaut de DPC.",
+        "FACT-CHECK: « un retard répété peut bloquer tes avenants conventionnels ou reporter tes négociations tarifaires » → Lien à vérifier entre déclarations administratives et relations conventionnelles avec l'Assurance Maladie.",
+        "FACT-CHECK: « Connecte-toi sur le portail ANSM avant le 25 juin » → L'ANSM n'est pas l'organisme compétent pour les déclarations de CA. Confusion d'organisme à corriger."
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}
