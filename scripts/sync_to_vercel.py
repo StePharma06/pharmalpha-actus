@@ -64,7 +64,8 @@ def transform_html(text: str) -> str:
 
 def transform_articles_json(text: str) -> str:
     data = json.loads(text)
-    arts = data.get("articles", [])
+    # articles.json peut etre une liste directe ou un dict {"articles": [...]}
+    arts = data if isinstance(data, list) else data.get("articles", [])
     for a in arts:
         img = a.get("image_url") or ""
         if img.startswith("assets/"):
