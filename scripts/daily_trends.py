@@ -254,6 +254,24 @@ def main():
     for s in soin_top:
         print(f"     {s['display']:38s} {s['delta_label']}")
 
+    # ── Fallback colonne vide : reutilise les donnees du jour precedent ──
+    # Evite colonnes vides si pytrends rate-limite un des deux batchs
+    prev_data = {}
+    if os.path.exists(OUTPUT_FILE):
+        try:
+            with open(OUTPUT_FILE, encoding="utf-8") as f:
+                prev_data = json.load(f)
+        except Exception:
+            pass
+
+    if not patho_top and prev_data.get("pathologies"):
+        patho_top = prev_data["pathologies"]
+        print(f"  [FALLBACK] pathologies vide -> reutilise donnees precedentes ({len(patho_top)} termes)")
+
+    if not soin_top and prev_data.get("soins"):
+        soin_top = prev_data["soins"]
+        print(f"  [FALLBACK] soins vide -> reutilise donnees precedentes ({len(soin_top)} termes)")
+
     # ── Sauvegarde ────────────────────────────────────────────────────
     output = {
         "generated_at": today.isoformat(),

@@ -2351,8 +2351,15 @@ function renderArticles() {
     html += '</div>';
   });
 
-  // Section 'Precedemment' retiree: les articles plus anciens sont disponibles sur archives.html
-  // (voir le CTA Archives en bas de page)
+  // Section 'Precedemment' : affiche les articles recents hors aujourd'hui/hier
+  // Limite a CARDS_COUNT pour ne pas saturer (fallback si today+yesterday vides)
+  if (groups.older.length > 0) {
+    const olderSlice = groups.older.slice(0, CARDS_COUNT * 2);
+    html += `<div class="section-title">Précédemment</div>`;
+    html += '<div class="grid">';
+    html += olderSlice.map(a => renderCard(a, cardIdx++)).join('');
+    html += '</div>';
+  }
 
   container.innerHTML = html;
 }
