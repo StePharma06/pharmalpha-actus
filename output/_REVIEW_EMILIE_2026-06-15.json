@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-06-15T04:12:11.148832+02:00",
+  "run_date": "2026-06-15",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Wegovy et Mounjaro remboursés dès lundi : 65% pris en charge par l'AM",
+      "resume": "Les GLP-1 anti-obésité débarquent au remboursement à partir du 17 juin. Primo-prescription réservée aux spécialistes, critères stricts d'éligibilité. Impact majeur sur les flux officinaux à prévoir.",
+      "source": "Le Monde Santé",
+      "source_url": "https://www.lemonde.fr/sante/article/2026/06/14/les-medicaments-antiobesite-wegovy-et-mounjaro-seront-rembourses-en-france-a-partir-de-lundi_6702600_1651302.html",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Arrêts maladie encadrés : 18 milliards d'économies visées, quel impact officine ?",
+      "resume": "Dès septembre, les arrêts maladie seront limités à 1 mois puis 2 mois maximum. L'État vise 18 milliards d'euros d'économies annuelles.",
+      "source": "Pharm'Actus",
+      "source_url": "",
+      "confidence_score": 0.8,
+      "warnings": [
+        "Montant exact des entretiens pharmaceutiques à vérifier selon avenant en vigueur",
+        "Pourcentage d'économies gouvernementales estimé, pas encore mesuré",
+        "FACT-CHECK: \"Forme ton équipe aux entretiens pharmaceutiques rémunérés (30€/entretien selon l'avenant 21)\" → Montant incorrect et référence d'avenant à vérifier. Les entretiens pharmaceutiques ne sont pas rémunérés à 30€ selon l'avenant 21 de la convention pharmaceutique.",
+        "FACT-CHECK: \"Cette collaboration peut déboucher sur des bilans de médication partagés (60€/bilan)\" → Montant et dénomination incorrects. Il s'agit des bilans de médication ou bilans partagés de médication, avec des honoraires différents selon le type et non pas 60€ forfaitairement.",
+        "FACT-CHECK: \"Mise sur les entretiens post-hospitalisation et les bilans de médication qui vont exploser avec cette réforme\" → Confusion entre différents actes. Les entretiens post-hospitalisation et les bilans de médication sont des actes distincts avec des conditions et rémunérations spécifiques à vérifier.",
+        "FACT-CHECK: \"Budget formation : 500-800€ par pharmacien adjoint pour être opérationnel dès septembre\" → Montant de formation non sourcé et sans rapport avec les dispositifs de formation continue pharmaceutique réglementaires."
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}
