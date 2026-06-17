@@ -1,0 +1,46 @@
+{
+  "generated_at": "2026-06-17T11:51:11.112016+02:00",
+  "run_date": "2026-06-17",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "Protections périodiques remboursées : enfin un début de concrétisation pour les officines",
+      "resume": "Annoncée en mars 2023 par Élisabeth Borne, la prise en charge des protections périodiques réutilisables avance — même sans cadre définitif totalement bouclé. Les pharmacies sont appelées à se préparer pour les moins de 26 ans et les bénéficiaires de la CSS. Un signal positif pour la mission de santé des femmes à l'officine.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/protections-periodiques-remboursees-les-pharmacies-sommees-detre-pretes-sans-cadre-definitif",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "avenir_pharma",
+      "titre": "Migraine : une nouvelle cible anti-PACAP entre en jeu avec 46 millions dans la poche",
+      "resume": "Vedana Therapeutics sort de sa phase stealth avec 46 millions de dollars pour développer des thérapies anti-PACAP contre la migraine. Une approche différente des triptans et des anti-CGRP déjà bien installés. À surveiller pour le futur arsenal thérapeutique de l'officine.",
+      "source": "BioPharma Dive",
+      "source_url": "https://www.biopharmadive.com/news/vedana-migraine-stealth-launch-biotech-pacap/822960/",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Canicule et médicaments : un levier conseil sous-exploité qui peut changer ta saison",
+      "resume": "L'ANSM alerte sur les interactions médicaments-chaleur : déshydratation, photosensibilisation, perte d'efficacité. Chaque été, des millions de patients sous traitement chronique passent à ta pharmacie sans recevoir ce conseil pourtant valorisable en honoraire de dispensation.",
+      "source": "Pharm'Actus",
+      "source_url": "",
+      "confidence_score": 0.72,
+      "warnings": [
+        "Le chiffre +18 % de hausse des ventes parapharmacie estivale 2022 vs 2021 est une estimation de marché cohérente avec les tendances IQVIA/FNPO mais doit être vérifié sur les rapports publiés — à recouper avant publication",
+        "Le chiffre de 48 millions de patients sous traitement chronique est une approximation basée sur les données AMELI/CNAM — vérifier la dernière publication officielle",
+        "L'honoraire de 2,10 € pour ordonnance complexe est correct selon l'avenant n°22, mais le seuil exact de complexité (nombre de lignes, critères âge) doit être vérifié dans le texte conventionnel",
+        "Les chiffres de l'été 2003 (15 000 morts) sont historiquement établis et vérifiables via INSEE/Inserm",
+        "La facturation via CPTS des actes de prévention estivale dépend des accords locaux : ne pas généraliser sans vérification de l'accord CPTS concerné"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

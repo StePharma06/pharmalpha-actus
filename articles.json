@@ -1,6 +1,131 @@
 {
   "articles": [
     {
+      "id": "actu_2026_06_17_5",
+      "date": "2026-06-17",
+      "type": "actu",
+      "categorie": "business_officine",
+      "titre": "Canicule et médicaments : un levier conseil sous-exploité qui peut changer ta saison",
+      "resume": "L'ANSM alerte sur les interactions médicaments-chaleur : déshydratation, photosensibilisation, perte d'efficacité. Chaque été, des millions de patients sous traitement chronique passent à ta pharmacie sans recevoir ce conseil pourtant valorisable en honoraire de dispensation.",
+      "full_text": "L'ANSM alerte sur les interactions médicaments-chaleur : déshydratation, photosensibilisation, perte d'efficacité. Chaque été, des millions de patients sous traitement chronique passent à ta pharmacie sans recevoir ce conseil pourtant valorisable en honoraire de dispensation.\n\n## Contexte\n\nChaque été, la canicule transforme le profil de risque de dizaines de molécules courantes. L'ANSM publie régulièrement ses recommandations sur les médicaments sensibles à la chaleur : diurétiques, IEC, sartans, bêtabloquants, lithium, antidépresseurs, antiépileptiques, antidiabétiques oraux, AINS, et médicaments photosensibilisants. En France, on dénombre environ 48 millions de patients sous traitement chronique, dont une proportion significative est âgée de plus de 65 ans — tranche d'âge la plus exposée aux complications liées à la chaleur. Les officines françaises, au nombre de 21 000 environ, sont en première ligne pendant les épisodes caniculaires : elles restent ouvertes quand les cabinets médicaux sont saturés ou fermés. Or, le conseil pharmaco-climatique est rarement structuré comme un acte valorisé. La saison estivale 2026 s'annonce précoce : l'épisode de chaleur du 17 juin 2026 intervient 3 semaines avant la moyenne historique des premières canicules françaises. C'est maintenant qu'il faut calibrer ta réponse officinale.\n\n## Analyse business\n\nParlons argent d'abord. L'honoraire de dispensation pour une ordonnance complexe (≥ 5 lignes, patient âgé) est actuellement fixé à 2,10 € par l'avenant n°22 à la convention pharmaceutique. Or un patient de 70 ans sous 7 médicaments chroniques représente exactement le profil cible de l'alerte ANSM. Si tu structures un entretien conseil canicule autour de sa dispensation — vérification des risques d'hypotension orthostatique, de déshydratation avec ses diurétiques, d'hyperglycémie favorisée par la chaleur avec ses antidiabétiques — tu es dans le cadre d'un acte pleinement justifié et déjà rémunéré. Ce n'est pas du conseil gratuit : c'est du conseil inclus que tu ne valorises pas assez.\n\nDeuxième angle : le conseil OTC canicule. La vente de sels de réhydratation orale (SRO), de protections solaires, de solutions nasales isotoniques et de compléments électrolytiques explose pendant les vagues de chaleur. En 2022, l'été caniculaire a généré une hausse estimée à +18 % des ventes de parapharmacie estivale en officine par rapport à l'été 2021 (données IQVIA/FNPO). Une pharmacie qui sait positionner ce conseil au bon moment génère entre 800 € et 2 500 € de CA additionnel OTC sur un épisode de chaleur de 5 jours.\n\nTroisième angle : le risque médico-légal inversé. En cas de complication liée à un médicament pendant une canicule, la traçabilité du conseil délivré compte. Depuis 2021, le dossier pharmaceutique (DP) permet d'horodater les actes de conseil. Documenter un \"conseil canicule\" lors de la dispensation, même en 90 secondes, c'est aussi une protection pour l'équipe.\n\nEnfin, les chiffres de l'été 2003 restent le rappel brutal : 15 000 morts en France, dont une large majorité de personnes âgées sous traitement. La pharmacie est le seul point de contact de proximité accessible sans rendez-vous. C'est une position de marché unique — et une responsabilité réelle.\n\n## Recommandations actionnables\n\n1. **Brief équipe dès ce matin** — Identifie les 5 classes médicamenteuses prioritaires à surveiller (diurétiques, IEC/sartans, lithium, antidiabétiques oraux, psychotropes) et briefie chaque préparateur sur le message-clé par classe. 15 minutes en réunion d'équipe suffisent.\n\n2. **Crée un \"check canicule\" à la dispensation** — Pour tout patient de 65 ans et plus avec ≥ 3 médicaments chroniques, ajoute mentalement 2 questions : \"Vous hydratez-vous suffisamment ?\" et \"Avez-vous un thermomètre à la maison ?\". Trace le conseil dans le DP.\n\n3. **Positionne ton rayon OTC** — SRO adultes et enfants, spray nasal salin, SPF 50+, brumisateurs, coussinets réfrigérants : regroupe-les en zone visible dès aujourd'hui. Ce n'est pas du Rx, c'est du merchandising légal et rentable.\n\n4. **Appuie-toi sur les fiches ANSM** — Les fiches médicaments-chaleur sont téléchargeables gratuitement sur ansm.sante.fr. Imprime-les, affiche-les en back-office. Ça structure le discours de toute l'équipe sans formation lourde.\n\n5. **Pense aux missions CPTS** — Si ta CPTS a défini des missions de prévention estivale, tu peux facturer certains actes de prévention structurés. Vérifie ton accord local dès maintenant.\n\n## Sources citees\n\n- France Info Santé — Médicaments et canicule, alerte ANSM\n- ANSM — Médicaments et fortes chaleurs\n- Convention pharmaceutique — Avenant n°22 (honoraires de dispensation)",
+      "source": "Pharm'Actus",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Business",
+      "image_url": "assets/img_actu_2026_06_17_5.jpg",
+      "tags": [
+        "canicule",
+        "conseil-officinal",
+        "honoraires",
+        "pharmacovigilance"
+      ]
+    },
+    {
+      "id": "actu_2026_06_17_4",
+      "date": "2026-06-17",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "Migraine : une nouvelle cible anti-PACAP entre en jeu avec 46 millions dans la poche",
+      "resume": "Vedana Therapeutics sort de sa phase stealth avec 46 millions de dollars pour développer des thérapies anti-PACAP contre la migraine. Une approche différente des triptans et des anti-CGRP déjà bien installés. À surveiller pour le futur arsenal thérapeutique de l'officine.",
+      "full_text": "Un nouveau challenger arrive dans la migraine. Et il ne vise pas les mêmes cibles que ce qu'on connaît déjà.\n\nVedana Therapeutics vient de sortir du mode stealth avec 46 millions de dollars de financement en seed round, soutenu notamment par Westlake. L'objectif : développer des thérapies ciblant le PACAP — Pituitary Adenylate Cyclase-Activating Polypeptide, pour les fans de biochimie — un neuropeptide impliqué dans la physiopathologie des crises migraineuses.\n\nPourquoi c'est intéressant ? On a déjà les triptans — efficaces mais avec leurs contre-indications cardiovasculaires. On a les anti-CGRP (érenumab, fremanezumab, galcanezumab) — une vraie révolution dans la migraine chronique, désormais bien implantés en ville. Mais entre 30 et 40% des patients migraineux ne répondent pas de manière satisfaisante à ces approches. C'est là que l'anti-PACAP peut s'inscrire.\n\nLe PACAP est un neuropeptide vasoactif dont les taux augmentent lors des crises. Des études cliniques antérieures ont montré que son administration peut déclencher une migraine chez des patients susceptibles. Bloquer son récepteur (PAC1 ou VPAC) pourrait donc couper court à la cascade inflammatoire neurovasculaire à l'origine de la douleur.\n\nPlusieurs acteurs exploraient déjà cette piste — Lundbeck avait un anticorps anti-PAC1 en développement avant d'en réduire la voilure. Vedana arrive avec une approche renouvelée et un financement solide pour aller jusqu'en phase clinique.\n\nCe que ça change pour l'officine à terme : les anti-CGRP ont transformé la prise en charge de la migraine sévère et ont généré un flux important de patients suivis en ville avec des stylos injectables en rétrocession ou en dispensation directe selon les cas. Si l'anti-PACAP prouve son efficacité chez les non-répondeurs aux anti-CGRP, c'est un nouveau segment de patientèle à accompagner — avec les consultations d'éducation thérapeutique et les bilans de médication qui vont avec.\n\nOn est encore loin de l'AMM. Mais 46 millions de dollars en seed, ça permet d'aller vite jusqu'en phase 2. Horizon estimé pour les premières données cliniques : 2028-2029. À mettre dans ta veille pipeline.",
+      "source": "BioPharma Dive",
+      "source_url": "https://www.biopharmadive.com/news/vedana-migraine-stealth-launch-biotech-pacap/822960/",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_06_17_4.jpg",
+      "tags": [
+        "migraine",
+        "innovation",
+        "recherche",
+        "pipeline",
+        "neurologie"
+      ]
+    },
+    {
+      "id": "actu_2026_06_17_3",
+      "date": "2026-06-17",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "Protections périodiques remboursées : enfin un début de concrétisation pour les officines",
+      "resume": "Annoncée en mars 2023 par Élisabeth Borne, la prise en charge des protections périodiques réutilisables avance — même sans cadre définitif totalement bouclé. Les pharmacies sont appelées à se préparer pour les moins de 26 ans et les bénéficiaires de la CSS. Un signal positif pour la mission de santé des femmes à l'officine.",
+      "full_text": "Ça avance. Lentement, certes. Mais ça avance.\n\nAnnoncée en grande pompe en mars 2023 par la Première ministre Élisabeth Borne, la prise en charge par l'Assurance maladie des protections périodiques réutilisables était initialement attendue en 2024. On est en 2026 et le cadre définitif n'est toujours pas totalement finalisé. Pourtant, les pharmacies sont désormais appelées à se préparer à dispenser ces produits dans le cadre du remboursement.\n\nLa mesure cible deux populations bien définies : les jeunes femmes de moins de 26 ans et les bénéficiaires de la Complémentaire santé solidaire (CSS). Deux catégories dont la précarité menstruelle est documentée et qui se présentent régulièrement à ton comptoir.\n\nPourquoi c'est une bonne nouvelle pour l'officine ? Plusieurs raisons. D'abord, ça positionne la pharmacie comme acteur incontournable de la prise en charge de la santé des femmes — un rôle qu'on assume déjà de facto mais rarement reconnu officiellement et financièrement. Ensuite, ça crée un flux de patientes supplémentaire avec un acte de dispensation valorisé.\n\nLe flou subsiste sur le détail des modalités : quels produits exactement, quel prix limite de remboursement, quel circuit de commande, quelle marge officinale. Ces questions ne sont pas anodines. On connaît le refrain : la mesure est annoncée, les officines doivent être prêtes, mais le cadre réglementaire précis arrive avec retard. C'est le schéma classique.\n\nCe qu'il faut surveiller maintenant : la parution des textes d'application (décret ou arrêté tarifaire), la mise à jour du référentiel produits dans les logiciels de caisse, et les modalités de tiers payant. Autant d'étapes sans lesquelles la belle annonce politique reste lettre morte au comptoir.\n\nDemain matin ? Commence par identifier dans ton assortiment les protections périodiques réutilisables déjà disponibles. Et tiens-toi prêt à intégrer ce nouveau flux dès que les textes tombent. C'est un acte de santé publique — et potentiellement un honoraire de dispensation à ne pas rater.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/protections-periodiques-remboursees-les-pharmacies-sommees-detre-pretes-sans-cadre-definitif",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_06_17_3.jpg",
+      "tags": [
+        "remboursement",
+        "officine",
+        "css",
+        "dispensation",
+        "sante-femme"
+      ]
+    },
+    {
+      "id": "actu_2026_06_17_2",
+      "date": "2026-06-17",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "L'écosystème biopharma mondial retrouve la santé — et ça va tout changer pour l'accès aux molécules",
+      "resume": "PwC annonce le retour en force des fusions-acquisitions dans le secteur biopharma : plus de 65 milliards de dollars de deals au seul premier trimestre 2026. Le plus fort depuis 2020. Ce regain de dynamisme M&A va remodeler le pipeline mondial des prochaines années — et donc ce que tu dispenseras dans 5 ans.",
+      "full_text": "65 milliards de dollars en un trimestre. C'est la photographie du secteur biopharma mondial au T1 2026, selon PwC. Le cabinet annonce sans ambiguïté : \"l'écosystème biopharma est de retour en pleine santé\".\n\nEt pour cause. Après deux ans de gel relatif lié aux taux d'intérêt élevés, aux incertitudes réglementaires FDA et aux pressions sur les prix aux États-Unis, les grandes pharma ont rouvert le robinet des acquisitions. AstraZeneca, Pfizer, Merck, Roche — tous ont des pipelines à renforcer d'urgence avant les falaises de brevets de 2027-2030.\n\nPourquoi ça te concerne, toi pharmacien d'officine en France ? Parce que le M&A biopharma d'aujourd'hui, c'est le médicament que tu dispenseras dans 5 à 7 ans. Quand un grand groupe rachète une biotech spécialisée en oncologie ou en maladies rares, c'est une molécule en phase 2 ou 3 qui va bénéficier de ressources industrielles pour aller jusqu'à l'AMM.\n\nSecond effet : la consolidation crée des monopoles de fait sur certaines classes thérapeutiques. Ce qui peut se traduire par des tensions d'approvisionnement, des prix d'AMM plus élevés — et in fine des négociations CEPS plus tendues en France. Le remboursement d'une molécule issue d'un méga-deal M&A, c'est souvent une bataille de 18 à 24 mois après l'AMM européenne.\n\nTroisième angle : les fabricants indépendants de génériques et de biosimilaires voient leur terrain de jeu se rétrécir. Moins de molécules tombant dans le domaine public de façon prévisible, plus de stratégies d'evergreening agressives. Pour la substitution en officine, c'est une pression supplémentaire sur la disponibilité des génériques à moyen terme.\n\nLe contexte français n'est pas isolé de ces dynamiques. L'ANSM et la HAS doivent déjà gérer l'afflux de dossiers d'AMM et d'évaluations post-M&A. Et le CEPS aura fort à faire pour maintenir des prix négociés face à des groupes encore plus puissants.\n\nRetenir un chiffre : 65 milliards en 3 mois. C'est le signal que la machine industrielle redémarre. Ce qui arrive dans les labos américains et européens aujourd'hui passera ton comptoir avant la fin de la décennie.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/pharma/ma-volume-and-value-indicate-biopharma-ecosystem-back-full-health-pwc",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/img_actu_2026_06_17_2.jpg",
+      "tags": [
+        "innovation",
+        "pipeline",
+        "fda",
+        "ema",
+        "generique"
+      ]
+    },
+    {
+      "id": "actu_2026_06_17_1",
+      "date": "2026-06-17",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "Fonds d'investissement dans les officines : l'Assemblée nationale veut surveiller de près",
+      "resume": "Les députés tirent la sonnette d'alarme sur la montée en puissance des fonds d'investissement dans le capital des pharmacies. L'Ordre des pharmaciens pourrait se voir confier un droit de regard renforcé. Une question qui touche directement à l'indépendance du réseau officinal.",
+      "full_text": "Les fonds d'investissement ont trouvé les officines. Et l'Assemblée nationale commence à trouver ça un peu trop.\n\nUn rapport parlementaire récent pointe la progression des capitaux financiers dans les pharmacies françaises, au même titre que dans d'autres professions de santé réglementées. Les députés ne mâchent pas leurs mots : les pharmacies sont des infrastructures de santé stratégiques. Pas des cibles pour du private equity.\n\nCe que le rapport propose concrètement : donner à l'Ordre des pharmaciens la capacité de consulter — et potentiellement de s'opposer — aux montages financiers qui permettent à des fonds d'entrer au capital des structures officinales. Une surveillance renforcée des investisseurs, donc. Pas encore un verrou, mais une main sur la poignée.\n\nPourquoi ça compte pour toi, pharmacien titulaire ? Parce que la question de qui détient réellement le capital de ton confrère d'en face n'est pas anodine. Quand un fonds entre, la logique de rentabilité à court terme entre avec lui. Et la mission de santé publique, elle, peut sortir par la fenêtre.\n\nOn a déjà vu le schéma se déployer chez les médecins, les kiné, les infirmiers. Les officines résistaient mieux grâce aux règles de détention capitalistique réservées aux pharmaciens. Mais les montages en SCI, en holdings, en droits de préférence déguisés ont commencé à contourner ces garde-fous.\n\nL'Ordre est mentionné comme gardien potentiel. C'est cohérent avec son rôle, mais ça suppose qu'il ait les moyens de jouer ce rôle : accès aux informations financières, délais d'instruction, capacité de recours. Autant de questions que le rapport soulève sans encore y répondre totalement.\n\nAu comptoir demain matin ? Pas de changement immédiat. Mais si tu envisages une cession, une association, ou une restructuration capitalistique, surveille de près l'évolution de ce dossier. Les règles du jeu pourraient changer plus vite que prévu. Et si un fonds frappe à ta porte, sache que l'Assemblée nationale a maintenant un œil dessus.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/financement-des-officines-lassemblee-nationale-veut-fermer-la-porte-aux-fonds",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_06_17_1.jpg",
+      "tags": [
+        "officine",
+        "financement",
+        "ordre",
+        "capital",
+        "reglementation"
+      ]
+    },
+    {
+      "id": "lsv_2026_06_17",
+      "date": "2026-06-17",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? On traitait la folie avec des bains de 12 heures",
+      "resume": "Au XIXe siècle, les psychiatres croyaient guérir la folie avec de l'eau chaude. Pas une douche. Une immersion forcée de plusieurs heures. Et le pire ? Ça marchait... selon eux.",
+      "full_text": "En 1850, si tu débarquais à l'asile de Charenton avec des hallucinations, on ne t'injectait rien. On te plongeait dans une baignoire.\n\nLa méthode s'appelait l'hydrothérapie psychiatrique. Pas un bain relaxant aux huiles essentielles, non. Une immersion continue, parfois 12 heures d'affilée, dans de l'eau maintenue entre 33 et 37°C, le patient attaché sous une toile tendue pour l'empêcher de se noyer. Certains établissements ajoutaient des douches froides en rafale pour « choquer » le système nerveux. Ambiance.\n\nL'idée venait d'un médecin autrichien, Wilhelm Reil, qui théorisait dès 1803 que la chaleur de l'eau régularisait les « fluides nerveux » perturbés. En France, le docteur François Leuret en fit une arme centrale de son arsenal thérapeutique à Bicêtre dans les années 1840. Il notait scrupuleusement dans ses cahiers que les patients « s'apaisaient ». Ce qu'il ne notait pas : ils s'apaisaient parce qu'ils étaient épuisés.\n\nLe twist fascinant ? Des études récentes ont montré que l'immersion prolongée en eau chaude a de vrais effets sur le système nerveux autonome — réduction du cortisol, ralentissement du rythme cardiaque, baisse de l'anxiété. Les psychiatres du XIXe avaient peut-être touché quelque chose sans comprendre pourquoi ça fonctionnait.\n\nAujourd'hui, des protocoles de balnéothérapie sont utilisés dans certains services de psychiatrie pour les états agités sévères, sous surveillance médicale stricte. Évidemment, sans les attaches et sans les 12 heures. La méthode a survécu, mais l'humanité a rattrapé la science.\n\nEt la prochaine fois qu'un patient te demande si son bain chaud peut l'aider contre l'anxiété... dis-lui qu'il n'a pas complètement tort. Juste qu'on a arrêté de l'attacher.",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_06_17.jpg",
+      "tags": [
+        "histoire",
+        "psychiatrie",
+        "therapeutique",
+        "medecine",
+        "decouverte"
+      ]
+    },
+    {
       "id": "actu_2026_06_15_5",
       "date": "2026-06-15",
       "type": "actu",
@@ -7161,6 +7286,6 @@
       ]
     }
   ],
-  "count": 347,
-  "updated_at": "2026-06-15T04:12:14.653300+02:00"
+  "count": 353,
+  "updated_at": "2026-06-17T11:51:13.705223+02:00"
 }
