@@ -4,83 +4,126 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pharm'Actus — Mes préférences email</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script defer src="assets/site-nav.js"></script>
 <style>
+  :root {
+    --bg: #ffffff; --bg-alt: #f8f8f8;
+    --border: #e5e5e5; --text: #1a1a1a; --text-secondary: #555; --text-muted: #888;
+    --orange: #ff914d; --orange-light: #fff5ed;
+    --radius: 12px; --shadow-lg: 0 10px 40px rgba(0,0,0,0.08);
+  }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f9fafb; color: #1a1a1a; min-height: 100vh; display: flex; flex-direction: column; }
+  body { font-family: 'Space Grotesk', 'Segoe UI', system-ui, sans-serif; background: var(--bg-alt); color: var(--text); min-height: 100vh; display: flex; flex-direction: column; }
 
-  header {
-    background: #1a1a1a; padding: 16px 24px;
-    display: flex; align-items: center; gap: 12px;
+  /* === HEADER (identique au site actus) === */
+  .header { background: var(--bg); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+  .header-inner { max-width: 1200px; margin: 0 auto; padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .logo-area { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+  .logo-area img { height: 60px; width: auto; display: block; }
+  .header-right { display: flex; align-items: center; gap: 8px; }
+  .header-link {
+    display: flex; align-items: center; gap: 6px; color: var(--text-secondary);
+    text-decoration: none; font-size: 13px; font-weight: 500;
+    padding: 7px 14px; border-radius: 100px; border: 1px solid var(--border); transition: all 0.2s;
   }
-  header .logo { font-size: 18px; font-weight: 800; color: #fff; letter-spacing: 0.3px; }
-  header .logo span { color: #f97316; }
+  .header-link:hover { border-color: var(--orange); color: var(--orange); background: var(--orange-light); }
+  .header-link svg { width: 16px; height: 16px; flex-shrink: 0; }
 
-  main {
-    flex: 1; display: flex; align-items: center; justify-content: center;
-    padding: 40px 20px;
-  }
+  /* === CONTENU === */
+  main { flex: 1; display: flex; align-items: center; justify-content: center; padding: 48px 20px; }
 
   .card {
-    background: #fff; border-radius: 16px; padding: 40px 36px;
-    max-width: 480px; width: 100%;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    background: #fff; border-radius: 20px; padding: 44px 40px;
+    max-width: 500px; width: 100%;
+    box-shadow: var(--shadow-lg);
     text-align: center;
   }
+  .card h1 { font-size: 24px; font-weight: 800; margin-bottom: 8px; letter-spacing: -0.3px; }
+  .card .subtitle { font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 28px; }
 
-  .card h1 { font-size: 22px; font-weight: 800; margin-bottom: 8px; }
-  .card .subtitle { font-size: 14px; color: #666; line-height: 1.6; margin-bottom: 32px; }
-  .card .email-display {
-    background: #f3f4f6; border-radius: 8px; padding: 8px 16px;
-    font-size: 13px; color: #374151; margin-bottom: 28px; display: none;
+  .email-pill {
+    display: inline-flex; align-items: center; gap: 7px;
+    background: var(--bg-alt); border: 1px solid var(--border); border-radius: 100px;
+    padding: 6px 16px; font-size: 13px; color: var(--text-secondary);
+    margin-bottom: 28px;
   }
+  .email-pill svg { width: 14px; height: 14px; color: var(--orange); flex-shrink: 0; }
 
   .options { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 24px; }
 
   .option-btn {
-    border: 2px solid #e5e7eb; border-radius: 12px; padding: 20px 14px;
+    border: 2px solid var(--border); border-radius: 14px; padding: 22px 16px;
     cursor: pointer; background: #fff; transition: all 0.18s; text-align: center;
-    font-family: inherit;
+    font-family: inherit; position: relative;
   }
-  .option-btn:hover { border-color: #f97316; background: #fff7ed; }
-  .option-btn.active { border-color: #f97316; background: #fff7ed; }
-  .option-btn .icon { font-size: 28px; margin-bottom: 8px; display: block; }
-  .option-btn .label { font-size: 15px; font-weight: 700; color: #1a1a1a; display: block; margin-bottom: 4px; }
-  .option-btn .desc { font-size: 12px; color: #6b7280; line-height: 1.4; display: block; }
+  .option-btn:hover { border-color: var(--orange); background: var(--orange-light); }
+  .option-btn.active { border-color: var(--orange); background: var(--orange-light); }
+  .option-btn .icon { font-size: 30px; margin-bottom: 10px; display: block; }
+  .option-btn .label { font-size: 15px; font-weight: 700; color: var(--text); display: block; margin-bottom: 5px; }
+  .option-btn .desc { font-size: 12px; color: var(--text-muted); line-height: 1.4; display: block; }
   .option-btn .badge {
-    display: inline-block; margin-top: 8px; background: #f97316; color: #fff;
-    font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 99px;
+    display: inline-block; margin-top: 10px; background: var(--orange); color: #fff;
+    font-size: 10px; font-weight: 700; padding: 3px 9px; border-radius: 99px;
     text-transform: uppercase; letter-spacing: 0.4px;
   }
 
   .btn-confirm {
-    width: 100%; padding: 14px; background: #f97316; color: #fff; border: none;
+    width: 100%; padding: 14px; background: var(--orange); color: #fff; border: none;
     border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer;
     font-family: inherit; transition: background 0.15s; display: none;
   }
-  .btn-confirm:hover { background: #ea6c04; }
+  .btn-confirm:hover { background: #f08236; }
   .btn-confirm:disabled { background: #d1d5db; cursor: not-allowed; }
+
+  .preview-note {
+    background: #fef3c7; border: 1px solid #fde68a; border-radius: 8px;
+    padding: 11px 16px; font-size: 13px; color: #92400e; margin-bottom: 16px;
+    display: none; text-align: left; line-height: 1.5;
+  }
+  .preview-note strong { font-weight: 700; }
 
   /* States */
   .state { display: none; }
   .state.visible { display: block; }
 
-  .success-icon { font-size: 48px; margin-bottom: 16px; }
-  .success-title { font-size: 20px; font-weight: 800; margin-bottom: 8px; }
-  .success-sub { font-size: 14px; color: #666; line-height: 1.6; }
+  .success-icon { font-size: 52px; margin-bottom: 16px; }
+  .success-title { font-size: 22px; font-weight: 800; margin-bottom: 8px; letter-spacing: -0.3px; }
+  .success-sub { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+  .success-back { display: inline-flex; align-items: center; gap: 6px; margin-top: 20px; color: var(--orange); font-size: 13px; font-weight: 600; text-decoration: none; }
+  .success-back:hover { text-decoration: underline; }
 
   .error-box {
     background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px;
     padding: 12px 16px; font-size: 13px; color: #991b1b; margin-top: 16px; display: none;
   }
 
-  footer { text-align: center; padding: 20px; font-size: 12px; color: #aaa; }
-  footer a { color: #aaa; }
+  footer { text-align: center; padding: 20px; font-size: 12px; color: var(--text-muted); }
+  footer a { color: var(--text-muted); }
+
+  @media (max-width: 540px) {
+    .card { padding: 28px 20px; border-radius: 14px; }
+    .logo-area img { height: 44px; }
+    .header-inner { padding: 10px 16px; }
+  }
 </style>
 </head>
 <body>
 
-<header>
-  <div class="logo">Pharm<span>'</span>Actus</div>
+<header class="header">
+  <div class="header-inner">
+    <div class="logo-area">
+      <img src="assets/logo_pharmactus.png" alt="Pharm'Actus">
+    </div>
+    <div class="header-right">
+      <a href="index.html" class="header-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Accueil
+      </a>
+    </div>
+  </div>
 </header>
 
 <main>
@@ -90,23 +133,31 @@
     <div id="state-choose" class="state visible">
       <h1>Mes préférences email</h1>
       <p class="subtitle">Choisissez la fréquence de réception de vos actus pharma.</p>
-      <div id="email-display" class="email-display"></div>
+
+      <div class="preview-note" id="preview-note">
+        <strong>Aperçu uniquement.</strong> Pour modifier votre fréquence, utilisez le lien "Fréquence emails" au bas d'un email Pharm'Actus reçu.
+      </div>
+
+      <div id="email-pill" class="email-pill" style="display:none;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,7 12,13 2,7"/></svg>
+        <span id="email-text"></span>
+      </div>
 
       <div class="options">
-        <button class="option-btn" id="btn-daily" onclick="select('daily')">
+        <button class="option-btn" id="btn-daily" onclick="selectFreq('daily')">
           <span class="icon">📬</span>
           <span class="label">Quotidien</span>
           <span class="desc">Lundi au samedi, chaque matin</span>
           <span class="badge">Actuel</span>
         </button>
-        <button class="option-btn" id="btn-hebdo" onclick="select('hebdo')">
+        <button class="option-btn" id="btn-hebdo" onclick="selectFreq('hebdo')">
           <span class="icon">📅</span>
           <span class="label">Hebdomadaire</span>
           <span class="desc">Un résumé chaque vendredi matin</span>
         </button>
       </div>
 
-      <button class="btn-confirm" id="btn-confirm" onclick="confirm()">Confirmer mon choix</button>
+      <button class="btn-confirm" id="btn-confirm" onclick="confirmChoice()">Confirmer mon choix</button>
       <div class="error-box" id="error-box"></div>
     </div>
 
@@ -115,20 +166,17 @@
       <div class="success-icon" id="success-icon">✅</div>
       <div class="success-title" id="success-title"></div>
       <div class="success-sub" id="success-sub"></div>
-    </div>
-
-    <!-- Etat: erreur email manquant -->
-    <div id="state-no-email" class="state">
-      <div class="success-icon">🤔</div>
-      <div class="success-title">Lien incomplet</div>
-      <div class="success-sub">Ce lien de préférences semble invalide. Cliquez sur le lien de votre email pour accéder à vos préférences.</div>
+      <a href="index.html" class="success-back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+        Retour aux actus
+      </a>
     </div>
 
   </div>
 </main>
 
 <footer>
-  <a href="https://pharmalpha.fr/actus">Pharm'Actus</a> &mdash; par Stephen ROBERT, Pharm'Alpha
+  <a href="index.html">Pharm'Actus</a> &mdash; par Stephen ROBERT, Pharm'Alpha
 </footer>
 
 <script>
@@ -138,31 +186,38 @@ var params = new URLSearchParams(window.location.search);
 var email = params.get("email") || "";
 var currentFreq = params.get("freq") || "daily";
 var selected = null;
+var hasEmail = !!email;
 
 function init() {
-  if (!email) {
-    show("state-no-email");
-    return;
+  if (hasEmail) {
+    var pill = document.getElementById("email-pill");
+    document.getElementById("email-text").textContent = email;
+    pill.style.display = "inline-flex";
+  } else {
+    // Mode aperçu : montrer l'UI mais bloquer la confirmation
+    document.getElementById("preview-note").style.display = "block";
   }
-  var disp = document.getElementById("email-display");
-  disp.textContent = email;
-  disp.style.display = "block";
-  select(currentFreq);
+  selectFreq(currentFreq);
 }
 
-function select(freq) {
+function selectFreq(freq) {
   selected = freq;
-  document.getElementById("btn-daily").classList.toggle("active", freq==="daily");
-  document.getElementById("btn-hebdo").classList.toggle("active", freq==="hebdo");
-  document.getElementById("btn-confirm").style.display = "block";
+  document.getElementById("btn-daily").classList.toggle("active", freq === "daily");
+  document.getElementById("btn-hebdo").classList.toggle("active", freq === "hebdo");
+  var btn = document.getElementById("btn-confirm");
+  if (hasEmail) {
+    btn.style.display = "block";
+    btn.textContent = "Confirmer mon choix";
+    btn.disabled = false;
+  }
   document.getElementById("error-box").style.display = "none";
 }
 
-function confirm() {
+function confirmChoice() {
   if (!selected || !email) return;
   var btn = document.getElementById("btn-confirm");
   btn.disabled = true;
-  btn.textContent = "Mise a jour...";
+  btn.textContent = "Mise à jour...";
 
   fetch(EDGE_URL, {
     method: "POST",
@@ -177,25 +232,25 @@ function confirm() {
     var sub = document.getElementById("success-sub");
     if (selected === "hebdo") {
       icon.textContent = "📅";
-      title.textContent = "Résumé hebdo activé";
-      sub.textContent = "Vous recevrez desormais un résumé chaque vendredi matin. Vous pouvez revenir ici pour changer a tout moment.";
+      title.textContent = "Résumé hebdo activé !";
+      sub.textContent = "Vous recevrez désormais un résumé chaque vendredi matin. Vous pouvez revenir ici à tout moment pour changer.";
     } else {
       icon.textContent = "📬";
-      title.textContent = "Actus quotidiennes confirmées";
-      sub.textContent = "Vous continuerez a recevoir les actus pharma chaque matin (lundi - samedi).";
+      title.textContent = "Actus quotidiennes confirmées !";
+      sub.textContent = "Vous continuerez à recevoir les actus pharma chaque matin (lundi – samedi).";
     }
     show("state-success");
   }).catch(function(e) {
     btn.disabled = false;
     btn.textContent = "Confirmer mon choix";
     var errBox = document.getElementById("error-box");
-    errBox.textContent = "Erreur : " + e.message + ". Reessayez ou contactez stephen.pharmacien@gmail.com";
+    errBox.textContent = "Erreur : " + e.message + ". Réessayez ou contactez stephen.pharmacien@gmail.com";
     errBox.style.display = "block";
   });
 }
 
 function show(id) {
-  ["state-choose","state-success","state-no-email"].forEach(function(s){
+  ["state-choose", "state-success"].forEach(function(s){
     document.getElementById(s).classList.remove("visible");
   });
   document.getElementById(id).classList.add("visible");
