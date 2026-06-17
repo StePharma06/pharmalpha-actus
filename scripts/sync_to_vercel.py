@@ -28,6 +28,8 @@ SYNC_FILES = [
     "dashboard.html",
     "cgu.html",
     "privacy.html",
+    "print.html",
+    "preferences.html",
     "articles.json",
     "caducee-pharmacien.png",
 ]
