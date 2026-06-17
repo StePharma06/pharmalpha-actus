@@ -19,7 +19,7 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: 'Space Grotesk', 'Segoe UI', system-ui, sans-serif; background: var(--bg-alt); color: var(--text); }
 
-  /* === HEADER (identique au site actus) === */
+  /* === HEADER WEB (identique au site actus) === */
   .header { background: var(--bg); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
   .header-inner { max-width: 1200px; margin: 0 auto; padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
   .logo-area { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
@@ -43,75 +43,117 @@
 
   /* === CONTENU PRINT === */
   .page-wrapper { max-width: 210mm; margin: 24px auto; background: #fff; border-radius: 8px; box-shadow: var(--shadow); }
-  .content { padding: 18mm 18mm 14mm; }
+  .content { padding: 14mm 18mm 12mm; }
 
+  /* --- En-tête du document imprimé --- */
   .print-header {
-    border-bottom: 3px solid #1a1a1a; padding-bottom: 10px; margin-bottom: 16px;
-    display: flex; align-items: flex-end; justify-content: space-between;
+    border-bottom: 2.5px solid #1a1a1a; padding-bottom: 9px; margin-bottom: 14px;
+    display: flex; align-items: center; justify-content: space-between;
   }
-  .print-header .brand { font-size: 24pt; font-weight: 900; letter-spacing: -0.5px; line-height: 1; }
-  .print-header .brand span { color: var(--orange); }
-  .print-header .meta { text-align: right; font-size: 9pt; color: #666; line-height: 1.6; }
-  .print-header .meta .date-label { font-size: 11pt; font-weight: 700; color: #1a1a1a; }
+  .print-logos { display: flex; align-items: center; gap: 10px; }
+  .print-logo-actus { height: 28pt; width: auto; display: block; }
+  .print-logo-sep { width: 1px; height: 22pt; background: #ccc; margin: 0 2px; }
+  .print-logo-alpha { height: 22pt; width: auto; display: block; opacity: 0.75; }
+  .print-meta { text-align: right; font-size: 8.5pt; color: #666; line-height: 1.6; }
+  .print-meta .date-label { font-size: 10.5pt; font-weight: 700; color: #1a1a1a; }
 
+  /* --- Articles --- */
   .article-row {
-    display: grid; grid-template-columns: 72px 1fr;
-    gap: 0 12px; padding: 10px 0; border-bottom: 1px solid #e5e5e5; align-items: start;
+    display: grid; grid-template-columns: 54px 1fr;
+    gap: 0 10px; padding: 8px 0; border-bottom: 1px solid #ebebeb; align-items: start;
+    break-inside: avoid; page-break-inside: avoid;
   }
+  .art-thumb {
+    width: 54px; height: 42px; border-radius: 4px; overflow: hidden; flex-shrink: 0; margin-top: 2px;
+  }
+  .art-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .art-thumb-empty { background: #f3f4f6; }
+
+  .art-content { display: flex; flex-direction: column; gap: 3px; }
   .cat-badge {
-    display: inline-block; padding: 3px 7px; border-radius: 4px;
-    font-size: 7.5pt; font-weight: 700; text-transform: uppercase;
-    letter-spacing: 0.3px; text-align: center; line-height: 1.4; margin-top: 3px;
+    display: inline-block; padding: 2px 6px; border-radius: 3px;
+    font-size: 7pt; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.4px; line-height: 1.5; margin-bottom: 3px; border: 1px solid transparent;
   }
-  .cat-pharma_france     { background: #dbeafe; color: #1e40af; }
-  .cat-pharma_monde      { background: #ede9fe; color: #6d28d9; }
-  .cat-bonne_nouvelle    { background: #dcfce7; color: #166534; }
-  .cat-avenir_pharma     { background: #fef9c3; color: #854d0e; }
-  .cat-business_officine { background: #ffedd5; color: #c2410c; }
-  .cat-sante             { background: #f0fdf4; color: #15803d; }
-  .cat-default           { background: #f3f4f6; color: #374151; }
+  .cat-pharma_france     { background: #f0f5ff; color: #1e40af; border-color: #c7d9f8; }
+  .cat-pharma_monde      { background: #f5f3ff; color: #6d28d9; border-color: #d8d2f7; }
+  .cat-bonne_nouvelle    { background: #f0fdf6; color: #166534; border-color: #bbf2d4; }
+  .cat-avenir_pharma     { background: #fffdf0; color: #854d0e; border-color: #f0e09a; }
+  .cat-business_officine { background: #fff9f5; color: #c2410c; border-color: #f5c8ab; }
+  .cat-sante             { background: #f2fbf4; color: #15803d; border-color: #b0e8c0; }
+  .cat-default           { background: #f8f8f8; color: #374151; border-color: #ddd; }
 
-  .article-title { font-size: 11pt; font-weight: 700; line-height: 1.35; margin-bottom: 4px; }
-  .article-summary { font-size: 9.5pt; color: #444; line-height: 1.5; }
-  .article-source { font-size: 8pt; color: #888; margin-top: 3px; }
+  .article-title { font-size: 10.5pt; font-weight: 700; line-height: 1.3; color: #1a1a1a; }
+  .article-summary { font-size: 9pt; color: #4a4a4a; line-height: 1.5; }
+  .article-source { font-size: 7.5pt; color: #999; margin-top: 1px; }
 
+  /* --- Boîtes LSV + Expression (groupées pour éviter orphelin) --- */
+  .bottom-boxes {
+    margin-top: 12px;
+    break-inside: avoid; page-break-inside: avoid;
+    display: flex; flex-direction: column; gap: 8px;
+  }
   .lsv-box {
-    margin-top: 14px; border: 1.5px solid #1a1a1a; border-radius: 4px;
-    padding: 10px 14px; display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: start;
+    border: 1.5px solid #1a1a1a; border-radius: 4px;
+    padding: 9px 13px; display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: start;
+    break-inside: avoid; page-break-inside: avoid;
   }
   .lsv-label {
-    font-size: 8pt; font-weight: 900; text-transform: uppercase; letter-spacing: 0.3px;
-    color: #fff; background: #1a1a1a; padding: 3px 7px; border-radius: 3px; white-space: nowrap; margin-top: 2px;
+    font-size: 7.5pt; font-weight: 900; text-transform: uppercase; letter-spacing: 0.3px;
+    color: #fff; background: #1a1a1a; padding: 2px 7px; border-radius: 3px; white-space: nowrap; margin-top: 2px;
   }
-  .lsv-title { font-size: 10pt; font-weight: 700; line-height: 1.3; margin-bottom: 3px; }
-  .lsv-summary { font-size: 9pt; color: #444; line-height: 1.45; }
+  .lsv-title { font-size: 9.5pt; font-weight: 700; line-height: 1.3; margin-bottom: 3px; }
+  .lsv-summary { font-size: 8.5pt; color: #444; line-height: 1.45; }
 
   .expr-box {
-    margin-top: 10px; border: 1.5px solid var(--indigo); border-radius: 4px;
-    padding: 10px 14px; display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: start;
+    border: 1.5px solid var(--indigo); border-radius: 4px;
+    padding: 9px 13px; display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: start;
+    break-inside: avoid; page-break-inside: avoid;
   }
   .expr-label {
-    font-size: 8pt; font-weight: 900; text-transform: uppercase; letter-spacing: 0.3px;
-    color: #fff; background: var(--indigo); padding: 3px 7px; border-radius: 3px; white-space: nowrap; margin-top: 2px;
+    font-size: 7.5pt; font-weight: 900; text-transform: uppercase; letter-spacing: 0.3px;
+    color: #fff; background: var(--indigo); padding: 2px 7px; border-radius: 3px; white-space: nowrap; margin-top: 2px;
   }
-  .expr-title { font-size: 10pt; font-weight: 700; line-height: 1.3; margin-bottom: 3px; color: #1a1a1a; }
-  .expr-body { font-size: 9pt; color: #444; line-height: 1.45; }
+  .expr-title { font-size: 9.5pt; font-weight: 700; line-height: 1.3; margin-bottom: 3px; color: #1a1a1a; }
+  .expr-body { font-size: 8.5pt; color: #444; line-height: 1.45; }
 
-  .print-footer {
-    margin-top: 14px; border-top: 1px solid #e5e5e5; padding-top: 8px;
-    display: flex; justify-content: space-between;
+  /* --- Footer URL + QR --- */
+  .url-footer {
+    margin-top: 14px; padding-top: 12px; border-top: 1px solid #e5e5e5;
+    display: none; align-items: center; justify-content: space-between; gap: 16px;
+    break-inside: avoid; page-break-inside: avoid;
   }
-  .print-footer p { font-size: 8pt; color: #999; }
+  .url-footer-text { font-size: 8.5pt; color: #555; line-height: 1.6; }
+  .url-footer-text strong { color: #1a1a1a; }
+  .url-footer img { width: 72px; height: 72px; flex-shrink: 0; image-rendering: crisp-edges; }
+
+  /* --- Bandeau bio Stephen --- */
+  .bio-strip {
+    margin-top: 12px; padding: 12px 16px; border-radius: 8px;
+    background: #1a1a1a; color: #fff;
+    display: none; align-items: center; gap: 14px;
+    break-inside: avoid; page-break-inside: avoid;
+  }
+  .bio-photo-print {
+    width: 52px; height: 52px; border-radius: 50%; object-fit: cover; flex-shrink: 0;
+    border: 2.5px solid var(--orange);
+  }
+  .bio-name { font-size: 11pt; font-weight: 800; color: #fff; margin-bottom: 1px; letter-spacing: -0.2px; }
+  .bio-role { font-size: 8pt; color: var(--orange); font-weight: 600; margin-bottom: 4px; }
+  .bio-desc-print { font-size: 8pt; color: #ccc; line-height: 1.5; }
+
   .loading { padding: 40px; text-align: center; color: #666; }
 
   /* === PRINT MEDIA === */
   @media print {
-    @page { size: A4; margin: 15mm 18mm 12mm; }
-    body { background: #fff; }
+    @page { size: A4; margin: 13mm 18mm 10mm; }
+    body { background: #fff; font-size: 10pt; }
     .header { display: none !important; }
     .page-wrapper { max-width: 100%; margin: 0; border-radius: 0; box-shadow: none; }
     .content { padding: 0; }
     a { color: inherit; text-decoration: none; }
+    .url-footer { display: flex !important; }
+    .bio-strip { display: flex !important; }
   }
 
   @media (max-width: 600px) {
@@ -124,7 +166,7 @@
 </head>
 <body>
 
-<!-- HEADER — identique au site actus -->
+<!-- HEADER WEB — identique au site actus, masqué à l'impression -->
 <header class="header">
   <div class="header-inner">
     <div class="logo-area">
@@ -145,7 +187,29 @@
 
 <div class="page-wrapper">
   <div class="content">
+
+    <!-- Contenu dynamique -->
     <div id="container"><p class="loading">Chargement des actus...</p></div>
+
+    <!-- Footer URL + QR (affiché après chargement) -->
+    <div class="url-footer" id="url-footer">
+      <div class="url-footer-text">
+        Retrouvez toute l'actus pharma tous les jours sur<br>
+        <strong>pharmalpha.fr/actus</strong>
+      </div>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=144x144&data=https%3A%2F%2Fpharmalpha.fr%2Factus&color=1a1a1a&bgcolor=ffffff&qzone=1&format=png" alt="QR Code pharmalpha.fr/actus">
+    </div>
+
+    <!-- Bandeau bio Stephen (affiché après chargement) -->
+    <div class="bio-strip" id="bio-strip">
+      <img src="assets/stephen.png" alt="Stephen ROBERT" class="bio-photo-print">
+      <div>
+        <div class="bio-name">Stephen ROBERT</div>
+        <div class="bio-role">Consultant, Formateur &amp; Communicant Pharma</div>
+        <div class="bio-desc-print">Docteur en Pharmacie, diplômé d'un Mastère Marketing &amp; Management des Industries de Santé. Avec Pharm'Actus, je décrypte l'actu pharma chaque matin pour que tu restes <em>in</em>, sans y passer des heures.</div>
+      </div>
+    </div>
+
   </div>
 </div>
 
@@ -170,43 +234,67 @@ function catLabel(c) { return CAT_LABELS[c]||c||""; }
 
 function buildHtml(articles, lsv, expr, displayDate) {
   var html = "";
-  html += "<div class=\"print-header\">";
-  html += "<div class=\"brand\">Pharm<span>'</span>Actus</div>";
-  html += "<div class=\"meta\"><div class=\"date-label\">"+esc(fmtDate(displayDate))+"</div><div>pharmalpha.fr/actus</div></div>";
-  html += "</div><div>";
 
-  articles.slice(0,6).forEach(function(a) {
-    var cat = a.categorie||"default";
-    html += "<div class=\"article-row\">";
-    html += "<div><span class=\"cat-badge "+catClass(cat)+"\">"+esc(catLabel(cat))+"</span></div>";
-    html += "<div>";
-    html += "<div class=\"article-title\">"+esc(a.titre||a.title||"")+"</div>";
-    html += "<div class=\"article-summary\">"+esc(a.resume||a.summary||"")+"</div>";
-    html += "<div class=\"article-source\">"+esc(a.source||"")+"</div>";
-    html += "</div></div>";
-  });
+  // En-tête document avec double logo
+  html += "<div class=\"print-header\">";
+  html += "<div class=\"print-logos\">";
+  html += "<img src=\"assets/logo_pharmactus.png\" alt=\"Pharm'Actus\" class=\"print-logo-actus\">";
+  html += "<div class=\"print-logo-sep\"></div>";
+  html += "<img src=\"assets/logo_pharmalpha.png\" alt=\"Pharm'Alpha\" class=\"print-logo-alpha\">";
+  html += "</div>";
+  html += "<div class=\"print-meta\"><div class=\"date-label\">"+esc(fmtDate(displayDate))+"</div><div>pharmalpha.fr/actus</div></div>";
   html += "</div>";
 
-  if (lsv) {
-    html += "<div class=\"lsv-box\">";
-    html += "<div class=\"lsv-label\">Le saviez-vous ?</div><div>";
-    html += "<div class=\"lsv-title\">"+esc(lsv.titre||lsv.title||"")+"</div>";
-    html += "<div class=\"lsv-summary\">"+esc(lsv.resume||lsv.summary||"")+"</div>";
-    html += "</div></div>";
+  // Articles avec miniature
+  articles.slice(0, 6).forEach(function(a) {
+    var cat = a.categorie || "default";
+    var imgUrl = a.image_url || "";
+    html += "<div class=\"article-row\">";
+
+    // Miniature
+    if (imgUrl) {
+      html += "<div class=\"art-thumb\"><img src=\""+esc(imgUrl)+"\" alt=\"\" onerror=\"this.parentNode.className='art-thumb art-thumb-empty'\"></div>";
+    } else {
+      html += "<div class=\"art-thumb art-thumb-empty\"></div>";
+    }
+
+    // Badge + contenu
+    html += "<div class=\"art-content\">";
+    html += "<span class=\"cat-badge "+catClass(cat)+"\">"+esc(catLabel(cat))+"</span>";
+    html += "<div class=\"article-title\">"+esc(a.titre||a.title||"")+"</div>";
+    html += "<div class=\"article-summary\">"+esc(a.resume||a.summary||"")+"</div>";
+    if (a.source) html += "<div class=\"article-source\">"+esc(a.source)+"</div>";
+    html += "</div>";
+
+    html += "</div>";
+  });
+
+  // LSV + Expression groupés pour éviter orphelin sur page 2
+  var hasLsv = !!lsv;
+  var hasExpr = !!(expr && expr.expression);
+  if (hasLsv || hasExpr) {
+    html += "<div class=\"bottom-boxes\">";
+
+    if (hasLsv) {
+      html += "<div class=\"lsv-box\">";
+      html += "<div class=\"lsv-label\">Le saviez-vous ?</div><div>";
+      html += "<div class=\"lsv-title\">"+esc(lsv.titre||lsv.title||"")+"</div>";
+      html += "<div class=\"lsv-summary\">"+esc(lsv.resume||lsv.summary||"")+"</div>";
+      html += "</div></div>";
+    }
+
+    if (hasExpr) {
+      var texte = (expr.texte||"").replace(/\*\*([^*]+)\*\*/g,"$1").replace(/\*([^*]+)\*/g,"$1").replace(/\n+/g," ").trim();
+      html += "<div class=\"expr-box\">";
+      html += "<div class=\"expr-label\">Expression du jour</div><div>";
+      html += "<div class=\"expr-title\">"+esc(expr.expression)+"</div>";
+      html += "<div class=\"expr-body\">"+esc(texte)+"</div>";
+      html += "</div></div>";
+    }
+
+    html += "</div>";
   }
 
-  if (expr && expr.expression) {
-    var texte = (expr.texte||"").replace(/\*\*([^*]+)\*\*/g,"$1").replace(/\*([^*]+)\*/g,"$1").replace(/\n+/g," ").trim();
-    html += "<div class=\"expr-box\">";
-    html += "<div class=\"expr-label\">Expression du jour</div><div>";
-    html += "<div class=\"expr-title\">"+esc(expr.expression)+"</div>";
-    html += "<div class=\"expr-body\">"+esc(texte)+"</div>";
-    html += "</div></div>";
-  }
-
-  html += "<div class=\"print-footer\">";
-  html += "<p>Pharm'Actus par <strong>Stephen ROBERT</strong> — Pharm'Alpha</p>";
-  html += "<p>pharmalpha.fr/actus</p></div>";
   return html;
 }
 
@@ -224,6 +312,10 @@ function render() {
     var lsv = todayLsv || all.filter(function(a){ return a.categorie==="lsv"; })[0];
     var displayDate = todayArts.length>0 ? today : (articles[0]&&articles[0].date||today);
     container.innerHTML = buildHtml(articles, lsv, expr, displayDate);
+
+    // Afficher footer URL + bio une fois le contenu chargé
+    document.getElementById("url-footer").style.display = "flex";
+    document.getElementById("bio-strip").style.display = "flex";
   }).catch(function(e) {
     container.innerHTML = "<p class=\"loading\">Erreur chargement : "+esc(e.message)+"</p>";
   });
@@ -232,4 +324,3 @@ render();
 </script>
 </body>
 </html>
-
