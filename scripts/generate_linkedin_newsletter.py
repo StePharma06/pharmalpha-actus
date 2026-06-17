@@ -91,6 +91,19 @@ def load_articles():
     return data.get("articles", [])
 
 
+def get_view_stats_week(from_date: str, to_date: str, limit: int = 20) -> list:
+    """Recupere les articles les plus vus de la semaine depuis Supabase (best-effort)."""
+    edge_url = "https://ibmqaybmhpzdlgyntzbs.supabase.co/functions/v1/actus-track-view"
+    url = f"{edge_url}?from={from_date}&to={to_date}&limit={limit}"
+    try:
+        import urllib.request as _req
+        with _req.urlopen(url, timeout=8) as resp:
+            return json.loads(resp.read())
+    except Exception as e:
+        print(f"  [VIEWS] Stats indisponibles: {e}")
+        return []
+
+
 def select_week_articles(articles):
     """Select the 5 best non-LSV articles + 1 LSV from the past 7 days."""
     today = datetime.now(PARIS_TZ)
@@ -107,7 +120,18 @@ def select_week_articles(articles):
         # Fallback : prendre les plus recents disponibles
         recent = sorted(articles, key=article_date, reverse=True)[:20]
 
-    # Scoring : differenciants en premier
+    # Stats de vues Supabase — boostent la selection (best-effort)
+    week_start_date = (today - timedelta(days=LOOKBACK_DAYS)).date()
+    view_stats: dict = {}
+    try:
+        vs = get_view_stats_week(week_start_date.isoformat(), today.date().isoformat())
+        view_stats = {d["article_id"]: d["view_count"] for d in vs}
+        if view_stats:
+            print(f"  [VIEWS] Stats disponibles : {len(view_stats)} articles")
+    except Exception:
+        pass
+
+    # Scoring : differenciants en premier, boostes par les stats de vues
     def score(a):
         cat = a.get("categorie", "")
         base = {
@@ -121,7 +145,8 @@ def select_week_articles(articles):
         }.get(cat, 10)
         days_ago = (today - article_date(a)).days
         recency = max(0, 7 - days_ago)
-        return base + recency
+        views = view_stats.get(a.get("id", ""), 0)
+        return base + recency + min(views * 5, 30)
 
     # Diversifier : prendre 1 par categorie majeure si possible
     by_cat = {}
@@ -866,18 +891,6 @@ def main():
     print("\n[5/5] Envoi email (newsletter + post associe + images + cover)...")
     send_newsletter_email(markdown, actus, lsv, companion_post=companion_post)
 
-
-
-    # Envoi aux abonnes hebdo (liste 8)
-    print("\n[5.5/5] Envoi digest aux abonnes Hebdo (liste 8)...")
-    try:
-        from datetime import timedelta as _td
-        _t = datetime.now(PARIS_TZ)
-        _ws = _t - _td(days=_t.weekday())
-        _label = format_date_range_fr(_ws.date(), (_ws + _td(days=4)).date())
-        send_to_hebdo_list(build_newsletter_html(actus, lsv), _label)
-    except Exception as _e:
-        print(f"  [HEBDO-ERR] {_e}")
     print("\n=== Termine ===")
 
 

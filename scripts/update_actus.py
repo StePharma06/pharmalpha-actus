@@ -19,7 +19,8 @@ PARIS_TZ = ZoneInfo("Europe/Paris")
 import anthropic
 import feedparser
 
-BREVO_LIST_ID = 5  # "Newsletter Pharm'Alpha"
+BREVO_LIST_ID = 5    # "Newsletter Pharm'Alpha" — abonnes quotidien
+BREVO_LIST_HEBDO = 8  # Abonnes frequence hebdomadaire (lundi matin)
 SENDER_EMAIL = "actus@pharmalpha.fr"
 SENDER_NAME = "Pharm'Actus"
 REPLY_TO_EMAIL = "stephen.pharmacien@gmail.com"
@@ -1693,6 +1694,12 @@ def _build_article_page_html(article_id: str, titre_raw: str, resume_raw: str, i
     <p>Decouvrir <a href="https://pharmalpha.fr/formations">les formations Pharm'Alpha</a>.</p>
   </footer>
 </article>
+<script>(function(){{
+  fetch("https://ibmqaybmhpzdlgyntzbs.supabase.co/functions/v1/actus-track-view",{{
+    method:"POST",headers:{{"Content-Type":"application/json"}},
+    body:JSON.stringify({{article_id:"{article_id}"}})
+  }}).catch(function(){{}});
+}})();</script>
 </body>
 </html>'''
 
@@ -1722,6 +1729,139 @@ def generate_article_pages(articles):
         page_path.write_text(page_html, encoding="utf-8")
 
     print(f"  {len(articles)} pages article generees dans articles/")
+
+
+# ── HEBDO : digest lundi ──────────────────────────────────────────────
+
+def _get_view_stats_week(from_date: str, to_date: str, limit: int = 20) -> dict:
+    """Recupere les stats de vues de la semaine depuis Supabase (best-effort). Retourne {article_id: view_count}."""
+    import urllib.request as _req
+    edge_url = "https://ibmqaybmhpzdlgyntzbs.supabase.co/functions/v1/actus-track-view"
+    url = f"{edge_url}?from={from_date}&to={to_date}&limit={limit}"
+    try:
+        with _req.urlopen(url, timeout=8) as resp:
+            data = json.loads(resp.read())
+        result = {d["article_id"]: d["view_count"] for d in data}
+        print(f"  [VIEWS] Stats vues disponibles : {len(result)} articles")
+        return result
+    except Exception as e:
+        print(f"  [VIEWS] Stats indisponibles (best-effort) : {e}")
+        return {}
+
+
+def _send_hebdo_brevo():
+    """Selectionne les meilleurs articles de la semaine et les envoie a la liste Brevo 8 (hebdo)."""
+    now = datetime.now(PARIS_TZ)
+    articles_path = ROOT_DIR / "articles.json"
+    if not articles_path.exists():
+        print("  [HEBDO] articles.json introuvable, abandon")
+        return
+
+    api_key = os.environ.get("BREVO_API_KEY", "")
+    if not api_key:
+        print("  [HEBDO] BREVO_API_KEY non definie, abandon")
+        return
+
+    all_articles = json.loads(articles_path.read_text(encoding="utf-8"))
+
+    # Fenetre 7 derniers jours
+    cutoff = (now - timedelta(days=7)).date()
+    week_articles = [
+        a for a in all_articles
+        if a.get("date", "") >= cutoff.isoformat()
+    ]
+    if not week_articles:
+        print("  [HEBDO] Aucun article cette semaine, abandon")
+        return
+
+    # Stats de vues pour booster le scoring
+    view_stats = _get_view_stats_week(cutoff.isoformat(), now.date().isoformat())
+
+    CAT_PRIORITY = {
+        "reglementation": 10, "medicament": 9, "officine": 8,
+        "sante-publique": 7, "formation": 6, "numerique": 5,
+        "pharmacien": 5, "lsv": -99,
+    }
+
+    def score(a):
+        cat_bonus = CAT_PRIORITY.get(a.get("categorie", "").lower(), 3)
+        views = view_stats.get(a.get("id", ""), 0)
+        return cat_bonus + min(views * 5, 30)
+
+    actus = [a for a in week_articles if a.get("categorie") != "lsv"]
+    lsv = next((a for a in week_articles if a.get("categorie") == "lsv"), None)
+
+    top_actus = sorted(actus, key=score, reverse=True)[:6]
+    selected = top_actus + ([lsv] if lsv else [])
+
+    if not selected:
+        print("  [HEBDO] Aucun article selectionne, abandon")
+        return
+
+    mois_noms = ["","janvier","fevrier","mars","avril","mai","juin",
+                 "juillet","aout","septembre","octobre","novembre","decembre"]
+    week_start = f"{cutoff.day} {mois_noms[cutoff.month]}"
+    week_end = f"{now.day} {mois_noms[now.month]} {now.year}"
+    custom_intro = (
+        f"Voici le résumé des actus pharma les plus importantes "
+        f"de la semaine du {week_start} au {week_end}."
+    )
+
+    html_content = build_newsletter_html(selected, custom_intro=custom_intro)
+    subject = f"Pharm'Actus — Résumé semaine du {week_start} au {week_end}"
+
+    # Recuperer les abonnes de la liste hebdo (liste 8)
+    all_contacts = []
+    offset = 0
+    limit = 50
+    hdrs = {"api-key": api_key, "Accept": "application/json"}
+    while True:
+        url = f"https://api.brevo.com/v3/contacts/lists/{BREVO_LIST_HEBDO}/contacts?limit={limit}&offset={offset}"
+        try:
+            req = urllib.request.Request(url, headers=hdrs)
+            with urllib.request.urlopen(req) as resp:
+                data = json.loads(resp.read())
+            contacts = data.get("contacts", [])
+            all_contacts.extend(contacts)
+            if len(contacts) < limit:
+                break
+            offset += limit
+        except Exception as e:
+            print(f"  [HEBDO-ERR] Impossible de recuperer les contacts: {e}")
+            return
+
+    emails = [c["email"] for c in all_contacts if c.get("email")]
+    if not emails:
+        print("  [HEBDO] Aucun abonne en liste hebdo, abandon")
+        return
+    print(f"  [HEBDO] {len(emails)} abonne(s) liste {BREVO_LIST_HEBDO}")
+
+    send_url = "https://api.brevo.com/v3/smtp/email"
+    sent = 0
+    errors = 0
+    for email in emails:
+        payload = json.dumps({
+            "sender": {"name": SENDER_NAME, "email": SENDER_EMAIL},
+            "replyTo": {"email": REPLY_TO_EMAIL, "name": SENDER_NAME},
+            "to": [{"email": email}],
+            "subject": subject,
+            "htmlContent": html_content,
+        }).encode("utf-8")
+        try:
+            req = urllib.request.Request(
+                send_url, data=payload,
+                headers={"api-key": api_key, "Content-Type": "application/json", "Accept": "application/json"},
+                method="POST",
+            )
+            with urllib.request.urlopen(req) as resp:
+                json.loads(resp.read())
+            sent += 1
+        except Exception as e:
+            errors += 1
+            print(f"  [HEBDO-ERR] Echec pour {email}: {e}")
+
+    print(f"  [HEBDO] Digest envoye a {sent}/{len(emails)} abonne(s)" +
+          (f" ({errors} erreur(s))" if errors else ""))
 
 
 # ── BREVO : envoi newsletter ──────────────────────────────────────────
@@ -2197,6 +2337,14 @@ def main():
         print("\n=== Mise a jour terminee avec succes ===")
     else:
         print("\n=== Aucune mise a jour effectuee ===")
+
+    # Lundi matin : envoi digest hebdo (top 7 derniers jours) liste Brevo 8
+    if datetime.now(PARIS_TZ).weekday() == 0:
+        print("\n[HEBDO] Lundi detecte — envoi digest hebdo liste 8...")
+        try:
+            _send_hebdo_brevo()
+        except Exception as _e:
+            print(f"  [HEBDO-ERR] {_e}")
 
 
 if __name__ == "__main__":
