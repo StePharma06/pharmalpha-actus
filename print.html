@@ -312,7 +312,7 @@ function buildHtml(articles, lsv, expr, displayDate) {
 
 function sharePage() {
   var url = "https://pharmalpha.fr/actus/print";
-  var title = "Pharm’Actus — Impression du jour";
+  var title = "Pharm’Actus, Impression du jour";
   if (navigator.share) {
     navigator.share({ title: title, url: url }).catch(function(){});
   } else {

@@ -107,7 +107,7 @@ def _build_trends_site_block(data):
     return (
         f'<section class="radar-pharmacien" aria-labelledby="rp-titre" '
         f'style="margin:32px 0;padding:24px;background:#fff;border-radius:12px;'
-        f'border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);">'
+        f'border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);max-width:520px;">'
 
         f'<div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;">'
         f'<span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;'
@@ -913,8 +913,8 @@ Le confidence_score (0-1) reflete ton niveau de certitude sur la qualite des chi
         "full_text": full_text,
         "categorie": "business_officine",
         "badge_label": "Business",
-        "source": "Pharm'Actus",
-        "source_url": "",
+        "source": "Pharm'Actus" + (" · " + ", ".join(s.get("nom", "") for s in sources_list[:2] if s.get("nom")) if sources_list else ""),
+        "source_url": sources_list[0].get("url", "") if sources_list else "",
         "image_keywords": biz.get("image_keywords", "pharmacy business finance"),
         "tags": biz.get("tags", ["business", "analyse", "officine"]),
         "confidence_score": biz.get("confidence_score", 0),

@@ -691,7 +691,7 @@ function render() {
   // Stats
   const statsText = total === 0
     ? 'Aucun article ne correspond &agrave; ta recherche.'
-    : `<strong>${total}</strong> article${total > 1 ? 's' : ''}` + (total > PAGE_SIZE ? ` &mdash; page <strong>${currentPage}</strong>/${totalPages}` : '');
+    : `<strong>${total}</strong> article${total > 1 ? 's' : ''}` + (total > PAGE_SIZE ? ` · page <strong>${currentPage}</strong>/${totalPages}` : '');
   document.getElementById('stats-count').innerHTML = statsText;
 
   const hasFilter = currentFilter !== 'all' || currentTag || currentQuery;

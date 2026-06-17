@@ -241,7 +241,7 @@ def main():
                 "juil.", "aout", "sept.", "oct.", "nov.", "dec."]
     window_label = (
         f"{start.day} {MOIS[start.month]} "
-        f"— {today.day} {MOIS[today.month]} {today.year}"
+        f"au {today.day} {MOIS[today.month]} {today.year}"
     )
 
     print(f"Radar pharmacien (pytrends rising) — {today.isoformat()}")
