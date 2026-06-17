@@ -128,8 +128,7 @@
   /* --- Footer URL + QR --- */
   .url-footer {
     margin-top: 14px; padding-top: 12px; border-top: 1px solid #e5e5e5;
-    display: none; align-items: center; justify-content: space-between; gap: 16px;
-    break-inside: avoid; page-break-inside: avoid;
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
   }
   .url-footer-text { font-size: 8.5pt; color: #555; line-height: 1.6; }
   .url-footer-text strong { color: #1a1a1a; }
@@ -139,8 +138,7 @@
   .bio-strip {
     margin-top: 12px; padding: 12px 16px; border-radius: 8px;
     background: #1a1a1a; color: #fff;
-    display: none; align-items: center; gap: 14px;
-    break-inside: avoid; page-break-inside: avoid;
+    display: flex; align-items: center; gap: 14px;
   }
   .bio-photo-print {
     width: 52px; height: 52px; border-radius: 50%; object-fit: cover; flex-shrink: 0;
@@ -160,8 +158,6 @@
     .page-wrapper { max-width: 100%; margin: 0; border-radius: 0; box-shadow: none; }
     .content { padding: 0; }
     a { color: inherit; text-decoration: none; }
-    .url-footer { display: flex !important; }
-    .bio-strip { display: flex !important; }
   }
 
   @media (max-width: 600px) {
@@ -200,27 +196,8 @@
 <div class="page-wrapper">
   <div class="content">
 
-    <!-- Contenu dynamique -->
+    <!-- Contenu dynamique (articles + bas de page en un seul flux) -->
     <div id="container"><p class="loading">Chargement des actus...</p></div>
-
-    <!-- Footer URL + QR (affiché après chargement) -->
-    <div class="url-footer" id="url-footer">
-      <div class="url-footer-text">
-        Retrouvez toute l'actus pharma tous les jours sur<br>
-        <strong>pharmalpha.fr/actus</strong>
-      </div>
-      <img src="https://api.qrserver.com/v1/create-qr-code/?size=144x144&data=https%3A%2F%2Fpharmalpha.fr%2Factus&color=1a1a1a&bgcolor=ffffff&qzone=1&format=png" alt="QR Code pharmalpha.fr/actus">
-    </div>
-
-    <!-- Bandeau bio Stephen (affiché après chargement) -->
-    <div class="bio-strip" id="bio-strip">
-      <img src="assets/stephen.png" alt="Stephen ROBERT" class="bio-photo-print">
-      <div>
-        <div class="bio-name">Stephen ROBERT</div>
-        <div class="bio-role">Consultant, Formateur &amp; Communicant Pharma</div>
-        <div class="bio-desc-print">Docteur en Pharmacie, diplômé d'un Mastère Marketing &amp; Management des Industries de Santé. Avec Pharm'Actus, je décrypte l'actu pharma chaque matin pour que tu restes <em>in</em>, sans y passer des heures.</div>
-      </div>
-    </div>
 
   </div>
 </div>
@@ -281,9 +258,11 @@ function buildHtml(articles, lsv, expr, displayDate) {
     html += "</div>";
   });
 
-  // LSV + Expression groupés pour éviter orphelin sur page 2
+  // Bas de page groupé dans un seul wrapper block — seule approche fiable pour break-inside en Chrome
   var hasLsv = !!lsv;
   var hasExpr = !!(expr && expr.expression);
+  html += "<div style=\"break-inside:avoid;page-break-inside:avoid;-webkit-column-break-inside:avoid;display:block;\">";
+
   if (hasLsv || hasExpr) {
     html += "<div class=\"bottom-boxes\">";
 
@@ -306,6 +285,23 @@ function buildHtml(articles, lsv, expr, displayDate) {
 
     html += "</div>";
   }
+
+  // URL footer + bio dans le même wrapper (même flux, même page)
+  html += "<div class=\"url-footer\">";
+  html += "<div class=\"url-footer-text\">Retrouvez toute l'actus pharma tous les jours sur<br><strong>pharmalpha.fr/actus</strong></div>";
+  html += "<img src=\"https://api.qrserver.com/v1/create-qr-code/?size=144x144&data=https%3A%2F%2Fpharmalpha.fr%2Factus&color=1a1a1a&bgcolor=ffffff&qzone=1&format=png\" alt=\"QR Code pharmalpha.fr/actus\">";
+  html += "</div>";
+
+  html += "<div class=\"bio-strip\">";
+  html += "<img src=\"assets/stephen.png\" alt=\"Stephen ROBERT\" class=\"bio-photo-print\">";
+  html += "<div>";
+  html += "<div class=\"bio-name\">Stephen ROBERT</div>";
+  html += "<div class=\"bio-role\">Consultant, Formateur &amp; Communicant Pharma</div>";
+  html += "<div class=\"bio-desc-print\">Docteur en Pharmacie, diplôm&eacute; d'un Mast&egrave;re Marketing &amp; Management des Industries de Sant&eacute;. Avec Pharm'Actus, je d&eacute;crypte l'actu pharma chaque matin pour que tu restes <em>in</em>, sans y passer des heures.</div>";
+  html += "</div>";
+  html += "</div>";
+
+  html += "</div>"; // fin wrapper break-inside:avoid
 
   return html;
 }
@@ -339,10 +335,6 @@ function render() {
     var lsv = todayLsv || all.filter(function(a){ return a.categorie==="lsv"; })[0];
     var displayDate = todayArts.length>0 ? today : (articles[0]&&articles[0].date||today);
     container.innerHTML = buildHtml(articles, lsv, expr, displayDate);
-
-    // Afficher footer URL + bio une fois le contenu chargé
-    document.getElementById("url-footer").style.display = "flex";
-    document.getElementById("bio-strip").style.display = "flex";
   }).catch(function(e) {
     container.innerHTML = "<p class=\"loading\">Erreur chargement : "+esc(e.message)+"</p>";
   });
