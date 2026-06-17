@@ -174,7 +174,7 @@ def generate_script(lsv):
     )
     resp = api_request(
         "https://api.anthropic.com/v1/messages",
-        data={"model": "claude-sonnet-4-20250514", "max_tokens": 2000,
+        data={"model": "claude-sonnet-4-6", "max_tokens": 2000,
               "messages": [{"role": "user", "content": prompt}]},
         headers={"x-api-key": ANTHROPIC_API_KEY, "anthropic-version": "2023-06-01"},
     )

@@ -44,6 +44,7 @@ jobs:
         run: pip install anthropic feedparser pytrends "urllib3<2"
 
       - name: Radar pharmacien (Google News 7j glissants)
+        continue-on-error: true  # Ne jamais bloquer la pipeline si pytrends rate-limite
         run: python scripts/daily_trends.py
 
       - name: Fetch RSS, curate articles, generate LSV, fetch photos & send newsletter
@@ -89,4 +90,3 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
-

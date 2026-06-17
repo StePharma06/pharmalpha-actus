@@ -535,7 +535,7 @@ JSON UNIQUEMENT (tableau de 5 objets) :
 ]"""
 
     response = claude_create(client,
-        model="claude-sonnet-4-20250514",
+        model="claude-sonnet-4-6",
         max_tokens=4000,
         messages=[{"role": "user", "content": prompt}],
     )
@@ -620,7 +620,7 @@ JSON UNIQUEMENT :
 Pour les tags : 3 a 5 mots-cles thematiques en francais, minuscules, sans accents (ex: "histoire", "diagnostic", "diabete", "chirurgie", "vaccin", "plante", "chimie", "decouverte", "epidemie", "anesthesie", "instrument", "poison")."""
 
     response = claude_create(client,
-        model="claude-sonnet-4-20250514",
+        model="claude-sonnet-4-6",
         max_tokens=2000,
         messages=[{"role": "user", "content": prompt}],
     )
@@ -705,7 +705,7 @@ Si aucun probleme : {{"issues_found": false, "warnings": []}}"""
     try:
         response = claude_create(
             client,
-            model="claude-sonnet-4-20250514",
+            model="claude-sonnet-4-6",
             max_tokens=800,
             messages=[{"role": "user", "content": factcheck_prompt}],
         )
@@ -871,7 +871,7 @@ Le confidence_score (0-1) reflete ton niveau de certitude sur la qualite des chi
 
     response = claude_create(
         client,
-        model="claude-sonnet-4-20250514",
+        model="claude-sonnet-4-6",
         max_tokens=5000,
         messages=[{"role": "user", "content": prompt}],
     )
@@ -1747,7 +1747,7 @@ ATTENTION ORTHOGRAPHE : relis-toi avant de repondre. ZERO faute tolere.
     try:
         client = anthropic.Anthropic()
         response = claude_create(client,
-            model="claude-sonnet-4-20250514",
+            model="claude-sonnet-4-6",
             max_tokens=200,
             messages=[{"role": "user", "content": prompt}]
         )

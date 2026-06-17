@@ -401,7 +401,7 @@ Retourne UNIQUEMENT le markdown complet, rien d'autre."""
 
     response = claude_create(
         client,
-        model="claude-sonnet-4-20250514",
+        model="claude-sonnet-4-6",
         max_tokens=8000,
         messages=[{"role": "user", "content": prompt}],
     )
@@ -478,7 +478,7 @@ Genere le post complet, pret a copier sur LinkedIn. Retourne UNIQUEMENT le texte
 
     response = claude_create(
         client,
-        model="claude-sonnet-4-20250514",
+        model="claude-sonnet-4-6",
         max_tokens=1500,
         messages=[{"role": "user", "content": prompt}],
     )
