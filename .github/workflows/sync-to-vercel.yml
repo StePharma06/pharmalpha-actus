@@ -12,6 +12,12 @@ on:
     workflows: ["Daily Actus Update"]
     types: [completed]
     branches: [master]
+  push:
+    branches: [master]
+    paths:
+      - '*.html'
+      - 'assets/**'
+      - 'scripts/sync_to_vercel.py'
   workflow_dispatch:
 
 permissions:
@@ -19,7 +25,7 @@ permissions:
 
 jobs:
   sync:
-    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' || github.event_name == 'push' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout pharmalpha-actus (source)
