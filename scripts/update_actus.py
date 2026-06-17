@@ -1371,6 +1371,15 @@ def update_index_html(new_articles):
     # subsequent runs contain the rendered div — we replace it via regex.
     expr = get_expression_du_jour()
     if expr:
+        # Exporter expression.json pour print.html
+        try:
+            expr_json_path = ROOT_DIR / "expression.json"
+            expr_json_path.write_text(
+                json.dumps({"expression": expr["expression"], "texte": expr["texte"], "emoji": expr.get("emoji", "")}, ensure_ascii=False, indent=2),
+                encoding="utf-8"
+            )
+        except Exception as _e:
+            print(f"  [WARN] expression.json non ecrit : {_e}")
         def esc_html(s):
             return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
         # md_to_html applied BEFORE esc_html so the generated <em>/<strong> tags

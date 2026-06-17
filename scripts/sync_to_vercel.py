@@ -31,6 +31,7 @@ SYNC_FILES = [
     "print.html",
     "preferences.html",
     "articles.json",
+    "expression.json",
     "caducee-pharmacien.png",
 ]
 SYNC_DIRS = ["articles", "assets", "output"]
