@@ -51,6 +51,25 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 REPO_ROOT  = os.path.dirname(SCRIPT_DIR)
 OUTPUT_DIR = os.path.join(REPO_ROOT, "output")
 OUTPUT_FILE = os.path.join(OUTPUT_DIR, "trends_daily.json")
+# Cache "derniere bonne valeur" par colonne : garantit qu'AUCUNE colonne du
+# radar n'est jamais vide, meme quand pytrends rate-limite un batch (429) ou
+# retourne []. Mis a jour UNIQUEMENT avec des donnees non-vides -> la vacuite
+# ne se propage jamais. Cf. incident_pharmactus (colonne vide recurrente).
+LAST_GOOD_FILE = os.path.join(OUTPUT_DIR, "trends_last_good.json")
+
+
+def _load_last_good() -> dict:
+    try:
+        with open(LAST_GOOD_FILE, encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return {}
+
+
+def _save_last_good(d: dict) -> None:
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+    with open(LAST_GOOD_FILE, "w", encoding="utf-8") as f:
+        json.dump(d, f, ensure_ascii=False, indent=2)
 
 # ── Seeds ─────────────────────────────────────────────────────────────
 # Seeds BESOINS / PATHOLOGIES
@@ -272,6 +291,35 @@ def main():
         soin_top = prev_data["soins"]
         print(f"  [FALLBACK] soins vide -> reutilise donnees precedentes ({len(soin_top)} termes)")
 
+    # ── Carry-forward par colonne (anti colonne-vide, PERENNE) ────────
+    # pytrends rate-limite frequemment UN des deux batches -> colonne vide.
+    # Pour qu'aucune colonne ne soit jamais vide cote site/newsletter, on
+    # remplace une colonne vide ce jour par la derniere valeur non-vide connue
+    # (cache trends_last_good.json). Le cache n'est mis a jour QU'AVEC du
+    # non-vide -> la vacuite ne se propage jamais (corrige le bug recurrent ou
+    # le fallback "fichier precedent" cascadait quand le precedent etait vide).
+    last_good = _load_last_good()
+
+    patho_stale = False
+    if patho_top:
+        last_good["pathologies"] = patho_top
+        last_good["pathologies_from"] = today.isoformat()
+    elif last_good.get("pathologies"):
+        patho_top = last_good["pathologies"]
+        patho_stale = True
+        print(f"  [CARRY] pathologies vide -> reprise du {last_good.get('pathologies_from','?')} ({len(patho_top)} termes)")
+
+    soin_stale = False
+    if soin_top:
+        last_good["soins"] = soin_top
+        last_good["soins_from"] = today.isoformat()
+    elif last_good.get("soins"):
+        soin_top = last_good["soins"]
+        soin_stale = True
+        print(f"  [CARRY] soins vide -> reprise du {last_good.get('soins_from','?')} ({len(soin_top)} termes)")
+
+    _save_last_good(last_good)
+
     # ── Sauvegarde ────────────────────────────────────────────────────
     output = {
         "generated_at": today.isoformat(),
@@ -280,6 +328,12 @@ def main():
         "delta_source": "pytrends_rising",
         "pathologies":  patho_top,
         "soins":        soin_top,
+        # Champs de transparence (non affiches) : signalent une colonne reprise
+        # du cache faute de donnees fraiches ce jour.
+        "pathologies_stale": patho_stale,
+        "pathologies_from":  last_good.get("pathologies_from"),
+        "soins_stale":       soin_stale,
+        "soins_from":        last_good.get("soins_from"),
     }
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)

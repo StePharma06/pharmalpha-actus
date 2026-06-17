@@ -1,8 +1,4 @@
 {
-  "generated_at": "2026-06-17",
-  "window_label": "11 juin — 17 juin 2026",
-  "has_history": true,
-  "delta_source": "pytrends_rising",
   "pathologies": [
     {
       "display": "Allergie au soleil bouton",
@@ -30,6 +26,7 @@
       "trend": "up"
     }
   ],
+  "pathologies_from": "2026-06-13",
   "soins": [
     {
       "display": "Azinc immunite",
@@ -57,8 +54,5 @@
       "trend": "up"
     }
   ],
-  "pathologies_stale": true,
-  "pathologies_from": "2026-06-13",
-  "soins_stale": false,
   "soins_from": "2026-06-17"
 }
