@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pharm'Actus — Mes préférences email</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f9fafb; color: #1a1a1a; min-height: 100vh; display: flex; flex-direction: column; }
+
+  header {
+    background: #1a1a1a; padding: 16px 24px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  header .logo { font-size: 18px; font-weight: 800; color: #fff; letter-spacing: 0.3px; }
+  header .logo span { color: #f97316; }
+
+  main {
+    flex: 1; display: flex; align-items: center; justify-content: center;
+    padding: 40px 20px;
+  }
+
+  .card {
+    background: #fff; border-radius: 16px; padding: 40px 36px;
+    max-width: 480px; width: 100%;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    text-align: center;
+  }
+
+  .card h1 { font-size: 22px; font-weight: 800; margin-bottom: 8px; }
+  .card .subtitle { font-size: 14px; color: #666; line-height: 1.6; margin-bottom: 32px; }
+  .card .email-display {
+    background: #f3f4f6; border-radius: 8px; padding: 8px 16px;
+    font-size: 13px; color: #374151; margin-bottom: 28px; display: none;
+  }
+
+  .options { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 24px; }
+
+  .option-btn {
+    border: 2px solid #e5e7eb; border-radius: 12px; padding: 20px 14px;
+    cursor: pointer; background: #fff; transition: all 0.18s; text-align: center;
+    font-family: inherit;
+  }
+  .option-btn:hover { border-color: #f97316; background: #fff7ed; }
+  .option-btn.active { border-color: #f97316; background: #fff7ed; }
+  .option-btn .icon { font-size: 28px; margin-bottom: 8px; display: block; }
+  .option-btn .label { font-size: 15px; font-weight: 700; color: #1a1a1a; display: block; margin-bottom: 4px; }
+  .option-btn .desc { font-size: 12px; color: #6b7280; line-height: 1.4; display: block; }
+  .option-btn .badge {
+    display: inline-block; margin-top: 8px; background: #f97316; color: #fff;
+    font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 99px;
+    text-transform: uppercase; letter-spacing: 0.4px;
+  }
+
+  .btn-confirm {
+    width: 100%; padding: 14px; background: #f97316; color: #fff; border: none;
+    border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer;
+    font-family: inherit; transition: background 0.15s; display: none;
+  }
+  .btn-confirm:hover { background: #ea6c04; }
+  .btn-confirm:disabled { background: #d1d5db; cursor: not-allowed; }
+
+  /* States */
+  .state { display: none; }
+  .state.visible { display: block; }
+
+  .success-icon { font-size: 48px; margin-bottom: 16px; }
+  .success-title { font-size: 20px; font-weight: 800; margin-bottom: 8px; }
+  .success-sub { font-size: 14px; color: #666; line-height: 1.6; }
+
+  .error-box {
+    background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px;
+    padding: 12px 16px; font-size: 13px; color: #991b1b; margin-top: 16px; display: none;
+  }
+
+  footer { text-align: center; padding: 20px; font-size: 12px; color: #aaa; }
+  footer a { color: #aaa; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Pharm<span>'</span>Actus</div>
+</header>
+
+<main>
+  <div class="card">
+
+    <!-- Etat: choix frequence -->
+    <div id="state-choose" class="state visible">
+      <h1>Mes préférences email</h1>
+      <p class="subtitle">Choisissez la fréquence de réception de vos actus pharma.</p>
+      <div id="email-display" class="email-display"></div>
+
+      <div class="options">
+        <button class="option-btn" id="btn-daily" onclick="select('daily')">
+          <span class="icon">📬</span>
+          <span class="label">Quotidien</span>
+          <span class="desc">Lundi au samedi, chaque matin</span>
+          <span class="badge">Actuel</span>
+        </button>
+        <button class="option-btn" id="btn-hebdo" onclick="select('hebdo')">
+          <span class="icon">📅</span>
+          <span class="label">Hebdomadaire</span>
+          <span class="desc">Un résumé chaque vendredi matin</span>
+        </button>
+      </div>
+
+      <button class="btn-confirm" id="btn-confirm" onclick="confirm()">Confirmer mon choix</button>
+      <div class="error-box" id="error-box"></div>
+    </div>
+
+    <!-- Etat: succes -->
+    <div id="state-success" class="state">
+      <div class="success-icon" id="success-icon">✅</div>
+      <div class="success-title" id="success-title"></div>
+      <div class="success-sub" id="success-sub"></div>
+    </div>
+
+    <!-- Etat: erreur email manquant -->
+    <div id="state-no-email" class="state">
+      <div class="success-icon">🤔</div>
+      <div class="success-title">Lien incomplet</div>
+      <div class="success-sub">Ce lien de préférences semble invalide. Cliquez sur le lien de votre email pour accéder à vos préférences.</div>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <a href="https://pharmalpha.fr/actus">Pharm'Actus</a> &mdash; par Stephen ROBERT, Pharm'Alpha
+</footer>
+
+<script>
+var EDGE_URL = "https://ibmqaybmhpzdlgyntzbs.supabase.co/functions/v1/actus-switch-frequency";
+
+var params = new URLSearchParams(window.location.search);
+var email = params.get("email") || "";
+var currentFreq = params.get("freq") || "daily";
+var selected = null;
+
+function init() {
+  if (!email) {
+    show("state-no-email");
+    return;
+  }
+  var disp = document.getElementById("email-display");
+  disp.textContent = email;
+  disp.style.display = "block";
+  select(currentFreq);
+}
+
+function select(freq) {
+  selected = freq;
+  document.getElementById("btn-daily").classList.toggle("active", freq==="daily");
+  document.getElementById("btn-hebdo").classList.toggle("active", freq==="hebdo");
+  document.getElementById("btn-confirm").style.display = "block";
+  document.getElementById("error-box").style.display = "none";
+}
+
+function confirm() {
+  if (!selected || !email) return;
+  var btn = document.getElementById("btn-confirm");
+  btn.disabled = true;
+  btn.textContent = "Mise a jour...";
+
+  fetch(EDGE_URL, {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({email: email, frequency: selected})
+  }).then(function(r) {
+    return r.json().then(function(d){ return {ok: r.ok, data: d}; });
+  }).then(function(res) {
+    if (!res.ok) throw new Error(res.data.error || "Erreur serveur");
+    var icon = document.getElementById("success-icon");
+    var title = document.getElementById("success-title");
+    var sub = document.getElementById("success-sub");
+    if (selected === "hebdo") {
+      icon.textContent = "📅";
+      title.textContent = "Résumé hebdo activé";
+      sub.textContent = "Vous recevrez desormais un résumé chaque vendredi matin. Vous pouvez revenir ici pour changer a tout moment.";
+    } else {
+      icon.textContent = "📬";
+      title.textContent = "Actus quotidiennes confirmées";
+      sub.textContent = "Vous continuerez a recevoir les actus pharma chaque matin (lundi - samedi).";
+    }
+    show("state-success");
+  }).catch(function(e) {
+    btn.disabled = false;
+    btn.textContent = "Confirmer mon choix";
+    var errBox = document.getElementById("error-box");
+    errBox.textContent = "Erreur : " + e.message + ". Reessayez ou contactez stephen.pharmacien@gmail.com";
+    errBox.style.display = "block";
+  });
+}
+
+function show(id) {
+  ["state-choose","state-success","state-no-email"].forEach(function(s){
+    document.getElementById(s).classList.remove("visible");
+  });
+  document.getElementById(id).classList.add("visible");
+}
+
+init();
+</script>
+</body>
+</html>

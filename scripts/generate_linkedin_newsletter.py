@@ -767,6 +767,67 @@ def generate_cover_image():
         return None
 
 
+
+BREVO_LIST_HEBDO = 8  # Abonnes frequence hebdomadaire
+
+
+def send_to_hebdo_list(html_content: str, week_label: str) -> None:
+    """Envoie le digest hebdo a tous les abonnes de la liste Hebdo (id 8)."""
+    api_key = os.environ.get("BREVO_API_KEY", "")
+    if not api_key:
+        print("  [HEBDO] BREVO_API_KEY non definie, envoi liste 8 skipped")
+        return
+
+    # Recuperer les contacts de la liste 8
+    all_contacts = []
+    offset = 0
+    limit = 50
+    headers = {"api-key": api_key, "Accept": "application/json"}
+    while True:
+        url = f"{BREVO_API_BASE}/contacts/lists/{BREVO_LIST_HEBDO}/contacts?limit={limit}&offset={offset}"
+        try:
+            req = urllib.request.Request(url, headers=headers)
+            with urllib.request.urlopen(req) as resp:
+                data = json.loads(resp.read())
+            contacts = data.get("contacts", [])
+            all_contacts.extend(contacts)
+            if len(contacts) < limit:
+                break
+            offset += limit
+        except Exception as e:
+            print(f"  [HEBDO-ERR] Impossible de recuperer la liste 8: {e}")
+            return
+
+    emails = [c["email"] for c in all_contacts if c.get("email")]
+    if not emails:
+        print("  [HEBDO] Aucun abonne dans la liste Hebdo (id 8)")
+        return
+
+    print(f"  [HEBDO] {len(emails)} abonne(s) dans la liste Hebdo")
+    subject = f"Pharm'Actus - Resume de la semaine ({week_label})"
+    send_url = f"{BREVO_API_BASE}/smtp/email"
+    sent = 0
+    for email in emails:
+        payload = json.dumps({
+            "sender": {"name": SENDER_NAME, "email": SENDER_EMAIL},
+            "replyTo": {"email": EMAIL_RECIPIENT, "name": SENDER_NAME},
+            "to": [{"email": email}],
+            "subject": subject,
+            "htmlContent": html_content,
+        }).encode("utf-8")
+        try:
+            req = urllib.request.Request(
+                send_url, data=payload,
+                headers={"api-key": api_key, "Content-Type": "application/json", "Accept": "application/json"},
+                method="POST",
+            )
+            with urllib.request.urlopen(req, timeout=60) as resp:
+                json.loads(resp.read())
+            sent += 1
+        except Exception as e:
+            print(f"  [HEBDO-ERR] {email}: {e}")
+    print(f"  [HEBDO] {sent}/{len(emails)} emails envoyes")
+
 def main():
     print("=== Newsletter LinkedIn Hebdo - Pharm'Actus ===")
     today = datetime.now(PARIS_TZ)
@@ -805,6 +866,18 @@ def main():
     print("\n[5/5] Envoi email (newsletter + post associe + images + cover)...")
     send_newsletter_email(markdown, actus, lsv, companion_post=companion_post)
 
+
+
+    # Envoi aux abonnes hebdo (liste 8)
+    print("\n[5.5/5] Envoi digest aux abonnes Hebdo (liste 8)...")
+    try:
+        from datetime import timedelta as _td
+        _t = datetime.now(PARIS_TZ)
+        _ws = _t - _td(days=_t.weekday())
+        _label = format_date_range_fr(_ws.date(), (_ws + _td(days=4)).date())
+        send_to_hebdo_list(build_newsletter_html(actus, lsv), _label)
+    except Exception as _e:
+        print(f"  [HEBDO-ERR] {_e}")
     print("\n=== Termine ===")
 
 

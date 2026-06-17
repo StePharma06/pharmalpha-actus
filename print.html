@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pharm'Actus — Impression du jour</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Georgia', serif; font-size: 11pt; color: #1a1a1a; background: #f5f5f5; }
+  .page-wrapper { max-width: 210mm; margin: 0 auto; background: #fff; }
+
+  .toolbar {
+    background: #1a1a1a; color: #fff; padding: 12px 24px;
+    display: flex; align-items: center; justify-content: space-between;
+    position: sticky; top: 0; z-index: 10;
+  }
+  .toolbar .logo { font-size: 16px; font-weight: 700; letter-spacing: 0.5px; }
+  .toolbar .logo span { color: #f97316; }
+  .toolbar .btn-print {
+    background: #f97316; color: #fff; border: none; padding: 8px 20px;
+    border-radius: 6px; font-size: 13px; font-weight: 700; cursor: pointer;
+    font-family: inherit;
+  }
+
+  .content { padding: 18mm 18mm 14mm; }
+
+  .print-header {
+    border-bottom: 3px solid #1a1a1a; padding-bottom: 10px; margin-bottom: 14px;
+    display: flex; align-items: flex-end; justify-content: space-between;
+  }
+  .print-header .brand { font-size: 22pt; font-weight: 900; letter-spacing: -0.5px; line-height: 1; }
+  .print-header .brand span { color: #f97316; }
+  .print-header .meta { text-align: right; font-size: 9pt; color: #666; line-height: 1.5; }
+  .print-header .meta .date-label { font-size: 11pt; font-weight: 700; color: #1a1a1a; }
+
+  .article-row {
+    display: grid; grid-template-columns: 70px 1fr;
+    gap: 0 12px; padding: 9px 0; border-bottom: 1px solid #e5e5e5;
+    align-items: start;
+  }
+
+  .cat-badge {
+    display: inline-block; padding: 2px 6px; border-radius: 3px;
+    font-size: 7.5pt; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.3px; text-align: center; line-height: 1.4; margin-top: 2px;
+  }
+  .cat-pharma_france     { background: #dbeafe; color: #1e40af; }
+  .cat-pharma_monde      { background: #ede9fe; color: #6d28d9; }
+  .cat-bonne_nouvelle    { background: #dcfce7; color: #166534; }
+  .cat-avenir_pharma     { background: #fef9c3; color: #854d0e; }
+  .cat-business_officine { background: #ffedd5; color: #c2410c; }
+  .cat-sante             { background: #f0fdf4; color: #15803d; }
+  .cat-default           { background: #f3f4f6; color: #374151; }
+
+  .article-title { font-size: 11pt; font-weight: 700; line-height: 1.3; margin-bottom: 3px; }
+  .article-summary {
+    font-size: 9.5pt; color: #444; line-height: 1.45;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+  }
+  .article-source { font-size: 8pt; color: #888; margin-top: 3px; }
+
+  .lsv-box {
+    margin-top: 12px; border: 1.5px solid #1a1a1a; border-radius: 4px;
+    padding: 9px 14px; display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: start;
+  }
+  .lsv-label {
+    font-size: 8pt; font-weight: 900; text-transform: uppercase; letter-spacing: 0.3px;
+    color: #fff; background: #1a1a1a; padding: 2px 6px; border-radius: 3px; white-space: nowrap; margin-top: 2px;
+  }
+  .lsv-title { font-size: 10pt; font-weight: 700; line-height: 1.3; margin-bottom: 3px; }
+  .lsv-summary { font-size: 9pt; color: #444; line-height: 1.4; }
+
+  .print-footer {
+    margin-top: 12px; border-top: 1px solid #e5e5e5; padding-top: 8px;
+    display: flex; justify-content: space-between;
+  }
+  .print-footer p { font-size: 8pt; color: #999; }
+
+  .loading { padding: 40px; text-align: center; color: #666; }
+
+  @media print {
+    @page { size: A4; margin: 15mm 18mm 12mm; }
+    body { background: #fff; }
+    .toolbar { display: none !important; }
+    .page-wrapper { max-width: 100%; }
+    .content { padding: 0; }
+    a { color: inherit; text-decoration: none; }
+  }
+</style>
+</head>
+<body>
+<div class="page-wrapper">
+  <div class="toolbar">
+    <div class="logo">Pharm<span>'</span>Actus</div>
+    <button class="btn-print" onclick="window.print()">Imprimer</button>
+  </div>
+  <div class="content">
+    <div id="container"><p class="loading">Chargement des actus...</p></div>
+  </div>
+</div>
+<script>
+var CAT_LABELS = {
+  pharma_france:"France", pharma_monde:"Monde", bonne_nouvelle:"Bonne nouvelle",
+  avenir_pharma:"Avenir", business_officine:"Business", sante:"Sante", lsv:"Le saviez-vous ?"
+};
+var MONTHS = ["","janv.","fev.","mars","avr.","mai","juin","juil.","aout","sept.","oct.","nov.","dec."];
+var DAYS = ["dimanche","lundi","mardi","mercredi","jeudi","vendredi","samedi"];
+
+function esc(s) {
+  return (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+}
+function fmtDate(d) {
+  var p = d.split("-").map(Number);
+  var dt = new Date(p[0], p[1]-1, p[2]);
+  return DAYS[dt.getDay()]+" "+p[2]+" "+MONTHS[p[1]]+" "+p[0];
+}
+function catClass(c) { return "cat-"+(c||"default"); }
+function catLabel(c) { return CAT_LABELS[c]||c||""; }
+
+function buildHtml(articles, lsv, displayDate) {
+  var html = "";
+  html += "<div class=\"print-header\">";
+  html += "<div class=\"brand\">Pharm<span style=\"color:#f97316;\">'</span>Actus</div>";
+  html += "<div class=\"meta\"><div class=\"date-label\">"+esc(fmtDate(displayDate))+"</div><div>pharmalpha.fr/actus</div></div>";
+  html += "</div><div>";
+
+  articles.slice(0,6).forEach(function(a) {
+    var cat = a.categorie||"default";
+    html += "<div class=\"article-row\">";
+    html += "<div><span class=\"cat-badge "+catClass(cat)+"\">"+esc(catLabel(cat))+"</span></div>";
+    html += "<div>";
+    html += "<div class=\"article-title\">"+esc(a.titre||a.title||"")+"</div>";
+    html += "<div class=\"article-summary\">"+esc(a.resume||a.summary||"")+"</div>";
+    html += "<div class=\"article-source\">"+esc(a.source||"")+"</div>";
+    html += "</div></div>";
+  });
+  html += "</div>";
+
+  if (lsv) {
+    html += "<div class=\"lsv-box\">";
+    html += "<div class=\"lsv-label\">Le saviez-vous ?</div><div>";
+    html += "<div class=\"lsv-title\">"+esc(lsv.titre||lsv.title||"")+"</div>";
+    html += "<div class=\"lsv-summary\">"+esc(lsv.resume||lsv.summary||"")+"</div>";
+    html += "</div></div>";
+  }
+
+  html += "<div class=\"print-footer\">";
+  html += "<p>Pharm'Actus par <strong>Stephen ROBERT</strong> - Pharm'Alpha</p>";
+  html += "<p>pharmalpha.fr/actus</p></div>";
+  return html;
+}
+
+function render() {
+  var container = document.getElementById("container");
+  fetch("articles.json").then(function(r) {
+    if (!r.ok) throw new Error("HTTP "+r.status);
+    return r.json();
+  }).then(function(raw) {
+    var all = Array.isArray(raw) ? raw : (raw.articles||[]);
+    var today = new Date().toISOString().slice(0,10);
+    var todayArts = all.filter(function(a){ return a.date===today && a.categorie!=="lsv"; });
+    var todayLsv  = all.filter(function(a){ return a.date===today && a.categorie==="lsv"; })[0];
+    var articles = todayArts.length>0 ? todayArts : all.filter(function(a){ return a.categorie!=="lsv"; }).slice(0,6);
+    var lsv = todayLsv || all.filter(function(a){ return a.categorie==="lsv"; })[0];
+    var displayDate = todayArts.length>0 ? today : (articles[0]&&articles[0].date||today);
+    container.innerHTML = buildHtml(articles, lsv, displayDate);
+  }).catch(function(e) {
+    container.innerHTML = "<p class=\"loading\">Erreur chargement : "+esc(e.message)+"</p>";
+  });
+}
+render();
+</script>
+</body>
+</html>

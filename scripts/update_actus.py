@@ -1928,6 +1928,8 @@ def build_newsletter_html(articles, custom_intro=None):
       <p style="margin:0;font-size:11px;color:#aaa;line-height:1.5;">
         Tu re&ccedil;ois cet email car tu t'es inscrit(e) sur
         <a href="https://actus.pharmalpha.fr/" style="color:#888;">Pharm'Actus</a>.<br>
+        <a href="https://actus.pharmalpha.fr/print" style="color:#888;">Imprimer</a> &bull;
+        <a href="https://actus.pharmalpha.fr/preferences?email={{{{ contact.EMAIL }}}}&amp;freq=daily" style="color:#888;">Fr&eacute;quence emails</a> &bull;
         <a href="{{{{ unsubscribe }}}}" style="color:#888;">Se d&eacute;sinscrire</a> &bull;
         <a href="https://actus.pharmalpha.fr/" style="color:#888;">Voir en ligne</a>
       </p>
