@@ -291,7 +291,7 @@ body {
 .counter-roll-wrap {
   display: inline-flex;
   gap: 2px;
-  vertical-align: -3px;
+  vertical-align: middle;
   font-variant-numeric: tabular-nums;
   font-weight: 800;
 }
@@ -309,7 +309,7 @@ body {
 }
 .counter-roll {
   display: block;
-  transition: transform 1.2s cubic-bezier(.2,.7,.2,1);
+  transition: transform 1.8s cubic-bezier(.2,.7,.2,1);
   will-change: transform;
 }
 .counter-roll > span {
@@ -1377,6 +1377,7 @@ body {
     (function() {
       var COUNT_URL = "https://ibmqaybmhpzdlgyntzbs.supabase.co/functions/v1/brevo-actus-count";
       var POLL_MS = 30000;
+      var MIN_DIGITS = 4;
       var currentCount = null;
       var counterEl = null;
 
@@ -1403,13 +1404,13 @@ body {
       }
       function pad(s, n) { while (s.length < n) s = "0" + s; return s; }
       function applyCount(count, initial) {
-        var s = String(count);
+        var s = pad(String(count), MIN_DIGITS);
         ensureDigitCount(s.length);
         var oldStr = (!initial && currentCount !== null) ? pad(String(currentCount), s.length) : null;
         for (var i = 0; i < s.length; i++) {
           if (oldStr && oldStr.charAt(i) === s.charAt(i)) continue;
           (function(box, d, i) {
-            setTimeout(function() { setDigit(box, d); }, (initial ? 220 : 0) + i * 110);
+            setTimeout(function() { setDigit(box, d); }, (initial ? 300 : 0) + i * 160);
           })(counterEl.children[i], parseInt(s.charAt(i), 10), i);
         }
         currentCount = count;
@@ -1417,15 +1418,16 @@ body {
       function buildShell(parent, count) {
         parent.textContent = "";
         parent.appendChild(document.createTextNode("Rejoins les "));
-        var strong = document.createElement("strong");
-        strong.style.color = "#f97316";
         counterEl = document.createElement("span");
         counterEl.className = "counter-roll-wrap";
-        strong.appendChild(counterEl);
-        strong.appendChild(document.createTextNode(" inscrits"));
-        parent.appendChild(strong);
+        parent.appendChild(counterEl);
+        parent.appendChild(document.createTextNode(" "));
+        var inscritsSpan = document.createElement("span");
+        inscritsSpan.style.color = "#1a1a1a";
+        inscritsSpan.textContent = "inscrits";
+        parent.appendChild(inscritsSpan);
         parent.appendChild(document.createTextNode(" et reçois les actus chaque jour par mail :"));
-        ensureDigitCount(String(count).length);
+        ensureDigitCount(Math.max(MIN_DIGITS, String(count).length));
         requestAnimationFrame(function() { applyCount(count, true); });
       }
       function fetchCount(initial) {
