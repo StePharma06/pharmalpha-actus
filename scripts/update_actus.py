@@ -480,8 +480,8 @@ Avant toute affirmation sur le cadre officinal francais, verifier mentalement :
 
 REGLES DE SOURCES (STRICTES) :
 1. REGLE ABSOLUE : JAMAIS 2 articles du meme media dans une meme journee. 1 seul Moniteur max, 1 seul Quotidien du Pharmacien max, etc. Si Pharma France choisit Moniteur, aucune autre categorie ne peut piocher dans Moniteur.
-2. ALTERNANCE OBLIGATOIRE : Le Moniteur et Le Quotidien du Pharmacien sont des references mais NE DOIVENT PAS etre utilises TOUS les jours. Sur une semaine, varie au maximum. Alterne avec : Egora, HAS, Ordre des Pharmaciens, LEEM, Le Pharmacien de France, VIDAL, Sciences et Avenir, Pourquoi Docteur, APMnews, The Conversation, INSERM, ANSM, Medscape FR, etc.
-3. Pour Pharma Monde : UNIQUEMENT des sources ETRANGERES (Reuters, STAT News, Pharmaceutical Journal, Fierce Pharma, European Pharmaceutical Review, Pharmacy Times, Nature Medicine, BioPharma Dive). Traduis en francais. Si aucune actu internationale claire dans les articles fournis, prends quand meme un article etranger et adapte-le au contexte francais.
+2. ALTERNANCE OBLIGATOIRE : Le Moniteur et Le Quotidien du Pharmacien sont des references mais NE DOIVENT PAS etre utilises TOUS les jours. Sur une semaine, varie au maximum. Alterne avec : Egora, HAS, Ordre des Pharmaciens, LEEM, Le Pharmacien de France, VIDAL, Sciences et Avenir, Pourquoi Docteur, APMnews, The Conversation, INSERM, ANSM, Medscape FR, FSPF, USPO, UPGF, Caducee.net, Sante Publique France, LegiRSS Pharmacie, ActuLabo, etc. Priorite aux sources nouvelles si leur actu du jour est de qualite egale.
+3. Pour Pharma Monde : UNIQUEMENT des sources ETRANGERES (Reuters, STAT News, Pharmaceutical Journal, Fierce Pharma, FierceBiotech, Endpoints News, European Pharmaceutical Review, Pharmacy Times, MedCity News, Pharmaphorum, PharmaTimes UK, EMA News, Pharmaceutical Executive, Nature Medicine, BioPharma Dive). Traduis en francais. Si aucune actu internationale claire dans les articles fournis, prends quand meme un article etranger et adapte-le au contexte francais.
 
 === IMPORTANCE DIFFERENCIANTE ===
 Pharma Monde et Business Officine sont les 2 rubriques qui DIFFERENCIENT Pharm'Actus des autres newsletters pharma (qui se contentent de relayer Moniteur/Quotidien).
@@ -652,6 +652,14 @@ BUSINESS_PRIORITY_SOURCES = {
     "Ordre des Pharmaciens",
     "APMnews Pharma",
     "Egora",
+    "Pharmaceutical Executive",
+    "Endpoints News",
+    "Pharmaphorum",
+    "FierceBiotech",
+    "FSPF",
+    "USPO",
+    "UPGF",
+    "ActuLabo",
 }
 
 
