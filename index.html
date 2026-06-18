@@ -1346,7 +1346,14 @@ body {
         .then(function(d) {
           if (!d || typeof d.count !== "number" || d.count <= 0) return;
           var el = document.getElementById("hero-nl-text");
-          if (el) el.textContent = "Rejoins les " + d.count + " inscrits et reçois les actus chaque jour par mail :";
+          if (!el) return;
+          el.textContent = "";
+          el.appendChild(document.createTextNode("Rejoins les "));
+          var strong = document.createElement("strong");
+          strong.style.color = "#f97316";
+          strong.textContent = d.count + " inscrits";
+          el.appendChild(strong);
+          el.appendChild(document.createTextNode(" et reçois les actus chaque jour par mail :"));
         })
         .catch(function() { /* fallback : texte initial sans compteur reste affiche */ });
     })();
