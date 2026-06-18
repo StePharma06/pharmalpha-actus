@@ -97,8 +97,10 @@
   /* --- Boîtes LSV + Expression (groupées pour éviter orphelin) --- */
   .bottom-boxes {
     margin-top: 12px;
-    break-inside: avoid; page-break-inside: avoid; -webkit-column-break-inside: avoid;
+    display: table; width: 100%;
+    break-inside: avoid !important; page-break-inside: avoid !important; -webkit-column-break-inside: avoid !important;
   }
+  .bottom-boxes > * { display: block; }
   .lsv-box {
     border: 1.5px solid #1a1a1a; border-radius: 4px;
     padding: 9px 13px; display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: start;
