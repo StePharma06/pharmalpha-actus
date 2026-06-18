@@ -340,8 +340,15 @@ function render() {
     var lsv = todayLsv || all.filter(function(a){ return a.categorie==="lsv"; })[0];
     var displayDate = todayArts.length>0 ? today : (articles[0]&&articles[0].date||today);
     container.innerHTML = buildHtml(articles, lsv, expr, displayDate);
+    // Auto-declenchement de la dialog d impression apres chargement images (QR via API externe)
+    var imgs = Array.from(container.querySelectorAll("img"));
+    Promise.all(imgs.map(function(img) {
+      return img.complete ? Promise.resolve() : new Promise(function(r) { img.onload = img.onerror = r; });
+    })).then(function() {
+      setTimeout(function() { window.print(); }, 150);
+    });
   }).catch(function(e) {
-    container.innerHTML = "<p class=\"loading\">Erreur chargement : "+esc(e.message)+"</p>";
+    container.textContent = "Erreur chargement : " + e.message;
   });
 }
 render();
