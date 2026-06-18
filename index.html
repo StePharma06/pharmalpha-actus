@@ -309,7 +309,7 @@ body {
 }
 .counter-roll {
   display: block;
-  transition: transform 1.8s cubic-bezier(.2,.7,.2,1);
+  transition: transform 2.5s cubic-bezier(.2,.7,.2,1);
   will-change: transform;
 }
 .counter-roll > span {
@@ -394,7 +394,9 @@ body {
 .nl-freq-btn:disabled { opacity: 0.6; cursor: not-allowed; }
 .nl-freq-icon { font-size: 20px; }
 .nl-freq-name { font-size: 13px; font-weight: 700; color: var(--text); }
-.nl-freq-desc { font-size: 11px; color: var(--text-dim); }
+.nl-freq-desc { font-size: 11px; color: #4a4a4a; }
+.nl-freq-btn:hover .nl-freq-desc,
+.nl-freq-btn:focus-visible .nl-freq-desc { color: #1a1a1a; }
 
 /* === FILTERS === */
 .filters {
@@ -1410,7 +1412,7 @@ body {
         for (var i = 0; i < s.length; i++) {
           if (oldStr && oldStr.charAt(i) === s.charAt(i)) continue;
           (function(box, d, i) {
-            setTimeout(function() { setDigit(box, d); }, (initial ? 300 : 0) + i * 160);
+            setTimeout(function() { setDigit(box, d); }, (initial ? 300 : 0) + i * 220);
           })(counterEl.children[i], parseInt(s.charAt(i), 10), i);
         }
         currentCount = count;
@@ -1421,12 +1423,7 @@ body {
         counterEl = document.createElement("span");
         counterEl.className = "counter-roll-wrap";
         parent.appendChild(counterEl);
-        parent.appendChild(document.createTextNode(" "));
-        var inscritsSpan = document.createElement("span");
-        inscritsSpan.style.color = "#1a1a1a";
-        inscritsSpan.textContent = "inscrits";
-        parent.appendChild(inscritsSpan);
-        parent.appendChild(document.createTextNode(" et reçois les actus chaque jour par mail :"));
+        parent.appendChild(document.createTextNode(" inscrits et reçois les actus chaque jour par mail :"));
         ensureDigitCount(Math.max(MIN_DIGITS, String(count).length));
         requestAnimationFrame(function() { applyCount(count, true); });
       }
@@ -2492,7 +2489,18 @@ function renderArticles() {
   // Stats
   document.getElementById('stats-count').innerHTML = `<strong>${filtered.length}</strong> article${filtered.length > 1 ? 's' : ''}`;
   const archivesCountEl = document.getElementById('archives-count');
-  if (archivesCountEl) archivesCountEl.textContent = ARTICLES.length;
+  if (archivesCountEl) {
+    // Source de verite : articles.json (mis a jour par le pipeline quotidien)
+    fetch('articles.json')
+      .then(function(r) { return r.ok ? r.json() : null; })
+      .then(function(data) {
+        if (!data) return;
+        var arr = Array.isArray(data) ? data : (data.articles || []);
+        var pubs = arr.filter(function(a) { return a.categorie !== 'lsv'; });
+        archivesCountEl.textContent = pubs.length;
+      })
+      .catch(function() { archivesCountEl.textContent = ARTICLES.length; });
+  }
   if (ARTICLES.length > 0) {
     const latest = ARTICLES.filter(a => a.categorie !== 'lsv').reduce((a, b) => new Date(a.date) > new Date(b.date) ? a : b, ARTICLES[0]);
     document.getElementById('stats-date').textContent = formatDate(latest.date);
