@@ -287,6 +287,36 @@ body {
 @media (max-width: 600px) {
   .hero-nl-label { white-space: normal; }
 }
+/* Compteur a cases qui tournent (style odometer) */
+.counter-roll-wrap {
+  display: inline-flex;
+  gap: 2px;
+  vertical-align: -3px;
+  font-variant-numeric: tabular-nums;
+  font-weight: 800;
+}
+.counter-digit {
+  display: inline-block;
+  width: 0.85em;
+  height: 1.4em;
+  line-height: 1.4em;
+  overflow: hidden;
+  background: linear-gradient(180deg, #fff5ed 0%, #ffe4cc 100%);
+  border: 1px solid #fdba74;
+  border-radius: 3px;
+  text-align: center;
+  box-shadow: 0 1px 2px rgba(249, 115, 22, 0.15);
+}
+.counter-roll {
+  display: block;
+  transition: transform 1.2s cubic-bezier(.2,.7,.2,1);
+  will-change: transform;
+}
+.counter-roll > span {
+  display: block;
+  height: 1.4em;
+  color: #f97316;
+}
 .hero-nl-row {
   display: flex;
   gap: 8px;
@@ -1345,21 +1375,76 @@ body {
     </p>
     <script>
     (function() {
-      fetch("https://ibmqaybmhpzdlgyntzbs.supabase.co/functions/v1/brevo-actus-count")
-        .then(function(r) { return r.ok ? r.json() : Promise.reject(new Error("HTTP " + r.status)); })
-        .then(function(d) {
-          if (!d || typeof d.count !== "number" || d.count <= 0) return;
-          var el = document.getElementById("hero-nl-text");
-          if (!el) return;
-          el.textContent = "";
-          el.appendChild(document.createTextNode("Rejoins les "));
-          var strong = document.createElement("strong");
-          strong.style.color = "#f97316";
-          strong.textContent = d.count + " inscrits";
-          el.appendChild(strong);
-          el.appendChild(document.createTextNode(" et reçois les actus chaque jour par mail :"));
-        })
-        .catch(function() { /* fallback : texte initial sans compteur reste affiche */ });
+      var COUNT_URL = "https://ibmqaybmhpzdlgyntzbs.supabase.co/functions/v1/brevo-actus-count";
+      var POLL_MS = 30000;
+      var currentCount = null;
+      var counterEl = null;
+
+      function buildDigit() {
+        var box = document.createElement("span");
+        box.className = "counter-digit";
+        var roll = document.createElement("span");
+        roll.className = "counter-roll";
+        for (var n = 0; n <= 9; n++) {
+          var item = document.createElement("span");
+          item.textContent = String(n);
+          roll.appendChild(item);
+        }
+        box.appendChild(roll);
+        return box;
+      }
+      function setDigit(box, d) {
+        var roll = box.querySelector(".counter-roll");
+        if (roll) roll.style.transform = "translateY(-" + (d * 10) + "%)";
+      }
+      function ensureDigitCount(n) {
+        while (counterEl.children.length < n) counterEl.appendChild(buildDigit());
+        while (counterEl.children.length > n) counterEl.removeChild(counterEl.firstChild);
+      }
+      function pad(s, n) { while (s.length < n) s = "0" + s; return s; }
+      function applyCount(count, initial) {
+        var s = String(count);
+        ensureDigitCount(s.length);
+        var oldStr = (!initial && currentCount !== null) ? pad(String(currentCount), s.length) : null;
+        for (var i = 0; i < s.length; i++) {
+          if (oldStr && oldStr.charAt(i) === s.charAt(i)) continue;
+          (function(box, d, i) {
+            setTimeout(function() { setDigit(box, d); }, (initial ? 220 : 0) + i * 110);
+          })(counterEl.children[i], parseInt(s.charAt(i), 10), i);
+        }
+        currentCount = count;
+      }
+      function buildShell(parent, count) {
+        parent.textContent = "";
+        parent.appendChild(document.createTextNode("Rejoins les "));
+        var strong = document.createElement("strong");
+        strong.style.color = "#f97316";
+        counterEl = document.createElement("span");
+        counterEl.className = "counter-roll-wrap";
+        strong.appendChild(counterEl);
+        strong.appendChild(document.createTextNode(" inscrits"));
+        parent.appendChild(strong);
+        parent.appendChild(document.createTextNode(" et reçois les actus chaque jour par mail :"));
+        ensureDigitCount(String(count).length);
+        requestAnimationFrame(function() { applyCount(count, true); });
+      }
+      function fetchCount(initial) {
+        fetch(COUNT_URL)
+          .then(function(r) { return r.ok ? r.json() : null; })
+          .then(function(d) {
+            if (!d || typeof d.count !== "number" || d.count <= 0) return;
+            var el = document.getElementById("hero-nl-text");
+            if (!el) return;
+            if (initial) buildShell(el, d.count);
+            else if (d.count !== currentCount) applyCount(d.count, false);
+          })
+          .catch(function() {});
+      }
+      fetchCount(true);
+      setInterval(function() { fetchCount(false); }, POLL_MS);
+      document.addEventListener("visibilitychange", function() {
+        if (!document.hidden) fetchCount(false);
+      });
     })();
     </script>
     <form onsubmit="submitHeroNL(event)" id="hero-nl-form">
