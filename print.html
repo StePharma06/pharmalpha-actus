@@ -11,15 +11,17 @@
 <style>
   :root {
     --bg: #ffffff; --bg-alt: #f8f8f8;
-    --border: #e5e5e5; --text: #1a1a1a; --text-secondary: #555; --text-muted: #888;
+    --border: #e5e5e5; --border-light: #efefef;
+    --text: #1a1a1a; --text-secondary: #555; --text-muted: #888;
     --orange: #ff914d; --orange-light: #fff5ed;
     --indigo: #4f46e5; --indigo-light: #eef2ff;
+    --purple: #7c3aed; --purple-light: #f5f3ff;
     --radius: 12px; --shadow: 0 1px 3px rgba(0,0,0,0.06);
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: 'Space Grotesk', 'Segoe UI', system-ui, sans-serif; background: var(--bg-alt); color: var(--text); }
 
-  /* === HEADER WEB (identique au site actus) === */
+  /* === HEADER WEB (identique au site actus, masque a l impression) === */
   .header { background: var(--bg); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
   .header-inner { max-width: 1200px; margin: 0 auto; padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
   .logo-area { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
@@ -50,9 +52,9 @@
 
   /* === CONTENU PRINT === */
   .page-wrapper { max-width: 210mm; margin: 24px auto; background: #fff; border-radius: 8px; box-shadow: var(--shadow); }
-  .content { padding: 14mm 18mm 12mm; }
+  .content { padding: 14mm 16mm 12mm; }
 
-  /* --- En-tête du document imprimé --- */
+  /* --- En-tete du document imprime --- */
   .print-header {
     border-bottom: 2.5px solid #1a1a1a; padding-bottom: 9px; margin-bottom: 14px;
     display: flex; align-items: center; justify-content: space-between;
@@ -64,102 +66,131 @@
   .print-meta { text-align: right; font-size: 8.5pt; color: #666; line-height: 1.6; }
   .print-meta .date-label { font-size: 10.5pt; font-weight: 700; color: #1a1a1a; }
 
-  /* --- Articles --- */
-  .article-row {
-    display: grid; grid-template-columns: 54px 1fr;
-    gap: 0 10px; padding: 8px 0; border-bottom: 1px solid #ebebeb; align-items: start;
+  /* --- Articles en cards style site --- */
+  .article-card {
+    display: grid; grid-template-columns: 60px 1fr;
+    gap: 12px; padding: 9px 11px;
+    background: #fff;
+    border: 1px solid var(--border-light); border-radius: 8px;
+    margin-bottom: 7px;
     break-inside: avoid; page-break-inside: avoid;
   }
   .art-thumb {
-    width: 54px; height: 42px; border-radius: 4px; overflow: hidden; flex-shrink: 0; margin-top: 2px;
+    width: 60px; height: 48px; border-radius: 5px; overflow: hidden; flex-shrink: 0; align-self: start;
   }
   .art-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .art-thumb-empty { background: #f3f4f6; }
 
-  .art-content { display: flex; flex-direction: column; gap: 3px; }
+  .art-content { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
   .cat-badge {
-    display: inline-block; padding: 2px 6px; border-radius: 3px;
+    display: inline-block; padding: 2px 8px; border-radius: 100px;
     font-size: 7pt; font-weight: 700; text-transform: uppercase;
-    letter-spacing: 0.4px; line-height: 1.5; margin-bottom: 3px; border: 1px solid transparent;
+    letter-spacing: 0.4px; line-height: 1.5; margin-bottom: 2px;
+    align-self: start;
   }
-  .cat-pharma_france     { background: #f0f5ff; color: #1e40af; border-color: #c7d9f8; }
-  .cat-pharma_monde      { background: #f5f3ff; color: #6d28d9; border-color: #d8d2f7; }
-  .cat-bonne_nouvelle    { background: #f0fdf6; color: #166534; border-color: #bbf2d4; }
-  .cat-avenir_pharma     { background: #fffdf0; color: #854d0e; border-color: #f0e09a; }
-  .cat-business_officine { background: #fff9f5; color: #c2410c; border-color: #f5c8ab; }
-  .cat-sante             { background: #f2fbf4; color: #15803d; border-color: #b0e8c0; }
-  .cat-default           { background: #f8f8f8; color: #374151; border-color: #ddd; }
+  .cat-pharma_france     { background: var(--orange-light); color: var(--orange); }
+  .cat-pharma_monde      { background: #f5f3ff; color: #6d28d9; }
+  .cat-bonne_nouvelle    { background: #f0fdf6; color: #166534; }
+  .cat-avenir_pharma     { background: var(--indigo-light); color: var(--indigo); }
+  .cat-business_officine { background: #fff9f5; color: #c2410c; }
+  .cat-sante             { background: #f2fbf4; color: #15803d; }
+  .cat-default           { background: #f8f8f8; color: #374151; }
 
   .article-title { font-size: 10.5pt; font-weight: 700; line-height: 1.3; color: #1a1a1a; }
   .article-summary { font-size: 9pt; color: #4a4a4a; line-height: 1.5; }
   .article-source { font-size: 7.5pt; color: #999; margin-top: 1px; }
 
-  /* --- Boîtes LSV + Expression (groupées pour éviter orphelin) --- */
+  /* --- Boites LSV (violet) + Expression (indigo) --- */
   .bottom-boxes {
-    margin-top: 12px;
+    margin-top: 10px;
     display: table; width: 100%;
     break-inside: avoid !important; page-break-inside: avoid !important; -webkit-column-break-inside: avoid !important;
   }
   .bottom-boxes > * { display: block; }
+
   .lsv-box {
-    border: 1.5px solid #1a1a1a; border-radius: 4px;
-    padding: 9px 13px; display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: start;
+    background: var(--purple-light);
+    border: 1.5px solid var(--purple); border-radius: 8px;
+    padding: 10px 14px; display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: start;
     break-inside: avoid; page-break-inside: avoid; -webkit-column-break-inside: avoid;
     margin-bottom: 8px;
   }
   .lsv-label {
-    font-size: 7.5pt; font-weight: 900; text-transform: uppercase; letter-spacing: 0.3px;
-    color: #fff; background: #1a1a1a; padding: 2px 7px; border-radius: 3px; white-space: nowrap; margin-top: 2px;
+    font-size: 7.5pt; font-weight: 900; text-transform: uppercase; letter-spacing: 0.4px;
+    color: #fff; background: var(--purple); padding: 3px 8px; border-radius: 100px; white-space: nowrap; margin-top: 2px;
   }
-  .lsv-title { font-size: 9.5pt; font-weight: 700; line-height: 1.3; margin-bottom: 3px; }
-  .lsv-summary { font-size: 8.5pt; color: #444; line-height: 1.45; }
+  .lsv-title { font-size: 9.5pt; font-weight: 700; line-height: 1.3; margin-bottom: 3px; color: #3b1d8a; }
+  .lsv-summary { font-size: 8.5pt; color: #4b3a72; line-height: 1.5; }
 
   .expr-box {
-    border: 1.5px solid var(--indigo); border-radius: 4px;
-    padding: 9px 13px; display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: start;
+    background: var(--indigo-light);
+    border: 1.5px solid var(--indigo); border-radius: 8px;
+    padding: 10px 14px; display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: start;
     break-inside: avoid; page-break-inside: avoid; -webkit-column-break-inside: avoid;
     break-before: avoid; page-break-before: avoid;
   }
   .expr-label {
-    font-size: 7.5pt; font-weight: 900; text-transform: uppercase; letter-spacing: 0.3px;
-    color: #fff; background: var(--indigo); padding: 2px 7px; border-radius: 3px; white-space: nowrap; margin-top: 2px;
+    font-size: 7.5pt; font-weight: 900; text-transform: uppercase; letter-spacing: 0.4px;
+    color: #fff; background: var(--indigo); padding: 3px 8px; border-radius: 100px; white-space: nowrap; margin-top: 2px;
   }
-  .expr-title { font-size: 9.5pt; font-weight: 700; line-height: 1.3; margin-bottom: 3px; color: #1a1a1a; }
-  .expr-body { font-size: 8.5pt; color: #444; line-height: 1.45; }
+  .expr-title { font-size: 9.5pt; font-weight: 700; line-height: 1.3; margin-bottom: 3px; color: #2b1f7a; }
+  .expr-body { font-size: 8.5pt; color: #3d3470; line-height: 1.5; }
 
-  /* --- Footer URL + QR --- */
-  .url-footer {
-    margin-top: 14px; padding-top: 12px; border-top: 1px solid #e5e5e5;
-    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  /* --- Carte signature bas de page (bio Stephen + QR code) style site --- */
+  .signature-card {
+    margin-top: 12px;
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 14px 18px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 16px;
+    align-items: center;
+    break-inside: avoid; page-break-inside: avoid; -webkit-column-break-inside: avoid;
   }
-  .url-footer-text { font-size: 8.5pt; color: #555; line-height: 1.6; }
-  .url-footer-text strong { color: #1a1a1a; }
-  .url-footer img { width: 72px; height: 72px; flex-shrink: 0; image-rendering: crisp-edges; }
+  .sig-bio { display: grid; grid-template-columns: 64px 1fr; gap: 12px; align-items: center; }
+  .sig-avatar {
+    width: 64px; height: 64px; border-radius: 50%;
+    background: var(--orange);
+    overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .sig-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .sig-name { font-size: 11pt; font-weight: 800; color: #1a1a1a; margin-bottom: 1px; letter-spacing: -0.2px; }
+  .sig-role { font-size: 8pt; color: var(--orange); font-weight: 700; margin-bottom: 4px; }
+  .sig-desc { font-size: 7.5pt; color: #666; line-height: 1.5; }
 
-  /* --- Bandeau bio Stephen --- */
-  .bio-strip {
-    margin-top: 12px; padding: 12px 16px; border-radius: 8px;
-    background: #1a1a1a; color: #fff;
-    display: flex; align-items: center; gap: 14px;
+  .sig-divider {
+    width: 1px; height: 70px; background: var(--border); align-self: center;
   }
-  .bio-photo-print {
-    width: 52px; height: 52px; border-radius: 50%; object-fit: cover; flex-shrink: 0;
-    border: 2.5px solid var(--orange);
+
+  .sig-qr {
+    display: flex; align-items: center; gap: 12px; justify-self: end;
   }
-  .bio-name { font-size: 11pt; font-weight: 800; color: #fff; margin-bottom: 1px; letter-spacing: -0.2px; }
-  .bio-role { font-size: 8pt; color: var(--orange); font-weight: 600; margin-bottom: 4px; }
-  .bio-desc-print { font-size: 8pt; color: #ccc; line-height: 1.5; }
+  .sig-qr-text {
+    font-size: 8pt; color: var(--text-secondary); line-height: 1.45; text-align: right;
+  }
+  .sig-qr-text strong { color: #1a1a1a; }
+  .sig-qr img {
+    width: 78px; height: 78px; flex-shrink: 0;
+    image-rendering: crisp-edges;
+    border: 1px solid var(--border); border-radius: 6px; padding: 3px; background: #fff;
+  }
 
   .loading { padding: 40px; text-align: center; color: #666; }
 
   /* === PRINT MEDIA === */
   @media print {
-    @page { size: A4; margin: 13mm 18mm 10mm; }
+    @page { size: A4; margin: 12mm 14mm 10mm; }
     body { background: #fff; font-size: 10pt; }
     .header { display: none !important; }
     .page-wrapper { max-width: 100%; margin: 0; border-radius: 0; box-shadow: none; }
     .content { padding: 0; }
     a { color: inherit; text-decoration: none; }
+    /* Force restitution couleurs pour bulles violettes / oranges / indigo */
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color-adjust: exact !important; }
   }
 
   @media (max-width: 600px) {
@@ -167,12 +198,16 @@
     .header-inner { padding: 10px 16px; }
     .page-wrapper { margin: 0; border-radius: 0; }
     .content { padding: 14px; }
+    .signature-card { grid-template-columns: 1fr; gap: 14px; }
+    .sig-divider { display: none; }
+    .sig-qr { justify-self: start; }
+    .sig-qr-text { text-align: left; }
   }
 </style>
 </head>
 <body>
 
-<!-- HEADER WEB — identique au site actus, masqué à l'impression -->
+<!-- HEADER WEB - masque a l impression -->
 <header class="header">
   <div class="header-inner">
     <div class="logo-area">
@@ -226,7 +261,7 @@ function catLabel(c) { return CAT_LABELS[c]||c||""; }
 function buildHtml(articles, lsv, expr, displayDate) {
   var html = "";
 
-  // En-tête document avec double logo
+  // En-tete document avec double logo
   html += "<div class=\"print-header\">";
   html += "<div class=\"print-logos\">";
   html += "<img src=\"assets/logo_pharmactus.png\" alt=\"Pharm'Actus\" class=\"print-logo-actus\">";
@@ -236,20 +271,18 @@ function buildHtml(articles, lsv, expr, displayDate) {
   html += "<div class=\"print-meta\"><div class=\"date-label\">"+esc(fmtDate(displayDate))+"</div><div>pharmalpha.fr/actus</div></div>";
   html += "</div>";
 
-  // Articles avec miniature
+  // Articles en cards (descriptif complet, pas tronque)
   articles.slice(0, 6).forEach(function(a) {
     var cat = a.categorie || "default";
     var imgUrl = a.image_url || "";
-    html += "<div class=\"article-row\">";
+    html += "<div class=\"article-card\">";
 
-    // Miniature
     if (imgUrl) {
       html += "<div class=\"art-thumb\"><img src=\""+esc(imgUrl)+"\" alt=\"\" onerror=\"this.parentNode.className='art-thumb art-thumb-empty'\"></div>";
     } else {
       html += "<div class=\"art-thumb art-thumb-empty\"></div>";
     }
 
-    // Badge + contenu
     html += "<div class=\"art-content\">";
     html += "<span class=\"cat-badge "+catClass(cat)+"\">"+esc(catLabel(cat))+"</span>";
     html += "<div class=\"article-title\">"+esc(a.titre||a.title||"")+"</div>";
@@ -260,9 +293,7 @@ function buildHtml(articles, lsv, expr, displayDate) {
     html += "</div>";
   });
 
-  // Bas de page splitte en 2 blocs atomiques : bottom-boxes (expr+lsv) ET signature (url+bio).
-  // Si bottom-boxes tient en bas page 1 mais pas la signature, seule la signature bascule.
-  // Plus de "tout-ou-rien" qui creait un grand vide page 1.
+  // Bas de page : LSV (violet) + Expression (indigo)
   var hasLsv = !!lsv;
   var hasExpr = !!(expr && expr.expression);
 
@@ -289,24 +320,26 @@ function buildHtml(articles, lsv, expr, displayDate) {
     html += "</div>";
   }
 
-  // Signature (URL + bio) groupee dans son propre wrapper atomique.
-  html += "<div class=\"signature-block\" style=\"break-inside:avoid;page-break-inside:avoid;-webkit-column-break-inside:avoid;display:block;\">";
+  // Carte signature bas de page : bio Stephen + QR code (style site)
+  html += "<div class=\"signature-card\">";
 
-  html += "<div class=\"url-footer\">";
-  html += "<div class=\"url-footer-text\">Retrouvez toute l'actus pharma tous les jours sur<br><strong>pharmalpha.fr/actus</strong></div>";
-  html += "<img src=\"https://api.qrserver.com/v1/create-qr-code/?size=144x144&data=https%3A%2F%2Fpharmalpha.fr%2Factus&color=1a1a1a&bgcolor=ffffff&qzone=1&format=png\" alt=\"QR Code pharmalpha.fr/actus\">";
-  html += "</div>";
-
-  html += "<div class=\"bio-strip\">";
-  html += "<img src=\"assets/stephen.png\" alt=\"Stephen ROBERT\" class=\"bio-photo-print\">";
+  html += "<div class=\"sig-bio\">";
+  html += "<div class=\"sig-avatar\"><img src=\"assets/stephen.png\" alt=\"Stephen ROBERT\"></div>";
   html += "<div>";
-  html += "<div class=\"bio-name\">Stephen ROBERT</div>";
-  html += "<div class=\"bio-role\">Consultant, Formateur &amp; Communicant Pharma</div>";
-  html += "<div class=\"bio-desc-print\">Docteur en Pharmacie, diplôm&eacute; d'un Mast&egrave;re Marketing &amp; Management des Industries de Sant&eacute;. Avec Pharm'Actus, je d&eacute;crypte l'actu pharma chaque matin pour que tu restes <em>in</em>, sans y passer des heures.</div>";
+  html += "<div class=\"sig-name\">Stephen ROBERT</div>";
+  html += "<div class=\"sig-role\">Consultant, Formateur &amp; Communicant Pharma</div>";
+  html += "<div class=\"sig-desc\">Docteur en Pharmacie, dipl&ocirc;m&eacute; d'un Mast&egrave;re Marketing &amp; Management des Industries de Sant&eacute;. Avec Pharm'Actus, je d&eacute;crypte l'actu pharma chaque matin pour que tu restes <em>in</em>, sans y passer des heures.</div>";
   html += "</div>";
   html += "</div>";
 
-  html += "</div>"; // fin signature-block
+  html += "<div class=\"sig-divider\"></div>";
+
+  html += "<div class=\"sig-qr\">";
+  html += "<div class=\"sig-qr-text\">Retrouve toute l'actu en d&eacute;tail<br><strong>en scannant ce QR Code</strong></div>";
+  html += "<img src=\"https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https%3A%2F%2Fpharmalpha.fr%2Factus&color=1a1a1a&bgcolor=ffffff&qzone=1&format=png\" alt=\"QR Code pharmalpha.fr/actus\">";
+  html += "</div>";
+
+  html += "</div>"; // fin signature-card
 
   return html;
 }
