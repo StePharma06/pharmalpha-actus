@@ -1292,10 +1292,28 @@ body {
       <img src="assets/logo_pharmactus.png" alt="Pharm'Actus">
     </div>
     <div class="header-right">
-      <a href="/actus/print.html" class="header-link">
+      <a href="/actus/print.html" onclick="printActus(event)" class="header-link">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
         Imprimer
       </a>
+      <script>
+      function printActus(e) {
+        if (e) e.preventDefault();
+        var existing = document.getElementById("print-iframe");
+        if (existing) existing.parentNode.removeChild(existing);
+        var iframe = document.createElement("iframe");
+        iframe.id = "print-iframe";
+        iframe.style.cssText = "position:fixed;right:0;bottom:0;width:0;height:0;border:0;visibility:hidden;";
+        iframe.src = "/actus/print.html";
+        iframe.onload = function() {
+          setTimeout(function() {
+            if (iframe.parentNode) iframe.parentNode.removeChild(iframe);
+          }, 10000);
+        };
+        document.body.appendChild(iframe);
+        return false;
+      }
+      </script>
       <a href="/actus/archives.html" class="header-link header-link-archives">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 8v13H3V8"/><path d="M1 3h22v5H1z"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
         Archives
