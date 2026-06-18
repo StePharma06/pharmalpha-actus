@@ -105,9 +105,11 @@ def _build_trends_site_block(data):
     )
 
     return (
+        f'<div style="max-width:1200px;margin:0 auto;padding:0 24px;">'
         f'<section class="radar-pharmacien" aria-labelledby="rp-titre" '
-        f'style="margin:32px 0;padding:24px;background:#fff;border-radius:12px;'
-        f'border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);">'
+        f'style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;'
+        f'border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);'
+        f'max-width:520px;">'
 
         f'<div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;">'
         f'<span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;'
@@ -144,6 +146,7 @@ def _build_trends_site_block(data):
         f'<p style="margin:12px 0 0;font-size:11px;color:#9ca3af;text-align:right;">'
         f'Source&nbsp;: Google Trends France (pytrends) &middot; 7 jours glissants</p>'
         f'</section>'
+        f'</div>'
     )
 
 
