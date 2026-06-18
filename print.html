@@ -258,10 +258,11 @@ function buildHtml(articles, lsv, expr, displayDate) {
     html += "</div>";
   });
 
-  // Bas de page groupé dans un seul wrapper block — seule approche fiable pour break-inside en Chrome
+  // Bas de page splitte en 2 blocs atomiques : bottom-boxes (expr+lsv) ET signature (url+bio).
+  // Si bottom-boxes tient en bas page 1 mais pas la signature, seule la signature bascule.
+  // Plus de "tout-ou-rien" qui creait un grand vide page 1.
   var hasLsv = !!lsv;
   var hasExpr = !!(expr && expr.expression);
-  html += "<div style=\"break-inside:avoid;page-break-inside:avoid;-webkit-column-break-inside:avoid;display:block;\">";
 
   if (hasLsv || hasExpr) {
     html += "<div class=\"bottom-boxes\">";
@@ -286,7 +287,9 @@ function buildHtml(articles, lsv, expr, displayDate) {
     html += "</div>";
   }
 
-  // URL footer + bio dans le même wrapper (même flux, même page)
+  // Signature (URL + bio) groupee dans son propre wrapper atomique.
+  html += "<div class=\"signature-block\" style=\"break-inside:avoid;page-break-inside:avoid;-webkit-column-break-inside:avoid;display:block;\">";
+
   html += "<div class=\"url-footer\">";
   html += "<div class=\"url-footer-text\">Retrouvez toute l'actus pharma tous les jours sur<br><strong>pharmalpha.fr/actus</strong></div>";
   html += "<img src=\"https://api.qrserver.com/v1/create-qr-code/?size=144x144&data=https%3A%2F%2Fpharmalpha.fr%2Factus&color=1a1a1a&bgcolor=ffffff&qzone=1&format=png\" alt=\"QR Code pharmalpha.fr/actus\">";
@@ -301,7 +304,7 @@ function buildHtml(articles, lsv, expr, displayDate) {
   html += "</div>";
   html += "</div>";
 
-  html += "</div>"; // fin wrapper break-inside:avoid
+  html += "</div>"; // fin signature-block
 
   return html;
 }
