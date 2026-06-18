@@ -26,6 +26,22 @@ SENDER_NAME = "Pharm'Actus"
 REPLY_TO_EMAIL = "stephen.pharmacien@gmail.com"
 
 
+_EMDASH_RE = re.compile(r'\s*[—–]\s*')
+
+def _no_emdash(s: str) -> str:
+    """Remplace tout tiret cadratin/demi-cadratin par ' - ' dans le texte généré."""
+    if not isinstance(s, str):
+        return s
+    return _EMDASH_RE.sub(' - ', s).strip()
+
+def _clean_article(a: dict) -> dict:
+    """Sanitise les champs texte d'un article : supprime em/en dashes."""
+    for field in ("titre", "resume", "full_text", "badge_label"):
+        if field in a:
+            a[field] = _no_emdash(a[field])
+    return a
+
+
 def md_to_html(text: str) -> str:
     """Convertit **bold** en <strong>bold</strong> et *italic* en <em>italic</em>.
 
@@ -513,8 +529,8 @@ AUTORISE pour les Rx :
 Le merch / promotion commerciale n'est OK QUE pour : OTC, complements alimentaires, dermo-cosmetique, parapharmacie, dispositifs medicaux non rembourses, ou les SERVICES officinaux (vaccination, BPM, missions).
 
 Pour chaque article, genere :
-- "titre" : accrocheur, max 80 car, style direct de Stephen
-- "resume" : 2-3 phrases percutantes, angle pharmacien
+- "titre" : accrocheur, max 80 car, style direct de Stephen. N'utilise JAMAIS le tiret cadratin (—) ni le tiret demi-cadratin (–) dans le titre. Si tu veux marquer une pause ou une opposition, utilise une virgule, un deux-points ou une nouvelle phrase.
+- "resume" : 2-3 phrases percutantes, angle pharmacien. Meme regle : pas de tiret cadratin/demi-cadratin.
 - "full_text" : 300-450 mots, 5-7 paragraphes separes par \\n\\n. Style Stephen : phrases courtes, chiffres concrets, impact officine, humour si pertinent. 1ere phrase = accroche forte. Ce texte est la version COMPLETE indexable par Google : developpe chaque argument, cite les chiffres cles, evite les formules vagues.
 - "categorie" : voir ci-dessus
 - "badge_label" : voir ci-dessus
@@ -547,7 +563,7 @@ JSON UNIQUEMENT (tableau de 5 objets) :
     text = response.content[0].text.strip()
     json_match = re.search(r"\[[\s\S]*\]", text)
     if json_match:
-        return json.loads(json_match.group())
+        return [_clean_article(a) for a in json.loads(json_match.group())]
 
     print("  [ERROR] Claude n'a pas retourne de JSON valide")
     return []
@@ -637,7 +653,7 @@ Pour les tags : 3 a 5 mots-cles thematiques en francais, minuscules, sans accent
         lsv["badge_label"] = "Le Saviez-Vous"
         lsv["source"] = "Pharm'Alpha"
         lsv["source_url"] = ""
-        return lsv
+        return _clean_article(lsv)
 
     print("  [ERROR] Claude n'a pas retourne de JSON valide pour le LSV")
     return None
@@ -919,8 +935,8 @@ Le confidence_score (0-1) reflete ton niveau de certitude sur la qualite des chi
     resume = chapo[:280] + ("..." if len(chapo) > 280 else "")
 
     return {
-        "titre": biz.get("titre", "Business Officine"),
-        "resume": resume,
+        "titre": _no_emdash(biz.get("titre", "Business Officine")),
+        "resume": _no_emdash(resume),
         "full_text": full_text,
         "categorie": "business_officine",
         "badge_label": "Business",
@@ -1576,6 +1592,8 @@ def _build_article_page_html(article_id: str, titre_raw: str, resume_raw: str, i
     full_text_raw: complete article body (300-500 words). Paragraphs separated by
     \n\n are each rendered as a <p>. If empty, falls back to resume.
     """
+    titre_raw = _no_emdash(titre_raw)
+    resume_raw = _no_emdash(resume_raw)
     titre = titre_raw.replace('"', "&quot;").replace("'", "&#39;")
     resume = resume_raw.replace('"', "&quot;").replace("'", "&#39;")
 
