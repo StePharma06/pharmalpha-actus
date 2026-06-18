@@ -334,7 +334,7 @@ body {
 }
 .hero-nl input:focus { border-color: var(--orange); }
 .hero-nl input::placeholder { color: var(--text-dim); }
-.hero-nl button {
+.hero-nl button:not(.nl-freq-btn) {
   padding: 10px 20px;
   border-radius: 100px;
   border: none;
@@ -347,8 +347,8 @@ body {
   transition: background 0.15s;
   white-space: nowrap;
 }
-.hero-nl button:hover { background: var(--orange-hover); }
-.hero-nl button:disabled { opacity: 0.6; cursor: not-allowed; }
+.hero-nl button:not(.nl-freq-btn):hover { background: var(--orange-hover); }
+.hero-nl button:not(.nl-freq-btn):disabled { opacity: 0.6; cursor: not-allowed; }
 .hero-nl-captcha {
   margin-top: 8px;
   display: none;
