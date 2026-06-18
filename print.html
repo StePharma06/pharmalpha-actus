@@ -7,7 +7,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<script defer src="assets/site-nav.js"></script>
 <style>
   :root {
     --bg: #ffffff; --bg-alt: #f8f8f8;
@@ -21,7 +20,7 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: 'Space Grotesk', 'Segoe UI', system-ui, sans-serif; background: var(--bg-alt); color: var(--text); }
 
-  /* === HEADER WEB (identique au site actus, masque a l impression) === */
+  /* === HEADER WEB (visible a l ecran, masque a l impression) === */
   .header { background: var(--bg); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
   .header-inner { max-width: 1200px; margin: 0 auto; padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
   .logo-area { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
@@ -52,40 +51,56 @@
 
   /* === CONTENU PRINT === */
   .page-wrapper { max-width: 210mm; margin: 24px auto; background: #fff; border-radius: 8px; box-shadow: var(--shadow); }
-  .content { padding: 14mm 16mm 12mm; }
+  .content { padding: 10mm 11mm; }
 
-  /* --- En-tete du document imprime --- */
+  /* --- En-tete compact (logo seul + date a droite) --- */
   .print-header {
-    border-bottom: 2.5px solid #1a1a1a; padding-bottom: 9px; margin-bottom: 14px;
+    border-bottom: 2px solid #1a1a1a; padding-bottom: 6px; margin-bottom: 8px;
     display: flex; align-items: center; justify-content: space-between;
   }
-  .print-logos { display: flex; align-items: center; gap: 10px; }
-  .print-logo-actus { height: 28pt; width: auto; display: block; }
-  .print-logo-sep { width: 1px; height: 22pt; background: #ccc; margin: 0 2px; }
-  .print-logo-alpha { height: 22pt; width: auto; display: block; opacity: 0.75; }
-  .print-meta { text-align: right; font-size: 8.5pt; color: #666; line-height: 1.6; }
-  .print-meta .date-label { font-size: 10.5pt; font-weight: 700; color: #1a1a1a; }
+  .print-logo-actus { height: 22pt; width: auto; display: block; }
+  .print-meta { text-align: right; font-size: 7.5pt; color: #666; line-height: 1.5; }
+  .print-meta .date-label { font-size: 9.5pt; font-weight: 700; color: #1a1a1a; }
 
-  /* --- Articles en cards style site --- */
+  /* --- Expression du jour (tout en haut, bulle indigo compacte) --- */
+  .expr-box {
+    background: var(--indigo-light);
+    border: 1.2px solid var(--indigo); border-radius: 7px;
+    padding: 7px 11px; display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: start;
+    margin-bottom: 8px;
+    break-inside: avoid; page-break-inside: avoid;
+  }
+  .expr-label {
+    font-size: 7pt; font-weight: 900; text-transform: uppercase; letter-spacing: 0.4px;
+    color: #fff; background: var(--indigo); padding: 2px 7px; border-radius: 100px; white-space: nowrap; margin-top: 1px;
+  }
+  .expr-title { font-size: 9pt; font-weight: 700; line-height: 1.25; margin-bottom: 2px; color: #2b1f7a; }
+  .expr-body { font-size: 8pt; color: #3d3470; line-height: 1.4; }
+
+  /* --- 6 actus en grid 2 colonnes (3 lignes x 2 cols) --- */
+  .articles-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 6px;
+    margin-bottom: 8px;
+  }
   .article-card {
-    display: grid; grid-template-columns: 60px 1fr;
-    gap: 12px; padding: 9px 11px;
+    display: grid; grid-template-columns: 40px 1fr;
+    gap: 8px; padding: 6px 8px;
     background: #fff;
-    border: 1px solid var(--border-light); border-radius: 8px;
-    margin-bottom: 7px;
+    border: 1px solid var(--border-light); border-radius: 6px;
     break-inside: avoid; page-break-inside: avoid;
   }
   .art-thumb {
-    width: 60px; height: 48px; border-radius: 5px; overflow: hidden; flex-shrink: 0; align-self: start;
+    width: 40px; height: 32px; border-radius: 4px; overflow: hidden; flex-shrink: 0; align-self: start;
   }
   .art-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .art-thumb-empty { background: #f3f4f6; }
 
-  .art-content { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+  .art-content { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
   .cat-badge {
-    display: inline-block; padding: 2px 8px; border-radius: 100px;
-    font-size: 7pt; font-weight: 700; text-transform: uppercase;
-    letter-spacing: 0.4px; line-height: 1.5; margin-bottom: 2px;
+    display: inline-block; padding: 1px 6px; border-radius: 100px;
+    font-size: 6.5pt; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.3px; line-height: 1.4; margin-bottom: 1px;
     align-self: start;
   }
   .cat-pharma_france     { background: var(--orange-light); color: var(--orange); }
@@ -96,100 +111,74 @@
   .cat-sante             { background: #f2fbf4; color: #15803d; }
   .cat-default           { background: #f8f8f8; color: #374151; }
 
-  .article-title { font-size: 10.5pt; font-weight: 700; line-height: 1.3; color: #1a1a1a; }
-  .article-summary { font-size: 9pt; color: #4a4a4a; line-height: 1.5; }
-  .article-source { font-size: 7.5pt; color: #999; margin-top: 1px; }
+  .article-title { font-size: 8.5pt; font-weight: 700; line-height: 1.22; color: #1a1a1a; }
+  .article-summary { font-size: 7.5pt; color: #4a4a4a; line-height: 1.35; }
+  .article-source { font-size: 6.5pt; color: #999; margin-top: 1px; font-style: italic; }
 
-  /* --- Boites LSV (violet) + Expression (indigo) --- */
-  .bottom-boxes {
-    margin-top: 10px;
-    display: table; width: 100%;
-    break-inside: avoid !important; page-break-inside: avoid !important; -webkit-column-break-inside: avoid !important;
-  }
-  .bottom-boxes > * { display: block; }
-
+  /* --- LSV (violet, compact) --- */
   .lsv-box {
     background: var(--purple-light);
-    border: 1.5px solid var(--purple); border-radius: 8px;
-    padding: 10px 14px; display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: start;
-    break-inside: avoid; page-break-inside: avoid; -webkit-column-break-inside: avoid;
+    border: 1.2px solid var(--purple); border-radius: 7px;
+    padding: 7px 11px; display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: start;
     margin-bottom: 8px;
+    break-inside: avoid; page-break-inside: avoid;
   }
   .lsv-label {
-    font-size: 7.5pt; font-weight: 900; text-transform: uppercase; letter-spacing: 0.4px;
-    color: #fff; background: var(--purple); padding: 3px 8px; border-radius: 100px; white-space: nowrap; margin-top: 2px;
+    font-size: 7pt; font-weight: 900; text-transform: uppercase; letter-spacing: 0.4px;
+    color: #fff; background: var(--purple); padding: 2px 7px; border-radius: 100px; white-space: nowrap; margin-top: 1px;
   }
-  .lsv-title { font-size: 9.5pt; font-weight: 700; line-height: 1.3; margin-bottom: 3px; color: #3b1d8a; }
-  .lsv-summary { font-size: 8.5pt; color: #4b3a72; line-height: 1.5; }
+  .lsv-title { font-size: 9pt; font-weight: 700; line-height: 1.25; margin-bottom: 2px; color: #3b1d8a; }
+  .lsv-summary { font-size: 8pt; color: #4b3a72; line-height: 1.4; }
 
-  .expr-box {
-    background: var(--indigo-light);
-    border: 1.5px solid var(--indigo); border-radius: 8px;
-    padding: 10px 14px; display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: start;
-    break-inside: avoid; page-break-inside: avoid; -webkit-column-break-inside: avoid;
-    break-before: avoid; page-break-before: avoid;
-  }
-  .expr-label {
-    font-size: 7.5pt; font-weight: 900; text-transform: uppercase; letter-spacing: 0.4px;
-    color: #fff; background: var(--indigo); padding: 3px 8px; border-radius: 100px; white-space: nowrap; margin-top: 2px;
-  }
-  .expr-title { font-size: 9.5pt; font-weight: 700; line-height: 1.3; margin-bottom: 3px; color: #2b1f7a; }
-  .expr-body { font-size: 8.5pt; color: #3d3470; line-height: 1.5; }
-
-  /* --- Carte signature bas de page (bio Stephen + QR code) style site --- */
+  /* --- Bandeau bio Stephen + QR code (compact, 3 colonnes) --- */
   .signature-card {
-    margin-top: 12px;
     background: var(--bg-alt);
     border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 14px 18px;
+    border-radius: 10px;
+    padding: 8px 12px;
     display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    gap: 16px;
+    grid-template-columns: auto 1fr auto;
+    gap: 12px;
     align-items: center;
-    break-inside: avoid; page-break-inside: avoid; -webkit-column-break-inside: avoid;
+    break-inside: avoid; page-break-inside: avoid;
   }
-  .sig-bio { display: grid; grid-template-columns: 64px 1fr; gap: 12px; align-items: center; }
   .sig-avatar {
-    width: 64px; height: 64px; border-radius: 50%;
+    width: 48px; height: 48px; border-radius: 50%;
     background: var(--orange);
     overflow: hidden;
-    display: flex; align-items: center; justify-content: center;
     flex-shrink: 0;
   }
   .sig-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .sig-name { font-size: 11pt; font-weight: 800; color: #1a1a1a; margin-bottom: 1px; letter-spacing: -0.2px; }
-  .sig-role { font-size: 8pt; color: var(--orange); font-weight: 700; margin-bottom: 4px; }
-  .sig-desc { font-size: 7.5pt; color: #666; line-height: 1.5; }
-
-  .sig-divider {
-    width: 1px; height: 70px; background: var(--border); align-self: center;
-  }
-
-  .sig-qr {
-    display: flex; align-items: center; gap: 12px; justify-self: end;
-  }
-  .sig-qr-text {
-    font-size: 8pt; color: var(--text-secondary); line-height: 1.45; text-align: right;
-  }
+  .sig-name { font-size: 9.5pt; font-weight: 800; color: #1a1a1a; margin-bottom: 1px; letter-spacing: -0.2px; }
+  .sig-role { font-size: 7pt; color: var(--orange); font-weight: 700; margin-bottom: 2px; }
+  .sig-desc { font-size: 6.8pt; color: #666; line-height: 1.35; }
+  .sig-qr-block { display: flex; align-items: center; gap: 8px; }
+  .sig-qr-text { font-size: 7pt; color: var(--text-secondary); line-height: 1.35; text-align: right; max-width: 110px; }
   .sig-qr-text strong { color: #1a1a1a; }
-  .sig-qr img {
-    width: 78px; height: 78px; flex-shrink: 0;
+  .sig-qr-block img {
+    width: 56px; height: 56px; flex-shrink: 0;
     image-rendering: crisp-edges;
-    border: 1px solid var(--border); border-radius: 6px; padding: 3px; background: #fff;
+    background: #fff;
   }
 
   .loading { padding: 40px; text-align: center; color: #666; }
 
+  .print-tip {
+    background: #fffbeb; border: 1px solid #fde68a; color: #92400e;
+    font-size: 12px; padding: 8px 14px; border-radius: 8px;
+    margin: 12px auto; max-width: 210mm;
+    text-align: center;
+  }
+  .print-tip strong { color: #78350f; }
+
   /* === PRINT MEDIA === */
   @media print {
-    @page { size: A4; margin: 12mm 14mm 10mm; }
+    @page { size: A4 portrait; margin: 8mm 9mm; }
     body { background: #fff; font-size: 10pt; }
-    .header { display: none !important; }
+    .header, .print-tip { display: none !important; }
     .page-wrapper { max-width: 100%; margin: 0; border-radius: 0; box-shadow: none; }
     .content { padding: 0; }
     a { color: inherit; text-decoration: none; }
-    /* Force restitution couleurs pour bulles violettes / oranges / indigo */
     * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color-adjust: exact !important; }
   }
 
@@ -198,9 +187,9 @@
     .header-inner { padding: 10px 16px; }
     .page-wrapper { margin: 0; border-radius: 0; }
     .content { padding: 14px; }
-    .signature-card { grid-template-columns: 1fr; gap: 14px; }
-    .sig-divider { display: none; }
-    .sig-qr { justify-self: start; }
+    .articles-grid { grid-template-columns: 1fr; }
+    .signature-card { grid-template-columns: 1fr; gap: 12px; }
+    .sig-qr-block { justify-content: flex-start; }
     .sig-qr-text { text-align: left; }
   }
 </style>
@@ -230,12 +219,13 @@
   </div>
 </header>
 
+<div class="print-tip">
+  💡 <strong>Conseil</strong> : dans la boite d'impression, decoche "En-tetes et pieds de page" pour un rendu nickel (Chrome &gt; Plus de parametres).
+</div>
+
 <div class="page-wrapper">
   <div class="content">
-
-    <!-- Contenu dynamique (articles + bas de page en un seul flux) -->
     <div id="container"><p class="loading">Chargement des actus...</p></div>
-
   </div>
 </div>
 
@@ -261,85 +251,66 @@ function catLabel(c) { return CAT_LABELS[c]||c||""; }
 function buildHtml(articles, lsv, expr, displayDate) {
   var html = "";
 
-  // En-tete document avec double logo
+  // En-tete compact : logo + date
   html += "<div class=\"print-header\">";
-  html += "<div class=\"print-logos\">";
   html += "<img src=\"assets/logo_pharmactus.png\" alt=\"Pharm'Actus\" class=\"print-logo-actus\">";
-  html += "<div class=\"print-logo-sep\"></div>";
-  html += "<img src=\"assets/logo_pharmalpha.png\" alt=\"Pharm'Alpha\" class=\"print-logo-alpha\">";
-  html += "</div>";
   html += "<div class=\"print-meta\"><div class=\"date-label\">"+esc(fmtDate(displayDate))+"</div><div>pharmalpha.fr/actus</div></div>";
   html += "</div>";
 
-  // Articles en cards (descriptif complet, pas tronque)
+  // Expression du jour TOUT EN HAUT
+  var hasExpr = !!(expr && expr.expression);
+  if (hasExpr) {
+    var texte = (expr.texte||"").replace(/\*\*([^*]+)\*\*/g,"$1").replace(/\*([^*]+)\*/g,"$1").replace(/\n+/g," ").trim();
+    html += "<div class=\"expr-box\">";
+    html += "<div class=\"expr-label\">Expression du jour</div><div>";
+    html += "<div class=\"expr-title\">"+esc(expr.expression)+"</div>";
+    html += "<div class=\"expr-body\">"+esc(texte)+"</div>";
+    html += "</div></div>";
+  }
+
+  // 6 actus en 2 colonnes
+  html += "<div class=\"articles-grid\">";
   articles.slice(0, 6).forEach(function(a) {
     var cat = a.categorie || "default";
     var imgUrl = a.image_url || "";
     html += "<div class=\"article-card\">";
-
     if (imgUrl) {
       html += "<div class=\"art-thumb\"><img src=\""+esc(imgUrl)+"\" alt=\"\" onerror=\"this.parentNode.className='art-thumb art-thumb-empty'\"></div>";
     } else {
       html += "<div class=\"art-thumb art-thumb-empty\"></div>";
     }
-
     html += "<div class=\"art-content\">";
     html += "<span class=\"cat-badge "+catClass(cat)+"\">"+esc(catLabel(cat))+"</span>";
     html += "<div class=\"article-title\">"+esc(a.titre||a.title||"")+"</div>";
     html += "<div class=\"article-summary\">"+esc(a.resume||a.summary||"")+"</div>";
     if (a.source) html += "<div class=\"article-source\">"+esc(a.source)+"</div>";
     html += "</div>";
-
     html += "</div>";
   });
+  html += "</div>";
 
-  // Bas de page : LSV (violet) + Expression (indigo)
-  var hasLsv = !!lsv;
-  var hasExpr = !!(expr && expr.expression);
-
-  if (hasLsv || hasExpr) {
-    html += "<div class=\"bottom-boxes\">";
-
-    if (hasLsv) {
-      html += "<div class=\"lsv-box\">";
-      html += "<div class=\"lsv-label\">Le saviez-vous ?</div><div>";
-      html += "<div class=\"lsv-title\">"+esc(lsv.titre||lsv.title||"")+"</div>";
-      html += "<div class=\"lsv-summary\">"+esc(lsv.resume||lsv.summary||"")+"</div>";
-      html += "</div></div>";
-    }
-
-    if (hasExpr) {
-      var texte = (expr.texte||"").replace(/\*\*([^*]+)\*\*/g,"$1").replace(/\*([^*]+)\*/g,"$1").replace(/\n+/g," ").trim();
-      html += "<div class=\"expr-box\">";
-      html += "<div class=\"expr-label\">Expression du jour</div><div>";
-      html += "<div class=\"expr-title\">"+esc(expr.expression)+"</div>";
-      html += "<div class=\"expr-body\">"+esc(texte)+"</div>";
-      html += "</div></div>";
-    }
-
-    html += "</div>";
+  // LSV (compact)
+  if (lsv) {
+    html += "<div class=\"lsv-box\">";
+    html += "<div class=\"lsv-label\">Le saviez-vous ?</div><div>";
+    html += "<div class=\"lsv-title\">"+esc(lsv.titre||lsv.title||"")+"</div>";
+    html += "<div class=\"lsv-summary\">"+esc(lsv.resume||lsv.summary||"")+"</div>";
+    html += "</div></div>";
   }
 
-  // Carte signature bas de page : bio Stephen + QR code (style site)
+  // Bandeau bio Stephen + QR code (3 colonnes : avatar | bio | QR)
   html += "<div class=\"signature-card\">";
-
-  html += "<div class=\"sig-bio\">";
   html += "<div class=\"sig-avatar\"><img src=\"assets/stephen.png\" alt=\"Stephen ROBERT\"></div>";
   html += "<div>";
   html += "<div class=\"sig-name\">Stephen ROBERT</div>";
   html += "<div class=\"sig-role\">Consultant, Formateur &amp; Communicant Pharma</div>";
-  html += "<div class=\"sig-desc\">Docteur en Pharmacie, dipl&ocirc;m&eacute; d'un Mast&egrave;re Marketing &amp; Management des Industries de Sant&eacute;. Avec Pharm'Actus, je d&eacute;crypte l'actu pharma chaque matin pour que tu restes <em>in</em>, sans y passer des heures.</div>";
+  html += "<div class=\"sig-desc\">Docteur en Pharmacie, dipl&ocirc;m&eacute; d'un Mast&egrave;re Marketing &amp; Management des Industries de Sant&eacute;. Je d&eacute;crypte l'actu pharma chaque matin pour que tu restes <em>in</em>.</div>";
   html += "</div>";
-  html += "</div>";
-
-  html += "<div class=\"sig-divider\"></div>";
-
-  html += "<div class=\"sig-qr\">";
-  html += "<div class=\"sig-qr-text\">Retrouve toute l'actu en d&eacute;tail<br><strong>en scannant ce QR Code</strong></div>";
+  html += "<div class=\"sig-qr-block\">";
+  html += "<div class=\"sig-qr-text\">Retrouve toute l'actu<br><strong>en scannant ce QR</strong></div>";
   html += "<img src=\"https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https%3A%2F%2Fpharmalpha.fr%2Factus&color=1a1a1a&bgcolor=ffffff&qzone=1&format=png\" alt=\"QR Code pharmalpha.fr/actus\">";
   html += "</div>";
-
-  html += "</div>"; // fin signature-card
+  html += "</div>";
 
   return html;
 }
@@ -373,7 +344,6 @@ function render() {
     var lsv = todayLsv || all.filter(function(a){ return a.categorie==="lsv"; })[0];
     var displayDate = todayArts.length>0 ? today : (articles[0]&&articles[0].date||today);
     container.innerHTML = buildHtml(articles, lsv, expr, displayDate);
-    // Auto-declenchement de la dialog d impression apres chargement images (QR via API externe)
     var imgs = Array.from(container.querySelectorAll("img"));
     Promise.all(imgs.map(function(img) {
       return img.complete ? Promise.resolve() : new Promise(function(r) { img.onload = img.onerror = r; });
