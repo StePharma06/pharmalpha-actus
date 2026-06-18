@@ -23,6 +23,12 @@ on:
 permissions:
   contents: read
 
+# Un seul run à la fois : si un push rapide en déclenche plusieurs,
+# le précédent est annulé avant que le suivant ne pousse → plus de race condition.
+concurrency:
+  group: sync-to-vercel
+  cancel-in-progress: true
+
 jobs:
   sync:
     if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' || github.event_name == 'push' }}
