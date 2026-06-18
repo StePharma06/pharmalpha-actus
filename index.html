@@ -339,6 +339,29 @@ body {
   .hero-nl-captcha { transform: scale(0.85); transform-origin: left; }
 }
 
+/* === FREQ STEP (choix quotidien / hebdo) === */
+.nl-freq-step {
+  margin-top: 10px;
+  animation: nlFadeIn 0.2s ease;
+}
+@keyframes nlFadeIn { from { opacity:0; transform:translateY(-4px); } to { opacity:1; transform:translateY(0); } }
+.nl-freq-label {
+  font-size: 13px; font-weight: 600; color: var(--text-dim);
+  margin-bottom: 8px; text-align: left;
+}
+.nl-freq-btns { display: flex; gap: 8px; }
+.nl-freq-btn {
+  flex: 1; padding: 10px 8px; border: 2px solid var(--border);
+  border-radius: 10px; background: var(--white); cursor: pointer;
+  font-family: inherit; text-align: center; transition: all 0.15s;
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+}
+.nl-freq-btn:hover { border-color: var(--orange); background: var(--orange-light); }
+.nl-freq-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+.nl-freq-icon { font-size: 20px; }
+.nl-freq-name { font-size: 13px; font-weight: 700; color: var(--text); }
+.nl-freq-desc { font-size: 11px; color: var(--text-dim); }
+
 /* === FILTERS === */
 .filters {
   max-width: 1200px;
@@ -1298,12 +1321,27 @@ body {
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,7 12,13 2,7"/></svg>
       Re&ccedil;ois les actus chaque jour par mail :
     </p>
-    <form onsubmit="submitHeroNL(event)">
-      <div class="hero-nl-row">
+    <form onsubmit="submitHeroNL(event)" id="hero-nl-form">
+      <div class="hero-nl-row" id="hero-nl-row">
         <input type="email" id="hero-nl-email" placeholder="ton@email.com" required>
         <button type="submit" id="hero-nl-btn">S'abonner</button>
       </div>
     </form>
+    <div class="nl-freq-step" id="hero-nl-step2" style="display:none;">
+      <p class="nl-freq-label">Quelle fr&eacute;quence&nbsp;?</p>
+      <div class="nl-freq-btns">
+        <button type="button" class="nl-freq-btn" id="hero-freq-daily" onclick="selectHeroFreq('daily')">
+          <span class="nl-freq-icon">📬</span>
+          <span class="nl-freq-name">Quotidien</span>
+          <span class="nl-freq-desc">Lundi&ndash;samedi matin</span>
+        </button>
+        <button type="button" class="nl-freq-btn" id="hero-freq-hebdo" onclick="selectHeroFreq('hebdo')">
+          <span class="nl-freq-icon">📅</span>
+          <span class="nl-freq-name">Hebdo</span>
+          <span class="nl-freq-desc">Lundi seulement</span>
+        </button>
+      </div>
+    </div>
     <div class="hero-nl-msg" id="hero-nl-msg"></div>
   </div>
 </section>
@@ -1407,8 +1445,23 @@ body {
     <h3>Ne rate aucune actu !</h3>
     <p>Re&ccedil;ois chaque jour les actus pharma &amp; sant&eacute; directement dans ta bo&icirc;te mail. Gratuit, sans spam.</p>
     <form class="nl-form" id="nl-form" onsubmit="submitNewsletter(event)">
-      <div class="nl-form-row">
+      <div class="nl-form-row" id="nl-email-row">
         <input type="email" id="nl-email" placeholder="ton@email.com" required>
+      </div>
+      <div class="nl-freq-step" id="nl-freq-step" style="display:none;">
+        <p class="nl-freq-label">Quelle fr&eacute;quence&nbsp;?</p>
+        <div class="nl-freq-btns">
+          <button type="button" class="nl-freq-btn" id="nl-freq-daily" onclick="selectNLFreq('daily')">
+            <span class="nl-freq-icon">📬</span>
+            <span class="nl-freq-name">Quotidien</span>
+            <span class="nl-freq-desc">Lundi&ndash;samedi matin</span>
+          </button>
+          <button type="button" class="nl-freq-btn" id="nl-freq-hebdo" onclick="selectNLFreq('hebdo')">
+            <span class="nl-freq-icon">📅</span>
+            <span class="nl-freq-name">Hebdo</span>
+            <span class="nl-freq-desc">Lundi seulement</span>
+          </button>
+        </div>
       </div>
       <button type="submit" id="nl-btn">S'abonner</button>
     </form>
@@ -2532,13 +2585,12 @@ if (articleParam) {
 renderArticles();
 
 // ============================================================
-// NEWSLETTER (Brevo) — formulaire hero + popup
+// NEWSLETTER — formulaire hero + popup (2 étapes : email → fréquence)
 // ============================================================
-const BREVO_FORM_URL = 'https://d62a61bf.sibforms.com/serve/MUIFABdrcLOgXvWIMTQmdKonNYSBSpG_-4LzQgb5KXKLX0PpNal4KBNqBfYfg-A45xyqA87TyS4cM4rArjkuU6IY0l0N7bMckzLEXgJNeMsijK0ute2LJh3MfkWG6UythgtFBJpK3tALlzYC-Qq1zopesAGpa-gCOlpHqDGc2_r4DfgZwncDe-CtQr8cV_2Hb6aIBYx_uzNSjLbsRw==';
+const EDGE_SUBSCRIBE = 'https://ibmqaybmhpzdlgyntzbs.supabase.co/functions/v1/actus-switch-frequency';
 const NL_KEY = 'pharmalpha_nl';
 const NL_DISMISS_KEY = 'pharmalpha_nl_dismiss';
 
-// Masquer le formulaire hero si deja abonne
 if (localStorage.getItem(NL_KEY) === 'subscribed') {
   document.getElementById('hero-nl').style.display = 'none';
 }
@@ -2550,71 +2602,90 @@ function shouldShowNewsletter() {
   if (dismissed && Date.now() - parseInt(dismissed) < 7 * 24 * 60 * 60 * 1000) return false;
   return true;
 }
-
 function showNewsletter() {
   if (!shouldShowNewsletter()) return;
   document.getElementById('nl-overlay').classList.add('show');
   document.body.style.overflow = 'hidden';
 }
-
 function closeNewsletter() {
   document.getElementById('nl-overlay').classList.remove('show');
   document.body.style.overflow = '';
   localStorage.setItem(NL_DISMISS_KEY, Date.now().toString());
 }
-
 document.getElementById('nl-overlay').addEventListener('click', function(e) {
   if (e.target === this) closeNewsletter();
 });
 
-// --- Soumission Brevo (honeypot anti-spam) ---
-async function submitToBrevo(email, btn, msg, onSuccess) {
-  btn.disabled = true;
-  btn.textContent = 'Envoi...';
-  msg.className = msg.className.replace(/ ?(success|error)/g, '');
-
+// --- Inscription via Edge Function (étape 2) ---
+async function subscribeWithFreq(email, freq, btnDaily, btnHebdo, msgEl, onSuccess) {
+  btnDaily.disabled = true;
+  btnHebdo.disabled = true;
+  msgEl.className = msgEl.className.replace(/ ?(success|error)/g, '');
   try {
-    const formData = new FormData();
-    formData.append('EMAIL', email);
-    formData.append('email_address_check', '');
-    formData.append('locale', 'fr');
-    await fetch(BREVO_FORM_URL, { method: 'POST', body: formData, mode: 'no-cors' });
+    const resp = await fetch(EDGE_SUBSCRIBE, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({email: email, frequency: freq})
+    });
+    if (!resp.ok) {
+      const d = await resp.json().catch(() => ({}));
+      throw new Error(d.error || 'Erreur serveur');
+    }
+    const label = freq === 'hebdo'
+      ? 'Abonné(e) ! Résumé chaque lundi matin. ✅'
+      : 'Abonné(e) ! Actus chaque matin. ✅';
+    msgEl.textContent = label;
+    msgEl.className = msgEl.className.replace(/ ?(success|error)/g, '') + ' success';
     track('generate_lead', { method: 'newsletter_brevo', value: 1, currency: 'EUR' });
-    msg.textContent = 'Merci ! Tu recevras les actus chaque matin.';
-    msg.className = msg.className.replace(/ ?(success|error)/g, '') + ' success';
     localStorage.setItem(NL_KEY, 'subscribed');
     document.getElementById('hero-nl').style.display = 'none';
     if (onSuccess) onSuccess();
   } catch (err) {
-    msg.textContent = 'Erreur. Reessaie dans quelques instants.';
-    msg.className = msg.className.replace(/ ?(success|error)/g, '') + ' error';
-    btn.disabled = false;
-    btn.textContent = "S'abonner";
+    msgEl.textContent = 'Erreur. Réessaie dans quelques instants.';
+    msgEl.className = msgEl.className.replace(/ ?(success|error)/g, '') + ' error';
+    btnDaily.disabled = false;
+    btnHebdo.disabled = false;
   }
 }
 
-// Formulaire POPUP
+// --- POPUP : étape 1 (email) → étape 2 (fréquence) ---
+var _nlEmail = '';
 async function submitNewsletter(e) {
   e.preventDefault();
   const email = document.getElementById('nl-email').value.trim();
   if (!email) return;
-  await submitToBrevo(
-    email,
-    document.getElementById('nl-btn'),
+  _nlEmail = email;
+  document.getElementById('nl-email-row').style.display = 'none';
+  document.getElementById('nl-btn').style.display = 'none';
+  document.getElementById('nl-freq-step').style.display = 'block';
+}
+function selectNLFreq(freq) {
+  subscribeWithFreq(
+    _nlEmail, freq,
+    document.getElementById('nl-freq-daily'),
+    document.getElementById('nl-freq-hebdo'),
     document.getElementById('nl-msg'),
     () => setTimeout(closeNewsletter, 3000)
   );
 }
 
-// Formulaire HERO
+// --- HERO : étape 1 (email) → étape 2 (fréquence) ---
+var _heroEmail = '';
 async function submitHeroNL(e) {
   e.preventDefault();
   const email = document.getElementById('hero-nl-email').value.trim();
   if (!email) return;
-  await submitToBrevo(
-    email,
-    document.getElementById('hero-nl-btn'),
-    document.getElementById('hero-nl-msg')
+  _heroEmail = email;
+  document.getElementById('hero-nl-form').style.display = 'none';
+  document.getElementById('hero-nl-step2').style.display = 'block';
+}
+function selectHeroFreq(freq) {
+  subscribeWithFreq(
+    _heroEmail, freq,
+    document.getElementById('hero-freq-daily'),
+    document.getElementById('hero-freq-hebdo'),
+    document.getElementById('hero-nl-msg'),
+    null
   );
 }
 

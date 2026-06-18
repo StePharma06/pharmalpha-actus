@@ -2079,7 +2079,16 @@ def build_newsletter_html(articles, custom_intro=None):
       </table>
     </div>
   </td></tr>
-  <tr><td style="padding:20px 32px 28px;">
+  <tr><td style="padding:0 32px 16px;">
+    <div style="background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:12px 18px;text-align:center;">
+      <p style="margin:0;font-size:13px;color:#92400e;line-height:1.6;">
+        Tu re&ccedil;ois cet email <strong>chaque matin</strong> (lundi&ndash;samedi).
+        Tu pr&eacute;f&egrave;res un r&eacute;sum&eacute; hebdo le lundi&nbsp;?
+        &rarr;&nbsp;<a href="https://actus.pharmalpha.fr/preferences?email={{{{ contact.EMAIL }}}}&amp;freq=daily" style="color:#f97316;font-weight:700;text-decoration:none;">Ajuster ma fr&eacute;quence</a>
+      </p>
+    </div>
+  </td></tr>
+  <tr><td style="padding:0 32px 28px;">
     <div style="border-top:1px solid #f0f0f0;padding-top:16px;text-align:center;">
       <p style="margin:0 0 8px;font-size:13px;font-weight:700;color:#f97316;">Pharm'Alpha</p>
       <p style="margin:0;font-size:11px;color:#aaa;line-height:1.5;">
