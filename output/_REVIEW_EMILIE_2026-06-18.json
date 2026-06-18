@@ -1,0 +1,51 @@
+{
+  "generated_at": "2026-06-18T04:10:01.539439+02:00",
+  "run_date": "2026-06-18",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "49 milliards de CA, mais les officines saignent : le paradoxe est officiel",
+      "resume": "Le marché officinal atteint un niveau historique en 2026. Pourtant, une large partie du réseau est en difficulté économique. Chiffres records et réalité du terrain ne racontent pas la même histoire.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/49-milliards-deuros-le-marche-officinal-bat-un-record-les-difficultes-economiques-persistent",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "pharma_monde",
+      "titre": "Utebzi : 4 ans de galère FDA, et GSK finit le boulot — ce que ça dit sur les antibios oraux",
+      "resume": "Spero Therapeutics et GSK viennent d'obtenir l'approbation FDA pour Utebzi, un antibiotique oral contre les infections urinaires compliquées. Quatre ans après un refus cinglant. Une leçon sur la ténacité dans l'anti-infectieux.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/pharma/four-more-years-and-partnership-gsk-allow-spero-get-utebzi-across-fda-finish-line",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "Rispéridone en tension jusqu'en février 2027 : les alternatives sont là, encore faut-il les connaître",
+      "resume": "L'ANSM confirme une tension critique sur la rispéridone orodispersible 0,5 à 4 mg, en ville et à l'hôpital. Contingentement en place. Retour à la normale estimé à février 2027. Des alternatives existent — mais leur gestion demande de la rigueur.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/therapeutique/vigilances/risperidone-en-tension-critique",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "avenir_pharma",
+      "titre": "Kardigan lève 400 M$ en IPO : les biotechs cardio sont de retour, et le pipeline avec elles",
+      "resume": "Quatre biotechs ont levé plus de 400 millions de dollars en IPO en 2026 — du jamais-vu depuis 2021. Kardigan, spécialisée en cardiologie, mène la danse. Ce que ça présage pour les pipelines cardiovasculaires des prochaines années.",
+      "source": "BioPharma Dive",
+      "source_url": "https://www.biopharmadive.com/news/kardigan-ipo-price-biotech-myokardia-heart-drugs/822947/",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    }
+  ]
+}

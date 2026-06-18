@@ -1,32 +1,32 @@
 {
-  "generated_at": "2026-06-17",
-  "window_label": "11 juin — 17 juin 2026",
+  "generated_at": "2026-06-18",
+  "window_label": "12 juin au 18 juin 2026",
   "has_history": true,
   "delta_source": "pytrends_rising",
   "pathologies": [
     {
-      "display": "Allergie au soleil bouton",
-      "delta_label": "↑ 32 450",
+      "display": "Vitamine a 7 lettres",
+      "delta_label": "↑ 15 300",
       "trend": "up"
     },
     {
-      "display": "Allergie cerise",
-      "delta_label": "↑ 22 600",
+      "display": "Allergie au pollen que faire",
+      "delta_label": "↑ 13 750",
       "trend": "up"
     },
     {
-      "display": "La fatigue en anglais",
-      "delta_label": "↑ 11 500",
+      "display": "Fatigue chronique que faire",
+      "delta_label": "↑ 13 000",
       "trend": "up"
     },
     {
-      "display": "Est ce que la chaleur fatigue",
-      "delta_label": "↑ 10 800",
+      "display": "Urticacées allergie",
+      "delta_label": "↑ 12 100",
       "trend": "up"
     },
     {
-      "display": "Fourmillement dans les jambes et grosse ",
-      "delta_label": "↑ 7 250",
+      "display": "Fatigue passagere",
+      "delta_label": "↑ 6 150",
       "trend": "up"
     }
   ],
@@ -57,8 +57,8 @@
       "trend": "up"
     }
   ],
-  "pathologies_stale": true,
-  "pathologies_from": "2026-06-13",
+  "pathologies_stale": false,
+  "pathologies_from": "2026-06-18",
   "soins_stale": false,
-  "soins_from": "2026-06-17"
+  "soins_from": "2026-06-18"
 }

@@ -1,32 +1,32 @@
 {
   "pathologies": [
     {
-      "display": "Allergie au soleil bouton",
-      "delta_label": "↑ 32 450",
+      "display": "Vitamine a 7 lettres",
+      "delta_label": "↑ 15 300",
       "trend": "up"
     },
     {
-      "display": "Allergie cerise",
-      "delta_label": "↑ 22 600",
+      "display": "Allergie au pollen que faire",
+      "delta_label": "↑ 13 750",
       "trend": "up"
     },
     {
-      "display": "La fatigue en anglais",
-      "delta_label": "↑ 11 500",
+      "display": "Fatigue chronique que faire",
+      "delta_label": "↑ 13 000",
       "trend": "up"
     },
     {
-      "display": "Est ce que la chaleur fatigue",
-      "delta_label": "↑ 10 800",
+      "display": "Urticacées allergie",
+      "delta_label": "↑ 12 100",
       "trend": "up"
     },
     {
-      "display": "Fourmillement dans les jambes et grosse ",
-      "delta_label": "↑ 7 250",
+      "display": "Fatigue passagere",
+      "delta_label": "↑ 6 150",
       "trend": "up"
     }
   ],
-  "pathologies_from": "2026-06-13",
+  "pathologies_from": "2026-06-18",
   "soins": [
     {
       "display": "Azinc immunite",
@@ -54,5 +54,5 @@
       "trend": "up"
     }
   ],
-  "soins_from": "2026-06-17"
+  "soins_from": "2026-06-18"
 }

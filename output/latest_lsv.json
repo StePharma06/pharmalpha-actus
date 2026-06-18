@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? On traitait la folie avec des bains de 12 heures",
-  "resume": "Au XIXe siècle, les psychiatres croyaient guérir la folie avec de l'eau chaude. Pas une douche. Une immersion forcée de plusieurs heures. Et le pire ? Ça marchait... selon eux.",
-  "full_text": "En 1850, si tu débarquais à l'asile de Charenton avec des hallucinations, on ne t'injectait rien. On te plongeait dans une baignoire.\n\nLa méthode s'appelait l'hydrothérapie psychiatrique. Pas un bain relaxant aux huiles essentielles, non. Une immersion continue, parfois 12 heures d'affilée, dans de l'eau maintenue entre 33 et 37°C, le patient attaché sous une toile tendue pour l'empêcher de se noyer. Certains établissements ajoutaient des douches froides en rafale pour « choquer » le système nerveux. Ambiance.\n\nL'idée venait d'un médecin autrichien, Wilhelm Reil, qui théorisait dès 1803 que la chaleur de l'eau régularisait les « fluides nerveux » perturbés. En France, le docteur François Leuret en fit une arme centrale de son arsenal thérapeutique à Bicêtre dans les années 1840. Il notait scrupuleusement dans ses cahiers que les patients « s'apaisaient ». Ce qu'il ne notait pas : ils s'apaisaient parce qu'ils étaient épuisés.\n\nLe twist fascinant ? Des études récentes ont montré que l'immersion prolongée en eau chaude a de vrais effets sur le système nerveux autonome — réduction du cortisol, ralentissement du rythme cardiaque, baisse de l'anxiété. Les psychiatres du XIXe avaient peut-être touché quelque chose sans comprendre pourquoi ça fonctionnait.\n\nAujourd'hui, des protocoles de balnéothérapie sont utilisés dans certains services de psychiatrie pour les états agités sévères, sous surveillance médicale stricte. Évidemment, sans les attaches et sans les 12 heures. La méthode a survécu, mais l'humanité a rattrapé la science.\n\nEt la prochaine fois qu'un patient te demande si son bain chaud peut l'aider contre l'anxiété... dis-lui qu'il n'a pas complètement tort. Juste qu'on a arrêté de l'attacher.",
-  "image_keywords": "vintage bathtub asylum",
+  "titre": "Le saviez-vous ? La quinine a sauvé des empires... et tué ses patients",
+  "resume": "Pendant trois siècles, la quinine était LE remède miracle contre le paludisme. Colonisateurs, soldats, explorateurs en dépendaient littéralement pour survivre. Mais personne ne parlait de la dose qui rendait sourd, fou... ou mort.",
+  "full_text": "En 1638, la légende raconte que la comtesse de Chinchon, épouse du vice-roi du Pérou, est sauvée de la fièvre des marais grâce à l'écorce d'un arbre local. Les Jésuites ramènent l'écorce en Europe. La quinine vient de naître dans l'histoire de la médecine occidentale.\n\nPendant 200 ans, cette poudre amère extraite du quinquina est la seule arme connue contre le paludisme. Napoléon en distribue à ses troupes. Les Britanniques en boivent diluée dans de l'eau gazeuse — le fameux « Indian Tonic Water » — pour coloniser l'Inde sans mourir de fièvre. Le Gin Tonic, c'est littéralement une prescription médicale déguisée en cocktail.\n\nMais voilà le twist que personne ne mentionnait dans les notices de l'époque : la quinine est aussi un poison à haute dose. Acouphènes, surdité temporaire, troubles visuels, hypoglycémie sévère, arythmies cardiaques. Les médecins de l'époque appelaient ça le « cinchonisme » — et ils le considéraient comme un effet... acceptable. On soignait le mal par le pire mal.\n\nEn 1820, deux chimistes français, Pelletier et Caventou, isolent enfin le principe actif pur. La production industrielle explose. Et les surdosages aussi. Des soldats français en Algérie revenaient du front en entendant des sifflements permanents dans les oreilles. Victoire contre la malaria, défaite contre l'audition.\n\nAujourd'hui, la quinine existe encore en pharmacie — dans certains médicaments contre les crampes nocturnes. À des doses ultra-contrôlées, bien sûr. Mais chaque fois qu'un patient te demande si le Gin Tonic peut soulager ses crampes aux jambes, tu peux lui raconter que l'idée n'est pas si folle... elle a juste 400 ans de retard sur l'AMM.",
+  "image_keywords": "quinine cinchona bark",
   "tags": [
     "histoire",
-    "psychiatrie",
-    "therapeutique",
-    "medecine",
-    "decouverte"
+    "medicament",
+    "paludisme",
+    "plante",
+    "chimie"
   ],
-  "date": "2026-06-17",
+  "date": "2026-06-18",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",
