@@ -1337,8 +1337,20 @@ body {
   <div class="hero-nl" id="hero-nl">
     <p class="hero-nl-label">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,7 12,13 2,7"/></svg>
-      Re&ccedil;ois les actus chaque jour par mail :
+      <span id="hero-nl-text">Rejoins-nous et re&ccedil;ois les actus chaque jour par mail :</span>
     </p>
+    <script>
+    (function() {
+      fetch("https://ibmqaybmhpzdlgyntzbs.supabase.co/functions/v1/brevo-actus-count")
+        .then(function(r) { return r.ok ? r.json() : Promise.reject(new Error("HTTP " + r.status)); })
+        .then(function(d) {
+          if (!d || typeof d.count !== "number" || d.count <= 0) return;
+          var el = document.getElementById("hero-nl-text");
+          if (el) el.textContent = "Rejoins les " + d.count + " inscrits et reçois les actus chaque jour par mail :";
+        })
+        .catch(function() { /* fallback : texte initial sans compteur reste affiche */ });
+    })();
+    </script>
     <form onsubmit="submitHeroNL(event)" id="hero-nl-form">
       <div class="hero-nl-row" id="hero-nl-row">
         <input type="email" id="hero-nl-email" placeholder="ton@email.com" required>
