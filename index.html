@@ -281,8 +281,12 @@ body {
   display: flex;
   align-items: center;
   gap: 6px;
+  white-space: nowrap;
 }
 .hero-nl-label svg { width: 16px; height: 16px; flex-shrink: 0; }
+@media (max-width: 600px) {
+  .hero-nl-label { white-space: normal; }
+}
 .hero-nl-row {
   display: flex;
   gap: 8px;
