@@ -50,57 +50,69 @@
   .btn-share svg { width: 15px; height: 15px; flex-shrink: 0; }
 
   /* === CONTENU PRINT === */
-  .page-wrapper { max-width: 210mm; margin: 24px auto; background: #fff; border-radius: 8px; box-shadow: var(--shadow); }
-  .content { padding: 10mm 11mm; }
+  .page-wrapper { max-width: 210mm; margin: 24px auto; background: #fff; border-radius: 8px; box-shadow: var(--shadow); overflow: hidden; }
+  .content { padding: 0 14mm 12mm; }
 
-  /* --- En-tete compact (logo seul + date a droite) --- */
+  /* --- Bandeau Pharm'Alpha noir en haut (identite de marque) --- */
+  .brand-strip {
+    background: #1a1a1a;
+    padding: 14px 0;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  .brand-strip img {
+    height: 28px; width: auto; display: inline-block; vertical-align: middle;
+    filter: brightness(0) invert(1);
+  }
+
+  /* --- En-tete Pharm'Actus (logo + date) --- */
   .print-header {
-    border-bottom: 2px solid #1a1a1a; padding-bottom: 6px; margin-bottom: 8px;
+    border-bottom: 2px solid #1a1a1a; padding-bottom: 9px; margin-bottom: 12px;
     display: flex; align-items: center; justify-content: space-between;
   }
-  .print-logo-actus { height: 22pt; width: auto; display: block; }
-  .print-meta { text-align: right; font-size: 7.5pt; color: #666; line-height: 1.5; }
-  .print-meta .date-label { font-size: 9.5pt; font-weight: 700; color: #1a1a1a; }
+  .print-logo-actus { height: 26pt; width: auto; display: block; }
+  .print-meta { text-align: right; font-size: 8.5pt; color: #666; line-height: 1.5; }
+  .print-meta .date-label { font-size: 11pt; font-weight: 700; color: #1a1a1a; }
 
-  /* --- Expression du jour (tout en haut, bulle indigo compacte) --- */
+  /* --- Expression du jour (tout en haut, bulle indigo) --- */
   .expr-box {
     background: var(--indigo-light);
-    border: 1.2px solid var(--indigo); border-radius: 7px;
-    padding: 7px 11px; display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: start;
-    margin-bottom: 8px;
+    border: 1.5px solid var(--indigo); border-radius: 9px;
+    padding: 11px 14px; display: grid; grid-template-columns: auto 1fr; gap: 11px; align-items: start;
+    margin-bottom: 12px;
     break-inside: avoid; page-break-inside: avoid;
   }
   .expr-label {
-    font-size: 7pt; font-weight: 900; text-transform: uppercase; letter-spacing: 0.4px;
-    color: #fff; background: var(--indigo); padding: 2px 7px; border-radius: 100px; white-space: nowrap; margin-top: 1px;
+    font-size: 7.5pt; font-weight: 900; text-transform: uppercase; letter-spacing: 0.4px;
+    color: #fff; background: var(--indigo); padding: 3px 9px; border-radius: 100px; white-space: nowrap; margin-top: 1px;
   }
-  .expr-title { font-size: 9pt; font-weight: 700; line-height: 1.25; margin-bottom: 2px; color: #2b1f7a; }
-  .expr-body { font-size: 8pt; color: #3d3470; line-height: 1.4; }
+  .expr-title { font-size: 10.5pt; font-weight: 700; line-height: 1.3; margin-bottom: 3px; color: #2b1f7a; }
+  .expr-body { font-size: 9pt; color: #3d3470; line-height: 1.5; }
 
-  /* --- 6 actus en grid 2 colonnes (3 lignes x 2 cols) --- */
+  /* --- 6 actus en grid 2 colonnes (3 lignes x 2 cols), aerees --- */
   .articles-grid {
     display: grid; grid-template-columns: 1fr 1fr;
-    gap: 6px;
-    margin-bottom: 8px;
+    gap: 10px;
+    margin-bottom: 12px;
   }
   .article-card {
-    display: grid; grid-template-columns: 40px 1fr;
-    gap: 8px; padding: 6px 8px;
+    display: grid; grid-template-columns: 56px 1fr;
+    gap: 11px; padding: 10px 12px;
     background: #fff;
-    border: 1px solid var(--border-light); border-radius: 6px;
+    border: 1px solid var(--border-light); border-radius: 8px;
     break-inside: avoid; page-break-inside: avoid;
   }
   .art-thumb {
-    width: 40px; height: 32px; border-radius: 4px; overflow: hidden; flex-shrink: 0; align-self: start;
+    width: 56px; height: 44px; border-radius: 5px; overflow: hidden; flex-shrink: 0; align-self: start;
   }
   .art-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .art-thumb-empty { background: #f3f4f6; }
 
-  .art-content { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+  .art-content { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
   .cat-badge {
-    display: inline-block; padding: 1px 6px; border-radius: 100px;
-    font-size: 6.5pt; font-weight: 700; text-transform: uppercase;
-    letter-spacing: 0.3px; line-height: 1.4; margin-bottom: 1px;
+    display: inline-block; padding: 2px 8px; border-radius: 100px;
+    font-size: 7pt; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.4px; line-height: 1.4; margin-bottom: 2px;
     align-self: start;
   }
   .cat-pharma_france     { background: var(--orange-light); color: var(--orange); }
@@ -111,52 +123,52 @@
   .cat-sante             { background: #f2fbf4; color: #15803d; }
   .cat-default           { background: #f8f8f8; color: #374151; }
 
-  .article-title { font-size: 8.5pt; font-weight: 700; line-height: 1.22; color: #1a1a1a; }
-  .article-summary { font-size: 7.5pt; color: #4a4a4a; line-height: 1.35; }
-  .article-source { font-size: 6.5pt; color: #999; margin-top: 1px; font-style: italic; }
+  .article-title { font-size: 9.5pt; font-weight: 700; line-height: 1.25; color: #1a1a1a; }
+  .article-summary { font-size: 8.5pt; color: #4a4a4a; line-height: 1.45; }
+  .article-source { font-size: 7pt; color: #999; margin-top: 2px; font-style: italic; }
 
-  /* --- LSV (violet, compact) --- */
+  /* --- LSV (violet, aere) --- */
   .lsv-box {
     background: var(--purple-light);
-    border: 1.2px solid var(--purple); border-radius: 7px;
-    padding: 7px 11px; display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: start;
-    margin-bottom: 8px;
+    border: 1.5px solid var(--purple); border-radius: 9px;
+    padding: 11px 14px; display: grid; grid-template-columns: auto 1fr; gap: 11px; align-items: start;
+    margin-bottom: 14px;
     break-inside: avoid; page-break-inside: avoid;
   }
   .lsv-label {
-    font-size: 7pt; font-weight: 900; text-transform: uppercase; letter-spacing: 0.4px;
-    color: #fff; background: var(--purple); padding: 2px 7px; border-radius: 100px; white-space: nowrap; margin-top: 1px;
+    font-size: 7.5pt; font-weight: 900; text-transform: uppercase; letter-spacing: 0.4px;
+    color: #fff; background: var(--purple); padding: 3px 9px; border-radius: 100px; white-space: nowrap; margin-top: 1px;
   }
-  .lsv-title { font-size: 9pt; font-weight: 700; line-height: 1.25; margin-bottom: 2px; color: #3b1d8a; }
-  .lsv-summary { font-size: 8pt; color: #4b3a72; line-height: 1.4; }
+  .lsv-title { font-size: 10.5pt; font-weight: 700; line-height: 1.3; margin-bottom: 3px; color: #3b1d8a; }
+  .lsv-summary { font-size: 9pt; color: #4b3a72; line-height: 1.5; }
 
   /* --- Bandeau bio Stephen + QR code (compact, 3 colonnes) --- */
   .signature-card {
     background: var(--bg-alt);
     border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 8px 12px;
+    border-radius: 12px;
+    padding: 14px 18px;
     display: grid;
     grid-template-columns: auto 1fr auto;
-    gap: 12px;
+    gap: 16px;
     align-items: center;
     break-inside: avoid; page-break-inside: avoid;
   }
   .sig-avatar {
-    width: 48px; height: 48px; border-radius: 50%;
+    width: 60px; height: 60px; border-radius: 50%;
     background: var(--orange);
     overflow: hidden;
     flex-shrink: 0;
   }
   .sig-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .sig-name { font-size: 9.5pt; font-weight: 800; color: #1a1a1a; margin-bottom: 1px; letter-spacing: -0.2px; }
-  .sig-role { font-size: 7pt; color: var(--orange); font-weight: 700; margin-bottom: 2px; }
-  .sig-desc { font-size: 6.8pt; color: #666; line-height: 1.35; }
-  .sig-qr-block { display: flex; align-items: center; gap: 8px; }
-  .sig-qr-text { font-size: 7pt; color: var(--text-secondary); line-height: 1.35; text-align: right; max-width: 110px; }
+  .sig-name { font-size: 11pt; font-weight: 800; color: #1a1a1a; margin-bottom: 1px; letter-spacing: -0.2px; }
+  .sig-role { font-size: 8pt; color: var(--orange); font-weight: 700; margin-bottom: 4px; }
+  .sig-desc { font-size: 7.5pt; color: #666; line-height: 1.45; }
+  .sig-qr-block { display: flex; align-items: center; gap: 10px; }
+  .sig-qr-text { font-size: 8pt; color: var(--text-secondary); line-height: 1.4; text-align: right; max-width: 110px; }
   .sig-qr-text strong { color: #1a1a1a; }
   .sig-qr-block img {
-    width: 56px; height: 56px; flex-shrink: 0;
+    width: 74px; height: 74px; flex-shrink: 0;
     image-rendering: crisp-edges;
     background: #fff;
   }
@@ -176,8 +188,9 @@
     @page { size: A4 portrait; margin: 8mm 9mm; }
     body { background: #fff; font-size: 10pt; }
     .header, .print-tip { display: none !important; }
-    .page-wrapper { max-width: 100%; margin: 0; border-radius: 0; box-shadow: none; }
+    .page-wrapper { max-width: 100%; margin: 0; border-radius: 0; box-shadow: none; overflow: visible; }
     .content { padding: 0; }
+    .brand-strip { margin: -8mm -9mm 12px; padding: 12px 0; }
     a { color: inherit; text-decoration: none; }
     * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color-adjust: exact !important; }
   }
@@ -186,7 +199,7 @@
     .logo-area img { height: 44px; }
     .header-inner { padding: 10px 16px; }
     .page-wrapper { margin: 0; border-radius: 0; }
-    .content { padding: 14px; }
+    .content { padding: 0 14px 14px; }
     .articles-grid { grid-template-columns: 1fr; }
     .signature-card { grid-template-columns: 1fr; gap: 12px; }
     .sig-qr-block { justify-content: flex-start; }
@@ -224,9 +237,7 @@
 </div>
 
 <div class="page-wrapper">
-  <div class="content">
-    <div id="container"><p class="loading">Chargement des actus...</p></div>
-  </div>
+  <div id="container"><p class="loading">Chargement des actus...</p></div>
 </div>
 
 <script>
@@ -251,7 +262,14 @@ function catLabel(c) { return CAT_LABELS[c]||c||""; }
 function buildHtml(articles, lsv, expr, displayDate) {
   var html = "";
 
-  // En-tete compact : logo + date
+  // Bandeau noir Pharm'Alpha (identite de marque)
+  html += "<div class=\"brand-strip\">";
+  html += "<img src=\"assets/logo_pharmalpha_wide.png\" alt=\"Pharm'Alpha\">";
+  html += "</div>";
+
+  html += "<div class=\"content\">";
+
+  // En-tete Pharm'Actus + date
   html += "<div class=\"print-header\">";
   html += "<img src=\"assets/logo_pharmactus.png\" alt=\"Pharm'Actus\" class=\"print-logo-actus\">";
   html += "<div class=\"print-meta\"><div class=\"date-label\">"+esc(fmtDate(displayDate))+"</div><div>pharmalpha.fr/actus</div></div>";
@@ -289,7 +307,7 @@ function buildHtml(articles, lsv, expr, displayDate) {
   });
   html += "</div>";
 
-  // LSV (compact)
+  // LSV
   if (lsv) {
     html += "<div class=\"lsv-box\">";
     html += "<div class=\"lsv-label\">Le saviez-vous ?</div><div>";
@@ -298,7 +316,7 @@ function buildHtml(articles, lsv, expr, displayDate) {
     html += "</div></div>";
   }
 
-  // Bandeau bio Stephen + QR code (3 colonnes : avatar | bio | QR)
+  // Bandeau bio Stephen + QR code
   html += "<div class=\"signature-card\">";
   html += "<div class=\"sig-avatar\"><img src=\"assets/stephen.png\" alt=\"Stephen ROBERT\"></div>";
   html += "<div>";
@@ -308,9 +326,11 @@ function buildHtml(articles, lsv, expr, displayDate) {
   html += "</div>";
   html += "<div class=\"sig-qr-block\">";
   html += "<div class=\"sig-qr-text\">Retrouve toute l'actu<br><strong>en scannant ce QR</strong></div>";
-  html += "<img src=\"https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https%3A%2F%2Fpharmalpha.fr%2Factus&color=1a1a1a&bgcolor=ffffff&qzone=1&format=png\" alt=\"QR Code pharmalpha.fr/actus\">";
+  html += "<img src=\"https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https%3A%2F%2Fpharmalpha.fr%2Factus&color=1a1a1a&bgcolor=ffffff&qzone=1&format=png\" alt=\"QR Code pharmalpha.fr/actus\">";
   html += "</div>";
   html += "</div>";
+
+  html += "</div>"; // fin .content
 
   return html;
 }
