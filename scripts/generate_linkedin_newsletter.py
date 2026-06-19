@@ -351,7 +351,7 @@ Bonne lecture !
 ```
 𝟭. [TITRE ACTU 1 EN UNICODE BOLD, GARDER LES ACCENTS NON-CONVERTIS]
 
-[full_text de l'article EN ENTIER, paragraphes separes par sauts de ligne. Texte normal, ne pas raccourcir.]
+[VERSION CONDENSEE LinkedIn : 3 a 4 paragraphes COURTS, 600 a 900 caracteres max. Garde le fait principal + 1 a 2 chiffres cles marquants + 1 ligne actionnable "Demain au comptoir : ...". NE reproduis PAS le full_text en entier : tu resumes pour un format LinkedIn scannable au mobile. Paragraphes separes par UNE ligne vide.]
 
 Lire sur Pharm'Actus : [URL Pharm'Actus exact]
 
@@ -390,7 +390,7 @@ Source : [Nom de la source]
 ```
 𝗟𝗲 𝗦𝗮𝘃𝗶𝗲𝘇-𝘃𝗼𝘂𝘀 ? [Titre LSV en Unicode bold, accents non convertis]
 
-[full_text du LSV EN ENTIER, paragraphes separes par sauts de ligne. Mots cles en Unicode bold pour rythmer la lecture.]
+[VERSION CONDENSEE : 4 a 5 paragraphes courts, 500 a 700 caracteres. Garde l'accroche + la chute de l'histoire, coupe les details secondaires. Mots cles en Unicode bold pour rythmer.]
 
 Histoire complete sur Pharm'Actus : [URL Pharm'Actus du LSV]
 
@@ -422,7 +422,7 @@ Reponds en commentaire, je lis tout.
 === INSTRUCTIONS FINALES ===
 
 1. 6 ACTUS + 1 LSV. Pas 5, pas 7. Six actus.
-2. Pour chaque actu, REPRODUIS l'INTEGRALITE du full_text fourni (ne raccourcis pas, ne resume pas).
+2. Pour chaque actu, CONDENSE en version LinkedIn : 3-4 paragraphes courts (600-900 caracteres max), fait principal + 1-2 chiffres cles + 1 ligne "Demain au comptoir". NE reproduis PAS le full_text integralement (trop long pour LinkedIn). Reproduis les chiffres EXACTEMENT, n'en invente aucun.
 3. Les TITRES d'actus en UNICODE BOLD (𝟭., 𝟮., etc. + lettres bold). Les caracteres accentues (é, è, à, ç) restent en texte normal.
 4. Les LIENS sont les VRAIES URLs fournies, pas inventees.
 5. Format AERE : pas de ━━━━ entre les blocs. Juste des sauts de ligne.
