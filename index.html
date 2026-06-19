@@ -84,7 +84,8 @@ body {
   background: var(--bg-alt);
   color: var(--text);
   line-height: 1.6;
-  overflow-x: hidden;
+  /* clip (et non hidden) : bloque le scroll horizontal SANS casser le position:sticky du header */
+  overflow-x: clip;
 }
 .caduceus-bg {
   position: fixed;
@@ -132,6 +133,11 @@ body {
 }
 .logo-area {
   flex-shrink: 0;
+}
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 }
 .logo-area img {
   height: 60px;
@@ -1325,7 +1331,9 @@ body {
 <header class="header">
   <div class="header-inner">
     <div class="logo-area">
-      <img src="assets/logo_pharmactus.png" alt="Pharm'Actus">
+      <a href="https://pharmalpha.fr/actus" class="logo-link" aria-label="Pharm'Actus — retour à l'accueil">
+        <img src="assets/logo_pharmactus.png" alt="Pharm'Actus">
+      </a>
     </div>
     <div class="header-right">
       <a href="/actus/print.html" onclick="printActus(event)" class="header-link">
