@@ -61,11 +61,20 @@ def format_date_range_fr(start, end):
         return f"{start.day} {MONTHS_FR[start.month]} au {end.day} {MONTHS_FR[end.month]} {end.year}"
 
 
-def claude_create(client, **kwargs):
-    """Call Claude API with retry + fallback to Haiku."""
+def _do_create(client, stream, kwargs):
+    """Un seul appel Claude, en streaming (pour gros max_tokens) ou non."""
+    if stream:
+        # Streaming obligatoire au-dela de ~16K max_tokens (sinon timeout SDK).
+        with client.messages.stream(**kwargs) as s:
+            return s.get_final_message()
+    return client.messages.create(**kwargs)
+
+
+def claude_create(client, stream=False, **kwargs):
+    """Call Claude API with retry + fallback to Haiku. stream=True pour les gros outputs."""
     for attempt in range(2):
         try:
-            return client.messages.create(**kwargs)
+            return _do_create(client, stream, kwargs)
         except anthropic.APIStatusError as e:
             if e.status_code in (429, 529) and attempt < 1:
                 print(f"  [RETRY] Claude {e.status_code}, attente 30s...")
@@ -74,7 +83,7 @@ def claude_create(client, **kwargs):
                 print(f"  [FALLBACK] bascule sur Haiku...")
                 kwargs["model"] = FALLBACK_MODEL
                 try:
-                    return client.messages.create(**kwargs)
+                    return _do_create(client, stream, kwargs)
                 except Exception:
                     raise e
             else:
@@ -424,14 +433,23 @@ Reponds en commentaire, je lis tout.
 
 Retourne UNIQUEMENT le markdown complet, rien d'autre."""
 
+    # max_tokens=8000 tronquait la newsletter (6 articles full_text + LSV en
+    # Unicode bold depassent 8K tokens -> coupure a mi-chemin, bloc 8 jamais
+    # genere). Sonnet 4.6 supporte 64K en sortie ; on passe a 32K en streaming
+    # (streaming obligatoire >16K pour eviter le timeout SDK).
     response = claude_create(
         client,
+        stream=True,
         model="claude-sonnet-4-6",
-        max_tokens=8000,
+        max_tokens=32000,
         messages=[{"role": "user", "content": prompt}],
     )
 
-    return response.content[0].text.strip()
+    if getattr(response, "stop_reason", None) == "max_tokens":
+        print("  [WARN] stop_reason=max_tokens : la newsletter est TRONQUEE, augmente max_tokens !")
+
+    text_blocks = [b.text for b in response.content if getattr(b, "type", None) == "text"]
+    return ("\n".join(text_blocks)).strip() if text_blocks else response.content[0].text.strip()
 
 
 def generate_companion_post(actus):
