@@ -1,6 +1,131 @@
 {
   "articles": [
     {
+      "id": "actu_2026_06_19_5",
+      "date": "2026-06-19",
+      "type": "actu",
+      "categorie": "business_officine",
+      "titre": "Nutrition orale : MINI PEP'S inscrite au remboursement, ce que ça change pour ton officine",
+      "resume": "Une denrée alimentaire à finalité médicale spéciale (DADFMS) de plus vient d'obtenir sa tarification officielle au Journal officiel. Derrière l'avis CEPS du 19 juin 2026, il y a un marché de la nutrition orale à domicile qui pèse plus de 500 M€ et une opportunité de marge réelle ...",
+      "full_text": "Une denrée alimentaire à finalité médicale spéciale (DADFMS) de plus vient d'obtenir sa tarification officielle au Journal officiel. Derrière l'avis CEPS du 19 juin 2026, il y a un marché de la nutrition orale à domicile qui pèse plus de 500 M€ et une opportunité de marge réelle pour les officines bien positionnées.\n\n## Contexte\n\nLe 19 juin 2026, le CEPS (Comité Économique des Produits de Santé) a publié au Journal officiel l'avis de tarification de MINI PEP'S, une DADFMS pour nutrition orale du laboratoire LA PICOREE. Ce produit est inscrit à l'article L.165-1 du Code de la Sécurité Sociale, ce qui le place dans la liste des produits et prestations remboursables (LPPR), et non dans la liste des médicaments remboursables. C'est une distinction cruciale pour comprendre le circuit économique qui s'y attache.\n\nLa nutrition entérale orale à domicile (NEOD) concerne en France environ 300 000 patients par an, principalement des personnes âgées dénutries, des patients oncologiques, des enfants avec des pathologies digestives ou métaboliques, et des patients en post-chirurgie digestive. Les officines ne sont pas les seules à distribuer ces produits : les prestataires de santé à domicile (PSAD) et les pharmacies hospitalières sont également positionnés. Mais avec le virage ambulatoire et le développement des soins de ville, les pharmacies d'officine gagnent du terrain sur ce segment. La FSPF et l'USPO ont été impliquées dans la négociation conventionnelle, signe que l'enjeu est jugé stratégique par les syndicats représentatifs de la profession.\n\n## Analyse business\n\nCommençons par cadrer le marché. La nutrition orale à domicile représente un segment estimé entre 500 et 600 M€ en France (données SNITEM/CNSD, marché LPPR nutrition), avec une croissance annuelle de l'ordre de 3 à 5 % portée par le vieillissement de la population. La dénutrition touche officiellement 2 millions de personnes en France selon la HAS (recommandation 2021), et le dépistage en officine reste largement sous-exploité.\n\nSur le plan tarifaire, les DADFMS inscrites à la LPPR bénéficient d'un prix de vente maximum fixé par convention CEPS, avec un taux de remboursement à 100 % par l'Assurance Maladie pour les prescriptions conformes. C'est une différence majeure avec les compléments nutritionnels oraux (CNO) non remboursés, qui sont souvent achetés directement par le patient sans ordonnance. Ici, on est sur de la dispensation sur prescription médicale, avec un honoraire de dispensation applicable.\n\nLa marge officinale sur les LPPR de nutrition suit un régime spécifique : elle ne suit pas la marge dégressive lissée (MDL) des médicaments remboursables classiques, mais un système de remises négociées encadrées. En pratique, les marges brutes constatées sur les DADFMS remboursées oscillent entre 15 % et 25 % selon les références et les conditions d'achat, soit des niveaux nettement supérieurs aux génériques sous MDL (marges parfois inférieures à 7 %).\n\nAutre angle : l'honoraire de dispensation. Depuis les avenants conventionnels de 2018-2019 et leur consolidation via la LFSS, la dispensation de médicaments et de certains produits LPPR ouvre droit à des honoraires. Pour une DADFMS sur ordonnance, l'honoraire de dispensation de 1,02 € par ligne d'ordonnance (tarif de référence 2024) s'applique. Sur un patient chronique sous nutrition orale avec renouvellement mensuel, c'est un flux régulier, prévisible, et fidélisant.\n\nEnfin, le risque de la non-présence : si ton officine ne référence pas ces produits, le patient (ou son aidant) se tournera vers un PSAD ou commandera en ligne. Tu perds non seulement la marge LPPR, mais aussi la relation de proximité avec un patient souvent polymédiqué — et donc une ordonnance à forte valeur.\n\n## Recommandations actionnables\n\n1. Vérifier ton référencement grossiste — Contacte ton répartiteur principal (OCP, CERP, Phoenix) pour vérifier la disponibilité de MINI PEP'S et négocie un accord d'approvisionnement régulier. Les ruptures sur nutrition orale sont fréquentes et coûteuses en temps.\n\n2. Former ton équipe au dépistage de la dénutrition — La HAS a publié une fiche outil en 2021 : le score MNA (Mini Nutritional Assessment) est réalisable en officine en moins de 5 minutes. C'est une mission de prévention non rémunérée aujourd'hui mais qui justifie un entretien pharmaceutique et fidélise le patient.\n\n3. Identifier tes patients à potentiel — Dans ton logiciel métier, requête sur les patients > 70 ans avec au moins une ordonnance active : c'est ta cible prioritaire pour un entretien dénutrition proactif. En France, 30 à 50 % des personnes âgées hospitalisées sont dénutries (HAS 2021).\n\n4. Sécuriser la facturation LPPR — Les DADFMS facturées en LPPR nécessitent un code LPP précis et une prescription conforme (mention de l'indication). Vérifie que ton logiciel est à jour et forme ton préparateur référent sur ce circuit de facturation distinct du circuit médicament.\n\n5. Anticiper la saisonnalité canicule — Avec le réseau chaleur-santé lancé en juin 2026 et les alertes estivales, la dénutrition et la déshydratation des personnes âgées vont revenir sur le devant de la scène. C'est le bon moment pour créer un protocole d'accueil nutrition en officine.\n\n## Sources citees\n\n- Légifrance — Avis CEPS tarification MINI PEP'S (L.165-1 CSS), 19 juin 2026\n- HAS — Recommandation de bonne pratique : Diagnostic de la dénutrition de l'enfant et de l'adulte (2021)\n- Assurance Maladie — Honoraires de dispensation, tarifs conventionnels (avenant 11, consolidé 2024)",
+      "source": "Pharm'Actus · Légifrance — Avis CEPS tarification MINI PEP'S (L.165-1 CSS), 19 juin 2026, HAS — Recommandation de bonne pratique : Diagnostic de la dénutrition de l'enfant et de l'adulte (2021)",
+      "source_url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054274752",
+      "tiktok_url": "",
+      "badge_label": "Business",
+      "image_url": "assets/img_actu_2026_06_19_5.jpg",
+      "tags": [
+        "nutrition",
+        "lppr",
+        "remboursement",
+        "marge-officinale"
+      ]
+    },
+    {
+      "id": "actu_2026_06_19_4",
+      "date": "2026-06-19",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "Médicaments oraux longue durée : la plateforme Lynx promet de changer la donne",
+      "resume": "Innoviva lance Nortiva Bio pour développer des médicaments oraux à libération ultra-prolongée, basés sur la plateforme Lynx rachetée aux ruines de Lyndra Therapeutics. L'objectif : des comprimés qui agissent pendant des jours, voire des semaines. Une révolution potentielle pour l'observance.",
+      "full_text": "Un comprimé qui se prend une fois par semaine, ou une fois par mois. C'est pas de la science-fiction, c'est exactement ce que promet la plateforme Lynx, désormais entre les mains de Nortiva Bio, la nouvelle entité lancée par Innoviva après avoir racheté les actifs de Lyndra Therapeutics lors de sa liquidation.\n\nLe concept derrière Lynx : une forme orale à libération gastro-rétentive prolongée. Concrètement, le comprimé se déploie dans l'estomac après ingestion, reste plusieurs jours en place, et libère le principe actif de façon contrôlée. Lyndra avait déjà montré des résultats précliniques et cliniques prometteurs sur des molécules comme l'ivermectine et certains antirétroviraux avant de couler faute de financement.\n\nPourquoi c'est énorme pour nous ? Parce que l'observance, c'est le problème numéro un de la pharmacothérapie chronique. Diabète, VIH, psychiatrie, hypertension... Combien de patients récupèrent leurs boîtes tous les mois sans vraiment prendre leur traitement quotidiennement ? La réponse est : trop.\n\nSi cette technologie aboutit à des AMM commerciales dans les 5 à 10 ans, ça change structurellement le métier. Moins de dispensations répétées, mais des dispensations à plus forte valeur ajoutée. Un entretien pharmaceutique sur un traitement hebdomadaire ou mensuel prend une toute autre dimension. Et la substitution générique sur ces formes galéniques complexes, ça va être une autre paire de manches.\n\nNortiva Bio cible pour l'instant les pathologies infectieuses et la psychiatrie, deux domaines où l'observance est particulièrement critique. Les alliances industrielles sont en cours de négociation avec des Big Pharma.\n\nOn est encore loin du comptoir, clairement. Mais c'est exactement le type d'innovation qui redessine le paysage dans lequel on exercera dans une décennie.\n\nDemain matin au comptoir : rien à changer aujourd'hui. Mais garde un oeil sur Nortiva Bio et la plateforme Lynx. C'est le genre de technologie qui, si elle tient ses promesses, va faire parler d'elle dans toutes les formations continues d'ici 2030.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/biotech/nortiva-purrs-action-long-acting-lynx-platform-salvaged-langer-startup",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_06_19_4.jpg",
+      "tags": [
+        "galenique",
+        "observance",
+        "innovation",
+        "recherche",
+        "officine"
+      ]
+    },
+    {
+      "id": "actu_2026_06_19_3",
+      "date": "2026-06-19",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "Semaine de la santé sexuelle : l'officine, acteur clé du dépistage IST",
+      "resume": "Santé Publique France relance sa campagne digitale sur la santé sexuelle jusqu'au 28 juin 2026. L'officine reste un lieu privilégié pour le dépistage des IST et la prévention. Et cette année, les outils de communication sont disponibles directement à la commande pour les professionnels.",
+      "full_text": "La Semaine de la Santé Sexuelle, c'est pas juste une bannière à mettre sur les réseaux sociaux. C'est une vraie opportunité de positionnement pour l'officine comme acteur de santé sexuelle de proximité. Et cette année, SPF met les moyens : campagne digitale active jusqu'au 28 juin, outils de communication commandables gratuitement pour les professionnels.\n\nConcrètement, qu'est-ce que ça veut dire pour toi ? D'abord, les autotests VIH. Tu les as en stock, rappelle à tes équipes de les mettre en avant et de savoir en parler sans tabou. Un patient qui hésite à aller chez le médecin pour une prise de sang peut franchir le pas bien plus facilement dans une officine.\n\nEnsuite, les préservatifs remboursés pour les moins de 26 ans. C'est une mission concrète, souvent sous-valorisée. Tu as le droit de facturer une prestation de conseil en santé sexuelle. Tes préparateurs aussi peuvent délivrer cette information. Forme-les.\n\nLe site QuestionSexualite.fr, porté par SPF, est une ressource solide que tu peux recommander directement. Imprime l'URL sur tes sacs, affiche-la en officine. Simple, efficace, et ça te positionne comme professionnel qui n'esquive pas les sujets qui gênent.\n\nN'oublions pas les IST en progression : chlamydia, gonococcie, syphilis sont toutes en hausse depuis plusieurs années selon les données de surveillance. Le dépistage précoce, c'est moins de complications, moins d'hospitalisations, et un réseau officinal qui justifie sa place dans le parcours de soins.\n\nUne bonne nouvelle dans tout ça : SPF met à disposition des outils clé en main. Tu n'as pas à tout créer from scratch. Commande les supports, implique ton équipe, et transforme cette semaine nationale en activation locale concrète.\n\nDemain matin au comptoir : commande les outils SPF si ce n'est pas fait, brief ton équipe sur les autotests VIH et les préservatifs remboursés, et accroche un affichage visible. La prévention, ça commence par la visibilité.",
+      "source": "Santé Publique France",
+      "source_url": "https://www.santepubliquefrance.fr/les-actualites/semaine-de-la-sante-sexuelle-2026-le-depistage-et-la-prevention-restent-essentiels",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_06_19_3.jpg",
+      "tags": [
+        "prevention",
+        "ist",
+        "depistage",
+        "officine",
+        "vaccination"
+      ]
+    },
+    {
+      "id": "actu_2026_06_19_2",
+      "date": "2026-06-19",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "Wegovy oral cartonne : la \"familiarité\" fait la différence face à Lilly",
+      "resume": "L'agoniste GLP-1 oral de Novo Nordisk taille des croupières à Foundayo, le concurrent oral d'Eli Lilly. Selon les analystes de Spherix, c'est la notoriété de la marque Wegovy qui explique l'essentiel de l'avantage. Une leçon qui dépasse largement les frontières américaines.",
+      "full_text": "Le combat des GLP-1 oraux se joue aussi dans les têtes. Selon une analyse mensuelle de Spherix Global Insights auprès de médecins prescripteurs américains, l'oral semaglutide (Wegovy oral, Novo Nordisk) creuse l'écart face à Foundayo (orforglipron, Eli Lilly). Et le facteur clé n'est pas la tolérance, ni le profil de perte de poids. C'est la \"familiarité\".\n\nConcrètement : les médecins connaissent Wegovy. Ils ont prescrit l'injectabl pendant des années. Quand une version orale arrive avec le même nom, le même labo, le même principe actif, la transition est naturelle. Foundayo part de zéro en termes de notoriété, malgré des données cliniques solides.\n\nPourquoi c'est important pour nous ? Parce que cette dynamique va se reproduire en Europe, et en France. L'AMM européenne pour un GLP-1 oral dans l'obésité n'est qu'une question de temps. Et quand elle arrivera, le même effet \"marque connue\" jouera à plein dans les demandes patients au comptoir.\n\nAujourd'hui, tu gères déjà les questions sur Ozempic, Wegovy, Mounjaro en injectables. Prépare-toi à gérer les mêmes discussions en version comprimé. \"Docteur m'a dit que ça existe en pilule maintenant.\" Ce jour arrive.\n\nSide note inquiétante dans la même actu Novo Nordisk : deux groupes de hackers auraient compromis des données sensibles du laboratoire et tenté de l'extorquer pour plusieurs millions de dollars. Dans un contexte où les données de santé valent de l'or, c'est un rappel brutal que même les Big Pharma ne sont pas à l'abri. Et nous non plus : tes données DP, ta messagerie sécurisée, ton LGO... La cybersécurité à l'officine, c'est pas optionnel en 2026.\n\nDemain matin au comptoir : anticipe les questions sur les GLP-1 oraux. Ils n'ont pas encore l'AMM en France dans cette indication, mais tes patients, eux, auront déjà lu l'info sur leur téléphone. Mieux vaut être la source fiable que d'arriver en retard.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/pharma/novos-success-oral-wegovy-has-been-fueled-familiarity-spherix",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/stock/pharma_monde_1.jpg",
+      "tags": [
+        "glp-1",
+        "obesite",
+        "amm",
+        "innovation",
+        "diabete"
+      ]
+    },
+    {
+      "id": "actu_2026_06_19_1",
+      "date": "2026-06-19",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "Grippe en juin : l'épidémie démarre et l'officine est en première ligne",
+      "resume": "Santé Publique France confirme le démarrage de l'épidémie de grippe saisonnière en France hexagonale. En plein été quasi, c'est inhabituel et ça mérite qu'on en parle. Le comptoir devient le premier point de contact pour des patients qui ne pensent pas forcément à consulter.",
+      "full_text": "Une épidémie de grippe qui démarre en juin. Oui, tu as bien lu. Santé Publique France vient de confirmer le franchissement du seuil épidémique en France hexagonale. Pas en novembre, pas en janvier. En juin 2026.\n\nC'est atypique. Et ça change tout à la façon dont on doit gérer le flux comptoir ces prochaines semaines. Les patients vont débarquer avec leurs syndromes grippaux, convaincus que c'est \"juste une gastro estivale\" ou \"un coup de chaud\".\n\nPremier réflexe à avoir : sortir les TROD grippe/Covid combinés. Avec un démarrage aussi précoce et un tableau clinique qui peut facilement se confondre avec d'autres pathologies de saison, la détection rapide à l'officine prend tout son sens. Tu as la compétence, tu as les kits, utilise-les.\n\nDeuxième point : la vaccination. SPF rappelle son importance. Et là, c'est le moment de faire le point sur ton stock de vaccins antigrippaux. La campagne officielle de vaccination est normalement calée sur l'automne, mais rien n'interdit de préparer le terrain dès maintenant. Les patients fragiles, les immunodéprimés, les personnes âgées doivent être orientés sans tarder vers leur médecin ou vers toi si tu es habilité à vacciner.\n\nTroisième réflexe : les gestes barrières. Oui, ça fait \"vieux COVID\" mais SPF les réaffirme clairement. Mets à jour ton affichage en officine. Un simple poster à l'entrée sur le port du masque en cas de symptômes, ça évite que toute ta salle d'attente virtuelle devienne un cluster.\n\nLe timing est aussi un signal pour les confrères en zone rurale ou périurbaine : les déserts médicaux vont amplifier le rôle de l'officine comme premier recours. Sois prêt à gérer les TROD, à orienter vers les urgences si besoin, et à conseiller les traitements symptomatiques adaptés sans dépasser ta mission.\n\nDemain matin au comptoir : vérifie ton stock de TROD grippaux, actualise ton affichage barrière, et préviens ton équipe. L'épidémie ne va pas attendre septembre pour se calmer.",
+      "source": "Santé Publique France",
+      "source_url": "https://www.santepubliquefrance.fr/les-actualites/grippe-demarrage-de-lepidemie-en-france-hexagonale",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_06_19_1.jpg",
+      "tags": [
+        "grippe",
+        "trod",
+        "vaccination",
+        "officine",
+        "epidemie"
+      ]
+    },
+    {
+      "id": "lsv_2026_06_19",
+      "date": "2026-06-19",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? On soignait la dépression avec de l'électricité... dans le salon",
+      "resume": "Avant les antidépresseurs, les médecins branchaient leurs patients sur du courant électrique à domicile. C'était chic, tendance, et complètement non régulé. Et le pire ? Ça marchait peut-être un peu.",
+      "full_text": "On est en 1855. Un médecin britannique sonne à ta porte avec une mallette en cuir. Dedans : une pile galvanique, des électrodes en laiton, et un mode d'emploi flou. Il est là pour traiter ta mélancolie.\n\nL'électrothérapie, ou galvanisme médical, explose dans les salons européens à partir du milieu du XIXe siècle. Guillaume Duchenne de Boulogne, neurologue français, est l'un des premiers à systématiser la chose : il cartographie les muscles faciaux en les stimulant avec des électrodes. Ses photos de visages tordus par le courant sont passées à la postérité. Mais derrière le côté cabinet des horreurs, il y a une vraie intuition scientifique.\n\nLe twist ? Ces appareils d'électrothérapie sont rapidement vendus en pharmacie et par correspondance. N'importe qui peut s'acheter une « pile médicale » pour traiter la neurasthénie, l'hystérie, la migraine, les rhumatismes... et même l'impuissance. Les notices promettent monts et merveilles. Zéro contrôle, zéro dosage, zéro protocole.\n\nDans les années 1900, des dizaines de modèles sont commercialisés. Certains ressemblent à des instruments de torture, d'autres ont l'air de gadgets de salon. Les femmes de la bourgeoisie s'électrisent en buvant leur thé. C'est le soin du moment.\n\nLa FDA américaine commence à encadrer tout ça dans les années 1970, quand l'électroconvulsivothérapie (ECT) est elle aussi dans le viseur. Mais l'ECT, elle, a prouvé son efficacité dans les dépressions sévères résistantes. Elle est toujours pratiquée aujourd'hui, dans un cadre très strict, avec anesthésie générale.\n\nAu comptoir, quand un patient te demande si les dispositifs de neurostimulation vendus en para-pharmacie « valent quelque chose », tu peux lui raconter ça. L'électricité en médecine, c'est une vraie histoire sérieuse - à condition de ne pas se brancher n'importe comment.",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_06_19.jpg",
+      "tags": [
+        "histoire",
+        "psychiatrie",
+        "instrument",
+        "decouverte",
+        "neurologie"
+      ]
+    },
+    {
       "id": "actu_2026_06_18_4",
       "date": "2026-06-18",
       "type": "actu",
@@ -7390,6 +7515,6 @@
       ]
     }
   ],
-  "count": 358,
-  "updated_at": "2026-06-18T04:10:05.931434+02:00"
+  "count": 364,
+  "updated_at": "2026-06-19T04:06:45.580889+02:00"
 }

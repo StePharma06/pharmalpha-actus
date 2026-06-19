@@ -1,64 +1,64 @@
 {
-  "generated_at": "2026-06-18",
-  "window_label": "12 juin au 18 juin 2026",
+  "generated_at": "2026-06-19",
+  "window_label": "13 juin au 19 juin 2026",
   "has_history": true,
   "delta_source": "pytrends_rising",
   "pathologies": [
     {
+      "display": "Fatigue pant",
+      "delta_label": "↑ 20 050",
+      "trend": "up"
+    },
+    {
+      "display": "Allergie au soleil",
+      "delta_label": "↑ 16 550",
+      "trend": "up"
+    },
+    {
       "display": "Vitamine a 7 lettres",
-      "delta_label": "↑ 15 300",
+      "delta_label": "↑ 15 650",
       "trend": "up"
     },
     {
-      "display": "Allergie au pollen que faire",
-      "delta_label": "↑ 13 750",
+      "display": "Allergie piqure abeille",
+      "delta_label": "↑ 15 400",
       "trend": "up"
     },
     {
-      "display": "Fatigue chronique que faire",
-      "delta_label": "↑ 13 000",
-      "trend": "up"
-    },
-    {
-      "display": "Urticacées allergie",
-      "delta_label": "↑ 12 100",
-      "trend": "up"
-    },
-    {
-      "display": "Fatigue passagere",
-      "delta_label": "↑ 6 150",
+      "display": "Fatigue occulaire",
+      "delta_label": "↑ 15 350",
       "trend": "up"
     }
   ],
   "soins": [
     {
-      "display": "Azinc immunite",
-      "delta_label": "↑ 206 450",
+      "display": "Poivron digestion",
+      "delta_label": "↑ 45 100",
+      "trend": "up"
+    },
+    {
+      "display": "Temps de digestion chien",
+      "delta_label": "↑ 43 250",
       "trend": "up"
     },
     {
       "display": "Pois chiche digestion",
-      "delta_label": "↑ 44 150",
+      "delta_label": "↑ 40 050",
       "trend": "up"
     },
     {
-      "display": "Digestion lente que faire",
-      "delta_label": "↑ 41 100",
+      "display": "Quel liquide biologique jaune-verdâtre f",
+      "delta_label": "↑ 26 950",
       "trend": "up"
     },
     {
-      "display": "Immunite familiale",
-      "delta_label": "↑ 28 900",
-      "trend": "up"
-    },
-    {
-      "display": "Temps de digestion des aliments",
-      "delta_label": "↑ 28 750",
+      "display": "Azinc immunite",
+      "delta_label": "↑ 26 650",
       "trend": "up"
     }
   ],
   "pathologies_stale": false,
-  "pathologies_from": "2026-06-18",
+  "pathologies_from": "2026-06-19",
   "soins_stale": false,
-  "soins_from": "2026-06-18"
+  "soins_from": "2026-06-19"
 }

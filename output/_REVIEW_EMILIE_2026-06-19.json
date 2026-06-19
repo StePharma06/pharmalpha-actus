@@ -1,0 +1,46 @@
+{
+  "generated_at": "2026-06-19T04:06:42.619761+02:00",
+  "run_date": "2026-06-19",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Grippe en juin : l'épidémie démarre et l'officine est en première ligne",
+      "resume": "Santé Publique France confirme le démarrage de l'épidémie de grippe saisonnière en France hexagonale. En plein été quasi, c'est inhabituel et ça mérite qu'on en parle. Le comptoir devient le premier point de contact pour des patients qui ne pensent pas forcément à consulter.",
+      "source": "Santé Publique France",
+      "source_url": "https://www.santepubliquefrance.fr/les-actualites/grippe-demarrage-de-lepidemie-en-france-hexagonale",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Nutrition orale : MINI PEP'S inscrite au remboursement, ce que ça change pour ton officine",
+      "resume": "Une denrée alimentaire à finalité médicale spéciale (DADFMS) de plus vient d'obtenir sa tarification officielle au Journal officiel. Derrière l'avis CEPS du 19 juin 2026, il y a un marché de la nutrition orale à domicile qui pèse plus de 500 M€ et une opportunité de marge réelle ...",
+      "source": "Pharm'Actus · Légifrance — Avis CEPS tarification MINI PEP'S (L.165-1 CSS), 19 juin 2026, HAS — Recommandation de bonne pratique : Diagnostic de la dénutrition de l'enfant et de l'adulte (2021)",
+      "source_url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054274752",
+      "confidence_score": 0.62,
+      "warnings": [
+        "Le chiffre de marché 500-600 M€ pour la NEOD en France est une estimation sectorielle (SNITEM/CNSD) — à vérifier sur les données LPPR publiées par la CNAMTS dans son rapport de charges.",
+        "La fourchette de marge brute 15-25 % sur DADFMS est une estimation de terrain, non publiée officiellement dans un texte réglementaire — à confirmer avec les conditions d'achat réelles du grossiste.",
+        "L'honoraire de dispensation de 1,02 € par ligne d'ordonnance est le tarif de référence 2024 : vérifier si un avenant 2025-2026 a modifié ce montant.",
+        "Le régime exact de remboursement de MINI PEP'S (taux, indication ouvrant droit, code LPP attribué) n'est pas détaillé dans l'avis publié au JO — consulter l'intégralité du texte CEPS pour le code et les conditions.",
+        "La mention 'honoraire de dispensation applicable aux LPPR' mérite une vérification stricte : le périmètre exact des LPPR éligibles aux honoraires est défini par l'avenant conventionnel, pas par le simple fait d'être inscrit à L.165-1. Ne pas généraliser sans vérification."
+      ],
+      "flag_reason": "business_officine"
+    },
+    {
+      "id": "",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? On soignait la dépression avec de l'électricité... dans le salon",
+      "resume": "Avant les antidépresseurs, les médecins branchaient leurs patients sur du courant électrique à domicile. C'était chic, tendance, et complètement non régulé. Et le pire ? Ça marchait peut-être un peu.",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    }
+  ]
+}
