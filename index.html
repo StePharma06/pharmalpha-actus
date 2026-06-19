@@ -117,6 +117,15 @@ body {
   top: 0;
   z-index: 100;
 }
+/* site-nav.js (menu principal pharmalpha.fr fixe) force par défaut le header
+   Pharm'Actus en position:relative. On le re-fige ICI, collé juste SOUS la nav
+   principale. Spécificité ID + !important = bat la règle défensive de site-nav.
+   --actus-top est mis à jour en JS = hauteur réelle de la nav (qui change au scroll). */
+body.pa-has-nav #actusHeader {
+  position: sticky !important;
+  top: var(--actus-top, 64px) !important;
+  z-index: 100;
+}
 .header-inner {
   max-width: 1200px;
   margin: 0 auto;
@@ -1313,6 +1322,26 @@ body {
 </style>
 <script defer src="assets/site-nav.js"></script>
 <script>
+(function(){
+  // Garde le header Pharm'Actus collé juste SOUS la nav principale fixe (site-nav.js).
+  // La nav rétrécit au scroll (état "solid"), donc on mesure sa hauteur en direct
+  // et on la reporte dans --actus-top → les deux barres restent jointives.
+  function syncActusHeaderTop(){
+    var nav = document.getElementById('paSiteNav');
+    var hdr = document.getElementById('actusHeader');
+    if(!nav || !hdr) return;
+    hdr.style.setProperty('--actus-top', Math.round(nav.getBoundingClientRect().height) + 'px');
+  }
+  window.addEventListener('scroll', syncActusHeaderTop, {passive:true});
+  window.addEventListener('resize', syncActusHeaderTop);
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', function(){ syncActusHeaderTop(); setTimeout(syncActusHeaderTop, 150); });
+  } else {
+    syncActusHeaderTop(); setTimeout(syncActusHeaderTop, 150);
+  }
+})();
+</script>
+<script>
 (function() {
   var p = new URLSearchParams(window.location.search).get('a');
   var l = document.createElement('link');
@@ -1328,7 +1357,7 @@ body {
 <div class="caduceus-bg" id="caduceus-bg"></div>
 
 <!-- HEADER -->
-<header class="header">
+<header class="header" id="actusHeader">
   <div class="header-inner">
     <div class="logo-area">
       <a href="https://pharmalpha.fr/actus" class="logo-link" aria-label="Pharm'Actus — retour à l'accueil">
