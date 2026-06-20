@@ -1,0 +1,35 @@
+{
+  "generated_at": "2026-06-20T04:07:06.017884+02:00",
+  "run_date": "2026-06-20",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Coqueluche 2024 : la flambee qu'on n'a pas vu venir, et le rappel vaccinal qui traine",
+      "resume": "Sante publique France confirme une recrudescence massive de coqueluche en 2024. Un signal qu'on ressent deja au comptoir, avec des familles qui questionnent. Et un levier de vaccination a saisir maintenant.",
+      "source": "Sante Publique France",
+      "source_url": "https://www.santepubliquefrance.fr/les-actualites/coqueluche-une-annee-2024-marquee-par-une-recrudescence-des-cas-tres-importante",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Dispositifs médicaux : une alerte FDA qui rappelle les 3,5 Md€ d'enjeux DM en officine",
+      "resume": "La FDA vient d'épingler Zoll Medical pour des défaillances qualité majeures sur ses dispositifs cardio-respiratoires. Un signal qui doit faire réfléchir tout titulaire qui vend ou loue des DM : ta responsabilité engage aussi ta rentabilité.",
+      "source": "Pharm'Actus · FierceBiotech — FDA warning letter Zoll Medical (juin 2026), ANSM — Matériovigilance, cadre réglementaire (règlement EU MDR 2017/745)",
+      "source_url": "https://www.fiercebiotech.com/medtech/fda-warning-slams-zoll-medical-multiple-quality-control-and-reporting-violations",
+      "confidence_score": 0.62,
+      "warnings": [
+        "Le chiffre '3,5 milliards € remboursements LPP officines' est une estimation extrapolée à partir des données CNAM globales LPP — la part strictement officine (hors PSAD) est à vérifier dans le rapport CNAM charges et produits 2025 édition définitive.",
+        "L'honoraire de primo-délivrance DM à 13,80 € est une référence indicative basée sur les avenants conventionnels 2022-2023 — vérifier le montant exact en vigueur à la date de publication via l'avenant le plus récent.",
+        "Le chiffre 'moins de 30% des officines avec procédure matériovigilance documentée' est une estimation sectorielle non officielle — mentionner explicitement qu'il s'agit d'une estimation professionnelle.",
+        "Le montant de sanction ANSM jusqu'à 150 000 € est à vérifier textuellement dans la version consolidée de L.5312-4-2 CSP à la date de publication.",
+        "Zoll Medical n'est pas identifié comme distributeur majeur en officine française — l'article utilise cet événement comme prétexte analytique, ce qui est journalistiquement correct mais doit être clairement positionné comme tel dans la lecture."
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

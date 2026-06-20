@@ -1,58 +1,58 @@
 {
   "pathologies": [
     {
-      "display": "Fatigue pant",
-      "delta_label": "↑ 20 050",
-      "trend": "up"
-    },
-    {
-      "display": "Allergie au soleil",
-      "delta_label": "↑ 16 550",
+      "display": "Allergie au soleil bouton",
+      "delta_label": "↑ 36 950",
       "trend": "up"
     },
     {
       "display": "Vitamine a 7 lettres",
-      "delta_label": "↑ 15 650",
+      "delta_label": "↑ 16 400",
       "trend": "up"
     },
     {
-      "display": "Allergie piqure abeille",
-      "delta_label": "↑ 15 400",
+      "display": "Fatigue extreme que faire",
+      "delta_label": "↑ 14 150",
       "trend": "up"
     },
     {
-      "display": "Fatigue occulaire",
-      "delta_label": "↑ 15 350",
+      "display": "Allergie au soleil photo",
+      "delta_label": "↑ 14 000",
+      "trend": "up"
+    },
+    {
+      "display": "Pourquoi la chaleur fatigue",
+      "delta_label": "↑ 12 800",
       "trend": "up"
     }
   ],
-  "pathologies_from": "2026-06-19",
+  "pathologies_from": "2026-06-20",
   "soins": [
     {
-      "display": "Poivron digestion",
-      "delta_label": "↑ 45 100",
+      "display": "Upsa digestion",
+      "delta_label": "↑ 49 500",
       "trend": "up"
     },
     {
-      "display": "Temps de digestion chien",
-      "delta_label": "↑ 43 250",
+      "display": "Bicarbonate alimentaire digestion",
+      "delta_label": "↑ 44 200",
       "trend": "up"
     },
     {
-      "display": "Pois chiche digestion",
-      "delta_label": "↑ 40 050",
+      "display": "Digestion difficile remède rapide",
+      "delta_label": "↑ 40 850",
       "trend": "up"
     },
     {
       "display": "Quel liquide biologique jaune-verdâtre f",
-      "delta_label": "↑ 26 950",
+      "delta_label": "↑ 34 650",
       "trend": "up"
     },
     {
-      "display": "Azinc immunite",
-      "delta_label": "↑ 26 650",
+      "display": "Courgette crue digestion",
+      "delta_label": "↑ 28 200",
       "trend": "up"
     }
   ],
-  "soins_from": "2026-06-19"
+  "soins_from": "2026-06-20"
 }

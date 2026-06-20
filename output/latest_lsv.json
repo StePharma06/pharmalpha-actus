@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? On soignait la dépression avec de l'électricité... dans le salon",
-  "resume": "Avant les antidépresseurs, les médecins branchaient leurs patients sur du courant électrique à domicile. C'était chic, tendance, et complètement non régulé. Et le pire ? Ça marchait peut-être un peu.",
-  "full_text": "On est en 1855. Un médecin britannique sonne à ta porte avec une mallette en cuir. Dedans : une pile galvanique, des électrodes en laiton, et un mode d'emploi flou. Il est là pour traiter ta mélancolie.\n\nL'électrothérapie, ou galvanisme médical, explose dans les salons européens à partir du milieu du XIXe siècle. Guillaume Duchenne de Boulogne, neurologue français, est l'un des premiers à systématiser la chose : il cartographie les muscles faciaux en les stimulant avec des électrodes. Ses photos de visages tordus par le courant sont passées à la postérité. Mais derrière le côté cabinet des horreurs, il y a une vraie intuition scientifique.\n\nLe twist ? Ces appareils d'électrothérapie sont rapidement vendus en pharmacie et par correspondance. N'importe qui peut s'acheter une « pile médicale » pour traiter la neurasthénie, l'hystérie, la migraine, les rhumatismes... et même l'impuissance. Les notices promettent monts et merveilles. Zéro contrôle, zéro dosage, zéro protocole.\n\nDans les années 1900, des dizaines de modèles sont commercialisés. Certains ressemblent à des instruments de torture, d'autres ont l'air de gadgets de salon. Les femmes de la bourgeoisie s'électrisent en buvant leur thé. C'est le soin du moment.\n\nLa FDA américaine commence à encadrer tout ça dans les années 1970, quand l'électroconvulsivothérapie (ECT) est elle aussi dans le viseur. Mais l'ECT, elle, a prouvé son efficacité dans les dépressions sévères résistantes. Elle est toujours pratiquée aujourd'hui, dans un cadre très strict, avec anesthésie générale.\n\nAu comptoir, quand un patient te demande si les dispositifs de neurostimulation vendus en para-pharmacie « valent quelque chose », tu peux lui raconter ça. L'électricité en médecine, c'est une vraie histoire sérieuse - à condition de ne pas se brancher n'importe comment.",
-  "image_keywords": "vintage electric therapy device",
+  "titre": "Le saviez-vous ? On mesurait la fièvre en comptant le pouls pendant des siècles",
+  "resume": "Avant le thermomètre, les médecins prenaient la température... avec leurs doigts et leur montre. Pendant 2 000 ans, le pouls était le seul thermomètre disponible. Et le plus fou ? La méthode n'était pas si mauvaise.",
+  "full_text": "Galien, médecin de l'empereur Marc-Aurèle au IIe siècle, avait une théorie bien arrêtée : la fièvre, c'est un excès de chaleur dans le sang, et le pouls accélère avec elle. Logique, non ? Sauf qu'il n'avait aucun instrument pour mesurer quoi que ce soit. Juste ses doigts posés sur le poignet du patient.\n\nPendant presque 1 500 ans après lui, tous les médecins du monde ont fait pareil. On comptait les battements cardiaques à la minute, on notait si le pouls était « bondissant », « filant » ou « mou », et on en déduisait la gravité de la fièvre. C'était l'art du toucher érigé en science.\n\nEt voilà le twist que personne n'attend : ils n'avaient pas tort. La fréquence cardiaque augmente bien avec la température corporelle - environ 10 battements par minute pour chaque degré de fièvre. Un médecin expérimenté du XVIe siècle pouvait estimer une fièvre à 39°C sans jamais avoir entendu parler de thermomètre. Pas mal pour de la médecine empirique.\n\nC'est Santorio Santorio - oui, c'est vraiment son nom - qui invente le premier thermoscope médical vers 1612 à Padoue. Un tube de verre rempli d'eau, ouvert en haut, avec un bulbe chauffé par la bouche du patient. Résultat : approximatif, non standardisé, et impossible à transporter. Les médecins ont continué à préférer leur vieille technique du pouls pendant encore un siècle.\n\nCe n'est qu'en 1851 que Carl Wunderlich, médecin allemand, prend la température de 25 000 patients avec un thermomètre standardisé et établit que 37°C est la norme. Il faut 40 ans de plus pour que les thermomètres deviennent courants dans les cabinets.\n\nAujourd'hui, au comptoir, quand tu sors un thermomètre auriculaire en deux secondes, rappelle-toi qu'il y a 200 ans, un médecin posait son pouce sur le poignet d'un patient pendant une minute entière pour savoir la même chose. La précision a mis du temps à arriver - mais l'intuition clinique, elle, était déjà là.",
+  "image_keywords": "vintage pulse medical",
   "tags": [
     "histoire",
-    "psychiatrie",
+    "diagnostic",
     "instrument",
-    "decouverte",
-    "neurologie"
+    "fievre",
+    "mesure"
   ],
-  "date": "2026-06-19",
+  "date": "2026-06-20",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",
