@@ -314,27 +314,6 @@
       ]
     },
     {
-      "id": "actu_2026_06_19_1",
-      "date": "2026-06-19",
-      "type": "actu",
-      "categorie": "pharma_france",
-      "titre": "Grippe en juin : l'épidémie démarre et l'officine est en première ligne",
-      "resume": "Santé Publique France confirme le démarrage de l'épidémie de grippe saisonnière en France hexagonale. En plein été quasi, c'est inhabituel et ça mérite qu'on en parle. Le comptoir devient le premier point de contact pour des patients qui ne pensent pas forcément à consulter.",
-      "full_text": "Une épidémie de grippe qui démarre en juin. Oui, tu as bien lu. Santé Publique France vient de confirmer le franchissement du seuil épidémique en France hexagonale. Pas en novembre, pas en janvier. En juin 2026.\n\nC'est atypique. Et ça change tout à la façon dont on doit gérer le flux comptoir ces prochaines semaines. Les patients vont débarquer avec leurs syndromes grippaux, convaincus que c'est \"juste une gastro estivale\" ou \"un coup de chaud\".\n\nPremier réflexe à avoir : sortir les TROD grippe/Covid combinés. Avec un démarrage aussi précoce et un tableau clinique qui peut facilement se confondre avec d'autres pathologies de saison, la détection rapide à l'officine prend tout son sens. Tu as la compétence, tu as les kits, utilise-les.\n\nDeuxième point : la vaccination. SPF rappelle son importance. Et là, c'est le moment de faire le point sur ton stock de vaccins antigrippaux. La campagne officielle de vaccination est normalement calée sur l'automne, mais rien n'interdit de préparer le terrain dès maintenant. Les patients fragiles, les immunodéprimés, les personnes âgées doivent être orientés sans tarder vers leur médecin ou vers toi si tu es habilité à vacciner.\n\nTroisième réflexe : les gestes barrières. Oui, ça fait \"vieux COVID\" mais SPF les réaffirme clairement. Mets à jour ton affichage en officine. Un simple poster à l'entrée sur le port du masque en cas de symptômes, ça évite que toute ta salle d'attente virtuelle devienne un cluster.\n\nLe timing est aussi un signal pour les confrères en zone rurale ou périurbaine : les déserts médicaux vont amplifier le rôle de l'officine comme premier recours. Sois prêt à gérer les TROD, à orienter vers les urgences si besoin, et à conseiller les traitements symptomatiques adaptés sans dépasser ta mission.\n\nDemain matin au comptoir : vérifie ton stock de TROD grippaux, actualise ton affichage barrière, et préviens ton équipe. L'épidémie ne va pas attendre septembre pour se calmer.",
-      "source": "Santé Publique France",
-      "source_url": "https://www.santepubliquefrance.fr/les-actualites/grippe-demarrage-de-lepidemie-en-france-hexagonale",
-      "tiktok_url": "",
-      "badge_label": "Pharma France",
-      "image_url": "assets/img_actu_2026_06_19_1.jpg",
-      "tags": [
-        "grippe",
-        "trod",
-        "vaccination",
-        "officine",
-        "epidemie"
-      ]
-    },
-    {
       "id": "lsv_2026_06_19",
       "date": "2026-06-19",
       "type": "lsv",

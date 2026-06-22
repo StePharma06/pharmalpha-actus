@@ -341,7 +341,15 @@ def fetch_rss_articles():
                             mktime(getattr(entry, date_field)), tz=timezone.utc
                         )
                         break
-                if published and published < cutoff:
+                # SECURITE DATE (incident grippe-juin 2026-06-19) :
+                # un article SANS date parsable ne doit JAMAIS etre estampille
+                # "aujourd'hui" puis presente comme une actu du jour. On l'exclut
+                # car on ne peut pas garantir sa fraicheur (un vieux contenu
+                # saisonnier passerait pour une news du jour).
+                if published is None:
+                    print(f"  [SKIP] {feed_cfg['name']} : '{getattr(entry, 'title', '')[:60]}' sans date parsable, exclu")
+                    continue
+                if published < cutoff:
                     continue
 
                 title = getattr(entry, "title", "").strip()
@@ -356,7 +364,7 @@ def fetch_rss_articles():
                         "source": feed_cfg["name"],
                         "categorie": feed_cfg["categorie"],
                         "pratico_pratique": feed_cfg.get("pratico_pratique", False),
-                        "date": published.strftime("%Y-%m-%d") if published else datetime.now(PARIS_TZ).strftime("%Y-%m-%d"),
+                        "date": published.strftime("%Y-%m-%d"),
                     })
         except Exception as e:
             print(f"  [WARN] Erreur feed {feed_cfg['name']}: {e}")
@@ -500,6 +508,12 @@ REGLES DE SOURCES (STRICTES) :
 1. REGLE ABSOLUE : JAMAIS 2 articles du meme media dans une meme journee. 1 seul Moniteur max, 1 seul Quotidien du Pharmacien max, etc. Si Pharma France choisit Moniteur, aucune autre categorie ne peut piocher dans Moniteur.
 2. ALTERNANCE OBLIGATOIRE : Le Moniteur et Le Quotidien du Pharmacien sont des references mais NE DOIVENT PAS etre utilises TOUS les jours. Sur une semaine, varie au maximum. Alterne avec : Egora, HAS, Ordre des Pharmaciens, LEEM, Le Pharmacien de France, VIDAL, Sciences et Avenir, Pourquoi Docteur, APMnews, The Conversation, INSERM, ANSM, Medscape FR, FSPF, USPO, UPGF, Caducee.net, Sante Publique France, LegiRSS Pharmacie, ActuLabo, etc. Priorite aux sources nouvelles si leur actu du jour est de qualite egale.
 3. Pour Pharma Monde : UNIQUEMENT des sources ETRANGERES (Reuters, STAT News, Pharmaceutical Journal, Fierce Pharma, FierceBiotech, Endpoints News, European Pharmaceutical Review, Pharmacy Times, MedCity News, Pharmaphorum, PharmaTimes UK, EMA News, Pharmaceutical Executive, Nature Medicine, BioPharma Dive). Traduis en francais. Si aucune actu internationale claire dans les articles fournis, prends quand meme un article etranger et adapte-le au contexte francais.
+
+=== REGLE TEMPORALITE & FIDELITE SANITAIRE (CRITIQUE - YMYL) ===
+- NE JAMAIS inventer ni inferer QUAND un evenement se produit. N'ecris JAMAIS qu'un fait a lieu a une date/mois/saison precis ("en juin", "cet ete", "ca demarre maintenant", "precoce", "atypique") si la source ne l'affirme PAS EXPLICITEMENT.
+- Les evenements saisonniers (epidemie de grippe, bronchiolite, gastro, campagne de vaccination, allergies polliniques) suivent un calendrier connu : une epidemie de grippe demarre EN HIVER, pas en juin. Si un titre de source decrit un tel evenement sans annee/date claire, NE LE TRAITE PAS comme une actu du jour et ne fabrique JAMAIS un angle "inedit/precoce/atypique".
+- Si la date affichee d'un article te parait INCOHERENTE avec son contenu (ex: une news hivernale datee d'un jour d'ete), NE LE SELECTIONNE PAS : choisis un autre article. La date "Date: AAAA-MM-JJ" fournie peut etre erronee, ne t'y fie pas aveuglement.
+- CONTENU SANTE (YMYL) : reste STRICTEMENT fidele a la source. N'amplifie aucune affirmation epidemiologique, ne cree pas de caractere "exceptionnel/alarmant/historique" absent de la source. La credibilite medicale de Stephen (Docteur en Pharmacie) est engagee a chaque article.
 
 === IMPORTANCE DIFFERENCIANTE ===
 Pharma Monde et Business Officine sont les 2 rubriques qui DIFFERENCIENT Pharm'Actus des autres newsletters pharma (qui se contentent de relayer Moniteur/Quotidien).
