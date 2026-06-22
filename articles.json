@@ -1,6 +1,111 @@
 {
   "articles": [
     {
+      "id": "actu_2026_06_22_4",
+      "date": "2026-06-22",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "GSK lance Exdensur dans l'asthme : une nouvelle molecule a surveiller de pres",
+      "resume": "GSK vient de lancer sa premiere campagne grand public americaine pour Exdensur, son nouveau traitement de l'asthme qu'il vise a en faire un blockbuster. La molecule n'est pas encore sur le marche francais, mais son pipeline et son mecanisme d'action meritent qu'on s'y interesse maintenant.",
+      "full_text": "Quand GSK investit dans une campagne DTC (direct-to-consumer) aux Etats-Unis pour un medicament, c'est que le laboratoire croit tres fort en son potentiel commercial. Exdensur vient de passer ce cap.\n\nLa molecule cible l'asthme, un terrain que tu connais bien au comptoir : corticoides inhales, LABA, biotherapies pour les formes severes... le marche est deja charge. Mais GSK parie qu'Exdensur peut se tailler une place significative, au point de viser le statut de «blockbuster», soit plus d'un milliard de dollars de ventes annuelles.\n\nOn n'a pas encore tous les details du mecanisme d'action precis publies dans les sources disponibles, mais la strategie marketing agressive de GSK suggere des donnees cliniques solides derriere. Les laboratoires ne lancent pas des campagnes TV grand public pour des molecules avec des resultats moyens.\n\nPourquoi s'y interesser maintenant si c'est un marche US ? Parce que le parcours EMA suit generalement celui de la FDA avec 12 a 24 mois de decalage. Si Exdensur performe aux Etats-Unis, elle arrive en Europe et potentiellement en France dans les deux prochaines annees.\n\nEt quand une nouvelle molecule de l'asthme arrive en France, c'est toi qui geres la transition : patients sous traitement existant, questions sur la comparaison avec leur traitement habituel, enjeux de substitution ou pas selon le statut AMM, et impact sur le taux de substitution si des generiques du marche actuel sont concernes.\n\nL'asthme severe, c'est aussi le terrain des biotherapies (dupilumab, mepolizumab, benralizumab...) ou l'officine joue un role croissant dans l'accompagnement et les entretiens pharmaceutiques. Une nouvelle molecule dans cet espace, ca peut redistribuer les cartes.\n\nDemain matin au comptoir : pas d'action immediate sur Exdensur, elle n'est pas dispo en France. Mais prends note du nom, suis les publications cliniques, et anticipe les questions de tes patients asthmatiques qui lisent les forums americains. Parce qu'ils vont en entendre parler avant toi.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/marketing/gsk-runs-first-dtc-ad-would-be-asthma-blockbuster-exdensur",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_06_22_4.jpg",
+      "tags": [
+        "asthme",
+        "gsk",
+        "innovation",
+        "pipeline",
+        "biotherapie"
+      ]
+    },
+    {
+      "id": "actu_2026_06_22_3",
+      "date": "2026-06-22",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "Sante sexuelle : ton officine peut etre le maillon fort du depistage cet ete",
+      "resume": "La Semaine de la sante sexuelle 2026 bat son plein jusqu'au 28 juin, et Sante publique France relance sa campagne digitale autour de QuestionSexualite.fr. Pour l'officine, c'est une fenetre concrete pour valoriser le depistage des IST et la prevention. Avec des actes deja remuneres pour certains d'entre eux.",
+      "full_text": "C'est pas le sujet le plus simple a aborder entre deux delivrances de metformine. Et pourtant, la sante sexuelle, c'est un vrai territoire officinal sous-exploite.\n\nSante publique France rediffuse jusqu'au 28 juin sa campagne «Tout le monde se pose des questions sur la sexualite» centree sur QuestionSexualite.fr. L'objectif : destigmatiser le recours au depistage et a la prevention, notamment pour les IST, le VIH, les hepatites.\n\nEt toi la-dedans ? Tu es deja positionne sur ce terrain, meme si tu n'en fais pas toujours la communication. Les TROD VIH en officine, c'est une realite depuis plusieurs annees, avec une remuneration a l'acte conventionnee. Les preservatifs, les autotests, la contraception d'urgence sans ordonnance : l'officine est souvent le premier recours, surtout pour les jeunes qui ne vont pas chez le medecin.\n\nLa campagne SPF cible le numerique, mais ton comptoir reste un espace physique de proximite irremplaçable. Un jeune qui entre pour acheter des preservatifs et qui ressort avec l'info sur le depistage gratuit dans son centre CeGIDD ou sur les autotests disponibles en officine : c'est de la prevention concrete.\n\nPetit rappel utile pour ton equipe : les autotests de depistage du VIH sont remboursables pour certaines populations a risque via l'Assurance Maladie. Et les TROD VIH realises en officine font partie des missions conventionnees remunereees - verifie que ta convention est a jour et que ton equipe est formee.\n\nLe message de SPF, c'est aussi de rappeler que parler de sexualite, c'est normal. Ton equipe n'a pas besoin d'etre specialiste en sexologie. Juste avoir le bon reflexe : orienter, informer, et ne pas faire semblant de n'avoir pas entendu la question.\n\nDemain matin au comptoir : colle l'affiche SPF en vitrine, briefes tes preparateurs sur les autotests VIH et les TROD disponibles, et rappelle-leur que la question peut venir de n'importe qui, a n'importe quelle heure.",
+      "source": "Sante Publique France",
+      "source_url": "https://www.santepubliquefrance.fr/index.php/les-actualites/semaine-de-la-sante-sexuelle-2026-le-depistage-et-la-prevention-restent-essentiels",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_06_22_3.jpg",
+      "tags": [
+        "prevention",
+        "ist",
+        "depistage",
+        "trod",
+        "officine"
+      ]
+    },
+    {
+      "id": "actu_2026_06_22_2",
+      "date": "2026-06-22",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "Novo Nordisk ouvre une usine en Republique tcheque : les GLP-1 bientot moins en tension ?",
+      "resume": "Novo Nordisk vient d'ouvrir une nouvelle usine en Republique tcheque pour fabriquer les principes actifs de ses futurs medicaments anti-obesite et anti-diabete de nouvelle generation. Investissement parallele de 29 millions de dollars en Chine. Le signal que les ruptures de GLP-1 pourraient enfin se resorber.",
+      "full_text": "Tu t'en souviens, les ruptures d'Ozempic et de Wegovy ont ete un cauchemar pendant des mois. Eh bien Novo Nordisk a visiblement entendu le message.\n\nLe laboratoire danois vient d'inaugurer une usine en Republique tcheque, rachetee a Novavax il y a 18 mois. Objectif declare : produire les ingredients actifs (API) pour ses medicaments anti-obesite et anti-diabete de NOUVELLE generation. Autrement dit, ce n'est pas pour les molecules actuelles comme le semaglutide, mais pour la prochaine vague de GLP-1 et au-dela.\n\nEn parallele, Novo annonce 29 millions de dollars investis dans son site de production chinois. Deux continents, une strategie claire : securiser la chaine de fabrication sur plusieurs zones geographiques pour eviter le syndrome de l'usine unique.\n\nPourquoi ca t'interesse en tant que pharmacien francais ? Parce que les tensions d'approvisionnement sur les agonistes du GLP-1 ont directement impacte ton quotidien et tes patients diabetiques. Chaque rupture, c'est un patient qui decompense, un medecin qui te rappelle, et toi qui joues aux chaises musicales entre specialites et presentations.\n\nCette expansion industrielle, c'est un signal positif sur le moyen terme. Mais attention : les nouvelles capacites de production mettent du temps a etre qualifiees par les agences reglementaires (EMA, FDA). On ne verra pas les effets sur les lineaires avant 2027-2028 au minimum.\n\nEt pour les molecules actuelles ? La pression reste forte. La demande mondiale en semaglutide et tirzepatide continue d'exploser, notamment portee par les indications obesite qui s'etendent. Le marche US aspire une part disproportionnee de la production mondiale.\n\nDemain matin au comptoir : continue de gerer tes allocations et de documenter les ruptures via le DP-Ruptures. Et si un patient te demande quand ca va revenir a la normale... dis-lui 2028. Avec le sourire.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/manufacturing/novo-nordisk-opens-czech-plant-unveils-29m-upgrade-china-facility",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/img_actu_2026_06_22_2.jpg",
+      "tags": [
+        "glp-1",
+        "rupture",
+        "approvisionnement",
+        "diabete",
+        "obesite"
+      ]
+    },
+    {
+      "id": "actu_2026_06_22_1",
+      "date": "2026-06-22",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "Canicule au comptoir : Sante publique France te donne les armes pour cet ete",
+      "resume": "Les vagues de chaleur s'intensifient et ton officine est en premiere ligne. Sante publique France vient de mettre a jour ses outils de communication a destination des professionnels. Ce que ca change concrètement pour ton conseil de comptoir cet ete.",
+      "full_text": "Le thermometre grimpe, les patients debarquent a l'officine avec leurs questions sur la chaleur, et toi t'as deja le bon reflexe : c'est maintenant qu'il faut briefer ton equipe.\n\nSante publique France vient de reactualiser sa campagne «Les fortes chaleurs nous concernent tous» avec des outils de communication commandables directement par les professionnels de sante. Affiches, depliants, infographies : tout est dispo et pret a poser en officine ou a envoyer aux patients fragiles.\n\nQui est vraiment a risque ? Les personnes agees, les nourrissons, les patients sous diuretiques, IEC, ARA2, lithium, anticholinergiques, neuroleptiques ou antihypertenseurs. Ca te rappelle quelque chose ? C'est exactement le coeur de ta patientele chronique.\n\nLe reflexe medicamenteux que ton equipe doit avoir : chaleur + deshydratation = risque de surdosage ou de toxicite augmentee pour des molecules a marge therapeutique etroite. Le lithium, la digoxine, la metformine... c'est pas le moment de faire l'impasse sur le conseil.\n\nCote missions officinales, la canicule c'est aussi une opportunite de valoriser ton role. Un entretien pharmaceutique oriente «gestion de la chaleur» pour les patients polymediques, c'est du concret. Pas besoin d'un avenant specifique : c'est dans l'esprit de tes missions de prevention deja conventionnees.\n\nAjoute a ca le lancement officiel du reseau Chaleur-Sante-Bati-Urbanisme par SPF et ses partenaires. L'idee : faire evoluer les pratiques de construction pour des batiments plus resilients aux fortes chaleurs. Ca ne te concerne pas directement... sauf si ton officine est une fournaise en juillet et que t'as des vaccins a conserver entre 2 et 8 degres. Rappel utile : ta chaine du froid, c'est pas optionnel.\n\nDemain matin au comptoir : sors les plaquettes SPF, briefes tes preparateurs sur les interactions chaleur-medicaments, et pense a verifier la temperature de ton frigo a vaccins. Simple, efficace, et ca peut litteralement sauver une vie.",
+      "source": "Sante Publique France",
+      "source_url": "https://www.santepubliquefrance.fr/les-actualites/les-fortes-chaleurs-nous-concernent-tous-adoptons-les-bons-reflexes",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_06_22_1.jpg",
+      "tags": [
+        "canicule",
+        "prevention",
+        "officine",
+        "conseil",
+        "chaine-froid"
+      ]
+    },
+    {
+      "id": "lsv_2026_06_22",
+      "date": "2026-06-22",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? La morphine du soldat américain a créé la première épidémie d'opioïdes",
+      "resume": "Pendant la guerre de Sécession, les médecins militaires injectaient de la morphine à la seringue hypodermique, toute fraîche débarquée d'Europe. Résultat : 400 000 soldats repartent accros. On appelle ça la 'maladie du soldat'. Et personne ne voit venir le problème.",
+      "full_text": "On croit souvent que la crise des opioïdes, c'est une invention du XXIe siècle. Un truc lié au Oxy­Contin et aux labos américains des années 90. Mais non. Le scénario s'est déjà joué. Il y a 160 ans. En plein milieu d'un champ de bataille.\n\nOn est en 1861. La guerre de Sécession éclate aux États-Unis. Les chirurgiens militaires se retrouvent débordés : amputations à la chaîne, blessures par balle, gangrènes. La morphine existe depuis 1804, mais c'est la seringue hypodermique, inventée en 1853 par Alexander Wood à Édimbourg, qui change tout. Injecter directement dans le muscle, c'est rapide, efficace, magique. Les médecins de l'Union comme de la Confédération s'en emparent sans hésiter.\n\nLe twist ? Personne ne sait encore que la morphine injectée crée une dépendance physique bien plus rapide et bien plus violente que la morphine avalée. On pense sincèrement soigner. On distribue des kits morphine aux soldats pour qu'ils se gèrent seuls sur le terrain. Des fioles. Des seringues. En autonomie totale.\n\nÀ la fin de la guerre, en 1865, les estimations parlent de 400 000 à 500 000 soldats dépendants. Les familles découvrent des hommes qui ne peuvent plus s'arrêter. Les pharmaciens voient affluer des clients qui réclament de la morphine pour 'douleurs chroniques'. L'expression 'maladie du soldat' ou 'Army disease' entre dans le langage courant. Ce n'est pas une métaphore. C'est un diagnostic.\n\nLa réponse médicale de l'époque ? Prescrire de l'héroïne. En 1898, Bayer la commercialise comme traitement... de la dépendance à la morphine. On connaît la suite.\n\nCette histoire, elle résonne encore aujourd'hui. Quand un patient arrive au comptoir avec une ordonnance de tramadol 'juste pour quelques semaines', c'est exactement ce biais-là qu'on combat : l'illusion que la douleur maîtrisée efface le risque de dépendance. 160 ans plus tard, on a les mêmes molécules, les mêmes bonnes intentions, et les mêmes angles morts.",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_06_22.jpg",
+      "tags": [
+        "histoire",
+        "medicament",
+        "addiction",
+        "opioïdes",
+        "pharmacie"
+      ]
+    },
+    {
       "id": "actu_2026_06_20_5",
       "date": "2026-06-20",
       "type": "actu",
@@ -7640,6 +7745,6 @@
       ]
     }
   ],
-  "count": 370,
-  "updated_at": "2026-06-20T04:07:09.773145+02:00"
+  "count": 375,
+  "updated_at": "2026-06-22T04:05:57.225271+02:00"
 }

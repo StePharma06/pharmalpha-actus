@@ -1,0 +1,29 @@
+{
+  "generated_at": "2026-06-22T04:05:53.212841+02:00",
+  "run_date": "2026-06-22",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Canicule au comptoir : Sante publique France te donne les armes pour cet ete",
+      "resume": "Les vagues de chaleur s'intensifient et ton officine est en premiere ligne. Sante publique France vient de mettre a jour ses outils de communication a destination des professionnels. Ce que ca change concrètement pour ton conseil de comptoir cet ete.",
+      "source": "Sante Publique France",
+      "source_url": "https://www.santepubliquefrance.fr/les-actualites/les-fortes-chaleurs-nous-concernent-tous-adoptons-les-bons-reflexes",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "Sante sexuelle : ton officine peut etre le maillon fort du depistage cet ete",
+      "resume": "La Semaine de la sante sexuelle 2026 bat son plein jusqu'au 28 juin, et Sante publique France relance sa campagne digitale autour de QuestionSexualite.fr. Pour l'officine, c'est une fenetre concrete pour valoriser le depistage des IST et la prevention. Avec des actes deja remuneres pour certains d'entre eux.",
+      "source": "Sante Publique France",
+      "source_url": "https://www.santepubliquefrance.fr/index.php/les-actualites/semaine-de-la-sante-sexuelle-2026-le-depistage-et-la-prevention-restent-essentiels",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    }
+  ]
+}

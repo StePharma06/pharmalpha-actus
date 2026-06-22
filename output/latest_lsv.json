@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? On mesurait la fièvre en comptant le pouls pendant des siècles",
-  "resume": "Avant le thermomètre, les médecins prenaient la température... avec leurs doigts et leur montre. Pendant 2 000 ans, le pouls était le seul thermomètre disponible. Et le plus fou ? La méthode n'était pas si mauvaise.",
-  "full_text": "Galien, médecin de l'empereur Marc-Aurèle au IIe siècle, avait une théorie bien arrêtée : la fièvre, c'est un excès de chaleur dans le sang, et le pouls accélère avec elle. Logique, non ? Sauf qu'il n'avait aucun instrument pour mesurer quoi que ce soit. Juste ses doigts posés sur le poignet du patient.\n\nPendant presque 1 500 ans après lui, tous les médecins du monde ont fait pareil. On comptait les battements cardiaques à la minute, on notait si le pouls était « bondissant », « filant » ou « mou », et on en déduisait la gravité de la fièvre. C'était l'art du toucher érigé en science.\n\nEt voilà le twist que personne n'attend : ils n'avaient pas tort. La fréquence cardiaque augmente bien avec la température corporelle - environ 10 battements par minute pour chaque degré de fièvre. Un médecin expérimenté du XVIe siècle pouvait estimer une fièvre à 39°C sans jamais avoir entendu parler de thermomètre. Pas mal pour de la médecine empirique.\n\nC'est Santorio Santorio - oui, c'est vraiment son nom - qui invente le premier thermoscope médical vers 1612 à Padoue. Un tube de verre rempli d'eau, ouvert en haut, avec un bulbe chauffé par la bouche du patient. Résultat : approximatif, non standardisé, et impossible à transporter. Les médecins ont continué à préférer leur vieille technique du pouls pendant encore un siècle.\n\nCe n'est qu'en 1851 que Carl Wunderlich, médecin allemand, prend la température de 25 000 patients avec un thermomètre standardisé et établit que 37°C est la norme. Il faut 40 ans de plus pour que les thermomètres deviennent courants dans les cabinets.\n\nAujourd'hui, au comptoir, quand tu sors un thermomètre auriculaire en deux secondes, rappelle-toi qu'il y a 200 ans, un médecin posait son pouce sur le poignet d'un patient pendant une minute entière pour savoir la même chose. La précision a mis du temps à arriver - mais l'intuition clinique, elle, était déjà là.",
-  "image_keywords": "vintage pulse medical",
+  "titre": "Le saviez-vous ? La morphine du soldat américain a créé la première épidémie d'opioïdes",
+  "resume": "Pendant la guerre de Sécession, les médecins militaires injectaient de la morphine à la seringue hypodermique, toute fraîche débarquée d'Europe. Résultat : 400 000 soldats repartent accros. On appelle ça la 'maladie du soldat'. Et personne ne voit venir le problème.",
+  "full_text": "On croit souvent que la crise des opioïdes, c'est une invention du XXIe siècle. Un truc lié au Oxy­Contin et aux labos américains des années 90. Mais non. Le scénario s'est déjà joué. Il y a 160 ans. En plein milieu d'un champ de bataille.\n\nOn est en 1861. La guerre de Sécession éclate aux États-Unis. Les chirurgiens militaires se retrouvent débordés : amputations à la chaîne, blessures par balle, gangrènes. La morphine existe depuis 1804, mais c'est la seringue hypodermique, inventée en 1853 par Alexander Wood à Édimbourg, qui change tout. Injecter directement dans le muscle, c'est rapide, efficace, magique. Les médecins de l'Union comme de la Confédération s'en emparent sans hésiter.\n\nLe twist ? Personne ne sait encore que la morphine injectée crée une dépendance physique bien plus rapide et bien plus violente que la morphine avalée. On pense sincèrement soigner. On distribue des kits morphine aux soldats pour qu'ils se gèrent seuls sur le terrain. Des fioles. Des seringues. En autonomie totale.\n\nÀ la fin de la guerre, en 1865, les estimations parlent de 400 000 à 500 000 soldats dépendants. Les familles découvrent des hommes qui ne peuvent plus s'arrêter. Les pharmaciens voient affluer des clients qui réclament de la morphine pour 'douleurs chroniques'. L'expression 'maladie du soldat' ou 'Army disease' entre dans le langage courant. Ce n'est pas une métaphore. C'est un diagnostic.\n\nLa réponse médicale de l'époque ? Prescrire de l'héroïne. En 1898, Bayer la commercialise comme traitement... de la dépendance à la morphine. On connaît la suite.\n\nCette histoire, elle résonne encore aujourd'hui. Quand un patient arrive au comptoir avec une ordonnance de tramadol 'juste pour quelques semaines', c'est exactement ce biais-là qu'on combat : l'illusion que la douleur maîtrisée efface le risque de dépendance. 160 ans plus tard, on a les mêmes molécules, les mêmes bonnes intentions, et les mêmes angles morts.",
+  "image_keywords": "civil war medicine morphine",
   "tags": [
     "histoire",
-    "diagnostic",
-    "instrument",
-    "fievre",
-    "mesure"
+    "medicament",
+    "addiction",
+    "opioïdes",
+    "pharmacie"
   ],
-  "date": "2026-06-20",
+  "date": "2026-06-22",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",
