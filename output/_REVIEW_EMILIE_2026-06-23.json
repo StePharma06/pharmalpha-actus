@@ -1,0 +1,35 @@
+{
+  "generated_at": "2026-06-23T04:11:03.093663+02:00",
+  "run_date": "2026-06-23",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Rémunération officinale : le grand chantier est officiellement ouvert",
+      "resume": "Le 22 juin, les syndicats représentatifs ont été convoqués au ministère de la Santé pour lancer les négociations conventionnelles. Le gouvernement veut aller vite. Très vite. Ce qui se joue là va remodeler ton modèle économique pour 2026 et 2027.",
+      "source": "USPO",
+      "source_url": "https://uspo.fr/reunion-ministerielle-sur-lavenir-de-leconomie-officinale-annonces-des-perspectives-pour-2026-et-2027/",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Grille salariale officine : le Smic grignoте 10 coefficients, renégociation le 6 juillet",
+      "resume": "Depuis le 1er juin 2026, le Smic est passé à 1 867 € brut, écrasant les 10 premiers coefficients de la grille conventionnelle officinale. Pour les titulaires, c'est une bombe à retardement sur la masse salariale. Décryptage.",
+      "source": "Pharm'Actus · Le Moniteur des Pharmacies — Salaires de l'officine : des négociations s'ouvriront le 6 juillet",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/grille-des-salaires/salaires-de-lofficine-des-negociations-souvriront-le-6-juillet-pour-desserrer-letau",
+      "confidence_score": 0.72,
+      "warnings": [
+        "Le chiffre de 100 000 salariés dans le secteur officinal est une estimation courante mais à vérifier via la dernière publication DARES ou FSPF — non confirmé dans les sources disponibles.",
+        "L'estimation du surcoût national de 80-120 M€ est une projection raisonnée basée sur des hypothèses de mass salariale moyenne et taux de revalorisation : à considérer comme ordre de grandeur, pas comme chiffre officiel.",
+        "Le taux de charges patronales ~20 % utilisé est une simplification : le taux réel dépend des allégements Fillon applicables au niveau Smic, qui réduisent significativement la charge patronale pour les bas salaires — l'impact chargé réel est probablement plus faible.",
+        "La marge brute officinale de 27-28 % et résultat net de 3-5 % sont des ordres de grandeur issus des publications FSPF 2024 — à confirmer avec les derniers chiffres publiés.",
+        "L'issue exacte des négociations du 6 juillet n'est pas connue à date — les recommandations sont conditionnées à un scénario de revalorisation de la grille, qui reste à confirmer."
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}
