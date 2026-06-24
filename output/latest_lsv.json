@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? On diagnostiquait la syphilis en reniflant le patient",
-  "resume": "Avant les analyses de labo, les médecins avaient des méthodes... olfactives. La syphilis, grande terreur des XVe-XVIIIe siècles, se détectait notamment à l'odeur. Et le traitement qui suivait était parfois pire que la maladie.",
-  "full_text": "La syphilis débarque en Europe en 1495, dans les bagages des soldats de Charles VIII qui rentrent de Naples. En quelques décennies, elle décime des milliers de personnes. Problème : personne ne sait vraiment comment la reconnaître avec certitude.\n\nAlors les médecins font avec leurs sens. Littéralement. Certains praticiens affirmaient pouvoir détecter la syphilis à l'odeur des lésions cutanées - une odeur décrite comme « soufrée » ou « fétide ». D'autres diagnostiquaient à vue : les chancres, les plaques sur la langue, la chute des cheveux. Un médecin vénitien, Girolamo Fracastoro, qui donne d'ailleurs son nom à la maladie en 1530 dans un poème (si, si), théorisait déjà une transmission par contact - révolutionnaire pour l'époque.\n\nMais voilà le twist : une fois diagnostiqué, le patient avait presque intérêt à ne pas l'être. Le traitement standard pendant quatre siècles ? Le mercure. On en badigeonnait le corps, on en faisait inhaler les vapeurs, on l'ingérait. L'idée : faire « suer » la maladie hors du corps. Résultat : chute des dents, ulcères, tremblements, insuffisance rénale. Les patients mouraient souvent... du remède.\n\nIl faudra attendre 1905 pour que Fritz Schaudinn identifie enfin Treponema pallidum au microscope. Puis 1906 pour le premier test sérologique fiable : le test de Wassermann. Et c'est seulement en 1943 que la pénicilline est utilisée pour la première fois contre la syphilis - avec un succès fulgurant.\n\nAujourd'hui, au comptoir, on délivre des kits d'autotest syphilis en vente libre depuis 2022 en France. En moins de 20 minutes, sans médecin, sans odeur, sans mercure. Quatre siècles de galère diagnostique résumés dans une bandelette. On a quand même bien progressé.",
-  "image_keywords": "medieval medicine diagnosis",
+  "titre": "Le saviez-vous ? Le scorbut a tué plus de marins que les tempêtes",
+  "resume": "Pendant trois siècles, les marins mouraient les dents qui tombaient, les jambes gonflées, en hurlant de douleur. La cause ? Un simple manque de citron. Et pourtant, la solution a mis 200 ans à s'imposer.",
+  "full_text": "Imagine : tu embarques sur un galion en 1600. Au bout de six semaines en mer, tes gencives saignent. Tes dents se mettent à bouger dans ta mâchoire. Tes cicatrices d'anciennes blessures se rouvrent toutes seules. C'est le scorbut. Et à l'époque, personne ne comprend ce qui se passe.\n\nEntre le XVe et le XVIIIe siècle, on estime que le scorbut a tué plus de 2 millions de marins. Plus que les naufragées, les batailles navales et les pirates réunis. Vasco de Gama perdit 100 de ses 160 hommes lors de son premier voyage aux Indes en 1497. Anson, amiral britannique, repartit d'un tour du monde en 1744 avec 500 hommes sur 1 900. Les autres ? Morts en mer, pour la plupart du scorbut.\n\nVoilà le twist : dès 1601, un certain James Lancaster remarque que les marins à qui il distribue du jus de citron ne tombent pas malades. Il le note, le publie. Et... personne n'en tient compte. Pendant 150 ans. La marine britannique préfère ses théories sur les \"miasmes\" et l'air vicié des cales.\n\nC'est James Lind qui réalise en 1747 le premier essai clinique contrôlé de l'histoire. Il divise 12 marins malades en six groupes, leur donne des remèdes différents, et prouve noir sur blanc que les agrumes guérissent le scorbut en deux semaines. Son étude est publiée en 1753. La marine britannique attend... 1795 pour rendre le citron obligatoire à bord. Quarante ans de délai. Des centaines de milliers de morts.\n\nLa cause ? Une carence en vitamine C - mais la vitamine C ne sera identifiée qu'en 1932 par Albert Szent-Györgyi. Pendant tout ce temps, on soignait un déficit moléculaire sans même savoir que les vitamines existaient.\n\nAujourd'hui, derrière chaque conseil nutritionnel qu'on donne au comptoir - vitamines, compléments, carences - il y a des siècles d'obstination humaine à ignorer ce qui crève les yeux. L'histoire du scorbut, c'est le rappel que la bonne réponse ne suffit pas : encore faut-il que quelqu'un l'écoute.",
+  "image_keywords": "lemon sailor scurvy",
   "tags": [
     "histoire",
-    "diagnostic",
-    "syphilis",
-    "medicament",
-    "chimie"
+    "nutrition",
+    "carence",
+    "epidemie",
+    "decouverte"
   ],
-  "date": "2026-06-23",
+  "date": "2026-06-24",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",

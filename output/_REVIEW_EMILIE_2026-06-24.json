@@ -1,0 +1,68 @@
+{
+  "generated_at": "2026-06-24T04:11:35.951754+02:00",
+  "run_date": "2026-06-24",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "90 % des soins non programmés réglés à l'officine, sans médecin : l'étude qui change tout",
+      "resume": "L'étude PhORGE le prouve en chiffres : 9 patients sur 10 qui poussent ta porte pour un soin non programmé repartent sans passer par la case médecin. Et les orientations aux urgences ? 1 % seulement. C'est le argument béton pour défendre la place de l'officine dans le système de soins.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/soins-non-programmes-lofficine-absorbe-90-des-demandes-sans-recours-au-medecin",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "avenir_pharma",
+      "titre": "Les phages thérapeutiques débarquent en France : une révolution silencieuse contre les bactéries résistantes",
+      "resume": "Les Hospices Civils de Lyon ont obtenu fin mai une autorisation ANSM pour produire et distribuer des bactériophages selon les standards pharmaceutiques. C'est une première dans l'Union européenne pour un établissement de santé. L'antibioresistance vient de trouver un nouvel adversaire sérieux.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/medicament-parapharmacie/medicament/les-premiers-phages-therapeutiques-francais-bientot-disponibles",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "Aide à mourir : pas de clause de conscience pour les pharmaciens, mais une liste de volontaires en alternative",
+      "resume": "Les deputés examinent pour la troisième fois le projet de loi sur l'aide à mourir. Aucune clause de conscience spécifique pour les pharmaciens n'a été retenue jusqu'ici. L'association Pharmaciens en Conscience propose une voie médiane : clause de conscience couplée à une liste de pharmaciens volontaires pour ne pas bloquer l'accès au traitement.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/aide-mourir-les-pharmaciens-volontaires-comme-alternative-la-clause-de-conscience",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "pharma_monde",
+      "titre": "GLP-1, obésité, prix US : quand Eli Lilly fixe le cap mondial du marché des anti-obésité",
+      "resume": "Aux Etats-Unis, Eli Lilly vient d'annoncer une baisse significative du prix de son tirzepatide (Zepbound) dans certains circuits de vente directe, bousculant le modèle économique du marché mondial des GLP-1. Une décision qui anticipe la pression concurrentielle de Novo Nordisk et des biosimilaires à venir, et qui va résonner bien au-delà des frontières américaines.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/pharma/eli-lilly-cuts-zepbound-prices-self-pay-customers-its-direct-to-consumer-platform",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Apprentissage pharma : la coupe des NPEC menace 10 000 préparateurs formés chaque année",
+      "resume": "France Compétences révise à la baisse les niveaux de prise en charge des contrats d'apprentissage DEUST. Pour les officines, c'est le modèle entier de formation de leurs préparateurs qui vacille - et avec lui, un levier RH indispensable dans un contexte de pénurie de main-d'œuvre...",
+      "source": "Pharm'Actus · USPO — Communiqué baisse financement apprentissage DEUST Préparateur en pharmacie, France Compétences — Liste publique des NPEC",
+      "source_url": "https://uspo.fr/baisse-du-financement-de-lapprentissage-un-risque-majeur-pour-la-formation-des-preparateurs-en-pharmacie/",
+      "confidence_score": 0.62,
+      "warnings": [
+        "Le NPEC exact du DEUST Préparateur en pharmacie (8 000 €/an) est une estimation basée sur les grilles France Compétences 2024 — à vérifier sur le site officiel car les NPEC sont révisés périodiquement et varient selon les CFA.",
+        "La fourchette de baisse de 15-20 % est une hypothèse comparative basée sur des révisions observées sur d'autres diplômes de santé — le chiffre précis de la révision envisagée pour le DEUST n'est pas encore publié dans le communiqué USPO.",
+        "L'aide à l'embauche de 6 000 € première année (dispositif DGEFP) était valable jusqu'à fin 2025 : sa reconduction exacte en 2026 doit être vérifiée (le montant a fluctué entre 5 000 et 6 000 € selon les années).",
+        "Le chiffre de 3 500 postes non pourvus (FSPF 2024) est cité de mémoire — à confirmer dans le dernier rapport FSPF ou bilan social de branche.",
+        "Le chiffre de 10 000 apprentis préparateurs simultanément est une estimation haute — les données DARES 2024 par code diplôme doivent être consultées pour le chiffre précis."
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

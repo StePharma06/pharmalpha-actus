@@ -1,6 +1,131 @@
 {
   "articles": [
     {
+      "id": "actu_2026_06_24_5",
+      "date": "2026-06-24",
+      "type": "actu",
+      "categorie": "business_officine",
+      "titre": "Apprentissage pharma : la coupe des NPEC menace 10 000 préparateurs formés chaque année",
+      "resume": "France Compétences révise à la baisse les niveaux de prise en charge des contrats d'apprentissage DEUST. Pour les officines, c'est le modèle entier de formation de leurs préparateurs qui vacille - et avec lui, un levier RH indispensable dans un contexte de pénurie de main-d'œuvre...",
+      "full_text": "France Compétences révise à la baisse les niveaux de prise en charge des contrats d'apprentissage DEUST. Pour les officines, c'est le modèle entier de formation de leurs préparateurs qui vacille — et avec lui, un levier RH indispensable dans un contexte de pénurie de main-d'œuvre.\n\n## Contexte\n\nDepuis plusieurs années, l'apprentissage est devenu le principal canal de recrutement des préparateurs en pharmacie. Le DEUST Préparateur/Technicien en pharmacie, diplôme de niveau Bac+2, se prépare quasi exclusivement par la voie de l'alternance. Aujourd'hui, environ 10 000 apprentis préparateurs sont en formation simultanément en France (données DARES 2024), répartis dans les CFA et UFR partenaires des officines. Le système repose sur les NPEC — Niveaux de Prise en Charge — fixés par France Compétences : ce sont ces montants qui déterminent ce que l'Opérateur de Compétences (l'OPCO Santé pour la branche officinale) verse à l'organisme de formation, et ce que l'officine perçoit en contrepartie comme aide indirecte. L'USPO tire la sonnette d'alarme dans un communiqué publié le 23 juin 2026 : France Compétences envisage de réviser ces NPEC à la baisse pour le DEUST, ce qui ferait basculer une partie du coût de formation sur les employeurs — c'est-à-dire les titulaires d'officine — ou pousserait les CFA à fermer des sections faute de financement suffisant. Un scénario à double risque : coût RH en hausse et raréfaction du vivier de recrutement.\n\n## Analyse business\n\nSoyons directs : derrière un sujet qui ressemble à de la plomberie administrative, il y a un enjeu financier réel pour chaque titulaire qui emploie un apprenti.\n\n**Ce que couvre actuellement un NPEC**\nPour le DEUST Préparateur en pharmacie, le NPEC 2024 est fixé à environ 8 000 € par an et par apprenti (source : France Compétences, liste des NPEC publiée au Journal Officiel). Ce montant est versé par l'OPCO Santé directement au CFA. L'officine, elle, perçoit une aide à l'embauche de 6 000 € la première année pour les contrats en entreprise de moins de 250 salariés — soit la quasi-totalité des officines françaises (source : dispositif aide apprentissage DGEFP, valable jusqu'à fin 2025, reconduit sous conditions en 2026).\n\n**Ce que change une baisse de NPEC**\nSi France Compétences abaisse le NPEC de, disons, 15 à 20 % — une fourchette cohérente avec les révisions observées sur d'autres diplômes de santé en 2024-2025 — le CFA récupère entre 1 200 € et 1 600 € de moins par apprenti et par an. Deux effets probables : soit le CFA réduit le nombre de places (pression sur le vivier), soit il répercute sur le reste à charge des entreprises formatrices. Pour une officine avec 2 apprentis simultanément, le surcoût potentiel pourrait atteindre 2 400 à 3 200 € par an — pas anodin sur une marge nette d'exploitation moyenne de 3 à 5 % du CA.\n\n**Le contexte RH aggrave tout**\nLa pénurie de préparateurs est documentée : en 2024, le FSPF estimait à plus de 3 500 le nombre de postes non pourvus dans les officines françaises. Réduire le flux de sortie du DEUST, c'est aggraver une tension RH qui oblige déjà certains titulaires à payer des préparateurs en intérim à des taux 30 à 40 % supérieurs au salaire conventionnel.\n\n**La branche doit bouger maintenant**\nL'OPCO Santé et les syndicats (USPO, FSPF, UNPF) ont une fenêtre courte pour peser sur la décision finale de France Compétences. Les NPEC sont révisables sur saisine des branches professionnelles. Chaque officine impactée a intérêt à signaler sa situation à son syndicat pour que la remontée de terrain soit chiffrée et crédible.\n\n## Recommandations actionnables\n\n1. **Auditer ton contrat apprentissage maintenant** — Vérifie le NPEC exact de ton contrat en cours via ton OPCO Santé (espace employeur en ligne). Note la date d'échéance : si ton contrat se renouvelle dans les 6 mois, tu es directement exposé à la révision.\n\n2. **Contacter ton syndicat pour peser dans la consultation** — France Compétences consulte les branches avant toute révision finale. L'USPO centralise les remontées terrain. Un email à ta délégation régionale suffit : plus les témoignages sont nombreux et chiffrés, plus l'argumentaire syndical est solide.\n\n3. **Anticiper un plan B de recrutement** — Si le vivier DEUST se contracte, identifie dès maintenant les CFA partenaires de ta région et leurs capacités d'accueil. Une relation directe avec le CFA te donne un accès prioritaire aux candidats en recherche de maître d'apprentissage.\n\n4. **Chiffrer l'impact sur ta masse salariale** — Simule l'impact d'une hausse du reste à charge de 1 500 €/an/apprenti sur ton compte d'exploitation. Si tu as 2 apprentis, c'est 3 000 € à provisionner. Intègre-le dans ton budget RH 2027 dès maintenant.\n\n5. **Explorer les contrats de professionnalisation en parallèle** — En cas de fermeture de sections DEUST, la voie Pro peut partiellement compenser. Les NPEC des contrats de pro sont régis différemment et peuvent maintenir un financement acceptable selon les accords de branche en vigueur.\n\n## Sources citees\n\n- USPO — Communiqué baisse financement apprentissage DEUST Préparateur en pharmacie\n- France Compétences — Liste publique des NPEC\n- DGEFP — Aide à l'embauche d'un apprenti",
+      "source": "Pharm'Actus · USPO — Communiqué baisse financement apprentissage DEUST Préparateur en pharmacie, France Compétences — Liste publique des NPEC",
+      "source_url": "https://uspo.fr/baisse-du-financement-de-lapprentissage-un-risque-majeur-pour-la-formation-des-preparateurs-en-pharmacie/",
+      "tiktok_url": "",
+      "badge_label": "Business",
+      "image_url": "assets/img_actu_2026_06_24_5.jpg",
+      "tags": [
+        "apprentissage",
+        "preparateur",
+        "ressources-humaines",
+        "financement-formation"
+      ]
+    },
+    {
+      "id": "actu_2026_06_24_4",
+      "date": "2026-06-24",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "GLP-1, obésité, prix US : quand Eli Lilly fixe le cap mondial du marché des anti-obésité",
+      "resume": "Aux Etats-Unis, Eli Lilly vient d'annoncer une baisse significative du prix de son tirzepatide (Zepbound) dans certains circuits de vente directe, bousculant le modèle économique du marché mondial des GLP-1. Une décision qui anticipe la pression concurrentielle de Novo Nordisk et des biosimilaires à venir, et qui va résonner bien au-delà des frontières américaines.",
+      "full_text": "Le marché mondial de l'obésité est en train de se reconfigurer sous nos yeux. Et ce qui se passe aux Etats-Unis aujourd'hui arrivera en Europe demain.\n\nEli Lilly a annoncé une réduction de prix pour son tirzepatide (Zepbound) via sa plateforme de vente directe LillyDirect, proposant le traitement à partir de 349 dollars par mois pour certains dosages, contre plus de 1 000 dollars en circuit traditionnel. L'objectif affiché : élargir l'accès, contourner les intermédiaires PBM (pharmacy benefit managers) et couper l'herbe sous le pied des compoundeurs qui produisent du tirzepatide non autorisé depuis des mois.\n\nDerrière la comm' corporate, la réalité est claire : la guerre des prix entre Lilly et Novo Nordisk (semaglutide, Wegovy/Ozempic) est lancée. Et quand deux géants se battent sur les prix aux US, le marché mondial entier se réaligne.\n\nEt nous, en France ? Le tirzepatide (Mounjaro) est autorisé dans le diabète de type 2. Son extension d'AMM dans l'obésité avance en Europe. Wegovy (semaglutide haute dose) est déjà accessible. La pression sur les prix US va nourrir les négociations tarifaires européennes et françaises dans les mois qui viennent. Le CEPS n'est jamais insensible aux références internationales de prix.\n\nPour l'officine, les enjeux sont multiples. La demande pour ces molécules explose. Les ruptures d'approvisionnement ont été chroniques. La dispensation de ces traitements nécessite un accompagnement sérieux : tolérance digestive, interactions médicamenteuses, risque de dénutrition, suivi du poids. C'est une vraie opportunité de valoriser le conseil pharmaceutique, dans le cadre de ce qui est autorisé par la convention et les recommandations HAS.\n\nLa pression tarifaire américaine va aussi accélérer l'arrivée de biosimilaires GLP-1 en Europe. Plusieurs molécules sont en phase avancée de développement. Le marché de l'obésité médicamentée est en train de devenir le nouveau marché des statines : massif, concurrentiel, et structurant pour le réseau officinal.\n\nDemain matin au comptoir : si tu dispenses du tirzepatide ou du semaglutide, tu es déjà dans ce marché mondial en recomposition. Structure ton suivi patient, forme ton équipe aux spécificités de ces classes, et surveille les évolutions de remboursement côté HAS et CEPS. Le train avance vite.",
+      "source": "Fierce Pharma",
+      "source_url": "https://www.fiercepharma.com/pharma/eli-lilly-cuts-zepbound-prices-self-pay-customers-its-direct-to-consumer-platform",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/img_actu_2026_06_24_4.jpg",
+      "tags": [
+        "glp-1",
+        "obesite",
+        "prix",
+        "tirzepatide",
+        "marche-mondial"
+      ]
+    },
+    {
+      "id": "actu_2026_06_24_3",
+      "date": "2026-06-24",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "Aide à mourir : pas de clause de conscience pour les pharmaciens, mais une liste de volontaires en alternative",
+      "resume": "Les deputés examinent pour la troisième fois le projet de loi sur l'aide à mourir. Aucune clause de conscience spécifique pour les pharmaciens n'a été retenue jusqu'ici. L'association Pharmaciens en Conscience propose une voie médiane : clause de conscience couplée à une liste de pharmaciens volontaires pour ne pas bloquer l'accès au traitement.",
+      "full_text": "La loi sur l'aide à mourir revient en troisième lecture à l'Assemblée. Et les pharmaciens sont toujours dans l'angle mort du débat.\n\nDeux lectures, deux fois sans clause de conscience retenue pour la profession. Concrètement, si la loi passe en l'état, un pharmacien pourrait se retrouver contraint de dispenser la substance létale, sans pouvoir invoquer ses convictions personnelles pour refuser. Médecins et infirmiers, eux, bénéficient d'une clause de conscience dans le texte.\n\nLa différence de traitement est notable. Et elle n'est pas anodine sur le plan éthique et déontologique.\n\nFace à cette asymétrie, l'association Pharmaciens en Conscience porte une proposition concrète : une clause de conscience pour les pharmaciens qui ne souhaitent pas participer, couplée à une liste nationale de pharmaciens volontaires pour assurer la continuité d'accès au traitement. Le principe : personne n'est forcé, mais personne n'est bloqué non plus. Chaque patient peut accéder à l'acte via un pharmacien qui a choisi d'y participer.\n\nC'est une approche pragmatique. Elle évite deux écueils : le blocage de l'accès au soin pour le patient (si trop de pharmaciens refusent sans alternative organisée) et la contrainte de conscience pour le professionnel (si aucune clause n'existe).\n\nLa question est loin d'être abstraite pour l'officine. Le pharmacien sera vraisemblablement le dernier professionnel à intervenir dans la chaîne : préparation magistrale ou délivrance d'un médicament spécifique, dans un cadre qui reste encore à définir réglementairement. La dispensation d'un produit à visée létale, c'est un acte inédit dans l'histoire de la profession. Il mérite un cadre clair, pas un vide juridique.\n\nLe Conseil National de l'Ordre des Pharmaciens devra prendre position. Et la convention pharmaceutique devra, à terme, intégrer les modalités de cette mission si elle devient obligatoire : formation, traçabilité, circuit de délivrance, responsabilité.\n\nDemain matin au comptoir : le sujet va vite devenir concret. Informe-toi sur la position de ton syndicat et de l'Ordre. Et si tu as une opinion sur la clause de conscience, c'est maintenant qu'il faut la faire entendre, pas après le vote.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/aide-mourir-les-pharmaciens-volontaires-comme-alternative-la-clause-de-conscience",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_06_24_3.jpg",
+      "tags": [
+        "aide-a-mourir",
+        "ethique",
+        "clause-de-conscience",
+        "officine",
+        "deontologie"
+      ]
+    },
+    {
+      "id": "actu_2026_06_24_2",
+      "date": "2026-06-24",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "Les phages thérapeutiques débarquent en France : une révolution silencieuse contre les bactéries résistantes",
+      "resume": "Les Hospices Civils de Lyon ont obtenu fin mai une autorisation ANSM pour produire et distribuer des bactériophages selon les standards pharmaceutiques. C'est une première dans l'Union européenne pour un établissement de santé. L'antibioresistance vient de trouver un nouvel adversaire sérieux.",
+      "full_text": "Des virus qui tuent des bactéries. Produits en France. Autorisés par l'ANSM. Et une première dans toute l'Union européenne.\n\nLes Hospices Civils de Lyon (HCL) ont décroché fin mai 2026 une autorisation de l'ANSM pour produire et distribuer des bactériophages à des standards pharmaceutiques rigoureux. Ce n'est pas une expérimentation de labo obscur : c'est un établissement de santé public, avec un cadre réglementaire solide, qui ouvre concrètement la voie à la phagothérapie en pratique clinique.\n\nLes bactériophages, tu connais le principe : ce sont des virus naturels, spécifiques à certaines souches bactériennes, capables de les détruire sans toucher les cellules humaines. L'idée date des années 1920. Mais avec l'essor de l'antibiorésistance, elle revient en force.\n\nEt pourquoi c'est une news qui te concerne directement, toi pharmacien d'officine ? Parce que l'antibiorésistance, c'est ton combat quotidien. Chaque fois que tu refuses de délivrer un antibiotique sans ordonnance, chaque TROD angine que tu réalises pour éviter une antibiothérapie inutile, chaque conseil de bon usage : tu es en première ligne de cette guerre silencieuse.\n\nEn France, on dépasse les 5 500 décès par an attribuables aux bactéries multirésistantes selon Santé Publique France. Les pipelines d'antibiotiques classiques sont quasi vides côté industrie : le modèle économique ne suit pas. Les phages, eux, pourraient remplir ce vide pour les impasses thérapeutiques les plus graves : infections à SARM, Pseudomonas aeruginosa multirésistant, entérobactéries productrices de carbapénèmases.\n\nPour l'instant, la phagothérapie reste hospitalière et en accès compassionnel. Tu ne vas pas dispenser des bactériophages au comptoir demain. Mais la dynamique réglementaire est là : l'ANSM vient de poser le premier jalon européen. Les prochaines années verront probablement émerger un cadre d'autorisation de mise sur le marché spécifique, à l'image de ce qui s'est construit pour les médicaments de thérapie innovante.\n\nDemain matin au comptoir : si un patient en impasse thérapeutique pour une infection bactérienne sévère te pose la question, tu peux désormais lui dire que la phagothérapie existe en France, dans un cadre médical et réglementaire sérieux, via les HCL. C'est une information qui peut changer une trajectoire de soin.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/medicament-parapharmacie/medicament/les-premiers-phages-therapeutiques-francais-bientot-disponibles",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_06_24_2.jpg",
+      "tags": [
+        "phagotherapie",
+        "antibiorisistance",
+        "ansm",
+        "innovation",
+        "recherche"
+      ]
+    },
+    {
+      "id": "actu_2026_06_24_1",
+      "date": "2026-06-24",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "90 % des soins non programmés réglés à l'officine, sans médecin : l'étude qui change tout",
+      "resume": "L'étude PhORGE le prouve en chiffres : 9 patients sur 10 qui poussent ta porte pour un soin non programmé repartent sans passer par la case médecin. Et les orientations aux urgences ? 1 % seulement. C'est le argument béton pour défendre la place de l'officine dans le système de soins.",
+      "full_text": "9 patients sur 10 pris en charge. Sans médecin. Sans urgences. Directement à l'officine.\n\nL'étude PhORGE vient de poser des chiffres concrets sur ce que tu fais déjà au quotidien sans forcément le mesurer. Sur 4 811 demandes de soins non programmés analysées, 90 % ont été gérées intégralement à l'officine. Les orientations vers les urgences : 1 % à peine.\n\nCa te rappelle quelque chose ? Bien sûr. C'est ton mardi matin classique : la plaie à désinfecter, le nourrisson fébrile de la maman paniquée, la toux qui traîne depuis 10 jours, la cheville tordue du lycéen. Tu l'as toujours fait. Maintenant, c'est documenté.\n\nCe qui change avec cette étude, c'est le poids politique de la démonstration. Dans un contexte de désertification médicale et de saturation des urgences, l'officine absorbe en silence une part massive des demandes de premier recours. Sans honoraire dédié systématique, sans reconnaissance tarifaire proportionnelle, sans même un numéro de code acte dans la nomenclature pour la majorité de ces prises en charge.\n\nParce que c'est là que le bât blesse. Gérer 90 % des soins non programmés, c'est formidable pour le système. Mais est-ce que ça se traduit en rémunération pour l'équipe ? Pas automatiquement. Les nouvelles missions (entretiens, bilans, TROD) ont ouvert des honoraires spécifiques via la convention, mais la prise en charge de premier recours au sens large reste largement dans la zone grise du conseil non rémunéré.\n\nL'étude PhORGE devient donc un outil de lobbying aussi bien qu'un outil de terrain. Les syndicats, l'Ordre, les fédérations ont maintenant un chiffre massif et sourcé pour peser dans les prochaines négociations conventionnelles. 90 %, ça ne se discute pas.\n\nDemain matin au comptoir : rappelle à ton équipe que chaque prise en charge de soin non programmé, aussi banale qu'elle semble, est une donnée qui compte. Tracez, consignez, orientez avec méthode. Et si tu n'as pas encore structuré ta démarche de soins non programmés, c'est le moment. La data existe. La légitimité aussi.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/soins-non-programmes-lofficine-absorbe-90-des-demandes-sans-recours-au-medecin",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_06_24_1.jpg",
+      "tags": [
+        "soins-non-programmes",
+        "officine",
+        "missions",
+        "convention",
+        "premier-recours"
+      ]
+    },
+    {
+      "id": "lsv_2026_06_24",
+      "date": "2026-06-24",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? Le scorbut a tué plus de marins que les tempêtes",
+      "resume": "Pendant trois siècles, les marins mouraient les dents qui tombaient, les jambes gonflées, en hurlant de douleur. La cause ? Un simple manque de citron. Et pourtant, la solution a mis 200 ans à s'imposer.",
+      "full_text": "Imagine : tu embarques sur un galion en 1600. Au bout de six semaines en mer, tes gencives saignent. Tes dents se mettent à bouger dans ta mâchoire. Tes cicatrices d'anciennes blessures se rouvrent toutes seules. C'est le scorbut. Et à l'époque, personne ne comprend ce qui se passe.\n\nEntre le XVe et le XVIIIe siècle, on estime que le scorbut a tué plus de 2 millions de marins. Plus que les naufragées, les batailles navales et les pirates réunis. Vasco de Gama perdit 100 de ses 160 hommes lors de son premier voyage aux Indes en 1497. Anson, amiral britannique, repartit d'un tour du monde en 1744 avec 500 hommes sur 1 900. Les autres ? Morts en mer, pour la plupart du scorbut.\n\nVoilà le twist : dès 1601, un certain James Lancaster remarque que les marins à qui il distribue du jus de citron ne tombent pas malades. Il le note, le publie. Et... personne n'en tient compte. Pendant 150 ans. La marine britannique préfère ses théories sur les \"miasmes\" et l'air vicié des cales.\n\nC'est James Lind qui réalise en 1747 le premier essai clinique contrôlé de l'histoire. Il divise 12 marins malades en six groupes, leur donne des remèdes différents, et prouve noir sur blanc que les agrumes guérissent le scorbut en deux semaines. Son étude est publiée en 1753. La marine britannique attend... 1795 pour rendre le citron obligatoire à bord. Quarante ans de délai. Des centaines de milliers de morts.\n\nLa cause ? Une carence en vitamine C - mais la vitamine C ne sera identifiée qu'en 1932 par Albert Szent-Györgyi. Pendant tout ce temps, on soignait un déficit moléculaire sans même savoir que les vitamines existaient.\n\nAujourd'hui, derrière chaque conseil nutritionnel qu'on donne au comptoir - vitamines, compléments, carences - il y a des siècles d'obstination humaine à ignorer ce qui crève les yeux. L'histoire du scorbut, c'est le rappel que la bonne réponse ne suffit pas : encore faut-il que quelqu'un l'écoute.",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_06_24.jpg",
+      "tags": [
+        "histoire",
+        "nutrition",
+        "carence",
+        "epidemie",
+        "decouverte"
+      ]
+    },
+    {
       "id": "actu_2026_06_23_5",
       "date": "2026-06-23",
       "type": "actu",
@@ -7849,6 +7974,6 @@
       ]
     }
   ],
-  "count": 380,
-  "updated_at": "2026-06-23T04:11:06.330017+02:00"
+  "count": 386,
+  "updated_at": "2026-06-24T04:11:39.452040+02:00"
 }
