@@ -2172,6 +2172,93 @@ def build_newsletter_html(articles, custom_intro=None):
 </body></html>'''
 
 
+# ── PREFLIGHT : controle qualite AVANT envoi aux abonnes ─────────────
+# Incident-driven (grippe-juin, dépistage IST, fuite méta orthographe 2026-06).
+# Barriere unique entre la generation et l'envoi : mieux vaut PAS d'email
+# qu'un email casse parti a ~1000 abonnes.
+
+_PREFLIGHT_META_RE = re.compile(
+    r'(\n\s*-{3,}'                      # ligne de separateur ---
+    r'|`{3}'                           # triple backticks (bloc code)
+    r'|→\s*`'                          # motif relecture "→ `mot`"
+    r'|V[ée]rification\s+orthograph'   # bloc "Verification orthographe"
+    r'|\brelecture\b'
+    r'|\n\s*#{1,6}\s)',                # titre markdown ## ...
+    re.IGNORECASE,
+)
+
+
+def preflight_check_email(articles, custom_intro):
+    """Controle qualite avant envoi. Retourne (blockers, warnings).
+    blockers => NE PAS envoyer (contenu casse). warnings => envoyer mais alerter."""
+    blockers, warnings = [], []
+    today = datetime.now(PARIS_TZ).date()
+
+    def _meta(label, text):
+        if isinstance(text, str) and _PREFLIGHT_META_RE.search(text):
+            blockers.append(f"{label} : meta-commentaire/markdown detecte (---, backticks, 'verification orthographe'...)")
+
+    def _emdash(label, text):
+        if isinstance(text, str) and ("—" in text or "–" in text):
+            warnings.append(f"{label} : tiret cadratin/demi-cadratin (em dash) present")
+
+    if custom_intro:
+        _meta("Intro email", custom_intro)
+        _emdash("Intro email", custom_intro)
+        if len(custom_intro) > 600:
+            blockers.append(f"Intro email : longueur anormale ({len(custom_intro)} car > 600)")
+
+    for a in articles:
+        aid = a.get("id") or (a.get("titre", "")[:30]) or "?"
+        titre = a.get("titre", "") or ""
+        resume = a.get("resume", "") or ""
+        full_text = a.get("full_text", "") or ""
+        if not titre.strip():
+            blockers.append(f"[{aid}] titre vide")
+        if not resume.strip():
+            blockers.append(f"[{aid}] resume vide")
+        for lbl, txt in ((f"[{aid}] titre", titre), (f"[{aid}] resume", resume), (f"[{aid}] full_text", full_text)):
+            _meta(lbl, txt)
+            _emdash(lbl, txt)
+        if len(titre) > 120:
+            warnings.append(f"[{aid}] titre long ({len(titre)} car > 120)")
+        d = a.get("date", "")
+        try:
+            age = (today - datetime.strptime(d, "%Y-%m-%d").date()).days
+            if age > MAX_AGE_DAYS + 1:
+                blockers.append(f"[{aid}] date {d} trop ancienne ({age} j) pour un envoi du jour")
+            elif age < 0:
+                blockers.append(f"[{aid}] date {d} dans le futur")
+        except (ValueError, TypeError):
+            blockers.append(f"[{aid}] date invalide ou absente : '{d}'")
+
+    return blockers, warnings
+
+
+def _send_alert_email(api_key, subject, body_text):
+    """Envoie un email d'alerte a Stephen UNIQUEMENT (jamais aux abonnes)."""
+    if not api_key:
+        return
+    safe = body_text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+    try:
+        payload = json.dumps({
+            "sender": {"name": SENDER_NAME, "email": SENDER_EMAIL},
+            "to": [{"email": REPLY_TO_EMAIL}],
+            "subject": subject,
+            "htmlContent": f"<html><body><pre style=\"font-family:monospace;font-size:13px;white-space:pre-wrap\">{safe}</pre></body></html>",
+        }).encode("utf-8")
+        req = urllib.request.Request(
+            "https://api.brevo.com/v3/smtp/email", data=payload,
+            headers={"api-key": api_key, "Content-Type": "application/json", "Accept": "application/json"},
+            method="POST",
+        )
+        with urllib.request.urlopen(req) as resp:
+            json.loads(resp.read())
+        print(f"  [ALERT] Email d'alerte envoye a {REPLY_TO_EMAIL}")
+    except Exception as e:
+        print(f"  [ALERT-ERR] Impossible d'envoyer l'alerte: {e}")
+
+
 def send_newsletter(articles):
     """Send newsletter individually to each contact in the Brevo list."""
     if newsletter_already_sent_today():
@@ -2221,6 +2308,34 @@ def send_newsletter(articles):
                  "juillet","ao\u00fbt","septembre","octobre","novembre","d\u00e9cembre"]
     date_str = f"{jours[today.weekday()]} {today.day} {mois_noms[today.month]} {today.year}"
     subject = f"Pharm'Actus du {date_str}"
+
+    # PREFLIGHT : on controle le contenu AVANT d'envoyer aux abonnes.
+    blockers, warnings = preflight_check_email(articles, custom_intro)
+    if blockers:
+        print(f"  [PREFLIGHT] ENVOI BLOQUE - {len(blockers)} probleme(s) bloquant(s) :")
+        for p in blockers + warnings:
+            print(f"    - {p}")
+        body = (
+            f"L'envoi de la newsletter Pharm'Actus du {date_str} a ete BLOQUE par le controle qualite.\n\n"
+            f"PROBLEMES BLOQUANTS ({len(blockers)}) :\n"
+            + "\n".join(f"  - {p}" for p in blockers)
+            + (f"\n\nAVERTISSEMENTS ({len(warnings)}) :\n" + "\n".join(f"  - {p}" for p in warnings) if warnings else "")
+            + "\n\nL'email N'A PAS ete envoye aux abonnes. Corrige le contenu (index.html / pipeline) "
+              "puis relance le workflow, ou envoie manuellement apres verification."
+        )
+        _send_alert_email(api_key, f"[BLOQUE] Pharm'Actus {date_str} - {len(blockers)} probleme(s) qualite", body)
+        return  # on N'ENVOIE PAS aux abonnes
+    if warnings:
+        print(f"  [PREFLIGHT] {len(warnings)} avertissement(s) (envoi maintenu) :")
+        for p in warnings:
+            print(f"    - {p}")
+        body = (
+            f"La newsletter Pharm'Actus du {date_str} a ete envoyee, mais le controle qualite a releve "
+            f"{len(warnings)} avertissement(s) non bloquant(s) :\n\n"
+            + "\n".join(f"  - {p}" for p in warnings)
+            + "\n\n(L'email est bien parti aux abonnes. A surveiller pour les prochains envois.)"
+        )
+        _send_alert_email(api_key, f"[AVERTISSEMENT] Pharm'Actus {date_str} - {len(warnings)} point(s)", body)
 
     # Send individually to each contact (privacy: no one sees others' emails)
     send_url = "https://api.brevo.com/v3/smtp/email"
