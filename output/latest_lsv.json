@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? Le scorbut a tué plus de marins que les tempêtes",
-  "resume": "Pendant trois siècles, les marins mouraient les dents qui tombaient, les jambes gonflées, en hurlant de douleur. La cause ? Un simple manque de citron. Et pourtant, la solution a mis 200 ans à s'imposer.",
-  "full_text": "Imagine : tu embarques sur un galion en 1600. Au bout de six semaines en mer, tes gencives saignent. Tes dents se mettent à bouger dans ta mâchoire. Tes cicatrices d'anciennes blessures se rouvrent toutes seules. C'est le scorbut. Et à l'époque, personne ne comprend ce qui se passe.\n\nEntre le XVe et le XVIIIe siècle, on estime que le scorbut a tué plus de 2 millions de marins. Plus que les naufragées, les batailles navales et les pirates réunis. Vasco de Gama perdit 100 de ses 160 hommes lors de son premier voyage aux Indes en 1497. Anson, amiral britannique, repartit d'un tour du monde en 1744 avec 500 hommes sur 1 900. Les autres ? Morts en mer, pour la plupart du scorbut.\n\nVoilà le twist : dès 1601, un certain James Lancaster remarque que les marins à qui il distribue du jus de citron ne tombent pas malades. Il le note, le publie. Et... personne n'en tient compte. Pendant 150 ans. La marine britannique préfère ses théories sur les \"miasmes\" et l'air vicié des cales.\n\nC'est James Lind qui réalise en 1747 le premier essai clinique contrôlé de l'histoire. Il divise 12 marins malades en six groupes, leur donne des remèdes différents, et prouve noir sur blanc que les agrumes guérissent le scorbut en deux semaines. Son étude est publiée en 1753. La marine britannique attend... 1795 pour rendre le citron obligatoire à bord. Quarante ans de délai. Des centaines de milliers de morts.\n\nLa cause ? Une carence en vitamine C - mais la vitamine C ne sera identifiée qu'en 1932 par Albert Szent-Györgyi. Pendant tout ce temps, on soignait un déficit moléculaire sans même savoir que les vitamines existaient.\n\nAujourd'hui, derrière chaque conseil nutritionnel qu'on donne au comptoir - vitamines, compléments, carences - il y a des siècles d'obstination humaine à ignorer ce qui crève les yeux. L'histoire du scorbut, c'est le rappel que la bonne réponse ne suffit pas : encore faut-il que quelqu'un l'écoute.",
-  "image_keywords": "lemon sailor scurvy",
+  "titre": "Le saviez-vous ? La digitale, une fleur qui fait battre le cœur... ou l'arrêter",
+  "resume": "En 1785, un médecin anglais publie un traité sur une plante que les guérisseuses utilisaient en secret depuis des générations. La digitale pourprée allait révolutionner la cardiologie. Mais la frontière entre la dose qui sauve et celle qui tue tient à un cheveu.",
+  "full_text": "On est en 1775. William Withering, médecin à Birmingham, examine une paysanne anglaise condamnée par une hydropisie sévère - ce qu'on appellerait aujourd'hui une insuffisance cardiaque avec œdèmes massifs. Les médecins ont abandonné. Mais la femme survit, grâce à une tisane préparée par une vieille herboriste du Shropshire.\n\nWithering est intrigué. Il enquête, identifie la plante : la digitale pourprée, Digitalis purpurea, cette jolie fleur à clochettes violettes qui pousse dans les haies anglaises. Pendant dix ans, il l'observe, la teste, note scrupuleusement ses effets sur 163 patients. C'est du jamais-vu pour l'époque. En 1785, il publie 'An Account of the Foxglove' - un des premiers essais cliniques documentés de l'histoire de la médecine.\n\nMais voilà le twist : Withering savait déjà que la digitale était aussi un poison. Ralentir un cœur qui s'emballe, oui. Trop en donner, et le cœur s'arrête. La plante contient des hétérosides cardiotoniques - digoxine, digitoxine - qui agissent directement sur le muscle cardiaque. Fascinant et terrifiant à la fois.\n\nPendant deux siècles, les médecins ont dosé la digitale à l'œil, à l'expérience, parfois à l'erreur fatale. Ce n'est qu'au XXe siècle qu'on a isolé la digoxine pure, puis mis au point des dosages sanguins pour surveiller les taux. Parce qu'avec la digitale, la zone thérapeutique est tellement étroite qu'on parle encore de 'fenêtre thérapeutique' comme d'un couloir de quelques centimètres.\n\nAujourd'hui, la digoxine est toujours sur nos étagères. Moins prescrite qu'avant, concurrencée par les bêtabloquants et les anti-arythmiques modernes, mais toujours là. Et à chaque dispensation, le conseil reste le même depuis Withering : jamais d'automédication, jamais de doublement de dose, toujours surveiller. Une fleur qui résume à elle seule l'âme de notre métier - soigner, c'est savoir jusqu'où ne pas aller.",
+  "image_keywords": "foxglove purple flower",
   "tags": [
     "histoire",
-    "nutrition",
-    "carence",
-    "epidemie",
-    "decouverte"
+    "plante",
+    "cardiologie",
+    "poison",
+    "pharmacognosie"
   ],
-  "date": "2026-06-24",
+  "date": "2026-06-25",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",

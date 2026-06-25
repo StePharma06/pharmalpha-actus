@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-06-25T04:15:31.513135+02:00",
+  "run_date": "2026-06-25",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "517 M€ de médicaments à la poubelle : ton officine peut vraiment changer la donne",
+      "resume": "7 675 tonnes de médicaments non utilisés collectées chaque année, pour une valeur estimée à 517 millions d'euros partis en fumée. Le rapport MNU 2026 pointe les pharmaciens comme premier levier d'action - et c'est une opportunité business autant qu'une responsabilité.",
+      "source": "Pharm'Actus · Le Moniteur des Pharmacies — 517 millions d'euros jetés à la poubelle",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/medicaments-non-utilises-comment-reduire-un-gaspillage-qui-coute-517-millions-deuros",
+      "confidence_score": 0.72,
+      "warnings": [
+        "Le chiffre de 517 millions d'euros et les 7 675 tonnes sont issus du résumé d'article du Moniteur des Pharmacies — la source primaire du rapport sous-jacent (Cyclamed ? LEEM ? HAS ?) n'est pas identifiée avec certitude dans les données disponibles. À vérifier avant publication.",
+        "Le chiffre de '580 kg par pharmacie' est un calcul interne (7 675 t / 21 000 officines) — à confirmer si le nombre d'officines actives en 2026 est bien de ~21 000.",
+        "Le montant de '24 600 € par officine' est un calcul de répartition uniforme qui ne tient pas compte de la taille des officines — il s'agit d'une moyenne indicative, non d'un chiffre officiel.",
+        "Les montants ROSP cités (3 000 à 8 000 €) sont des estimations basées sur les données conventionnelles antérieures à 2026 — à vérifier sur les derniers relevés CPAM disponibles.",
+        "L'hypothèse d'une future mission rémunérée MNU dans la LFSS 2027 est une projection analytique, pas une information confirmée."
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

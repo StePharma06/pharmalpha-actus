@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-24",
-  "window_label": "18 juin au 24 juin 2026",
+  "generated_at": "2026-06-25",
+  "window_label": "19 juin au 25 juin 2026",
   "has_history": true,
   "delta_source": "pytrends_rising",
   "pathologies": [
@@ -58,7 +58,7 @@
     }
   ],
   "pathologies_stale": false,
-  "pathologies_from": "2026-06-24",
+  "pathologies_from": "2026-06-25",
   "soins_stale": false,
-  "soins_from": "2026-06-24"
+  "soins_from": "2026-06-25"
 }

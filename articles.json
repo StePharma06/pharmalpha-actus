@@ -1,6 +1,131 @@
 {
   "articles": [
     {
+      "id": "actu_2026_06_25_5",
+      "date": "2026-06-25",
+      "type": "actu",
+      "categorie": "business_officine",
+      "titre": "517 M€ de médicaments à la poubelle : ton officine peut vraiment changer la donne",
+      "resume": "7 675 tonnes de médicaments non utilisés collectées chaque année, pour une valeur estimée à 517 millions d'euros partis en fumée. Le rapport MNU 2026 pointe les pharmaciens comme premier levier d'action - et c'est une opportunité business autant qu'une responsabilité.",
+      "full_text": "7 675 tonnes de médicaments non utilisés collectées chaque année, pour une valeur estimée à 517 millions d'euros partis en fumée. Le rapport MNU 2026 pointe les pharmaciens comme premier levier d'action — et c'est une opportunité business autant qu'une responsabilité.\n\n## Contexte\n\nLe gaspillage médicamenteux en France n'est pas une nouveauté, mais les chiffres 2026 publiés par Le Moniteur des Pharmacies remettent le sujet en tête d'agenda. Cyclamed collecte chaque année près de 7 675 tonnes de médicaments non utilisés (MNU), rapportés par les patients dans leurs officines. La valorisation financière de ces retours — 517 millions d'euros — représente une destruction de valeur massive pour le système de santé, supportée en bout de chaîne par l'Assurance Maladie et les complémentaires. Les causes sont multiples : conditionnements surdimensionnés, prescriptions en boîtes entières pour des traitements courts, manque de conseil à la dispensation sur les quantités réelles à utiliser. Le pharmacien est au carrefour de tous ces flux. Il est le seul professionnel de santé qui reçoit physiquement ces médicaments retournés, qui dispense les boîtes prescrites, et qui peut agir sur le comportement du patient au moment même de la délivrance. Ce positionnement unique en fait un acteur économique central dans la lutte contre les MNU — avec des implications directes sur la future contractualisation et la ROSP.\n\n## Analyse business\n\nMettons les chiffres en perspective business.\n\n**Le volume, d'abord.** 7 675 tonnes de MNU collectées par an, soit environ 580 kg par pharmacie (sur environ 21 000 officines actives en France). Ce n'est pas anodin : chaque boîte rapportée, c'est une boîte achetée, remboursée, jamais consommée, et dont le coût a été intégralement porté par la collectivité.\n\n**Les 517 millions d'euros.** Ramenés à l'officine, c'est environ 24 600 € de médicaments gaspillés par pharmacie et par an qui transitent dans tes bacs Cyclamed. Pour donner un ordre de grandeur : c'est plus que la ROSP moyenne annuelle d'une officine (environ 3 000 à 8 000 € selon le profil), et c'est comparable à plusieurs mois de marge brute sur le générique pour une petite structure.\n\n**Les leviers identifiés.** Le rapport pointe trois axes : les pratiques de prescription (boîtes inadaptées aux durées de traitement), les conditionnements industriels (labos invités à proposer des formats unitaires ou adaptés), et le conseil officinal à la délivrance. Ce dernier point est directement actionnable par le titulaire dès demain matin — sans investissement.\n\n**L'angle ROSP et missions.** La réduction du gaspillage médicamenteux est déjà un critère de suivi dans certains indicateurs de la convention pharmaceutique. Avec la renégociation conventionnelle attendue post-LFSS 2027, ce thème a toutes les chances d'être intégré dans une mission officinale rémunérée ou dans un indicateur ROSP spécifique. Les pharmacies qui auront structuré leur démarche en amont seront en position favorable.\n\n**Le risque de non-action.** Si les officines ne se saisissent pas du sujet, d'autres acteurs le feront à leur place : les prescripteurs via des logiciels de prescription adaptée, les labos via des formats modulables vendus directement. L'officine perdrait alors sa position de pivot dans la gestion du médicament post-dispensation.\n\nEnfin, la canicule actuelle (record de chaleur le 24 juin 2026) accélère le problème : mauvaises conditions de conservation à domicile = médicaments abîmés = MNU supplémentaires. C'est le bon moment pour activer le conseil.\n\n## Recommandations actionnables\n\n1. **Systématiser le conseil MNU à la dispensation** — Pour toute ordonnance de traitement court (antibiotiques, antalgiques, antiviraux), prendre 30 secondes pour rappeler au patient de rapporter les reliquats. Un message simple, répété par toute l'équipe, change les comportements sur 6 mois.\n\n2. **Former l'équipe sur les conditionnements à risque** — Identifier les 10 molécules les plus retournées dans ton bac Cyclamed. C'est souvent les mêmes (IPP, statines, antihypertenseurs en boîtes 90 comprimés). Adapter le discours à la délivrance : vérifier l'observance avant de renouveler.\n\n3. **Documenter tes actions MNU dès maintenant** — Tiens un registre simple (volume mensuel Cyclamed, actions mises en place). Ce document sera ton argument lors de la prochaine contractualisation ou d'un audit ARS. Anticipe une potentielle mission rémunérée MNU dans la LFSS 2027.\n\n4. **Alerter ton groupement ou réseau** — Remonte les données à ton groupement : certains ont déjà des outils de suivi MNU mutualisés. Un benchmark entre officines du même réseau peut devenir un argument de négociation collective.\n\n5. **Profiter de la canicule pour ouvrir la conversation** — \"Faites attention à la conservation de vos médicaments par ces chaleurs\" est une entrée naturelle pour évoquer les MNU et la bonne gestion du stock domicile.\n\n## Sources citees\n\n- Le Moniteur des Pharmacies — 517 millions d'euros jetés à la poubelle",
+      "source": "Pharm'Actus · Le Moniteur des Pharmacies — 517 millions d'euros jetés à la poubelle",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/medicaments-non-utilises-comment-reduire-un-gaspillage-qui-coute-517-millions-deuros",
+      "tiktok_url": "",
+      "badge_label": "Business",
+      "image_url": "assets/img_actu_2026_06_25_5.jpg",
+      "tags": [
+        "mnu",
+        "gaspillage-medicamenteux",
+        "cyclamed",
+        "rentabilite-officine"
+      ]
+    },
+    {
+      "id": "actu_2026_06_25_4",
+      "date": "2026-06-25",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "Le VIH reprogramme ses cellules cibles pour forcer leur noyau : une découverte qui change tout",
+      "resume": "Une équipe de l'University College London vient d'élucider le mécanisme par lequel le VIH infecte des cellules immunitaires au repos. Le virus reprogramme activement ses cibles pour s'y infiltrer. Une avancée fondamentale qui ouvre des pistes thérapeutiques inédites contre le réservoir viral.",
+      "full_text": "Le VIH est un adversaire redoutable. Depuis 40 ans, on pensait connaître ses principales ruses. Et là, une équipe londonienne vient de dévoiler un mécanisme qu'on n'avait pas vu venir.\n\nDes chercheurs de l'University College London (UCL) ont décrit comment le VIH parvient à infecter des lymphocytes T au repos, c'est-à-dire des cellules immunitaires normalement résistantes à l'infection virale. Le virus ne les attendrait pas passivement : il les reprogrammerait activement pour forcer l'accès à leur noyau. Un détournement cellulaire sophistiqué, quasi chirurgical.\n\nPourquoi c'est une avancée majeure ? Parce que les cellules T au repos constituent précisément le réservoir viral latent, ce fameux obstacle qui empêche de guérir le VIH malgré des antirétroviraux efficaces. Tant que ce réservoir existe, l'arrêt des traitements entraîne un rebond viral. Comprendre comment le VIH constitue ce réservoir, c'est identifier où frapper pour l'éradiquer.\n\nLes chercheurs de l'UCL suggèrent que ce mécanisme d'adaptation pourrait être plus répandu que prévu, potentiellement partagé par d'autres virus à ADN. Ce qui ouvre des perspectives bien au-delà du VIH.\n\nCôté pipeline thérapeutique, cette découverte alimente plusieurs axes de recherche déjà actifs : les stratégies \"shock and kill\" (réveiller le réservoir pour mieux le cibler), les approches immunothérapeutiques et les inhibiteurs d'entrée nucléaire de nouvelle génération. On n'est pas encore au stade d'une nouvelle molécule en phase 3, mais on vient de poser une brique fondamentale.\n\nPour le pharmacien d'officine qui suit des patients sous antirétroviraux au long cours, c'est un signal d'espoir à intégrer dans le discours thérapeutique. La recherche avance, les pistes de guérison fonctionnelle ou virologique progressent. Un patient bien observant aujourd'hui, c'est un patient qui pourra bénéficier de ces avancées demain.\n\nDemain matin au comptoir : si tu as des patients VIH+, rappelle que l'observance aujourd'hui, c'est la porte ouverte aux thérapies de demain. Et garde un oeil sur les publications UCL : quand la recherche fondamentale avance aussi clairement, les essais cliniques ne tardent jamais trop.",
+      "source": "Le Monde Sciences",
+      "source_url": "https://www.lemonde.fr/sciences/article/2026/06/24/comment-le-vih-reprogramme-les-cellules-qu-il-cible-pour-forcer-l-entree-dans-leur-noyau_6710208_1650684.html",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_06_25_4.jpg",
+      "tags": [
+        "vih",
+        "recherche",
+        "reservoir-viral",
+        "antretroviral",
+        "innovation"
+      ]
+    },
+    {
+      "id": "actu_2026_06_25_3",
+      "date": "2026-06-25",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "Soins non programmés en officine : 5 000 demandes analysées, les chiffres parlent enfin",
+      "resume": "L'URPS pharmaciens Grand Est a compilé près de 5 000 demandes de soins non programmés reçues en officine. Résultat : les pharmacies absorbent une charge réelle de premier recours, documentée, chiffrée. Exactement ce dont la profession a besoin pour peser dans le débat sur le désengorgement des urgences.",
+      "full_text": "Enfin des données. Pas des intuitions de terrain, pas des anecdotes de comptoir. Des chiffres.\n\nL'URPS pharmaciens Grand Est vient de publier une étude basée sur près de 5 000 demandes de soins non programmés reçues dans des officines volontaires de la région. Et le constat est sans appel : les pharmacies gèrent un flux massif et réel de premier recours, qui désengorge de facto les urgences et les cabinets médicaux surchargés.\n\nC'est une bonne nouvelle pour plusieurs raisons. D'abord parce que c'est documenté. Dans les négociations avec l'Assurance Maladie, les ARS ou le Parlement, un chiffre régional solide vaut mille discours. Ensuite parce que ça valide ce que vous vivez au quotidien : le comptoir est devenu une porte d'entrée dans le système de soins, qu'on le veuille ou non.\n\nQue couvrent ces demandes non programmées ? Sans surprise : petites plaies et traumatismes, douleurs aiguës, questions médicamenteuses urgentes, orientation vers le bon interlocuteur. Des actes que la profession est formée à gérer, et qui évitent des passages inutiles aux urgences ou des appels au 15 pour des situations bénignes.\n\nLe contexte politique rend cette étude encore plus précieuse. Le gouvernement cherche à désengorger les urgences, les CPTS se structurent, la question du premier recours est sur toutes les lèvres. Avoir des données régionales quantifiées, c'est un levier de négociation concret pour les représentants professionnels (FSPF, USPO, UNPF) qui poussent pour une reconnaissance et une rémunération de ces actes.\n\nEt devinez quoi ? Ces 5 000 demandes, c'est une région, sur une période délimitée, avec des officines volontaires. Le chiffre national extrapolé donne le vertige. On parle potentiellement de plusieurs millions d'actes de premier recours non rémunérés, absorbés en silence par le réseau officinal.\n\nDemain matin au comptoir : rien ne change immédiatement dans ta pratique. Mais si ton URPS ou ton syndicat te demande de participer à ce type de recueil de données, dis oui. C'est ta contribution directe à l'argumentaire qui servira à faire reconnaître et rémunérer ce que tu fais déjà.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/pres-de-5-000-demandes-de-soins-non-programmes-analysees-dans-les-officines-du-grand-est",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_06_25_3.jpg",
+      "tags": [
+        "soins-non-programmes",
+        "officine",
+        "urps",
+        "premier-recours",
+        "honoraires"
+      ]
+    },
+    {
+      "id": "actu_2026_06_25_2",
+      "date": "2026-06-25",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "Biosimilaires du tocilizumab : l'Europe freine, la France suit, et c'est bien",
+      "resume": "Des cas d'hypersensibilité ont été rapportés lors de la substitution de RoActemra par son biosimilaire Tyenne. L'EMA est sur le dossier, l'ANSM attend ses conclusions avant de valider la substitution pharmacien. Un signal à prendre au sérieux dans un contexte où la pression sur les biosimilaires ne faiblit pas.",
+      "full_text": "Le dossier tocilizumab biosimilaire vient de prendre un sérieux coup de frein, et cette fois c'est l'Europe qui appuie sur la pédale.\n\nDes cas d'hypersensibilité ont été observés chez des patients substitués de RoActemra (tocilizumab de référence, Roche) vers Tyenne, son biosimilaire. L'EMA a ouvert une évaluation. En France, l'ANSM a décidé d'attendre les conclusions européennes avant de reprendre l'examen de la substitution pharmacien. Traduction : à ce jour, tu ne peux pas substituer le tocilizumab en officine. Et c'est une décision de prudence tout à fait justifiée.\n\nPourquoi c'est important pour toi ? Parce que le tocilizumab (anti-IL-6) est utilisé dans des indications lourdes : polyarthrite rhumatoïde, arthrite idiopathique juvénile, syndrome de relargage cytokinique. Des patients souvent fragilisés, sur des thérapeutiques de fond. Une réaction d'hypersensibilité dans ce contexte, c'est potentiellement grave.\n\nLe signal européen illustre un principe fondamental souvent oublié dans la pression économique autour des biosimilaires : bioéquivalence ne signifie pas substituabilité clinique automatique dans toutes les situations. Les biosimilaires sont des médicaments sûrs et efficaces, le cadre réglementaire EMA est robuste. Mais la pharmacovigilance post-AMM reste l'outil qui permet d'affiner ce qu'on sait vraiment.\n\nEt devinez quoi ? Ce type d'évaluation en temps réel, c'est exactement ce que les anti-biosimilaires agitaient comme épouvantail. Sauf qu'ici, le système fonctionne : le signal est capté, l'agence réagit, la substitution est suspendue le temps d'y voir clair. C'est de la pharmacovigilance qui fait son travail.\n\nPour les équipes officinales : si tu as des patients sous tocilizumab, pas de substitution spontanée vers Tyenne dans l'attente des conclusions EMA. Si un patient arrive avec une prescription de Tyenne, tu la dispenses normalement. C'est uniquement la substitution initiée par le pharmacien qui est en suspens.\n\nDemain matin au comptoir : aucun switch tocilizumab de ta propre initiative. Tu attends le feu vert ANSM, qui lui-même attend Bruxelles. La prudence réglementaire est parfois la meilleure des missions.",
+      "source": "European Medicines Agency (EMA) / Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/medicament-parapharmacie/medicament/tocilizumab-une-eventuelle-substitution-biosimilaire-par-le-pharmacien-reportee",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/img_actu_2026_06_25_2.jpg",
+      "tags": [
+        "biosimilaire",
+        "substitution",
+        "ema",
+        "ansm",
+        "pharmacovigilance"
+      ]
+    },
+    {
+      "id": "actu_2026_06_25_1",
+      "date": "2026-06-25",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "Testostérone Besins en tension : l'ANSM te dit clairement non à Androtardyl",
+      "resume": "Des substitutions inappropriées entre Testostérone Besins et Androtardyl ont été signalées à l'officine. L'ANSM tape du poing sur la table : ces deux spécialités ne sont pas interchangeables. Dosages différents, schémas d'administration différents, conséquences cliniques potentielles.",
+      "full_text": "Une tension de stock qui pousse à improviser, ça arrive. Mais improviser avec la testostérone injectable, c'est une autre histoire.\n\nL'ANSM vient d'alerter sur des cas de délivrance d'Androtardyl en substitution d'une prescription de Testostérone Besins. Et non, ce n'est pas une substitution acceptable. Ces deux spécialités n'ont ni le même dosage ni le même schéma d'administration. L'une est une solution huileuse à 250 mg/mL pour injection IM toutes les 3 à 4 semaines, l'autre a ses propres modalités. Confondre les deux, c'est exposer le patient à un déséquilibre hormonal potentiellement symptomatique.\n\nCa te rappelle quelque chose ? La tentation de combler une rupture avec ce qu'on a sous la main est humaine. Mais sur les formes injectables à libération prolongée, le principe d'équivalence thérapeutique ne s'applique pas à l'aveugle. Ici, il n'y a pas d'AMM croisée, pas de données de bioéquivalence validées entre ces deux formes.\n\nConcrètement, que faire face à une prescription de Testostérone Besins en rupture ? Premièrement, tu contactes le prescripteur. Pas tu substitues, tu contactes. C'est lui qui adapte la prescription ou oriente vers une alternative validée. Deuxièmement, tu documentes le contact dans le DP et dans ton logiciel. Troisièmement, tu ne délivres pas Androtardyl sans nouvel ordonnance adaptée.\n\nLe contexte global des tensions d'approvisionnement ne change pas les règles de sécurité du médicament. Ce n'est pas parce qu'une spécialité est difficile à trouver qu'on bascule sur une autre du même DCI sans vérification. Le DCI commun (testostérone) ne suffit pas à garantir l'interchangeabilité entre formes injectables de cinétiques différentes.\n\nL'ANSM ne publie pas ce type d'alerte pour remplir ses colonnes. Des cas ont été signalés, des patients ont été exposés. Le signal est réel.\n\nDemain matin au comptoir : si Testostérone Besins est en rupture dans ta commande, tu ne proposes pas Androtardyl en automatique. Tu décroches ton téléphone. C'est dix minutes qui évitent potentiellement une iatrogénie documentée dans le prochain rapport de pharmacovigilance.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/medicament-parapharmacie/medicament/testosterone-besins-en-tension-ne-pas-substituer-par-androtardyl",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_06_25_1.jpg",
+      "tags": [
+        "ansm",
+        "substitution",
+        "rupture",
+        "officine",
+        "securite"
+      ]
+    },
+    {
+      "id": "lsv_2026_06_25",
+      "date": "2026-06-25",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? La digitale, une fleur qui fait battre le cœur... ou l'arrêter",
+      "resume": "En 1785, un médecin anglais publie un traité sur une plante que les guérisseuses utilisaient en secret depuis des générations. La digitale pourprée allait révolutionner la cardiologie. Mais la frontière entre la dose qui sauve et celle qui tue tient à un cheveu.",
+      "full_text": "On est en 1775. William Withering, médecin à Birmingham, examine une paysanne anglaise condamnée par une hydropisie sévère - ce qu'on appellerait aujourd'hui une insuffisance cardiaque avec œdèmes massifs. Les médecins ont abandonné. Mais la femme survit, grâce à une tisane préparée par une vieille herboriste du Shropshire.\n\nWithering est intrigué. Il enquête, identifie la plante : la digitale pourprée, Digitalis purpurea, cette jolie fleur à clochettes violettes qui pousse dans les haies anglaises. Pendant dix ans, il l'observe, la teste, note scrupuleusement ses effets sur 163 patients. C'est du jamais-vu pour l'époque. En 1785, il publie 'An Account of the Foxglove' - un des premiers essais cliniques documentés de l'histoire de la médecine.\n\nMais voilà le twist : Withering savait déjà que la digitale était aussi un poison. Ralentir un cœur qui s'emballe, oui. Trop en donner, et le cœur s'arrête. La plante contient des hétérosides cardiotoniques - digoxine, digitoxine - qui agissent directement sur le muscle cardiaque. Fascinant et terrifiant à la fois.\n\nPendant deux siècles, les médecins ont dosé la digitale à l'œil, à l'expérience, parfois à l'erreur fatale. Ce n'est qu'au XXe siècle qu'on a isolé la digoxine pure, puis mis au point des dosages sanguins pour surveiller les taux. Parce qu'avec la digitale, la zone thérapeutique est tellement étroite qu'on parle encore de 'fenêtre thérapeutique' comme d'un couloir de quelques centimètres.\n\nAujourd'hui, la digoxine est toujours sur nos étagères. Moins prescrite qu'avant, concurrencée par les bêtabloquants et les anti-arythmiques modernes, mais toujours là. Et à chaque dispensation, le conseil reste le même depuis Withering : jamais d'automédication, jamais de doublement de dose, toujours surveiller. Une fleur qui résume à elle seule l'âme de notre métier - soigner, c'est savoir jusqu'où ne pas aller.",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_06_25.jpg",
+      "tags": [
+        "histoire",
+        "plante",
+        "cardiologie",
+        "poison",
+        "pharmacognosie"
+      ]
+    },
+    {
       "id": "actu_2026_06_24_5",
       "date": "2026-06-24",
       "type": "actu",
@@ -7974,6 +8099,6 @@
       ]
     }
   ],
-  "count": 386,
-  "updated_at": "2026-06-24T04:11:39.452040+02:00"
+  "count": 392,
+  "updated_at": "2026-06-25T04:15:36.321817+02:00"
 }
