@@ -1471,7 +1471,10 @@ body.pa-has-nav #actusHeader {
         if (!d || typeof d.count !== "number" || d.count <= 0) return false;
         var el = document.getElementById("hero-nl-text");
         if (!el) return false;
-        if (initial) buildShell(el, d.count);
+        // Construit le shell des qu'un fetch reussit (peu importe si c'est le 1er
+        // ou un poll suivant) : evite le cas ou le 1er fetch echoue -> shell jamais
+        // construit -> applyCount plante sur counterEl null.
+        if (!counterEl) buildShell(el, d.count);
         else if (d.count !== currentCount) applyCount(d.count, false);
         return true;
       }
