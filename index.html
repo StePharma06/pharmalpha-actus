@@ -1414,7 +1414,10 @@ body.pa-has-nav #actusHeader {
     </p>
     <script>
     (function() {
-      var COUNT_URL = "https://ibmqaybmhpzdlgyntzbs.supabase.co/functions/v1/brevo-actus-count";
+      // Proxy same-origin neutre EN PREMIER (invisible aux bloqueurs pub/tracage
+      // qui filtrent les URLs contenant "brevo"/"count"). Fallback URL directe
+      // si le rewrite Vercel echoue -> zero regression.
+      var COUNT_URLS = ["/feed/abonnes", "https://ibmqaybmhpzdlgyntzbs.supabase.co/functions/v1/brevo-actus-count"];
       var POLL_MS = 30000;
       var MIN_DIGITS = 4;
       var currentCount = null;
@@ -1464,17 +1467,23 @@ body.pa-has-nav #actusHeader {
         ensureDigitCount(Math.max(MIN_DIGITS, String(count).length));
         requestAnimationFrame(function() { applyCount(count, true); });
       }
+      function applyResult(d, initial) {
+        if (!d || typeof d.count !== "number" || d.count <= 0) return false;
+        var el = document.getElementById("hero-nl-text");
+        if (!el) return false;
+        if (initial) buildShell(el, d.count);
+        else if (d.count !== currentCount) applyCount(d.count, false);
+        return true;
+      }
       function fetchCount(initial) {
-        fetch(COUNT_URL)
-          .then(function(r) { return r.ok ? r.json() : null; })
-          .then(function(d) {
-            if (!d || typeof d.count !== "number" || d.count <= 0) return;
-            var el = document.getElementById("hero-nl-text");
-            if (!el) return;
-            if (initial) buildShell(el, d.count);
-            else if (d.count !== currentCount) applyCount(d.count, false);
-          })
-          .catch(function() {});
+        var urls = COUNT_URLS.slice();
+        (function tryNext() {
+          if (!urls.length) return;
+          fetch(urls.shift())
+            .then(function(r) { return r.ok ? r.json() : null; })
+            .then(function(d) { if (!applyResult(d, initial)) tryNext(); })
+            .catch(function() { tryNext(); });
+        })();
       }
       fetchCount(true);
       setInterval(function() { fetchCount(false); }, POLL_MS);
