@@ -42,6 +42,32 @@ def _clean_article(a: dict) -> dict:
     return a
 
 
+# Le modele ajoute parfois un bloc meta APRES le contenu demande
+# (ex: "--- Verification orthographe : ...", "Note :", separateurs markdown).
+# Incident 2026-06-25 : ce bloc a fuite dans l'intro de l'email quotidien.
+_META_CUT_RE = re.compile(
+    r'(\n\s*-{3,}'                       # separateur ---
+    r'|\n\s*\*{3,}'                      # separateur ***
+    r'|\n\s*#{1,6}\s'                    # titre markdown ## ...
+    r'|\*{0,2}\s*V[ée]rif(?:ication)?'   # **Verification...
+    r'|\bOrthographe\s*:'                # Orthographe :
+    r'|\bRelecture\s*:?'                 # Relecture
+    r'|\bNote\s*:'                       # Note :
+    r'|\bNB\s*:)',                       # NB :
+    re.IGNORECASE,
+)
+
+def _strip_generated_meta(text: str) -> str:
+    """Coupe tout meta-commentaire que le modele ajoute apres le contenu utile,
+    puis retire guillemets/espaces parasites. Pour texte libre (intros, etc.)."""
+    if not isinstance(text, str):
+        return text
+    m = _META_CUT_RE.search(text)
+    if m:
+        text = text[:m.start()]
+    return text.strip().strip('"').strip("'").strip('«»').strip()
+
+
 def md_to_html(text: str) -> str:
     """Convertit **bold** en <strong>bold</strong> et *italic* en <em>italic</em>.
 
@@ -1930,11 +1956,9 @@ Ecris une intro de 2-3 phrases MAX (pas plus de 50 mots). Regles :
 - PAS de emoji, PAS de guillemets autour du texte
 - Ecris en HTML avec les entites pour les accents (&eacute; &agrave; &egrave; &ecirc; &ucirc; &icirc; &ocirc; &ccedil; etc.)
 
-ATTENTION ORTHOGRAPHE : relis-toi avant de repondre. ZERO faute tolere.
-- Verifie chaque mot accentue (co&ucirc;ter, d&eacute;j&agrave;, r&eacute;cent, etc.)
-- Verifie les accords (pluriel, participe passe)
-- Si tu as un doute sur un mot, reformule avec un mot plus simple
-- Exemples de fautes a ne PAS faire : "coitait" au lieu de "co&ucirc;tait", "lache" au lieu de "l&acirc;che", etc."""
+ORTHOGRAPHE : zero faute. Relis-toi MENTALEMENT (accents, accords, participes passes) mais NE MONTRE PAS ta relecture. En cas de doute sur un mot, reformule avec un mot plus simple.
+
+FORMAT DE REPONSE (IMPERATIF) : reponds UNIQUEMENT avec le texte de l'intro (2-3 phrases). RIEN d'autre : aucun preambule, aucun guillemet, aucune note, aucun bloc "verification orthographe", aucun separateur "---", aucun commentaire sur ton travail. Ta reponse entiere = l'intro, point."""
 
     try:
         client = anthropic.Anthropic()
@@ -1944,8 +1968,15 @@ ATTENTION ORTHOGRAPHE : relis-toi avant de repondre. ZERO faute tolere.
             messages=[{"role": "user", "content": prompt}]
         )
         intro = response.content[0].text.strip()
-        # Nettoyage : enlever guillemets si Claude en ajoute
-        intro = intro.strip('"').strip("'").strip("\u00ab\u00bb")
+        # Filet de securite : couper tout meta-commentaire (bloc "verification
+        # orthographe", notes, separateurs ---) que le modele ajoute parfois,
+        # puis enlever guillemets parasites. Incident 2026-06-25.
+        intro = _strip_generated_meta(intro)
+        # Garde-fou longueur : une intro normale fait < ~450 caracteres (entites
+        # HTML comprises). Au-dela, du meta a probablement fuite -> fallback.
+        if not intro or len(intro) > 600:
+            print(f"  [EMAIL-INTRO] Intro suspecte (len={len(intro) if intro else 0}), fallback statique")
+            return None
         print(f"  [EMAIL-INTRO] Intro generee: {intro[:60]}...")
         return intro
     except Exception as e:
