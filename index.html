@@ -280,7 +280,7 @@ body.pa-has-nav #actusHeader {
   font-size: 16px;
   margin-top: 4px;
 }
-.hero-nl {
+.hero-join {
   margin-top: 16px;
   max-width: 640px;
   background: var(--orange-light);
@@ -289,7 +289,7 @@ body.pa-has-nav #actusHeader {
   border-radius: var(--radius-sm);
   padding: 14px 18px;
 }
-.hero-nl-label {
+.hero-join-label {
   font-size: 13px;
   color: var(--text-dim);
   margin-bottom: 8px;
@@ -298,19 +298,19 @@ body.pa-has-nav #actusHeader {
   gap: 6px;
   white-space: nowrap;
 }
-.hero-nl-label svg { width: 16px; height: 16px; flex-shrink: 0; }
+.hero-join-label svg { width: 16px; height: 16px; flex-shrink: 0; }
 @media (max-width: 600px) {
-  .hero-nl-label { white-space: normal; }
+  .hero-join-label { white-space: normal; }
 }
 /* Compteur a cases qui tournent (style odometer) */
-.counter-roll-wrap {
+.tally-wrap {
   display: inline-flex;
   gap: 2px;
   vertical-align: middle;
   font-variant-numeric: tabular-nums;
   font-weight: 800;
 }
-.counter-digit {
+.tally-digit {
   display: inline-block;
   width: 0.85em;
   height: 1.4em;
@@ -322,21 +322,21 @@ body.pa-has-nav #actusHeader {
   text-align: center;
   box-shadow: 0 1px 2px rgba(249, 115, 22, 0.15);
 }
-.counter-roll {
+.tally-roll {
   display: block;
   transition: transform 2.5s cubic-bezier(.2,.7,.2,1);
   will-change: transform;
 }
-.counter-roll > span {
+.tally-roll > span {
   display: block;
   height: 1.4em;
   color: #f97316;
 }
-.hero-nl-row {
+.hero-join-row {
   display: flex;
   gap: 8px;
 }
-.hero-nl input {
+.hero-join input {
   flex: 1;
   padding: 10px 16px;
   border: 1px solid var(--border);
@@ -347,9 +347,9 @@ body.pa-has-nav #actusHeader {
   transition: border-color 0.2s;
   background: var(--white);
 }
-.hero-nl input:focus { border-color: var(--orange); }
-.hero-nl input::placeholder { color: var(--text-dim); }
-.hero-nl button:not(.nl-freq-btn) {
+.hero-join input:focus { border-color: var(--orange); }
+.hero-join input::placeholder { color: var(--text-dim); }
+.hero-join button:not(.jn-freq-btn) {
   padding: 10px 20px;
   border-radius: 100px;
   border: none;
@@ -362,56 +362,56 @@ body.pa-has-nav #actusHeader {
   transition: background 0.15s;
   white-space: nowrap;
 }
-.hero-nl button:not(.nl-freq-btn):hover { background: var(--orange-hover); }
-.hero-nl button:not(.nl-freq-btn):disabled { opacity: 0.6; cursor: not-allowed; }
-.hero-nl-captcha {
+.hero-join button:not(.jn-freq-btn):hover { background: var(--orange-hover); }
+.hero-join button:not(.jn-freq-btn):disabled { opacity: 0.6; cursor: not-allowed; }
+.hero-join-captcha {
   margin-top: 8px;
   display: none;
   overflow: hidden;
   max-height: 0;
   transition: max-height 0.3s ease;
 }
-.hero-nl-captcha.visible {
+.hero-join-captcha.visible {
   display: block;
   max-height: 100px;
 }
-.hero-nl-msg {
+.hero-join-msg {
   font-size: 13px;
   margin-top: 6px;
   display: none;
 }
-.hero-nl-msg.success { color: var(--green); display: block; }
-.hero-nl-msg.error { color: #dc2626; display: block; }
+.hero-join-msg.success { color: var(--green); display: block; }
+.hero-join-msg.error { color: #dc2626; display: block; }
 @media (max-width: 480px) {
-  .hero-nl-row { flex-direction: column; }
-  .hero-nl button { width: 100%; }
-  .hero-nl-captcha { transform: scale(0.85); transform-origin: left; }
+  .hero-join-row { flex-direction: column; }
+  .hero-join button { width: 100%; }
+  .hero-join-captcha { transform: scale(0.85); transform-origin: left; }
 }
 
 /* === FREQ STEP (choix quotidien / hebdo) === */
-.nl-freq-step {
+.jn-freq-step {
   margin-top: 10px;
   animation: nlFadeIn 0.2s ease;
 }
 @keyframes nlFadeIn { from { opacity:0; transform:translateY(-4px); } to { opacity:1; transform:translateY(0); } }
-.nl-freq-label {
+.jn-freq-label {
   font-size: 13px; font-weight: 600; color: var(--text-dim);
   margin-bottom: 8px; text-align: left;
 }
-.nl-freq-btns { display: flex; gap: 8px; }
-.nl-freq-btn {
+.jn-freq-btns { display: flex; gap: 8px; }
+.jn-freq-btn {
   flex: 1; padding: 10px 8px; border: 2px solid var(--border);
   border-radius: 10px; background: var(--white); cursor: pointer;
   font-family: inherit; text-align: center; transition: all 0.15s;
   display: flex; flex-direction: column; align-items: center; gap: 2px;
 }
-.nl-freq-btn:hover { border-color: var(--orange); background: var(--orange-light); }
-.nl-freq-btn:disabled { opacity: 0.6; cursor: not-allowed; }
-.nl-freq-icon { font-size: 20px; }
-.nl-freq-name { font-size: 13px; font-weight: 700; color: var(--text); }
-.nl-freq-desc { font-size: 11px; color: #4a4a4a; }
-.nl-freq-btn:hover .nl-freq-desc,
-.nl-freq-btn:focus-visible .nl-freq-desc { color: #1a1a1a; }
+.jn-freq-btn:hover { border-color: var(--orange); background: var(--orange-light); }
+.jn-freq-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+.jn-freq-icon { font-size: 20px; }
+.jn-freq-name { font-size: 13px; font-weight: 700; color: var(--text); }
+.jn-freq-desc { font-size: 11px; color: #4a4a4a; }
+.jn-freq-btn:hover .jn-freq-desc,
+.jn-freq-btn:focus-visible .jn-freq-desc { color: #1a1a1a; }
 
 /* === FILTERS === */
 .filters {
@@ -1112,7 +1112,7 @@ body.pa-has-nav #actusHeader {
 }
 
 /* === NEWSLETTER POPUP === */
-.nl-overlay {
+.jn-overlay {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.5);
@@ -1123,8 +1123,8 @@ body.pa-has-nav #actusHeader {
   align-items: center;
   padding: 16px;
 }
-.nl-overlay.show { display: flex; }
-.nl-popup {
+.jn-overlay.show { display: flex; }
+.jn-popup {
   background: var(--bg);
   border-radius: 20px;
   max-width: 440px;
@@ -1135,7 +1135,7 @@ body.pa-has-nav #actusHeader {
   position: relative;
   animation: modalIn 0.3s ease-out;
 }
-.nl-close {
+.jn-close {
   position: absolute;
   top: 14px;
   right: 14px;
@@ -1148,8 +1148,8 @@ body.pa-has-nav #actusHeader {
   font-size: 22px;
   transition: color 0.15s;
 }
-.nl-close:hover { color: var(--text); }
-.nl-icon {
+.jn-close:hover { color: var(--text); }
+.jn-icon {
   width: 56px;
   height: 56px;
   background: var(--orange-light);
@@ -1159,29 +1159,29 @@ body.pa-has-nav #actusHeader {
   justify-content: center;
   margin: 0 auto 16px;
 }
-.nl-icon svg { width: 28px; height: 28px; color: var(--orange); }
-.nl-popup h3 {
+.jn-icon svg { width: 28px; height: 28px; color: var(--orange); }
+.jn-popup h3 {
   font-size: 20px;
   font-weight: 800;
   color: var(--black);
   margin-bottom: 8px;
 }
-.nl-popup p {
+.jn-popup p {
   font-size: 14px;
   color: var(--text-secondary);
   line-height: 1.5;
   margin-bottom: 20px;
 }
-.nl-form {
+.jn-form {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.nl-form-row {
+.jn-form-row {
   display: flex;
   gap: 8px;
 }
-.nl-form input {
+.jn-form input {
   flex: 1;
   padding: 12px 16px;
   border: 1px solid var(--border);
@@ -1191,9 +1191,9 @@ body.pa-has-nav #actusHeader {
   outline: none;
   transition: border-color 0.2s;
 }
-.nl-form input:focus { border-color: var(--orange); }
-.nl-form input::placeholder { color: var(--text-dim); }
-.nl-form button {
+.jn-form input:focus { border-color: var(--orange); }
+.jn-form input::placeholder { color: var(--text-dim); }
+.jn-form button {
   padding: 12px 24px;
   border-radius: 100px;
   border: none;
@@ -1206,12 +1206,12 @@ body.pa-has-nav #actusHeader {
   transition: background 0.15s;
   white-space: nowrap;
 }
-.nl-form button:hover { background: var(--orange-hover); }
-.nl-form button:disabled {
+.jn-form button:hover { background: var(--orange-hover); }
+.jn-form button:disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }
-.nl-captcha {
+.jn-captcha {
   display: none;
   justify-content: center;
   margin: 4px 0;
@@ -1219,26 +1219,26 @@ body.pa-has-nav #actusHeader {
   max-height: 0;
   transition: max-height 0.3s ease;
 }
-.nl-captcha.visible {
+.jn-captcha.visible {
   display: flex;
   max-height: 100px;
 }
-.nl-msg {
+.jn-msg {
   font-size: 13px;
   margin-top: 12px;
   display: none;
 }
-.nl-msg.success { color: var(--green); display: block; }
-.nl-msg.error { color: #dc2626; display: block; }
-.nl-privacy {
+.jn-msg.success { color: var(--green); display: block; }
+.jn-msg.error { color: #dc2626; display: block; }
+.jn-privacy {
   font-size: 11px;
   color: var(--text-dim);
   margin-top: 14px;
 }
 @media (max-width: 480px) {
-  .nl-popup { padding: 28px 20px; }
-  .nl-form button { width: 100%; }
-  .nl-captcha { transform: scale(0.85); transform-origin: center; }
+  .jn-popup { padding: 28px 20px; }
+  .jn-form button { width: 100%; }
+  .jn-captcha { transform: scale(0.85); transform-origin: center; }
 }
 /* === EXPRESSION DU JOUR — bandeau éditorial === */
 .expression-du-jour {
@@ -1407,10 +1407,10 @@ body.pa-has-nav #actusHeader {
 <section class="hero">
   <p>Chaque matin (ou chaque semaine selon ton envie), retrouve l'actus pharma &agrave; lire entre 2 ordo.<br>Pharma France, Pharma Monde, Sant&eacute; G&eacute;n&eacute;rale. Pharm'Actus, c'est au moins une bonne nouvelle et une vision sur l'avenir avec la recherche.<br>5 actus + 1 histoire incroyable.<br>C'est gratuit, sans spam et &ccedil;a te prend 5 min par jour pour rester inform&eacute;.</p>
   <p style="margin-top:8px;font-size:0.95em;opacity:0.85;">Partage ce site &agrave; ton entourage et pense &agrave; t'abonner pour ne rien manquer&nbsp;!</p>
-  <div class="hero-nl" id="hero-nl">
-    <p class="hero-nl-label">
+  <div class="hero-join" id="hero-join">
+    <p class="hero-join-label">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,7 12,13 2,7"/></svg>
-      <span id="hero-nl-text">Rejoins-nous et re&ccedil;ois les actus chaque jour par mail :</span>
+      <span id="hero-join-text">Rejoins-nous et re&ccedil;ois les actus chaque jour par mail :</span>
     </p>
     <script>
     (function() {
@@ -1425,9 +1425,9 @@ body.pa-has-nav #actusHeader {
 
       function buildDigit() {
         var box = document.createElement("span");
-        box.className = "counter-digit";
+        box.className = "tally-digit";
         var roll = document.createElement("span");
-        roll.className = "counter-roll";
+        roll.className = "tally-roll";
         for (var n = 0; n <= 9; n++) {
           var item = document.createElement("span");
           item.textContent = String(n);
@@ -1437,7 +1437,7 @@ body.pa-has-nav #actusHeader {
         return box;
       }
       function setDigit(box, d) {
-        var roll = box.querySelector(".counter-roll");
+        var roll = box.querySelector(".tally-roll");
         if (roll) roll.style.transform = "translateY(-" + (d * 10) + "%)";
       }
       function ensureDigitCount(n) {
@@ -1461,7 +1461,7 @@ body.pa-has-nav #actusHeader {
         parent.textContent = "";
         parent.appendChild(document.createTextNode("Rejoins les "));
         counterEl = document.createElement("span");
-        counterEl.className = "counter-roll-wrap";
+        counterEl.className = "tally-wrap";
         parent.appendChild(counterEl);
         parent.appendChild(document.createTextNode(" inscrits et reçois les actus chaque jour par mail :"));
         ensureDigitCount(Math.max(MIN_DIGITS, String(count).length));
@@ -1469,7 +1469,7 @@ body.pa-has-nav #actusHeader {
       }
       function applyResult(d, initial) {
         if (!d || typeof d.count !== "number" || d.count <= 0) return false;
-        var el = document.getElementById("hero-nl-text");
+        var el = document.getElementById("hero-join-text");
         if (!el) return false;
         // Construit le shell des qu'un fetch reussit (peu importe si c'est le 1er
         // ou un poll suivant) : evite le cas ou le 1er fetch echoue -> shell jamais
@@ -1495,28 +1495,28 @@ body.pa-has-nav #actusHeader {
       });
     })();
     </script>
-    <form onsubmit="submitHeroNL(event)" id="hero-nl-form">
-      <div class="hero-nl-row" id="hero-nl-row">
-        <input type="email" id="hero-nl-email" placeholder="ton@email.com" required>
-        <button type="submit" id="hero-nl-btn">S'abonner</button>
+    <form onsubmit="submitHeroNL(event)" id="hero-join-form">
+      <div class="hero-join-row" id="hero-join-row">
+        <input type="email" id="hero-join-email" placeholder="ton@email.com" required>
+        <button type="submit" id="hero-join-btn">S'abonner</button>
       </div>
     </form>
-    <div class="nl-freq-step" id="hero-nl-step2" style="display:none;">
-      <p class="nl-freq-label">Quelle fr&eacute;quence&nbsp;?</p>
-      <div class="nl-freq-btns">
-        <button type="button" class="nl-freq-btn" id="hero-freq-daily" onclick="selectHeroFreq('daily')">
-          <span class="nl-freq-icon">📬</span>
-          <span class="nl-freq-name">Quotidien</span>
-          <span class="nl-freq-desc">Lundi&ndash;samedi matin</span>
+    <div class="jn-freq-step" id="hero-join-step2" style="display:none;">
+      <p class="jn-freq-label">Quelle fr&eacute;quence&nbsp;?</p>
+      <div class="jn-freq-btns">
+        <button type="button" class="jn-freq-btn" id="hero-join-daily" onclick="selectHeroFreq('daily')">
+          <span class="jn-freq-icon">📬</span>
+          <span class="jn-freq-name">Quotidien</span>
+          <span class="jn-freq-desc">Lundi&ndash;samedi matin</span>
         </button>
-        <button type="button" class="nl-freq-btn" id="hero-freq-hebdo" onclick="selectHeroFreq('hebdo')">
-          <span class="nl-freq-icon">📅</span>
-          <span class="nl-freq-name">Hebdo</span>
-          <span class="nl-freq-desc">Lundi seulement</span>
+        <button type="button" class="jn-freq-btn" id="hero-join-hebdo" onclick="selectHeroFreq('hebdo')">
+          <span class="jn-freq-icon">📅</span>
+          <span class="jn-freq-name">Hebdo</span>
+          <span class="jn-freq-desc">Lundi seulement</span>
         </button>
       </div>
     </div>
-    <div class="hero-nl-msg" id="hero-nl-msg"></div>
+    <div class="hero-join-msg" id="hero-join-msg"></div>
   </div>
 </section>
 
@@ -1609,37 +1609,37 @@ body.pa-has-nav #actusHeader {
 <div class="toast" id="toast"></div>
 
 <!-- NEWSLETTER POPUP -->
-<div class="nl-overlay" id="nl-overlay">
-  <div class="nl-popup">
-    <button class="nl-close" onclick="closeNewsletter()" aria-label="Fermer">&times;</button>
-    <div class="nl-icon">
+<div class="jn-overlay" id="jn-overlay">
+  <div class="jn-popup">
+    <button class="jn-close" onclick="closeNewsletter()" aria-label="Fermer">&times;</button>
+    <div class="jn-icon">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,7 12,13 2,7"/></svg>
     </div>
     <h3>Ne rate aucune actu !</h3>
     <p>Re&ccedil;ois chaque jour les actus pharma &amp; sant&eacute; directement dans ta bo&icirc;te mail. Gratuit, sans spam.</p>
-    <form class="nl-form" id="nl-form" onsubmit="submitNewsletter(event)">
-      <div class="nl-form-row" id="nl-email-row">
-        <input type="email" id="nl-email" placeholder="ton@email.com" required>
+    <form class="jn-form" id="jn-form" onsubmit="submitNewsletter(event)">
+      <div class="jn-form-row" id="jn-email-row">
+        <input type="email" id="jn-email" placeholder="ton@email.com" required>
       </div>
-      <div class="nl-freq-step" id="nl-freq-step" style="display:none;">
-        <p class="nl-freq-label">Quelle fr&eacute;quence&nbsp;?</p>
-        <div class="nl-freq-btns">
-          <button type="button" class="nl-freq-btn" id="nl-freq-daily" onclick="selectNLFreq('daily')">
-            <span class="nl-freq-icon">📬</span>
-            <span class="nl-freq-name">Quotidien</span>
-            <span class="nl-freq-desc">Lundi&ndash;samedi matin</span>
+      <div class="jn-freq-step" id="jn-freq-step" style="display:none;">
+        <p class="jn-freq-label">Quelle fr&eacute;quence&nbsp;?</p>
+        <div class="jn-freq-btns">
+          <button type="button" class="jn-freq-btn" id="jn-freq-daily" onclick="selectNLFreq('daily')">
+            <span class="jn-freq-icon">📬</span>
+            <span class="jn-freq-name">Quotidien</span>
+            <span class="jn-freq-desc">Lundi&ndash;samedi matin</span>
           </button>
-          <button type="button" class="nl-freq-btn" id="nl-freq-hebdo" onclick="selectNLFreq('hebdo')">
-            <span class="nl-freq-icon">📅</span>
-            <span class="nl-freq-name">Hebdo</span>
-            <span class="nl-freq-desc">Lundi seulement</span>
+          <button type="button" class="jn-freq-btn" id="jn-freq-hebdo" onclick="selectNLFreq('hebdo')">
+            <span class="jn-freq-icon">📅</span>
+            <span class="jn-freq-name">Hebdo</span>
+            <span class="jn-freq-desc">Lundi seulement</span>
           </button>
         </div>
       </div>
-      <button type="submit" id="nl-btn">S'abonner</button>
+      <button type="submit" id="jn-btn">S'abonner</button>
     </form>
-    <div class="nl-msg" id="nl-msg"></div>
-    <p class="nl-privacy">Tes donn&eacute;es restent priv&eacute;es. D&eacute;sabonnement en 1 clic.</p>
+    <div class="jn-msg" id="jn-msg"></div>
+    <p class="jn-privacy">Tes donn&eacute;es restent priv&eacute;es. D&eacute;sabonnement en 1 clic.</p>
   </div>
 </div>
 
@@ -2768,7 +2768,7 @@ const NL_KEY = 'pharmalpha_nl';
 const NL_DISMISS_KEY = 'pharmalpha_nl_dismiss';
 
 if (localStorage.getItem(NL_KEY) === 'subscribed') {
-  document.getElementById('hero-nl').style.display = 'none';
+  document.getElementById('hero-join').style.display = 'none';
 }
 
 // --- POPUP ---
@@ -2780,15 +2780,15 @@ function shouldShowNewsletter() {
 }
 function showNewsletter() {
   if (!shouldShowNewsletter()) return;
-  document.getElementById('nl-overlay').classList.add('show');
+  document.getElementById('jn-overlay').classList.add('show');
   document.body.style.overflow = 'hidden';
 }
 function closeNewsletter() {
-  document.getElementById('nl-overlay').classList.remove('show');
+  document.getElementById('jn-overlay').classList.remove('show');
   document.body.style.overflow = '';
   localStorage.setItem(NL_DISMISS_KEY, Date.now().toString());
 }
-document.getElementById('nl-overlay').addEventListener('click', function(e) {
+document.getElementById('jn-overlay').addEventListener('click', function(e) {
   if (e.target === this) closeNewsletter();
 });
 
@@ -2814,7 +2814,7 @@ async function subscribeWithFreq(email, freq, btnDaily, btnHebdo, msgEl, onSucce
     msgEl.className = msgEl.className.replace(/ ?(success|error)/g, '') + ' success';
     track('generate_lead', { method: 'newsletter_brevo', value: 1, currency: 'EUR' });
     localStorage.setItem(NL_KEY, 'subscribed');
-    document.getElementById('hero-nl').style.display = 'none';
+    document.getElementById('hero-join').style.display = 'none';
     if (onSuccess) onSuccess();
   } catch (err) {
     msgEl.textContent = 'Erreur. Réessaie dans quelques instants.';
@@ -2828,19 +2828,19 @@ async function subscribeWithFreq(email, freq, btnDaily, btnHebdo, msgEl, onSucce
 var _nlEmail = '';
 async function submitNewsletter(e) {
   e.preventDefault();
-  const email = document.getElementById('nl-email').value.trim();
+  const email = document.getElementById('jn-email').value.trim();
   if (!email) return;
   _nlEmail = email;
-  document.getElementById('nl-email-row').style.display = 'none';
-  document.getElementById('nl-btn').style.display = 'none';
-  document.getElementById('nl-freq-step').style.display = 'block';
+  document.getElementById('jn-email-row').style.display = 'none';
+  document.getElementById('jn-btn').style.display = 'none';
+  document.getElementById('jn-freq-step').style.display = 'block';
 }
 function selectNLFreq(freq) {
   subscribeWithFreq(
     _nlEmail, freq,
-    document.getElementById('nl-freq-daily'),
-    document.getElementById('nl-freq-hebdo'),
-    document.getElementById('nl-msg'),
+    document.getElementById('jn-freq-daily'),
+    document.getElementById('jn-freq-hebdo'),
+    document.getElementById('jn-msg'),
     () => setTimeout(closeNewsletter, 3000)
   );
 }
@@ -2849,18 +2849,18 @@ function selectNLFreq(freq) {
 var _heroEmail = '';
 async function submitHeroNL(e) {
   e.preventDefault();
-  const email = document.getElementById('hero-nl-email').value.trim();
+  const email = document.getElementById('hero-join-email').value.trim();
   if (!email) return;
   _heroEmail = email;
-  document.getElementById('hero-nl-form').style.display = 'none';
-  document.getElementById('hero-nl-step2').style.display = 'block';
+  document.getElementById('hero-join-form').style.display = 'none';
+  document.getElementById('hero-join-step2').style.display = 'block';
 }
 function selectHeroFreq(freq) {
   subscribeWithFreq(
     _heroEmail, freq,
-    document.getElementById('hero-freq-daily'),
-    document.getElementById('hero-freq-hebdo'),
-    document.getElementById('hero-nl-msg'),
+    document.getElementById('hero-join-daily'),
+    document.getElementById('hero-join-hebdo'),
+    document.getElementById('hero-join-msg'),
     null
   );
 }
