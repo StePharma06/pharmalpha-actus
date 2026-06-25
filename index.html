@@ -2767,9 +2767,11 @@ const EDGE_SUBSCRIBE = 'https://ibmqaybmhpzdlgyntzbs.supabase.co/functions/v1/ac
 const NL_KEY = 'pharmalpha_nl';
 const NL_DISMISS_KEY = 'pharmalpha_nl_dismiss';
 
-if (localStorage.getItem(NL_KEY) === 'subscribed') {
-  document.getElementById('hero-join').style.display = 'none';
-}
+// La barre d'abonnement inline (compteur + formulaire) reste TOUJOURS visible,
+// y compris pour les abonnes : le compteur "Rejoins les X inscrits" est une preuve
+// sociale utile a tous. Seul le POPUP est supprime pour les abonnes (shouldShowNewsletter).
+// (Avant : on cachait tout le bloc #hero-join si abonne -> compteur invisible pour
+//  les abonnes / le proprietaire du site -> bug remonte par Stephen 2026-06-26.)
 
 // --- POPUP ---
 function shouldShowNewsletter() {
