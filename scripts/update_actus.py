@@ -96,10 +96,21 @@ def _strip_article_meta(text: str) -> str:
     return text.rstrip().rstrip('-').rstrip()
 
 
+def _headers_to_bold(text: str) -> str:
+    """Convertit les titres markdown (## Titre, ### Titre) en libelles gras
+    (**Titre**). Directive Stephen 2026-06-26 : le '##' "n'est pas humain", on le
+    retire PARTOUT comme les em dashes, sans perdre la structure de section
+    (le gras est rendu proprement par la modale et les pages article)."""
+    if not isinstance(text, str):
+        return text
+    return re.sub(r'(?m)^[ \t]*#{1,6}[ \t]+(.+?)[ \t]*$', r'**\1**', text)
+
+
 def sanitize_article(a: dict) -> dict:
     """Auto-correction d'un article AVANT publication et AVANT envoi email.
     Idempotent, jamais bloquant : on corrige, on ne sollicite jamais Stephen.
-    - retire les vraies fuites de meta-commentaire (sans toucher aux ## markdown)
+    - retire les vraies fuites de meta-commentaire de relecture
+    - convertit les titres markdown ## en libelles gras (pas de ## "non humain")
     - remplace les tirets cadratins (em dash) sans casser les sauts de ligne
     - repare une date absente/invalide (deduite de l'id, sinon aujourd'hui)
     """
@@ -107,7 +118,7 @@ def sanitize_article(a: dict) -> dict:
         return a
     for f in ("titre", "resume", "full_text", "badge_label"):
         if isinstance(a.get(f), str):
-            a[f] = _no_emdash(_strip_article_meta(a[f]))
+            a[f] = _no_emdash(_headers_to_bold(_strip_article_meta(a[f])))
     d = a.get("date", "")
     try:
         datetime.strptime(d, "%Y-%m-%d")
@@ -1015,10 +1026,10 @@ Le confidence_score (0-1) reflete ton niveau de certitude sur la qualite des chi
 
     full_text = (
         f"{biz.get('chapo', '')}\n\n"
-        f"## Contexte\n\n{biz.get('contexte', '')}\n\n"
-        f"## Analyse business\n\n{biz.get('analyse', '')}\n\n"
-        f"## Recommandations actionnables\n\n{biz.get('recommandations', '')}\n\n"
-        f"## Sources citees\n\n{sources_md}"
+        f"**Contexte**\n\n{biz.get('contexte', '')}\n\n"
+        f"**Analyse business**\n\n{biz.get('analyse', '')}\n\n"
+        f"**Recommandations actionnables**\n\n{biz.get('recommandations', '')}\n\n"
+        f"**Sources citees**\n\n{sources_md}"
     )
 
     chapo = biz.get("chapo", "")
