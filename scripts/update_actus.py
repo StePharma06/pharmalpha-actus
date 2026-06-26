@@ -26,13 +26,16 @@ SENDER_NAME = "Pharm'Actus"
 REPLY_TO_EMAIL = "stephen.pharmacien@gmail.com"
 
 
-_EMDASH_RE = re.compile(r'\s*[—–]\s*')
-
 def _no_emdash(s: str) -> str:
-    """Remplace tout tiret cadratin/demi-cadratin par ' - ' dans le texte généré."""
+    """Remplace tout tiret cadratin/demi-cadratin par '-' SANS manger les sauts de
+    ligne (sinon les puces '— ...' de l'article Business se collent sur une ligne)."""
     if not isinstance(s, str):
         return s
-    return _EMDASH_RE.sub(' - ', s).strip()
+    # Puce en debut de ligne : "\n— X" -> "\n- X" (on garde le saut de ligne)
+    s = re.sub(r'(^|\n)[ \t]*[—–][ \t]*', r'\1- ', s)
+    # Em dash en ligne : "a — b" -> "a - b"
+    s = re.sub(r'[ \t]*[—–][ \t]*', ' - ', s)
+    return s.strip()
 
 def _clean_article(a: dict) -> dict:
     """Sanitise les champs texte d'un article : supprime em/en dashes."""
@@ -66,6 +69,53 @@ def _strip_generated_meta(text: str) -> str:
     if m:
         text = text[:m.start()]
     return text.strip().strip('"').strip("'").strip('«»').strip()
+
+
+# Pour le texte d'ARTICLE (full_text) : les titres markdown ## et les listes sont
+# LEGITIMES (l'article Business utilise "## Contexte", "## Analyse"...). On ne coupe
+# donc QUE les vraies fuites de relecture, JAMAIS les ##. Incident 2026-06-26 : le
+# guardrail confondait "## Contexte" avec du meta et bloquait une newsletter saine.
+_ARTICLE_META_RE = re.compile(
+    r'(\n\s*-{3,}\s'                                   # ligne de separation ---
+    r'|`{3}'                                          # triple backticks (bloc code)
+    r'|→\s*`'                                         # relecture "→ `mot`"
+    r'|\*{0,2}\s*V[ée]rif(?:ication)?\s+orthograph'   # bloc "Verification orthographe"
+    r'|\(\s*relecture)',
+    re.IGNORECASE,
+)
+
+
+def _strip_article_meta(text: str) -> str:
+    """Comme _strip_generated_meta mais CONSERVE les titres markdown ## (legitimes
+    dans full_text). Ne coupe que les vraies fuites de relecture."""
+    if not isinstance(text, str):
+        return text
+    m = _ARTICLE_META_RE.search(text)
+    if m:
+        text = text[:m.start()]
+    return text.rstrip().rstrip('-').rstrip()
+
+
+def sanitize_article(a: dict) -> dict:
+    """Auto-correction d'un article AVANT publication et AVANT envoi email.
+    Idempotent, jamais bloquant : on corrige, on ne sollicite jamais Stephen.
+    - retire les vraies fuites de meta-commentaire (sans toucher aux ## markdown)
+    - remplace les tirets cadratins (em dash) sans casser les sauts de ligne
+    - repare une date absente/invalide (deduite de l'id, sinon aujourd'hui)
+    """
+    if not isinstance(a, dict):
+        return a
+    for f in ("titre", "resume", "full_text", "badge_label"):
+        if isinstance(a.get(f), str):
+            a[f] = _no_emdash(_strip_article_meta(a[f]))
+    d = a.get("date", "")
+    try:
+        datetime.strptime(d, "%Y-%m-%d")
+    except (ValueError, TypeError):
+        m = re.search(r"(20\d{2})_(\d{2})_(\d{2})", str(a.get("id", "")))
+        a["date"] = (f"{m.group(1)}-{m.group(2)}-{m.group(3)}" if m
+                     else datetime.now(PARIS_TZ).strftime("%Y-%m-%d"))
+    return a
 
 
 def md_to_html(text: str) -> str:
@@ -978,6 +1028,7 @@ Le confidence_score (0-1) reflete ton niveau de certitude sur la qualite des chi
         "titre": _no_emdash(biz.get("titre", "Business Officine")),
         "resume": _no_emdash(resume),
         "full_text": full_text,
+        "date": datetime.now(PARIS_TZ).strftime("%Y-%m-%d"),
         "categorie": "business_officine",
         "badge_label": "Business",
         "source": "Pharm'Actus" + (" · " + ", ".join(s.get("nom", "") for s in sources_list[:2] if s.get("nom")) if sources_list else ""),
@@ -1279,6 +1330,10 @@ def update_index_html(new_articles):
     a given day therefore always REPLACES the day's content instead of
     accumulating duplicate entries.
     """
+    # AUTO-FIX a la source : tout article est nettoye AVANT d'etre ecrit sur le
+    # site (meta-commentaire, em dash, date) -> le site publie est toujours propre.
+    new_articles = [sanitize_article(a) for a in new_articles]
+
     html = INDEX_HTML.read_text(encoding="utf-8")
 
     match = re.search(r"const ARTICLES = \[([\s\S]*?)\];", html)
@@ -2172,67 +2227,24 @@ def build_newsletter_html(articles, custom_intro=None):
 </body></html>'''
 
 
-# ── PREFLIGHT : controle qualite AVANT envoi aux abonnes ─────────────
-# Incident-driven (grippe-juin, dépistage IST, fuite méta orthographe 2026-06).
-# Barriere unique entre la generation et l'envoi : mieux vaut PAS d'email
-# qu'un email casse parti a ~1000 abonnes.
+# ── AUTO-FIX AVANT ENVOI ─────────────────────────────────────────────
+# Principe (revu 2026-06-26 apres le faux blocage de l'article Business) :
+# on NE BLOQUE JAMAIS et on ne sollicite JAMAIS Stephen. Le pipeline corrige
+# lui-meme le contenu (sanitize_article : meta, em dash, date) puis n'ecarte un
+# article QUE s'il est vraiment inexploitable (titre OU resume vide). L'email
+# part toujours avec les articles exploitables restants.
 
-_PREFLIGHT_META_RE = re.compile(
-    r'(\n\s*-{3,}'                      # ligne de separateur ---
-    r'|`{3}'                           # triple backticks (bloc code)
-    r'|→\s*`'                          # motif relecture "→ `mot`"
-    r'|V[ée]rification\s+orthograph'   # bloc "Verification orthographe"
-    r'|\brelecture\b'
-    r'|\n\s*#{1,6}\s)',                # titre markdown ## ...
-    re.IGNORECASE,
-)
-
-
-def preflight_check_email(articles, custom_intro):
-    """Controle qualite avant envoi. Retourne (blockers, warnings).
-    blockers => NE PAS envoyer (contenu casse). warnings => envoyer mais alerter."""
-    blockers, warnings = [], []
-    today = datetime.now(PARIS_TZ).date()
-
-    def _meta(label, text):
-        if isinstance(text, str) and _PREFLIGHT_META_RE.search(text):
-            blockers.append(f"{label} : meta-commentaire/markdown detecte (---, backticks, 'verification orthographe'...)")
-
-    def _emdash(label, text):
-        if isinstance(text, str) and ("—" in text or "–" in text):
-            warnings.append(f"{label} : tiret cadratin/demi-cadratin (em dash) present")
-
-    if custom_intro:
-        _meta("Intro email", custom_intro)
-        _emdash("Intro email", custom_intro)
-        if len(custom_intro) > 600:
-            blockers.append(f"Intro email : longueur anormale ({len(custom_intro)} car > 600)")
-
-    for a in articles:
-        aid = a.get("id") or (a.get("titre", "")[:30]) or "?"
-        titre = a.get("titre", "") or ""
-        resume = a.get("resume", "") or ""
-        full_text = a.get("full_text", "") or ""
-        if not titre.strip():
-            blockers.append(f"[{aid}] titre vide")
-        if not resume.strip():
-            blockers.append(f"[{aid}] resume vide")
-        for lbl, txt in ((f"[{aid}] titre", titre), (f"[{aid}] resume", resume), (f"[{aid}] full_text", full_text)):
-            _meta(lbl, txt)
-            _emdash(lbl, txt)
-        if len(titre) > 120:
-            warnings.append(f"[{aid}] titre long ({len(titre)} car > 120)")
-        d = a.get("date", "")
-        try:
-            age = (today - datetime.strptime(d, "%Y-%m-%d").date()).days
-            if age > MAX_AGE_DAYS + 1:
-                blockers.append(f"[{aid}] date {d} trop ancienne ({age} j) pour un envoi du jour")
-            elif age < 0:
-                blockers.append(f"[{aid}] date {d} dans le futur")
-        except (ValueError, TypeError):
-            blockers.append(f"[{aid}] date invalide ou absente : '{d}'")
-
-    return blockers, warnings
+def autofix_email_articles(articles):
+    """Nettoie chaque article (idempotent) et ecarte les articles inexploitables.
+    Retourne (articles_propres, ids_retires)."""
+    cleaned = [sanitize_article(a) for a in articles]
+    kept, dropped = [], []
+    for a in cleaned:
+        if (a.get("titre", "") or "").strip() and (a.get("resume", "") or "").strip():
+            kept.append(a)
+        else:
+            dropped.append(a.get("id") or (a.get("titre", "")[:30]) or "?")
+    return kept, dropped
 
 
 def _send_alert_email(api_key, subject, body_text):
@@ -2297,11 +2309,7 @@ def send_newsletter(articles):
     emails = [c["email"] for c in all_contacts if c.get("email")]
     print(f"  {len(emails)} abonne(s) dans la liste")
 
-    # Generate personalized intro via Claude
-    custom_intro = generate_email_intro(articles)
-
-    # Build email
-    html_content = build_newsletter_html(articles, custom_intro=custom_intro)
+    # Date / sujet
     today = datetime.now(PARIS_TZ)
     jours = ["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"]
     mois_noms = ["","janvier","f\u00e9vrier","mars","avril","mai","juin",
@@ -2309,33 +2317,21 @@ def send_newsletter(articles):
     date_str = f"{jours[today.weekday()]} {today.day} {mois_noms[today.month]} {today.year}"
     subject = f"Pharm'Actus du {date_str}"
 
-    # PREFLIGHT : on controle le contenu AVANT d'envoyer aux abonnes.
-    blockers, warnings = preflight_check_email(articles, custom_intro)
-    if blockers:
-        print(f"  [PREFLIGHT] ENVOI BLOQUE - {len(blockers)} probleme(s) bloquant(s) :")
-        for p in blockers + warnings:
-            print(f"    - {p}")
-        body = (
-            f"L'envoi de la newsletter Pharm'Actus du {date_str} a ete BLOQUE par le controle qualite.\n\n"
-            f"PROBLEMES BLOQUANTS ({len(blockers)}) :\n"
-            + "\n".join(f"  - {p}" for p in blockers)
-            + (f"\n\nAVERTISSEMENTS ({len(warnings)}) :\n" + "\n".join(f"  - {p}" for p in warnings) if warnings else "")
-            + "\n\nL'email N'A PAS ete envoye aux abonnes. Corrige le contenu (index.html / pipeline) "
-              "puis relance le workflow, ou envoie manuellement apres verification."
-        )
-        _send_alert_email(api_key, f"[BLOQUE] Pharm'Actus {date_str} - {len(blockers)} probleme(s) qualite", body)
-        return  # on N'ENVOIE PAS aux abonnes
-    if warnings:
-        print(f"  [PREFLIGHT] {len(warnings)} avertissement(s) (envoi maintenu) :")
-        for p in warnings:
-            print(f"    - {p}")
-        body = (
-            f"La newsletter Pharm'Actus du {date_str} a ete envoyee, mais le controle qualite a releve "
-            f"{len(warnings)} avertissement(s) non bloquant(s) :\n\n"
-            + "\n".join(f"  - {p}" for p in warnings)
-            + "\n\n(L'email est bien parti aux abonnes. A surveiller pour les prochains envois.)"
-        )
-        _send_alert_email(api_key, f"[AVERTISSEMENT] Pharm'Actus {date_str} - {len(warnings)} point(s)", body)
+    # AUTO-FIX (jamais bloquant) : on corrige le contenu nous-memes et on ecarte
+    # uniquement les articles vraiment inexploitables. L'email part toujours.
+    articles, dropped = autofix_email_articles(articles)
+    if dropped:
+        print(f"  [AUTOFIX] {len(dropped)} article(s) ecarte(s) (titre/resume vide): {dropped}")
+    if not articles:
+        print("  [AUTOFIX] Aucun article exploitable - envoi annule")
+        _send_alert_email(api_key, f"[ALERTE] Pharm'Actus {date_str} - aucun article exploitable",
+            f"Le run du {date_str} n'a produit aucun article exploitable (titre/resume vides "
+            f"apres nettoyage). Email non envoye. A investiguer cote generation.")
+        return
+
+    # Intro (auto-nettoyee dans generate_email_intro) + construction de l'email
+    custom_intro = generate_email_intro(articles)
+    html_content = build_newsletter_html(articles, custom_intro=custom_intro)
 
     # Send individually to each contact (privacy: no one sees others' emails)
     send_url = "https://api.brevo.com/v3/smtp/email"
@@ -2372,6 +2368,14 @@ def send_newsletter(articles):
     if sent > 0:
         mark_newsletter_sent()
         print("  [SENT-MARK] Newsletter marquee comme envoyee aujourd'hui")
+        # Info NON bloquante : l'email est parti ; on signale juste si un article
+        # a du etre ecarte automatiquement (pour info, aucune action requise).
+        if dropped:
+            _send_alert_email(api_key, f"[INFO] Pharm'Actus {date_str} - {len(dropped)} article(s) auto-ecarte(s)",
+                f"La newsletter du {date_str} est bien partie a {sent} abonne(s).\n\n"
+                f"{len(dropped)} article(s) ont ete ecartes automatiquement car inexploitables "
+                f"(titre/resume vide) : {', '.join(dropped)}\n\n"
+                f"Aucune action requise de ta part. Pour info uniquement.")
 
 
 # ── MAIN ──────────────────────────────────────────────────────────────
