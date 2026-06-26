@@ -53,6 +53,16 @@ MONTHS_FR = ["", "Janvier", "Février", "Mars", "Avril", "Mai", "Juin",
              "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"]
 
 
+def _strip_emdash(s):
+    """Aucun tiret cadratin/demi-cadratin dans le contenu LinkedIn (regle Stephen :
+    'on ne peut pas s'en separer ?'). Preserve les sauts de ligne."""
+    if not isinstance(s, str):
+        return s
+    s = re.sub(r'(^|\n)[ \t]*[—–][ \t]*', r'\1- ', s)   # puce en debut de ligne
+    s = re.sub(r'[ \t]*[—–][ \t]*', ' - ', s)            # em dash en ligne
+    return s
+
+
 def format_date_range_fr(start, end):
     """Formate une plage de dates en français: 'X au Y Mois YYYY' ou 'X Mois au Y Mois YYYY'."""
     if start.month == end.month:
@@ -449,7 +459,8 @@ Retourne UNIQUEMENT le markdown complet, rien d'autre."""
         print("  [WARN] stop_reason=max_tokens : la newsletter est TRONQUEE, augmente max_tokens !")
 
     text_blocks = [b.text for b in response.content if getattr(b, "type", None) == "text"]
-    return ("\n".join(text_blocks)).strip() if text_blocks else response.content[0].text.strip()
+    raw = ("\n".join(text_blocks)).strip() if text_blocks else response.content[0].text.strip()
+    return _strip_emdash(raw)
 
 
 def generate_companion_post(actus):
@@ -472,52 +483,40 @@ def generate_companion_post(actus):
         for i, a in enumerate(top3)
     )
 
+    n_autres = max(0, len(actus) - 3)
     prompt = f"""Tu es Stephen ROBERT, pharmacien consultant + influenceur LinkedIn (24K abonnes, ~6200 abonnes newsletter Pharm'Actus).
 
-Tu rediges un POST LinkedIn court (PAS la newsletter, le post FEED qui l'annonce).
+Tu rediges le POST LinkedIn FEED court qui ANNONCE la newsletter Pharm'Actus (PAS la newsletter elle-meme). Il est publie juste apres la newsletter pour driver trafic + abonnements.
 
-=== OBJECTIF ===
-Ce post est publie sur ton feed normal LinkedIn 30-60 min APRES la newsletter, pour driver du trafic vers elle.
-La newsletter apparait juste au-dessus du post (en epinglage de profil pour les abonnes).
+=== STYLE STEPHEN (post feed) ===
+- Tutoiement, direct, percutant.
+- AUCUN tiret cadratin (—) ni demi-cadratin. AUCUN hashtag dans le corps (ils iront en 1er commentaire).
+- Chiffres EXACTS issus des actus fournies, jamais inventes (respecte la regle finances officine : remises sur ACHATS pas sur CA, pas d'extrapolation).
+- Pas d'Unicode bold ici : texte normal, ce sont les emojis chiffres 1️⃣2️⃣3️⃣ qui structurent.
 
-=== STYLE STEPHEN (LinkedIn feed) ===
-- Hook puissant en 1-2 lignes, en Unicode bold (𝗔𝗕𝗖 𝗮𝗯𝗰)
-- Tutoiement
-- 3 teasers d'actus importants (1-2 phrases chacun)
-- Mots cles en Unicode bold pour rythmer
-- Renvoi vers la newsletter avec "↑" (signifie : la newsletter est au-dessus)
-- 1-2 hashtags max
-- 800-1200 caracteres total
+=== STRUCTURE EXACTE A REPRODUIRE (garde les sauts de ligne A L'IDENTIQUE) ===
+[Hook d'ouverture, 1 ligne courte et punchy, VARIE chaque semaine selon l'actu - ex de ton : "Cette semaine, l'actu ne fait pas dans la dentelle."]
+Voilà ce que tu ne peux pas rater :
 
-=== STRUCTURE ===
+1️⃣ [Actu 1 : le fait + UN chiffre precis. Une 2e phrase d'impact. Un angle officine/business concret.]
 
-```
-[Hook punchy 1-2 lignes en Unicode bold]
+2️⃣ [Actu 2 : meme format, 2 a 3 phrases.]
 
-[Phrase d'introduction "Cette semaine..." ou similaire]
+3️⃣ [Actu 3 : meme format, 2 a 3 phrases.]
 
-[Teaser actu 1 : 1-2 phrases avec un chiffre ou angle fort, mots cles en bold]
+… et {n_autres} autres actus + l'anecdote de la semaine.
 
-[Teaser actu 2 : idem]
+Tout est dans la newsletter Pharm'Actus que je viens de publier juste en-dessous 👇🏻
+Pas encore abonné ?
+C'est gratuit, c'est chaque semaine, et ça prend 5 min chrono.
 
-[Teaser actu 3 : idem]
-
-[Phrase de transition type "et 3 autres actus + le LSV qui fera scroller"]
-
-📬 Tout est dans la newsletter Pharm'Actus que je viens de publier juste au-dessus ↑
-
-[CTA d'abonnement a la newsletter]
-
-#pharmacie #officine #pharmaactu
-```
-
-=== ARTICLES TOP 3 DE LA SEMAINE ===
+=== ARTICLES TOP 3 DE LA SEMAINE (a teaser dans cet ordre) ===
 {top3_text}
 
 === REGLE LEGALE L.5122 ===
-Pas de merch/promo sur Rx (GLP-1 etc).
+Pas de merch/promo sur Rx (GLP-1, antibiotiques, etc.) : angles macro / reglementaire / formation uniquement.
 
-Genere le post complet, pret a copier sur LinkedIn. Retourne UNIQUEMENT le texte du post, rien d'autre."""
+Genere le post complet, pret a coller sur LinkedIn, en respectant EXACTEMENT la structure et les sauts de ligne ci-dessus. Les 3 dernieres lignes (Tout est dans la newsletter... / Pas encore abonné ? / C'est gratuit...) doivent etre reproduites MOT POUR MOT. Retourne UNIQUEMENT le texte du post, rien d'autre."""
 
     response = claude_create(
         client,
@@ -526,7 +525,7 @@ Genere le post complet, pret a copier sur LinkedIn. Retourne UNIQUEMENT le texte
         messages=[{"role": "user", "content": prompt}],
     )
 
-    return response.content[0].text.strip()
+    return _strip_emdash(response.content[0].text.strip())
 
 
 def fetch_image_as_base64(url):
