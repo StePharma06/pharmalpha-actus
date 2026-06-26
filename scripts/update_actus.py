@@ -365,7 +365,12 @@ def get_expression_du_jour():
     if idx < 0:
         idx = 0
 
-    return expressions[idx]
+    expr = expressions[idx]
+    # Nettoyage a la source : pas d'em dash ni de ## dans l'expression (email + site).
+    if isinstance(expr, dict):
+        expr = {k: (_no_emdash(_headers_to_bold(v)) if isinstance(v, str) else v)
+                for k, v in expr.items()}
+    return expr
 
 
 FALLBACK_MODEL = "claude-haiku-4-5-20251001"
@@ -2051,7 +2056,7 @@ FORMAT DE REPONSE (IMPERATIF) : reponds UNIQUEMENT avec le texte de l'intro (2-3
         # Filet de securite : couper tout meta-commentaire (bloc "verification
         # orthographe", notes, separateurs ---) que le modele ajoute parfois,
         # puis enlever guillemets parasites. Incident 2026-06-25.
-        intro = _strip_generated_meta(intro)
+        intro = _no_emdash(_strip_generated_meta(intro))
         # Garde-fou longueur : une intro normale fait < ~450 caracteres (entites
         # HTML comprises). Au-dela, du meta a probablement fuite -> fallback.
         if not intro or len(intro) > 600:
@@ -2174,7 +2179,7 @@ def build_newsletter_html(articles, custom_intro=None):
     # Tendances email block (top 5, compact)
     trends_email_block = _build_trends_email_block(load_trends_data())
 
-    return f'''<!DOCTYPE html>
+    _html = f'''<!DOCTYPE html>
 <html lang="fr">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
 <body style="margin:0;padding:0;background:#f4f4f5;font-family:'Segoe UI',system-ui,-apple-system,sans-serif;">
@@ -2194,9 +2199,18 @@ def build_newsletter_html(articles, custom_intro=None):
     <p style="margin:0;font-size:15px;color:#333;line-height:1.6;">
       {custom_intro if custom_intro else "Hey, je sais que tu es press&eacute;, tu as tellement de choses &agrave; faire ! C'est pourquoi je t'ai s&eacute;lectionn&eacute; les 5 actus du jour &agrave; ne pas manquer &mdash; dont une bonne nouvelle et un regard sur l'avenir de la pharma. Et m&ecirc;me une histoire pharma pour ta pause caf&eacute;. Bonne lecture !"}
     </p>
-    <p style="margin:12px 0 0;font-size:13px;color:#999;line-height:1.5;font-style:italic;">
+    <p style="margin:12px 0 0;font-size:13px;color:#ea580c;line-height:1.5;font-style:italic;font-weight:600;">
       Astuce : r&eacute;ponds juste &laquo; bien re&ccedil;u &raquo; &agrave; cet email. &Ccedil;a indique &agrave; ta messagerie qu'on se conna&icirc;t, et mes actus atterriront toujours dans ta bo&icirc;te principale.
     </p>
+  </td></tr>
+  <tr><td style="padding:4px 32px 16px;">
+    <div style="background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:12px 18px;text-align:center;">
+      <p style="margin:0;font-size:13px;color:#92400e;line-height:1.6;">
+        Tu re&ccedil;ois cet email <strong>chaque matin</strong> (lundi&ndash;samedi).
+        Tu pr&eacute;f&egrave;res un r&eacute;sum&eacute; hebdo le lundi&nbsp;?
+        &rarr;&nbsp;<a href="https://actus.pharmalpha.fr/preferences?email={{{{ contact.EMAIL }}}}&amp;freq=daily" style="color:#f97316;font-weight:700;text-decoration:none;">Ajuster ma fr&eacute;quence</a>
+      </p>
+    </div>
   </td></tr>
   <tr><td style="padding:0 32px;"><div style="border-top:1px solid #e5e5e5;"></div></td></tr>
   {expression_email_block}
@@ -2225,15 +2239,6 @@ def build_newsletter_html(articles, custom_intro=None):
       </table>
     </div>
   </td></tr>
-  <tr><td style="padding:0 32px 16px;">
-    <div style="background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:12px 18px;text-align:center;">
-      <p style="margin:0;font-size:13px;color:#92400e;line-height:1.6;">
-        Tu re&ccedil;ois cet email <strong>chaque matin</strong> (lundi&ndash;samedi).
-        Tu pr&eacute;f&egrave;res un r&eacute;sum&eacute; hebdo le lundi&nbsp;?
-        &rarr;&nbsp;<a href="https://actus.pharmalpha.fr/preferences?email={{{{ contact.EMAIL }}}}&amp;freq=daily" style="color:#f97316;font-weight:700;text-decoration:none;">Ajuster ma fr&eacute;quence</a>
-      </p>
-    </div>
-  </td></tr>
   <tr><td style="padding:0 32px 28px;">
     <div style="border-top:1px solid #f0f0f0;padding-top:16px;text-align:center;">
       <p style="margin:0 0 8px;font-size:13px;font-weight:700;color:#f97316;">Pharm'Alpha</p>
@@ -2250,6 +2255,13 @@ def build_newsletter_html(articles, custom_intro=None):
 </table>
 </td></tr></table>
 </body></html>'''
+
+    # Filet final BULLETPROOF : aucun em/en dash dans l'email, quelle que soit la
+    # source (intro, expression, articles, texte statique, entites HTML).
+    _html = (_html.replace("&mdash;", "-").replace("&#8212;", "-")
+                  .replace("&ndash;", "-").replace("&#8211;", "-"))
+    _html = re.sub(r"[ \t]*[—–][ \t]*", " - ", _html)
+    return _html
 
 
 # ── AUTO-FIX AVANT ENVOI ─────────────────────────────────────────────
