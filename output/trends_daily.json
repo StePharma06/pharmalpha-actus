@@ -1,64 +1,64 @@
 {
-  "generated_at": "2026-06-26",
-  "window_label": "20 juin au 26 juin 2026",
+  "generated_at": "2026-06-27",
+  "window_label": "21 juin au 27 juin 2026",
   "has_history": true,
   "delta_source": "pytrends_rising",
   "pathologies": [
     {
-      "display": "Fatigue canicule",
-      "delta_label": "↑ 93 500",
+      "display": "Canicule et fatigue",
+      "delta_label": "↑ 32 450",
       "trend": "up"
     },
     {
-      "display": "Allergie chenille processionnaire",
-      "delta_label": "↑ 32 850",
+      "display": "Pourquoi la chaleur fatigue",
+      "delta_label": "↑ 16 950",
       "trend": "up"
     },
     {
-      "display": "Fatigue et canicule",
-      "delta_label": "↑ 30 300",
+      "display": "Urticacées allergie",
+      "delta_label": "↑ 14 400",
       "trend": "up"
     },
     {
-      "display": "Crp élevée et fatigue",
-      "delta_label": "↑ 21 650",
+      "display": "Essoufflement au moindre effort fatigue",
+      "delta_label": "↑ 14 400",
       "trend": "up"
     },
     {
-      "display": "Allergie mois de juin",
-      "delta_label": "↑ 17 850",
+      "display": "Vitamine a 7 lettres",
+      "delta_label": "↑ 12 850",
       "trend": "up"
     }
   ],
   "soins": [
     {
-      "display": "Quel liquide biologique jaune-verdâtre f",
-      "delta_label": "↑ 68 850",
-      "trend": "up"
-    },
-    {
-      "display": "Combien de temps dure la digestion",
-      "delta_label": "↑ 58 500",
-      "trend": "up"
-    },
-    {
       "display": "Digestion difficile que faire",
-      "delta_label": "↑ 47 600",
+      "delta_label": "↑ 43 300",
       "trend": "up"
     },
     {
-      "display": "Bicarbonate alimentaire digestion",
-      "delta_label": "↑ 41 400",
+      "display": "Cerise digestion",
+      "delta_label": "↑ 37 200",
       "trend": "up"
     },
     {
-      "display": "Digestion difficile remède rapide",
-      "delta_label": "↑ 37 550",
+      "display": "Quel liquide biologique jaune-verdâtre f",
+      "delta_label": "↑ 36 800",
+      "trend": "up"
+    },
+    {
+      "display": "Poivron digestion",
+      "delta_label": "↑ 30 150",
+      "trend": "up"
+    },
+    {
+      "display": "Courgette crue digestion",
+      "delta_label": "↑ 28 500",
       "trend": "up"
     }
   ],
   "pathologies_stale": false,
-  "pathologies_from": "2026-06-26",
+  "pathologies_from": "2026-06-27",
   "soins_stale": false,
-  "soins_from": "2026-06-26"
+  "soins_from": "2026-06-27"
 }

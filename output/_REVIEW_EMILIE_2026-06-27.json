@@ -1,0 +1,49 @@
+{
+  "generated_at": "2026-06-27T04:09:09.162661+02:00",
+  "run_date": "2026-06-27",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Fraude AM : le déconventionnement entre dans la loi",
+      "resume": "C'est officiel depuis hier au JO : un pharmacien pris en flagrant délit de fraude à l'Assurance Maladie risque désormais son conventionnement. La loi anti-fraude sociale et fiscale franchit un cap. Et le décloisonnement des données entre administrations fait déjà grincer des dents.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/en-cas-de-fraude-les-pharmaciens-encourent-desormais-un-deconventionnement",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "Les infirmières prescripteurs : ce que ca change vraiment à ton comptoir",
+      "resume": "Un arrêté du 26 juin 2026 fixe officiellement la liste des produits de santé et examens que les infirmiers diplômés d'État peuvent prescrire ou renouveler. Vaccins, dispositifs médicaux, examens biologiques... Le périmètre est large. Prépare ton équipe à recevoir ces ordonnances.",
+      "source": "LegiRSS Pharmacie",
+      "source_url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054321926",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Négociations convention : ce que la réouverture du 22 juin va (vraiment) changer pour tes revenus",
+      "resume": "Après des mois de statu quo, les syndicats ont enfin posé leurs dossiers sur la table le 22 juin. Modèle économique, honoraires, ROSP : l'enjeu chiffré dépasse les 500 M€ de revalorisation réclamés par la profession. Le compte à rebours est lancé.",
+      "source": "Pharm'Actus · Le Pharmacien de France — Les négociations enfin sur les rails, Le Pharmacien de France — Le point sur le versement des ROSP",
+      "source_url": "https://lepharmaciendefrance.fr/les-negociations-enfin-sur-les-rails/",
+      "confidence_score": 0.65,
+      "warnings": [
+        "Le chiffre '500 M€ de revalorisation réclamés' est une estimation de positionnement professionnel non confirmée par un document officiel publié — à vérifier si la FSPF ou l'USPO a chiffré publiquement leur revendication globale.",
+        "Les fourchettes ROSP (8 000-12 000 € par officine) sont des estimations issues de données CNAM non publiées en open data — à recouper avec le dernier rapport annuel de l'Assurance Maladie.",
+        "L'enveloppe nationale ROSP >150 M€ est une extrapolation (21 000 officines × moyenne estimée) — figure indicative, pas un chiffre officiel CNAM publié.",
+        "Les honoraires de dispensation cités (0,51 € et 2,81 €) correspondent aux tarifs conventionnels en vigueur début 2026 — à vérifier si un avenant récent les a modifiés.",
+        "Le marché protections périodiques réutilisables à 150-200 M€ est attribué à Xerfi 2024 — à confirmer via le rapport Xerfi exact.",
+        "La revalorisation convention médicale 2024 à +3,5 % en moyenne est une approximation générale — le détail par acte est plus complexe.",
+        "L'USPO n'a pas publié de réaction visible sur le 22 juin à la date de rédaction — à vérifier directement sur uspo.fr avant publication.",
+        "Les chiffres EBE officine (80 000-100 000 €) sont des ordres de grandeur issus d'études sectorielles (CERP, cabinets conseil) — non officiels."
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}
