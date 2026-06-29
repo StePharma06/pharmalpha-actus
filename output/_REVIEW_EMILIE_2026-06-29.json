@@ -1,0 +1,59 @@
+{
+  "generated_at": "2026-06-29T04:13:43.651195+02:00",
+  "run_date": "2026-06-29",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_monde",
+      "titre": "Un concurrent à Tepezza débarque : la FDA approuve Lumvoa dans l'orbitopathie thyroïdienne",
+      "resume": "Viridian Therapeutics vient de décrocher le feu vert de la FDA pour Lumvoa (veligrotug) dans l'orbitopathie dysthyroïdienne, maladie rare et invalidante. Première concurrence directe à Tepezza d'Amgen, qui régnait en monopole depuis 2020. Ce duel commercial annonce des enjeux d'accès et de prix qui finiront par atterrir en Europe.",
+      "source": "MedCity News",
+      "source_url": "https://medcitynews.com/2026/06/viridian-thyroid-eye-disease-veligrotug-lumvoa-fda-approval-inflammation-vrdn/",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "Canicule, 1 000 morts en trois jours : le comptoir comme premier rempart, encore et toujours",
+      "resume": "Santé publique France publie un premier bilan provisoire : au moins 1 000 décès supplémentaires en trois jours par rapport à la normale lors de l'épisode caniculaire de fin juin 2026. Les urgences parisennes commencent à souffler légèrement. L'officine, elle, a été en première ligne - comme à chaque fois.",
+      "source": "France Info Santé",
+      "source_url": "https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/vagues-de-chaleur-canicules/environ-1-000-deces-supplementaires-depuis-mercredi-quatre-questions-sur-la-surmortalite-liee-a-la-canicule-en-france_8083529.html",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "avenir_pharma",
+      "titre": "Covid long : et si le cerveau était le vrai chef d'orchestre des symptômes persistants ?",
+      "resume": "Des chercheurs proposent une nouvelle piste dans le covid long : l'infection agirait comme déclencheur initial, mais ce seraient ensuite des mécanismes cérébraux autonomes qui entretiendraient les symptômes. Pas encore de biomarqueur, mais une approche qui recentre la recherche thérapeutique - et nos conseils aux patients.",
+      "source": "Sciences et Avenir",
+      "source_url": "https://www.sciencesetavenir.fr/sante/cerveau-et-psy/covid-long-le-cerveau-comme-nouveau-suspect_193259",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Rapport IGAS-IGF : la valeur de ton officine va être scrutée comme jamais",
+      "resume": "Divulgué le 7 mai 2026, le rapport IGAS-IGF sur les officines rebat les cartes de la valorisation, du financement bancaire et des cessions. Pour un titulaire, l'enjeu est direct : comprendre ce qui va désormais faire - ou défaire - le prix de ta pharmacie.",
+      "source": "Pharm'Actus · Le Moniteur des Pharmacies — Rapport IGAS-IGF : la valeur des officines face au test de la transparence, IGAS-IGF — Rapport sur l'économie officinale (7 mai 2026)",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/business/transactions/cession/rapport-igas-igf-la-valeur-des-officines-face-au-test-de-la-transparence",
+      "confidence_score": 0.72,
+      "warnings": [
+        "Le rapport IGAS-IGF du 7 mai 2026 est cité via Le Moniteur des Pharmacies — le document source primaire (IGAS/IGF) n'est pas directement accessible dans les articles fournis : les conclusions détaillées sont extrapolées à partir du résumé éditorial du Moniteur.",
+        "Les chiffres de multiple EBE (6x-9x) sont des données sectorielles couramment citées par les experts-comptables spécialisés (KPMG, FIDUCIAL) mais non issus d'un document officiel dans ce flux d'articles — à vérifier avant publication.",
+        "Le chiffre de 19 800 officines actives est une approximation basée sur les dernières données DREES disponibles (2024) — à confirmer avec les chiffres 2025-2026.",
+        "La fourchette EBE 13-15% du CA HT est issue des baromètres KPMG Pharmacie antérieurs — vérifier si le baromètre 2025 ou 2026 a été publié.",
+        "Les données de densité officinale (33 pour 100 000 hab. en France, 22 en Allemagne) sont des ordres de grandeur issus de rapports PGEU antérieurs — à vérifier sur le rapport PGEU 2024.",
+        "La part des remises dans l'EBE (3-6% du CA) est une estimation sectorielle — non sourcée dans un document officiel récent.",
+        "Aucun syndicat (FSPF, USPO, UPGF) n'a été cité : vérifier si ces organisations ont publié une réaction officielle au rapport IGAS-IGF avant publication — si oui, ajouter leur position pour respecter la règle d'équilibre syndical."
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

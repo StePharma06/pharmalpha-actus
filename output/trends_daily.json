@@ -1,64 +1,64 @@
 {
-  "generated_at": "2026-06-27",
-  "window_label": "21 juin au 27 juin 2026",
+  "generated_at": "2026-06-29",
+  "window_label": "23 juin au 29 juin 2026",
   "has_history": true,
   "delta_source": "pytrends_rising",
   "pathologies": [
     {
-      "display": "Canicule et fatigue",
-      "delta_label": "↑ 32 450",
+      "display": "Fatigue extreme que faire",
+      "delta_label": "↑ 15 850",
       "trend": "up"
     },
     {
-      "display": "Pourquoi la chaleur fatigue",
-      "delta_label": "↑ 16 950",
+      "display": "Fatigue apres canicule",
+      "delta_label": "↑ 15 300",
       "trend": "up"
     },
     {
-      "display": "Urticacées allergie",
-      "delta_label": "↑ 14 400",
+      "display": "Moulin de la fatigue",
+      "delta_label": "↑ 14 500",
       "trend": "up"
     },
     {
       "display": "Essoufflement au moindre effort fatigue",
-      "delta_label": "↑ 14 400",
+      "delta_label": "↑ 12 900",
       "trend": "up"
     },
     {
-      "display": "Vitamine a 7 lettres",
-      "delta_label": "↑ 12 850",
+      "display": "Canicule fatigue intense",
+      "delta_label": "↑ 12 750",
       "trend": "up"
     }
   ],
   "soins": [
     {
-      "display": "Digestion difficile que faire",
-      "delta_label": "↑ 43 300",
+      "display": "Calmosine digestion nourrisson",
+      "delta_label": "↑ 54 950",
+      "trend": "up"
+    },
+    {
+      "display": "Immunite diplomatique",
+      "delta_label": "↑ 50 800",
+      "trend": "up"
+    },
+    {
+      "display": "Complément alimentaire digestion",
+      "delta_label": "↑ 44 250",
+      "trend": "up"
+    },
+    {
+      "display": "Melon digestion",
+      "delta_label": "↑ 39 750",
       "trend": "up"
     },
     {
       "display": "Cerise digestion",
-      "delta_label": "↑ 37 200",
-      "trend": "up"
-    },
-    {
-      "display": "Quel liquide biologique jaune-verdâtre f",
-      "delta_label": "↑ 36 800",
-      "trend": "up"
-    },
-    {
-      "display": "Poivron digestion",
-      "delta_label": "↑ 30 150",
-      "trend": "up"
-    },
-    {
-      "display": "Courgette crue digestion",
-      "delta_label": "↑ 28 500",
+      "delta_label": "↑ 34 850",
       "trend": "up"
     }
   ],
   "pathologies_stale": false,
-  "pathologies_from": "2026-06-27",
+  "pathologies_from": "2026-06-29",
   "soins_stale": false,
-  "soins_from": "2026-06-27"
+  "soins_from": "2026-06-29"
 }
