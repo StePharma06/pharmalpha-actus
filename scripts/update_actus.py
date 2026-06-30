@@ -615,6 +615,9 @@ Si l'article repose sur la prise de position d'un syndicat de pharmaciens (FSPF,
 - N'INVENTE JAMAIS la position d'un syndicat. En cas de doute, indique qu'il ne s'est pas (encore) prononce, SANS lui preter de propos.
 - Reste strictement neutre : tu rapportes les positions, tu ne prends jamais parti.
 
+=== LABORATOIRE / TITULAIRE D'AMM (exactitude, CRITIQUE) ===
+Quand tu nommes le laboratoire d'un medicament, donne celui qui est PERTINENT pour le lecteur FRANCAIS : le titulaire de l'AMM europeenne / le commercialisateur en France, PAS seulement le proprietaire mondial (souvent un groupe US cite par la source etrangere). Le proprietaire de la molecule et le commercialisateur en Europe sont souvent DIFFERENTS (accords de licence). Exemple reel : avacopan (Tavneos) appartient a Amgen (rachat de ChemoCentryx) MAIS est commercialise en Europe par CSL Vifor -> pour un lecteur francais, c'est CSL Vifor le labo a citer. NE recopie PAS aveuglement le labo nomme par une source US. Si tu n'es pas certain du titulaire d'AMM europeenne / labo en France, NE NOMME PAS de labo (ecris "le laboratoire" ou cite la source) plutot que de te tromper.
+
 === IMPORTANCE DIFFERENCIANTE ===
 Pharma Monde et Business Officine sont les 2 rubriques qui DIFFERENCIENT Pharm'Actus des autres newsletters pharma (qui se contentent de relayer Moniteur/Quotidien).
 - Pharma Monde : NE DOIS JAMAIS etre loupee. C'est ce qui fait qu'un pharmacien francais va lire Pharm'Actus au lieu d'aller directement sur Moniteur.
@@ -955,6 +958,9 @@ Si l'angle business repose sur la prise de position d'un syndicat de pharmaciens
 - Si un autre syndicat ne s'est pas exprime publiquement, dis-le explicitement et prudemment : ex. "A ce jour, l'USPO ne s'est pas exprimee sur ce point sur son site" ou "la FSPF n'a pas reagi a ce stade".
 - N'INVENTE JAMAIS la position d'un syndicat. En cas de doute, indique qu'il ne s'est pas (encore) prononce, SANS lui preter de propos.
 - Reste strictement neutre : tu rapportes les positions, tu ne prends jamais parti.
+
+=== LABORATOIRE / TITULAIRE D'AMM (exactitude, CRITIQUE) ===
+Quand tu nommes le laboratoire d'un medicament, donne celui qui est PERTINENT pour le lecteur FRANCAIS : titulaire de l'AMM europeenne / commercialisateur en France, PAS seulement le proprietaire mondial (souvent un groupe US cite par la source). Proprietaire de la molecule et commercialisateur europeen sont souvent DIFFERENTS (licences). Ex : avacopan (Tavneos) = Amgen (proprietaire) mais CSL Vifor (commercialisateur Europe) -> pour un lecteur francais, citer CSL Vifor. Ne recopie pas aveuglement le labo d'une source US. Dans le doute, ne nomme PAS de labo plutot que de te tromper.
 
 === IMPORTANCE STRATEGIQUE ===
 Business Officine est l'une des 2 RUBRIQUES DIFFERENCIANTES de Pharm'Actus (avec Pharma Monde).
