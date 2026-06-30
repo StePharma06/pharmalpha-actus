@@ -1,0 +1,47 @@
+{
+  "generated_at": "2026-06-30T04:08:58.747795+02:00",
+  "run_date": "2026-06-30",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "Douleurs dentaires en Creuse : 28 patients soulagés grâce aux pharmaciens en moins d'un mois",
+      "resume": "Douze pharmaciens de la CPTS Centre Nord Creuse prescrivent désormais antalgiques et antibiotiques pour les douleurs dentaires aiguës. Résultat en moins de 30 jours : 28 patients pris en charge. Une expérimentation locale qui prouve que l'officine peut combler un désert sanitaire dentaire quand on lui en donne les moyens.",
+      "source": "France Info Santé",
+      "source_url": "https://www.franceinfo.fr/sante/des-pharmaciens-peuvent-desormais-prescrire-des-traitements-contre-les-douleurs-dentaires-en-creuse_8084915.html",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "avenir_pharma",
+      "titre": "Prescription infirmière élargie : ce que les nouvelles compétences IDE changent pour ton comptoir",
+      "resume": "Deux arrêtés publiés au JO du 27 juin 2026 donnent aux infirmiers diplômés d'État un périmètre de prescription élargi : antalgiques de palier 1, préservatifs, biologie, vaccination, plaies, santé sexuelle. Pour l'officine, c'est un nouveau type d'ordonnance qui va arriver au comptoir, et il vaut mieux être prêt.",
+      "source": "Caducee.net",
+      "source_url": "https://www.caducee.net/actualite-medicale/16935/reforme-infirmiere-prescription-consultation-et-actes-infirmiers-entrent-dans-une-nouvelle-phase.html",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Canicule : ~1 000 morts supplémentaires, et l'officine est en première ligne",
+      "resume": "Santé publique France recense environ 1 000 décès en excès sur la vague de chaleur de juin 2026. Pour les 21 000 officines françaises, cette canicule est un révélateur brutal de leur rôle de premier recours - et d'un potentiel de missions rémunérées encore largement sous-exploité...",
+      "source": "Pharm'Actus · Le Monde Santé — Canicule : surmortalité et hausse des décès à domicile, Le Monde Santé — Canicule : l'effet retard",
+      "source_url": "https://www.lemonde.fr/sante/article/2026/06/29/canicule-les-premiers-bilans-revelent-une-surmortalite-et-notamment-une-hausse-des-deces-a-domicile_6716697_1651302.html",
+      "confidence_score": 0.72,
+      "warnings": [
+        "Le chiffre de ~1 000 décès supplémentaires est issu du communiqué Santé publique France cité par Le Monde — chiffre provisoire, susceptible d'être révisé à la hausse (effet retard).",
+        "L'estimation de 25,2 M€ de CA OTC mobilisé est une extrapolation construite à partir de données historiques canicule 2019/2022 et du nombre d'officines DREES — non publiée en tant que telle, à présenter comme ordre de grandeur.",
+        "Le chiffre '4 à 6 passages par mois' pour les 75 ans+ est issu de données DREES 2022 sur la fréquentation officinale — à vérifier dans le rapport DREES 'Les dépenses de santé en 2022'.",
+        "La rémunération des entretiens pharmaceutiques (40 € asthme, 60 € BMP) est issue de la convention pharmaceutique et ses avenants — à vérifier sur ameli.fr pour les tarifs en vigueur en 2026.",
+        "Absence de communiqué FSPF/USPO sur mission canicule rémunérée vérifiée au moment de la rédaction — à confirmer sur les sites officiels des syndicats.",
+        "L'enveloppe CPTS de 600 M€ est issue de la LFSS 2025 — vérifier si ce montant a été reconduit ou modifié en LFSS 2026."
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

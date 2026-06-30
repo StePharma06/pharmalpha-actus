@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? La première banque du sang a ouvert dans un garage de Chicago",
-  "resume": "En 1937, un médecin américain a eu l'idée folle de stocker du sang humain comme on stocke des conserves. Avant lui, transfuser quelqu'un, c'était trouver un donneur en urgence et piquer directement dans son bras. Ce type a changé la médecine mondiale depuis un sous-sol d'hôpital.",
-  "full_text": "On est en 1937. Un patient arrive aux urgences en hémorragie. Il faut le transfuser. Immédiatement. Sauf que dans les années 30, 'transfuser' veut dire : trouver un donneur compatible là, maintenant, tout de suite, lui planter une aiguille dans le bras, et faire passer le sang directement d'une veine à l'autre. Pas de stock. Pas de réserve. Zéro.\n\nBernard Fantus, médecin d'origine hongroise installé à Chicago, trouve ça complètement absurde. Si on peut conserver des légumes en boîte, pourquoi pas du sang dans des flacons ? Il s'installe dans le sous-sol du Cook County Hospital, bricoleur et visionnaire, et crée le premier dépôt de sang conservé au monde. Il l'appelle lui-même une 'blood bank'. Une banque du sang. Le terme qu'on utilise encore aujourd'hui.\n\nLe twist ? Au départ, personne ne le prend au sérieux. Ses collègues rigolent. Du sang dans des frigos, à côté des sandwichs des infirmières ? Grotesque. Et pourtant, dès 1937, il conserve du sang jusqu'à 10 jours grâce à une solution citrée anticoagulante. C'est rudimentaire, mais ça marche.\n\nTrois ans plus tard, la Seconde Guerre mondiale éclate. Les armées alliées s'inspirent directement du modèle de Fantus pour organiser des collectes massives. Des millions de soldats doivent leur vie à ce médecin que personne ne connaît.\n\nAujourd'hui, les banques du sang ont évolué en EFS - Établissement Français du Sang - avec des règles de conservation ultra-précises selon les composants : 42 jours pour les globules rouges à 4°C, 7 jours pour les plaquettes à 22°C sous agitation constante. La prochaine fois qu'un patient te demande pourquoi on ne peut pas 'juste stocker du sang pour tout le monde', tu peux lui répondre : on y travaille depuis 1937, et c'est déjà un sacré exploit.",
-  "image_keywords": "blood bank storage",
+  "titre": "Le saviez-vous ? Le curare, poison de chasse devenu sauveur en chirurgie",
+  "resume": "Pendant des siècles, les explorateurs européens revenaient d'Amazonie avec une seule certitude : cette substance noire et poisseuse tuait en quelques minutes. Personne n'aurait parié qu'elle allait révolutionner la chirurgie moderne. Et pourtant.",
+  "full_text": "Les guerriers yanomami le savaient depuis toujours : une flèche enduite de curare, et le gibier tombe sans bruit. Paralysie foudroyante, mort silencieuse. Quand les conquistadors espagnols ont ramené des récits d'Amazonie au XVIe siècle, l'Europe a frémi. On appelait ça le « poison volant ». Terrifiant, mystérieux, incontrôlable.\n\nPendant trois siècles, les scientifiques ont tenté de percer son secret. Le problème ? Le curare n'est pas une plante unique. C'est un mélange artisanal d'écorces, de racines et de plantes variées, chaque tribu ayant sa propre recette secrète. Charles Waterton, naturaliste anglais un peu fou, a ramené des échantillons en 1812 et a fait une expérience dingue : il a injecté du curare à un âne, l'a regardé mourir... puis l'a ressuscité avec un soufflet de forge en lui insufflant de l'air dans les poumons. Premier respirateur artificiel de l'histoire, presque par accident.\n\nMais le vrai tournant arrive en 1942. À Montréal, le Dr Harold Griffith injecte pour la première fois du curare purifié à un patient en salle d'opération. Résultat ? Les muscles se relâchent complètement. Plus besoin de doses massives d'anesthésiques pour immobiliser le patient. La chirurgie abdominale devient infiniment plus sûre, plus précise, moins brutale.\n\nLe twist de l'histoire ? Le curare ne provoque aucune perte de conscience. Il paralyse sans endormir. Ce qui signifie que mal dosé, le patient reste éveillé, conscient, incapable de bouger ni de crier. Un cauchemar éveillé que certains ont malheureusement vécu avant que les protocoles soient affinés.\n\nAujourd'hui, les curares de synthèse - atracurium, rocuronium, suxaméthonium - sont des incontournables de toute anesthésie générale. La prochaine fois qu'un patient te demande d'où viennent les médicaments modernes, tu peux lui dire : parfois, d'une sarbacane au fond de la jungle.",
+  "image_keywords": "curare amazon jungle",
   "tags": [
     "histoire",
-    "transfusion",
+    "poison",
     "chirurgie",
-    "decouverte",
-    "instrument"
+    "anesthesie",
+    "decouverte"
   ],
-  "date": "2026-06-29",
+  "date": "2026-06-30",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",

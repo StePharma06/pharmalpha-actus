@@ -1,58 +1,58 @@
 {
   "pathologies": [
     {
-      "display": "Fatigue extreme que faire",
-      "delta_label": "↑ 15 850",
+      "display": "Allergie piqure de guepe",
+      "delta_label": "↑ 22 900",
       "trend": "up"
     },
     {
-      "display": "Fatigue apres canicule",
-      "delta_label": "↑ 15 300",
+      "display": "Allergie au piqure de moustique",
+      "delta_label": "↑ 13 100",
       "trend": "up"
     },
     {
-      "display": "Moulin de la fatigue",
-      "delta_label": "↑ 14 500",
+      "display": "Fatigue après canicule",
+      "delta_label": "↑ 11 200",
       "trend": "up"
     },
     {
-      "display": "Essoufflement au moindre effort fatigue",
-      "delta_label": "↑ 12 900",
+      "display": "Piqure taon allergie",
+      "delta_label": "↑ 11 100",
       "trend": "up"
     },
     {
-      "display": "Canicule fatigue intense",
-      "delta_label": "↑ 12 750",
+      "display": "Allergie au soleil symptômes",
+      "delta_label": "↑ 11 050",
       "trend": "up"
     }
   ],
-  "pathologies_from": "2026-06-29",
+  "pathologies_from": "2026-06-30",
   "soins": [
     {
-      "display": "Calmosine digestion nourrisson",
-      "delta_label": "↑ 54 950",
+      "display": "C'est pas sorcier digestion",
+      "delta_label": "↑ 50 250",
       "trend": "up"
     },
     {
-      "display": "Immunite diplomatique",
-      "delta_label": "↑ 50 800",
+      "display": "Temps digestion estomac",
+      "delta_label": "↑ 46 250",
       "trend": "up"
     },
     {
-      "display": "Complément alimentaire digestion",
-      "delta_label": "↑ 44 250",
+      "display": "Bicarbonate alimentaire digestion",
+      "delta_label": "↑ 41 300",
       "trend": "up"
     },
     {
-      "display": "Melon digestion",
-      "delta_label": "↑ 39 750",
+      "display": "Temps de digestion des aliments",
+      "delta_label": "↑ 37 100",
       "trend": "up"
     },
     {
-      "display": "Cerise digestion",
-      "delta_label": "↑ 34 850",
+      "display": "Pois chiche digestion",
+      "delta_label": "↑ 27 650",
       "trend": "up"
     }
   ],
-  "soins_from": "2026-06-29"
+  "soins_from": "2026-06-30"
 }
