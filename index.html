@@ -415,7 +415,7 @@ body.pa-has-nav #actusHeader {
 .jn-freq-btn:focus-visible .jn-freq-desc { color: #1a1a1a; }
 
 /* === DOSSIERS (hub evergreen) === */
-.dossiers-section { max-width: 1200px; margin: 8px auto 0; padding: 0 24px 8px; }
+.dossiers-section { max-width: 1200px; margin: 40px auto 0; padding: 0 24px 8px; }
 .dossiers-header { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
 .dossiers-title { font-size: 20px; font-weight: 800; color: var(--black); letter-spacing: -0.3px; display: flex; align-items: center; gap: 8px; }
 .dossiers-title svg { width: 20px; height: 20px; color: var(--orange); flex-shrink: 0; }
@@ -1375,6 +1375,9 @@ body.pa-has-nav #actusHeader {
   document.head.appendChild(l);
 })();
 </script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ItemList","name":"Guides et dossiers Pharm'Alpha","itemListElement":[{"@type":"ListItem","position":1,"url":"https://pharmalpha.fr/actus/articles/audit/audit-officine-methode-etapes-2026.html","name":"Audit de gestion et de performance officinal : méthode et étapes 2026"},{"@type":"ListItem","position":2,"url":"https://pharmalpha.fr/actus/articles/merchandising/merchandising-officine-guide-complet-2026.html","name":"Qu'est-ce que le merchandising officinal ? Guide complet 2026"},{"@type":"ListItem","position":3,"url":"https://pharmalpha.fr/actus/articles/rgpd/email-securise-pharmacie-hds-mssante-guide-2026.html","name":"Email sécurisé en pharmacie : HDS, MSSanté, RGPD : Guide complet 2026"}]}
+</script>
 </head>
 <body>
 <div class="caduceus-bg" id="caduceus-bg"></div>
@@ -1543,37 +1546,6 @@ body.pa-has-nav #actusHeader {
   </div>
 </section>
 
-<!-- DOSSIERS (hub evergreen, distinct du fil actus quotidien) -->
-<section class="dossiers-section" aria-labelledby="dossiers-title">
-  <div class="dossiers-header">
-    <h2 class="dossiers-title" id="dossiers-title">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-      Les dossiers de fond
-    </h2>
-    <span class="dossiers-sub">Nos guides complets, &agrave; garder sous le coude</span>
-  </div>
-  <div class="dossiers-grid">
-    <a href="https://pharmalpha.fr/actus/articles/audit/audit-officine-methode-etapes-2026.html" class="dossier-card">
-      <span class="badge badge-business_officine">Business</span>
-      <h3>Audit officine : la m&eacute;thode compl&egrave;te 2026</h3>
-      <p>Les 5 &eacute;tapes pour diagnostiquer ta pharmacie, chiffrer le potentiel et sortir un plan d'action concret.</p>
-      <span class="dossier-card-cta">Lire le guide <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
-    </a>
-    <a href="https://pharmalpha.fr/actus/articles/merchandising/merchandising-officine-guide-complet-2026.html" class="dossier-card">
-      <span class="badge badge-business_officine">Business</span>
-      <h3>Merchandising officinal : le guide complet</h3>
-      <p>Zoning, m&eacute;thode MLD Id&eacute;al, niveaux vendeurs et erreurs qui co&ucirc;tent du CA sur ton lin&eacute;aire.</p>
-      <span class="dossier-card-cta">Lire le guide <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
-    </a>
-    <a href="https://pharmalpha.fr/actus/articles/rgpd/email-securise-pharmacie-hds-mssante-guide-2026.html" class="dossier-card">
-      <span class="badge badge-business_officine">Business</span>
-      <h3>Email pharmacie : es-tu vraiment conforme RGPD&nbsp;?</h3>
-      <p>Gmail, Outlook, MSSant&eacute; : ce que tu risques r&eacute;ellement et 8 solutions class&eacute;es par co&ucirc;t.</p>
-      <span class="dossier-card-cta">Lire le guide <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
-    </a>
-  </div>
-</section>
-
 <!-- FILTERS -->
 <section class="filters">
   <button class="filters-toggle" id="filters-toggle" onclick="toggleFiltersMobile()" aria-expanded="false">
@@ -1633,6 +1605,37 @@ body.pa-has-nav #actusHeader {
     </a>
   </div>
 </div>
+
+<!-- DOSSIERS (hub evergreen, distinct du fil actus quotidien) -->
+<section class="dossiers-section" aria-labelledby="dossiers-title">
+  <div class="dossiers-header">
+    <h2 class="dossiers-title" id="dossiers-title">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+      Les dossiers de fond
+    </h2>
+    <span class="dossiers-sub">Nos guides complets, &agrave; garder sous le coude</span>
+  </div>
+  <div class="dossiers-grid">
+    <a href="https://pharmalpha.fr/actus/articles/audit/audit-officine-methode-etapes-2026.html" class="dossier-card">
+      <span class="badge badge-business_officine">Business</span>
+      <h3>Audit officine : la m&eacute;thode compl&egrave;te 2026</h3>
+      <p>Les 5 &eacute;tapes pour diagnostiquer ta pharmacie, chiffrer le potentiel et sortir un plan d'action concret.</p>
+      <span class="dossier-card-cta">Lire le guide <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+    </a>
+    <a href="https://pharmalpha.fr/actus/articles/merchandising/merchandising-officine-guide-complet-2026.html" class="dossier-card">
+      <span class="badge badge-business_officine">Business</span>
+      <h3>Merchandising officinal : le guide complet</h3>
+      <p>Zoning, m&eacute;thode MLD Id&eacute;al, niveaux vendeurs et erreurs qui co&ucirc;tent du CA sur ton lin&eacute;aire.</p>
+      <span class="dossier-card-cta">Lire le guide <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+    </a>
+    <a href="https://pharmalpha.fr/actus/articles/rgpd/email-securise-pharmacie-hds-mssante-guide-2026.html" class="dossier-card">
+      <span class="badge badge-business_officine">Business</span>
+      <h3>Email pharmacie : es-tu vraiment conforme RGPD&nbsp;?</h3>
+      <p>Gmail, Outlook, MSSant&eacute; : ce que tu risques r&eacute;ellement et 8 solutions class&eacute;es par co&ucirc;t.</p>
+      <span class="dossier-card-cta">Lire le guide <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+    </a>
+  </div>
+</section>
 
 <!-- MODAL -->
 <div class="modal-overlay" id="modal-overlay">
