@@ -414,6 +414,28 @@ body.pa-has-nav #actusHeader {
 .jn-freq-btn:hover .jn-freq-desc,
 .jn-freq-btn:focus-visible .jn-freq-desc { color: #1a1a1a; }
 
+/* === DOSSIERS (hub evergreen) === */
+.dossiers-section { max-width: 1200px; margin: 8px auto 0; padding: 0 24px 8px; }
+.dossiers-header { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
+.dossiers-title { font-size: 20px; font-weight: 800; color: var(--black); letter-spacing: -0.3px; display: flex; align-items: center; gap: 8px; }
+.dossiers-title svg { width: 20px; height: 20px; color: var(--orange); flex-shrink: 0; }
+.dossiers-sub { font-size: 13px; color: var(--text-muted); }
+.dossiers-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.dossier-card { background: var(--bg-card); border: 1px solid var(--border-light); border-radius: var(--radius); box-shadow: var(--shadow); padding: 20px 22px 22px; display: flex; flex-direction: column; gap: 10px; text-decoration: none; transition: all 0.2s; }
+.dossier-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); border-color: var(--border); }
+.dossier-card:focus-visible { outline: 2px solid var(--orange); outline-offset: 2px; }
+.dossier-card h3 { font-size: 16px; font-weight: 700; line-height: 1.35; color: var(--black); }
+.dossier-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.55; flex: 1; }
+.dossier-card-cta { margin-top: 4px; padding-top: 12px; border-top: 1px solid var(--border-light); display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: var(--text); }
+.dossier-card-cta svg { width: 15px; height: 15px; color: var(--orange); transition: transform 0.2s; flex-shrink: 0; }
+.dossier-card:hover .dossier-card-cta svg { transform: translateX(3px); }
+.footer-resources { margin-top: 16px; padding-top: 16px; border-top: 1px solid #333; font-size: 0.85em; }
+.footer-resources-label { color: #999; font-weight: 600; margin-bottom: 8px; }
+.footer-resources-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 6px 18px; }
+.footer-resources-links a { color: var(--orange); text-decoration: none; }
+.footer-resources-links a:hover { text-decoration: underline; }
+@media (max-width: 860px) { .dossiers-grid { grid-template-columns: 1fr; } }
+
 /* === FILTERS === */
 .filters {
   max-width: 1200px;
@@ -1521,6 +1543,37 @@ body.pa-has-nav #actusHeader {
   </div>
 </section>
 
+<!-- DOSSIERS (hub evergreen, distinct du fil actus quotidien) -->
+<section class="dossiers-section" aria-labelledby="dossiers-title">
+  <div class="dossiers-header">
+    <h2 class="dossiers-title" id="dossiers-title">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+      Les dossiers de fond
+    </h2>
+    <span class="dossiers-sub">Nos guides complets, &agrave; garder sous le coude</span>
+  </div>
+  <div class="dossiers-grid">
+    <a href="https://pharmalpha.fr/actus/articles/audit/audit-officine-methode-etapes-2026.html" class="dossier-card">
+      <span class="badge badge-business_officine">Business</span>
+      <h3>Audit officine : la m&eacute;thode compl&egrave;te 2026</h3>
+      <p>Les 5 &eacute;tapes pour diagnostiquer ta pharmacie, chiffrer le potentiel et sortir un plan d'action concret.</p>
+      <span class="dossier-card-cta">Lire le guide <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+    </a>
+    <a href="https://pharmalpha.fr/actus/articles/merchandising/merchandising-officine-guide-complet-2026.html" class="dossier-card">
+      <span class="badge badge-business_officine">Business</span>
+      <h3>Merchandising officinal : le guide complet</h3>
+      <p>Zoning, m&eacute;thode MLD Id&eacute;al, niveaux vendeurs et erreurs qui co&ucirc;tent du CA sur ton lin&eacute;aire.</p>
+      <span class="dossier-card-cta">Lire le guide <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+    </a>
+    <a href="https://pharmalpha.fr/actus/articles/rgpd/email-securise-pharmacie-hds-mssante-guide-2026.html" class="dossier-card">
+      <span class="badge badge-business_officine">Business</span>
+      <h3>Email pharmacie : es-tu vraiment conforme RGPD&nbsp;?</h3>
+      <p>Gmail, Outlook, MSSant&eacute; : ce que tu risques r&eacute;ellement et 8 solutions class&eacute;es par co&ucirc;t.</p>
+      <span class="dossier-card-cta">Lire le guide <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+    </a>
+  </div>
+</section>
+
 <!-- FILTERS -->
 <section class="filters">
   <button class="filters-toggle" id="filters-toggle" onclick="toggleFiltersMobile()" aria-expanded="false">
@@ -1661,6 +1714,14 @@ body.pa-has-nav #actusHeader {
   <p>Pharm'Alpha · L'actu pharma par un pharmacien &nbsp;|&nbsp;
     <a href="https://www.linkedin.com/newsletters/pharm-actus-7454461036524498945/" target="_blank">Newsletter LinkedIn</a>
   </p>
+  <div class="footer-resources">
+    <p class="footer-resources-label">Nos guides</p>
+    <div class="footer-resources-links">
+      <a href="https://pharmalpha.fr/actus/articles/audit/audit-officine-methode-etapes-2026.html">Guide audit officine</a>
+      <a href="https://pharmalpha.fr/actus/articles/merchandising/merchandising-officine-guide-complet-2026.html">Guide merchandising</a>
+      <a href="https://pharmalpha.fr/actus/articles/rgpd/email-securise-pharmacie-hds-mssante-guide-2026.html">Guide email HDS/RGPD</a>
+    </div>
+  </div>
   <div style="margin-top:20px;padding-top:16px;border-top:1px solid #333;font-size:0.75em;color:#777;line-height:1.6;max-width:600px;margin-left:auto;margin-right:auto;">
     <p style="margin:0 0 6px;"><strong style="color:#999;">Mentions l&eacute;gales</strong></p>
     <p style="margin:0 0 4px;">&Eacute;diteur : Stephen ROBERT, Pharmacien &amp; Consultant · EI Pharm'Alpha · SIREN 910 877 356</p>
