@@ -679,7 +679,13 @@ JSON UNIQUEMENT (tableau de 5 objets) :
     text = response.content[0].text.strip()
     json_match = re.search(r"\[[\s\S]*\]", text)
     if json_match:
-        return [_clean_article(a) for a in json.loads(json_match.group())]
+        try:
+            return [_clean_article(a) for a in json.loads(json_match.group())]
+        except json.JSONDecodeError as e:
+            # Ne pas crasher tout le run sur un JSON malforme : on retourne []
+            # (main gere l'absence d'articles proprement).
+            print(f"  [ERROR] JSON curation invalide: {e}")
+            return []
 
     print("  [ERROR] Claude n'a pas retourne de JSON valide")
     return []
@@ -764,7 +770,13 @@ Pour les tags : 3 a 5 mots-cles thematiques en francais, minuscules, sans accent
     text = response.content[0].text.strip()
     json_match = re.search(r"\{[\s\S]*\}", text)
     if json_match:
-        lsv = json.loads(json_match.group())
+        try:
+            lsv = json.loads(json_match.group())
+        except json.JSONDecodeError as e:
+            # NON BLOQUANT : le LSV est un bonus. Un JSON malforme de Claude ne
+            # doit JAMAIS faire tomber tout le run (ni actus, ni email, ni site).
+            print(f"  [ERROR] JSON LSV invalide, LSV ignore (non bloquant): {e}")
+            return None
         lsv["categorie"] = "lsv"
         lsv["badge_label"] = "Le Saviez-Vous"
         lsv["source"] = "Pharm'Alpha"
@@ -2528,8 +2540,13 @@ def main():
 
     # 4. Generate 1 Le Saviez-Vous (ou utiliser le LSV en attente)
     print("\n[4/6] Generation du Le Saviez-Vous...")
-    existing_lsv = get_existing_lsv_titles()
-    lsv = load_pending_lsv() or generate_lsv_with_claude(existing_lsv)
+    try:
+        existing_lsv = get_existing_lsv_titles()
+        lsv = load_pending_lsv() or generate_lsv_with_claude(existing_lsv)
+    except Exception as e:
+        # NON BLOQUANT : le LSV est un bonus, il ne doit jamais faire tomber le run.
+        print(f"  [ERROR] Echec LSV (non bloquant): {e}")
+        lsv = None
     if lsv:
         print(f"  LSV: {lsv.get('titre', '')[:60]}...")
         curated.append(lsv)
