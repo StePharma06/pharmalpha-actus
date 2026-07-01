@@ -65,7 +65,17 @@ jobs:
             echo "has_changes=false" >> $GITHUB_OUTPUT
           else
             git commit -m "Auto-update actus $(date -u +%Y-%m-%d)"
-            git push
+            # Push resilient : un cron concurrent (dashboard, trends...) peut avoir
+            # avance origin/master entre le checkout et ce push -> non-fast-forward.
+            # On rebase et on reessaie jusqu'a 5 fois avant d'abandonner.
+            pushed=false
+            for i in 1 2 3 4 5; do
+              if git push; then pushed=true; echo "push OK (tentative $i)"; break; fi
+              echo "push rejete, rebase + nouvelle tentative ($i)..."
+              git pull --rebase origin master || git rebase --abort
+              sleep 3
+            done
+            if [ "$pushed" != "true" ]; then echo "ERREUR: push impossible apres 5 tentatives"; exit 1; fi
             echo "has_changes=true" >> $GITHUB_OUTPUT
           fi
 
