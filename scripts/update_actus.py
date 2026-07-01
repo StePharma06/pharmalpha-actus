@@ -2344,18 +2344,33 @@ def send_newsletter(articles):
     headers = {"api-key": api_key, "Accept": "application/json"}
     while True:
         url = f"https://api.brevo.com/v3/contacts/lists/{BREVO_LIST_ID}/contacts?limit={limit}&offset={offset}"
-        try:
-            req = urllib.request.Request(url, headers=headers)
-            with urllib.request.urlopen(req) as resp:
-                data = json.loads(resp.read())
-            contacts = data.get("contacts", [])
-            all_contacts.extend(contacts)
-            if len(contacts) < limit:
+        data = None
+        # RETRY sur erreur transitoire Brevo (ex: 503) : incident 2026-07-01, un 503
+        # faisait abandonner l'envoi silencieusement -> aucun email. 4 tentatives.
+        for attempt in range(1, 5):
+            try:
+                req = urllib.request.Request(url, headers=headers)
+                with urllib.request.urlopen(req) as resp:
+                    data = json.loads(resp.read())
                 break
-            offset += limit
-        except Exception as e:
-            print(f"  [BREVO-ERR] Impossible de recuperer les contacts: {e}")
+            except Exception as e:
+                print(f"  [BREVO-ERR] fetch contacts (tentative {attempt}/4): {e}")
+                if attempt < 4:
+                    time.sleep(attempt * 5)  # backoff 5s, 10s, 15s
+        if data is None:
+            # Echec definitif : on ALERTE Stephen et on ne marque PAS comme envoye
+            # (pour pouvoir relancer quand Brevo est de nouveau up).
+            print("  [BREVO-ERR] Contacts introuvables apres 4 tentatives - envoi annule")
+            _send_alert_email(api_key, "[ECHEC ENVOI] Pharm'Actus - Brevo indisponible",
+                "La recuperation de la liste d'abonnes Brevo a echoue apres 4 tentatives "
+                "(probable indisponibilite temporaire, ex: HTTP 503). L'email du jour N'A PAS "
+                "ete envoye. Relance le workflow daily-update quand Brevo est de nouveau disponible.")
             return
+        contacts = data.get("contacts", [])
+        all_contacts.extend(contacts)
+        if len(contacts) < limit:
+            break
+        offset += limit
 
     if not all_contacts:
         print("  [INFO] Aucun abonne dans la liste, email non envoye")
