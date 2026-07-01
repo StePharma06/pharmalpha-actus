@@ -26,7 +26,7 @@
       "trend": "up"
     }
   ],
-  "pathologies_from": "2026-06-30",
+  "pathologies_from": "2026-07-01",
   "soins": [
     {
       "display": "C'est pas sorcier digestion",
@@ -54,5 +54,5 @@
       "trend": "up"
     }
   ],
-  "soins_from": "2026-06-30"
+  "soins_from": "2026-07-01"
 }

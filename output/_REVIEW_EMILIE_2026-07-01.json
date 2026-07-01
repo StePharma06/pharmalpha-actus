@@ -1,0 +1,39 @@
+{
+  "generated_at": "2026-07-01T11:52:32.607294+02:00",
+  "run_date": "2026-07-01",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_monde",
+      "titre": "Anthropic lance Claude Science : l'IA qui veut faire la recherche pharma à ta place",
+      "resume": "Anthropic vient de lancer Claude Science, un outil d'IA conçu non plus pour assister la recherche pharmaceutique, mais pour la piloter directement. Avant son IPO très attendu, le concurrent d'OpenAI mise gros sur la pharma. Ce que ça annonce pour nos métiers vaut le détour.",
+      "source": "MedCity News",
+      "source_url": "https://medcitynews.com/2026/06/anthropic-pharma-healthcare/",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Loi fin de vie : l'officine face à 150 000 décès/an, un rôle à clarifier d'urgence",
+      "resume": "Les députés ont adopté en 3e lecture, le 30 juin 2026, une proposition de loi créant un droit à l'aide à mourir. Pour les 21 000 officines françaises, l'enjeu dépasse le symbole : préparation, délivrance, clause de conscience - le cadre réglementaire reste à construire.",
+      "source": "Pharm'Actus · Le Monde Santé — Fin de vie : adoption en 3e lecture, Le Monde Santé — Editorial : le choix de sa fin de vie",
+      "source_url": "https://www.lemonde.fr/societe/article/2026/07/01/fin-de-vie-la-creation-d-un-droit-a-l-aide-a-mourir-pour-des-patients-atteints-d-une-affection-grave-et-incurable-approuvee-pour-la-troisieme-fois-par-les-deputes_6717460_3224.html",
+      "confidence_score": 0.62,
+      "warnings": [
+        "Le chiffre '150 000 décès en soins palliatifs' est une extrapolation à partir des données DREES 2023 sur les besoins en soins palliatifs — à vérifier sur le site DREES directement.",
+        "Le chiffre belge de 'moins de 5 % des actes en officine de ville' est une estimation basée sur les rapports du Comité fédéral belge de contrôle et d'évaluation de l'euthanasie (CFCEE) — à vérifier sur cfcee.be.",
+        "Le tarif belge de 35 à 60 € pour une préparation magistrale létale est une estimation sectorielle — non officiel, à vérifier auprès de l'APB (Association Pharmaceutique Belge).",
+        "L'honoraire de préparation magistrale de 8,23 € (avenant 21) est à vérifier sur ameli.fr — le montant exact peut avoir évolué.",
+        "Le CA de 180 M€/an des officines sur le segment soins palliatifs/HAD est une estimation FNEHAD — à vérifier directement auprès de la FNEHAD.",
+        "Le budget de 1,1 Md€ pour le plan soins palliatifs 2024-2028 est issu de communications gouvernementales — à vérifier sur le site du ministère de la Santé.",
+        "Le ratio 1 officine / 2 700 habitants en zone rurale est une donnée DREES — à vérifier sur l'Atlas de la démographie officinale DREES 2023.",
+        "Le texte de loi n'est pas encore promulgué au moment de la rédaction (vote final prévu le 15 juillet 2026) — le contenu exact des dispositions sur le circuit de délivrance peut encore évoluer.",
+        "Aucune position syndicale (FSPF, USPO, UPGF) n'a été citée faute de prise de position publique vérifiable à ce jour sur ce sujet spécifique — l'équilibre syndical n'a pas pu être appliqué."
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}
