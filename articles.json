@@ -1,6 +1,131 @@
 {
   "articles": [
     {
+      "id": "actu_2026_07_02_5",
+      "date": "2026-07-02",
+      "type": "actu",
+      "categorie": "business_officine",
+      "titre": "MGEN bascule 300 000 patients vers Viamedis : ton tiers payant complémentaire est-il prêt ?",
+      "resume": "Ce 1er juillet 2026, la MGEN finalise sa 4e et dernière vague de migration vers Viamedis. 300 000 bénéficiaires supplémentaires concernés. Si ton paramétrage n'est pas à jour, c'est du tiers payant rejeté - et du cash qui manque en caisse.",
+      "full_text": "Ce 1er juillet 2026, la MGEN finalise sa 4e et dernière vague de migration vers Viamedis. 300 000 bénéficiaires supplémentaires concernés. Si ton paramétrage n'est pas à jour, c'est du tiers payant rejeté - et du cash qui manque en caisse.\n\n**Contexte**\n\nDepuis novembre 2025, la MGEN - l'une des plus grandes mutuelles françaises avec plus de 4 millions de bénéficiaires - transfère progressivement la gestion de son tiers payant complémentaire vers la plateforme Viamedis. Quatre bascules ont eu lieu : novembre 2025 (phase 3), mai 2026 (phase 3 bis), et ce 1er juillet 2026 marque la dernière migration, avec environ 300 000 nouveaux bénéficiaires concernés. Viamedis est l'un des deux grands opérateurs de tiers payant complémentaire en France avec Almerys, regroupés depuis 2023 sous le même actionnaire après la fusion de fait de leurs réseaux de gestion. Pour l'officine, ce changement est invisible en apparence… jusqu'au premier retour de flux rejeté. Le risque : un référencement MGEN encore actif côté logiciel de gestion, mais renvoyant vers l'ancien organisme gestionnaire - ce qui entraîne des rejets en série, des avances de trésorerie non prévues et un traitement administratif chronophage pour régulariser.\n\n**Analyse business**\n\nConcrètement, qu'est-ce que ça coûte à une officine de rater une telle bascule ?\n\nPremier repère : la MGEN compte environ 4,2 millions de bénéficiaires en France (données publiques MGEN). Avec une répartition géographique relativement homogène, une pharmacie urbaine de taille moyenne peut compter entre 80 et 200 bénéficiaires MGEN actifs dans sa patientèle. Une estimation prudente : si chaque patient réalise en moyenne 6 passages/an avec un ticket modérateur moyen de 8 €, c'est entre 3 840 € et 9 600 € de flux complémentaire annuel par officine, intégralement transitant par le tiers payant.\n\nUn taux de rejet de seulement 15 % sur ces flux - ce qui est bas dans un contexte de migration mal paramétrée - représente entre 576 € et 1 440 € d'impayés temporaires, avec des délais de régularisation qui peuvent dépasser 45 jours selon les retours terrain des groupements.\n\nDeuxième enjeu : la gestion opérationnelle. Un rejet de tiers payant complémentaire n'est pas automatiquement récupéré. Il faut identifier la ligne de rejet dans le logiciel de gestion (LGO), corriger le code organisme, retraiter la feuille de soins, et dans certains cas rappeler le patient pour un règlement immédiat puis remboursement. Coût estimé en temps : 15 à 20 minutes par dossier rejeté. Sur 20 rejets, c'est 5 à 7 heures de temps préparateur ou titulaire mobilisé sur du pur administratif - non rémunéré, non valorisé dans aucun honoraire conventionnel.\n\nTroisième dimension : l'image comptoir. Un patient MGEN à qui on demande de régler son ticket complémentaire parce que le tiers payant est rejeté, c'est une expérience négative. Dans un contexte de concurrence officinale croissante (plus de 20 700 officines en France selon les données DREES 2024), perdre un patient fidèle sur un problème administratif évitable est un luxe que peu de titulaires peuvent se permettre.\n\nBonne nouvelle : la FSPF a diffusé des circulaires détaillées à chaque phase, avec les codes organisme mis à jour. Le sujet est donc parfaitement anticipable - à condition d'y consacrer 30 minutes dès ce matin.\n\n**Recommandations actionnables**\n\n1. Vérifier ton paramétrage LGO maintenant - Ouvre ton logiciel de gestion (Winpharma, Lgpi, Pharma, etc.) et contrôle que le code organisme MGEN est bien mis à jour vers Viamedis. Rapproche-toi de ton éditeur ou de ta hot-line groupement si tu as un doute.\n\n2. Consulter la circulaire FSPF dédiée - La FSPF a publié plusieurs circulaires depuis novembre 2025 avec les références exactes des codes organisme. Télécharge la dernière version sur fspf.fr avant de tester une feuille de soins.\n\n3. Faire un test à blanc dès ce matin - Traite une ordonnance MGEN en mode simulation si ton LGO le permet, ou surveille les premiers retours de flux de la journée de près. Identifie tout rejet immédiatement.\n\n4. Informer discrètement ton équipe - Brief de 5 minutes en début de vacation : si un patient MGEN est rejeté aujourd'hui, ne pas encaisser immédiatement, isoler le dossier et alerter le titulaire.\n\n5. Surveiller ton relevé de rejets à J+3 - Planifie un point administratif dans 72 heures pour vérifier qu'aucun flux MGEN de ce 1er juillet n'est resté en suspens.\n\n**Sources citees**\n\n- FSPF - MGEN : dernière bascule complémentaire vers Viamedis au 1er juillet 2026",
+      "source": "Pharm'Actus · FSPF — MGEN : dernière bascule complémentaire vers Viamedis au 1er juillet 2026",
+      "source_url": "https://www.fspf.fr/mgen-derniere-bascule-complementaire-vers-viamedis-au-1er-juillet-2026/",
+      "tiktok_url": "",
+      "badge_label": "Business",
+      "image_url": "assets/img_actu_2026_07_02_5.jpg",
+      "tags": [
+        "tiers-payant",
+        "mgen",
+        "viamedis",
+        "gestion-officine"
+      ]
+    },
+    {
+      "id": "actu_2026_07_02_4",
+      "date": "2026-07-02",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "HerbAI, un outil IA de conseil phyto au comptoir : bonne idée ou boîte noire ?",
+      "resume": "Un outil baptisé HerbAI arrive en officine : une IA dédiée au conseil à base de plantes, alimentée par une base documentaire fermée, pensée pour répondre en quelques secondes au comptoir. Pratique en théorie. Mais les questions sur la transparence des sources et la responsabilité restent ouvertes.",
+      "full_text": "Peut-on conseiller du millepertuis à un patient sous statine ? Cette question, tu l'as eu cent fois au comptoir. HerbAI prétend y répondre en quelques secondes. Et c'est là que ça devient intéressant, et que ça mérite qu'on en parle sérieusement.\n\nHerbAI est une solution IA dédiée au conseil phytothérapeutique en officine. Développé par une équipe portée par une ancienne responsable des achats officinaux, l'outil repose sur une base documentaire fermée, contrairement aux IA génératives grand public qui puisent dans tout le web, le bon comme le dangereux. L'idée : limiter les hallucinations et garantir que les réponses sont ancrées dans des sources scientifiques validées.\n\nC'est une vraie avancée conceptuelle. On sait tous que la phytothérapie est un terrain glissant au comptoir : entre les patients qui arrivent avec leur tuto TikTok sur l'ashwagandha et les vraies interactions plantes-médicaments sous-documentées, le risque d'erreur de conseil est réel. Un outil capable de croiser rapidement les interactions, les contre-indications et les données d'EBM sur les plantes, c'est un filet de sécurité potentiellement utile.\n\nMais attention à quelques points critiques avant d'adopter. Premier point : la qualité de la base documentaire. Une IA n'est aussi bonne que ses sources. Qui les a sélectionnées ? Selon quels critères ? L'ESCOP, la Commission E allemande, les monographies de l'EMA sur les plantes ? Ou un mix opaque ? La transparence sur les sources est non négociable quand il s'agit de conseil de santé.\n\nDeuxième point : la responsabilité. En pharmacie, le conseil est un acte professionnel engageant ta responsabilité. Déléguer ce conseil à une IA, même partielle, pose la question de qui est responsable si le conseil est mauvais. La réponse juridique française n'est pas encore stabilisée sur ce sujet.\n\nTroisième point : le risque de désintermédiation du pharmacien. Si l'IA répond à la place du professionnel sans que celui-ci valide, on perd la valeur ajoutée du raisonnement clinique. L'outil doit rester un aide à la décision, pas un substitut.\n\nDemain matin au comptoir : garde un oeil sur HerbAI et les outils similaires. L'IA au comptoir arrive, c'est une certitude. Mieux vaut en être acteur que spectateur.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/un-chatgpt-pour-conseiller-des-plantes",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_07_02_4.jpg",
+      "tags": [
+        "ia",
+        "phytotherapie",
+        "innovation",
+        "officine",
+        "conseil"
+      ]
+    },
+    {
+      "id": "actu_2026_07_02_3",
+      "date": "2026-07-02",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "Cannabinoïdes de synthèse : 500 intoxications graves, tes ados sont en première ligne",
+      "resume": "Depuis début 2025, environ 500 cas d'intoxications aux cannabinoïdes de synthèse ont été recensés en France, principalement via des e-liquides. Les 13-18 ans sont les plus touchés et près des trois quarts des cas sont graves. La DGS sonne l'alerte.",
+      "full_text": "Cinq cents intoxications, trois quarts de cas graves, des victimes principalement entre 13 et 18 ans. Ce ne sont pas les chiffres d'une expérimentation anecdotique. C'est une tendance lourde qui arrive dans ton officine, que tu le veuilles ou non.\n\nLes cannabinoïdes de synthèse, ce ne sont pas du cannabis. Ce sont des molécules de synthèse qui se fixent sur les mêmes récepteurs CB1/CB2, mais avec une affinité et une puissance sans commune mesure avec le THC naturel. Effets cardiaques, convulsions, pertes de conscience, états psychotiques aigus. Le tableau clinique peut être sévère, rapide et imprévisible.\n\nLe vecteur principal repéré ici : les e-liquides pour cigarettes électroniques. Le profil de la victime type : un adolescent qui croit vapoter quelque chose de « soft ». C'est le piège. La cigarette électronique a normalisé le geste. Les cannabinoïdes de synthèse ont colonisé le format.\n\nLa DGS a communiqué une alerte. L'ANSM a centralisé les signalements. Mais concrètement, qui est en première ligne de prévention dans les territoires ? Les pharmaciens. Parce qu'on est accessibles sans rendez-vous, parce qu'on vend des e-liquides et des inhalateurs dans certaines officines, et parce que les parents paniqués arrivent parfois au comptoir avant même d'appeler le SAMU.\n\nQu'est-ce que tu peux faire ? Déjà, informer. Si tu vends des produits de vapotage, forme ton équipe à repérer les questions suspects autour des e-liquides « aux effets particuliers ». Les cannabinoïdes de synthèse circulent sous des noms de marque fantaisistes, souvent sans DCI identifiable, souvent commandés en ligne.\n\nEnsuite, orienter. Tout cas suspect d'intoxication doit être dirigé vers le 15 ou le centre antipoison. Pas de prise en charge en autonomie au comptoir sur ce type de tableau.\n\nEnfin, sensibiliser. Les brochures MILDECA et Santé publique France existent. Elles peuvent trouver leur place dans ton espace conseil ado/jeunes adultes.\n\nDemain matin au comptoir : une bonne nouvelle, c'est que l'alerte est publique et que tu peux maintenant en parler avec tes patients. C'est déjà ça.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/flambee-dintoxications-aux-cannabinoides-de-synthese",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_07_02_3.jpg",
+      "tags": [
+        "sante-publique",
+        "addictologie",
+        "prevention",
+        "adolescent",
+        "officine"
+      ]
+    },
+    {
+      "id": "actu_2026_07_02_2",
+      "date": "2026-07-02",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "Tregzi, la première thérapie cellulaire à base de Treg reçoit le feu vert de la FDA",
+      "resume": "Orca Bio vient de décrocher une approbation FDA historique pour Tregzi, première thérapie cellulaire basée sur les lymphocytes T régulateurs. L'objectif : réduire la maladie du greffon contre l'hôte après greffe de cellules souches allogéniques. Une avancée qui redessine le paysage des hémopathies malignes.",
+      "full_text": "Une approbation FDA qui mérite qu'on s'arrête dessus. Orca Bio vient d'obtenir le feu vert américain pour Tregzi, une thérapie cellulaire d'un genre nouveau : la première au monde à reposer sur les lymphocytes T régulateurs, ou Tregs.\n\nPourquoi c'est important ? Parce que la maladie du greffon contre l'hôte (GvHD) est l'une des complications les plus redoutées après une greffe de cellules souches allogéniques, qui reste le traitement de référence pour certaines leucémies et hémopathies malignes. La GvHD tue. Elle défigure la qualité de vie. Et jusqu'ici, on la gérait surtout à coups d'immunosuppresseurs avec des résultats variables et une toxicité non négligeable.\n\nLes Tregs, c'est une population lymphocytaire dont le rôle naturel est de réguler la réponse immunitaire, d'éviter que le système immunitaire parte en vrille contre le soi ou, ici, contre l'hôte. L'idée d'Orca Bio : isoler, enrichir et réinjecter ces cellules régulatrices pour prévenir la GvHD en amont, plutôt que de la traiter quand elle éclate.\n\nLes résultats des essais cliniques montrent une réduction significative du risque de GvHD. C'est la première fois qu'une thérapie cellulaire de ce type franchit la ligne d'approbation réglementaire. Un premier dans l'histoire des living medicines, comme ils disent outre-Atlantique.\n\nPour un pharmacien hospitalier ou de PUI, c'est du lourd : les thérapies cellulaires imposent une logistique cryogénique ultra-contrainte, une traçabilité nominative renforcée et des délais de production qui se comptent en semaines. Pour l'officine de ville, l'impact est plus indirect : mais ce sont potentiellement tes patients hémato, tes patients greffés, qui bénéficieront de ce type de traitement dans quelques années si l'EMA suit le mouvement.\n\nCôté Europe justement, aucune demande d'AMM centralisée n'a encore été annoncée publiquement pour Tregzi. L'EMA a ses propres critères, et les thérapies de médicaments de thérapie innovante (MTI) passent par le CAT. Ça prend du temps. Mais la dynamique est lancée.\n\nDemain matin au comptoir : pas d'impact immédiat, mais garde un oeil sur la suite EMA. Le pipeline Treg pourrait rebattre les cartes en hémato dans les 3 à 5 ans.",
+      "source": "MedCity News",
+      "source_url": "https://medcitynews.com/2026/07/orca-bio-treg-cell-therapy-tregzi-blood-cancer-leukemia-graft-versus-host-disease-gvhd/",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/img_actu_2026_07_02_2.jpg",
+      "tags": [
+        "fda",
+        "therapie-cellulaire",
+        "innovation",
+        "hematologie",
+        "recherche"
+      ]
+    },
+    {
+      "id": "actu_2026_07_02_1",
+      "date": "2026-07-02",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "Gardénal en tension jusqu'en octobre : ce que tu dois faire dès maintenant",
+      "resume": "Le phénobarbital 50 mg est contingentéen ville et à l'hôpital, avec un risque réel de rupture de stock. Le retour à la normale n'est pas attendu avant octobre 2026. Tes patients épileptiques sous Gardénal ne peuvent pas attendre.",
+      "full_text": "Phénobarbital 50 mg, tension d'approvisionnement, contingentement quantitatif. Trois mots qui font froid dans le dos quand on parle d'un antiépileptique de référence.\n\nL'ANSM l'a confirmé : Gardénal 50 mg comprimé est en difficulté depuis juin 2026, pour des raisons industrielles chez le fabricant. Le retour à la normale est prévu en octobre 2026. Soit au moins quatre mois de navigation à vue.\n\nConcrètement, ça veut dire quoi au comptoir ? Le contingentement est actif en ville ET à l'hôpital. Tu ne peux pas commander librement. Les quantités livrées sont limitées et rationalisées. Si tu as des patients chroniques sous Gardénal, tu dois anticiper maintenant, pas dans trois semaines.\n\nLe phénobarbital, c'est pas un traitement qu'on switche à la légère. C'est un antiépileptique de longue date, avec un profil pharmacocinétique particulier, une marge thérapeutique étroite et des patients souvent stabilisés depuis des années. Toute rupture non anticipée peut avoir des conséquences graves, y compris un risque de crise.\n\nLes réflexes à avoir dès aujourd'hui : identifier tes patients chroniques sous Gardénal via le DP, prendre contact avec eux proactivement, alerter leur neurologue ou médecin traitant pour une concertation sur la gestion du stock disponible. Ne pas attendre qu'ils se présentent en urgence avec une ordonnance et un stock à zéro.\n\nDu côté de l'approvisionnement, reste en contact avec ton grossiste pour connaître les allocations hebdomadaires. Ne sur-stocke pas au détriment d'autres officines, le contingentement est là pour une répartition équitable. Joue le jeu.\n\nDernier point : si une alternative doit être envisagée, c'est une décision médicale, pas officinale. Ton rôle est d'alerter, de sécuriser le stock disponible et de coordonner. Le changement de molécule chez un épileptique stabilisé ne se fait qu'avec le prescripteur.\n\nDemain matin au comptoir : check ton stock, check ton DP, appelle les patients à risque. Octobre, c'est loin.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/therapeutique/vigilances/gardenal-tension-dapprovisionnement-et-retour-prevu-en-octobre-2026",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_07_02_1.jpg",
+      "tags": [
+        "rupture",
+        "ansm",
+        "epilepsie",
+        "officine",
+        "approvisionnement"
+      ]
+    },
+    {
+      "id": "lsv_2026_07_02",
+      "date": "2026-07-02",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? La première ambulance était tirée par des chevaux au galop",
+      "resume": "Avant le SAMU, avant les sirènes, avant même la notion d'urgence médicale... il y avait une charrette, deux chevaux, et un chirurgien qui avait compris que le temps, c'était la vie. L'histoire de l'ambulance est née sur les champs de bataille napoléoniens - et elle a tout changé.",
+      "full_text": "On est en 1793. Les batailles napoléoniennes font rage. Les blessés tombent par centaines sur le champ de bataille. Et là, immobiles, ils attendent. Pas quelques minutes. Des heures. Parfois toute une nuit. La règle militaire de l'époque, c'est simple : on ramasse les blessés APRÈS le combat. Pas pendant.\n\nDominique Jean Larrey, chirurgien en chef de la Grande Armée, trouve ça proprement scandaleux. Ce Gascon de 27 ans regarde ses soldats mourir de gangrène et d'hémorragie faute de soins rapides. Il calcule, il observe, et il arrive à une conclusion révolutionnaire : chaque heure perdue double le risque de mort.\n\nAlors il invente quelque chose d'inédit : des « ambulances volantes ». Pas des véhicules de transport, attention. De véritables unités médicales mobiles, montées sur des chariots légers à deux ou quatre roues, tirés par des chevaux lancés au galop, capables d'entrer sur le champ de bataille PENDANT les combats pour récupérer les blessés. Chirurgiens, infirmiers, matériel - tout embarqué, tout mobile, tout rapide.\n\nLe twist ? Larrey opérait parfois directement dans ces chariots en mouvement. Une amputation sur une route défoncée, au trot, sous les boulets. Il aurait réalisé plus de 200 amputations en 24 heures à la bataille de Wagram en 1809. Napoleon lui-même a dit de lui : « C'est l'homme le plus vertueux que j'aie connu. »\n\nCe concept - aller chercher le patient au lieu d'attendre qu'il arrive - c'est littéralement la naissance du secours préhospitalier. Tout ce qu'on fait aujourd'hui avec le SMUR, le SAMU, les équipes de réanimation embarquées... c'est l'héritage direct d'un chirurgien gascon qui n'acceptait pas de regarder mourir sans agir.\n\nLa prochaine fois qu'une ambulance passe en sirène devant ta pharmacie, pense à Larrey. Il y a 230 ans, il galopait déjà vers les blessés.",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_07_02.jpg",
+      "tags": [
+        "histoire",
+        "chirurgie",
+        "urgences",
+        "medecine-militaire",
+        "decouverte"
+      ]
+    },
+    {
       "id": "actu_2026_07_01_5",
       "date": "2026-07-01",
       "type": "actu",
@@ -8724,6 +8849,6 @@
       ]
     }
   ],
-  "count": 422,
-  "updated_at": "2026-07-01T12:38:51.508321+02:00"
+  "count": 428,
+  "updated_at": "2026-07-02T04:09:22.802151+02:00"
 }

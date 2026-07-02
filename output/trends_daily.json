@@ -1,64 +1,64 @@
 {
-  "generated_at": "2026-07-01",
-  "window_label": "25 juin au 1 juil. 2026",
+  "generated_at": "2026-07-02",
+  "window_label": "26 juin au 2 juil. 2026",
   "has_history": true,
   "delta_source": "pytrends_rising",
   "pathologies": [
     {
-      "display": "Allergie piqure de guepe",
-      "delta_label": "↑ 22 900",
-      "trend": "up"
-    },
-    {
-      "display": "Allergie au piqure de moustique",
-      "delta_label": "↑ 13 100",
-      "trend": "up"
-    },
-    {
       "display": "Fatigue après canicule",
-      "delta_label": "↑ 11 200",
+      "delta_label": "↑ 22 550",
       "trend": "up"
     },
     {
-      "display": "Piqure taon allergie",
-      "delta_label": "↑ 11 100",
+      "display": "Allergie acariens symptômes",
+      "delta_label": "↑ 15 500",
       "trend": "up"
     },
     {
-      "display": "Allergie au soleil symptômes",
-      "delta_label": "↑ 11 050",
+      "display": "How to fix fatigue",
+      "delta_label": "↑ 13 750",
+      "trend": "up"
+    },
+    {
+      "display": "Allergie au soleil photo",
+      "delta_label": "↑ 12 150",
+      "trend": "up"
+    },
+    {
+      "display": "Seipa allergie",
+      "delta_label": "↑ 11 300",
       "trend": "up"
     }
   ],
   "soins": [
     {
-      "display": "C'est pas sorcier digestion",
-      "delta_label": "↑ 50 250",
+      "display": "Immunite familiale",
+      "delta_label": "↑ 375 850",
       "trend": "up"
     },
     {
-      "display": "Temps digestion estomac",
-      "delta_label": "↑ 46 250",
+      "display": "Melon digestion",
+      "delta_label": "↑ 57 000",
       "trend": "up"
     },
     {
-      "display": "Bicarbonate alimentaire digestion",
-      "delta_label": "↑ 41 300",
+      "display": "Immunite diplomatique",
+      "delta_label": "↑ 49 000",
       "trend": "up"
     },
     {
-      "display": "Temps de digestion des aliments",
-      "delta_label": "↑ 37 100",
+      "display": "Digestion difficile que prendre",
+      "delta_label": "↑ 39 600",
       "trend": "up"
     },
     {
-      "display": "Pois chiche digestion",
-      "delta_label": "↑ 27 650",
+      "display": "Massage ventre digestion",
+      "delta_label": "↑ 29 950",
       "trend": "up"
     }
   ],
   "pathologies_stale": false,
-  "pathologies_from": "2026-07-01",
+  "pathologies_from": "2026-07-02",
   "soins_stale": false,
-  "soins_from": "2026-07-01"
+  "soins_from": "2026-07-02"
 }

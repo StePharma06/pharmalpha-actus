@@ -1,0 +1,47 @@
+{
+  "generated_at": "2026-07-02T04:09:18.196122+02:00",
+  "run_date": "2026-07-02",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Gardénal en tension jusqu'en octobre : ce que tu dois faire dès maintenant",
+      "resume": "Le phénobarbital 50 mg est contingentéen ville et à l'hôpital, avec un risque réel de rupture de stock. Le retour à la normale n'est pas attendu avant octobre 2026. Tes patients épileptiques sous Gardénal ne peuvent pas attendre.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/therapeutique/vigilances/gardenal-tension-dapprovisionnement-et-retour-prevu-en-octobre-2026",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "Cannabinoïdes de synthèse : 500 intoxications graves, tes ados sont en première ligne",
+      "resume": "Depuis début 2025, environ 500 cas d'intoxications aux cannabinoïdes de synthèse ont été recensés en France, principalement via des e-liquides. Les 13-18 ans sont les plus touchés et près des trois quarts des cas sont graves. La DGS sonne l'alerte.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/flambee-dintoxications-aux-cannabinoides-de-synthese",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "MGEN bascule 300 000 patients vers Viamedis : ton tiers payant complémentaire est-il prêt ?",
+      "resume": "Ce 1er juillet 2026, la MGEN finalise sa 4e et dernière vague de migration vers Viamedis. 300 000 bénéficiaires supplémentaires concernés. Si ton paramétrage n'est pas à jour, c'est du tiers payant rejeté - et du cash qui manque en caisse.",
+      "source": "Pharm'Actus · FSPF — MGEN : dernière bascule complémentaire vers Viamedis au 1er juillet 2026",
+      "source_url": "https://www.fspf.fr/mgen-derniere-bascule-complementaire-vers-viamedis-au-1er-juillet-2026/",
+      "confidence_score": 0.62,
+      "warnings": [
+        "Le chiffre de 4,2 millions de bénéficiaires MGEN est une estimation publique couramment citée mais à vérifier sur le rapport annuel MGEN le plus récent.",
+        "Les chiffres de passages/an par patient MGEN et de ticket modérateur moyen sont des estimations de consultation terrain — aucune source officielle ne publie ces données désagrégées par mutuelle.",
+        "Le délai de régularisation de 45 jours est un retour terrain non sourcé officiellement : à considérer comme ordre de grandeur.",
+        "Le nombre total d'officines (20 700) se réfère aux données DREES 2024 — à confirmer avec le dernier rapport disponible.",
+        "La description de la fusion Viamedis/Almerys est simplifiée : les deux plateformes restent distinctes opérationnellement, même si elles partagent un actionnariat commun depuis 2023. À nuancer selon les évolutions récentes.",
+        "Aucune position USPO ou UPGF n'a été trouvée sur ce sujet spécifique — non citées car le sujet est technique/opérationnel, pas syndical."
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}
