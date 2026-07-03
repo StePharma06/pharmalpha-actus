@@ -39,6 +39,36 @@ SCRIPT_DIR = Path(__file__).parent
 ROOT_DIR = SCRIPT_DIR.parent
 ARTICLES_JSON = ROOT_DIR / "articles.json"
 
+# Garde anti-doublon HEBDOMADAIRE : 3 declencheurs (workflow_run, cron-job.org,
+# schedule) peuvent tirer le meme vendredi -> triple email (incident 2026-07-03).
+# On n'envoie qu'UNE fois par semaine ISO, quel que soit le nombre de declencheurs.
+LINKEDIN_SENT_FILE = ROOT_DIR / "output" / "linkedin_newsletter_sent.json"
+
+
+def _iso_week(dt):
+    y, w, _ = dt.isocalendar()
+    return f"{y}-W{w:02d}"
+
+
+def linkedin_already_sent_this_week():
+    week = _iso_week(datetime.now(PARIS_TZ))
+    if LINKEDIN_SENT_FILE.exists():
+        try:
+            return json.loads(LINKEDIN_SENT_FILE.read_text(encoding="utf-8")).get("week") == week
+        except Exception:
+            return False
+    return False
+
+
+def mark_linkedin_sent():
+    week = _iso_week(datetime.now(PARIS_TZ))
+    LINKEDIN_SENT_FILE.parent.mkdir(exist_ok=True)
+    LINKEDIN_SENT_FILE.write_text(
+        json.dumps({"week": week, "sent_at": datetime.now(PARIS_TZ).isoformat()}),
+        encoding="utf-8",
+    )
+
+
 LOOKBACK_DAYS = 7
 SITE_URL = "https://actus.pharmalpha.fr"
 
@@ -875,6 +905,12 @@ def main():
     today = datetime.now(PARIS_TZ)
     print(f"  Date: {today.strftime('%Y-%m-%d %H:%M')} (Semaine W{today.isocalendar()[1]})")
 
+    # Anti-doublon : si la newsletter a deja ete generee cette semaine, on s'arrete
+    # (evite le triple envoi du vendredi, plusieurs declencheurs -> 1 seul email).
+    if linkedin_already_sent_this_week():
+        print(f"  [SKIP] Newsletter LinkedIn deja envoyee cette semaine ({_iso_week(today)}). Arret.")
+        return
+
     print("\n[1/5] Chargement articles.json...")
     articles = load_articles()
     print(f"  {len(articles)} articles charges")
@@ -907,6 +943,8 @@ def main():
 
     print("\n[5/5] Envoi email (newsletter + post associe + images + cover)...")
     send_newsletter_email(markdown, actus, lsv, companion_post=companion_post)
+    mark_linkedin_sent()
+    print(f"  [SENT-MARK] Newsletter LinkedIn marquee comme envoyee ({_iso_week(today)})")
 
     print("\n=== Termine ===")
 

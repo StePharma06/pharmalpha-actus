@@ -2,68 +2,56 @@ name: LinkedIn Newsletter Weekly
 
 on:
   # 1. Déclencheur primaire : cron-job.org (fiable, heure exacte)
-  #    POST https://api.github.com/repos/StePharma06/pharmalpha-actus/dispatches
-  #    body: {"event_type":"send-linkedin-newsletter"}   — chaque vendredi 05h00 UTC
+  #    POST .../dispatches  body: {"event_type":"send-linkedin-newsletter"}  vendredi 05h UTC
   repository_dispatch:
     types: [send-linkedin-newsletter]
 
-  # 2. Backup automatique : se déclenche après le daily-update du vendredi
-  #    Si cron-job.org rate ou que le repo_dispatch échoue, le workflow_run
-  #    prend le relai. Le job vérifie lui-même si c'est vendredi avant d'envoyer.
-  workflow_run:
-    workflows: ["Daily Actus Update"]
-    types: [completed]
-    branches: [master]
-
-  # 3. Cron GitHub natif (peu fiable mais conservé en ultime filet)
+  # 2. Filet de secours : cron GitHub natif (vendredi 05h UTC)
   schedule:
-    - cron: '0 5 * * 5'   # Vendredi 05h00 UTC = 07h00 Paris
+    - cron: '0 5 * * 5'
 
-  # 4. Lancement manuel possible depuis l'interface GitHub Actions
+  # 3. Lancement manuel
   workflow_dispatch:
+
+# IDEMPOTENCE : le script n'envoie qu'UNE fois par semaine ISO (marqueur
+# output/linkedin_newsletter_sent.json). Même si les 2 déclencheurs tirent le
+# même vendredi, un seul email part. (Le déclencheur workflow_run après chaque
+# daily-update a été retiré : il causait un triple envoi le vendredi.)
+
+permissions:
+  contents: write
 
 jobs:
   newsletter:
     runs-on: ubuntu-latest
-    if: |
-      github.event_name == 'workflow_dispatch' ||
-      github.event_name == 'schedule' ||
-      github.event_name == 'repository_dispatch' ||
-      (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success')
     steps:
-      # Pour le déclencheur workflow_run (qui tire tous les jours) :
-      # on vérifie que c'est vendredi avant de continuer.
-      - name: Vérification jour (workflow_run uniquement)
-        id: gate
-        run: |
-          EVENT="${{ github.event_name }}"
-          if [ "$EVENT" = "workflow_run" ]; then
-            DOW=$(date -u +%u)   # 1=Lun … 5=Ven … 7=Dim
-            if [ "$DOW" != "5" ]; then
-              echo "Pas vendredi (DOW=$DOW) — newsletter ignorée"
-              echo "skip=true" >> $GITHUB_OUTPUT
-            else
-              echo "skip=false" >> $GITHUB_OUTPUT
-            fi
-          else
-            echo "skip=false" >> $GITHUB_OUTPUT
-          fi
-
       - uses: actions/checkout@v4
-        if: steps.gate.outputs.skip != 'true'
 
       - uses: actions/setup-python@v5
-        if: steps.gate.outputs.skip != 'true'
         with:
           python-version: '3.12'
 
       - name: Install dependencies
-        if: steps.gate.outputs.skip != 'true'
         run: pip install anthropic pillow
 
       - name: Generate + send LinkedIn newsletter draft
-        if: steps.gate.outputs.skip != 'true'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
         run: python scripts/generate_linkedin_newsletter.py
+
+      - name: Persist weekly sent-marker
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add output/linkedin_newsletter_sent.json 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "Pas de marqueur à persister (déjà envoyé cette semaine, ou pas d'envoi)"
+          else
+            git commit -m "chore(linkedin): marqueur envoi hebdo $(date -u +%Y-%m-%d)"
+            for i in 1 2 3 4 5; do
+              if git push; then echo "push OK"; break; fi
+              git pull --rebase origin master || git rebase --abort
+              sleep 3
+            done
+          fi
