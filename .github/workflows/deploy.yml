@@ -3,6 +3,15 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [master]
+    # Ne deploie QUE sur un vrai changement de contenu du site. Les push qui ne
+    # touchent que le code/les workflows/les marqueurs ne changent pas le site
+    # -> pas de deploiement (evitait un "Deployment failed" inutile + course Pages).
+    paths-ignore:
+      - 'scripts/**'
+      - '.github/**'
+      - 'output/**'
+      - 'tiktok-renderer/**'
+      - '*.md'
   workflow_dispatch:
 
 permissions:
