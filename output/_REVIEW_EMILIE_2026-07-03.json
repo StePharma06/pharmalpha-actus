@@ -1,0 +1,58 @@
+{
+  "generated_at": "2026-07-03T04:13:23.320983+02:00",
+  "run_date": "2026-07-03",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "1,3 milliard d'economies sur les meds en 2027 : l'officine en premiere ligne, encore",
+      "resume": "La Cnam annonce 1,3 milliard d'euros d'economies sur les medicaments pour 2027. Cette fois, la cible n'est plus seulement le prix des boites : c'est la pertinence des prescriptions et la deprescription qui sont dans le viseur. Et devinez qui va devoir gerer ca au comptoir ?",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/13-milliard-deuros-deconomies-sur-les-medicaments-jusquou-les-officines-pourront-elles-encaisser",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Vaccins grippe en cabinet medical : les medecins stockeurs, et nous dans tout ca ?",
+      "resume": "Des la campagne vaccinale d'octobre 2026, medecins generalistes, infirmiers et sages-femmes pourront stocker directement des doses de vaccins grippe et Covid dans leur cabinet. Une annonce de la Cnam qui fait reagir les pharmaciens d'officine, et pour cause.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/politique-de-sante/grippe-les-medecins-autorises-stocker-les-vaccins-des-cet-automne",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "avenir_pharma",
+      "titre": "Ebola Bundibugyo en RDC : 400 morts, zero traitement, un essai clinique qui demarre",
+      "resume": "L'epidemie d'Ebola qui sevit en RDC depuis mai 2026 franchit la barre des 400 morts. Causee par le virus Bundibugyo, pour lequel il n'existe ni vaccin ni traitement valide, elle oblige la communaute scientifique a agir vite. Un essai clinique vient de debuter sur place avec le soutien de l'OMS.",
+      "source": "France Info Sante",
+      "source_url": "https://www.franceinfo.fr/sante/maladie/ebola/un-essai-clinique-portant-sur-deux-traitements-contre-ebola-a-commence-jeudi-en-rdc-annonce-l-oms_8090657.html",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Rapport AM 2026 : 3,9 Mds d'économies visés - l'officine doit se positionner maintenant",
+      "resume": "Le rapport annuel « Charges et produits » de l'Assurance Maladie vient de poser ses jalons pour 2030 : 3,9 milliards d'euros d'économies annuelles jugées « nécessaires ». Derrière les mesures tabac et Nutri-Score, il y a une architecture de maîtrise des dépenses qui te concerne d...",
+      "source": "Pharm'Actus · Le Monde Santé — L'Assurance-maladie plaide pour une interdiction de la vente de cigarettes aux personnes nées après 2009, Rapport annuel Charges et Produits 2026 — CNAM (référence de fond)",
+      "source_url": "https://www.lemonde.fr/societe/article/2026/07/02/l-assurance-maladie-plaide-pour-l-interdiction-definitive-de-la-vente-de-cigarettes-aux-personnes-nees-apres-2009-et-propose-l-etiquetage-obligatoire-de-nutri-score-ainsi-que-des-produits-ultratransformes_6718191_3224.html",
+      "confidence_score": 0.68,
+      "warnings": [
+        "Le chiffre de 120 millions d'euros de ventes de substituts nicotiniques en officine est une estimation de marché couramment citée mais à vérifier sur les dernières données IQVIA/CNAM disponibles.",
+        "Le chiffre de 40 % des ventes remboursées représentées par cardiovasculaire + antidiabétiques + oncologie est une approximation basée sur les données structurelles du marché officinal — à affiner avec les données GERS/CNAM les plus récentes.",
+        "Le rapport complet 'Charges et Produits 2026' de la CNAM n'a pas été consulté directement : l'analyse repose sur l'article du Monde Santé qui en restitue les grandes lignes. Les détails du rapport pourraient nuancer ou enrichir l'analyse.",
+        "Le montant du forfait sevrage tabagique (150 €/an) est exact depuis sa revalorisation, mais vérifier s'il a été modifié par un avenant conventionnel postérieur à 2024.",
+        "La mention 'aucune référence explicite à l'honoraire de dispensation dans ce rapport' est inférée depuis l'article secondaire et non confirmée par lecture directe du rapport CNAM.",
+        "Aucun syndicat (FSPF, USPO) n'a encore réagi publiquement à ce rapport au moment de la rédaction — pas de position syndicale à citer, conformément aux règles d'équilibre syndical."
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

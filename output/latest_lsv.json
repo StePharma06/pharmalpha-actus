@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? La première ambulance était tirée par des chevaux au galop",
-  "resume": "Avant le SAMU, avant les sirènes, avant même la notion d'urgence médicale... il y avait une charrette, deux chevaux, et un chirurgien qui avait compris que le temps, c'était la vie. L'histoire de l'ambulance est née sur les champs de bataille napoléoniens - et elle a tout changé.",
-  "full_text": "On est en 1793. Les batailles napoléoniennes font rage. Les blessés tombent par centaines sur le champ de bataille. Et là, immobiles, ils attendent. Pas quelques minutes. Des heures. Parfois toute une nuit. La règle militaire de l'époque, c'est simple : on ramasse les blessés APRÈS le combat. Pas pendant.\n\nDominique Jean Larrey, chirurgien en chef de la Grande Armée, trouve ça proprement scandaleux. Ce Gascon de 27 ans regarde ses soldats mourir de gangrène et d'hémorragie faute de soins rapides. Il calcule, il observe, et il arrive à une conclusion révolutionnaire : chaque heure perdue double le risque de mort.\n\nAlors il invente quelque chose d'inédit : des « ambulances volantes ». Pas des véhicules de transport, attention. De véritables unités médicales mobiles, montées sur des chariots légers à deux ou quatre roues, tirés par des chevaux lancés au galop, capables d'entrer sur le champ de bataille PENDANT les combats pour récupérer les blessés. Chirurgiens, infirmiers, matériel - tout embarqué, tout mobile, tout rapide.\n\nLe twist ? Larrey opérait parfois directement dans ces chariots en mouvement. Une amputation sur une route défoncée, au trot, sous les boulets. Il aurait réalisé plus de 200 amputations en 24 heures à la bataille de Wagram en 1809. Napoleon lui-même a dit de lui : « C'est l'homme le plus vertueux que j'aie connu. »\n\nCe concept - aller chercher le patient au lieu d'attendre qu'il arrive - c'est littéralement la naissance du secours préhospitalier. Tout ce qu'on fait aujourd'hui avec le SMUR, le SAMU, les équipes de réanimation embarquées... c'est l'héritage direct d'un chirurgien gascon qui n'acceptait pas de regarder mourir sans agir.\n\nLa prochaine fois qu'une ambulance passe en sirène devant ta pharmacie, pense à Larrey. Il y a 230 ans, il galopait déjà vers les blessés.",
-  "image_keywords": "napoleonic military ambulance",
+  "titre": "Le saviez-vous ? La vitamine C a été découverte grâce à des cobayes chanceux",
+  "resume": "Pendant des siècles, le scorbut tuait en silence sans que personne ne comprenne pourquoi. La réponse était dans l'assiette. Et c'est un médecin de marine obsessionnel, quelques citrons et des cobayes qui ont tout changé.",
+  "full_text": "En 1747, un chirurgien de la Royal Navy du nom de James Lind embarque sur le HMS Salisbury avec une idée fixe : comprendre pourquoi ses marins meurent à vue d'œil, les gencives en sang, les dents qui tombent, les jambes qui lâchent.\n\nIl mène ce qu'on considère aujourd'hui comme l'un des tout premiers essais cliniques contrôlés de l'histoire. Douze marins atteints de scorbut, répartis en six groupes. Chaque groupe reçoit un traitement différent : vinaigre, eau de mer, cidre, ail, élixir de sulfate... et pour les deux chanceux du dernier groupe, des oranges et des citrons.\n\nRésultat en six jours : les deux gars aux agrumes sont debout et prêts à reprendre le travail. Les autres continuent à se décomposer lentement. Lind a trouvé la solution - mais il ne sait pas encore pourquoi ça marche.\n\nLe twist ? Il faudra attendre 1932, soit près de deux siècles, pour qu'Albert Szent-Györgyi isole enfin la molécule responsable : l'acide ascorbique, que le biochimiste américain Charles Glen King baptise vitamine C. Et le cobaye dans tout ça ? C'est le seul mammifère courant, avec le cochon d'Inde et quelques primates, qui ne fabrique pas lui-même sa vitamine C. Ce qui en fait l'animal de labo parfait pour étudier le scorbut. Sans lui, la découverte aurait encore traîné.\n\nCe qui est dingue, c'est qu'on avait la réponse empirique depuis Lind, mais sans la comprendre. Pendant 185 ans, des marins sont morts alors que la solution coûtait trois sous le filet.\n\nAujourd'hui, au comptoir, quand tu conseilles de la vitamine C en hiver ou pour une convalescence, rappelle-toi que derrière ce comprimé effervescent banal se cache deux siècles de tâtonnements, quelques citrons et un cobaye qui mérite bien sa médaille.",
+  "image_keywords": "vitamin C citrus laboratory",
   "tags": [
     "histoire",
-    "chirurgie",
-    "urgences",
-    "medecine-militaire",
-    "decouverte"
+    "decouverte",
+    "vitamine",
+    "chimie",
+    "epidemie"
   ],
-  "date": "2026-07-02",
+  "date": "2026-07-03",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",
