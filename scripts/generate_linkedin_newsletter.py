@@ -607,6 +607,92 @@ def build_email_attachments(actus, lsv):
     return attachments
 
 
+def _extract_newsletter_parts(markdown):
+    """Parse la sortie markdown du generateur en parties PRETES A COLLER :
+    {titre, soustitre, corps, hashtags}. Le corps contient des reperes [IMAGE 0X]
+    la ou Stephen insere les images. Retourne None si structure inattendue (fallback)."""
+    md = (markdown or "").strip()
+    # Retire le fence externe ```markdown ... ``` s'il enveloppe tout
+    if md.startswith("```"):
+        nl = md.find("\n")
+        md = md[nl + 1:] if nl != -1 else md
+        if md.rstrip().endswith("```"):
+            md = md.rstrip()[:-3]
+    lines = md.split("\n")
+    n = len(lines)
+
+    def next_fence(start):
+        j = start
+        while j < n and lines[j].strip() != "```":
+            j += 1
+        return j if j < n else -1
+
+    def read_fence(open_idx):
+        buf, j = [], open_idx + 1
+        while j < n and lines[j].strip() != "```":
+            buf.append(lines[j])
+            j += 1
+        return "\n".join(buf).strip(), j + 1
+
+    titre = soustitre = hashtags = ""
+    corps_parts = []
+    i = 0
+    while i < n:
+        s = lines[i].strip()
+        if s.startswith("## TITRE"):
+            f = next_fence(i + 1)
+            if f != -1:
+                titre, i = read_fence(f); continue
+        elif s.startswith("## SOUS-TITRE") or s.startswith("## SOUSTITRE"):
+            f = next_fence(i + 1)
+            if f != -1:
+                soustitre, i = read_fence(f); continue
+        elif s.startswith("### Bloc"):
+            f = next_fence(i + 1)
+            if f != -1:
+                content, i = read_fence(f)
+                if content:
+                    corps_parts.append(content)
+                continue
+        elif s.startswith("### Image"):
+            m = re.search(r"Image\s*0?(\d+)", s)
+            if m:
+                corps_parts.append(f"[IMAGE {int(m.group(1)):02d}]")
+        elif s.startswith("## Hashtag") or s.startswith("## HASHTAG"):
+            f = next_fence(i + 1)
+            if f != -1:
+                hashtags, i = read_fence(f); continue
+        i += 1
+
+    corps = "\n\n".join(p for p in corps_parts if p.strip())
+    if not (titre and corps):
+        return None
+    return {"titre": titre, "soustitre": soustitre, "corps": corps, "hashtags": hashtags}
+
+
+def _corps_to_html(corps):
+    """Rend le corps en paragraphes HTML (sauts de ligne preserves au copier-coller),
+    Unicode bold conserve tel quel, **gras** -> <strong>, reperes [IMAGE 0X] stylises."""
+    def esc(t):
+        return t.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+    out = []
+    for para in corps.split("\n\n"):
+        para = para.strip()
+        if not para:
+            continue
+        mimg = re.match(r"^\[IMAGE (\d+)\]$", para)
+        if mimg:
+            out.append(
+                f'<p style="margin:16px 0;padding:8px 12px;background:#eef2ff;border:1px dashed #6366f1;'
+                f'border-radius:6px;color:#4338ca;font-weight:700;font-size:13px;">'
+                f'\U0001F4F7 Insère ici l\'IMAGE {mimg.group(1)}</p>')
+            continue
+        p = esc(para).replace("\n", "<br>")
+        p = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", p)
+        out.append(f'<p style="margin:0 0 14px;line-height:1.55;">{p}</p>')
+    return "\n".join(out)
+
+
 def send_newsletter_email(markdown, actus, lsv, companion_post=""):
     """Send the newsletter draft by email with images attached + companion feed post."""
     api_key = os.environ.get("BREVO_API_KEY", "")
@@ -622,6 +708,45 @@ def send_newsletter_email(markdown, actus, lsv, companion_post=""):
 
     # HTML wrapper around the markdown (preformatted, copyable)
     md_escaped = markdown.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+    # Version PRETE A COLLER : titre + sous-titre + corps rendu en paragraphes HTML
+    # (sauts de ligne conserves au copier-coller) + reperes d'images. Stephen colle
+    # le corps tel quel dans LinkedIn et insere les images aux reperes.
+    parts = _extract_newsletter_parts(markdown)
+    paste_ready_section = ""
+    if parts:
+        def _esc(t):
+            return t.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+        corps_html = _corps_to_html(parts["corps"])
+        hashtags_box = ""
+        if parts.get("hashtags"):
+            hashtags_box = (
+                '<tr><td style="padding:0 28px 20px;">'
+                '<p style="margin:0 0 4px;font-size:12px;font-weight:700;color:#888;">HASHTAGS (à mettre en 1er commentaire)</p>'
+                f'<div style="border:1px solid #d0d7de;border-radius:8px;padding:10px 16px;font-size:13px;color:#1a1a1a;user-select:all;">{_esc(parts["hashtags"])}</div>'
+                '</td></tr>'
+            )
+        paste_ready_section = f'''
+  <tr><td style="padding:24px 28px 6px;">
+    <h2 style="font-size:17px;margin:0 0 6px;color:#0a66c2;">✅ Version prête à coller (gain de temps)</h2>
+    <p style="margin:0 0 14px;font-size:13px;color:#555;line-height:1.5;">Colle chaque cadre <strong>tel quel</strong> dans LinkedIn (les sauts de ligne sont conservés). Aux repères <span style="color:#4338ca;font-weight:700;">📷</span>, insère l'image correspondante (pièces jointes 01 à 07, + la couverture 00 en tête).</p>
+  </td></tr>
+  <tr><td style="padding:0 28px 10px;">
+    <p style="margin:0 0 4px;font-size:12px;font-weight:700;color:#888;">TITRE (champ « Titre » de l'article)</p>
+    <div style="border:1px solid #d0d7de;border-radius:8px;padding:12px 16px;font-size:16px;font-weight:700;color:#1a1a1a;user-select:all;">{_esc(parts["titre"])}</div>
+  </td></tr>
+  <tr><td style="padding:0 28px 10px;">
+    <p style="margin:0 0 4px;font-size:12px;font-weight:700;color:#888;">SOUS-TITRE</p>
+    <div style="border:1px solid #d0d7de;border-radius:8px;padding:12px 16px;font-size:14px;color:#1a1a1a;user-select:all;">{_esc(parts.get("soustitre",""))}</div>
+  </td></tr>
+  <tr><td style="padding:0 28px 18px;">
+    <p style="margin:0 0 4px;font-size:12px;font-weight:700;color:#888;">CORPS DE L'ARTICLE — sélectionne tout ce cadre, copie, colle dans LinkedIn</p>
+    <div style="border:2px solid #0a66c2;border-radius:10px;padding:18px 20px;font-size:15px;color:#1a1a1a;user-select:all;">{corps_html}</div>
+  </td></tr>
+  {hashtags_box}
+  <tr><td style="padding:0 28px 8px;"><div style="border-top:1px solid #e5e5e5;"></div></td></tr>
+'''
+
     companion_escaped = (companion_post or "").replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
     companion_section = ""
     if companion_post:
@@ -652,12 +777,12 @@ def send_newsletter_email(markdown, actus, lsv, companion_post=""):
 
   <tr><td style="padding:20px 28px 12px;background:#fff7ed;border-bottom:1px solid #fdba74;">
     <p style="margin:0;font-size:13px;color:#92400e;line-height:1.5;">
-      <strong>⚠️ Brouillon</strong> — Relis tout, ajuste si besoin. <strong>RIEN n'est publie automatiquement.</strong> Tu copies/colles bloc par bloc lundi matin sur LinkedIn.
+      <strong>⚠️ Brouillon</strong> — Relis, ajuste si besoin. <strong>RIEN n'est publié automatiquement.</strong> Utilise la « Version prête à coller » ci-dessous : titre, sous-titre, corps → tu colles tel quel et tu insères les images aux repères 📷.
     </p>
   </td></tr>
-
+{paste_ready_section}
   <tr><td style="padding:24px 28px 8px;">
-    <h2 style="font-size:16px;margin:0 0 8px;color:#1a1a1a;">📋 Procedure rapide</h2>
+    <h2 style="font-size:16px;margin:0 0 8px;color:#1a1a1a;">📋 Procédure (rappel)</h2>
     <ol style="margin:0;padding-left:20px;font-size:13px;color:#555;line-height:1.7;">
       <li>LinkedIn → "Publier dans Pharm'Actus" (newsletter existante)</li>
       <li>Copie le <strong>TITRE</strong> et le <strong>SOUS-TITRE</strong> en haut</li>
@@ -672,7 +797,7 @@ def send_newsletter_email(markdown, actus, lsv, companion_post=""):
   </td></tr>
 
   <tr><td style="padding:16px 28px 28px;">
-    <h2 style="font-size:16px;margin:0 0 12px;color:#1a1a1a;">📝 Markdown complet (a copier dans LinkedIn)</h2>
+    <h2 style="font-size:16px;margin:0 0 12px;color:#888;">📄 Version markdown brute (secours, si besoin)</h2>
     <div style="background:#f8fafc;border:2px solid #0a66c2;border-radius:12px;padding:24px;font-family:'Segoe UI',system-ui,sans-serif;font-size:13px;color:#1a1a1a;line-height:1.6;white-space:pre-wrap;word-wrap:break-word;user-select:all;">{md_escaped}</div>
   </td></tr>
 {companion_section}
