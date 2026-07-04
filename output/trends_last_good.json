@@ -1,58 +1,58 @@
 {
   "pathologies": [
     {
-      "display": "Fatigue après canicule",
-      "delta_label": "↑ 22 550",
+      "display": "Seipa allergie",
+      "delta_label": "↑ 30 250",
       "trend": "up"
     },
     {
-      "display": "Allergie acariens symptômes",
-      "delta_label": "↑ 15 500",
+      "display": "Fatigue après canicule",
+      "delta_label": "↑ 22 600",
       "trend": "up"
     },
     {
       "display": "How to fix fatigue",
-      "delta_label": "↑ 13 750",
+      "delta_label": "↑ 18 850",
       "trend": "up"
     },
     {
-      "display": "Allergie au soleil photo",
-      "delta_label": "↑ 12 150",
+      "display": "Allergie acariens symptômes",
+      "delta_label": "↑ 15 600",
       "trend": "up"
     },
     {
-      "display": "Seipa allergie",
-      "delta_label": "↑ 11 300",
+      "display": "Allergie nectarine",
+      "delta_label": "↑ 14 600",
       "trend": "up"
     }
   ],
-  "pathologies_from": "2026-07-03",
+  "pathologies_from": "2026-07-04",
   "soins": [
     {
+      "display": "Chaleur et digestion",
+      "delta_label": "↑ 49 450",
+      "trend": "up"
+    },
+    {
+      "display": "What causes poor digestion",
+      "delta_label": "↑ 49 150",
+      "trend": "up"
+    },
+    {
+      "display": "C'est pas sorcier digestion",
+      "delta_label": "↑ 36 900",
+      "trend": "up"
+    },
+    {
       "display": "Immunite familiale",
-      "delta_label": "↑ 375 850",
+      "delta_label": "↑ 30 900",
       "trend": "up"
     },
     {
-      "display": "Melon digestion",
-      "delta_label": "↑ 57 000",
-      "trend": "up"
-    },
-    {
-      "display": "Immunite diplomatique",
-      "delta_label": "↑ 49 000",
-      "trend": "up"
-    },
-    {
-      "display": "Digestion difficile que prendre",
-      "delta_label": "↑ 39 600",
-      "trend": "up"
-    },
-    {
-      "display": "Massage ventre digestion",
-      "delta_label": "↑ 29 950",
+      "display": "Sante-maison.fr sommeil et récupération",
+      "delta_label": "↑ 28 400",
       "trend": "up"
     }
   ],
-  "soins_from": "2026-07-03"
+  "soins_from": "2026-07-04"
 }

@@ -1,6 +1,131 @@
 {
   "articles": [
     {
+      "id": "actu_2026_07_04_5",
+      "date": "2026-07-04",
+      "type": "actu",
+      "categorie": "business_officine",
+      "titre": "Officines en territoire fragile : des coefficients majorés pour survivre ?",
+      "resume": "L'UPGF monte au créneau et propose des coefficients de rémunération spécifiques pour les officines implantées en zones sous-dotées. Derrière la mesure, un enjeu de survie économique pour plusieurs centaines de pharmacies.",
+      "full_text": "L'UPGF monte au créneau et propose des coefficients de rémunération spécifiques pour les officines implantées en zones sous-dotées. Derrière la mesure, un enjeu de survie économique pour plusieurs centaines de pharmacies.\n\n**Contexte**\n\nDepuis plusieurs années, la désertification pharmaceutique progresse silencieusement. Selon les données de l'Ordre national des pharmaciens, la France comptait 20 614 officines au 1er janvier 2025, contre plus de 22 000 il y a dix ans, soit une perte nette d'environ 1 400 officines en une décennie. Les zones rurales et les quartiers prioritaires de la politique de la ville (QPV) sont les premières victimes : certains bassins de vie dépassent désormais le seuil critique de 3 500 habitants par officine, voire plus, sans qu'aucune compensation économique structurelle ne soit prévue par la convention pharmaceutique actuelle. C'est dans ce contexte que l'UPGF (Union des Pharmaciens de Groupements en France) publie le 3 juillet 2026 une position formelle demandant la mise en place de 'coefficients spécifiques pour les territoires fragiles'. L'idée : moduler la rémunération officinale à la hausse pour les structures dont le modèle économique est structurellement défavorable du fait de leur localisation géographique, indépendamment de la qualité de leur gestion.\n\n**Analyse business**\n\nLe raisonnement de l'UPGF est simple et économiquement solide : une officine en zone rurale isolée supporte les mêmes charges fixes qu'une officine urbaine (loyer normé, masse salariale, système informatique, télétransmission, maintien des horaires d'ouverture réglementaires) mais avec un volume d'actes 2 à 3 fois inférieur. Le chiffre d'affaires médian d'une officine en zone rurale fragile tourne autour de 700 000 à 900 000 € TTC annuels, contre 1,8 M€ pour la médiane nationale (source : CERP Rouen / analyses économiques sectorielles). Sur ces petits volumes, la marge brute dégagée après honoraires ne couvre parfois pas les 2 équivalents temps plein minimum requis pour tenir les horaires réglementaires, sans parler de l'investissement numérique (dossier pharmaceutique partagé, ordonnance numérique, etc.).\n\nLa piste des coefficients majorateurs n'est pas inédite : le secteur médical connaît déjà les majorations de déplacement en zone sous-dotée (majoration MDE, OPTAM) et les aides à l'installation conventionnelles pour les médecins. Le modèle pourrait techniquement s'appliquer à l'officine via un avenant à la convention pharmaceutique, en modulant soit l'honoraire de dispensation (actuellement fixé à 1,02 € par ordonnance pour les médicaments remboursés, hors bilans partagés et entretiens), soit via une dotation forfaitaire annuelle de maintien en zone fragile.\n\nChiffre clé : selon la DREES (rapport 2024 sur l'accès aux soins), environ 5,4 millions de Français vivent dans une commune sans officine à moins de 10 minutes, un chiffre en hausse de 8 % depuis 2020. Si 300 à 400 officines fragilisées fermaient dans les 3 prochaines années faute de rentabilité suffisante, ce chiffre exploserait.\n\nPositions syndicales : l'UPGF est le premier syndicat à formuler une demande aussi précise sur les coefficients territoriaux à cette date. À ce jour, la FSPF n'a pas publié de prise de position formelle sur ce mécanisme spécifique, bien qu'elle défende globalement la revalorisation des honoraires. L'USPO, de son côté, a davantage axé ses dernières communications sur la question des stocks de vaccins et des missions de santé publique. Aucun des deux syndicats n'a, à ce stade, contredit la proposition de l'UPGF, mais aucun n'y a non plus apporté de soutien public explicite.\n\n**Recommandations actionnables**\n\n1. Diagnostique ta situation géographique - Vérifie si ton officine est classée en zone sous-dotée, QPV ou ZRR (Zone de Revitalisation Rurale) via le site de l'ARS ou l'outil de cartographie de l'Ordre. Ce classement conditionne ton éligibilité à tout futur dispositif de majoration.\n\n2. Documente tes charges fixes incompressibles - Prépare dès maintenant un tableau de bord économique clair (charges/CA/honoraires perçus). Si une négociation conventionnelle s'ouvre sur les coefficients territoriaux, les syndicats auront besoin de données terrain agrégées. Partage-les à ta délégation syndicale régionale.\n\n3. Mobilise-toi via ton syndicat - Quelle que soit ton appartenance (FSPF, USPO, UPGF), interpelle tes représentants pour qu'ils portent ce dossier à la table de la prochaine négociation conventionnelle avec l'Assurance Maladie.\n\n4. Explore les aides existantes dès maintenant - Certaines ARS proposent déjà des contrats d'amélioration de l'accès aux soins (CAQES adaptés) ou des fonds régionaux de soutien. Ne pas attendre un hypothétique avenant national.\n\n5. Anticipe la diversification de tes revenus - En zone fragile, les missions de santé publique (vaccination, dépistage, accompagnement des pathologies chroniques) sont tes meilleures leviers de revenus complémentaires non soumis aux volumes de boîtes.\n\n**Sources citees**\n\n- UPGF - Position officielle : Mettre en place des coefficients spécifiques pour les territoires fragiles\n- Ordre National des Pharmaciens - Panorama au 1er janvier 2025\n- DREES - Rapport 2024 sur l'accès territorial aux soins",
+      "source": "Pharm'Actus · UPGF – Position officielle : Mettre en place des coefficients spécifiques pour les territoires fragiles, Ordre National des Pharmaciens – Panorama au 1er janvier 2025",
+      "source_url": "https://www.upgf.fr/positions/mettre-en-place-des-coefficients-specifiques-pour-les-territoires-fragiles/",
+      "tiktok_url": "",
+      "badge_label": "Business",
+      "image_url": "assets/img_actu_2026_07_04_5.jpg",
+      "tags": [
+        "territoires-fragiles",
+        "rentabilite",
+        "convention-pharmaceutique",
+        "desertification"
+      ]
+    },
+    {
+      "id": "actu_2026_07_04_4",
+      "date": "2026-07-04",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "Thérapies ciblées et toxicité cutanée : ce que ton équipe doit savoir maintenant",
+      "resume": "Les anticancéreux oraux débarquent de plus en plus en officine. Cytotoxiques, thérapies ciblées, hormonothérapies : chacun a sa propre toxicité cutanéo-muqueuse. Voici l'essentiel pour conseiller efficacement ces patients souvent perdus entre deux consultations.",
+      "full_text": "Un patient sous capécitabine, un autre sous inhibiteur de BRAF, une patiente sous létrozole : trois profils, trois mécanismes de toxicité cutanée complètement différents. Et souvent, c'est toi qui gères entre deux consultations d'oncologue.\n\nLe mécanisme, rapidement. Les cytotoxiques classiques agissent par toxicité directe sur les cellules à renouvellement rapide. Résultat : fragilisation de la barrière cutanée, réaction inflammatoire, syndrome main-pied pour certains. Les thérapies ciblées, notamment les inhibiteurs de l'EGFR, génèrent des éruptions acnéiformes spécifiques, distinctes de l'acné classique. L'hormonothérapie, elle, passe par la réduction des estrogènes ou de la testostérone, ce qui impacte la production de sébum et l'hydratation cutanée.\n\nLes ongles, souvent oubliés. Les atteintes unguéales iatrogènes sont fréquentes et sous-évaluées. Les taxanes, les anthracyclines et les inhibiteurs de tyrosine kinase sont les grands responsables. On parle de mélanonychie, d'onycholyse, voire de paronychie sévère. Le conseil de base : couper les ongles au carré avant de commencer le traitement, arrêter vernis permanent et faux ongles.\n\nLes muqueuses, un terrain miné. Les mucites buccales touchent jusqu'à 40% des patients sous chimiothérapie selon certaines études. Douleur, surinfection candidosique, difficultés alimentaires. Les facteurs aggravants : âge, mauvais état bucco-dentaire de départ, irradiation cervico-faciale associée. La visite chez le dentiste AVANT de commencer le traitement, c'est un conseil que tu peux donner en premier.\n\nTon rôle d'interface. Entre deux consultations, le patient revient à l'officine. Il ne va pas appeler son oncologue pour une sécheresse cutanée ou une paronychie débutante. C'est toi qu'il interroge. Avoir un protocole de conseil structuré, avec les bons émollients (pas d'acide, pas d'alcool, pas de parfum), les antifongiques oraux en cas de candidose buccale, et les critères de recours urgent, ça change tout.\n\nAu comptoir demain matin : identifie dans ta patientèle les patients sous anticancéreux oraux. Propose-leur un entretien pharmaceutique dédié. C'est valorisant, c'est du soin, et c'est exactement ce pour quoi le pharmacien d'officine est formé.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/formation/cahiers-formation/cahiers-conseil/oncologie-soins-de-la-peau-des-phaneres-et-des-muqueuses/lessentiel-a-retenir-sur-les-soins-de-la-peau-des-phaneres-et-des-muqueuses-en-oncologie",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_07_04_4.jpg",
+      "tags": [
+        "oncologie",
+        "therapie-ciblee",
+        "toxicite",
+        "conseil",
+        "officine"
+      ]
+    },
+    {
+      "id": "actu_2026_07_04_3",
+      "date": "2026-07-04",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "Ordonnances numériques : 40% de pénétration, le compteur accélère enfin",
+      "resume": "40% des ordonnances exécutées en officine sont désormais numériques. Un bond spectaculaire : on était à 10,5% en mars 2025. La montée en puissance est réelle, les blocages persistent quand même. Voilà où on en est vraiment.",
+      "full_text": "10,5% en mars 2025. 25,5% en février 2026. 40% aujourd'hui. Si tu veux voir une courbe qui donne enfin envie, c'est celle-là. L'ordonnance numérique commence à changer concrètement le quotidien de l'officine.\n\nLes chiffres viennent du CTPPN du 30 juin, réunion technique entre syndicats officinaux et Assurance Maladie, exclusivement consacrée à ce sujet. Valérian Ponsinet, président de la commission Convention et SI à la FSPF, qualifie cette progression d'« amélioration notable ». C'est mesuré, mais honnête.\n\nCe que ça change concrètement. Une ordonnance numérique, c'est moins de friction à la délivrance. Plus de problème de lisibilité, moins de risque d'erreur de retranscription, traçabilité améliorée dans le DP. Et pour les renouvellements, c'est un gain de temps réel pour l'équipe.\n\nMais 40%, ça veut aussi dire que 60% des ordonnances sont encore papier. Les blocages identifiés lors du CTPPN concernent à la fois les prescripteurs, qui n'ont pas tous migré leurs logiciels, et les dispensateurs, avec des problèmes d'intégration entre certains LGO et le système e-prescription. Les signalements de bugs persistent.\n\nLa montée en charge reste donc inégale selon les spécialités médicales et les territoires. Un médecin généraliste en cabinet de groupe connecté, c'est différent d'un spécialiste hospitalier ou d'un médecin remplaçant itinérant.\n\nCe que ça anticipe pour toi. D'ici fin 2026, l'objectif non officiel tourne autour de 60 à 70% de pénétration. Si ton LGO n'est pas à jour sur la gestion des ordonnances numériques, c'est maintenant qu'il faut appuyer ton éditeur. La montée en charge va s'accélérer.\n\nAu comptoir demain matin : vérifie que ton équipe gère parfaitement le flux e-prescription, notamment la gestion des ordonnances partiellement exécutées et le suivi des renouvellements numériques. C'est là que les bugs terrain remontent le plus souvent.",
+      "source": "Le Pharmacien de France",
+      "source_url": "https://lepharmaciendefrance.fr/ordonnances-numeriques-en-bon-chemin/",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_07_04_3.jpg",
+      "tags": [
+        "ordonnance-numerique",
+        "dp",
+        "si",
+        "convention",
+        "officine"
+      ]
+    },
+    {
+      "id": "actu_2026_07_04_2",
+      "date": "2026-07-04",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "Peptides synthétiques vendus en ligne : l'ANSM tape du poing sur la table",
+      "resume": "L'ANSM alerte sur l'explosion de la vente de peptides synthétiques hors circuit autorisé. Ces produits circulent massivement sur internet avec des allégations cosmétiques ou sportives, mais leur statut est clair : ce sont des médicaments illégaux. Risque direct pour tes patients et pour toi.",
+      "full_text": "Tes patients te demandent des peptides pour la peau, la musculation ou le vieillissement ? Mauvaise nouvelle : l'ANSM vient de publier une alerte officielle sur ce phénomène en pleine explosion. Et le mot d'ordre est sans ambiguïté : illégal.\n\nDe quoi parle-t-on exactement ? Des peptides synthétiques comme le BPC-157, le TB-500, le Melanotan II, ou encore des analogues du GLP-1 vendus en poudre lyophilisée avec flacons de reconstitution. Ces substances circulent sur des sites étrangers, des marketplaces et même des réseaux sociaux. Promesses : régénération cutanée, perte de poids, récupération musculaire, bronzage sans soleil.\n\nLe problème légal est simple. Ces molécules répondent à la définition du médicament au sens de la directive européenne 2001/83/CE : elles ont une action pharmacologique sur l'organisme. Elles nécessitent donc une AMM pour être commercialisées. Or, aucun de ces peptides n'en dispose pour les usages promotionnels cités. Leur vente hors circuit autorisé est une infraction pénale.\n\nLes risques sanitaires sont réels. Absence de contrôle qualité sur les matières premières, contaminations microbiologiques, surdosages, interactions médicamenteuses inconnues. Un patient qui s'injecte un peptide reconstitué à domicile, acheté sur un site douteux, c'est une bombe à retardement.\n\nTon rôle au comptoir est crucial. Si un patient te mentionne ces produits, c'est une opportunité d'intervention pharmaceutique. Tu n'as pas à les vendre, tu n'en as d'ailleurs pas le droit, et tu peux orienter vers le signalement via le portail de l'ANSM (signalement.social-sante.gouv.fr).\n\nAttention aussi à ta propre responsabilité. Si un proche ou un patient relie un effet indésirable à un peptide qu'il t'avait mentionné sans que tu aies réagi, ta responsabilité professionnelle peut être engagée. La notification de pharmacovigilance s'impose.\n\nAu comptoir demain matin : brief ton équipe sur les noms courants (BPC-157, TB-500, Melanotan, PT-141, CJC-1295). Si un patient en parle, alerte, ne minimise pas. Et documente dans le DP si possible.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/gare-la-vente-de-peptides-illegaux-alerte-lansm",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_07_04_2.jpg",
+      "tags": [
+        "ansm",
+        "pharmacovigilance",
+        "medicament",
+        "illegal",
+        "officine"
+      ]
+    },
+    {
+      "id": "actu_2026_07_04_1",
+      "date": "2026-07-04",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "Vaccins chez les médecins dès septembre : l'honoraire de dispensation en jeu",
+      "resume": "La CNAM vient de confirmer le déploiement du stockage vaccinal chez les médecins, sages-femmes et infirmiers dès septembre 2026. L'USPO tire la sonnette d'alarme : mêmes droits, mêmes obligations. Et l'honoraire de dispensation dans tout ça ?",
+      "full_text": "La CNAM a lâché la bombe lors d'un atelier de travail : le stockage de vaccins chez les médecins, sages-femmes et infirmiers, c'est pour septembre 2026. Pourtant, la Direction de la Sécurité sociale avait repoussé le sujet d'un an en février dernier, invoquant des délais intenables. Visiblement, les délais sont devenus tenables d'un coup.\n\nRappel du contexte. La mesure était inscrite dans la LFSS 2026. La DSS l'avait officiellement différée lors du comité de liaison officine du 26 mars. Et voilà qu'elle ressort par la petite porte, via un atelier CNAM, sans concertation formelle avec les syndicats de l'officine.\n\nL'USPO monte au créneau en premier. Sa position est claire : « mêmes droits, mêmes obligations ». Si les médecins, infirmiers et sages-femmes peuvent stocker des vaccins, ils doivent être soumis aux mêmes contraintes réglementaires que les pharmaciens. Traçabilité, conditions de conservation, respect de la chaîne du froid. Pas de passe-droit.\n\nMais le vrai sujet, c'est l'honoraire de dispensation. Aujourd'hui, quand tu délivres un vaccin à un patient, tu factures un honoraire de dispensation. Si demain un médecin commande ses vaccins directement et les administre sans passer par ton officine, cet honoraire disparaît. L'USPO exige explicitement son maintien lors de toute délivrance à un professionnel de santé. Ce n'est pas encore acté.\n\nCôté FSPF, le président Valérian Ponsinet n'a pas encore réagi publiquement à cette annonce spécifique au moment de la rédaction. La FSPF s'était positionnée sur les ordonnances numériques lors du même CTPPN du 30 juin, mais n'a pas encore pris de position officielle sur le calendrier vaccinal accéléré.\n\nCe qui se joue concrètement : les précommandes de vaccins antigrippaux pour la campagne 2026-2027 sont déjà closes. Si des médecins stockent leurs propres doses dès septembre, les tensions d'approvisionnement que redoutent les officines pourraient s'aggraver. Tu risques de te retrouver en rupture pendant la campagne, alors que les cabinets médicaux ont leurs propres stocks.\n\nAu comptoir demain matin : surveille tes précommandes antigrippales, vérifie avec ton grossiste les volumes confirmés. Et garde un oeil sur les publications syndicales : si l'honoraire de dispensation n'est pas sécurisé contractuellement avant septembre, c'est une perte sèche directe pour chaque officine.",
+      "source": "Le Pharmacien de France / USPO",
+      "source_url": "https://lepharmaciendefrance.fr/des-vaccins-chez-les-medecins-des-septembre-prochain/",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_07_04_1.jpg",
+      "tags": [
+        "vaccination",
+        "honoraires",
+        "convention",
+        "lfss",
+        "officine"
+      ]
+    },
+    {
+      "id": "lsv_2026_07_04",
+      "date": "2026-07-04",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? On guérissait les migraines en perçant le crâne depuis 10 000 ans",
+      "resume": "La trépanation est l'une des plus anciennes opérations chirurgicales connues. Des crânes percés retrouvés sur tous les continents. Et le plus fou ? Certains patients survivaient... et récidivaient.",
+      "full_text": "Imagine qu'on te prescrive une perceuse pour ta migraine. Absurde ? Pas pour nos ancêtres.\n\nLa trépanation - l'art de forer un trou dans le crâne d'un être humain vivant - est documentée depuis au moins 10 000 ans. Des crânes percés ont été retrouvés en France, au Pérou, en Russie, en Afrique. C'est littéralement la chirurgie la plus universelle de l'histoire de l'humanité. Avant même l'écriture, on ouvrait des têtes.\n\nL'outil ? Selon l'époque et le continent : un éclat de silex, une lame d'obsidienne, ou un burin en os. On grattait, on raclait, on tournait. Sans anesthésie. Sans asepsie. Et pourtant - c'est là que ça devient dingue - des crânes retrouvés montrent des traces de cicatrisation osseuse autour du trou. Ce qui signifie que le patient a survécu. Longtemps. Parfois, on retrouve deux ou trois orifices sur le même crâne : le même individu s'est fait trépaner plusieurs fois.\n\nPourquoi ? Les hypothèses fusent : chasser les mauvais esprits, soulager la pression intracrânienne après un traumatisme, traiter l'épilepsie, les migraines sévères, ou les troubles du comportement. Au Pérou précolombien, certains guerriers se faisaient trépaner après une blessure au combat - probablement pour évacuer un hématome. Une intuition chirurgicale étonnamment juste.\n\nEn Europe, la pratique a perduré jusqu'au XVIIe siècle. Des barbiers-chirurgiens la proposaient contre la \"mélancolie\" ou les maux de tête chroniques. On vendait même des fragments de crâne trépané comme amulettes thérapeutiques. Le commerce du crâne, version médiévale.\n\nAujourd'hui, la trépanation existe toujours - on l'appelle craniotomie - et elle sauve des vies en neurochirurgie chaque jour. La prochaine fois qu'un patient te parle d'un mal de tête \"à se cogner la tête contre les murs\", tu peux lui dire que ses ancêtres, eux, auraient sorti le silex.",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_07_04.jpg",
+      "tags": [
+        "histoire",
+        "chirurgie",
+        "neurologie",
+        "prehistoire",
+        "instrument"
+      ]
+    },
+    {
       "id": "actu_2026_07_03_5",
       "date": "2026-07-03",
       "type": "actu",
@@ -8974,6 +9099,6 @@
       ]
     }
   ],
-  "count": 434,
-  "updated_at": "2026-07-03T04:13:28.769020+02:00"
+  "count": 440,
+  "updated_at": "2026-07-04T04:08:53.664116+02:00"
 }

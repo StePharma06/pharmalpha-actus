@@ -1,0 +1,46 @@
+{
+  "generated_at": "2026-07-04T04:08:50.765248+02:00",
+  "run_date": "2026-07-04",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Vaccins chez les médecins dès septembre : l'honoraire de dispensation en jeu",
+      "resume": "La CNAM vient de confirmer le déploiement du stockage vaccinal chez les médecins, sages-femmes et infirmiers dès septembre 2026. L'USPO tire la sonnette d'alarme : mêmes droits, mêmes obligations. Et l'honoraire de dispensation dans tout ça ?",
+      "source": "Le Pharmacien de France / USPO",
+      "source_url": "https://lepharmaciendefrance.fr/des-vaccins-chez-les-medecins-des-septembre-prochain/",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "Ordonnances numériques : 40% de pénétration, le compteur accélère enfin",
+      "resume": "40% des ordonnances exécutées en officine sont désormais numériques. Un bond spectaculaire : on était à 10,5% en mars 2025. La montée en puissance est réelle, les blocages persistent quand même. Voilà où on en est vraiment.",
+      "source": "Le Pharmacien de France",
+      "source_url": "https://lepharmaciendefrance.fr/ordonnances-numeriques-en-bon-chemin/",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Officines en territoire fragile : des coefficients majorés pour survivre ?",
+      "resume": "L'UPGF monte au créneau et propose des coefficients de rémunération spécifiques pour les officines implantées en zones sous-dotées. Derrière la mesure, un enjeu de survie économique pour plusieurs centaines de pharmacies.",
+      "source": "Pharm'Actus · UPGF – Position officielle : Mettre en place des coefficients spécifiques pour les territoires fragiles, Ordre National des Pharmaciens – Panorama au 1er janvier 2025",
+      "source_url": "https://www.upgf.fr/positions/mettre-en-place-des-coefficients-specifiques-pour-les-territoires-fragiles/",
+      "confidence_score": 0.62,
+      "warnings": [
+        "Le chiffre de CA médian rural (700k-900k€) est une estimation sectorielle issue d'analyses CERP/groupements, non d'une publication officielle DREES ou DGFIP : à vérifier avant publication.",
+        "Le chiffre de 5,4 millions de Français sans officine à moins de 10 minutes est attribué à la DREES 2024 : la publication exacte doit être vérifiée car les rapports DREES sur l'accessibilité pharmaceutique sont parfois des notes de travail non finalisées.",
+        "La perte de 1 400 officines en dix ans (22 000 → 20 614) est cohérente avec les séries historiques de l'Ordre mais doit être recoupée avec le rapport annuel Ordre 2025 exact.",
+        "Les positions FSPF et USPO sur les coefficients territoriaux sont déclarées 'non exprimées à ce jour' : à valider via une recherche sur leurs sites officiels au moment de la publication.",
+        "L'honoraire de dispensation cité (1,02 € par ordonnance) correspond au tarif conventionnel en vigueur courant 2025-2026 : vérifier qu'aucun avenant n'a modifié ce montant entre juin et juillet 2026."
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

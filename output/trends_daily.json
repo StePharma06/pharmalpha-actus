@@ -1,64 +1,64 @@
 {
-  "generated_at": "2026-07-03",
-  "window_label": "27 juin au 3 juil. 2026",
+  "generated_at": "2026-07-04",
+  "window_label": "28 juin au 4 juil. 2026",
   "has_history": true,
   "delta_source": "pytrends_rising",
   "pathologies": [
     {
-      "display": "Fatigue après canicule",
-      "delta_label": "↑ 22 550",
+      "display": "Seipa allergie",
+      "delta_label": "↑ 30 250",
       "trend": "up"
     },
     {
-      "display": "Allergie acariens symptômes",
-      "delta_label": "↑ 15 500",
+      "display": "Fatigue après canicule",
+      "delta_label": "↑ 22 600",
       "trend": "up"
     },
     {
       "display": "How to fix fatigue",
-      "delta_label": "↑ 13 750",
+      "delta_label": "↑ 18 850",
       "trend": "up"
     },
     {
-      "display": "Allergie au soleil photo",
-      "delta_label": "↑ 12 150",
+      "display": "Allergie acariens symptômes",
+      "delta_label": "↑ 15 600",
       "trend": "up"
     },
     {
-      "display": "Seipa allergie",
-      "delta_label": "↑ 11 300",
+      "display": "Allergie nectarine",
+      "delta_label": "↑ 14 600",
       "trend": "up"
     }
   ],
   "soins": [
     {
+      "display": "Chaleur et digestion",
+      "delta_label": "↑ 49 450",
+      "trend": "up"
+    },
+    {
+      "display": "What causes poor digestion",
+      "delta_label": "↑ 49 150",
+      "trend": "up"
+    },
+    {
+      "display": "C'est pas sorcier digestion",
+      "delta_label": "↑ 36 900",
+      "trend": "up"
+    },
+    {
       "display": "Immunite familiale",
-      "delta_label": "↑ 375 850",
+      "delta_label": "↑ 30 900",
       "trend": "up"
     },
     {
-      "display": "Melon digestion",
-      "delta_label": "↑ 57 000",
-      "trend": "up"
-    },
-    {
-      "display": "Immunite diplomatique",
-      "delta_label": "↑ 49 000",
-      "trend": "up"
-    },
-    {
-      "display": "Digestion difficile que prendre",
-      "delta_label": "↑ 39 600",
-      "trend": "up"
-    },
-    {
-      "display": "Massage ventre digestion",
-      "delta_label": "↑ 29 950",
+      "display": "Sante-maison.fr sommeil et récupération",
+      "delta_label": "↑ 28 400",
       "trend": "up"
     }
   ],
   "pathologies_stale": false,
-  "pathologies_from": "2026-07-03",
+  "pathologies_from": "2026-07-04",
   "soins_stale": false,
-  "soins_from": "2026-07-03"
+  "soins_from": "2026-07-04"
 }
