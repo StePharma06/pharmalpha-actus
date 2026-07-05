@@ -1,0 +1,74 @@
+# gsc-monthly.yml — Audit SEO mensuel automatique via API Google Search Console
+# À déposer dans : pharmalpha-actus/.github/workflows/gsc-monthly.yml
+#
+# Prérequis (GitHub Secrets à créer sur le repo pharmalpha-actus) :
+#   GSC_SA_KEY_JSON  — contenu intégral du fichier JSON clé service account GCP
+#
+# Le rapport BASELINE_SEO_AAAA-MM.md est committé dans le repo pharmalpha-actus
+# sous SEO/BASELINE_SEO_AAAA-MM.md (séparé du dossier CLAUDE iCloud qui est local).
+# Stephen récupère en local via git pull.
+
+name: GSC Monthly SEO Audit
+
+on:
+  # Le 1er de chaque mois à 7h00 UTC (9h Paris)
+  schedule:
+    - cron: '0 7 1 * *'
+  # Déclenchement manuel (test ou rattrapage)
+  workflow_dispatch:
+
+permissions:
+  contents: write  # pour committer le rapport dans le repo
+
+jobs:
+  gsc-audit:
+    name: Pull GSC data & generate baseline report
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install google-api-python-client>=2.120.0 google-auth>=2.29.0
+
+      - name: Write service account key to temp file
+        # Le contenu JSON est stocké en GitHub Secret, on l'écrit en fichier temp.
+        # Le chemin est passé via env var — jamais hardcodé.
+        run: |
+          echo '${{ secrets.GSC_SA_KEY_JSON }}' > /tmp/gsc-sa-key.json
+          chmod 600 /tmp/gsc-sa-key.json
+        # Note : GitHub masque automatiquement les secrets dans les logs.
+        # La valeur du secret n'apparaîtra jamais en clair dans les logs Actions.
+
+      - name: Run GSC audit script
+        env:
+          GSC_SA_KEY_PATH: /tmp/gsc-sa-key.json
+        run: |
+          python SEO/scripts/gsc_monthly_audit.py
+        # Le script génère SEO/BASELINE_SEO_AAAA-MM.md dans le répertoire courant
+
+      - name: Shred service account key
+        if: always()  # nettoyer même si l'étape précédente échoue
+        run: shred -u /tmp/gsc-sa-key.json || rm -f /tmp/gsc-sa-key.json
+
+      - name: Commit & push baseline report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          MONTH=$(date +%Y-%m)
+          REPORT="SEO/BASELINE_SEO_${MONTH}.md"
+          if [ -f "$REPORT" ]; then
+            git add "$REPORT"
+            git diff --cached --quiet || git commit -m "chore(seo): auto baseline SEO ${MONTH}"
+            git push
+          else
+            echo "Rapport non trouvé : $REPORT — vérifier les logs du script."
+            exit 1
+          fi
