@@ -1,6 +1,131 @@
 {
   "articles": [
     {
+      "id": "actu_2026_07_06_5",
+      "date": "2026-07-06",
+      "type": "actu",
+      "categorie": "business_officine",
+      "titre": "Missions officinales : et si le gratuit tuait ton modèle économique ?",
+      "resume": "Vaccination, dépistage, sensibilisation : les groupements poussent fort sur les missions de prévention. Mais qui paie vraiment ? Un article du Moniteur des Pharmacies pose la question qui dérange : la gratuité pour le patient est-elle tenable pour l'officine ?",
+      "full_text": "Vaccination, dépistage, sensibilisation : les groupements poussent fort sur les missions de prévention. Mais qui paie vraiment ? Un article du Moniteur des Pharmacies pose la question qui dérange : la gratuité pour le patient est-elle tenable pour l'officine ?\n\n**Contexte**\n\nDepuis l'avenant 21 à la convention pharmaceutique (2022), puis les extensions issues de la LFSS 2023 et 2024, les pharmaciens titulaires ont vu leur périmètre de missions s'élargir significativement : vaccination étendue à l'ensemble de la population adulte, entretiens pharmaceutiques, bilans de médication, dépistages TROD… En parallèle, les groupements ont massivement investi ce terrain comme axe de différenciation et de fidélisation patient. Résultat : une partie de ces missions est proposée gratuitement au comptoir - parfois portée financièrement par l'officine elle-même ou co-financée par le groupement, mais pas toujours intégralement compensée par l'Assurance Maladie. Le Moniteur des Pharmacies, dans son édition du 4 juillet 2026, soulève un angle rarement traité frontalement : certains actes de prévention testés en officine n'ont pas encore de financement conventionnel stabilisé, et la pression sur les équipes est réelle. Ce sujet touche directement les 21 400 officines françaises, mais avec des réalités très disparates selon la taille, le groupement d'appartenance et la patientèle.\n\n**Analyse business**\n\nLe modèle économique officinal repose encore à plus de 70 % sur la dispensation de médicaments remboursés, selon les données DREES/GERS. Les honoraires de dispensation, introduits en 2020 et progressivement montés en charge, représentent aujourd'hui environ 3,2 milliards d'euros par an sur un chiffre d'affaires global du secteur estimé à 38 milliards d'euros TTC (source : Rapport LEEM / données CNAMTS consolidées). Les missions, elles, pèsent encore modestement : la rémunération sur objectifs de santé publique (ROSP) officinale tourne autour de 5 000 à 7 000 euros annuels en moyenne par pharmacie, avec de fortes disparités.\n\nLe vrai problème business est là : quand une officine propose un dépistage du diabète ou une séance de sensibilisation au sevrage tabagique sans financement conventionnel dédié, elle mobilise du temps pharmacien (valorisé entre 80 et 120 euros/heure en coût complet selon les benchmarks Pharm'Alpha), du matériel et de l'espace - sans recette directe. Sur une mission de 15 minutes non rémunérée réalisée 3 fois par semaine, c'est entre 3 000 et 5 000 euros de temps perdu par an.\n\nLes groupements poussent ces missions car elles génèrent du trafic et de la fidélisation - un patient qui revient pour un suivi est statistiquement un patient qui achète aussi en parapharmacie ou en OTC. Le raisonnement est valide à condition que le modèle de conversion soit mesuré. Or, très peu de titulaires trackent le panier moyen associé à ces visites \"prévention\".\n\nAutre angle : la LFSS 2025 a ouvert la possibilité d'expérimentations article 51 sur la rémunération de nouveaux actes officinaux. Plusieurs projets pilotes sont en cours (primo-prescription antibiotique pour angines et cystites, suivi renforcé des patients chroniques). Si ces expérimentations se généralisent - horizon 2027 probable - elles pourraient valoriser entre 150 et 400 euros supplémentaires par patient et par an pour les pharmacies les mieux positionnées. Le risque : les officines qui ont \"brûlé\" ces actes gratuitement pendant 3 ans auront du mal à faire payer demain.\n\n**Recommandations actionnables**\n\n1. **Cartographie ta rentabilité par mission** - Pendant 4 semaines, chronomètre le temps pharmacien réel consacré à chaque mission (vaccination, TROD, entretien). Multiplie par ton coût horaire réel (salaire chargé + quote-part loyer/équipement). Tu seras surpris du résultat.\n\n2. **Distingue missions financées et missions \"gratuites\"** - Liste ce qui est remboursé AM (vaccination grippe : 9,60 € l'acte de conseil, plus honoraire de dispensation du vaccin ; entretiens asthme : 40 € ; etc.) et ce qui ne l'est pas. Ne confonds pas les deux dans ton compte de résultat.\n\n3. **Pose la question du ticket modérateur symbolique sur les actes non conventionnés** - Juridiquement, un pharmacien peut facturer un acte de conseil non remboursé. Le Moniteur ouvre ce débat. Teste à 5-10 euros sur des bilans bien-être ou dépistages non pris en charge : tu mesureras la vraie valeur perçue par le patient.\n\n4. **Anticipe les expérimentations article 51** - Rapproche-toi de ton URPS ou de ton groupement pour savoir si tu es éligible aux pilotes en cours. Être dans la première vague de généralisation, c'est 12 à 18 mois d'avance sur la concurrence.\n\n5. **Ne laisse pas le groupement décider seul de ta politique tarifaire** - Les groupements ont leurs propres intérêts (trafic, données santé, fidélisation). Assure-toi que ce qu'ils te proposent de \"donner gratuit\" te rapporte mesurément en retour.\n\n**Sources citees**\n\n- Le Moniteur des Pharmacies - Missions : la fin de la gratuité pour les patients ?",
+      "source": "Pharm'Actus · Le Moniteur des Pharmacies – Missions : la fin de la gratuité pour les patients ?",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/business/groupements/missions-la-fin-de-la-gratuite-pour-les-patients",
+      "tiktok_url": "",
+      "badge_label": "Business",
+      "image_url": "assets/img_actu_2026_07_06_5.jpg",
+      "tags": [
+        "missions",
+        "rentabilite",
+        "prevention",
+        "convention"
+      ]
+    },
+    {
+      "id": "actu_2026_07_06_4",
+      "date": "2026-07-06",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "SLA et implant cerebral : quand l'IA redonne la parole, pour de vrai",
+      "resume": "Casey Harrell, atteint de sclerose laterale amyotrophique, a retrouve une partie de son autonomie grace a un implant cerebral couple a l'intelligence artificielle dans le cadre de l'essai BrainGate 2. Une avancee qui redessine les limites du possible pour les patients neuro-degeneratifs.",
+      "full_text": "La maladie de Charcot - sclerose laterale amyotrophique, SLA - c'est une des pathologies les plus devastatrices qu'on rencontre en officine. Perte progressive de toutes les fonctions motrices, dont la parole. Pronostic sombre, traitements limites au Riluzole (riluzole) et plus recemment l'edaravone sur des profils selectionnes. Autrement dit : peu de perspectives jusqu'ici.\n\nCasey Harrell, Americain atteint de SLA, a participe en 2023 a l'essai clinique BrainGate 2. Le principe : un implant cerebral capte les signaux neuronaux lies a l'intention de parole. Une IA les decode en temps reel et les retranscrit en voix synthetisee. Resultat : il a retrouve une communication fonctionnelle qu'il avait perdue.\n\nBrainGate 2 est un essai de phase chronique, multicentrique, coordonne par des equipes universitaires americaines. Il ne s'agit pas encore d'un dispositif commercialise ni d'une AMM. Mais le saut qualitatif est considerable : on parle de decoder l'intention de parole directement depuis les signaux corticaux, sans aucun mouvement physique residuel necessaire.\n\nPourquoi c'est important pour nous, pharmaciens ? Parce que nos patients SLA, on les voit souvent. Pour le Riluzole, pour les soins de support, pour l'accompagnement des aidants. Et parce que comprendre l'horizon therapeutique de ces patients, ca change la qualite du conseil qu'on leur apporte. Un patient qui sait que la recherche avance, c'est un patient mieux accompagne.\n\nL'interface cerveau-machine couplee a l'IA ne se limite pas a la SLA. Les memes technologies sont explorées dans la maladie de Parkinson avancee, les locked-in syndromes post-AVC, les paralysies medullaires. Le pipeline est large. Les essais se multiplient en Europe egalement, notamment en France avec des equipes INSERM engagees sur la BCI (Brain-Computer Interface).\n\nDemain matin au comptoir : si un patient ou un aidant te parle de ces technologies, tu peux maintenant les orienter vers les publications de l'essai BrainGate 2 et vers les associations SLA France qui suivent ces avancees en temps reel. Ta valeur, c'est aussi de savoir ce qui se passe dans les labos avant que ca arrive en ville.",
+      "source": "France Info Sante",
+      "source_url": "https://www.franceinfo.fr/sante/atteint-de-la-maladie-de-charcot-il-retrouve-la-parole-grace-a-un-implant-cerebral_8093969.html",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_07_06_4.jpg",
+      "tags": [
+        "sla",
+        "ia",
+        "implant-cerebral",
+        "innovation",
+        "neurologie"
+      ]
+    },
+    {
+      "id": "actu_2026_07_06_3",
+      "date": "2026-07-06",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "Canicule et cystites : tes TROD en hausse de 21 %, et ca, c'est une bonne nouvelle",
+      "resume": "Pendant la vague de chaleur de fin juin 2026, le recours aux TROD cystite en officine a bondi de 21 % en France, et meme de 40 % en Ile-de-France. Le patient a reflexe pharmacie d'abord. C'est exactement ce qu'on voulait.",
+      "full_text": "Pendant la semaine du 22 au 28 juin 2026, en plein pic caniculaire, les TROD cystite en officine ont explose : +21 % en France, +40 % en Ile-de-France par rapport a la meme semaine de l'annee precedente. Source : Le Quotidien du Pharmacien, donnees de terrain.\n\nOui, derriere ces chiffres il y a de la deshydratation, de la stagnation urinaire, des femmes qui ont souffert. C'est la partie sombre. Mais la partie lumineuse, c'est la suivante : elles sont venues chez toi. Pas aux urgences. Pas en appelant le 15. Chez le pharmacien.\n\nC'est exactement le modele qu'on defend depuis des annees. Le parcours de soins non programme, ca commence en officine. Et quand les patients le font naturellement, en masse, en pleine canicule, c'est la preuve que la legitimite du pharmacien de premier recours est acquise dans les esprits.\n\nLe TROD cystite, rappel utile, c'est un acte autorise en droit commun national pour les pharmaciens d'officine, avec un protocole de cooperation bien cadre. Le resultat positif te permet d'orienter, d'informer, et dans certains cas de participer a la prise en charge selon les protocoles locaux en vigueur. Verifie toujours le cadre exact applicable dans ta region.\n\nLa canicule a aussi ete un revelateur d'un autre phenomene : la deshydratation augmente le risque infectieux, et les patients le savent de moins en moins. C'est ton role de faire le lien entre \"j'ai chaud, je bois peu\" et \"je risque une cystite\". Ce conseil de prevention, personne d'autre que toi ne le donne aussi facilement, aussi rapidement, sans rendez-vous.\n\nDemain matin au comptoir : si tu n'as pas encore optimise ta dotation en TROD cystite avant les prochaines vagues de chaleur - et les modeles climatiques n'annoncent pas de repit - c'est le moment. Et forme toute ton equipe au protocole. Parce que la prochaine canicule, c'est peut-etre dans 3 semaines.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/pendant-la-canicule-une-hausse-du-recours-aux-tests-cystites-en-officine",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_07_06_3.jpg",
+      "tags": [
+        "trod",
+        "cystite",
+        "canicule",
+        "premier-recours",
+        "officine"
+      ]
+    },
+    {
+      "id": "actu_2026_07_06_2",
+      "date": "2026-07-06",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "Pharmaciens independants au Royaume-Uni : la vague de fermetures ne s'arrete pas",
+      "resume": "Outre-Manche, les pharmacies independantes continuent de mettre la cle sous la porte a un rythme alarmant. Le modele britannique ressemble de plus en plus a un miroir grossissant de ce qu'on vit en France. Analyse.",
+      "full_text": "Au Royaume-Uni, le Pharmaceutical Journal tire la sonnette d'alarme depuis plusieurs mois : les pharmacies independantes ferment a un rythme qui s'accelere. Les donnees NHS England montrent que le reseau officinal britannique a perdu plusieurs centaines d'officines sur les deux dernieres annees, avec une surreprésentation des structures independantes parmi les fermetures. Les chaines (Boots, Lloyds) resistent mieux grace aux economies d'echelle. Les independants, eux, etouffent.\n\nLes raisons ? Un cocktail qu'on connait bien de ce cote-ci de la Manche. Financement NHS stagne depuis des annees en valeur reelle, inflation des couts operationnels (energie, masse salariale, immobilier), pression sur les prix des generiques, et ruptures d'approvisionnement chroniques qui font perdre du temps sans generer un penny de remuneration supplementaire.\n\nLa difference majeure avec la France : au Royaume-Uni, il n'existe pas de prix administres sur les medicaments de la meme facon qu'en France. Les pharmaciens britanniques sont exposes aux fluctuations du marche du generique de maniere beaucoup plus directe. Certains mois, ils dispensent a perte parce que le prix de remboursement NHS n'a pas suivi la hausse du prix d'achat. Ca te rappelle quelque chose ? La crise des generiques francais de 2022-2023 en est l'equivalent partiel.\n\nLa lecon pour nous ? La fragilite des independants n'est pas une specificite francaise. C'est une tendance structurelle dans les pays ou le financement public de l'officine n'est pas indexe sur les couts reels. En France, la convention pharmaceutique et les honoraires de dispensation jouent un role amortisseur - mais les negociations LFSS 2027 vont tester leur solidite.\n\nAutre signal a surveiller : les pharmaciens britanniques militent activement pour obtenir un financement de leurs actes cliniques (prescriptions independantes, suivi de patients chroniques). Un mouvement que nos syndicats observent avec attention. La FSPF et l'USPO portent exactement ce meme combat en France sur la valorisation des missions.\n\nDemain matin au comptoir : si tu te demandes si ton modele economique tient, regarde l'Angleterre. Pas pour te faire peur, mais pour comprendre que la structuration de tes missions et de tes honoraires, c'est pas du luxe. C'est ce qui differencie une officine qui survit d'une officine qui ferme.",
+      "source": "The Pharmaceutical Journal",
+      "source_url": "https://pharmaceutical-journal.com",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/img_actu_2026_07_06_2.jpg",
+      "tags": [
+        "officine",
+        "royaume-uni",
+        "financement",
+        "independant",
+        "convention"
+      ]
+    },
+    {
+      "id": "actu_2026_07_06_1",
+      "date": "2026-07-06",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "Desescalade medicamenteuse : l'Assurance Maladie vise 1,3 milliard d'economies sur le medicament",
+      "resume": "Le rapport Charges et Produits 2027 de l'Assurance Maladie est tombe le 2 juillet. Baisses de prix, deprescription des benzodiazepines et des anticancereux : le signal est clair. Ca va concerner ton comptoir direct.",
+      "full_text": "L'Assurance Maladie a pose ses cartes sur la table le 2 juillet. Son rapport Charges et Produits 2027 actait 1,3 milliard d'euros de baisses de prix sur le medicament. C'est pas une rumeur de couloir, c'est noir sur blanc.\n\nLa desescalade medicamenteuse est la priorite affichee. Deux cibles principales : les benzodiazepines et les anticancereux. Ca te parle ? Ca devrait, parce que les benzos, t'en delivres tous les jours. Et les patients sous anti-cancereux oraux, tu les suis de plus en plus en entretien pharmaceutique.\n\nPourquoi les benzos ? Parce que la deprescription est depuis longtemps identifiee comme un levier de sante publique majeur - iatrogenie, chutes chez le sujet age, dependance. Le message est constant, mais la realite officinale reste complexe : le patient sous Lexomil depuis 15 ans, ca se deprescrit pas en un entretien.\n\nPourquoi les anticancereux ? Parce que les prix explosent depuis des annees et que les autorites cherchent des marges de manoeuvre. Sur le plan des baisses tarifaires, ca touche directement les remises fabricants et potentiellement les prix publics - avec un effet cascade sur tes marges si tu es dispensateur de chimiotherapies orales.\n\nLe timing est strategique : ce rapport precede les debats de la LFSS 2027. C'est le document de reference que les parlementaires vont avoir sous les yeux cet automne. Autrement dit, ce que l'Assurance Maladie propose aujourd'hui, ca peut devenir du droit opposable dans 4 mois.\n\nCote honoraires, le rapport ne mentionne pas de revalorisation compensatoire pour les pharmaciens sur ces actes de deprescription. La FSPF et l'USPO n'ont pas encore publie de reaction formelle a ce stade sur ce rapport specifique - a surveiller dans les prochains jours.\n\nDemain matin au comptoir, concretement : si un patient renouvelle une benzodiazepine au long cours, c'est le moment de valoriser l'entretien sur les traitements chroniques. C'est ton role, c'est rembourse, et c'est exactement ce que l'AM va te demander de faire. Autant le faire pro-activement plutot que d'attendre un avenant te l'imposer.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/la-desescalade-medicamenteuse-la-priorite-de-lassurance-maladie",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_07_06_1.jpg",
+      "tags": [
+        "deprescription",
+        "lfss",
+        "assurance-maladie",
+        "benzodiazepine",
+        "marge"
+      ]
+    },
+    {
+      "id": "lsv_2026_07_06",
+      "date": "2026-07-06",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? Le premier hôpital psychiatrique enfermait les fous... pour les montrer",
+      "resume": "Au XVe siècle, Bedlam à Londres n'était pas vraiment un lieu de soin. C'était une attraction payante. Les Londoniens venaient le dimanche regarder les malades mentaux comme on visite un zoo. Et le pire ? C'était considéré comme un progrès.",
+      "full_text": "Accroche-toi bien, parce que celle-là va te retourner l'estomac.\n\nBethlem Royal Hospital - surnommé « Bedlam » - ouvre ses portes à Londres en 1247. C'est officiellement le premier établissement spécialisé dans les maladies mentales d'Europe. Une révolution, en théorie. Parce qu'avant ça, les fous finissaient à la rue, en prison, ou brûlés comme sorciers. Là au moins, on les regroupe, on leur donne un toit. Progrès indéniable.\n\nSauf que le financement posait un léger problème. Alors les gestionnaires ont eu une idée lumineuse : ouvrir les portes au public. Contre quelques pennies, n'importe quel Londonien pouvait entrer et observer les patients. Les agités, les mélancoliques, les délirants. On se promenait dans les couloirs comme dans une galerie d'art. Les dimanches étaient les plus fréquentés - sortie en famille, détente garantie.\n\nLe twist ? En 1700, Bedlam accueillait environ 96 000 visiteurs payants par an. Soit autant que la Tour de Londres. Les patients les plus « spectaculaires » étaient placés dans les couloirs d'entrée pour maximiser le show. Certains visiteurs apportaient des bâtons pour provoquer les réactions.\n\nCe n'est qu'en 1770 qu'un médecin, Thomas Monro, commence à restreindre les visites. Et c'est en 1815 seulement que l'accès public est définitivement interdit, après un rapport parlementaire qui décrit des conditions d'une violence absolue - patients enchaînés, malnutris, livrés à eux-mêmes.\n\nBedlam a quand même donné un mot à la langue anglaise : « bedlam » signifie encore aujourd'hui « chaos total ».\n\nÇa rappelle que la psychiatrie a mis des siècles à devenir une discipline médicale à part entière. Aujourd'hui, quand un patient arrive au comptoir avec une ordonnance d'antidépresseurs et qu'il chuchote sa demande, pense à ce chemin parcouru - et à l'importance de cette discrétion qu'on lui offre naturellement.",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_07_06.jpg",
+      "tags": [
+        "histoire",
+        "psychiatrie",
+        "hopital",
+        "pratiques-medicales",
+        "medecine"
+      ]
+    },
+    {
       "id": "actu_2026_07_04_5",
       "date": "2026-07-04",
       "type": "actu",
@@ -9099,6 +9224,6 @@
       ]
     }
   ],
-  "count": 440,
-  "updated_at": "2026-07-04T04:08:53.664116+02:00"
+  "count": 446,
+  "updated_at": "2026-07-06T04:09:13.944027+02:00"
 }

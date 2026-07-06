@@ -1,58 +1,58 @@
 {
   "pathologies": [
     {
-      "display": "Seipa allergie",
-      "delta_label": "↑ 30 250",
-      "trend": "up"
-    },
-    {
-      "display": "Fatigue après canicule",
-      "delta_label": "↑ 22 600",
-      "trend": "up"
-    },
-    {
       "display": "How to fix fatigue",
-      "delta_label": "↑ 18 850",
+      "delta_label": "↑ 26 750",
       "trend": "up"
     },
     {
-      "display": "Allergie acariens symptômes",
-      "delta_label": "↑ 15 600",
+      "display": "Allergie a la chaleur",
+      "delta_label": "↑ 21 350",
       "trend": "up"
     },
     {
-      "display": "Allergie nectarine",
-      "delta_label": "↑ 14 600",
+      "display": "What causes tiredness and fatigue",
+      "delta_label": "↑ 20 300",
+      "trend": "up"
+    },
+    {
+      "display": "Vitamine b3 bienfaits",
+      "delta_label": "↑ 15 850",
+      "trend": "up"
+    },
+    {
+      "display": "Fatigue apres la canicule",
+      "delta_label": "↑ 14 200",
       "trend": "up"
     }
   ],
-  "pathologies_from": "2026-07-04",
+  "pathologies_from": "2026-07-06",
   "soins": [
     {
-      "display": "Chaleur et digestion",
-      "delta_label": "↑ 49 450",
+      "display": "Immunite diplomatique",
+      "delta_label": "↑ 92 450",
       "trend": "up"
     },
     {
       "display": "What causes poor digestion",
-      "delta_label": "↑ 49 150",
+      "delta_label": "↑ 88 050",
       "trend": "up"
     },
     {
-      "display": "C'est pas sorcier digestion",
-      "delta_label": "↑ 36 900",
+      "display": "Melon digestion",
+      "delta_label": "↑ 53 250",
       "trend": "up"
     },
     {
-      "display": "Immunite familiale",
-      "delta_label": "↑ 30 900",
+      "display": "Aide à la digestion",
+      "delta_label": "↑ 40 000",
       "trend": "up"
     },
     {
-      "display": "Sante-maison.fr sommeil et récupération",
-      "delta_label": "↑ 28 400",
+      "display": "Digestion difficile que faire",
+      "delta_label": "↑ 35 700",
       "trend": "up"
     }
   ],
-  "soins_from": "2026-07-04"
+  "soins_from": "2026-07-06"
 }

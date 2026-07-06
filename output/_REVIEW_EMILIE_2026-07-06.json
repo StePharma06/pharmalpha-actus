@@ -1,0 +1,58 @@
+{
+  "generated_at": "2026-07-06T04:09:08.264899+02:00",
+  "run_date": "2026-07-06",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Desescalade medicamenteuse : l'Assurance Maladie vise 1,3 milliard d'economies sur le medicament",
+      "resume": "Le rapport Charges et Produits 2027 de l'Assurance Maladie est tombe le 2 juillet. Baisses de prix, deprescription des benzodiazepines et des anticancereux : le signal est clair. Ca va concerner ton comptoir direct.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/la-desescalade-medicamenteuse-la-priorite-de-lassurance-maladie",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "pharma_monde",
+      "titre": "Pharmaciens independants au Royaume-Uni : la vague de fermetures ne s'arrete pas",
+      "resume": "Outre-Manche, les pharmacies independantes continuent de mettre la cle sous la porte a un rythme alarmant. Le modele britannique ressemble de plus en plus a un miroir grossissant de ce qu'on vit en France. Analyse.",
+      "source": "The Pharmaceutical Journal",
+      "source_url": "https://pharmaceutical-journal.com",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "Canicule et cystites : tes TROD en hausse de 21 %, et ca, c'est une bonne nouvelle",
+      "resume": "Pendant la vague de chaleur de fin juin 2026, le recours aux TROD cystite en officine a bondi de 21 % en France, et meme de 40 % en Ile-de-France. Le patient a reflexe pharmacie d'abord. C'est exactement ce qu'on voulait.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/pendant-la-canicule-une-hausse-du-recours-aux-tests-cystites-en-officine",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Missions officinales : et si le gratuit tuait ton modèle économique ?",
+      "resume": "Vaccination, dépistage, sensibilisation : les groupements poussent fort sur les missions de prévention. Mais qui paie vraiment ? Un article du Moniteur des Pharmacies pose la question qui dérange : la gratuité pour le patient est-elle tenable pour l'officine ?",
+      "source": "Pharm'Actus · Le Moniteur des Pharmacies – Missions : la fin de la gratuité pour les patients ?",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/business/groupements/missions-la-fin-de-la-gratuite-pour-les-patients",
+      "confidence_score": 0.62,
+      "warnings": [
+        "Le chiffre de 3,2 milliards d'euros pour les honoraires de dispensation est une estimation consolidée à vérifier sur la dernière publication CNAMTS / rapport de convention pharmaceutique — le chiffre exact peut varier selon l'année de référence retenue.",
+        "Le CA global du secteur à 38 milliards TTC est une approximation courante dans la presse professionnelle ; les données DREES les plus récentes disponibles au moment de la rédaction sont à confirmer.",
+        "La fourchette ROSP de 5 000 à 7 000 euros/an est une estimation terrain Pharm'Alpha basée sur les retours de titulaires — la CNAMTS publie les moyennes avec un décalage de 18 mois environ ; le chiffre officiel 2024 n'est pas encore public.",
+        "Le coût horaire pharmacien de 80 à 120 euros est un benchmark interne Pharm'Alpha, non issu d'une étude officielle publiée — à contextualiser selon la structure de chaque officine.",
+        "L'article source (Moniteur des Pharmacies) est résumé, le texte intégral n'est pas accessible sans abonnement : certains détails chiffrés de l'article original n'ont pas pu être vérifiés directement.",
+        "Les montants de rémunération des entretiens pharmaceutiques (ex. entretiens asthme à 40 €) et des actes de vaccination sont à vérifier sur le texte conventionnel en vigueur au moment de publication — des actualisations tarifaires peuvent intervenir."
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}
