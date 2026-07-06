@@ -1117,12 +1117,24 @@ def search_pexels_photo(query):
 
 
 def download_photo(url, dest_path):
-    """Download a photo to local file."""
+    """Download a photo to local file.
+
+    Rejette le fichier si ce n'est pas un vrai JPEG (magic bytes FF D8 FF) :
+    Pexels renvoie parfois un PNG sur l'URL "landscape" malgre l'extension
+    .jpg attendue -> fichiers de 1+ Mo au lieu de 20-190 Ko, plombant le LCP
+    (incident constate 2026-07-06, cf. sprint perf /actus). Zero dependance
+    ajoutee (magic bytes en stdlib), pas de reencodage : on rejette et laisse
+    le fallback stock prendre le relai plutot que de servir un mauvais format.
+    """
     try:
         req = urllib.request.Request(url, headers=HTTP_HEADERS)
         with urllib.request.urlopen(req, timeout=30) as resp:
-            with open(str(dest_path), "wb") as f:
-                f.write(resp.read())
+            content = resp.read()
+        if not content.startswith(b"\xff\xd8\xff"):
+            print(f"    [DL-ERR] Contenu non-JPEG recu (magic bytes invalides), rejet : {url[:80]}")
+            return False
+        with open(str(dest_path), "wb") as f:
+            f.write(content)
         return True
     except Exception as e:
         print(f"    [DL-ERR] {e}")
