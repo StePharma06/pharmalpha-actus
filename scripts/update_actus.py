@@ -1446,7 +1446,6 @@ def update_index_html(new_articles):
             "categorie": a.get("categorie", "sante"),
             "titre": esc(a.get("titre", "")),
             "resume": esc(a.get("resume", "")),
-            "full_text": esc(a.get("full_text", a.get("resume", ""))),
             "source": esc(a.get("source", "Pharm'Alpha")),
             "source_url": a.get("source_url", ""),
             "badge_label": a.get("badge_label", "Sante"),
@@ -1499,6 +1498,9 @@ def update_index_html(new_articles):
         a["tags"] = clean_tags
         tags_js = "[" + ", ".join(f'"{esc(t)}"' for t in clean_tags) + "]"
 
+        # full_text volontairement absent de index.html (cards n'en ont pas besoin,
+        # ~50% du poids HTML de la page /actus - cf. sprint perf 2026-07-06).
+        # Reste dans articles.json (source de verite) ; openModal() le fetch a la demande.
         entry = (
             '  {\n'
             f'    id: "{vals["id"]}",\n'
@@ -1507,7 +1509,6 @@ def update_index_html(new_articles):
             f'    categorie: "{vals["categorie"]}",\n'
             f'    titre: "{vals["titre"]}",\n'
             f'    resume: "{vals["resume"]}",\n'
-            f'    full_text: "{vals["full_text"]}",\n'
             f'    source: "{vals["source"]}",\n'
             f'    source_url: "{vals["source_url"]}",\n'
             '    tiktok_url: "",\n'
@@ -1625,13 +1626,23 @@ def update_index_html(new_articles):
     generate_article_pages(new_articles)
 
     # Generate articles.json companion file (for archives.html)
-    generate_articles_json(updated_html)
+    # full_text n'est plus dans index.html (retire pour le poids page) -> passe
+    # explicitement depuis new_articles (dict Python, jamais tronque) par id.
+    full_text_by_id = {a["id"]: a.get("full_text", "") for a in new_articles if a.get("id")}
+    generate_articles_json(updated_html, full_text_by_id)
 
     return True
 
 
-def generate_articles_json(index_html):
-    """Parse ARTICLES array from index.html and write articles.json (for archives page)."""
+def generate_articles_json(index_html, full_text_by_id=None):
+    """Parse ARTICLES array from index.html and write articles.json (for archives page).
+
+    full_text_by_id : full_text des articles du jour (absent du HTML depuis le
+    sprint perf 2026-07-06). Pour les articles plus anciens (deja dans index.html
+    lors des runs precedents), full_text est recupere depuis articles.json existant
+    (cf. merge plus bas) : jamais perdu, jamais dans le HTML.
+    """
+    full_text_by_id = full_text_by_id or {}
     match = re.search(r"const ARTICLES = \[([\s\S]*?)\];", index_html)
     if not match:
         print("  [WARN] Impossible d'extraire ARTICLES pour articles.json")
@@ -1667,9 +1678,10 @@ def generate_articles_json(index_html):
                 start = None
 
     def js_entry_to_dict(js):
-        """Convert a JS object literal to a Python dict. Fields are known: id, date, type, categorie, titre, resume, full_text, source, source_url, tiktok_url, badge_label, image_url, tags."""
+        """Convert a JS object literal to a Python dict. Fields are known: id, date, type, categorie, titre, resume, source, source_url, tiktok_url, badge_label, image_url, tags.
+        full_text n'est PAS dans index.html (retire pour le poids page) : restaure plus bas."""
         d = {}
-        for field in ("id", "date", "type", "categorie", "titre", "resume", "full_text", "source", "source_url", "tiktok_url", "badge_label", "image_url"):
+        for field in ("id", "date", "type", "categorie", "titre", "resume", "source", "source_url", "tiktok_url", "badge_label", "image_url"):
             m = re.search(rf'{field}:\s*"((?:[^"\\]|\\.)*)"', js)
             if m:
                 val = m.group(1).replace('\\"', '"').replace("\\n", "\n").replace("\\\\", "\\")
@@ -1697,6 +1709,22 @@ def generate_articles_json(index_html):
         except Exception as e:
             print(f"  [WARN] Lecture articles.json existant : {e}")
 
+    # full_text n'est plus dans index.html (retire du HTML pour le poids page,
+    # cf. sprint perf 2026-07-06). Le restaurer sur chaque article "courant" :
+    # priorite a full_text_by_id (articles du jour, source = dict Python en memoire),
+    # sinon recupere depuis l'ancien articles.json par id (articles plus anciens,
+    # deja presents dans index.html lors d'un run precedent). Jamais perdu.
+    existing_full_text_by_id = {
+        a["id"]: a.get("full_text", "") for a in existing_articles if a.get("id")
+    }
+    for a in current_articles:
+        if a["id"] in full_text_by_id:
+            a["full_text"] = full_text_by_id[a["id"]]
+        elif a["id"] in existing_full_text_by_id:
+            a["full_text"] = existing_full_text_by_id[a["id"]]
+        else:
+            a["full_text"] = a.get("resume", "")
+
     # Purge today's articles from existing archive (idempotency: multi-run = no accumulation)
     today_str = datetime.now(PARIS_TZ).strftime("%Y-%m-%d")
     existing_articles = [a for a in existing_articles if a.get("date") != today_str]
@@ -1723,6 +1751,14 @@ def generate_articles_json(index_html):
             "updated_at": datetime.now(PARIS_TZ).isoformat(),
         }, f, ensure_ascii=False, indent=2)
     print(f"  articles.json genere ({len(merged)} articles total : {len(current_articles)} depuis index.html + {historical_count} historiques)")
+
+    # Fichier leger dedie au compteur "archives-count" de index.html (sprint perf
+    # 2026-07-06) : evite de fetch les ~1 Mo d'articles.json juste pour un total.
+    pubs_count = len([a for a in merged if a.get("categorie") != "lsv"])
+    count_path = ROOT_DIR / "articles-count.json"
+    with open(count_path, "w", encoding="utf-8") as f:
+        json.dump({"count": pubs_count}, f)
+    print(f"  articles-count.json genere (count: {pubs_count})")
 
 
 def _build_article_page_html(article_id: str, titre_raw: str, resume_raw: str, image_url: str, date_str: str, categorie: str, full_text_raw: str = "", source_url: str = "", source_name: str = "") -> str:

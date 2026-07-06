@@ -31,6 +31,7 @@ SYNC_FILES = [
     "print.html",
     "preferences.html",
     "articles.json",
+    "articles-count.json",
     "expression.json",
     "caducee-pharmacien.png",
 ]
