@@ -26,33 +26,33 @@
       "trend": "up"
     }
   ],
-  "pathologies_from": "2026-07-06",
+  "pathologies_from": "2026-07-07",
   "soins": [
     {
-      "display": "Immunite diplomatique",
-      "delta_label": "↑ 92 450",
-      "trend": "up"
-    },
-    {
       "display": "What causes poor digestion",
-      "delta_label": "↑ 88 050",
+      "delta_label": "↑ 94 800",
       "trend": "up"
     },
     {
-      "display": "Melon digestion",
-      "delta_label": "↑ 53 250",
+      "display": "Digestion trop rapide",
+      "delta_label": "↑ 50 100",
       "trend": "up"
     },
     {
-      "display": "Aide à la digestion",
-      "delta_label": "↑ 40 000",
+      "display": "Mauvaise digestion symptômes",
+      "delta_label": "↑ 24 150",
       "trend": "up"
     },
     {
-      "display": "Digestion difficile que faire",
-      "delta_label": "↑ 35 700",
+      "display": "Temps de digestion humain",
+      "delta_label": "↑ 19 800",
+      "trend": "up"
+    },
+    {
+      "display": "Le-blog-sante.fr sommeil et recuperation",
+      "delta_label": "↑ 17 900",
       "trend": "up"
     }
   ],
-  "soins_from": "2026-07-06"
+  "soins_from": "2026-07-07"
 }

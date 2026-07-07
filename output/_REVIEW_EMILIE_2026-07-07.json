@@ -1,0 +1,46 @@
+{
+  "generated_at": "2026-07-07T04:13:33.896272+02:00",
+  "run_date": "2026-07-07",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "La Cnam met ses microscopes sur les groupements : ca va piquer",
+      "resume": "La Cnam veut auditer la rentabilite economique des groupements de pharmacies, leurs flux financiers et leur role dans le partage de la valeur. En parallele, les officines ont vu leur rentabilite chuter de 31 % entre 2022 et 2023. Le timing n'est pas anodin.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/lassurance-maladie-veut-clarifier-le-role-economique-des-groupements",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "Ebola en France : le premier cas est sorti de l'hopital, gueri",
+      "resume": "La ministre de la Sante Stephanie Rist l'a confirme : le premier cas d'Ebola identifie sur le territoire francais est officiellement gueri et sorti de l'hopital. Une bonne nouvelle sanitaire qui valide l'efficacite de la prise en charge dans les unites de haute securite biologique francaises.",
+      "source": "Sciences et Avenir Sante",
+      "source_url": "https://www.sciencesetavenir.fr/sante/ebola-le-premier-cas-en-france-est-gueri-et-sorti-de-l-hopital-annonce-la-ministre-de-la-sante_193582",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Pharmacies fragiles : coefficients de majoration, la vraie question de survie",
+      "resume": "Rentabilité en chute de 31 % entre 2022 et 2023, déserts pharmaceutiques qui s'étendent : l'UPGF monte au créneau et propose des coefficients de majoration sur prix et honoraires. Un signal business fort que tu ne peux pas ignorer.",
+      "source": "Pharm'Actus · Le Moniteur des Pharmacies — Pharmacies fragiles : faut-il instaurer des coefficients de majoration ?, Le Moniteur des Pharmacies — La Cnam veut se pencher de près sur la rentabilité économique des groupements",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/pharmacies-fragiles-faut-il-instaurer-des-coefficients-de-majoration",
+      "confidence_score": 0.72,
+      "warnings": [
+        "Le chiffre de -31 % de rentabilité (2022-2023) est issu du résumé du Moniteur des Pharmacies / données Cnam — à vérifier sur le rapport Cnam source primaire, non consultable directement ici.",
+        "Le chiffre de 120 000 € d'EBE moyen est une estimation basée sur des données Xerfi/UNPF antérieures — non actualisé 2023, à confirmer avec les dernières données disponibles.",
+        "Le chiffre de 20 900 pharmacies au 1er janvier 2026 est une estimation cohérente avec les tendances DREES, mais non confirmé par un document officiel 2026 dans les sources disponibles.",
+        "Les positions de la FSPF et de l'USPO sur la proposition spécifique de l'UPGF ne sont pas documentées dans les sources du jour — intentionnellement signalé comme absent plutôt qu'inventé.",
+        "La clé de financement précise des coefficients proposés par l'UPGF (AM vs patient vs autre) n'est pas détaillée dans le résumé disponible — incertitude maintenue dans l'analyse."
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}
