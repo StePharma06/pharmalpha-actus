@@ -208,7 +208,7 @@ def _build_trends_site_block(data):
     )
 
     return (
-        f'<div style="max-width:1200px;margin:0 auto;padding:0 24px;">'
+        f'<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;">'
         f'<section class="radar-pharmacien" aria-labelledby="rp-titre" '
         f'style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;'
         f'border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);">'
@@ -1615,13 +1615,27 @@ def update_index_html(new_articles):
             # Premier run ou placeholder explicite : remplace le commentaire
             updated_html = updated_html.replace("<!-- MARQUE_TENDANCE -->", trends_html, 1)
         else:
-            # Runs suivants : remplace le bloc <section> existant
+            # Runs suivants : remplace le bloc radar existant EN ENTIER (wrapper compris).
+            # On avale le(s) <div ...max-width:1200px...> englobant(s) ET les </div> de
+            # fermeture pour NE PAS empiler un nouveau wrapper a chaque run (bug 16x div).
+            # Le pattern couvre le nouveau format (class="radar-wrap") ET l'ancien (wrappers
+            # inline eventuellement empiles N fois).
             updated_html, n = re.subn(
-                r'<section class="(?:radar-pharmacien|marque-tendance)"[\s\S]*?</section>',
+                r'(?:<div[^>]*max-width:1200px;margin:0 auto;padding:0 24px;[^>]*>\s*)+'
+                r'<section class="(?:radar-pharmacien|marque-tendance)"[\s\S]*?</section>'
+                r'(?:\s*</div>)+',
                 trends_html,
                 updated_html,
                 count=1,
             )
+            if not n:
+                # Section nue sans wrapper (tres ancien format) : remplace juste la section
+                updated_html, n = re.subn(
+                    r'<section class="(?:radar-pharmacien|marque-tendance)"[\s\S]*?</section>',
+                    trends_html,
+                    updated_html,
+                    count=1,
+                )
             if not n:
                 # Fallback : premier run sans placeholder — injecte avant archives CTA
                 updated_html = updated_html.replace(
