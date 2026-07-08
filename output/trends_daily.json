@@ -1,64 +1,64 @@
 {
-  "generated_at": "2026-07-07",
-  "window_label": "1 juil. au 7 juil. 2026",
+  "generated_at": "2026-07-08",
+  "window_label": "2 juil. au 8 juil. 2026",
   "has_history": true,
   "delta_source": "pytrends_rising",
   "pathologies": [
     {
-      "display": "How to fix fatigue",
-      "delta_label": "↑ 26 750",
-      "trend": "up"
-    },
-    {
-      "display": "Allergie a la chaleur",
-      "delta_label": "↑ 21 350",
-      "trend": "up"
-    },
-    {
       "display": "What causes tiredness and fatigue",
-      "delta_label": "↑ 20 300",
+      "delta_label": "↑ 29 050",
       "trend": "up"
     },
     {
-      "display": "Vitamine b3 bienfaits",
-      "delta_label": "↑ 15 850",
+      "display": "Canicule fatigue intense",
+      "delta_label": "↑ 18 650",
+      "trend": "up"
+    },
+    {
+      "display": "Fatigue post canicule",
+      "delta_label": "↑ 18 300",
       "trend": "up"
     },
     {
       "display": "Fatigue apres la canicule",
-      "delta_label": "↑ 14 200",
+      "delta_label": "↑ 14 050",
+      "trend": "up"
+    },
+    {
+      "display": "Fatigue passagere",
+      "delta_label": "↑ 13 700",
       "trend": "up"
     }
   ],
   "soins": [
     {
+      "display": "Immunite presidentielle",
+      "delta_label": "↑ 112 300",
+      "trend": "up"
+    },
+    {
       "display": "What causes poor digestion",
-      "delta_label": "↑ 94 800",
+      "delta_label": "↑ 104 500",
       "trend": "up"
     },
     {
-      "display": "Digestion trop rapide",
-      "delta_label": "↑ 50 100",
+      "display": "Melon digestion",
+      "delta_label": "↑ 63 350",
       "trend": "up"
     },
     {
-      "display": "Mauvaise digestion symptômes",
-      "delta_label": "↑ 24 150",
+      "display": "Digestion difficile que faire",
+      "delta_label": "↑ 54 750",
       "trend": "up"
     },
     {
-      "display": "Temps de digestion humain",
-      "delta_label": "↑ 19 800",
-      "trend": "up"
-    },
-    {
-      "display": "Le-blog-sante.fr sommeil et recuperation",
-      "delta_label": "↑ 17 900",
+      "display": "Immunite diplomatique",
+      "delta_label": "↑ 53 100",
       "trend": "up"
     }
   ],
   "pathologies_stale": false,
-  "pathologies_from": "2026-07-07",
+  "pathologies_from": "2026-07-08",
   "soins_stale": false,
-  "soins_from": "2026-07-07"
+  "soins_from": "2026-07-08"
 }

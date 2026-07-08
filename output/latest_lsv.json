@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? On soignait l'épilepsie avec du crâne humain en poudre",
-  "resume": "Pendant des siècles, le traitement numéro un contre l'épilepsie, c'était du crâne humain réduit en poudre fine. Pas une légende urbaine : on le retrouve dans les pharmacopées officielles jusqu'au XVIIIe siècle. Et le pire ? Les médecins juraient que ça marchait.",
-  "full_text": "Accroche-toi bien, parce que celle-là elle dépasse tout ce qu'on t'a appris à la fac.\n\nAu XVIIe siècle, si tu avais des convulsions épileptiques, ton médecin te prescrivait de la Cranium humanum. Autrement dit : du crâne humain broyé, réduit en poudre fine, mélangé à du vin ou du miel, et avalé cul sec. C'est pas un remède de sorcière de banlieue - c'est dans la Pharmacopée du Collège Royal de Londres de 1678, en toutes lettres, en latin, avec dosage recommandé.\n\nLa logique derrière tout ça ? La médecine humorale de Galien, toujours elle. Le cerveau étant le siège supposé de l'épilepsie, on pensait que les « vertus » du crâne humain - de préférence d'un mort violent, genre pendu ou décapité, pour une énergie maximale - allaient contrebalancer les déséquilibres responsables des crises.\n\nEt voilà le twist : les crânes en question se négociaient cher. Très cher. Les apothicaires avaient des fournisseurs attitrés - bourreaux, fossoyeurs, chirurgiens militaires - qui livraient la marchandise après les exécutions ou les batailles. C'était un commerce structuré, avec des tarifs et des certificats d'origine. Le crâne irlandais était réputé particulièrement efficace, paraît-il.\n\nOn appelait ça plus globalement la Mumia - une catégorie entière de remèdes à base de restes humains (graisse, sang, os) qui figurait dans les officines européennes pendant plus de quatre siècles. Pas un usage marginal : une pratique mainstream, prescrite par les meilleurs médecins du moment.\n\nLe dernier usage médical documenté de la Mumia en Europe date des années 1750. Soit à peine 270 ans derrière nous.\n\nÇa replace les débats sur l'homéopathie dans une certaine perspective, non ? Et la prochaine fois qu'un patient te demande si ton médicament est « naturel »... tu sais quoi lui répondre.",
-  "image_keywords": "apothecary skull powder",
+  "titre": "Le saviez-vous ? On testait les médicaments sur des condamnés à mort",
+  "resume": "Avant les essais cliniques modernes, les cobayes les plus commodes étaient ceux qui n'avaient rien à perdre. Des siècles durant, prisons et échafauds ont servi de laboratoires officieux. Une pratique qui a façonné, malgré elle, les bases de la pharmacologie.",
+  "full_text": "Remonte avec moi en 1721. Boston. Une épidémie de variole ravage la ville. Un médecin, Zabdiel Boylston, veut tester l'inoculation - l'ancêtre du vaccin. Ses premiers cobayes volontaires ? Son propre fils de six ans. Et des esclaves. Personne d'autre n'acceptait.\n\nMais Boston, c'est presque de la philanthropie comparé à ce qui se passait en Europe. En France, sous l'Ancien Régime, les condamnés à mort se voyaient régulièrement proposer un marché : participer à une expérience médicale en échange d'une commutation de peine. Laudanum, purgatifs violents, préparations à base d'arsenic ou d'antimoine - tout y passait. Les médecins notaient scrupuleusement les effets. Puis le bourreau faisait son travail, ou pas.\n\nLe twist ? C'est que certains de ces « protocoles » ont abouti à des découvertes réelles. En 1796, Edward Jenner teste son vaccin antivariolique sur James Phipps, un gamin de huit ans - fils de son jardinier. Pas un prisonnier, mais toujours quelqu'un qui ne pouvait pas vraiment refuser.\n\nAu XIXe siècle, aux États-Unis, le tristement célèbre J. Marion Sims, considéré comme le père de la gynécologie moderne, a perfectionné ses techniques chirurgicales en opérant des femmes esclaves, sans anesthésie, des dizaines de fois. Ses découvertes sont encore utilisées. Son histoire, elle, fait toujours débat.\n\nCe n'est qu'en 1947, après les procès de Nuremberg et les horreurs médicales nazies, que le Code de Nuremberg a posé les premières règles éthiques claires : consentement éclairé, droit de se retirer, absence de contrainte. La Déclaration d'Helsinki a suivi en 1964.\n\nAujourd'hui, quand tu remets une notice à un patient et que tu lui expliques un essai clinique ou un protocole thérapeutique, tu es l'héritier direct de ce long combat pour l'éthique médicale. Chaque consentement signé, c'est un peu l'histoire qui se rachète.",
+  "image_keywords": "historical medical experiment",
   "tags": [
     "histoire",
-    "pharmacopee",
-    "neurologie",
-    "medecine-ancienne",
-    "remede"
+    "ethique",
+    "pharmacologie",
+    "essais-cliniques",
+    "medicament"
   ],
-  "date": "2026-07-07",
+  "date": "2026-07-08",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",

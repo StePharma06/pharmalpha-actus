@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-07-08T04:11:27.458206+02:00",
+  "run_date": "2026-07-08",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Substitution des DM : le décret approche et la fronde monte",
+      "resume": "L'article 60 de la LFSS 2023 va bientôt se concrétiser par des textes d'application sur la substitution des dispositifs médicaux inscrits en description générique à la LPPR. Avant même leur publication, les acteurs de la filière montent au créneau. Ce qui t'attend au comptoir n'est pas anodin.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/substitution-des-dispositifs-medicaux-la-fronde-samplifie-avant-le-decret",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Collyres remboursables : 3 nouvelles tarifications LPPR, ce que ça change pour ta marge",
+      "resume": "Le CEPS vient de publier les tarifications de trois solutions ophtalmiques inscrites à l'article L.165-1 du CSS. Un segment discret mais régulier en officine, où le prix administré dicte ta rentabilité. Décryptage.",
+      "source": "Pharm'Actus · Avis CEPS – Tarification HYLO DUAL PLUS (L.165-1 CSS) – JO 07/07/2026, Avis CEPS – Tarification VISMED MULTI (L.165-1 CSS) – JO 07/07/2026",
+      "source_url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054393424",
+      "confidence_score": 0.62,
+      "warnings": [
+        "Les chiffres de prix de vente maximum exacts (HT) ne sont pas reproduits dans les résumés des articles sources disponibles : ils figurent dans le texte intégral des avis au JO mais n'ont pas pu être extraits ici. Le titulaire doit consulter directement les avis sur Légifrance pour connaître le tarif précis.",
+        "Le chiffre de 150 millions d'euros pour le marché français des collyres lubrifiants (OTC + LPPR) est une estimation de marché couramment citée dans la presse professionnelle pharmaceutique mais n'est pas issu d'un rapport officiel public récent cité ici : à vérifier via IQVIA ou LEEM.",
+        "Le chiffre de 15-20 % de prévalence de la sécheresse oculaire (SFO) est une donnée épidémiologique reconnue mais dont la source primaire exacte doit être vérifiée avant publication.",
+        "L'arrêté du 4 août 1987 fixant les marges des pharmaciens sur médicaments Rx remboursables a été modifié à plusieurs reprises : vérifier que les coefficients cités (1,074 / seuil 22,90 €) sont bien à jour avec les derniers avenants conventionnels en vigueur en juillet 2026.",
+        "Le taux de TVA de 5,5 % applicable à ces DM ophtalmiques est la règle générale pour les DM à usage individuel remboursables, mais doit être confirmé pour chacune des trois références concernées.",
+        "Les positions de la FSPF et de l'USPO sur ces tarifications spécifiques n'ont pas été retrouvées dans les sources disponibles : la mention de leur absence de commentaire est prudente et exacte au moment de la rédaction, mais peut évoluer."
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}
