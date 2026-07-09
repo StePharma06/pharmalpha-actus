@@ -1,0 +1,49 @@
+{
+  "generated_at": "2026-07-09T04:13:49.037166+02:00",
+  "run_date": "2026-07-09",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Déprescription : la CNAM veut ton comptoir comme levier d'économies",
+      "resume": "Le rapport Charges et Produits 2027 de la CNAM place la déprescription au coeur de sa stratégie. Les pharmaciens sont explicitement cités comme acteurs de la réévaluation des traitements. Traduction : l'Assurance Maladie te voit comme un outil d'optimisation, pas seulement de dispensation.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/trop-de-medicaments-la-cnam-met-les-pharmaciens-aux-commandes",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Vente directe des labos : l'USPO passe à l'offensive, qu'en pensent les autres ?",
+      "resume": "L'USPO recense les cas où la vente directe des laboratoires a retardé la délivrance d'un médicament. Un courrier part chez tous les présidents départementaux pour documenter les incidents. L'objectif : obtenir des sanctions.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/vente-directe-les-syndicats-veulent-des-sanctions-contre-les-laboratoires",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Ticket modérateur en hausse : ce que ça change pour ton chiffre d'affaires",
+      "resume": "Le gouvernement lorgne sur une hausse du ticket modérateur pour économiser des milliards sur l'Assurance Maladie. Pour l'officine, c'est un signal d'alarme sur le reste à charge patient et la dynamique de tes ventes de complémentaires et d'OTC.",
+      "source": "Pharm'Actus · Le Monde Santé — Déremboursement d'actes médicaux : inquiétude face à la piste d'une hausse du ticket modérateur",
+      "source_url": "https://www.lemonde.fr/societe/article/2026/07/08/deremboursement-d-actes-medicaux-inquietude-face-a-la-piste-d-une-hausse-du-ticket-moderateur_6721878_3224.html",
+      "confidence_score": 0.62,
+      "warnings": [
+        "La piste d'une hausse du ticket modérateur n'est PAS confirmée officiellement par le gouvernement au 8 juillet 2026 : c'est une piste rapportée par Le Monde, à nuancer dans l'article",
+        "Le chiffre de 28 Md€ de remboursements médicaments en ville est une estimation basée sur les données CNAM 2023-2024 — à vérifier sur le rapport de l'Assurance Maladie le plus récent",
+        "La fourchette de 3 à 7 % de baisse des primo-dispensations en cas de hausse du reste à charge est extrapolée d'études comportementales générales (Harvard/RAND/IRDES) — pas de chiffre spécifique France officiel sur ce point",
+        "Le chiffre de 3,6 Md€ pour le marché automédication 2025 (AFIPA) est une projection — le chiffre officiel AFIPA 2024 doit être vérifié",
+        "La fourchette 800 M€ - 1,2 Md€ de perte CA officinal lors des déremboursements 2011-2014 est une estimation professionnelle circulant dans la branche — source primaire à retrouver (rapports DGER/IGAS de l'époque)",
+        "Le chiffre de 34 % de renoncement aux soins (DREES 2023) concerne le renoncement aux soins en général, pas spécifiquement lié au ticket modérateur — contexte à ne pas déformer",
+        "Les honoraires d'entretiens pharmaceutiques (30 à 60 €) sont des ordres de grandeur — les montants exacts varient selon la pathologie et l'avenant conventionnel en vigueur : vérifier les avenants 12, 15, 21 et suivants",
+        "Aucune position syndicale FSPF / USPO publiée sur cette mesure spécifique n'a été trouvée dans les sources disponibles — affirmation prudente maintenue dans l'article"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

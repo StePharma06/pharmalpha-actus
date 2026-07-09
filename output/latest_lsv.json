@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? On testait les médicaments sur des condamnés à mort",
-  "resume": "Avant les essais cliniques modernes, les cobayes les plus commodes étaient ceux qui n'avaient rien à perdre. Des siècles durant, prisons et échafauds ont servi de laboratoires officieux. Une pratique qui a façonné, malgré elle, les bases de la pharmacologie.",
-  "full_text": "Remonte avec moi en 1721. Boston. Une épidémie de variole ravage la ville. Un médecin, Zabdiel Boylston, veut tester l'inoculation - l'ancêtre du vaccin. Ses premiers cobayes volontaires ? Son propre fils de six ans. Et des esclaves. Personne d'autre n'acceptait.\n\nMais Boston, c'est presque de la philanthropie comparé à ce qui se passait en Europe. En France, sous l'Ancien Régime, les condamnés à mort se voyaient régulièrement proposer un marché : participer à une expérience médicale en échange d'une commutation de peine. Laudanum, purgatifs violents, préparations à base d'arsenic ou d'antimoine - tout y passait. Les médecins notaient scrupuleusement les effets. Puis le bourreau faisait son travail, ou pas.\n\nLe twist ? C'est que certains de ces « protocoles » ont abouti à des découvertes réelles. En 1796, Edward Jenner teste son vaccin antivariolique sur James Phipps, un gamin de huit ans - fils de son jardinier. Pas un prisonnier, mais toujours quelqu'un qui ne pouvait pas vraiment refuser.\n\nAu XIXe siècle, aux États-Unis, le tristement célèbre J. Marion Sims, considéré comme le père de la gynécologie moderne, a perfectionné ses techniques chirurgicales en opérant des femmes esclaves, sans anesthésie, des dizaines de fois. Ses découvertes sont encore utilisées. Son histoire, elle, fait toujours débat.\n\nCe n'est qu'en 1947, après les procès de Nuremberg et les horreurs médicales nazies, que le Code de Nuremberg a posé les premières règles éthiques claires : consentement éclairé, droit de se retirer, absence de contrainte. La Déclaration d'Helsinki a suivi en 1964.\n\nAujourd'hui, quand tu remets une notice à un patient et que tu lui expliques un essai clinique ou un protocole thérapeutique, tu es l'héritier direct de ce long combat pour l'éthique médicale. Chaque consentement signé, c'est un peu l'histoire qui se rachète.",
-  "image_keywords": "historical medical experiment",
+  "titre": "Le saviez-vous ? On soignait l'asthme en fumant des cigarettes médicales",
+  "resume": "Pendant près d'un siècle, le traitement officiel de l'asthme consistait à allumer une cigarette. Pas une métaphore. Une vraie cigarette, prescrite par de vrais médecins, vendue en pharmacie. Et le comble ? Ça marchait... un peu.",
+  "full_text": "Imagine le comptoir d'une pharmacie en 1890. Un patient entre, essoufflé, les bronches en feu. Tu lui tends une boîte de cigarettes. Et c'est toi qui as raison.\n\nDepuis les années 1840, les « cigarettes médicales » envahissent les officines européennes et américaines. La recette star ? Des feuilles de stramoine - Datura stramonium, une plante de la famille des solanacées - roulées et fumées lors des crises. Parfois complétées de belladone, de chanvre indien ou de lobélie. Le tout vendu sous des noms rassurants : Potter's Asthma Cure, Cigares de Joy, Poudres Escouflaire.\n\nLe twist ? L'atropine contenue dans la stramoine est effectivement bronchodilatatrice. Elle bloque les récepteurs muscariniques, détend les muscles lisses des bronches. En clair, ça dilate les voies respiratoires. Les patients respiraient mieux. Vraiment. C'est d'ailleurs ce principe actif qu'on retrouve aujourd'hui dans certains bronchodilatateurs en inhalateur - l'ipratropium, cousin direct de l'atropine.\n\nMais voilà le problème. Fumer pour soigner ses poumons, même avec une plante active, ça restait fumer. L'irritation, le goudron, la combustion annulaient une bonne partie du bénéfice. Sans parler des effets secondaires de la stramoine à haute dose : hallucinations, tachycardie, rétention urinaire. Quelques patients soignaient leur asthme... et finissaient aux urgences pour autre chose.\n\nLes cigarettes médicales disparaissent progressivement des pharmacies dans les années 1950-1960, avec l'arrivée des premiers bronchodilatateurs en spray. La première cartouche de Ventoline date de 1969 - même principe actif, même cible, zéro combustion.\n\nLa prochaine fois qu'un patient te demande pourquoi son Atrovent sent bizarre, tu peux lui répondre en souriant : c'est l'arrière-petit-fils d'une cigarette que son arrière-grand-père fumait sur ordonnance.",
+  "image_keywords": "vintage medical cigarettes asthma",
   "tags": [
     "histoire",
-    "ethique",
-    "pharmacologie",
-    "essais-cliniques",
-    "medicament"
+    "pharmacie",
+    "plante",
+    "medicament",
+    "traitement"
   ],
-  "date": "2026-07-08",
+  "date": "2026-07-09",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",
