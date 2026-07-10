@@ -1996,7 +1996,11 @@ def _send_hebdo_brevo():
         print("  [HEBDO] BREVO_API_KEY non definie, abandon")
         return
 
-    all_articles = json.loads(articles_path.read_text(encoding="utf-8"))
+    # articles.json = dict {"articles": [...]} (ou liste directe, ancien format).
+    # BUG historique : iterer le dict directement -> 'str' object has no attribute
+    # 'get' -> l'envoi hebdo du lundi crashait silencieusement a chaque fois.
+    _data = json.loads(articles_path.read_text(encoding="utf-8"))
+    all_articles = _data.get("articles", []) if isinstance(_data, dict) else _data
 
     # Fenetre 7 derniers jours
     cutoff = (now - timedelta(days=7)).date()
@@ -2011,21 +2015,52 @@ def _send_hebdo_brevo():
     # Stats de vues pour booster le scoring
     view_stats = _get_view_stats_week(cutoff.isoformat(), now.date().isoformat())
 
+    # Scoring ALIGNE sur select_week_articles() de generate_linkedin_newsletter.py :
+    # memes ponderations editoriales + boost vues + diversite par categorie, pour
+    # que l'email hebdo (lundi, liste 8) et la newsletter LinkedIn hebdo portent
+    # LA MEME selection d'articles. (Les anciennes cles CAT_PRIORITY ne matchaient
+    # aucune vraie categorie -> ponderation morte, tri de fait par vues seules.)
     CAT_PRIORITY = {
-        "reglementation": 10, "medicament": 9, "officine": 8,
-        "sante-publique": 7, "formation": 6, "numerique": 5,
-        "pharmacien": 5, "lsv": -99,
+        "business_officine": 100,
+        "pharma_monde": 70,
+        "avenir_pharma": 60,
+        "bonne_nouvelle": 40,
+        "pharma_france": 30,
+        "sante": 25,
+        "lsv": 0,
     }
 
+    def _adate(a):
+        try:
+            return datetime.strptime(a.get("date", "1970-01-01"), "%Y-%m-%d").replace(tzinfo=PARIS_TZ)
+        except Exception:
+            return datetime(1970, 1, 1, tzinfo=PARIS_TZ)
+
     def score(a):
-        cat_bonus = CAT_PRIORITY.get(a.get("categorie", "").lower(), 3)
+        base = CAT_PRIORITY.get(a.get("categorie", ""), 10)
+        recency = max(0, 7 - (now - _adate(a)).days)
         views = view_stats.get(a.get("id", ""), 0)
-        return cat_bonus + min(views * 5, 30)
+        return base + recency + min(views * 5, 30)
 
     actus = [a for a in week_articles if a.get("categorie") != "lsv"]
-    lsv = next((a for a in week_articles if a.get("categorie") == "lsv"), None)
 
-    top_actus = sorted(actus, key=score, reverse=True)[:6]
+    # Diversite : 1 par categorie prioritaire si dispo, puis meilleurs scores
+    by_cat = {}
+    for a in actus:
+        cat = a.get("categorie", "")
+        if cat not in by_cat or score(a) > score(by_cat[cat]):
+            by_cat[cat] = a
+    priority_cats = ["business_officine", "pharma_monde", "pharma_france", "bonne_nouvelle", "avenir_pharma"]
+    top_actus = [by_cat[c] for c in priority_cats if c in by_cat]
+    used = {a.get("id") for a in top_actus}
+    remaining = sorted([a for a in actus if a.get("id") not in used], key=score, reverse=True)
+    while len(top_actus) < 6 and remaining:
+        top_actus.append(remaining.pop(0))
+    top_actus.sort(key=_adate, reverse=True)
+    top_actus = top_actus[:6]
+
+    lsv_candidates = sorted([a for a in week_articles if a.get("categorie") == "lsv"], key=_adate, reverse=True)
+    lsv = lsv_candidates[0] if lsv_candidates else None
     selected = top_actus + ([lsv] if lsv else [])
 
     if not selected:

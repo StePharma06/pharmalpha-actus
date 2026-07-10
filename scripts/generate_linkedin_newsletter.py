@@ -664,6 +664,36 @@ def _extract_newsletter_parts(markdown):
                 hashtags, i = read_fence(f); continue
         i += 1
 
+    # Reordonne chaque paire (repere image, bloc) : le TITRE du bloc passe AVANT
+    # le repere image (retour Stephen 2026-07-10 : titre en style en-tete, image
+    # juste EN DESSOUS, pas au-dessus). Le titre est marque [[H2]] pour etre rendu
+    # en vrai <h2> par _corps_to_html : LinkedIn le convertit en style "Titre" au
+    # collage, plus besoin de le faire a la main.
+    _img_re = re.compile(r"^\[IMAGE \d+\]$")
+    reordered = []
+    k = 0
+    while k < len(corps_parts):
+        part = corps_parts[k]
+        nxt = corps_parts[k + 1] if k + 1 < len(corps_parts) else None
+        if _img_re.match(part) and nxt and not _img_re.match(nxt):
+            first, _, rest = nxt.partition("\n\n")
+            first, rest = first.strip(), rest.strip()
+            # 1re ligne courte et seule = titre du bloc -> h2 avant l'image
+            if first and "\n" not in first and len(first) <= 220:
+                reordered.append("[[H2]]" + first)
+                reordered.append(part)
+                if rest:
+                    reordered.append(rest)
+            else:
+                # structure inattendue : on garde l'ordre d'origine
+                reordered.append(part)
+                reordered.append(nxt)
+            k += 2
+            continue
+        reordered.append(part)
+        k += 1
+    corps_parts = reordered
+
     corps = "\n\n".join(p for p in corps_parts if p.strip())
     if not (titre and corps):
         return None
@@ -679,6 +709,14 @@ def _corps_to_html(corps):
     for para in corps.split("\n\n"):
         para = para.strip()
         if not para:
+            continue
+        if para.startswith("[[H2]]"):
+            # Titre de bloc : vrai <h2> -> LinkedIn applique son style "Titre"
+            # au collage (retour Stephen 2026-07-10).
+            t = re.sub(r"\*\*([^*]+)\*\*", r"\1", esc(para[6:].strip()))
+            out.append(
+                f'<h2 style="margin:24px 0 10px;font-size:21px;line-height:1.3;'
+                f'font-weight:800;color:#111118;">{t}</h2>')
             continue
         mimg = re.match(r"^\[IMAGE (\d+)\]$", para)
         if mimg:
@@ -729,7 +767,7 @@ def send_newsletter_email(markdown, actus, lsv, companion_post=""):
         paste_ready_section = f'''
   <tr><td style="padding:24px 28px 6px;">
     <h2 style="font-size:17px;margin:0 0 6px;color:#0a66c2;">✅ Version prête à coller (gain de temps)</h2>
-    <p style="margin:0 0 14px;font-size:13px;color:#555;line-height:1.5;">Colle chaque cadre <strong>tel quel</strong> dans LinkedIn (les sauts de ligne sont conservés). Aux repères <span style="color:#4338ca;font-weight:700;">📷</span>, insère l'image correspondante (pièces jointes 01 à 07, + la couverture 00 en tête).</p>
+    <p style="margin:0 0 14px;font-size:13px;color:#555;line-height:1.5;">Colle chaque cadre <strong>tel quel</strong> dans LinkedIn (les sauts de ligne sont conservés, les titres arrivent déjà en <strong>style en-tête</strong>). Chaque repère <span style="color:#4338ca;font-weight:700;">📷</span> est placé <strong>juste sous le titre</strong> de son actu : insère l'image correspondante à cet endroit (pièces jointes 01 à 07, + la couverture 00 en tête).</p>
   </td></tr>
   <tr><td style="padding:0 28px 10px;">
     <p style="margin:0 0 4px;font-size:12px;font-weight:700;color:#888;">TITRE (champ « Titre » de l'article)</p>
