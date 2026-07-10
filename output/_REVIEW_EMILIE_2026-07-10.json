@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-07-10T04:11:39.764524+02:00",
+  "run_date": "2026-07-10",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "avenir_pharma",
+      "titre": "Canicule et SEP : un risque de poussée majoré de 40 %, le comptoir doit savoir",
+      "resume": "Le projet Confisep-Heat vient de confirmer ce que les patients SEP ressentaient depuis longtemps : les fortes chaleurs augmentent le risque de poussées de 40 %. Avec le réchauffement climatique, ce n'est plus un signal d'alerte, c'est une donnée de fond pour la prise en charge officinale.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/conseils/pathologies/canicule-et-sclerose-en-plaques-une-hausse-de-40-du-risque-de-poussee-confirmee",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Bas de contention : la fin de la période transitoire coûte combien à ton officine ?",
+      "resume": "Depuis le 1er juillet 2026, les nouveaux tarifs de remboursement des bas de contention, orthèses et corsets s'appliquent sans filet. Une baisse décidée unilatéralement par le Comité économique des produits de santé. Concrètement, pour les officines qui ont stocké au prix fort, c'...",
+      "source": "Pharm'Actus · FSPF — Baisse des tarifs de remboursement des bas de contention et orthèses : fin de la période transitoire, UPGF — Rapport Charges et produits : nouvelle doctrine, nouveau piège ?",
+      "source_url": "https://www.fspf.fr/baisse-des-tarifs-de-remboursement-des-bas-de-contention-et-ortheses-fin-de-la-periode-transitoire/",
+      "confidence_score": 0.62,
+      "warnings": [
+        "Le montant exact de la baisse tarifaire (% par classe LPP) n'est pas chiffré dans le communiqué FSPF du 9 juillet 2026 : la fourchette 5-15 % est une estimation basée sur les précédents arrêtés CEPS, à vérifier sur le JO ou l'arrêté LPP correspondant.",
+        "Le chiffre de 350-400 M€ de remboursements annuels pour la contention est une estimation reconstituée à partir de données CNAM antérieures (rapports Charges et Produits 2023-2024), non confirmé par un document officiel 2025-2026.",
+        "Le chiffre de 11 000 officines dispensant des DM de contention est une estimation haute — certaines officines (urgences, ruralité isolée) dispensent peu ou pas de contention.",
+        "La part de marché des pure players e-commerce (20-25 % sur classes I) est une estimation sectorielle non sourcée par un rapport officiel récent.",
+        "L'absence de prise de position USPO sur ce sujet précis est affirmée sur la base de l'absence de publication visible — à vérifier directement sur uspo.fr.",
+        "Les prix d'achat fournisseurs cités en exemple (18 €) sont illustratifs et non tirés d'un tarif négocié publié."
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

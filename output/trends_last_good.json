@@ -26,33 +26,33 @@
       "trend": "up"
     }
   ],
-  "pathologies_from": "2026-07-09",
+  "pathologies_from": "2026-07-10",
   "soins": [
     {
       "display": "Immunite presidentielle",
-      "delta_label": "↑ 112 300",
+      "delta_label": "↑ 573 700",
       "trend": "up"
     },
     {
       "display": "What causes poor digestion",
-      "delta_label": "↑ 104 500",
+      "delta_label": "↑ 126 500",
       "trend": "up"
     },
     {
-      "display": "Melon digestion",
-      "delta_label": "↑ 63 350",
+      "display": "Digestion lente que faire",
+      "delta_label": "↑ 65 400",
       "trend": "up"
     },
     {
-      "display": "Digestion difficile que faire",
-      "delta_label": "↑ 54 750",
+      "display": "Citrate de betaine digestion",
+      "delta_label": "↑ 52 700",
       "trend": "up"
     },
     {
-      "display": "Immunite diplomatique",
-      "delta_label": "↑ 53 100",
+      "display": "Walmart near me",
+      "delta_label": "↑ 44 000",
       "trend": "up"
     }
   ],
-  "soins_from": "2026-07-09"
+  "soins_from": "2026-07-10"
 }
