@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? On comptait les globules rouges... à la main, un par un",
-  "resume": "Avant les automates d'hématologie, compter les cellules du sang était un travail de moine. Un médecin viennois a passé des années à fixer un microscope pour mettre au point la première numération sanguine fiable. Et ses chiffres ont changé la médecine pour toujours.",
-  "full_text": "Imagine-toi au comptoir, un bilan NFS sous les yeux : globules rouges, blancs, plaquettes, tout sorti en 60 secondes chrono d'un automate flambant neuf. Maintenant oublie tout ça.\n\nEn 1852, le médecin Karl Vierordt à Tübingen décide de compter les globules rouges d'un être humain. Méthode : une goutte de sang étalée sur une lamelle, un microscope, un crayon, et... une patience surhumaine. Il compte. Case par case. Cellule par cellule. Il faut en moyenne 3 heures pour dénombrer les globules d'un seul champ microscopique. Il recommence des dizaines de fois pour avoir un résultat fiable. On parle de journées entières collé à l'oculaire.\n\nLe twist ? Vierordt annonce fièrement un chiffre : 5 millions de globules rouges par millimètre cube. Bluffant de précision pour l'époque. Sauf que ses contemporains refusent de le croire. Compter des cellules vivantes ? Du délire de savant fou. Certains médecins pensent encore que le sang est un fluide homogène, sans structure interne réelle.\n\nC'est un autre médecin, Louis-Charles Malassez à Paris, qui révolutionne tout en 1874. Il invente l'hémacymètre, une petite chambre en verre gravée d'un quadrillage ultra-précis. On dilue le sang, on le dépose, on compte dans les cases. Résultat en... 20 minutes. Une révolution. Malassez a aussi son nom sur les cellules de Malassez dans le ligament alvéolo-dentaire - mais ça, c'est une autre histoire.\n\nPendant 80 ans, chaque numération sanguine dans le monde entier s'est faite à la main, à l'hémacymètre. Techniciens de labo, les yeux rouges à force de fixer des grilles, comptant des milliers de cellules par jour. Le premier automate d'hématologie ne débarque qu'en 1956, inventé par Wallace Coulter dans son garage de Chicago.\n\nAujourd'hui, la NFS que tu commentes au comptoir en deux secondes représente 100 ans de sueur de labos. Pas mal pour un bilan \"de routine\".",
-  "image_keywords": "blood microscope laboratory",
+  "titre": "Le saviez-vous ? La gangrène se soignait avec des asticots... et ça marchait",
+  "resume": "Avant les antibiotiques, les chirurgiens avaient une arme secrète dégoûtante mais redoutablement efficace. Des larves de mouches nichées dans les plaies infectées. Et ce n'était pas de la médecine désespérée - c'était de la médecine brillante.",
+  "full_text": "On est en 1917, sur le front de la Première Guerre mondiale. Le chirurgien américain William Baer opère dans des conditions d'horreur absolue. Il récupère un soldat blessé depuis deux jours dans un champ de bataille, couvert de boue, de sang... et d'asticots. Le genre de cas qui s'annonce fatal.\n\nSauf que Baer remarque quelque chose d'étrange. Les plaies infestées de larves sont propres. Pas de gangrène. Pas de nécrose. Les tissus en dessous sont roses, vivants. Les autres blessures, elles, pourrissent.\n\nLe twist ? Les asticots ne mangent que les tissus morts. Pas les tissus sains. Ils nettoient la plaie avec une précision chirurgicale qu'aucun scalpel ne peut égaler. Et en plus, ils sécrètent de l'allantoïne - une substance qui stimule la cicatrisation et tue les bactéries. La nature avait inventé le débridement mécanique bien avant nous.\n\nBarer rentre aux États-Unis et teste ça officiellement sur des enfants atteints d'ostéomyélite chronique en 1928. Résultats bluffants. Des cas considérés comme incurables guérissent en quelques semaines. La \"larvothérapie\" devient une vraie pratique médicale dans les années 30, utilisée dans des centaines d'hôpitaux.\n\nEt puis la pénicilline arrive dans les années 40. Les antibiotiques font oublier tout ça d'un coup. Les asticots, c'est fini, c'est sale, c'est archaïque.\n\nSauf que... la résistance aux antibiotiques a changé la donne. Depuis les années 2000, la larvothérapie est officiellement réhabilitée. La FDA américaine a approuvé des asticots stériles de Lucilia sericata comme dispositif médical en 2004. En France, certains services de plaies chroniques les utilisent encore aujourd'hui - sur des ulcères diabétiques, des escarres, des plaies post-chirurgicales. La prochaine fois qu'un patient te parle de \"médecine naturelle\", tu peux lui raconter celle-là. Elle a quand même 100 ans d'avance.",
+  "image_keywords": "maggot wound therapy",
   "tags": [
     "histoire",
-    "diagnostic",
-    "instrument",
-    "biologie",
-    "decouverte"
+    "chirurgie",
+    "infection",
+    "decouverte",
+    "plaie"
   ],
-  "date": "2026-07-10",
+  "date": "2026-07-11",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",

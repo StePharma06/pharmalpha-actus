@@ -1,64 +1,64 @@
 {
-  "generated_at": "2026-07-10",
-  "window_label": "4 juil. au 10 juil. 2026",
+  "generated_at": "2026-07-11",
+  "window_label": "5 juil. au 11 juil. 2026",
   "has_history": true,
   "delta_source": "pytrends_rising",
   "pathologies": [
     {
-      "display": "Canicule et fatigue",
-      "delta_label": "↑ 75 750",
+      "display": "How to fix fatigue",
+      "delta_label": "↑ 45 200",
       "trend": "up"
     },
     {
       "display": "What causes tiredness and fatigue",
-      "delta_label": "↑ 32 200",
+      "delta_label": "↑ 39 950",
       "trend": "up"
     },
     {
-      "display": "Fatigue après canicule",
-      "delta_label": "↑ 27 900",
+      "display": "Crp élevée et fatigue",
+      "delta_label": "↑ 16 700",
       "trend": "up"
     },
     {
-      "display": "Allergie chlore piscine",
-      "delta_label": "↑ 18 850",
+      "display": "Test allergie gluten",
+      "delta_label": "↑ 15 600",
       "trend": "up"
     },
     {
       "display": "Fatigue apres la canicule",
-      "delta_label": "↑ 14 900",
+      "delta_label": "↑ 13 900",
       "trend": "up"
     }
   ],
   "soins": [
     {
       "display": "Immunite presidentielle",
-      "delta_label": "↑ 573 700",
+      "delta_label": "↑ 253 950",
       "trend": "up"
     },
     {
       "display": "What causes poor digestion",
-      "delta_label": "↑ 126 500",
+      "delta_label": "↑ 142 350",
       "trend": "up"
     },
     {
-      "display": "Digestion lente que faire",
-      "delta_label": "↑ 65 400",
+      "display": "Immunite diplomatique",
+      "delta_label": "↑ 112 150",
       "trend": "up"
     },
     {
-      "display": "Citrate de betaine digestion",
-      "delta_label": "↑ 52 700",
+      "display": "Temps digestion chat",
+      "delta_label": "↑ 40 900",
       "trend": "up"
     },
     {
-      "display": "Walmart near me",
-      "delta_label": "↑ 44 000",
+      "display": "Maïs digestion",
+      "delta_label": "↑ 26 000",
       "trend": "up"
     }
   ],
   "pathologies_stale": false,
-  "pathologies_from": "2026-07-10",
+  "pathologies_from": "2026-07-11",
   "soins_stale": false,
-  "soins_from": "2026-07-10"
+  "soins_from": "2026-07-11"
 }

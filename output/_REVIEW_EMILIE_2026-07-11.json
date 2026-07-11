@@ -1,0 +1,25 @@
+{
+  "generated_at": "2026-07-11T04:07:14.080014+02:00",
+  "run_date": "2026-07-11",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Grille salaires officine : l'échec du 6 juillet va te coûter cher",
+      "resume": "La CPPNI du 6 juillet n'a débouché sur aucun accord. Résultat : plusieurs minima conventionnels restent sous le Smic revalorisé au 1er juin 2026. Pour toi, titulaire, c'est une bombe à retardement sur ta masse salariale.",
+      "source": "Pharm'Actus · Le Pharmacien de France – Les négociations du 6 juillet font chou blanc, USPO – Réforme du 3ème cycle (R3C) : Rémunération des stagiaires (contexte conventionnel)",
+      "source_url": "https://lepharmaciendefrance.fr/les-negociations-du-6-juillet-font-chou-blanc/",
+      "confidence_score": 0.62,
+      "warnings": [
+        "Le montant exact du Smic au 1er juin 2026 (taux horaire brut) doit être confirmé sur le site officiel gouvernement.fr — chiffre de 11,88 €/h utilisé à titre indicatif.",
+        "Les coefficients conventionnels exactement rattrapés par le Smic ne sont pas précisés dans les sources disponibles : le détail de la grille CCN officine 1997 doit être vérifié auprès de la FSPF ou de l'USPO.",
+        "L'estimation de surcoût (3 000 à 6 000 € par officine / 60 M€ secteur) est une projection indicative basée sur une hypothèse de 2 coefficients rattrapés et 5 ETP — elle doit être validée avec un expert-comptable spécialisé officine.",
+        "La position exacte des syndicats de salariés (CGT, CFDT, FO) lors de la CPPNI du 6 juillet n'est pas documentée dans les sources disponibles : leur nom est cité à titre générique sans leur prêter de position précise.",
+        "Aucun chiffre officiel sur la date de la prochaine réunion CPPNI n'est disponible à ce stade — formulation prudente utilisée ('à attendre').",
+        "Le chiffre de 100 000 salariés du secteur officinal est une estimation sectorielle couramment citée mais à vérifier dans les rapports DREES ou Ordre national des pharmaciens."
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}
