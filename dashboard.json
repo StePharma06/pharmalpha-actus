@@ -1,0 +1,196 @@
+{
+ "genere_le": "2026-07-13T11:14:13+02:00",
+ "liste_brevo": 5,
+ "abonnes_total": 1034,
+ "nouveaux_7j": 10,
+ "nouveaux_cumul": 1027,
+ "cumul_depuis": "2026-01-01",
+ "semaine": {
+  "du": "2026-07-06",
+  "au": "2026-07-13",
+  "delivres": 6745,
+  "ouvertures": 2508,
+  "ouvertures_uniques": 1869,
+  "clics": 3773,
+  "clics_uniques": 568,
+  "taux_ouverture_pct": 27.7,
+  "taux_clic_pct": 8.4,
+  "ctor_pct": 30.4,
+  "top_articles": [
+   {
+    "id": "actu_2026_07_11_1",
+    "titre": "Grille salaires officine : l'échec du 6 juillet va te coûter cher",
+    "date": "2026-07-11",
+    "categorie": "business_officine",
+    "clics": 120,
+    "lecteurs": 64
+   },
+   {
+    "id": "actu_2026_07_10_1",
+    "titre": "Vaccin grippe sur liste I : prescription obligatoire, mais tu peux la rédiger toi-même",
+    "date": "2026-07-10",
+    "categorie": "pharma_france",
+    "clics": 118,
+    "lecteurs": 62
+   },
+   {
+    "id": "actu_2026_07_09_2",
+    "titre": "Vente directe des labos : l'USPO passe à l'offensive, qu'en pensent les autres ?",
+    "date": "2026-07-09",
+    "categorie": "pharma_france",
+    "clics": 108,
+    "lecteurs": 57
+   },
+   {
+    "id": "actu_2026_07_09_3",
+    "titre": "Solaires Temu, Shein, AliExpress : 9 produits sur 10 non conformes, le comptoir comme rempart",
+    "date": "2026-07-09",
+    "categorie": "bonne_nouvelle",
+    "clics": 114,
+    "lecteurs": 56
+   },
+   {
+    "id": "actu_2026_07_10_2",
+    "titre": "GLP-1 et grossesse : ce que la plus grande méta-analyse du BMJ vient de trancher",
+    "date": "2026-07-10",
+    "categorie": "pharma_monde",
+    "clics": 108,
+    "lecteurs": 56
+   },
+   {
+    "id": "actu_2026_07_08_1",
+    "titre": "Substitution des DM : le décret approche et la fronde monte",
+    "date": "2026-07-08",
+    "categorie": "pharma_france",
+    "clics": 92,
+    "lecteurs": 55
+   },
+   {
+    "id": "actu_2026_07_09_1",
+    "titre": "Déprescription : la CNAM veut ton comptoir comme levier d'économies",
+    "date": "2026-07-09",
+    "categorie": "pharma_france",
+    "clics": 92,
+    "lecteurs": 54
+   },
+   {
+    "id": "actu_2026_07_06_1",
+    "titre": "Desescalade medicamenteuse : l'Assurance Maladie vise 1,3 milliard d'economies sur le medicament",
+    "date": "2026-07-06",
+    "categorie": "pharma_france",
+    "clics": 89,
+    "lecteurs": 48
+   },
+   {
+    "id": "actu_2026_07_07_1",
+    "titre": "La Cnam met ses microscopes sur les groupements : ca va piquer",
+    "date": "2026-07-07",
+    "categorie": "pharma_france",
+    "clics": 85,
+    "lecteurs": 47
+   },
+   {
+    "id": "actu_2026_07_10_4",
+    "titre": "Canicule et SEP : un risque de poussée majoré de 40 %, le comptoir doit savoir",
+    "date": "2026-07-10",
+    "categorie": "avenir_pharma",
+    "clics": 93,
+    "lecteurs": 45
+   }
+  ]
+ },
+ "cumul": {
+  "du": "2026-01-01",
+  "au": "2026-07-13",
+  "delivres": 52805,
+  "ouvertures": 21699,
+  "ouvertures_uniques": 14832,
+  "clics": 21993,
+  "clics_uniques": 4075,
+  "taux_ouverture_pct": 28.1,
+  "taux_clic_pct": 7.7,
+  "ctor_pct": 27.5,
+  "top_articles": [
+   {
+    "id": "actu_2026_06_18_1",
+    "titre": "actu_2026_06_18_1",
+    "date": "",
+    "categorie": "",
+    "clics": 140,
+    "lecteurs": 78
+   },
+   {
+    "id": "actu_2026_06_23_1",
+    "titre": "actu_2026_06_23_1",
+    "date": "",
+    "categorie": "",
+    "clics": 132,
+    "lecteurs": 74
+   },
+   {
+    "id": "actu_2026_06_23_2",
+    "titre": "actu_2026_06_23_2",
+    "date": "",
+    "categorie": "",
+    "clics": 130,
+    "lecteurs": 67
+   },
+   {
+    "id": "actu_2026_07_11_1",
+    "titre": "Grille salaires officine : l'échec du 6 juillet va te coûter cher",
+    "date": "2026-07-11",
+    "categorie": "business_officine",
+    "clics": 120,
+    "lecteurs": 64
+   },
+   {
+    "id": "actu_2026_07_04_1",
+    "titre": "Vaccins chez les médecins dès septembre : l'honoraire de dispensation en jeu",
+    "date": "2026-07-04",
+    "categorie": "pharma_france",
+    "clics": 98,
+    "lecteurs": 64
+   },
+   {
+    "id": "actu_2026_06_23_3",
+    "titre": "actu_2026_06_23_3",
+    "date": "",
+    "categorie": "",
+    "clics": 126,
+    "lecteurs": 63
+   },
+   {
+    "id": "actu_2026_07_10_1",
+    "titre": "Vaccin grippe sur liste I : prescription obligatoire, mais tu peux la rédiger toi-même",
+    "date": "2026-07-10",
+    "categorie": "pharma_france",
+    "clics": 118,
+    "lecteurs": 62
+   },
+   {
+    "id": "actu_2026_06_22_1",
+    "titre": "actu_2026_06_22_1",
+    "date": "",
+    "categorie": "",
+    "clics": 98,
+    "lecteurs": 61
+   },
+   {
+    "id": "actu_2026_06_22_4",
+    "titre": "actu_2026_06_22_4",
+    "date": "",
+    "categorie": "",
+    "clics": 95,
+    "lecteurs": 59
+   },
+   {
+    "id": "actu_2026_07_09_2",
+    "titre": "Vente directe des labos : l'USPO passe à l'offensive, qu'en pensent les autres ?",
+    "date": "2026-07-09",
+    "categorie": "pharma_france",
+    "clics": 108,
+    "lecteurs": 57
+   }
+  ]
+ }
+}
