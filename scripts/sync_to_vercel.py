@@ -26,6 +26,7 @@ SYNC_FILES = [
     "index.html",
     "archives.html",
     "dashboard.html",
+    "dashboard.json",
     "cgu.html",
     "privacy.html",
     "print.html",

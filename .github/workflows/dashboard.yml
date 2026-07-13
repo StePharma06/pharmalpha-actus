@@ -3,7 +3,7 @@ name: Generate Dashboard Analytics
 on:
   workflow_dispatch:  # Lancement manuel
   schedule:
-    - cron: '0 3 * * *'  # Chaque jour 3h UTC (5h Paris ete / 4h Paris hiver) - HTML quotidien + email le lundi uniquement
+    - cron: '0 3 * * *'  # Chaque jour 3h UTC (5h Paris ete / 4h Paris hiver) - HTML + JSON quotidiens (plus d'email : /admin consomme le JSON)
 
 permissions:
   contents: write
@@ -18,16 +18,16 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Generate dashboard + send email
+      - name: Generate dashboard (HTML + JSON)
         env:
           BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
         run: python scripts/generate_dashboard.py
 
-      - name: Commit & push dashboard.html
+      - name: Commit & push dashboard
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add dashboard.html
+          git add dashboard.html dashboard.json
           if git diff --staged --quiet; then
             echo "No changes to dashboard"
           else

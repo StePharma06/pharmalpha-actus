@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
 """
-Pharm'Actus - Dashboard analytics (hebdomadaire)
-Fetch Brevo API stats → genere HTML dashboard (2 periodes) + envoie par email
+Pharm'Actus - Dashboard analytics (quotidien)
+Fetch Brevo API stats → genere dashboard.html + dashboard.json (2 periodes).
+Le JSON est synchronise vers pharmalpha.fr/actus/dashboard.json et consomme
+par l'onglet Pharm'Actus de pharmalpha.fr/admin.
+(L'envoi email du lundi a ete supprime le 2026-07-13 a la demande de Stephen.)
 
 Usage:
   BREVO_API_KEY=xkeysib-... python scripts/generate_dashboard.py
 
 Output:
-  dashboard.html (a la racine, publie sur https://actus.pharmalpha.fr/dashboard.html)
-  Email envoye a stephen.pharmacien@gmail.com
+  dashboard.html + dashboard.json (a la racine du repo)
 """
 
 import json
@@ -34,9 +36,7 @@ WEEK_DAYS = 7
 CUMUL_START_DATE = "2026-01-01"  # Avant le lancement de Pharm'Actus
 
 DASHBOARD_URL = "https://actus.pharmalpha.fr/dashboard.html"
-EMAIL_RECIPIENT = "stephen.pharmacien@gmail.com"
-SENDER_EMAIL = "actus@pharmalpha.fr"
-SENDER_NAME = "Pharm'Actus Dashboard"
+DASHBOARD_JSON = ROOT_DIR / "dashboard.json"
 
 
 def brevo_api(endpoint, api_key, method="GET", payload=None):
@@ -278,7 +278,7 @@ def build_dashboard(api_key):
     articles_map = load_articles_map()
     print(f"  {len(articles_map)} articles connus")
 
-    print("\n[6/6] Generation HTML + email...")
+    print("\n[6/6] Generation HTML + JSON...")
     html = render_dashboard(
         subscribers=subscribers,
         new_week=new_week,
@@ -290,27 +290,66 @@ def build_dashboard(api_key):
     DASHBOARD_HTML.write_text(html, encoding="utf-8")
     print(f"  Fichier : {DASHBOARD_HTML}")
 
-    # Envoi email : UNIQUEMENT le lundi (weekday == 0) OU si forcage via env FORCE_EMAIL=1
-    today_weekday = today.weekday()
-    force_email = os.environ.get("FORCE_EMAIL", "").strip() in ("1", "true", "yes")
-    if today_weekday == 0 or force_email:
-        reason = "forcage FORCE_EMAIL" if force_email else "lundi matin"
-        print(f"\n[Email] Envoi du dashboard par email ({reason})...")
-        email_html = render_email_dashboard(
-            subscribers=subscribers,
-            new_week=new_week,
-            new_cumul=new_cumul,
-            week_stats=week_stats,
-            cumul_stats=cumul_stats,
-            articles_map=articles_map,
-        )
-        send_dashboard_email(api_key, email_html)
-    else:
-        days = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
-        print(f"\n[Email] On est {days[today_weekday]} - email envoye uniquement le lundi. Dashboard HTML a jour seulement.")
+    # JSON structure pour l'onglet Pharm'Actus de pharmalpha.fr/admin
+    # (a remplace l'email hebdo du lundi, supprime a la demande de Stephen 2026-07-13).
+    # Synchronise vers pharmalpha.fr/actus/dashboard.json par sync_to_vercel.py.
+    write_dashboard_json(
+        subscribers=subscribers,
+        new_week=new_week,
+        new_cumul=new_cumul,
+        week_stats=week_stats,
+        cumul_stats=cumul_stats,
+        articles_map=articles_map,
+    )
+    print(f"  Fichier : {DASHBOARD_JSON}")
 
     print(f"\n=== Termine ===")
     print(f"URL en ligne : {DASHBOARD_URL}")
+
+
+def _serialize_period(stats, articles_map, top_n=10):
+    """Transforme le dict de get_stats_for_period en bloc JSON-serialisable."""
+    articles = []
+    for aid in stats["top_articles"][:top_n]:
+        meta = articles_map.get(aid, {})
+        articles.append({
+            "id": aid,
+            "titre": meta.get("titre", aid),
+            "date": meta.get("date", ""),
+            "categorie": meta.get("categorie", ""),
+            "clics": stats["article_clicks"].get(aid, 0),
+            "lecteurs": len(stats["article_unique_clickers"].get(aid, set())),
+        })
+    return {
+        "du": stats["start_date"],
+        "au": stats["end_date"],
+        "delivres": stats["delivered"],
+        "ouvertures": stats["opens"],
+        "ouvertures_uniques": stats["unique_opens"],
+        "clics": stats["clicks"],
+        "clics_uniques": stats["unique_clicks"],
+        "taux_ouverture_pct": round(stats["open_rate"], 1),
+        "taux_clic_pct": round(stats["click_rate"], 1),
+        "ctor_pct": round(stats["ctor"], 1),
+        "top_articles": articles,
+    }
+
+
+def write_dashboard_json(subscribers, new_week, new_cumul, week_stats, cumul_stats, articles_map):
+    """Ecrit dashboard.json : memes KPIs que l'ancien email hebdo, consommes par /admin."""
+    payload = {
+        "genere_le": datetime.now(PARIS_TZ).isoformat(timespec="seconds"),
+        "liste_brevo": BREVO_LIST_ID,
+        "abonnes_total": subscribers,
+        "nouveaux_7j": new_week,
+        "nouveaux_cumul": new_cumul,
+        "cumul_depuis": CUMUL_START_DATE,
+        "semaine": _serialize_period(week_stats, articles_map),
+        "cumul": _serialize_period(cumul_stats, articles_map),
+    }
+    DASHBOARD_JSON.write_text(
+        json.dumps(payload, ensure_ascii=False, indent=1), encoding="utf-8"
+    )
 
 
 def format_article_row(i, aid, articles_map, article_clicks, article_unique_clickers):
@@ -537,139 +576,6 @@ tr:hover td {{ background: #fafafa; }}
 </html>
 '''
 
-
-def render_email_dashboard(**ctx):
-    """Render a simplified HTML dashboard for email (inline styles, table layouts)."""
-    subs = ctx["subscribers"]
-    new_week = ctx.get("new_week", 0)
-    new_cumul = ctx.get("new_cumul", 0)
-    week = ctx["week_stats"]
-    cumul = ctx["cumul_stats"]
-    articles_map = ctx["articles_map"]
-
-    updated_at = datetime.now(PARIS_TZ).strftime("%Y-%m-%d %H:%M")
-
-    def format_stat_row(label, week_val, cumul_val, sublabel=""):
-        sub = f'<br><span style="font-size:10px;color:#aaa;font-weight:400;">{sublabel}</span>' if sublabel else ""
-        return f'''<tr>
-          <td style="padding:14px 12px;border-bottom:1px solid #f0f0f0;font-size:13px;color:#555;font-weight:500;">{label}{sub}</td>
-          <td style="padding:14px 12px;border-bottom:1px solid #f0f0f0;text-align:right;font-size:18px;font-weight:700;color:#f97316;font-variant-numeric:tabular-nums;">{week_val}</td>
-          <td style="padding:14px 12px;border-bottom:1px solid #f0f0f0;text-align:right;font-size:18px;font-weight:700;color:#0d9488;font-variant-numeric:tabular-nums;">{cumul_val}</td>
-        </tr>'''
-
-    stats_rows = ""
-    stats_rows += format_stat_row("Abonnes", f"+{new_week}", str(subs), "nouveaux / total")
-    stats_rows += format_stat_row("Emails delivres", str(week["delivered"]), str(cumul["delivered"]))
-    stats_rows += format_stat_row(
-        "Taux d'ouverture",
-        f'{week["open_rate"]:.1f}%',
-        f'{cumul["open_rate"]:.1f}%',
-        f'{week["unique_opens"]} / {cumul["unique_opens"]} uniques'
-    )
-    stats_rows += format_stat_row(
-        "Taux de clic",
-        f'{week["click_rate"]:.1f}%',
-        f'{cumul["click_rate"]:.1f}%',
-        f'{week["unique_clicks"]} / {cumul["unique_clicks"]} uniques'
-    )
-    stats_rows += format_stat_row("CTOR (clic/ouverture)", f'{week["ctor"]:.1f}%', f'{cumul["ctor"]:.1f}%')
-
-    # Top articles de la semaine (simplifie)
-    top_html = ""
-    week_top = week["top_articles"][:10]
-    if not week_top:
-        top_html = '<p style="margin:0;padding:24px;text-align:center;color:#888;font-size:13px;">Pas encore de clics identifi&eacute;s par article.<br><small>Les liens per-article sont activ&eacute;s depuis le 2026-04-11.</small></p>'
-    else:
-        rows = ""
-        for i, aid in enumerate(week_top, 1):
-            meta = articles_map.get(aid, {})
-            titre = meta.get("titre", aid)
-            date = meta.get("date", "-")
-            cat = meta.get("categorie", "")
-            bg, fg, label = BADGE_COLORS.get(cat, ("#f0f0f0", "#666", cat or "-"))
-            unique = len(week["article_unique_clickers"][aid])
-            total = week["article_clicks"][aid]
-            rows += f'''<tr>
-              <td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;font-size:11px;color:#aaa;font-weight:700;width:24px;">{i}</td>
-              <td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;font-size:11px;color:#888;font-family:monospace;white-space:nowrap;">{date}</td>
-              <td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;font-size:13px;">
-                <span style="display:inline-block;background:{bg};color:{fg};font-size:9px;font-weight:700;padding:2px 8px;border-radius:100px;text-transform:uppercase;letter-spacing:0.3px;">{label}</span><br>
-                <span style="font-weight:500;color:#1a1a1a;">{titre}</span>
-              </td>
-              <td style="padding:10px 8px;border-bottom:1px solid #f0f0f0;text-align:right;font-size:14px;font-weight:700;width:50px;">{unique}</td>
-            </tr>'''
-        top_html = f'''<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
-          <thead>
-            <tr>
-              <th style="padding:8px;text-align:left;font-size:10px;color:#666;text-transform:uppercase;letter-spacing:0.3px;border-bottom:2px solid #f0f0f0;">#</th>
-              <th style="padding:8px;text-align:left;font-size:10px;color:#666;text-transform:uppercase;letter-spacing:0.3px;border-bottom:2px solid #f0f0f0;">Date</th>
-              <th style="padding:8px;text-align:left;font-size:10px;color:#666;text-transform:uppercase;letter-spacing:0.3px;border-bottom:2px solid #f0f0f0;">Article</th>
-              <th style="padding:8px;text-align:right;font-size:10px;color:#666;text-transform:uppercase;letter-spacing:0.3px;border-bottom:2px solid #f0f0f0;">Lecteurs</th>
-            </tr>
-          </thead>
-          <tbody>{rows}</tbody>
-        </table>'''
-
-    return f'''<!DOCTYPE html>
-<html lang="fr">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
-<body style="margin:0;padding:0;background:#f4f4f5;font-family:'Segoe UI',system-ui,-apple-system,sans-serif;">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f4f4f5;">
-<tr><td align="center" style="padding:24px 16px;">
-<table role="presentation" width="640" cellpadding="0" cellspacing="0" style="max-width:640px;width:100%;background:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
-  <tr><td style="background:#ffffff;padding:24px 28px 16px;border-bottom:2px solid #f97316;">
-    <div style="font-size:24px;font-weight:800;color:#1a1a1a;letter-spacing:-0.5px;">Dashboard <span style="color:#f97316;">Pharm'Actus</span></div>
-    <div style="font-size:12px;color:#888;margin-top:4px;">Rapport hebdomadaire &mdash; MAJ {updated_at}</div>
-  </td></tr>
-
-  <tr><td style="padding:24px 28px 8px;">
-    <h2 style="margin:0 0 12px;font-size:16px;color:#1a1a1a;">Vue d'ensemble</h2>
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
-      <thead>
-        <tr>
-          <th style="padding:10px 12px;text-align:left;font-size:10px;color:#666;text-transform:uppercase;letter-spacing:0.3px;border-bottom:2px solid #f0f0f0;font-weight:700;">M&eacute;trique</th>
-          <th style="padding:10px 12px;text-align:right;font-size:10px;color:#f97316;text-transform:uppercase;letter-spacing:0.3px;border-bottom:2px solid #f0f0f0;font-weight:700;">Semaine</th>
-          <th style="padding:10px 12px;text-align:right;font-size:10px;color:#0d9488;text-transform:uppercase;letter-spacing:0.3px;border-bottom:2px solid #f0f0f0;font-weight:700;">Cumul&eacute;</th>
-        </tr>
-      </thead>
-      <tbody>
-        {stats_rows}
-      </tbody>
-    </table>
-  </td></tr>
-
-  <tr><td style="padding:24px 28px 8px;">
-    <h2 style="margin:0 0 12px;font-size:16px;color:#1a1a1a;">Top 10 articles &mdash; semaine pass&eacute;e</h2>
-    {top_html}
-  </td></tr>
-
-  <tr><td style="padding:24px 28px 28px;text-align:center;">
-    <a href="{DASHBOARD_URL}" style="display:inline-block;background:#f97316;color:#ffffff;font-size:14px;font-weight:700;padding:12px 28px;border-radius:8px;text-decoration:none;letter-spacing:0.3px;">Voir le dashboard complet &rarr;</a>
-    <p style="margin:12px 0 0;font-size:11px;color:#aaa;">Acc&egrave;s direct : <a href="{DASHBOARD_URL}" style="color:#888;">{DASHBOARD_URL}</a></p>
-  </td></tr>
-
-  <tr><td style="padding:16px 28px 24px;border-top:1px solid #f0f0f0;text-align:center;">
-    <p style="margin:0;font-size:11px;color:#aaa;">Dashboard priv&eacute; &mdash; Envoy&eacute; automatiquement chaque lundi matin &mdash; Donn&eacute;es Brevo API</p>
-  </td></tr>
-</table>
-</td></tr></table>
-</body></html>'''
-
-
-def send_dashboard_email(api_key, html_content):
-    """Send the dashboard by email to Stephen."""
-    today = datetime.now(PARIS_TZ).strftime("%Y-%m-%d")
-    payload = {
-        "sender": {"name": SENDER_NAME, "email": SENDER_EMAIL},
-        "to": [{"email": EMAIL_RECIPIENT, "name": "Stephen"}],
-        "subject": f"Dashboard Pharm'Actus - Semaine du {today}",
-        "htmlContent": html_content,
-    }
-    result = brevo_api("/smtp/email", api_key, method="POST", payload=payload)
-    if result.get("messageId"):
-        print(f"  [EMAIL] Envoye a {EMAIL_RECIPIENT} (messageId: {result['messageId']})")
-    else:
-        print(f"  [EMAIL] Echec: {result}")
 
 
 def main():
