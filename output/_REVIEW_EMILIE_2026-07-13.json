@@ -1,0 +1,25 @@
+{
+  "generated_at": "2026-07-13T04:09:29.799736+02:00",
+  "run_date": "2026-07-13",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "800 officines fermées en 4 ans : quels territoires sont vraiment à risque ?",
+      "resume": "19 381 pharmacies au 31 décembre 2025, soit -252 en un an et plus de 800 fermetures depuis 2022. Derrière les chiffres bruts se cache une géographie de la fragilité que tout titulaire doit décrypter pour anticiper - ou pour saisir une opportunité.",
+      "source": "Pharm'Actus · Le Moniteur des Pharmacies – Fermetures d'officines : les territoires où le réseau pharmaceutique se fragilise, Le Moniteur des Pharmacies – Un transfert d'officine pour mieux répondre aux besoins du territoire",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/fermetures-dofficines-les-territoires-ou-le-reseau-pharmaceutique-se-fragilise",
+      "confidence_score": 0.78,
+      "warnings": [
+        "Le chiffre de 19 381 officines au 31/12/2025 est issu du Moniteur des Pharmacies — à croiser avec les données DREES ou RPPS quand elles seront publiées pour 2025.",
+        "Le chiffre de '800 fermetures depuis 2022' est repris tel quel de la source — vérifier si c'est un solde net ou un flux brut (sans compter les ouvertures et transferts).",
+        "Le seuil de viabilité de 1,2-1,5 M€ de CA est une estimation professionnelle courante, non issue d'un rapport officiel — la fourchette varie selon la structure de coûts (loyer, ETP, dette).",
+        "L'estimation de '15 à 20 % du réseau sous le seuil de viabilité' est une extrapolation prudente non sourcée officiellement — à utiliser avec précaution.",
+        "Le ratio 42 % de fermetures pour 3 régions est repris de la source mais sa signification statistique dépend du poids de ces régions dans le réseau total — l'article du Moniteur le signale lui-même.",
+        "Les détails exacts du dispositif fiscal QPV pour les officines (nature exacte des exonérations, conditions d'éligibilité complètes) mériteraient une vérification directe auprès d'un expert-comptable ou via le Bulletin Officiel des Finances Publiques."
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}
