@@ -1,0 +1,47 @@
+{
+  "generated_at": "2026-07-14T04:16:15.612346+02:00",
+  "run_date": "2026-07-14",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Vaccin grippe : prescription obligatoire depuis le 10 juillet, mais le pharmacien reste dans la boucle",
+      "resume": "Depuis le 10 juillet 2026, le vaccin antigrippal ne se délivre plus sans ordonnance. Mais avant de s'inquiéter pour ta file d'attente, une précision capitale : toi aussi, tu peux prescrire. Et vacciner. Voilà ce que ça change concrètement au comptoir.",
+      "source": "Caducee.net",
+      "source_url": "https://www.caducee.net/actualite-medicale/16945/vaccin-contre-la-grippe-prescription-obligatoire-depuis-le-10-juillet-2026.html",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "Sargasses en Guadeloupe : les pharmaciens sentinelles prennent le problème à bras-le-corps",
+      "resume": "En Guadeloupe, des pharmaciens d'officine ont monté un réseau de surveillance des effets sanitaires des sargasses. Une initiative de terrain qui montre ce que le maillage officinal peut apporter là où les structures de santé classiques ne suffisent pas.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/face-aux-sargasses-un-reseau-de-pharmacies-sentinelles-sorganise",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Canicule 2026 : 500 M€ de marché OTC à ne pas rater cet été",
+      "resume": "Chaque vague de chaleur fait exploser les ventes de produits OTC en officine : réhydratation, protection solaire, soins veineux, sprays thermaux. L'épisode caniculaire de juillet 2026 est une fenêtre business concrète - à condition d'être prêt avant que le pic arrive.",
+      "source": "Pharm'Actus · France Info Santé — Interview Frédéric Adnet, chef du Samu de Paris, 13 juillet 2026, France Info Santé — Malades d'Alzheimer et canicule, 13 juillet 2026",
+      "source_url": "https://www.franceinfo.fr/sante/canicule-on-s-attend-a-une-augmentation-de-l-activite-a-partir-d-aujourd-hui-explique-frederic-adnet-chef-du-samu-de-paris_8105993.html",
+      "confidence_score": 0.72,
+      "warnings": [
+        "Le chiffre '3,7 milliards d'euros' pour le marché automédication 2024 est une estimation extrapolée depuis les données AFIPA 2022-2023 ; vérifier la publication AFIPA la plus récente disponible.",
+        "La fourchette de marges OTC (25-50 %) est indicative et issue de données terrain ; elle varie selon les gammes, les grossistes et les accords commerciaux de chaque officine.",
+        "Le chiffre '+15 à 25 % de trafic entrant en canicule' est mentionné comme 'données terrain AFIPA' : à vérifier dans les publications officielles AFIPA ou à formuler comme estimation professionnelle.",
+        "Le marché phlébotropes 'à 120 M€/an' est une estimation issue de sources sectorielles non officielles ; à croiser avec les données IMS/IQVIA si disponibles.",
+        "Le CA moyen officine à 1,5 M€ HT est issu du rapport FSPF 2023 ; vérifier que la dernière édition disponible confirme ce chiffre.",
+        "Aucun syndicat (FSPF, USPO, UPGF) n'est cité comme source principale de cet article : la règle d'équilibre syndical ne s'applique pas ici — angle purement marché/mission."
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

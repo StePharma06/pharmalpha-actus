@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? On soignait les crises cardiaques avec du nitroglycérine",
-  "resume": "La même substance qui fait exploser les tunnels a sauvé des millions de cœurs. Pendant des décennies, les médecins ont prescrit de l'explosif industriel à leurs patients. Et ça marchait vraiment.",
-  "full_text": "Accroche-toi bien. En 1847, un chimiste italien du nom d'Ascanio Sobrero synthétise pour la première fois la nitroglycérine. Un liquide huileux, jaunâtre, instable - et terriblement explosif. Quelques années plus tard, Alfred Nobel s'en empare pour inventer la dynamite. Jusque-là, on est dans le manuel de chimie industrielle, pas dans celui de pharmacologie.\n\nSauf que voilà le twist : dès 1878, un médecin américain, William Murrell, remarque quelque chose d'étrange. Ses patients cardiaques qui prennent de la nitroglycérine en micro-doses voient leurs douleurs thoraciques disparaître en moins de deux minutes. Il publie ses résultats, les médecins sont sceptiques - qui oserait donner de l'explosif à un malade ?\n\nEt pourtant, ça devient officiel. On comprend progressivement que la nitroglycérine, en quantités infimes, dilate les artères coronaires et soulage l'angine de poitrine. Les ouvriers des usines de dynamite de l'époque, eux, avaient remarqué depuis longtemps que leurs maux de tête du lundi disparaissaient dès qu'ils remettaient les pieds à l'usine - parce qu'ils inhalaient sans le savoir des vapeurs vasodilatatrices.\n\nPendant des décennies, on a prescrit des comprimés à 0,5 mg de nitroglycérine à des patients cardiaques. Sous la langue. Là, ça fait son effet en 90 secondes chrono.\n\nAujourd'hui, on sait enfin pourquoi ça fonctionne : la nitroglycérine libère du monoxyde d'azote, un vasodilatateur puissant. C'est Nobel de Chimie 1998 pour cette découverte. Le même Nobel qui doit son nom à l'inventeur de la dynamite - la boucle est bouclée.\n\nAu comptoir, la trinitrine est encore là, fidèle au poste, sous forme de spray ou de comprimés sublinguaux. La prochaine fois qu'un patient te demande pourquoi son médicament ressemble à de la dynamite, tu peux lui dire : parce que c'est exactement ça.",
-  "image_keywords": "nitroglycerin heart medicine",
+  "titre": "Le saviez-vous ? On traitait la tuberculose en envoyant les malades... en altitude",
+  "resume": "Au XIXe siècle, le seul 'traitement' contre la tuberculose, c'était l'air pur de la montagne. Des milliers de patients quittaient tout pour aller mourir lentement dans un sanatorium suisse. Et pourtant, cette pratique a accouché d'une découverte médicale majeure.",
+  "full_text": "En 1854, un médecin allemand du nom de Hermann Brehmer a une idée aussi simple que désespérée : puisqu'on ne sait pas guérir la tuberculose, on va au moins respirer mieux. Il ouvre le premier sanatorium de l'histoire à Görbersdorf, en Silésie. Le principe ? Air froid, repos absolu, nourriture riche. Pas de médicament. Juste... la montagne.\n\nL'idée fait fureur. En quelques décennies, les Alpes suisses se couvrent de ces immenses bâtisses blanches aux grandes vérandas ouvertes. Davos, Leysin, Montana : des villages entiers vivent du tourisme médical des tuberculeux. À son apogée, vers 1900, on compte plus de 500 sanatoriums en Europe. Des écrivains, des compositeurs, des aristocrates y séjournent des années. Kafka, Chekhov, Robert Louis Stevenson - tous tuberculeux, tous envoyés « à l'air ».\n\nLe twist ? Ça marchait... un peu. Pas grâce à l'altitude, mais grâce au repos et à l'isolement. En séparant les malades des bien-portants, les sanatoriums ont ralenti la contagion sans le savoir. Un résultat épidémiologique accidentel.\n\nMais voilà le vrai coup de théâtre : c'est precisément dans ces couloirs de sanatorium que les chirurgiens thoraciques ont perfectionné leurs techniques. Pour tenter de « mettre le poumon au repos », ils pratiquaient le pneumothorax artificiel - on injectait de l'air dans la cavité pleurale pour affaisser le poumon malade. Une technique brutale, risquée, mais qui a posé les bases de la chirurgie pulmonaire moderne.\n\nQuand le BCG arrive en 1921 et la streptomycine en 1943, les sanatoriums ferment les uns après les autres. Mais leur héritage est immense : l'hygiène hospitalière, l'architecture médicale avec lumière et ventilation, et les premières unités de soins intensifs respiratoires.\n\nAujourd'hui, quand tu conseilles un patient sous rifampicine pour une tuberculose active, rappelle-toi que pendant un siècle, le seul traitement disponible, c'était une chambre avec vue sur les Alpes.",
+  "image_keywords": "sanatorium mountain tuberculosis",
   "tags": [
     "histoire",
-    "cardiologie",
-    "medicament",
-    "chimie",
-    "decouverte"
+    "epidemie",
+    "chirurgie",
+    "medecine",
+    "traitement"
   ],
-  "date": "2026-07-13",
+  "date": "2026-07-14",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",
