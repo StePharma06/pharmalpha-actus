@@ -1,21 +1,21 @@
 {
- "genere_le": "2026-07-13T11:14:13+02:00",
+ "genere_le": "2026-07-14T07:22:15+02:00",
  "liste_brevo": 5,
  "abonnes_total": 1034,
- "nouveaux_7j": 10,
+ "nouveaux_7j": 5,
  "nouveaux_cumul": 1027,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-07-06",
-  "au": "2026-07-13",
-  "delivres": 6745,
-  "ouvertures": 2508,
-  "ouvertures_uniques": 1869,
-  "clics": 3773,
-  "clics_uniques": 568,
-  "taux_ouverture_pct": 27.7,
-  "taux_clic_pct": 8.4,
-  "ctor_pct": 30.4,
+  "du": "2026-07-07",
+  "au": "2026-07-14",
+  "delivres": 6711,
+  "ouvertures": 2322,
+  "ouvertures_uniques": 1735,
+  "clics": 3620,
+  "clics_uniques": 553,
+  "taux_ouverture_pct": 25.9,
+  "taux_clic_pct": 8.2,
+  "ctor_pct": 31.9,
   "top_articles": [
    {
     "id": "actu_2026_07_11_1",
@@ -38,16 +38,16 @@
     "titre": "Vente directe des labos : l'USPO passe à l'offensive, qu'en pensent les autres ?",
     "date": "2026-07-09",
     "categorie": "pharma_france",
-    "clics": 108,
-    "lecteurs": 57
+    "clics": 109,
+    "lecteurs": 58
    },
    {
     "id": "actu_2026_07_09_3",
     "titre": "Solaires Temu, Shein, AliExpress : 9 produits sur 10 non conformes, le comptoir comme rempart",
     "date": "2026-07-09",
     "categorie": "bonne_nouvelle",
-    "clics": 114,
-    "lecteurs": 56
+    "clics": 115,
+    "lecteurs": 57
    },
    {
     "id": "actu_2026_07_10_2",
@@ -58,6 +58,14 @@
     "lecteurs": 56
    },
    {
+    "id": "actu_2026_07_09_1",
+    "titre": "Déprescription : la CNAM veut ton comptoir comme levier d'économies",
+    "date": "2026-07-09",
+    "categorie": "pharma_france",
+    "clics": 93,
+    "lecteurs": 55
+   },
+   {
     "id": "actu_2026_07_08_1",
     "titre": "Substitution des DM : le décret approche et la fronde monte",
     "date": "2026-07-08",
@@ -66,27 +74,19 @@
     "lecteurs": 55
    },
    {
-    "id": "actu_2026_07_09_1",
-    "titre": "Déprescription : la CNAM veut ton comptoir comme levier d'économies",
-    "date": "2026-07-09",
-    "categorie": "pharma_france",
-    "clics": 92,
-    "lecteurs": 54
-   },
-   {
-    "id": "actu_2026_07_06_1",
-    "titre": "Desescalade medicamenteuse : l'Assurance Maladie vise 1,3 milliard d'economies sur le medicament",
-    "date": "2026-07-06",
-    "categorie": "pharma_france",
-    "clics": 89,
-    "lecteurs": 48
-   },
-   {
     "id": "actu_2026_07_07_1",
     "titre": "La Cnam met ses microscopes sur les groupements : ca va piquer",
     "date": "2026-07-07",
     "categorie": "pharma_france",
     "clics": 85,
+    "lecteurs": 47
+   },
+   {
+    "id": "actu_2026_07_13_1",
+    "titre": "800 officines fermées en 4 ans : quels territoires sont vraiment à risque ?",
+    "date": "2026-07-13",
+    "categorie": "business_officine",
+    "clics": 83,
     "lecteurs": 47
    },
    {
@@ -101,15 +101,15 @@
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-07-13",
-  "delivres": 52805,
-  "ouvertures": 21699,
-  "ouvertures_uniques": 14832,
-  "clics": 21993,
-  "clics_uniques": 4075,
-  "taux_ouverture_pct": 28.1,
+  "au": "2026-07-14",
+  "delivres": 53721,
+  "ouvertures": 21899,
+  "ouvertures_uniques": 14993,
+  "clics": 22402,
+  "clics_uniques": 4138,
+  "taux_ouverture_pct": 27.9,
   "taux_clic_pct": 7.7,
-  "ctor_pct": 27.5,
+  "ctor_pct": 27.6,
   "top_articles": [
    {
     "id": "actu_2026_06_18_1",
@@ -188,8 +188,8 @@
     "titre": "Vente directe des labos : l'USPO passe à l'offensive, qu'en pensent les autres ?",
     "date": "2026-07-09",
     "categorie": "pharma_france",
-    "clics": 108,
-    "lecteurs": 57
+    "clics": 109,
+    "lecteurs": 58
    }
   ]
  }
