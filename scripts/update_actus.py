@@ -654,40 +654,76 @@ Pour chaque article, genere :
 - "image_keywords" : 2-3 mots EN ANGLAIS pour chercher une photo libre de droit
 - "tags" : ARRAY de 3 a 5 mots-cles thematiques en francais, minuscules, sans accents, format court (1-2 mots max par tag). Exemples : ["lfss", "remboursement", "vaccination", "rupture", "dp", "rosp", "marge", "substitution", "grippe", "covid", "diabete", "antibiotique", "generique", "galenique", "officine", "ars", "has", "ansm", "innovation", "recherche", "ia", "fda", "ema"]. Choisis les tags les plus specifiques au sujet pour permettre un filtrage precis.
 
-JSON UNIQUEMENT (tableau de 5 objets) :
-[
-  {{
-    "titre": "...",
-    "resume": "...",
-    "full_text": "...",
-    "categorie": "...",
-    "badge_label": "...",
-    "source": "...",
-    "source_url": "...",
-    "image_keywords": "...",
-    "tags": ["tag1", "tag2", "tag3"],
-    "date": "{today}"
-  }}
-]"""
+Utilise l'outil "publier_actus" pour retourner EXACTEMENT {target_count} article(s),
+un objet par article avec TOUS les champs, et "date" = "{today}" pour chacun.
+Rappel : dans "titre", "resume" et "full_text", jamais de tiret cadratin ni demi-cadratin."""
+
+    # Sortie STRUCTUREE (tool use) : l'API Anthropic garantit un JSON valide, ce qui
+    # elimine la classe de bug ayant vide la curation les 07-11 et 07-13 (un guillemet
+    # non echappe dans full_text cassait json.loads -> [] -> seuls business + LSV
+    # sortaient). max_tokens releve a 8000 (4 articles a 300-450 mots = large marge).
+    curation_tool = {
+        "name": "publier_actus",
+        "description": "Enregistre les articles selectionnes et rediges pour Pharm'Actus.",
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "articles": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "titre": {"type": "string"},
+                            "resume": {"type": "string"},
+                            "full_text": {"type": "string"},
+                            "categorie": {
+                                "type": "string",
+                                "enum": ["pharma_france", "pharma_monde",
+                                         "bonne_nouvelle", "avenir_pharma"],
+                            },
+                            "badge_label": {"type": "string"},
+                            "source": {"type": "string"},
+                            "source_url": {"type": "string"},
+                            "image_keywords": {"type": "string"},
+                            "tags": {"type": "array", "items": {"type": "string"}},
+                            "date": {"type": "string"},
+                        },
+                        "required": ["titre", "resume", "full_text", "categorie",
+                                     "badge_label", "source", "source_url", "tags"],
+                    },
+                },
+            },
+            "required": ["articles"],
+        },
+    }
 
     response = claude_create(client,
         model="claude-sonnet-4-6",
-        max_tokens=4000,
+        max_tokens=8000,
+        tools=[curation_tool],
+        tool_choice={"type": "tool", "name": "publier_actus"},
         messages=[{"role": "user", "content": prompt}],
     )
 
-    text = response.content[0].text.strip()
+    if getattr(response, "stop_reason", "") == "max_tokens":
+        print("  [WARN] curation stop_reason=max_tokens (reponse possiblement tronquee)")
+
+    for block in response.content:
+        if getattr(block, "type", "") == "tool_use" and getattr(block, "name", "") == "publier_actus":
+            arts = (block.input or {}).get("articles", [])
+            return [_clean_article(a) for a in arts]
+
+    # Filet de secours : ancien parsing texte si l'outil n'a pas ete utilise
+    text = "".join(getattr(b, "text", "") for b in response.content).strip()
     json_match = re.search(r"\[[\s\S]*\]", text)
     if json_match:
         try:
             return [_clean_article(a) for a in json.loads(json_match.group())]
         except json.JSONDecodeError as e:
-            # Ne pas crasher tout le run sur un JSON malforme : on retourne []
-            # (main gere l'absence d'articles proprement).
-            print(f"  [ERROR] JSON curation invalide: {e}")
+            print(f"  [ERROR] JSON curation invalide (fallback texte): {e}")
             return []
 
-    print("  [ERROR] Claude n'a pas retourne de JSON valide")
+    print("  [ERROR] Claude n'a retourne aucun article")
     return []
 
 
@@ -2622,6 +2658,18 @@ def main():
     if target_count > 0:
         curated = curate_with_claude(raw_articles, existing_urls, excluded_categories=pending_categories)
         print(f"  {len(curated)} articles selectionnes (hors business, LSV et pending)")
+        # Visibilite : si la curation ne remonte RIEN alors qu'il y avait des slots
+        # et de la matiere RSS, c'est une degradation (l'incident 07-11/07-13) -> alerte
+        # INFO a Stephen. Sans ca, seuls business + LSV sortaient en silence.
+        if not curated and raw_articles:
+            _send_alert_email(
+                os.environ.get("BREVO_API_KEY", ""),
+                f"[INFO] Pharm'Actus {datetime.now(PARIS_TZ):%Y-%m-%d} - curation vide",
+                f"La curation a renvoye 0 article sur {target_count} attendu(s) "
+                f"({len(raw_articles)} articles RSS disponibles). Seuls l'article "
+                f"business et le LSV sortiront aujourd'hui. A verifier cote logs "
+                f"(reponse Claude / API).",
+            )
     else:
         curated = []
         print(f"  Aucun slot a remplir (pending_actus couvrent {len(pending_categories)} categories)")
