@@ -1,6 +1,131 @@
 {
   "articles": [
     {
+      "id": "actu_2026_07_15_5",
+      "date": "2026-07-15",
+      "type": "actu",
+      "categorie": "business_officine",
+      "titre": "Loi aide à mourir : ce que ça change concrètement pour ton officine",
+      "resume": "Le vote solennel de l'Assemblée nationale ce 15 juillet 2026 sur l'aide à mourir ouvre un chapitre inédit pour les pharmaciens. Derrière le débat éthique, il y a des actes pharmaceutiques nouveaux, une chaîne de responsabilité à définir, et un marché des soins palliatifs à struct...",
+      "source": "Pharm'Actus · Le Monde Santé — Aide à mourir : ce que contient le texte soumis au dernier vote, Le Monde — Sébastien Lecornu saisira le Conseil constitutionnel",
+      "source_url": "https://www.lemonde.fr/societe/article/2026/07/14/fin-de-vie-ce-que-contient-le-texte-sur-l-aide-a-mourir-soumis-au-dernier-vote-des-deputes_6723270_3224.html",
+      "tiktok_url": "",
+      "badge_label": "Business",
+      "image_url": "assets/img_actu_2026_07_15_5.jpg",
+      "tags": [
+        "aide-a-mourir",
+        "soins-palliatifs",
+        "reglementation",
+        "officine"
+      ],
+      "full_text": "Le vote solennel de l'Assemblée nationale ce 15 juillet 2026 sur l'aide à mourir ouvre un chapitre inédit pour les pharmaciens. Derrière le débat éthique, il y a des actes pharmaceutiques nouveaux, une chaîne de responsabilité à définir, et un marché des soins palliatifs à structurer.\n\n**Contexte**\n\nLa proposition de loi sur l'aide à mourir a été adoptée en dernier ressort par l'Assemblée nationale le 15 juillet 2026, malgré le rejet répété du Sénat. Le Premier ministre Sébastien Lecornu a annoncé sa saisine du Conseil constitutionnel, ce qui suspend temporairement la promulgation. Le texte instaure un droit au suicide assisté et à l'euthanasie pour les patients atteints d'une 'affection grave et incurable' avec une souffrance constante et réfractaire. Si le Conseil constitutionnel valide le texte - partiellement ou totalement - la loi entrera en vigueur et nécessitera des décrets d'application, probablement dans un délai de 6 à 18 mois. Pour l'officine, le sujet n'est pas périphérique : les produits létaux utilisés dans les protocoles d'aide à mourir (comme le pentobarbital ou des associations médicamenteuses contrôlées) relèvent du circuit pharmaceutique. En Belgique et aux Pays-Bas, où ces pratiques existent depuis plus de 20 ans, la dispensation est strictement encadrée, mais elle passe bien par des pharmaciens agréés. La France va devoir construire ce dispositif from scratch, et l'officine y aura forcément une place - ou pas, si elle n'anticipe pas.\n\n**Analyse business**\n\nCommençons par cadrer l'enjeu de volume. En Belgique, pays de 11 millions d'habitants avec une loi active depuis 2002, on comptait 3 544 euthanasies déclarées en 2023, soit environ 2,5 % des décès. Transposé à la France (environ 680 000 décès/an en 2025 selon l'INSEE), un taux équivalent représenterait potentiellement 17 000 actes par an à terme - sachant que la montée en charge prend 5 à 10 ans. Ce n'est pas un marché au sens commercial du terme, mais c'est un acte pharmaceutique structurant.\n\nSur le plan réglementaire, le texte voté prévoit une clause de conscience : tout professionnel de santé, y compris le pharmacien, peut refuser de participer. Mais il prévoit aussi une obligation de réorientation. Concrètement, si ton officine est répertoriée comme pouvant délivrer les substances contrôlées du protocole, tu entres dans un circuit spécifique avec : formation obligatoire, agrément, traçabilité renforcée, stockage sécurisé stupéfiants niveau 2, et probablement une rémunération spécifique à négocier en convention (honoraire de dispensation majoré ou acte spécifique).\n\nL'impact financier direct est difficile à chiffrer aujourd'hui, mais par analogie avec la Belgique où la dispensation des produits d'aide à mourir génère un honoraire spécifique de l'ordre de 80 à 120 € par acte (source : AFMPS, réglementation belge), et en projetant 17 000 actes/an à terme sur un réseau de pharmacies désignées (estimons 3 000 officines volontaires sur 21 000), chaque officine concernée traiterait statistiquement 5 à 6 cas par an. Ce n'est pas un driver de CA majeur - mais c'est un acte de haute responsabilité qui repositionne l'officine dans le parcours de fin de vie.\n\nLe vrai enjeu business est en amont : les soins palliatifs. La loi réaffirme la priorité aux soins palliatifs comme étape préalable obligatoire. Or la France compte seulement 176 unités de soins palliatifs pour 67 millions d'habitants (chiffre SFAP 2024), un déficit structurel massif. L'officine de proximité - notamment rurale - devient un maillon incontournable : préparations magistrales antalgiques, HAD (hospitalisation à domicile), suivi des prescriptions de morphine. Le CA officinal lié aux stupéfiants et antalgiques majeurs représente déjà environ 3,5 % du CA moyen d'une officine (estimation DREES/GERS), un segment qui va croître mécaniquement avec le vieillissement de la population et cette loi.\n\n**Recommandations actionnables**\n\n1. Surveille les décrets d'application - Le Conseil constitutionnel rendra sa décision sous 3 mois maximum. Si validation, les décrets d'application fixeront le rôle exact du pharmacien (agrément, formation, rémunération). Positionne-toi dès maintenant auprès de ton URPS pour être dans les groupes de travail régionaux.\n\n2. Audite ta capacité stupéfiants dès aujourd'hui - Vérifie ton armoire à pharmacie, tes procédures de traçabilité et la formation de ton équipe sur les morphiniques et produits palliateurs. C'est la base pour tout agrément futur, et c'est aussi exigible pour l'HAD aujourd'hui.\n\n3. Forme ton équipe aux soins palliatifs - Des DU et formations courtes existent (SFAP, CNOP). Une officine référente en soins palliatifs dans son territoire, c'est un positionnement différenciant maintenant, pas dans 2 ans. Coût moyen d'une formation DPC palliative : 0 € sur budget DPC annuel (450 € disponibles par défaut).\n\n4. Exerce ta clause de conscience de façon proactive - Si tu ne veux pas participer à la dispensation d'actes létaux, formalise ta position par écrit auprès de ton conseil régional de l'Ordre dès la promulgation. C'est ton droit, et mieux vaut le cadrer réglementairement plutôt que de gérer la situation dans l'urgence.\n\n5. Anticipe le dialogue avec les équipes HAD et EHPAD locaux - La loi va augmenter la pression sur ces structures. Un partenariat officine/HAD formalisé (convention de collaboration) est un levier de CA récurrent et de légitimité territoriale.\n\n**Sources citees**\n\n- Le Monde Santé - Aide à mourir : ce que contient le texte soumis au dernier vote\n- Le Monde - Sébastien Lecornu saisira le Conseil constitutionnel\n- SFAP - Etat des lieux des soins palliatifs en France 2024\n- INSEE - Statistiques des décès en France 2025\n- AFMPS Belgique - Réglementation dispensation produits euthanasie"
+    },
+    {
+      "id": "actu_2026_07_15_4",
+      "date": "2026-07-15",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "IA et métabolisme des médicaments : les petits modèles bien entraînés battent les géants",
+      "resume": "Une compétition internationale d'IA appliquée à la pharmacologie vient de rendre son verdict : pour prédire le métabolisme des candidats médicaments, la qualité des données prime sur la puissance du modèle. Une leçon qui dépasse largement le monde de la R&D.",
+      "source": "STAT News",
+      "source_url": "https://www.statnews.com/2026/07/14/openadmet-ai-drug-metabolism-prediction-inductive-bio/",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_07_15_4.jpg",
+      "tags": [
+        "ia",
+        "recherche",
+        "innovation",
+        "galenique",
+        "pipeline"
+      ],
+      "full_text": "On t'a vendu l'IA comme un bulldozer qui écrase tout. La réalité est plus nuancée, et franchement plus intéressante.\n\nUne compétition internationale baptisée OpenADMET vient de publier ses résultats, relayés par STAT News. L'objectif : prédire les propriétés ADMET (Absorption, Distribution, Métabolisme, Élimination, Toxicité) de candidats médicaments grâce à des modèles d'intelligence artificielle. Ces propriétés sont absolument critiques en phase de développement : un candidat qui a l'air prometteur in vitro peut se révéler inutilisable parce qu'il est trop rapidement métabolisé, mal distribué ou toxique.\n\nLe verdict de la compétition est sans appel : les modèles les plus performants ne sont pas les plus gros. Ce sont ceux entraînés sur des données de meilleure qualité. Bigger is not always better, comme dirait ton confrère anglophone.\n\nC'est une leçon fondamentale pour tout le secteur de la R&D pharmaceutique. Depuis des années, la course à la puissance de calcul et à la taille des modèles monopolise les investissements. OpenADMET montre qu'un modèle bien conçu, entraîné sur des données rigoureusement sélectionnées, surpasse des architectures bien plus lourdes nourries de données bruitées.\n\nConcrètement, qu'est-ce que ça change pour la découverte de nouveaux médicaments ? La prédiction ADMET fiable permet d'éliminer très tôt les mauvais candidats, avant les phases cliniques coûteuses. Moins d'échecs en phase 3, moins de milliards gaspillés, et potentiellement des AMM plus rapides pour les molécules vraiment prometteuses.\n\nPour un pharmacien d'officine, le pipeline de demain se construit sur ces technologies. Les médicaments que tu dispenseras dans dix ans ont été en partie sélectionnés par des algorithmes comme ceux testés dans OpenADMET. Comprendre comment ils fonctionnent, c'est comprendre pourquoi certaines molécules arrivent (ou n'arrivent jamais) jusqu'à ton comptoir.\n\nIl y a aussi un message plus large : la qualité des données de santé que nous produisons au quotidien, via le DP, les LGO, les entretiens pharmaceutiques codifiés, alimente demain les modèles d'IA qui amélioreront la prise en charge des patients. Chaque donnée bien renseignée est un micro-investissement dans la médecine de demain.\n\nCe que ça change au comptoir demain matin : directement, rien. Mais si un patient te demande pourquoi son nouveau traitement a mis quinze ans à arriver sur le marché, tu peux lui expliquer que l'IA est en train de réduire ce délai. Et ça, c'est une vraie bonne nouvelle pour tout le monde."
+    },
+    {
+      "id": "actu_2026_07_15_3",
+      "date": "2026-07-15",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "Alzheimer : un anti-tau de Biogen montre des résultats comparables aux thérapies approuvées",
+      "resume": "Un nouveau candidat contre Alzheimer, le diranersen développé par Biogen et Ionis, affiche en phase 2 un ralentissement du déclin cognitif comparable aux traitements anti-amyloïdes déjà autorisés. Une nouvelle approche, une nouvelle cible, et une vraie lueur d'espoir pour les millions de patients en attente.",
+      "source": "STAT News",
+      "source_url": "https://www.statnews.com/2026/07/14/biogen-alzheimers-tau-diranersen-trial-results-ionis-aaic/",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_07_15_3.jpg",
+      "tags": [
+        "alzheimer",
+        "recherche",
+        "innovation",
+        "neurologie",
+        "biogen"
+      ],
+      "full_text": "Alzheimer. Le mot qui fait froid dans le dos à chaque famille et qui mobilise des milliards en R&D depuis trente ans. Et là, une bonne nouvelle arrive de l'AAIC (Alzheimer's Association International Conference).\n\nBiogen et Ionis Pharmaceuticals viennent de présenter les résultats de phase 2 du diranersen, un candidat médicament ciblant la protéine tau. Pour mémoire : les thérapies anti-amyloïdes approuvées (ciblant les plaques bêta-amyloïdes) ont enfin ouvert la voie à une ère de traitements modificateurs de la maladie. Mais la protéine tau, autre marqueur central de la pathologie, reste une cible thérapeutique distincte, encore en développement clinique.\n\nLes données de cette étude de phase 2 sont encourageantes : le diranersen a ralenti le déclin cognitif à des taux comparables aux thérapies anti-amyloïdes déjà autorisées, selon STAT News. Ce n'est pas encore une AMM, mais c'est une validation de concept solide pour cette nouvelle approche.\n\nPourquoi c'est important ? Parce que la pathologie Alzheimer est multifactorielle. Cibler uniquement l'amyloïde ne suffit probablement pas chez tous les patients. Avoir une deuxième classe thérapeutique, ciblant tau, ouvre la voie à des combinaisons, à une médecine plus personnalisée, et peut-être à une efficacité supérieure chez certains profils.\n\nLe diranersen est un oligonucléotide antisens (ASO), une technologie de rupture qui agit directement sur l'ARN messager pour réduire la production de protéine tau pathologique. Ionis, partenaire de Biogen sur ce projet, est un spécialiste reconnu de cette plateforme technologique.\n\nOn est encore loin d'une commercialisation en France : il faudra une phase 3 concluante, une AMM européenne via l'EMA, un avis HAS, une négociation CEPS. Le parcours peut prendre cinq à dix ans. Mais chaque étape franchie compte.\n\nCe que ça change au comptoir demain matin : rien de concret sur la dispensation, mais arme-toi d'information pour les conversations avec les familles de patients Alzheimer. Ils lisent, ils cherchent, ils ont des questions. Savoir que de nouvelles cibles thérapeutiques arrivent, c'est aussi du soin."
+    },
+    {
+      "id": "actu_2026_07_15_2",
+      "date": "2026-07-15",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "CVS Caremark règle à l'amiable avec la FTC sur la manipulation des prix de l'insuline",
+      "resume": "Aux États-Unis, le géant PBM CVS Caremark vient de signer un accord avec la FTC après des accusations de manipulation des prix de l'insuline. Un scandale qui illustre les dérives des intermédiaires dans la chaîne du médicament, et qui devrait faire réfléchir sur ce qu'on veut, ou pas, importer en France.",
+      "source": "STAT News",
+      "source_url": "https://www.statnews.com/pharmalot/2026/07/14/ftc-settles-lawsuit-cvs-caremark-insulin-prices-access/",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/img_actu_2026_07_15_2.jpg",
+      "tags": [
+        "insuline",
+        "diabete",
+        "regulation",
+        "acces-soins",
+        "fda"
+      ],
+      "full_text": "CVS Caremark. Tu ne les connais peut-être pas directement, mais leur modèle, lui, t'intéresse au plus haut point.\n\nLa Federal Trade Commission américaine (FTC) vient de régler à l'amiable un litige majeur avec CVS Caremark, le bras PBM (Pharmacy Benefit Manager) du géant CVS Health. Accusation principale : avoir artificiellement gonflé les prix de l'insuline et freiné l'accès des patients au traitement. Selon STAT News, l'accord est acté, même si les termes financiers complets n'ont pas encore été rendus publics.\n\nC'est quoi un PBM ? C'est l'intermédiaire entre l'assureur, le laboratoire et la pharmacie. Il négocie les remises, construit les formulaires de prise en charge et décide quels médicaments sont remboursés à quel taux. Aux États-Unis, trois acteurs (CVS Caremark, Express Scripts et OptumRx) contrôlent environ 80 % du marché. Et leur business model repose en partie sur des remises opaques que les laboratoires versent pour avoir la meilleure place sur le formulaire.\n\nRésultat concret pour le patient américain diabétique : l'insuline affiche un prix facial stratosphérique, les remises vont dans la poche du PBM, et le patient paie sa quote-part sur le prix catalogue. Un système kafkaïen où le médicament est cher pour ceux qui le prennent, et rentable pour ceux qui ne font que le passer.\n\nEn France, on n'a pas de PBM. L'Assurance Maladie négocie directement avec les laboratoires via le CEPS (Comité Économique des Produits de Santé), et toi, pharmacien, tu délivres à un prix administré. Le système est rigide, parfois frustrant, mais il protège le patient d'une logique purement financière interposée.\n\nPourquoi ça te concerne ? Parce que le débat sur l'introduction d'intermédiaires de gestion dans la dispensation française (mutuelles, plateformes, réseaux de soins) reprend régulièrement. L'affaire CVS Caremark est le contre-exemple parfait à sortir dans toute discussion sur la libéralisation de la chaîne du médicament.\n\nCe que ça change au comptoir demain matin : rien de direct. Mais si un patient te demande pourquoi l'insuline coûte une fortune aux États-Unis alors qu'il la récupère pour quelques euros ici, tu as désormais la réponse complète. Et un argument béton pour défendre notre modèle de régulation nationale."
+    },
+    {
+      "id": "actu_2026_07_15_1",
+      "date": "2026-07-15",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "Déserts médicaux : la pharmacie, dernier filet de sécurité sanitaire",
+      "resume": "Quand le dernier médecin ferme son cabinet, la pharmacie reste. Ce n'est plus une métaphore : c'est une réalité documentée qui redéfinit notre rôle au comptoir. Et ça soulève des questions brûlantes sur notre modèle économique.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/deserts-medicaux-pourquoi-les-pharmacies-deviennent-les-derniers-remparts-de-lacces-aux-soins",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_07_15_1.jpg",
+      "tags": [
+        "desertification",
+        "acces-soins",
+        "officine",
+        "convention",
+        "missions"
+      ],
+      "full_text": "Quand le cabinet du généraliste ferme, qui reste ? Toi.\n\nLe Moniteur des Pharmacies le met noir sur blanc : la fermeture d'une officine s'inscrit presque toujours dans un contexte de désertification médicale déjà avancée. Vieillissement des médecins en exercice, délais de consultation qui s'allongent, recrutement impossible en zone rurale ou péri-urbaine. La pharmacie devient de facto le premier point de contact sanitaire pour des millions de patients.\n\nC'est une reconnaissance. Mais c'est aussi un piège économique.\n\nParce que notre modèle reste largement adossé aux prescriptions médicales. Pas de médecin, pas d'ordonnances. Pas d'ordonnances, marges et honoraires de dispensation qui s'effondrent. La pénurie de médecins fragilise directement notre chiffre d'affaires, alors même qu'elle augmente notre charge de travail. Belle ironie du système.\n\nEt les délais de consultation ? Quand le patient attend trois semaines pour voir un généraliste, il passe par ta pharmacie bien avant. Pour un conseil, un TROD, un renouvellement en urgence. Des actes que tu absorbes souvent sans valorisation tarifaire complète, parce que le cadre conventionnel n'a pas encore rattrapé la réalité du terrain.\n\nLa loi de financement de la Sécurité sociale ouvre progressivement des missions : bilan de médication partagé, suivi des patients chroniques, accès direct pour certains soins. Mais le déploiement reste inégal selon les territoires, et la rémunération associée ne compense pas toujours l'investissement en temps et en formation.\n\nIl y a aussi un enjeu de maillage territorial. Une officine qui ferme dans un bourg sans médecin, c'est une commune entière sans accès aux soins primaires. Les ARS l'ont compris, mais les outils de régulation (transferts, regroupements, aides à l'installation) restent perfectibles.\n\nCe que ça change au comptoir demain matin : si tu es en zone sous-dotée médicalement, tu es déjà en première ligne. Documente tes actes, valorise tes entretiens pharmaceutiques, et n'oublie pas que chaque mission réalisée hors prescription classique, c'est un argument de plus pour la prochaine négociation conventionnelle. Ta charge de travail est un levier politique. Utilise-le."
+    },
+    {
+      "id": "lsv_2026_07_15",
+      "date": "2026-07-15",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? On soignait les maladies mentales avec des dents arrachées",
+      "resume": "Au début du XXe siècle, un psychiatre américain était convaincu d'avoir trouvé la cause de la folie. Sa théorie ? Une infection cachée dans les dents. Sa solution ? Les arracher toutes. Sans exception.",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_07_15.jpg",
+      "tags": [
+        "histoire",
+        "psychiatrie",
+        "chirurgie",
+        "decouverte",
+        "medecine"
+      ],
+      "full_text": "Henry Cotton était médecin-chef de l'asile de Trenton, dans le New Jersey. Nous sommes en 1916. Et cet homme est persuadé d'avoir résolu le mystère de la schizophrénie.\n\nSa théorie s'appelle la \"focal infection\". Selon lui, les bactéries planquées dans les dents ou les amygdales produisent des toxines qui remontent jusqu'au cerveau et déclenchent la folie. Logique, non ? Sauf que non.\n\nCotton passe immédiatement à l'action. Il arrache les dents de ses patients psychiatriques. Tous. D'un coup. Même ceux qui n'ont aucun problème dentaire visible. Et comme ça ne suffit pas à les guérir, il continue : amygdales, estomac, côlon, utérus... Il retire les organes un par un, convaincu que la bactérie se cache ailleurs.\n\nLe twist qui fait froid dans le dos : Cotton publie des résultats spectaculaires. Il annonce 85 % de guérisons. Il est célébré, invité à des conférences, cité en exemple. Personne ne vérifie ses chiffres. Quand une chercheuse indépendante, Phyllis Greenacre, audite discrètement ses dossiers en 1922... elle découvre que le taux de mortalité de ses patients dépasse 30 %. Certains meurent des suites des opérations, pas de leur maladie.\n\nLa direction de l'asile enterre son rapport. Cotton, lui, continue d'opérer jusqu'à sa mort en 1933. Et par cohérence absolue - on lui accordera ça - il se fait lui-même arracher toutes les dents.\n\nCette histoire rappelle pourquoi la médecine fondée sur les preuves n'est pas un luxe académique. Aujourd'hui, avant qu'un médicament arrive dans ton tiroir de comptoir, il passe par des essais cliniques rigoureux, des comités d'éthique, des agences réglementaires. Ce n'est pas de la bureaucratie. C'est ce qui empêche le prochain Henry Cotton de sévir."
+    },
+    {
       "id": "actu_2026_07_14_5",
       "date": "2026-07-14",
       "type": "actu",
@@ -9930,6 +10055,6 @@
       ]
     }
   ],
-  "count": 480,
-  "updated_at": "2026-07-14T04:16:20.377189+02:00"
+  "count": 486,
+  "updated_at": "2026-07-15T04:15:50.223702+02:00"
 }

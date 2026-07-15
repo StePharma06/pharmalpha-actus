@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? On traitait la tuberculose en envoyant les malades... en altitude",
-  "resume": "Au XIXe siècle, le seul 'traitement' contre la tuberculose, c'était l'air pur de la montagne. Des milliers de patients quittaient tout pour aller mourir lentement dans un sanatorium suisse. Et pourtant, cette pratique a accouché d'une découverte médicale majeure.",
-  "full_text": "En 1854, un médecin allemand du nom de Hermann Brehmer a une idée aussi simple que désespérée : puisqu'on ne sait pas guérir la tuberculose, on va au moins respirer mieux. Il ouvre le premier sanatorium de l'histoire à Görbersdorf, en Silésie. Le principe ? Air froid, repos absolu, nourriture riche. Pas de médicament. Juste... la montagne.\n\nL'idée fait fureur. En quelques décennies, les Alpes suisses se couvrent de ces immenses bâtisses blanches aux grandes vérandas ouvertes. Davos, Leysin, Montana : des villages entiers vivent du tourisme médical des tuberculeux. À son apogée, vers 1900, on compte plus de 500 sanatoriums en Europe. Des écrivains, des compositeurs, des aristocrates y séjournent des années. Kafka, Chekhov, Robert Louis Stevenson - tous tuberculeux, tous envoyés « à l'air ».\n\nLe twist ? Ça marchait... un peu. Pas grâce à l'altitude, mais grâce au repos et à l'isolement. En séparant les malades des bien-portants, les sanatoriums ont ralenti la contagion sans le savoir. Un résultat épidémiologique accidentel.\n\nMais voilà le vrai coup de théâtre : c'est precisément dans ces couloirs de sanatorium que les chirurgiens thoraciques ont perfectionné leurs techniques. Pour tenter de « mettre le poumon au repos », ils pratiquaient le pneumothorax artificiel - on injectait de l'air dans la cavité pleurale pour affaisser le poumon malade. Une technique brutale, risquée, mais qui a posé les bases de la chirurgie pulmonaire moderne.\n\nQuand le BCG arrive en 1921 et la streptomycine en 1943, les sanatoriums ferment les uns après les autres. Mais leur héritage est immense : l'hygiène hospitalière, l'architecture médicale avec lumière et ventilation, et les premières unités de soins intensifs respiratoires.\n\nAujourd'hui, quand tu conseilles un patient sous rifampicine pour une tuberculose active, rappelle-toi que pendant un siècle, le seul traitement disponible, c'était une chambre avec vue sur les Alpes.",
-  "image_keywords": "sanatorium mountain tuberculosis",
+  "titre": "Le saviez-vous ? On soignait les maladies mentales avec des dents arrachées",
+  "resume": "Au début du XXe siècle, un psychiatre américain était convaincu d'avoir trouvé la cause de la folie. Sa théorie ? Une infection cachée dans les dents. Sa solution ? Les arracher toutes. Sans exception.",
+  "full_text": "Henry Cotton était médecin-chef de l'asile de Trenton, dans le New Jersey. Nous sommes en 1916. Et cet homme est persuadé d'avoir résolu le mystère de la schizophrénie.\n\nSa théorie s'appelle la \"focal infection\". Selon lui, les bactéries planquées dans les dents ou les amygdales produisent des toxines qui remontent jusqu'au cerveau et déclenchent la folie. Logique, non ? Sauf que non.\n\nCotton passe immédiatement à l'action. Il arrache les dents de ses patients psychiatriques. Tous. D'un coup. Même ceux qui n'ont aucun problème dentaire visible. Et comme ça ne suffit pas à les guérir, il continue : amygdales, estomac, côlon, utérus... Il retire les organes un par un, convaincu que la bactérie se cache ailleurs.\n\nLe twist qui fait froid dans le dos : Cotton publie des résultats spectaculaires. Il annonce 85 % de guérisons. Il est célébré, invité à des conférences, cité en exemple. Personne ne vérifie ses chiffres. Quand une chercheuse indépendante, Phyllis Greenacre, audite discrètement ses dossiers en 1922... elle découvre que le taux de mortalité de ses patients dépasse 30 %. Certains meurent des suites des opérations, pas de leur maladie.\n\nLa direction de l'asile enterre son rapport. Cotton, lui, continue d'opérer jusqu'à sa mort en 1933. Et par cohérence absolue - on lui accordera ça - il se fait lui-même arracher toutes les dents.\n\nCette histoire rappelle pourquoi la médecine fondée sur les preuves n'est pas un luxe académique. Aujourd'hui, avant qu'un médicament arrive dans ton tiroir de comptoir, il passe par des essais cliniques rigoureux, des comités d'éthique, des agences réglementaires. Ce n'est pas de la bureaucratie. C'est ce qui empêche le prochain Henry Cotton de sévir.",
+  "image_keywords": "old dentist chair",
   "tags": [
     "histoire",
-    "epidemie",
+    "psychiatrie",
     "chirurgie",
-    "medecine",
-    "traitement"
+    "decouverte",
+    "medecine"
   ],
-  "date": "2026-07-14",
+  "date": "2026-07-15",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",

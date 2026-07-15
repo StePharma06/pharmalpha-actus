@@ -1,0 +1,60 @@
+{
+  "generated_at": "2026-07-15T04:15:47.518718+02:00",
+  "run_date": "2026-07-15",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Déserts médicaux : la pharmacie, dernier filet de sécurité sanitaire",
+      "resume": "Quand le dernier médecin ferme son cabinet, la pharmacie reste. Ce n'est plus une métaphore : c'est une réalité documentée qui redéfinit notre rôle au comptoir. Et ça soulève des questions brûlantes sur notre modèle économique.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/deserts-medicaux-pourquoi-les-pharmacies-deviennent-les-derniers-remparts-de-lacces-aux-soins",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "pharma_monde",
+      "titre": "CVS Caremark règle à l'amiable avec la FTC sur la manipulation des prix de l'insuline",
+      "resume": "Aux États-Unis, le géant PBM CVS Caremark vient de signer un accord avec la FTC après des accusations de manipulation des prix de l'insuline. Un scandale qui illustre les dérives des intermédiaires dans la chaîne du médicament, et qui devrait faire réfléchir sur ce qu'on veut, ou pas, importer en France.",
+      "source": "STAT News",
+      "source_url": "https://www.statnews.com/pharmalot/2026/07/14/ftc-settles-lawsuit-cvs-caremark-insulin-prices-access/",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "avenir_pharma",
+      "titre": "IA et métabolisme des médicaments : les petits modèles bien entraînés battent les géants",
+      "resume": "Une compétition internationale d'IA appliquée à la pharmacologie vient de rendre son verdict : pour prédire le métabolisme des candidats médicaments, la qualité des données prime sur la puissance du modèle. Une leçon qui dépasse largement le monde de la R&D.",
+      "source": "STAT News",
+      "source_url": "https://www.statnews.com/2026/07/14/openadmet-ai-drug-metabolism-prediction-inductive-bio/",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Loi aide à mourir : ce que ça change concrètement pour ton officine",
+      "resume": "Le vote solennel de l'Assemblée nationale ce 15 juillet 2026 sur l'aide à mourir ouvre un chapitre inédit pour les pharmaciens. Derrière le débat éthique, il y a des actes pharmaceutiques nouveaux, une chaîne de responsabilité à définir, et un marché des soins palliatifs à struct...",
+      "source": "Pharm'Actus · Le Monde Santé — Aide à mourir : ce que contient le texte soumis au dernier vote, Le Monde — Sébastien Lecornu saisira le Conseil constitutionnel",
+      "source_url": "https://www.lemonde.fr/societe/article/2026/07/14/fin-de-vie-ce-que-contient-le-texte-sur-l-aide-a-mourir-soumis-au-dernier-vote-des-deputes_6723270_3224.html",
+      "confidence_score": 0.55,
+      "warnings": [
+        "Le chiffre de 3 544 euthanasies en Belgique en 2023 est basé sur les rapports annuels de la Commission fédérale belge de contrôle et d'évaluation — à vérifier sur le rapport officiel 2023 non encore cité textuellement.",
+        "Le chiffre de 80-120 € d'honoraire de dispensation en Belgique est une estimation par analogie réglementaire (AFMPS) — non confirmé par une source primaire directe dans cet article : À VERIFIER ABSOLUMENT avant publication.",
+        "Le taux de 2,5 % des décès en Belgique lié à l'euthanasie est une estimation calculée (3544 / ~140 000 décès belges/an) — recouper avec les données officielles belges.",
+        "La transposition France de 17 000 actes/an est une projection théorique par extrapolation démographique — afficher clairement comme projection, non comme prévision officielle.",
+        "Le chiffre de 3,5 % du CA officinal pour stupéfiants/antalgiques majeurs est une estimation DREES/GERS — source à confirmer précisément.",
+        "Le chiffre de 176 unités de soins palliatifs en France (SFAP 2024) doit être vérifié sur le site SFAP.",
+        "La loi n'est pas encore promulguée au moment de la rédaction (saisine Conseil constitutionnel annoncée) : bien préciser le caractère conditionnel de l'ensemble des implications pratiques.",
+        "Aucun syndicat de pharmaciens (FSPF, USPO, UPGF) ne s'est exprimé publiquement sur les implications officinales spécifiques de cette loi à la date de rédaction — ne pas leur prêter de position."
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}
