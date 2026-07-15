@@ -1,21 +1,21 @@
 {
- "genere_le": "2026-07-14T07:22:15+02:00",
+ "genere_le": "2026-07-15T07:23:04+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1034,
+ "abonnes_total": 1033,
  "nouveaux_7j": 5,
- "nouveaux_cumul": 1027,
+ "nouveaux_cumul": 1026,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-07-07",
-  "au": "2026-07-14",
-  "delivres": 6711,
-  "ouvertures": 2322,
-  "ouvertures_uniques": 1735,
-  "clics": 3620,
-  "clics_uniques": 553,
-  "taux_ouverture_pct": 25.9,
-  "taux_clic_pct": 8.2,
-  "ctor_pct": 31.9,
+  "du": "2026-07-08",
+  "au": "2026-07-15",
+  "delivres": 6713,
+  "ouvertures": 2288,
+  "ouvertures_uniques": 1711,
+  "clics": 3530,
+  "clics_uniques": 527,
+  "taux_ouverture_pct": 25.5,
+  "taux_clic_pct": 7.9,
+  "ctor_pct": 30.8,
   "top_articles": [
    {
     "id": "actu_2026_07_11_1",
@@ -38,7 +38,7 @@
     "titre": "Vente directe des labos : l'USPO passe à l'offensive, qu'en pensent les autres ?",
     "date": "2026-07-09",
     "categorie": "pharma_france",
-    "clics": 109,
+    "clics": 111,
     "lecteurs": 58
    },
    {
@@ -46,7 +46,7 @@
     "titre": "Solaires Temu, Shein, AliExpress : 9 produits sur 10 non conformes, le comptoir comme rempart",
     "date": "2026-07-09",
     "categorie": "bonne_nouvelle",
-    "clics": 115,
+    "clics": 117,
     "lecteurs": 57
    },
    {
@@ -62,7 +62,7 @@
     "titre": "Déprescription : la CNAM veut ton comptoir comme levier d'économies",
     "date": "2026-07-09",
     "categorie": "pharma_france",
-    "clics": 93,
+    "clics": 95,
     "lecteurs": 55
    },
    {
@@ -74,20 +74,12 @@
     "lecteurs": 55
    },
    {
-    "id": "actu_2026_07_07_1",
-    "titre": "La Cnam met ses microscopes sur les groupements : ca va piquer",
-    "date": "2026-07-07",
-    "categorie": "pharma_france",
-    "clics": 85,
-    "lecteurs": 47
-   },
-   {
     "id": "actu_2026_07_13_1",
     "titre": "800 officines fermées en 4 ans : quels territoires sont vraiment à risque ?",
     "date": "2026-07-13",
     "categorie": "business_officine",
-    "clics": 83,
-    "lecteurs": 47
+    "clics": 84,
+    "lecteurs": 48
    },
    {
     "id": "actu_2026_07_10_4",
@@ -96,20 +88,28 @@
     "categorie": "avenir_pharma",
     "clics": 93,
     "lecteurs": 45
+   },
+   {
+    "id": "actu_2026_07_09_4",
+    "titre": "Pharma Monde : les vaccins ARNm contre les cancers, la phase 3 s'accélère en Europe",
+    "date": "2026-07-09",
+    "categorie": "avenir_pharma",
+    "clics": 90,
+    "lecteurs": 45
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-07-14",
-  "delivres": 53721,
-  "ouvertures": 21899,
-  "ouvertures_uniques": 14993,
-  "clics": 22402,
-  "clics_uniques": 4138,
-  "taux_ouverture_pct": 27.9,
+  "au": "2026-07-15",
+  "delivres": 54674,
+  "ouvertures": 22206,
+  "ouvertures_uniques": 15221,
+  "clics": 22849,
+  "clics_uniques": 4189,
+  "taux_ouverture_pct": 27.8,
   "taux_clic_pct": 7.7,
-  "ctor_pct": 27.6,
+  "ctor_pct": 27.5,
   "top_articles": [
    {
     "id": "actu_2026_06_18_1",
@@ -188,7 +188,7 @@
     "titre": "Vente directe des labos : l'USPO passe à l'offensive, qu'en pensent les autres ?",
     "date": "2026-07-09",
     "categorie": "pharma_france",
-    "clics": 109,
+    "clics": 111,
     "lecteurs": 58
    }
   ]
