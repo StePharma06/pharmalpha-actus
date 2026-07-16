@@ -1,37 +1,37 @@
 {
- "genere_le": "2026-07-15T07:23:04+02:00",
+ "genere_le": "2026-07-16T07:32:22+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1033,
- "nouveaux_7j": 5,
- "nouveaux_cumul": 1026,
+ "abonnes_total": 1031,
+ "nouveaux_7j": 3,
+ "nouveaux_cumul": 1024,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-07-08",
-  "au": "2026-07-15",
-  "delivres": 6713,
-  "ouvertures": 2288,
-  "ouvertures_uniques": 1711,
-  "clics": 3530,
-  "clics_uniques": 527,
-  "taux_ouverture_pct": 25.5,
-  "taux_clic_pct": 7.9,
-  "ctor_pct": 30.8,
+  "du": "2026-07-09",
+  "au": "2026-07-16",
+  "delivres": 6699,
+  "ouvertures": 2334,
+  "ouvertures_uniques": 1731,
+  "clics": 3560,
+  "clics_uniques": 517,
+  "taux_ouverture_pct": 25.8,
+  "taux_clic_pct": 7.7,
+  "ctor_pct": 29.9,
   "top_articles": [
    {
     "id": "actu_2026_07_11_1",
     "titre": "Grille salaires officine : l'échec du 6 juillet va te coûter cher",
     "date": "2026-07-11",
     "categorie": "business_officine",
-    "clics": 120,
-    "lecteurs": 64
+    "clics": 122,
+    "lecteurs": 66
    },
    {
     "id": "actu_2026_07_10_1",
     "titre": "Vaccin grippe sur liste I : prescription obligatoire, mais tu peux la rédiger toi-même",
     "date": "2026-07-10",
     "categorie": "pharma_france",
-    "clics": 118,
-    "lecteurs": 62
+    "clics": 119,
+    "lecteurs": 63
    },
    {
     "id": "actu_2026_07_09_2",
@@ -66,28 +66,20 @@
     "lecteurs": 55
    },
    {
-    "id": "actu_2026_07_08_1",
-    "titre": "Substitution des DM : le décret approche et la fronde monte",
-    "date": "2026-07-08",
-    "categorie": "pharma_france",
-    "clics": 92,
-    "lecteurs": 55
-   },
-   {
     "id": "actu_2026_07_13_1",
     "titre": "800 officines fermées en 4 ans : quels territoires sont vraiment à risque ?",
     "date": "2026-07-13",
     "categorie": "business_officine",
-    "clics": 84,
-    "lecteurs": 48
+    "clics": 86,
+    "lecteurs": 50
    },
    {
     "id": "actu_2026_07_10_4",
     "titre": "Canicule et SEP : un risque de poussée majoré de 40 %, le comptoir doit savoir",
     "date": "2026-07-10",
     "categorie": "avenir_pharma",
-    "clics": 93,
-    "lecteurs": 45
+    "clics": 94,
+    "lecteurs": 46
    },
    {
     "id": "actu_2026_07_09_4",
@@ -96,18 +88,26 @@
     "categorie": "avenir_pharma",
     "clics": 90,
     "lecteurs": 45
+   },
+   {
+    "id": "actu_2026_07_10_5",
+    "titre": "Bas de contention : la fin de la période transitoire coûte combien à ton officine ?",
+    "date": "2026-07-10",
+    "categorie": "business_officine",
+    "clics": 79,
+    "lecteurs": 45
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-07-15",
-  "delivres": 54674,
-  "ouvertures": 22206,
-  "ouvertures_uniques": 15221,
-  "clics": 22849,
-  "clics_uniques": 4189,
-  "taux_ouverture_pct": 27.8,
+  "au": "2026-07-16",
+  "delivres": 55608,
+  "ouvertures": 22639,
+  "ouvertures_uniques": 15524,
+  "clics": 23405,
+  "clics_uniques": 4266,
+  "taux_ouverture_pct": 27.9,
   "taux_clic_pct": 7.7,
   "ctor_pct": 27.5,
   "top_articles": [
@@ -140,14 +140,14 @@
     "titre": "Grille salaires officine : l'échec du 6 juillet va te coûter cher",
     "date": "2026-07-11",
     "categorie": "business_officine",
-    "clics": 120,
-    "lecteurs": 64
+    "clics": 122,
+    "lecteurs": 66
    },
    {
     "id": "actu_2026_07_04_1",
-    "titre": "Vaccins chez les médecins dès septembre : l'honoraire de dispensation en jeu",
-    "date": "2026-07-04",
-    "categorie": "pharma_france",
+    "titre": "actu_2026_07_04_1",
+    "date": "",
+    "categorie": "",
     "clics": 98,
     "lecteurs": 64
    },
@@ -164,8 +164,8 @@
     "titre": "Vaccin grippe sur liste I : prescription obligatoire, mais tu peux la rédiger toi-même",
     "date": "2026-07-10",
     "categorie": "pharma_france",
-    "clics": 118,
-    "lecteurs": 62
+    "clics": 119,
+    "lecteurs": 63
    },
    {
     "id": "actu_2026_06_22_1",
