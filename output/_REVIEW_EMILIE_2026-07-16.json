@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-07-16T04:18:18.871338+02:00",
+  "run_date": "2026-07-16",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "avenir_pharma",
+      "titre": "Premier essai humain pour un vaccin contre Ebola Bundibugyo : Oxford prend les devants",
+      "resume": "L'Oxford Vaccine Group a lancé le tout premier essai clinique mondial chez l'homme d'un vaccin ciblant la souche Ebola Bundibugyo. Un candidat vaccin à surveiller, alors que l'épidémie en RDC progresse à un rythme préoccupant selon MSF. La recherche vaccinale accélère, et les pharmaciens sont en première ligne pour informer.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/ebola-bundibugyo-premier-essai-humain-pour-un-candidat-vaccin",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "CNAM Charges & Produits 2027 : 3,9 Mds€ d'économies - ce que ça change pour ton officine",
+      "resume": "Le rapport Charges et Produits 2027 de la CNAM, approuvé le 9 juillet 2026, reconduit un objectif de 3,9 milliards d'euros d'économies. Régulation des prix, déprescription, oncologie : l'officine est dans le viseur. Décryptage.",
+      "source": "Pharm'Actus · Caducee.net — Rapport Charges et Produits CNAM 2027, UPGF — Des devoirs rationnés : c'est la récompense des bons élèves ?",
+      "source_url": "https://www.caducee.net/actualite-medicale/16946/assurance-maladie-derriere-le-juste-soin-au-juste-prix-prescriptions-et-tarifs-sous-regulation-renforcee.html",
+      "confidence_score": 0.72,
+      "warnings": [
+        "Le chiffre de 180 000 bilans de médication réalisés en 2024 est une estimation à partir de données CNAM partiellement publiées — à vérifier dans le rapport d'activité CNAM 2024 officiel.",
+        "L'honoraire de bilan de médication à 60 € est celui de l'avenant 22 — vérifier qu'aucun avenant postérieur ne l'a modifié avant publication.",
+        "L'honoraire de substitution générique à 0,51 € par ligne est issu de la grille tarifaire conventionnelle connue — vérifier la valeur exacte en vigueur au 16/07/2026.",
+        "Le marché biosimilaires injectables ville à 1,2 Md€ est une estimation de marché — à consolider avec les données GERS ou CNAM.",
+        "La FSPF et l'USPO ne se sont pas exprimées publiquement sur le rapport Charges et Produits 2027 à la date de rédaction de cet article (source non disponible dans les articles fournis) — leurs positions seront à intégrer dès publication.",
+        "Le chiffre de 3 Mds€ d'économies supplémentaires cherchés par le gouvernement d'ici septembre provient uniquement de l'UPGF — non confirmé par une source gouvernementale directe dans les articles disponibles."
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

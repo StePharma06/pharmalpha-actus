@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? On soignait les maladies mentales avec des dents arrachées",
-  "resume": "Au début du XXe siècle, un psychiatre américain était convaincu d'avoir trouvé la cause de la folie. Sa théorie ? Une infection cachée dans les dents. Sa solution ? Les arracher toutes. Sans exception.",
-  "full_text": "Henry Cotton était médecin-chef de l'asile de Trenton, dans le New Jersey. Nous sommes en 1916. Et cet homme est persuadé d'avoir résolu le mystère de la schizophrénie.\n\nSa théorie s'appelle la \"focal infection\". Selon lui, les bactéries planquées dans les dents ou les amygdales produisent des toxines qui remontent jusqu'au cerveau et déclenchent la folie. Logique, non ? Sauf que non.\n\nCotton passe immédiatement à l'action. Il arrache les dents de ses patients psychiatriques. Tous. D'un coup. Même ceux qui n'ont aucun problème dentaire visible. Et comme ça ne suffit pas à les guérir, il continue : amygdales, estomac, côlon, utérus... Il retire les organes un par un, convaincu que la bactérie se cache ailleurs.\n\nLe twist qui fait froid dans le dos : Cotton publie des résultats spectaculaires. Il annonce 85 % de guérisons. Il est célébré, invité à des conférences, cité en exemple. Personne ne vérifie ses chiffres. Quand une chercheuse indépendante, Phyllis Greenacre, audite discrètement ses dossiers en 1922... elle découvre que le taux de mortalité de ses patients dépasse 30 %. Certains meurent des suites des opérations, pas de leur maladie.\n\nLa direction de l'asile enterre son rapport. Cotton, lui, continue d'opérer jusqu'à sa mort en 1933. Et par cohérence absolue - on lui accordera ça - il se fait lui-même arracher toutes les dents.\n\nCette histoire rappelle pourquoi la médecine fondée sur les preuves n'est pas un luxe académique. Aujourd'hui, avant qu'un médicament arrive dans ton tiroir de comptoir, il passe par des essais cliniques rigoureux, des comités d'éthique, des agences réglementaires. Ce n'est pas de la bureaucratie. C'est ce qui empêche le prochain Henry Cotton de sévir.",
-  "image_keywords": "old dentist chair",
+  "titre": "Le saviez-vous ? L'urine servait de test de grossesse officiel jusqu'en 1970",
+  "resume": "Pendant des décennies, savoir si une femme était enceinte nécessitait une seringue, une souris, et deux jours d'attente. Aucune bandelette. Aucun digital. Juste une injection d'urine dans le flanc d'un rongeur. Et ça marchait vraiment.",
+  "full_text": "On est en 1927. Deux chercheurs berlinois, Selmar Aschheim et Bernhard Zondek, viennent de mettre au point le premier test de grossesse fiable de l'histoire. Le principe ? Injecter les urines de la femme à tester sous la peau d'une souris immature. Si la souris développait des follicules ovariens matures 96 heures plus tard, c'était positif. Autrement dit : enceinte.\n\nCe test, baptisé « Aschheim-Zondek » ou simplement « A-Z », reposait sur la détection de l'hormone HCG - la même qu'on traque aujourd'hui sur nos bandelettes à 2 euros. Sauf qu'à l'époque, il fallait sacrifier l'animal, l'autopsier, et examiner ses ovaires au microscope. Délai minimum : deux jours. Prix : celui d'un laboratoire entier.\n\nEt voilà le twist. Dans les années 1930, un biologiste sud-africain, Lancelot Hogben, remplace la souris par une grenouille africaine à griffes - la Xenopus laevis. Avantage de taille : la grenouille pond des œufs en réponse à l'HCG humaine dans les 12 heures. Et surtout, elle survit. On peut la réutiliser. Les hôpitaux du monde entier se mettent alors à commander des cargaisons entières de grenouilles vivantes, exportées depuis le Cap. Des milliers d'amphibiens font le tour du globe dans des caisses perforées pour diagnostiquer des grossesses.\n\nProblème : on a découvert bien plus tard que ces grenouilles transportaient un champignon pathogène, le Batrachochytrium dendrobatidis, responsable d'une épidémie mondiale qui a décimé des centaines d'espèces d'amphibiens. Un test de grossesse aurait contribué à l'une des plus grandes extinctions animales du XXe siècle.\n\nAujourd'hui, le test immunologique sur bandelette - inventé en 1960 et démocratisé dans les années 1970 - fait tout ça en 3 minutes, sans grenouille, sans souris, sans microscope. Quand une patiente t'apporte son test positif à l'officine pour confirmer avec le pharmacien, rappelle-toi : derrière ce petit bâtonnet plastique, il y a un siècle de souris sacrifiées, de grenouilles voyageuses et d'une catastrophe écologique qu'on n'avait pas vue venir.",
+  "image_keywords": "pregnancy test vintage laboratory",
   "tags": [
     "histoire",
-    "psychiatrie",
-    "chirurgie",
+    "diagnostic",
     "decouverte",
-    "medecine"
+    "chimie",
+    "instrument"
   ],
-  "date": "2026-07-15",
+  "date": "2026-07-16",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",
