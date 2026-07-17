@@ -1,0 +1,48 @@
+{
+  "generated_at": "2026-07-17T04:13:26.155841+02:00",
+  "run_date": "2026-07-17",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Tiers payant contre biosimilaires et hybrides : ça démarre le 1er septembre",
+      "resume": "La règle du tiers payant contre génériques s'étend aux biosimilaires et hybrides dès le 1er septembre 2026. Refus de substitution = reste à charge patient. Les points de vigilance sont nombreux pour éviter les bugs au comptoir.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/therapeutique/medicaments/mieux-delivrer/tiers-payant-contre-biosimilaires-et-hybrides-la-regle-sapplique-des-le-1er-septembre",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "pharma_monde",
+      "titre": "IA et renouvellement d'ordonnances dans l'Utah : coup de génie ou terrain glissant ?",
+      "resume": "L'Utah teste depuis début 2026 un programme pilote où une IA renouvelle certaines ordonnances. Les médecins américains s'inquiètent. Et nous, pharmaciens français, on devrait y regarder de près.",
+      "source": "France Info Santé",
+      "source_url": "https://www.franceinfo.fr/replay-radio/bientot-chez-vous/dans-l-utah-l-intelligence-artificielle-peut-desormais-renouveler-les-ordonnances_8079923.html#xtor=RSS-3-%5Bgeneral%5D",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Aide à mourir : 18 mois pour s'organiser, combien ça coûte à l'officine ?",
+      "resume": "La loi sur l'aide à mourir est adoptée. Entrée en vigueur début 2027 au plus tôt. Pour le pharmacien titulaire, c'est maintenant qu'il faut anticiper : clause de conscience, protocoles de dispensation, et un marché de soins palliatifs en pleine restructuration.",
+      "source": "Pharm'Actus · Le Monde Santé – Adoption de la loi sur l'aide à mourir, France Info Santé – Calendrier d'application de la loi fin de vie",
+      "source_url": "https://www.lemonde.fr/societe/article/2026/07/16/fin-de-vie-la-loi-historique-sur-l-aide-a-mourir-adoptee-definitivement-au-cours-d-un-debat-teinte-d-emotion_6723752_3224.html",
+      "confidence_score": 0.62,
+      "warnings": [
+        "Le chiffre de 1,2 milliard d'euros pour les soins palliatifs (DREES 2023) est une estimation issue de données publiques antérieures — vérifier la dernière publication DREES disponible.",
+        "Le chiffre de 300 millions d'euros pour le marché des opioïdes palliatifs en ville est une extrapolation à vérifier auprès des données IQVIA ou ANSM.",
+        "Le précédent québécois sur la rémunération (x3-x4 l'honoraire standard) est cité à titre comparatif : le modèle de dispensation français n'est pas encore défini — ne pas présenter ce chiffre comme une projection certaine.",
+        "Le montant de 1,1 milliard d'euros du plan soins palliatifs est issu de l'exposé des motifs de la PPL telle que discutée en 2026 : vérifier la version définitive adoptée.",
+        "La référence à L.5125-3-1 CSP sur la contraception d'urgence et la clause de conscience doit être vérifiée dans la version consolidée du code en vigueur.",
+        "La saisine du Conseil constitutionnel annoncée par Lecornu pourrait modifier ou retarder l'entrée en vigueur : surveiller les suites judiciaires.",
+        "Position syndicale FSPF et USPO sur la clause de conscience pharmacien non trouvée dans les sources disponibles : ne pas leur prêter de position, sujet à surveiller."
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

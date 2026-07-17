@@ -26,33 +26,33 @@
       "trend": "up"
     }
   ],
-  "pathologies_from": "2026-07-16",
+  "pathologies_from": "2026-07-17",
   "soins": [
     {
-      "display": "Immunite parlementaire",
-      "delta_label": "↑ 689 150",
-      "trend": "up"
-    },
-    {
       "display": "Immunite presidentielle",
-      "delta_label": "↑ 607 650",
-      "trend": "up"
-    },
-    {
-      "display": "Oscillo immunite",
-      "delta_label": "↑ 428 100",
+      "delta_label": "↑ 391 500",
       "trend": "up"
     },
     {
       "display": "What causes poor digestion",
-      "delta_label": "↑ 221 650",
+      "delta_label": "↑ 316 950",
       "trend": "up"
     },
     {
-      "display": "Maïs digestion",
-      "delta_label": "↑ 49 650",
+      "display": "Immunite diplomatique",
+      "delta_label": "↑ 107 700",
+      "trend": "up"
+    },
+    {
+      "display": "Immunite parlementaire",
+      "delta_label": "↑ 56 300",
+      "trend": "up"
+    },
+    {
+      "display": "Chaleur et digestion",
+      "delta_label": "↑ 45 350",
       "trend": "up"
     }
   ],
-  "soins_from": "2026-07-16"
+  "soins_from": "2026-07-17"
 }

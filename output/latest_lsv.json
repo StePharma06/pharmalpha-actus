@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? L'urine servait de test de grossesse officiel jusqu'en 1970",
-  "resume": "Pendant des décennies, savoir si une femme était enceinte nécessitait une seringue, une souris, et deux jours d'attente. Aucune bandelette. Aucun digital. Juste une injection d'urine dans le flanc d'un rongeur. Et ça marchait vraiment.",
-  "full_text": "On est en 1927. Deux chercheurs berlinois, Selmar Aschheim et Bernhard Zondek, viennent de mettre au point le premier test de grossesse fiable de l'histoire. Le principe ? Injecter les urines de la femme à tester sous la peau d'une souris immature. Si la souris développait des follicules ovariens matures 96 heures plus tard, c'était positif. Autrement dit : enceinte.\n\nCe test, baptisé « Aschheim-Zondek » ou simplement « A-Z », reposait sur la détection de l'hormone HCG - la même qu'on traque aujourd'hui sur nos bandelettes à 2 euros. Sauf qu'à l'époque, il fallait sacrifier l'animal, l'autopsier, et examiner ses ovaires au microscope. Délai minimum : deux jours. Prix : celui d'un laboratoire entier.\n\nEt voilà le twist. Dans les années 1930, un biologiste sud-africain, Lancelot Hogben, remplace la souris par une grenouille africaine à griffes - la Xenopus laevis. Avantage de taille : la grenouille pond des œufs en réponse à l'HCG humaine dans les 12 heures. Et surtout, elle survit. On peut la réutiliser. Les hôpitaux du monde entier se mettent alors à commander des cargaisons entières de grenouilles vivantes, exportées depuis le Cap. Des milliers d'amphibiens font le tour du globe dans des caisses perforées pour diagnostiquer des grossesses.\n\nProblème : on a découvert bien plus tard que ces grenouilles transportaient un champignon pathogène, le Batrachochytrium dendrobatidis, responsable d'une épidémie mondiale qui a décimé des centaines d'espèces d'amphibiens. Un test de grossesse aurait contribué à l'une des plus grandes extinctions animales du XXe siècle.\n\nAujourd'hui, le test immunologique sur bandelette - inventé en 1960 et démocratisé dans les années 1970 - fait tout ça en 3 minutes, sans grenouille, sans souris, sans microscope. Quand une patiente t'apporte son test positif à l'officine pour confirmer avec le pharmacien, rappelle-toi : derrière ce petit bâtonnet plastique, il y a un siècle de souris sacrifiées, de grenouilles voyageuses et d'une catastrophe écologique qu'on n'avait pas vue venir.",
-  "image_keywords": "pregnancy test vintage laboratory",
+  "titre": "Le saviez-vous ? On guérissait l'acné avec des rayons X dans les années 30",
+  "resume": "Dans les années 1920-1950, les dermatologues irradiaient la peau des adolescents pour effacer leurs boutons. Pas une légende urbaine : une pratique médicale reconnue, remboursée, et considérée comme un progrès. Le prix à payer, on le découvrira des décennies plus tard.",
+  "full_text": "Imagine te présenter chez le dermato pour quelques boutons, et repartir avec une séance de rayons X sur le visage. C'est exactement ce qui se passait aux États-Unis et en Europe entre les années 1920 et le milieu des années 1950.\n\nLa technique s'appelait la \"roentgen therapy\" - du nom de Wilhelm Röntgen, le découvreur des rayons X en 1895. Les médecins avaient remarqué un truc : les rayonnements réduisaient l'activité des glandes sébacées. Résultat, moins de sébum, moins d'acné. Logique, non ?\n\nSauf que personne ne mesurait vraiment les doses. Les appareils étaient calibrés à l'œil, les protocoles variaient d'un cabinet à l'autre, et les patients revenaient parfois toutes les semaines. Des adolescents de 14, 15 ans encaissaient des dizaines de séances sur le visage et le cou, sans aucune protection pour le reste du corps.\n\nLe twist ? Ces mêmes patients ont commencé à développer des cancers de la thyroïde et des tumeurs cutanées... 20 ou 30 ans plus tard. En 1970, une étude américaine a établi le lien. Des milliers de personnes irradiées pour de l'acné dans leur jeunesse portaient un risque carcinologique multiplié par 4 à 8.\n\nLa pratique a officiellement disparu dans les années 1960 aux États-Unis, un peu plus tôt en Europe. Mais certains cabinets moins regardants ont continué discrètement jusqu'au début des années 70.\n\nAujourd'hui, quand un patient te ramène une ordonnance d'isotrétinoïne et te parle des effets secondaires du Roaccutane, tu peux relativiser : oui, le suivi est contraignant, la surveillance biologique aussi. Mais on est quand même loin de balancer des rayons X sur le visage d'un gamin de 15 ans. Le progrès, parfois, c'est juste d'arrêter de faire des choses franchement dangereuses.",
+  "image_keywords": "vintage X-ray dermatology",
   "tags": [
     "histoire",
-    "diagnostic",
-    "decouverte",
-    "chimie",
-    "instrument"
+    "dermatologie",
+    "radiologie",
+    "medicament",
+    "iatrogenese"
   ],
-  "date": "2026-07-16",
+  "date": "2026-07-17",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",
