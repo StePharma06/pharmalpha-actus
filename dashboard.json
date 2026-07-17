@@ -1,21 +1,21 @@
 {
- "genere_le": "2026-07-16T07:32:22+02:00",
+ "genere_le": "2026-07-17T07:33:48+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1031,
- "nouveaux_7j": 3,
- "nouveaux_cumul": 1024,
+ "abonnes_total": 1030,
+ "nouveaux_7j": 1,
+ "nouveaux_cumul": 1023,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-07-09",
-  "au": "2026-07-16",
-  "delivres": 6699,
-  "ouvertures": 2334,
-  "ouvertures_uniques": 1731,
-  "clics": 3560,
-  "clics_uniques": 517,
-  "taux_ouverture_pct": 25.8,
-  "taux_clic_pct": 7.7,
-  "ctor_pct": 29.9,
+  "du": "2026-07-10",
+  "au": "2026-07-17",
+  "delivres": 6686,
+  "ouvertures": 2310,
+  "ouvertures_uniques": 1709,
+  "clics": 3378,
+  "clics_uniques": 501,
+  "taux_ouverture_pct": 25.6,
+  "taux_clic_pct": 7.5,
+  "ctor_pct": 29.3,
   "top_articles": [
    {
     "id": "actu_2026_07_11_1",
@@ -34,36 +34,12 @@
     "lecteurs": 63
    },
    {
-    "id": "actu_2026_07_09_2",
-    "titre": "Vente directe des labos : l'USPO passe à l'offensive, qu'en pensent les autres ?",
-    "date": "2026-07-09",
-    "categorie": "pharma_france",
-    "clics": 111,
-    "lecteurs": 58
-   },
-   {
-    "id": "actu_2026_07_09_3",
-    "titre": "Solaires Temu, Shein, AliExpress : 9 produits sur 10 non conformes, le comptoir comme rempart",
-    "date": "2026-07-09",
-    "categorie": "bonne_nouvelle",
-    "clics": 117,
-    "lecteurs": 57
-   },
-   {
     "id": "actu_2026_07_10_2",
     "titre": "GLP-1 et grossesse : ce que la plus grande méta-analyse du BMJ vient de trancher",
     "date": "2026-07-10",
     "categorie": "pharma_monde",
     "clics": 108,
     "lecteurs": 56
-   },
-   {
-    "id": "actu_2026_07_09_1",
-    "titre": "Déprescription : la CNAM veut ton comptoir comme levier d'économies",
-    "date": "2026-07-09",
-    "categorie": "pharma_france",
-    "clics": 95,
-    "lecteurs": 55
    },
    {
     "id": "actu_2026_07_13_1",
@@ -82,31 +58,55 @@
     "lecteurs": 46
    },
    {
-    "id": "actu_2026_07_09_4",
-    "titre": "Pharma Monde : les vaccins ARNm contre les cancers, la phase 3 s'accélère en Europe",
-    "date": "2026-07-09",
-    "categorie": "avenir_pharma",
-    "clics": 90,
-    "lecteurs": 45
-   },
-   {
     "id": "actu_2026_07_10_5",
     "titre": "Bas de contention : la fin de la période transitoire coûte combien à ton officine ?",
     "date": "2026-07-10",
     "categorie": "business_officine",
     "clics": 79,
     "lecteurs": 45
+   },
+   {
+    "id": "actu_2026_07_16_3",
+    "titre": "Aide a mourir : la loi est votee, le pharmacien entre dans l'histoire (et dans l'equation)",
+    "date": "2026-07-16",
+    "categorie": "bonne_nouvelle",
+    "clics": 80,
+    "lecteurs": 42
+   },
+   {
+    "id": "actu_2026_07_14_1",
+    "titre": "Vaccin grippe : prescription obligatoire depuis le 10 juillet, mais le pharmacien reste dans la boucle",
+    "date": "2026-07-14",
+    "categorie": "pharma_france",
+    "clics": 69,
+    "lecteurs": 42
+   },
+   {
+    "id": "actu_2026_07_16_1",
+    "titre": "Désogestrel et étonogestrel : le risque de méningiome est désormais gravé dans le RCP",
+    "date": "2026-07-16",
+    "categorie": "pharma_france",
+    "clics": 79,
+    "lecteurs": 39
+   },
+   {
+    "id": "actu_2026_07_16_2",
+    "titre": "CDC americains face a 7 000 cas de cyclosporose : ce parasite qui ne nous epargne pas",
+    "date": "2026-07-16",
+    "categorie": "pharma_monde",
+    "clics": 69,
+    "lecteurs": 39
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-07-16",
-  "delivres": 55608,
-  "ouvertures": 22639,
-  "ouvertures_uniques": 15524,
-  "clics": 23405,
-  "clics_uniques": 4266,
+  "au": "2026-07-17",
+  "delivres": 56541,
+  "ouvertures": 23018,
+  "ouvertures_uniques": 15787,
+  "clics": 23906,
+  "clics_uniques": 4336,
   "taux_ouverture_pct": 27.9,
   "taux_clic_pct": 7.7,
   "ctor_pct": 27.5,
@@ -116,7 +116,7 @@
     "titre": "actu_2026_06_18_1",
     "date": "",
     "categorie": "",
-    "clics": 140,
+    "clics": 142,
     "lecteurs": 78
    },
    {
@@ -124,7 +124,7 @@
     "titre": "actu_2026_06_23_1",
     "date": "",
     "categorie": "",
-    "clics": 132,
+    "clics": 134,
     "lecteurs": 74
    },
    {
