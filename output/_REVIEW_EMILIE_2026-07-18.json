@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-07-18T04:09:08.030290+02:00",
+  "run_date": "2026-07-18",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "avenir_pharma",
+      "titre": "OSyS se généralise : la pharmacie clinique entre dans le droit commun",
+      "resume": "OSyS, le dispositif de prise en charge officinale de certains symptômes courants, s'étend à de nouvelles situations cliniques. L'UPGF soutient la démarche mais appelle à ne pas brûler les étapes. Pour les pharmaciens, c'est l'avenir du métier qui s'écrit ligne par ligne.",
+      "source": "UPGF",
+      "source_url": "https://www.upgf.fr/positions/generaliser-osys-va-dans-le-sens-de-l-histoire-mais-il-importe-de-ne-pas-bruler-les-etapes/",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Paracétamol : -10 centimes qui coûtent cher aux officines",
+      "resume": "Le gouvernement envisage de baisser le prix fabricant du paracétamol de 10 centimes. 30 millions d'euros d'économies pour l'Assurance maladie, mais une compression de marge supplémentaire pour des officines déjà sous tension sur ce produit blockbuster.",
+      "source": "Pharm'Actus · Le Moniteur des Pharmacies — Paracétamol : le gouvernement envisage une baisse des prix, Le Moniteur des Pharmacies — Pénuries : la DGS fait entrer les vaccins Covid et VRS parmi les médicaments essentiels",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/paracetamol-le-gouvernement-envisage-une-baisse-des-prix",
+      "confidence_score": 0.72,
+      "warnings": [
+        "Le chiffre de 500 millions de boîtes/an de paracétamol est une estimation couramment citée (IQVIA/ANSM) mais non vérifiée en temps réel dans cet article — à croiser avec les données IQVIA ou ANSM les plus récentes.",
+        "Le calcul de marge MDL à 26% sur les prix faibles est une approximation basée sur le barème conventionnel connu — vérifier le barème exact de la MDL en vigueur dans la convention pharmaceutique actualisée.",
+        "L'estimation de 5 000 boîtes/an de paracétamol remboursé par officine est indicative et variable selon la taille et la localisation de l'officine.",
+        "La mesure gouvernementale n'est pas encore formalisée en arrêté : elle reste au stade d'intention selon la source. Ne pas présenter comme acquise.",
+        "Aucune position syndicale (FSPF, USPO, UPGF) n'a été trouvée dans les sources disponibles sur ce sujet précis — à vérifier sur les sites syndicaux avant publication.",
+        "Le chiffre d'investissement de Seqens (100 M€) est issu de la mémoire générale et non d'une source citée dans les articles fournis — à vérifier avant publication."
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}
