@@ -1,30 +1,22 @@
 {
- "genere_le": "2026-07-18T07:17:19+02:00",
+ "genere_le": "2026-07-19T07:43:09+02:00",
  "liste_brevo": 5,
  "abonnes_total": 1030,
  "nouveaux_7j": 3,
  "nouveaux_cumul": 1023,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-07-11",
-  "au": "2026-07-18",
-  "delivres": 6664,
-  "ouvertures": 2199,
-  "ouvertures_uniques": 1639,
-  "clics": 3342,
-  "clics_uniques": 477,
-  "taux_ouverture_pct": 24.6,
-  "taux_clic_pct": 7.2,
-  "ctor_pct": 29.1,
+  "du": "2026-07-12",
+  "au": "2026-07-19",
+  "delivres": 5719,
+  "ouvertures": 2084,
+  "ouvertures_uniques": 1524,
+  "clics": 3012,
+  "clics_uniques": 438,
+  "taux_ouverture_pct": 26.6,
+  "taux_clic_pct": 7.7,
+  "ctor_pct": 28.7,
   "top_articles": [
-   {
-    "id": "actu_2026_07_11_1",
-    "titre": "Grille salaires officine : l'échec du 6 juillet va te coûter cher",
-    "date": "2026-07-11",
-    "categorie": "business_officine",
-    "clics": 122,
-    "lecteurs": 66
-   },
    {
     "id": "actu_2026_07_13_1",
     "titre": "800 officines fermées en 4 ans : quels territoires sont vraiment à risque ?",
@@ -62,8 +54,8 @@
     "titre": "Désogestrel et étonogestrel : le risque de méningiome est désormais gravé dans le RCP",
     "date": "2026-07-16",
     "categorie": "pharma_france",
-    "clics": 79,
-    "lecteurs": 39
+    "clics": 81,
+    "lecteurs": 40
    },
    {
     "id": "actu_2026_07_16_2",
@@ -90,24 +82,32 @@
     "lecteurs": 35
    },
    {
+    "id": "actu_2026_07_18_4",
+    "titre": "OSyS se généralise : la pharmacie clinique entre dans le droit commun",
+    "date": "2026-07-18",
+    "categorie": "avenir_pharma",
+    "clics": 63,
+    "lecteurs": 34
+   },
+   {
     "id": "actu_2026_07_14_3",
     "titre": "Sargasses en Guadeloupe : les pharmaciens sentinelles prennent le problème à bras-le-corps",
     "date": "2026-07-14",
     "categorie": "bonne_nouvelle",
-    "clics": 55,
-    "lecteurs": 33
+    "clics": 56,
+    "lecteurs": 34
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-07-18",
-  "delivres": 57470,
-  "ouvertures": 23321,
-  "ouvertures_uniques": 15993,
-  "clics": 24398,
-  "clics_uniques": 4405,
-  "taux_ouverture_pct": 27.8,
+  "au": "2026-07-19",
+  "delivres": 57473,
+  "ouvertures": 23505,
+  "ouvertures_uniques": 16094,
+  "clics": 24462,
+  "clics_uniques": 4432,
+  "taux_ouverture_pct": 28.0,
   "taux_clic_pct": 7.7,
   "ctor_pct": 27.5,
   "top_articles": [
