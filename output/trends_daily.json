@@ -1,64 +1,64 @@
 {
-  "generated_at": "2026-07-18",
-  "window_label": "12 juil. au 18 juil. 2026",
+  "generated_at": "2026-07-20",
+  "window_label": "14 juil. au 20 juil. 2026",
   "has_history": true,
   "delta_source": "pytrends_rising",
   "pathologies": [
     {
       "display": "How to fix fatigue",
-      "delta_label": "↑ 119 200",
+      "delta_label": "↑ 116 850",
       "trend": "up"
     },
     {
-      "display": "What causes tiredness and fatigue",
-      "delta_label": "↑ 91 450",
+      "display": "Fatigue post canicule",
+      "delta_label": "↑ 20 850",
       "trend": "up"
     },
     {
-      "display": "Fatigue apres canicule",
-      "delta_label": "↑ 66 750",
-      "trend": "up"
-    },
-    {
-      "display": "Fatigue après canicule",
-      "delta_label": "↑ 34 050",
+      "display": "Canicule fatigue intense",
+      "delta_label": "↑ 18 600",
       "trend": "up"
     },
     {
       "display": "Marque de fatigue en 5 lettres",
-      "delta_label": "↑ 24 250",
+      "delta_label": "↑ 15 900",
+      "trend": "up"
+    },
+    {
+      "display": "Plaquettes basses et fatigue",
+      "delta_label": "↑ 6 750",
       "trend": "up"
     }
   ],
   "soins": [
     {
       "display": "Immunite presidentielle",
-      "delta_label": "↑ 1 665 400",
+      "delta_label": "↑ 377 050",
       "trend": "up"
     },
     {
       "display": "Immunite parlementaire",
-      "delta_label": "↑ 634 900",
+      "delta_label": "↑ 107 250",
       "trend": "up"
     },
     {
-      "display": "What causes poor digestion",
-      "delta_label": "↑ 296 300",
+      "display": "Hypervigilance sommeil",
+      "delta_label": "↑ 12 300",
       "trend": "up"
     },
     {
-      "display": "Immunite diplomatique",
-      "delta_label": "↑ 85 300",
+      "display": "A un bon sommeil 11 lettres",
+      "delta_label": "↑ 11 600",
       "trend": "up"
     },
     {
-      "display": "Melon digestion",
-      "delta_label": "↑ 72 250",
+      "display": "Myoclonie du sommeil",
+      "delta_label": "↑ 10 800",
       "trend": "up"
     }
   ],
   "pathologies_stale": false,
-  "pathologies_from": "2026-07-18",
+  "pathologies_from": "2026-07-20",
   "soins_stale": false,
-  "soins_from": "2026-07-18"
+  "soins_from": "2026-07-20"
 }

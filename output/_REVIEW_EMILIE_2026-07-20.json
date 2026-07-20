@@ -1,0 +1,69 @@
+{
+  "generated_at": "2026-07-20T05:27:09.144892+02:00",
+  "run_date": "2026-07-20",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Regroupements d'officines : le réseau se restructure, les chiffres 2025 parlent",
+      "resume": "17 % des fermetures d'officines en 2025 résultent d'un regroupement, contre 24 % en 2024. Le phénomène ralentit mais reste structurant. Certaines régions comme le Centre-Val de Loire (44 %) ou la Normandie (38 %) concentrent l'essentiel des mouvements.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/regroupements-dofficines-le-reseau-change-de-visage",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "pharma_monde",
+      "titre": "Un inhibiteur PCSK9 en comprimé : Merck franchit une première mondiale pour le cholestérol",
+      "resume": "La FDA vient d'approuver Lipfendra (enlicitide), premier inhibiteur PCSK9 oral au monde. Fini l'injection toutes les deux ou quatre semaines : un comprimé suffit. Pour les patients non contrôlés sous statines, c'est un changement de paradigme potentiellement majeur.",
+      "source": "MedCity News",
+      "source_url": "https://medcitynews.com/2026/07/merck-ldl-cholesterol-lipfendra-enlicitide-macrocyclic-peptide-pcsk9-inhibitor-mrk/",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "Officine pensée pour les missions : Guillaume Paquin montre que c'est possible",
+      "resume": "À Cruseilles en Haute-Savoie, une officine a été conçue dès le départ pour intégrer les nouvelles missions du pharmacien. Pas du bricolage après coup : une vraie réflexion architecturale et organisationnelle autour des entretiens, de la prévention et du soin. La preuve que ça se fait.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/business/economie/strategie-et-gestion/a-cruseilles-une-officine-pensee-pour-les-nouvelles-missions",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "avenir_pharma",
+      "titre": "Oncologie féminine : un marché à 110 milliards de dollars, mais des inégalités criantes à combler",
+      "resume": "Selon un rapport PwC, le marché mondial de l'oncologie féminine pourrait atteindre 110 milliards de dollars d'ici 2030. Cancer du sein, de l'ovaire, du col : les pipelines sont pleins. Mais le financement et l'accès aux soins restent profondément inégaux selon les pays et les populations.",
+      "source": "MedCity News",
+      "source_url": "https://medcitynews.com/2026/07/womens-oncology-market-could-reach-110b-in-2030-but-gaps-remain/",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Aide à mourir : ce que la loi du 15 juillet change concrètement pour ton officine",
+      "resume": "La loi créant une aide à mourir a été adoptée le 15 juillet 2026. Derrière le débat éthique, il y a une réalité très concrète pour le pharmacien d'officine : qui prépare le produit létal, qui le délivre, et comment l'officine se positionne face à la clause de conscience.",
+      "source": "Pharm'Actus · Le Monde Santé — Interview Didier Sicard sur la loi aide à mourir (20/07/2026), DREES — Statistiques des pharmaciens actifs en France (référence 2024)",
+      "source_url": "https://www.lemonde.fr/societe/article/2026/07/20/on-bureaucratise-l-euthanasie-pour-la-rendre-acceptable-le-regard-tres-critique-de-didier-sicard-sur-la-loi-creant-une-aide-a-mourir_6726567_3224.html",
+      "confidence_score": 0.62,
+      "warnings": [
+        "Les décrets d'application de la loi aide à mourir du 15 juillet 2026 ne sont pas encore publiés au JO à la date de rédaction : les modalités exactes du circuit pharmaceutique (officine vs PUI) restent à confirmer.",
+        "Les chiffres sur les cas annuels en France sont des projections extrapolées depuis les Pays-Bas (9 000 cas/an) — il n'existe pas encore de statistiques françaises officielles.",
+        "Aucune position officielle publiée des syndicats pharmaciens (FSPF, USPO, UPGF) n'a été trouvée spécifiquement sur le rôle de l'officine dans cette loi à la date du 20/07/2026 : à vérifier impérativement avant publication.",
+        "Le coût DPC (200-600 € par action) est une fourchette indicative basée sur les tarifs moyens constatés du marché DPC officinal — à vérifier sur le site ANDPC selon les actions disponibles.",
+        "La comparaison avec le modèle belge (délivrance officinale) est illustrative : la France peut choisir un modèle exclusivement hospitalier. Ne pas présenter cette comparaison comme un fait acquis.",
+        "Le chiffre de 21 400 officines est une approximation courante — le chiffre exact de l'Ordre national des pharmaciens au 01/01/2026 doit être vérifié."
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}
