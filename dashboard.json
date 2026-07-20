@@ -1,21 +1,21 @@
 {
- "genere_le": "2026-07-19T07:43:09+02:00",
+ "genere_le": "2026-07-20T08:07:36+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1030,
+ "abonnes_total": 1029,
  "nouveaux_7j": 3,
- "nouveaux_cumul": 1023,
+ "nouveaux_cumul": 1022,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-07-12",
-  "au": "2026-07-19",
-  "delivres": 5719,
-  "ouvertures": 2084,
-  "ouvertures_uniques": 1524,
-  "clics": 3012,
-  "clics_uniques": 438,
-  "taux_ouverture_pct": 26.6,
-  "taux_clic_pct": 7.7,
-  "ctor_pct": 28.7,
+  "du": "2026-07-13",
+  "au": "2026-07-20",
+  "delivres": 6757,
+  "ouvertures": 2260,
+  "ouvertures_uniques": 1670,
+  "clics": 3418,
+  "clics_uniques": 477,
+  "taux_ouverture_pct": 24.7,
+  "taux_clic_pct": 7.1,
+  "ctor_pct": 28.6,
   "top_articles": [
    {
     "id": "actu_2026_07_13_1",
@@ -66,48 +66,48 @@
     "lecteurs": 39
    },
    {
-    "id": "actu_2026_07_16_5",
-    "titre": "CNAM Charges & Produits 2027 : 3,9 Mds€ d'économies - ce que ça change pour ton officine",
-    "date": "2026-07-16",
+    "id": "actu_2026_07_18_5",
+    "titre": "Paracétamol : -10 centimes qui coûtent cher aux officines",
+    "date": "2026-07-18",
     "categorie": "business_officine",
-    "clics": 57,
-    "lecteurs": 35
+    "clics": 66,
+    "lecteurs": 37
    },
    {
-    "id": "actu_2026_07_14_2",
-    "titre": "RFK Jr. veut sevrer l'Amérique des antidépresseurs : quand la politique s'invite dans les ordonnances",
-    "date": "2026-07-14",
-    "categorie": "pharma_monde",
-    "clics": 56,
-    "lecteurs": 35
+    "id": "actu_2026_07_18_3",
+    "titre": "Dénosumab : l'ANSM ouvre la voie à la substitution en officine",
+    "date": "2026-07-18",
+    "categorie": "bonne_nouvelle",
+    "clics": 71,
+    "lecteurs": 36
+   },
+   {
+    "id": "actu_2026_07_18_1",
+    "titre": "Tiers payant contre biosimilaires : ça démarre le 1er septembre",
+    "date": "2026-07-18",
+    "categorie": "pharma_france",
+    "clics": 68,
+    "lecteurs": 36
    },
    {
     "id": "actu_2026_07_18_4",
     "titre": "OSyS se généralise : la pharmacie clinique entre dans le droit commun",
     "date": "2026-07-18",
     "categorie": "avenir_pharma",
-    "clics": 63,
-    "lecteurs": 34
-   },
-   {
-    "id": "actu_2026_07_14_3",
-    "titre": "Sargasses en Guadeloupe : les pharmaciens sentinelles prennent le problème à bras-le-corps",
-    "date": "2026-07-14",
-    "categorie": "bonne_nouvelle",
-    "clics": 56,
-    "lecteurs": 34
+    "clics": 64,
+    "lecteurs": 35
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-07-19",
-  "delivres": 57473,
-  "ouvertures": 23505,
-  "ouvertures_uniques": 16094,
-  "clics": 24462,
-  "clics_uniques": 4432,
-  "taux_ouverture_pct": 28.0,
+  "au": "2026-07-20",
+  "delivres": 58523,
+  "ouvertures": 23714,
+  "ouvertures_uniques": 16266,
+  "clics": 24882,
+  "clics_uniques": 4480,
+  "taux_ouverture_pct": 27.8,
   "taux_clic_pct": 7.7,
   "ctor_pct": 27.5,
   "top_articles": [
