@@ -1,0 +1,47 @@
+{
+  "generated_at": "2026-07-21T04:15:06.888929+02:00",
+  "run_date": "2026-07-21",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_monde",
+      "titre": "Medicare passe au site-neutral : ce que ça annonce pour l'accès aux médicaments en Europe",
+      "resume": "Les États-Unis vont réduire leurs paiements hospitaliers pour certains médicaments via Medicare. Un signal fort sur la guerre mondiale des prix du médicament. Et un miroir troublant pour notre propre politique tarifaire.",
+      "source": "STAT News",
+      "source_url": "https://www.statnews.com/2026/07/20/site-neutral-payments-hospitals-health-insurance-earnings-season/?utm_campaign=rss",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Vaccination grippe obligatoire : ce que ça change vraiment pour tes 6 000 € de ROSP",
+      "resume": "La HAS recommande l'obligation vaccinale antigrippale pour tous les soignants. Pour l'officine, c'est à la fois une contrainte RH, un levier de missions rémunérées et un signal fort sur l'avenir de la vaccination en pharmacie.",
+      "source": "Pharm'Actus · Le Moniteur des Pharmacies — HAS vaccination soignants, Le Monde Santé — HAS recommande vaccination obligatoire soignants grippe",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/nouvelles-missions/vaccination/has-vaccination-soignants",
+      "confidence_score": 0.62,
+      "warnings": [
+        "Le chiffre de 5,5 millions de doses administrées en pharmacie en 2023-2024 est une estimation basée sur les tendances Santé publique France publiées avant juillet 2026 — à vérifier sur le dernier bulletin épidémiologique SPF.",
+        "L'honoraire de vaccination à 9,60 € est celui en vigueur selon l'avenant n°21 — vérifier qu'aucun avenant ultérieur ne l'a modifié à la date de publication.",
+        "Le plafond ROSP de 5 000 à 7 000 € est une fourchette indicative basée sur des données publiques 2024 — la valeur exacte dépend de la patientèle et de la région.",
+        "Le chiffre de 2,5 millions de professionnels de santé et médico-sociaux (DREES 2024) est une estimation agrégée — le périmètre exact des soignants visés par l'obligation future n'est pas encore défini réglementairement.",
+        "Ni la FSPF ni l'USPO n'ont publié de position sur cet avis HAS à la date de rédaction — cette information est à vérifier sur leurs sites officiels avant publication.",
+        "Le financement du vaccin pour les soignants non encore dans les cibles prioritaires n'est pas tranché — l'article signale explicitement cette incertitude."
+      ],
+      "flag_reason": "business_officine"
+    },
+    {
+      "id": "",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? On opérait les calculs rénaux... sans anesthésie, en 90 secondes",
+      "resume": "Avant le XIXe siècle, la lithotomie - l'ablation chirurgicale des calculs vésicaux - était l'une des opérations les plus courantes en Europe. Le chirurgien avait exactement 90 secondes pour opérer. Après, le patient mourait de douleur ou de choc. Et pourtant, certains opérateurs affichaient des taux de survie... insolents.",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    }
+  ]
+}

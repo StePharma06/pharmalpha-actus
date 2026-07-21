@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? On soignait la coqueluche en faisant respirer du gaz d'usine",
-  "resume": "Avant les antibiotiques, les médecins envoyaient les enfants tousser dans les usines à gaz. Pas une métaphore. Littéralement. Et ça a duré jusqu'au XXe siècle.",
-  "full_text": "Imagine la scène. On est en 1880, ton gamin tousse à s'en décrocher les poumons, la coqueluche est en train de l'épuiser. Et le médecin te dit, avec tout son sérieux de docteur : « Emmenez-le respirer près du gazomètre du quartier. »\n\nLe gazomètre, c'est cette immense cuve métallique qui stocke le gaz de houille pour alimenter les réverbères. Ça pue le soufre, les goudrons, l'ammoniac. Et c'était considéré, officiellement, comme un traitement médical contre la coqueluche.\n\nL'idée n'était pas complètement sortie de nulle part. En 1802, un médecin anglais nommé Thomas Beddoes avait déjà expérimenté des « thérapies par inhalation » avec toutes sortes de gaz. Son institution de Bristol, le Pneumatic Institute, testait le protoxyde d'azote, l'oxygène, le dioxyde de carbone. Beddoes était convaincu que les gaz industriels avaient des vertus médicales insoupçonnées. Il n'avait pas tout tort sur le principe - mais sur la coqueluche, c'était du vent.\n\nLe twist ? Les enfants allaient parfois mieux. Pas grâce au gaz toxique, évidemment. Mais parce que le trajet en plein air, loin des appartements surpeuplés et mal ventilés, leur faisait objectivement du bien. C'était l'air frais qui soignait, pas les émanations d'usine. Le médecin avait trouvé la bonne prescription pour les mauvaises raisons.\n\nCette pratique a survécu dans certaines régions rurales françaises jusqu'aux années 1930. Des familles faisaient des kilomètres en charrette pour approcher leurs enfants des chantiers de goudron ou des distilleries. Pendant ce temps, le vaccin contre la coqueluche était en cours de développement - il sera finalement disponible dans les années 1940.\n\nAujourd'hui, la coqueluche revient en force en Europe. Les rappels vaccinaux adultes sont souvent oubliés, et c'est nous, au comptoir, qui rattrapons le coup. La prochaine fois qu'un patient rechigne à se faire vacciner, pense au gazomètre de 1880. On a fait pire - et de loin.",
-  "image_keywords": "gasometer industrial vintage",
+  "titre": "Le saviez-vous ? On opérait les calculs rénaux... sans anesthésie, en 90 secondes",
+  "resume": "Avant le XIXe siècle, la lithotomie - l'ablation chirurgicale des calculs vésicaux - était l'une des opérations les plus courantes en Europe. Le chirurgien avait exactement 90 secondes pour opérer. Après, le patient mourait de douleur ou de choc. Et pourtant, certains opérateurs affichaient des taux de survie... insolents.",
+  "full_text": "Imagine-toi sur une table en bois, les jambes attachées en l'air, les mains liées aux chevilles. Un chirurgien s'approche avec un scalpel. Pas d'anesthésie. Pas de morphine. Juste toi, lui, et 90 secondes pour retirer une pierre coincée dans ta vessie.\n\nC'est ça, la lithotomie - de lithos, pierre en grec - et c'était une pratique courante du XVIe au XIXe siècle. Les calculs vésicaux étaient un fléau de l'époque : mauvaise alimentation, eau calcaire, rien pour les dissoudre. Alors on opérait. À vif.\n\nLe twist ? Certains chirurgiens étaient d'une rapidité proprement terrifiante. William Cheselden, chirurgien londonien du XVIIIe siècle, réalisait l'opération en 54 secondes chrono. Il avait un taux de mortalité de 9 %, ce qui était... exceptionnel pour l'époque. Ses collègues moins agiles perdaient 50 % de leurs patients. La vitesse, c'était littéralement une question de vie ou de mort : moins de temps sous le scalpel = moins de choc hémorragique et infectieux.\n\nEt ce n'est pas tout. Samuel Pepys, le célèbre diariste anglais, survécut à sa lithotomie en 1658. Il garda la pierre dans une boîte en bois toute sa vie et organisait chaque année un dîner pour fêter son anniversaire de survie. Classe.\n\nLe vrai tournant arrive en 1846 avec la première anesthésie générale à l'éther. Soudain, le chronomètre disparaît. Le chirurgien peut prendre son temps, être précis, limiter les dégâts. La survie explose.\n\nAujourd'hui, les calculs rénaux se traitent par ondes de choc ou laser, en ambulatoire, en 30 minutes, sous anesthésie légère. Au comptoir, on dispense du citrate de potassium pour prévenir les récidives, on explique l'hydratation, l'alimentation. La même pathologie, vieille de millénaires - et une prise en charge qui n'a plus rien à voir avec 90 secondes de terreur sur une planche en bois.",
+  "image_keywords": "kidney stone surgery",
   "tags": [
     "histoire",
-    "vaccin",
-    "epidemie",
-    "pediatrie",
-    "inhalation"
+    "chirurgie",
+    "anesthesie",
+    "instrument",
+    "diagnostic"
   ],
-  "date": "2026-07-20",
+  "date": "2026-07-21",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",

@@ -1,64 +1,64 @@
 {
-  "generated_at": "2026-07-20",
-  "window_label": "14 juil. au 20 juil. 2026",
+  "generated_at": "2026-07-21",
+  "window_label": "15 juil. au 21 juil. 2026",
   "has_history": true,
   "delta_source": "pytrends_rising",
   "pathologies": [
     {
-      "display": "How to fix fatigue",
-      "delta_label": "↑ 116 850",
+      "display": "What causes tiredness and fatigue",
+      "delta_label": "↑ 87 150",
       "trend": "up"
     },
     {
-      "display": "Fatigue post canicule",
-      "delta_label": "↑ 20 850",
+      "display": "Fatigue après canicule",
+      "delta_label": "↑ 36 150",
       "trend": "up"
     },
     {
       "display": "Canicule fatigue intense",
-      "delta_label": "↑ 18 600",
+      "delta_label": "↑ 23 400",
       "trend": "up"
     },
     {
-      "display": "Marque de fatigue en 5 lettres",
-      "delta_label": "↑ 15 900",
+      "display": "Coup de fatigue symptômes",
+      "delta_label": "↑ 15 600",
       "trend": "up"
     },
     {
-      "display": "Plaquettes basses et fatigue",
-      "delta_label": "↑ 6 750",
+      "display": "Walmart near me",
+      "delta_label": "↑ 14 500",
       "trend": "up"
     }
   ],
   "soins": [
     {
       "display": "Immunite presidentielle",
-      "delta_label": "↑ 377 050",
+      "delta_label": "↑ 351 400",
       "trend": "up"
     },
     {
-      "display": "Immunite parlementaire",
-      "delta_label": "↑ 107 250",
+      "display": "What causes poor digestion",
+      "delta_label": "↑ 312 050",
       "trend": "up"
     },
     {
-      "display": "Hypervigilance sommeil",
-      "delta_label": "↑ 12 300",
+      "display": "Immunite diplomatique",
+      "delta_label": "↑ 112 550",
       "trend": "up"
     },
     {
-      "display": "A un bon sommeil 11 lettres",
-      "delta_label": "↑ 11 600",
+      "display": "Walmart near me",
+      "delta_label": "↑ 70 900",
       "trend": "up"
     },
     {
-      "display": "Myoclonie du sommeil",
-      "delta_label": "↑ 10 800",
+      "display": "Calmosine digestion nourrisson",
+      "delta_label": "↑ 66 000",
       "trend": "up"
     }
   ],
   "pathologies_stale": false,
-  "pathologies_from": "2026-07-20",
+  "pathologies_from": "2026-07-21",
   "soins_stale": false,
-  "soins_from": "2026-07-20"
+  "soins_from": "2026-07-21"
 }
