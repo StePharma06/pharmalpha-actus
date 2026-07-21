@@ -1,37 +1,45 @@
 {
- "genere_le": "2026-07-20T08:07:36+02:00",
+ "genere_le": "2026-07-21T07:41:58+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1029,
+ "abonnes_total": 1024,
  "nouveaux_7j": 3,
- "nouveaux_cumul": 1022,
+ "nouveaux_cumul": 1017,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-07-13",
-  "au": "2026-07-20",
-  "delivres": 6757,
-  "ouvertures": 2260,
-  "ouvertures_uniques": 1670,
-  "clics": 3418,
-  "clics_uniques": 477,
-  "taux_ouverture_pct": 24.7,
-  "taux_clic_pct": 7.1,
-  "ctor_pct": 28.6,
+  "du": "2026-07-14",
+  "au": "2026-07-21",
+  "delivres": 6641,
+  "ouvertures": 2319,
+  "ouvertures_uniques": 1703,
+  "clics": 3402,
+  "clics_uniques": 480,
+  "taux_ouverture_pct": 25.6,
+  "taux_clic_pct": 7.2,
+  "ctor_pct": 28.2,
   "top_articles": [
-   {
-    "id": "actu_2026_07_13_1",
-    "titre": "800 officines fermées en 4 ans : quels territoires sont vraiment à risque ?",
-    "date": "2026-07-13",
-    "categorie": "business_officine",
-    "clics": 87,
-    "lecteurs": 51
-   },
    {
     "id": "actu_2026_07_17_1",
     "titre": "Tiers payant contre biosimilaires et hybrides : ça démarre le 1er septembre",
     "date": "2026-07-17",
     "categorie": "pharma_france",
-    "clics": 80,
-    "lecteurs": 46
+    "clics": 81,
+    "lecteurs": 47
+   },
+   {
+    "id": "actu_2026_07_16_2",
+    "titre": "CDC americains face a 7 000 cas de cyclosporose : ce parasite qui ne nous epargne pas",
+    "date": "2026-07-16",
+    "categorie": "pharma_monde",
+    "clics": 81,
+    "lecteurs": 43
+   },
+   {
+    "id": "actu_2026_07_18_1",
+    "titre": "Tiers payant contre biosimilaires : ça démarre le 1er septembre",
+    "date": "2026-07-18",
+    "categorie": "pharma_france",
+    "clics": 85,
+    "lecteurs": 42
    },
    {
     "id": "actu_2026_07_16_3",
@@ -50,6 +58,14 @@
     "lecteurs": 42
    },
    {
+    "id": "actu_2026_07_18_5",
+    "titre": "Paracétamol : -10 centimes qui coûtent cher aux officines",
+    "date": "2026-07-18",
+    "categorie": "business_officine",
+    "clics": 84,
+    "lecteurs": 41
+   },
+   {
     "id": "actu_2026_07_16_1",
     "titre": "Désogestrel et étonogestrel : le risque de méningiome est désormais gravé dans le RCP",
     "date": "2026-07-16",
@@ -58,58 +74,42 @@
     "lecteurs": 40
    },
    {
-    "id": "actu_2026_07_16_2",
-    "titre": "CDC americains face a 7 000 cas de cyclosporose : ce parasite qui ne nous epargne pas",
-    "date": "2026-07-16",
-    "categorie": "pharma_monde",
-    "clics": 69,
-    "lecteurs": 39
-   },
-   {
-    "id": "actu_2026_07_18_5",
-    "titre": "Paracétamol : -10 centimes qui coûtent cher aux officines",
+    "id": "actu_2026_07_18_4",
+    "titre": "OSyS se généralise : la pharmacie clinique entre dans le droit commun",
     "date": "2026-07-18",
-    "categorie": "business_officine",
-    "clics": 66,
-    "lecteurs": 37
+    "categorie": "avenir_pharma",
+    "clics": 77,
+    "lecteurs": 39
    },
    {
     "id": "actu_2026_07_18_3",
     "titre": "Dénosumab : l'ANSM ouvre la voie à la substitution en officine",
     "date": "2026-07-18",
     "categorie": "bonne_nouvelle",
-    "clics": 71,
-    "lecteurs": 36
+    "clics": 81,
+    "lecteurs": 37
    },
    {
-    "id": "actu_2026_07_18_1",
-    "titre": "Tiers payant contre biosimilaires : ça démarre le 1er septembre",
-    "date": "2026-07-18",
-    "categorie": "pharma_france",
-    "clics": 68,
-    "lecteurs": 36
-   },
-   {
-    "id": "actu_2026_07_18_4",
-    "titre": "OSyS se généralise : la pharmacie clinique entre dans le droit commun",
-    "date": "2026-07-18",
-    "categorie": "avenir_pharma",
-    "clics": 64,
+    "id": "actu_2026_07_20_2",
+    "titre": "Un inhibiteur PCSK9 en comprimé : Merck franchit une première mondiale pour le cholestérol",
+    "date": "2026-07-20",
+    "categorie": "pharma_monde",
+    "clics": 70,
     "lecteurs": 35
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-07-20",
-  "delivres": 58523,
-  "ouvertures": 23714,
-  "ouvertures_uniques": 16266,
-  "clics": 24882,
-  "clics_uniques": 4480,
+  "au": "2026-07-21",
+  "delivres": 59447,
+  "ouvertures": 24086,
+  "ouvertures_uniques": 16530,
+  "clics": 25412,
+  "clics_uniques": 4560,
   "taux_ouverture_pct": 27.8,
   "taux_clic_pct": 7.7,
-  "ctor_pct": 27.5,
+  "ctor_pct": 27.6,
   "top_articles": [
    {
     "id": "actu_2026_06_18_1",
@@ -185,9 +185,9 @@
    },
    {
     "id": "actu_2026_07_09_2",
-    "titre": "Vente directe des labos : l'USPO passe à l'offensive, qu'en pensent les autres ?",
-    "date": "2026-07-09",
-    "categorie": "pharma_france",
+    "titre": "actu_2026_07_09_2",
+    "date": "",
+    "categorie": "",
     "clics": 111,
     "lecteurs": 58
    }
