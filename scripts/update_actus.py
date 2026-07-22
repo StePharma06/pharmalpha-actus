@@ -1025,6 +1025,15 @@ Avant toute affirmation sur le cadre officinal francais, verifier :
 - NE JAMAIS inferer par symetrie medecin<->pharmacien. Exemple : un TROD gratuit pour le medecin (inclus dans son forfait AM) peut tres bien etre achete a sa charge par l'officine ou rembourse selon un mecanisme different. Verifier la source.
 - En cas de doute sur un chiffre, un financement ou un statut conventionnel : CITER TEXTUELLEMENT la source officielle. Ne pas reformuler ce qu'on ne peut pas garantir.
 
+=== REGLE FINANCES & CALCULS OFFICINE (CRITIQUE - une erreur ici tue la credibilite) ===
+Les lecteurs sont des pharmaciens titulaires : ils connaissent leurs marges par coeur et refont le calcul en 10 secondes. Incident reel 07/2026 : un article affirmait "paracetamol a 1,50 EUR de PFHT, marge 26% en bas de MDL, soit 39 centimes, perte 3 centimes par boite" -> PFHT reel 0,76 EUR, taux de premiere tranche 10%, marge reelle 7,6 centimes, perte reelle 1 centime. Signalement d'un pharmacien en colere.
+- N'INVENTE JAMAIS un prix (PFHT, PPTTC), un taux de marge, une borne de tranche, un volume de boites. Si la source ne donne pas le chiffre, NE FAIS PAS LE CALCUL : decris l'impact qualitativement, sans chiffrer.
+- MARGE DEGRESSIVE LISSEE (MDL) : ne cite un taux QUE si tu as la tranche ET le taux exacts du bareme EN VIGUEUR. Bareme actuel (arrete du 04/08/1987 modifie le 12/11/2018, en vigueur depuis 2020) : 0 a 1,91 EUR = 10% ; 1,92 a 22,90 EUR = 7% ; 22,91 a 150 EUR = 5,5% ; 150,01 a 1930 EUR = 5% ; au-dela = 0%. Le taux de 26,1% sur 0 a 22,90 EUR est ABROGE depuis 2018 : ne l'utilise JAMAIS.
+- La remuneration officinale sur une boite remboursee = MDL + HONORAIRE DE DISPENSATION (1,02 EUR TTC a la boite, insensible au PFHT). Ne presente JAMAIS la seule MDL comme "ce que gagne le pharmacien" : ca surevalue enormement l'impact d'une variation de PFHT.
+- Les remises laboratoires s'appliquent sur les ACHATS (PFHT), JAMAIS sur le chiffre d'affaires.
+- Tout chiffre agrege (boites vendues en France, economies attendues, perte par officine, impact reseau) doit venir de la SOURCE. N'extrapole JAMAIS un "impact par officine" a partir d'un volume supposé : si le volume n'est pas source, ne publie pas de total. Et ne melange jamais deux bases de volume differentes dans le meme raisonnement.
+- Avant de dramatiser un impact ("ca coute cher aux officines"), verifie l'ordre de grandeur REEL par rapport a la remuneration totale. Un titre alarmiste sur un impact de 1 centime detruit la credibilite.
+
 === REGLE LEGALE CRITIQUE (PUBLICITE Rx INTERDITE - L.5122) ===
 INTERDICTION ABSOLUE de proposer des recommandations type "merch", "mise en avant", "promotion", "communication client", "vitrine", "linéaire", "ILV" sur un MEDICAMENT A PRESCRIPTION identifie (GLP-1 type Ozempic/Wegovy/Mounjaro, antibiotiques, antidiabetiques, antihypertenseurs, antidepresseurs, tout Rx rembourse par l'Assurance Maladie).
 
