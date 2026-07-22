@@ -1,21 +1,21 @@
 {
- "genere_le": "2026-07-21T07:41:58+02:00",
+ "genere_le": "2026-07-22T07:40:56+02:00",
  "liste_brevo": 5,
  "abonnes_total": 1024,
  "nouveaux_7j": 3,
  "nouveaux_cumul": 1017,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-07-14",
-  "au": "2026-07-21",
-  "delivres": 6641,
-  "ouvertures": 2319,
-  "ouvertures_uniques": 1703,
+  "du": "2026-07-15",
+  "au": "2026-07-22",
+  "delivres": 6639,
+  "ouvertures": 2431,
+  "ouvertures_uniques": 1766,
   "clics": 3402,
-  "clics_uniques": 480,
-  "taux_ouverture_pct": 25.6,
-  "taux_clic_pct": 7.2,
-  "ctor_pct": 28.2,
+  "clics_uniques": 483,
+  "taux_ouverture_pct": 26.6,
+  "taux_clic_pct": 7.3,
+  "ctor_pct": 27.3,
   "top_articles": [
    {
     "id": "actu_2026_07_17_1",
@@ -50,14 +50,6 @@
     "lecteurs": 42
    },
    {
-    "id": "actu_2026_07_14_1",
-    "titre": "Vaccin grippe : prescription obligatoire depuis le 10 juillet, mais le pharmacien reste dans la boucle",
-    "date": "2026-07-14",
-    "categorie": "pharma_france",
-    "clics": 69,
-    "lecteurs": 42
-   },
-   {
     "id": "actu_2026_07_18_5",
     "titre": "Paracétamol : -10 centimes qui coûtent cher aux officines",
     "date": "2026-07-18",
@@ -78,7 +70,15 @@
     "titre": "OSyS se généralise : la pharmacie clinique entre dans le droit commun",
     "date": "2026-07-18",
     "categorie": "avenir_pharma",
-    "clics": 77,
+    "clics": 78,
+    "lecteurs": 40
+   },
+   {
+    "id": "actu_2026_07_21_5",
+    "titre": "Vaccination grippe obligatoire : ce que ça change vraiment pour tes 6 000 € de ROSP",
+    "date": "2026-07-21",
+    "categorie": "business_officine",
+    "clics": 63,
     "lecteurs": 39
    },
    {
@@ -86,8 +86,8 @@
     "titre": "Dénosumab : l'ANSM ouvre la voie à la substitution en officine",
     "date": "2026-07-18",
     "categorie": "bonne_nouvelle",
-    "clics": 81,
-    "lecteurs": 37
+    "clics": 82,
+    "lecteurs": 38
    },
    {
     "id": "actu_2026_07_20_2",
@@ -101,12 +101,12 @@
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-07-21",
-  "delivres": 59447,
-  "ouvertures": 24086,
-  "ouvertures_uniques": 16530,
-  "clics": 25412,
-  "clics_uniques": 4560,
+  "au": "2026-07-22",
+  "delivres": 60376,
+  "ouvertures": 24499,
+  "ouvertures_uniques": 16792,
+  "clics": 25826,
+  "clics_uniques": 4630,
   "taux_ouverture_pct": 27.8,
   "taux_clic_pct": 7.7,
   "ctor_pct": 27.6,
@@ -137,9 +137,9 @@
    },
    {
     "id": "actu_2026_07_11_1",
-    "titre": "Grille salaires officine : l'échec du 6 juillet va te coûter cher",
-    "date": "2026-07-11",
-    "categorie": "business_officine",
+    "titre": "actu_2026_07_11_1",
+    "date": "",
+    "categorie": "",
     "clics": 122,
     "lecteurs": 66
    },
@@ -161,9 +161,9 @@
    },
    {
     "id": "actu_2026_07_10_1",
-    "titre": "Vaccin grippe sur liste I : prescription obligatoire, mais tu peux la rédiger toi-même",
-    "date": "2026-07-10",
-    "categorie": "pharma_france",
+    "titre": "actu_2026_07_10_1",
+    "date": "",
+    "categorie": "",
     "clics": 119,
     "lecteurs": 63
    },
