@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-07-22T04:15:13.919739+02:00",
+  "run_date": "2026-07-22",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Antennes officinales : 13 ouvertes, des centaines de communes encore sans pharmacie",
+      "resume": "La 13e antenne officinale française vient d'ouvrir à Mazet-Saint-Voy (Haute-Loire, 1 114 hab.). Un modèle en cours de déploiement qui répond à une désertification pharmaceutique massive - mais dont l'équation économique reste fragile pour le titulaire porteur.",
+      "source": "Pharm'Actus · Le Quotidien du Pharmacien — Ouverture antenne Mazet-Saint-Voy, Ordre national des pharmaciens — Observatoire de la démographie pharmaceutique 2024",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/une-antenne-ouvre-mazet-saint-voy",
+      "confidence_score": 0.62,
+      "warnings": [
+        "Le chiffre exact de 13 antennes est issu de l'article source (Le Quotidien du Pharmacien) mais non recoupé avec un registre officiel Ordre/DREES au moment de la rédaction : à vérifier.",
+        "Le CA moyen par habitant (150-200 €) est une estimation reconstituée à partir de données AMELI/DREES agrégées, non spécifique aux antennes : fourchette indicative, pas un chiffre officiel dédié.",
+        "Le montant de la dotation forfaitaire ZIP/ZAC (7 500 €/an, avenant n°22) nécessite vérification du texte exact de l'avenant et de son applicabilité aux antennes en particulier — le régime spécifique antenne n'est pas formellement distinct dans les textes consultés.",
+        "La marge brute officinale de 22-26% est issue du rapport Cour des comptes 2022 : chiffre global, les antennes en zone très rurale peuvent avoir une structure de marges différente (mix produits, peu de parapharmacie).",
+        "Les aides collectivités (DETR, FNADT) sont mentionnées à titre d'orientation générale : les modalités d'accès varient fortement selon les préfectures et les années budgétaires."
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

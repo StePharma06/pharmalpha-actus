@@ -1,6 +1,131 @@
 {
   "articles": [
     {
+      "id": "actu_2026_07_22_5",
+      "date": "2026-07-22",
+      "type": "actu",
+      "categorie": "business_officine",
+      "titre": "Antennes officinales : 13 ouvertes, des centaines de communes encore sans pharmacie",
+      "resume": "La 13e antenne officinale française vient d'ouvrir à Mazet-Saint-Voy (Haute-Loire, 1 114 hab.). Un modèle en cours de déploiement qui répond à une désertification pharmaceutique massive - mais dont l'équation économique reste fragile pour le titulaire porteur.",
+      "source": "Pharm'Actus · Le Quotidien du Pharmacien — Ouverture antenne Mazet-Saint-Voy, Ordre national des pharmaciens — Observatoire de la démographie pharmaceutique 2024",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/une-antenne-ouvre-mazet-saint-voy",
+      "tiktok_url": "",
+      "badge_label": "Business",
+      "image_url": "assets/img_actu_2026_07_22_5.jpg",
+      "tags": [
+        "antenne-officine",
+        "desertification-pharmaceutique",
+        "rentabilite",
+        "zones-rurales"
+      ],
+      "full_text": "La 13e antenne officinale française vient d'ouvrir à Mazet-Saint-Voy (Haute-Loire, 1 114 hab.). Un modèle en cours de déploiement qui répond à une désertification pharmaceutique massive - mais dont l'équation économique reste fragile pour le titulaire porteur.\n\n**Contexte**\n\nEn avril 2026, Mazet-Saint-Voy perd sa dernière officine suite au départ à la retraite de son titulaire. Résultat : 1 114 habitants sans accès local au médicament. L'ARS Auvergne-Rhône-Alpes active alors le dispositif des antennes de pharmacie, créé par l'ordonnance du 8 février 2018 et précisé par le décret n°2018-636, permettant à une officine existante d'ouvrir un point de dispensation dans une commune dépourvue. Treize antennes existent désormais en France, dont deux en Haute-Loire. Ce chiffre, encore modeste, illustre une réalité structurelle : selon l'Observatoire de la démographie pharmaceutique de l'Ordre national des pharmaciens (rapport 2024), la France comptait 20 931 officines fin 2023, soit une perte nette de plus de 4 000 officines en 20 ans. Les zones rurales et semi-rurales sont les premières victimes : environ 5 millions de Français vivent dans un désert pharmaceutique ou dans une commune à risque de désertification. Pour les titulaires concernés, l'antenne est à la fois une opportunité de maintien de l'accès aux soins… et un vrai challenge opérationnel et financier.\n\n**Analyse business**\n\nLe modèle antenne est économiquement ambivalent. Décryptons les chiffres.\n\n**Ce que ça coûte.** Ouvrir une antenne implique des investissements structurels non négligeables : aménagement du local (mobilier, comptoir sécurisé, système informatique synchronisé avec l'officine principale), souvent entre 20 000 € et 50 000 € selon la surface et l'état du local. À cela s'ajoutent les charges récurrentes : loyer (souvent mis à disposition par la commune à titre gracieux ou symbolique, ce qui atténue la facture), assurance, maintenance informatique, et surtout le coût RH si un préparateur ou un pharmacien adjoint est détaché sur le site.\n\n**Ce que ça rapporte.** Une commune de 1 100 habitants représente une patientèle théorique limitée. En France, le CA moyen par habitant en zone rurale tourne autour de 150 à 200 € de médicaments remboursés par an (données AMELI/DREES). Soit un potentiel de CA remboursé de l'ordre de 165 000 à 220 000 € par an pour une population de ce type - avant déduction des charges fixes. La marge brute officinale sur médicaments remboursés oscillant autour de 22 à 26 % (rapport Cour des comptes 2022 sur l'avenir des officines), le résultat opérationnel reste tendu, voire négatif les premières années si le local n'est pas fourni gratuitement.\n\n**Les compensations publiques.** La LFSS 2022 a ouvert la voie à une dotation forfaitaire pour les officines assurant une mission de proximité en zones sous-dotées. Le montant, fixé dans l'avenant n°22 à la convention pharmaceutique (signé en 2022), prévoit une aide pouvant atteindre 7 500 € par an pour les officines en zone fragile (ZIP/ZAC). Reste à vérifier si ce forfait s'applique spécifiquement aux antennes : à ce jour, les textes réglementaires ne prévoient pas de rémunération dédiée « antenne » distincte de celle de l'officine mère - point à confirmer auprès de l'ARS et de la CPAM locale.\n\n**L'enjeu stratégique.** Avec 13 antennes seulement pour des milliers de communes potentiellement éligibles, le dispositif est clairement sous-utilisé. La raison principale : l'équation financière n'est pas spontanément attractive sans soutien collectivité/ARS fort. Les communes qui veulent conserver un accès au médicament doivent mettre la main au portefeuille (local gratuit, voire aide au fonctionnement) pour convaincre un titulaire de s'engager.\n\n**Recommandations actionnables**\n\n1. **Cartographie avant décision** - Avant d'accepter une antenne, commande une étude de flux réelle : nombre d'ordonnances potentielles, âge moyen de la population, distance à l'officine la plus proche. Un bassin de moins de 800 habitants sans maison de santé adjacente est rarement rentable seul.\n\n2. **Négocier le package collectivité** - Exige un local fourni à titre gratuit ou quasi-gratuit par la mairie ou la communauté de communes. C'est le levier n°1 sur ta structure de coûts. Certaines collectivités proposent aussi des aides à l'investissement (DETR, fonds FNADT) : renseigne-toi via ton ARS.\n\n3. **Intégrer les honoraires de dispensation** - L'antenne dispense comme l'officine mère : chaque ordonnance génère des honoraires de dispensation (entre 0,51 € et 2,16 € selon les actes, avenant n°21). Quantifie ce flux dans ton business plan, il est distinct du prix du médicament.\n\n4. **Associer une mission complémentaire** - Une antenne dans une commune âgée est le terrain idéal pour les entretiens pharmaceutiques (HTA, asthme, anticoagulants) et la remise de médicaments après téléconsultation. Ces missions génèrent des honoraires supplémentaires et justifient l'investissement RH.\n\n5. **Surveiller l'évolution réglementaire** - Le dossier antennes est dans le radar de la prochaine convention pharmaceutique. Une rémunération forfaitaire spécifique est sur la table des négociations syndicales : tiens-toi informé via ta fédération.\n\n**Sources citees**\n\n- Le Quotidien du Pharmacien - Ouverture antenne Mazet-Saint-Voy\n- Ordre national des pharmaciens - Observatoire de la démographie pharmaceutique 2024\n- Cour des comptes - Rapport sur l'avenir des officines pharmaceutiques 2022\n- Décret n°2018-636 du 23 juillet 2018 relatif aux antennes de pharmacie"
+    },
+    {
+      "id": "actu_2026_07_22_4",
+      "date": "2026-07-22",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "La sonobiopsie : bientôt des diagnostics cancer et Alzheimer sans biopsie chirurgicale",
+      "resume": "La sonobiopsie utilise les ultrasons pour libérer dans le sang des biomarqueurs de maladies comme le cancer ou Alzheimer, sans acte invasif. Encore au stade de la recherche, cette technologie pourrait transformer le diagnostic précoce et le suivi thérapeutique à l'officine dans les années à venir.",
+      "source": "The Conversation FR Sante",
+      "source_url": "https://theconversation.com/la-sonobiopsie-ou-comment-les-ultrasons-font-parler-les-tissus-sans-les-operer-287097",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_07_22_4.jpg",
+      "tags": [
+        "innovation",
+        "diagnostic",
+        "cancer",
+        "alzheimer",
+        "recherche"
+      ],
+      "full_text": "Et si on pouvait diagnostiquer un cancer ou détecter Alzheimer avec une simple prise de sang précédée d'ultrasons ? C'est la promesse de la sonobiopsie, une technologie encore en développement mais publiée dans The Conversation par des chercheurs qui en détaillent le principe et le potentiel.\n\nLe concept : des ultrasons focalisés sont appliqués sur un tissu cible (tumeur, cerveau). Sous l'effet des ondes, des cellules ou des fragments cellulaires sont libérés dans la circulation sanguine. On retrouve ensuite ces biomarqueurs dans un prélèvement veineux classique. C'est une forme de biopsie liquide augmentée, sans chirurgie, sans anesthésie, sans risque de dissémination.\n\nPourquoi c'est pertinent pour les pharmaciens ? Parce que si cette technologie arrive en routine clinique, elle transforme le paradigme du suivi thérapeutique. Suivi de l'efficacité d'une chimiothérapie par biomarqueurs sanguins, détection précoce d'une récidive, monitoring Alzheimer sans ponction lombaire... autant de données qui pourraient à terme s'intégrer dans les entretiens pharmaceutiques oncologie ou dans les bilans de médication partagés.\n\nActuellement, la sonobiopsie est encore en phase de recherche clinique. Plusieurs études sont en cours pour valider la sensibilité et la spécificité des biomarqueurs libérés selon les pathologies ciblées. Les chercheurs signalent des résultats préliminaires encourageants sur des modèles animaux et quelques cohortes humaines limitées, mais on en est loin d'une application clinique routinière.\n\nLes perspectives industrielles sont réelles : des acteurs de l'imagerie médicale et du diagnostic in vitro s'y intéressent activement. Le marché de la biopsie liquide est déjà en plein essor (taux de croissance annuel estimé à plus de 15 % selon plusieurs analyses de marché), et la sonobiopsie pourrait en devenir un accélérateur.\n\nL'impact au comptoir demain matin ? Pas encore. Mais dans 5 à 10 ans, le pharmacien clinicien impliqué dans le suivi oncologique ou neurodégénératif aura peut-être affaire à des résultats issus de cette technique. Autant comprendre maintenant de quoi il s'agit."
+    },
+    {
+      "id": "actu_2026_07_22_3",
+      "date": "2026-07-22",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "Violences au comptoir : un décret permet enfin à ton syndicat de porter plainte à ta place",
+      "resume": "C'est officiel : un décret publié le 20 juillet 2026 permet désormais à une instance professionnelle mandatée de déposer plainte au nom d'un soignant libéral victime de violences ou de menaces. Le professionnel de santé garde la main à tout moment. Une avancée concrète pour les équipes officinales.",
+      "source": "LegiRSS Pharmacie",
+      "source_url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054448016",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_07_22_3.jpg",
+      "tags": [
+        "securite",
+        "agression",
+        "officine",
+        "decret",
+        "syndicat"
+      ],
+      "full_text": "On en avait marre de se battre seul après une agression. C'est désormais terminé, du moins sur le plan procédural. Le décret n° 2026-641 du 20 juillet 2026, publié au Journal Officiel, fixe les modalités d'application de l'article 5 de la loi du 9 juillet 2025 visant à renforcer la sécurité des professionnels de santé.\n\nLe principe est simple : jusqu'ici, un pharmacien libéral victime d'une infraction devait porter plainte lui-même. Dans le stress post-agression, entre la gestion du comptoir, le choc émotionnel et la peur des représailles, beaucoup laissaient tomber. Résultat : des faits non déclarés, des agresseurs non poursuivis, un sentiment d'impunité qui s'installe.\n\nDésormais, une instance professionnelle mandatée, typiquement un syndicat ou un ordre, peut déposer plainte à ta place. Le texte précise que le professionnel de santé conserve à tout moment la possibilité de mettre fin au mandat et doit être tenu informé de l'état de la procédure. C'est lui qui reste maître du jeu, l'instance ne fait que porter le fardeau procédural.\n\nPour les équipes officinales, c'est une vraie avancée. Les agressions en pharmacie, verbales ou physiques, sont en hausse documentée ces dernières années. Un pharmacien titulaire qui se fait menacer un vendredi soir ne va pas spontanément au commissariat le samedi matin. Avoir une structure qui prend en charge le dépôt de plainte change structurellement la donne.\n\nCôté syndicats, FSPF et USPO militaient depuis longtemps pour ce type de disposition. Ce décret concrétise une revendication partagée par l'ensemble de la profession, au-delà des clivages habituels.\n\nL'impact au comptoir demain matin ? Mets à jour ton protocole interne de gestion des incidents. Note les coordonnées de ton syndicat et de ton conseil régional de l'Ordre. Si ça arrive, tu sais désormais qu'il y a quelqu'un pour porter ta plainte."
+    },
+    {
+      "id": "actu_2026_07_22_2",
+      "date": "2026-07-22",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "Ebola Bundibugyo en RDC : ce que le pharmacien français doit savoir sur cette souche",
+      "resume": "Une épidémie d'Ebola due à la souche Bundibugyo progresse rapidement dans l'est de la République Démocratique du Congo. Moins médiatisée que la souche Zaïre, cette variante reste mortelle et interpelle sur la gestion des stocks de contre-mesures médicales en Europe. Ce que ça implique côté officinal et voyages.",
+      "source": "Le Monde Sante",
+      "source_url": "https://www.lemonde.fr/afrique/live/2026/07/21/ebola-en-rdc-posez-vos-questions-a-nos-journalistes-morgane-le-cam-et-philemon-barbier-de-retour-de-reportage-dans-l-epicentre-de-l-epidemie_6728461_3212.html",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/img_actu_2026_07_22_2.jpg",
+      "tags": [
+        "ebola",
+        "rdc",
+        "virus",
+        "voyage",
+        "vigitravel"
+      ],
+      "full_text": "Ebola est de retour, et pas la souche qu'on attendait. Dans l'est de la République Démocratique du Congo, à Mongbwalu, une épidémie due à la souche Bundibugyo se déclare et progresse. Le Monde Afrique rapporte que la situation évolue rapidement sur le terrain.\n\nPourquoi c'est important pour toi, derrière ton comptoir parisien, lillois ou marseillais ? Parce que la souche Bundibugyo, c'est une des filovirus les moins connues du grand public. Découverte en 2007 en Ouganda, elle affiche une létalité inférieure à la souche Zaïre (autour de 25-40 % versus 60-90 %), mais elle reste un pathogène de classe 4 sans traitement spécifiquement approuvé pour cette variante.\n\nConcernant les vaccins : le vaccin Ervebo (rVSV-ZEBOV, MSD) est approuvé uniquement contre la souche Zaïre. Il n'existe pas de vaccin AMM pour Bundibugyo. La stratégie OMS repose sur la vaccination en anneau avec les outils disponibles, en attendant des données sur la protection croisée, qui restent parcellaires.\n\nDu côté des voyageurs : la RDC est une destination de voyageurs humanitaires, de journalistes, de missionnaires. Ces patients passent en officine avant de partir. Le conseil vaccins voyage, c'est ton rayon. Point de vigilance : Mongbwalu est dans la province de l'Ituri, une zone déjà connue pour l'insécurité. Le contexte logistique complique la riposte sanitaire.\n\nCe que tu peux faire concrètement : mettre à jour ta veille sur les alertes de Santé Publique France et du CMVI pour les patients qui consultent avant un départ en zones à risque. Et si un patient revient de RDC avec fièvre et syndrome hémorragique, le réflexe c'est l'orientation urgente, pas le paracétamol.\n\nL'impact au comptoir demain matin ? Pas de panique, le risque d'importation en France reste très faible. Mais un patient qui revient de l'est du Congo avec de la fièvre dans les 21 jours suivant son retour mérite un conseil orienté vers les urgences et une traçabilité dans le DP."
+    },
+    {
+      "id": "actu_2026_07_22_1",
+      "date": "2026-07-22",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "Loi Neuder : la mission HTA des pharmaciens est confirmée, les décrets restent à venir",
+      "resume": "Le compromis parlementaire sur la proposition de loi Neuder est entériné : les pharmaciens d'officine héritent d'une nouvelle mission officielle de dépistage de l'hypertension artérielle. Mais rémunération, décrets d'application et calendrier restent encore dans les limbes. Ce qui change, ce qui attend.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/nouvelles-missions/depistage/hypertension-arterielle-les-parlementaires-enterinent-un-compromis-sur-la-proposition-de-loi-neuder",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_07_22_1.jpg",
+      "tags": [
+        "hta",
+        "nouvelles-missions",
+        "loi-neuder",
+        "officine",
+        "prevention"
+      ],
+      "full_text": "L'HTA entre officiellement dans le scope officinal. Le compromis sur la proposition de loi Neuder vient d'être entériné par les deux chambres, et ça confirme ce qu'on pressentait : le pharmacien d'officine devient un acteur clé du dépistage cardiovasculaire en France.\n\nConcrètement, la loi Neuder inscrit dans le droit une mission de suivi tensionnel en officine. Le texte reconnaît le rôle de l'officine dans la prévention cardiovasculaire, secteur où 17 millions de Français sont hypertendus et où près de la moitié s'ignorent encore. C'est un marché de santé publique énorme, et on est en première ligne.\n\nMais on ne va pas se mentir : entre la loi et le comptoir, il y a les décrets. Et là, c'est le grand vide pour l'instant. La rémunération de cet acte n'est pas encore fixée, le calendrier de mise en oeuvre reste flou, et les modalités pratiques (qui dépiste, avec quel outil, quel compte-rendu vers le médecin traitant ?) attendent leurs textes d'application.\n\nCe que la source souligne clairement : plusieurs inconnues demeurent. Donc pas question de pitcher la mission à tes équipes comme si c'était opérationnel demain. On est dans la phase d'attente réglementaire.\n\nPar contre, c'est le bon moment pour se préparer. Formation des équipes à la mesure tensionnelle et à l'interprétation des résultats, révision du protocole de conseil hypertension, vérification de ton appareil à tension, organisation du parcours vers le médecin... Tout ça, tu peux le faire maintenant, sans attendre les décrets.\n\nL'impact au comptoir ? Ne rien promettre au patient avant la parution des décrets, mais anticiper en interne. Quand le feu vert tombe, les officines qui auront préparé le terrain prendront une longueur d'avance sur celles qui découvriront le texte au Journal Officiel un lundi matin."
+    },
+    {
+      "id": "lsv_2026_07_22",
+      "date": "2026-07-22",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? On soignait l'insomnie avec du bromure... et on rendait fou",
+      "resume": "Pendant près d'un siècle, le bromure de potassium a été LE remède universel contre l'insomnie, l'anxiété et l'épilepsie. Problème : à hautes doses, il transformait les patients en légumes. Et les médecins continuaient à en prescrire.",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_07_22.jpg",
+      "tags": [
+        "histoire",
+        "medicament",
+        "psychiatrie",
+        "toxicologie",
+        "neurologie"
+      ],
+      "full_text": "Imagine : on est en 1857, à Londres. Un médecin nommé Charles Locock annonce devant la Société royale de médecine qu'il a trouvé le remède miracle contre l'épilepsie. Son arme secrète ? Le bromure de potassium. Un sel minéral, simple, pas cher, facile à produire.\n\nLe succès est immédiat et fulgurant. En quelques années, le bromure devient le médicament psychiatrique le plus prescrit d'Europe. Insomnie, hystérie, nervosité, crises d'angoisse : tout y passe. En France, à la fin du XIXe siècle, on en consomme des tonnes chaque année. Littéralement. Les hôpitaux psychiatriques en distribuent comme des bonbons.\n\nVoilà le twist que personne n'avait vu venir : le bromure s'accumule dans l'organisme. Il ne se élimine pas bien. Et à force d'en prendre, les patients développent ce qu'on appellera le « bromisme ». Acné terrible, troubles de la mémoire, confusion mentale, hallucinations, délires. Des patients internés pour dépression ressortaient en pire état qu'à l'entrée. Le remède créait la maladie qu'il était censé soigner.\n\nLe comble ? Pendant des décennies, les médecins ont mis ces nouveaux symptômes sur le compte de la maladie initiale. Et prescrivaient encore plus de bromure. C'est le cercle vicieux parfait. Ce n'est qu'au début du XXe siècle, avec l'arrivée des barbituriques, que le bromure commence à perdre sa couronne. Mais certains pays l'utilisaient encore dans les années 1970.\n\nAujourd'hui, le bromure a totalement disparu des pharmacies françaises. Mais l'histoire reste une leçon cuisante : un médicament efficace à court terme peut être catastrophique à long terme. Pile le genre de vigilance qu'on exerce chaque jour au comptoir, quand on surveille l'accumulation d'un traitement chronique chez un patient fragile."
+    },
+    {
       "id": "actu_2026_07_21_5",
       "date": "2026-07-21",
       "type": "actu",
@@ -10680,6 +10805,6 @@
       ]
     }
   ],
-  "count": 516,
-  "updated_at": "2026-07-21T04:15:10.067659+02:00"
+  "count": 522,
+  "updated_at": "2026-07-22T04:15:17.797462+02:00"
 }
