@@ -1,28 +1,28 @@
 {
- "genere_le": "2026-07-22T07:40:56+02:00",
+ "genere_le": "2026-07-23T07:45:36+02:00",
  "liste_brevo": 5,
  "abonnes_total": 1024,
  "nouveaux_7j": 3,
  "nouveaux_cumul": 1017,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-07-15",
-  "au": "2026-07-22",
-  "delivres": 6639,
-  "ouvertures": 2431,
-  "ouvertures_uniques": 1766,
-  "clics": 3402,
-  "clics_uniques": 483,
-  "taux_ouverture_pct": 26.6,
-  "taux_clic_pct": 7.3,
-  "ctor_pct": 27.3,
+  "du": "2026-07-16",
+  "au": "2026-07-23",
+  "delivres": 6622,
+  "ouvertures": 2350,
+  "ouvertures_uniques": 1689,
+  "clics": 3140,
+  "clics_uniques": 472,
+  "taux_ouverture_pct": 25.5,
+  "taux_clic_pct": 7.1,
+  "ctor_pct": 27.9,
   "top_articles": [
    {
     "id": "actu_2026_07_17_1",
     "titre": "Tiers payant contre biosimilaires et hybrides : ça démarre le 1er septembre",
     "date": "2026-07-17",
     "categorie": "pharma_france",
-    "clics": 81,
+    "clics": 83,
     "lecteurs": 47
    },
    {
@@ -51,10 +51,10 @@
    },
    {
     "id": "actu_2026_07_18_5",
-    "titre": "Paracétamol : -10 centimes qui coûtent cher aux officines",
+    "titre": "Paracétamol : 1 centime de marge en moins par boîte, et le vrai sujet est ailleurs",
     "date": "2026-07-18",
     "categorie": "business_officine",
-    "clics": 84,
+    "clics": 85,
     "lecteurs": 41
    },
    {
@@ -101,15 +101,15 @@
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-07-22",
-  "delivres": 60376,
-  "ouvertures": 24499,
-  "ouvertures_uniques": 16792,
-  "clics": 25826,
-  "clics_uniques": 4630,
+  "au": "2026-07-23",
+  "delivres": 61297,
+  "ouvertures": 24848,
+  "ouvertures_uniques": 17016,
+  "clics": 26062,
+  "clics_uniques": 4682,
   "taux_ouverture_pct": 27.8,
-  "taux_clic_pct": 7.7,
-  "ctor_pct": 27.6,
+  "taux_clic_pct": 7.6,
+  "ctor_pct": 27.5,
   "top_articles": [
    {
     "id": "actu_2026_06_18_1",
