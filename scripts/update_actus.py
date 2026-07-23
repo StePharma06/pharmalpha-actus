@@ -1135,6 +1135,131 @@ Le confidence_score (0-1) reflete ton niveau de certitude sur la qualite des chi
     }
 
 
+# ── AUDIT CHIFFRES BUSINESS (anti-invention, 100% automatique) ────────
+# L'article business est integralement genere par Claude et cite souvent des
+# chiffres d'economie officinale (marge, MDL, PFHT, honoraire, perte par boite,
+# impact reseau). Incident 07/2026 : PFHT/taux/volumes inventes -> signalement
+# d'un pharmacien. Ce garde-fou relit l'article et RETIRE AUTOMATIQUEMENT tout
+# chiffre officinal non rattache a une source citee, SANS jamais bloquer l'envoi
+# ni introduire de nouveau chiffre. Regle Stephen 2026-07-23 : "tout automatique,
+# n'invente rien, verifie tes sources".
+
+_BUSINESS_AUDIT_TOOL = {
+    "name": "audit_chiffres_business",
+    "description": "Signale les chiffres d'economie officinale a risque (non sources) d'un article.",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "claims_a_risque": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "phrase": {"type": "string", "description": "La phrase exacte contenant le chiffre a risque"},
+                        "type": {"type": "string", "enum": [
+                            "marge_MDL", "PFHT_prix", "honoraire", "impact_par_boite",
+                            "impact_officine_reseau", "volume", "autre"]},
+                        "raison": {"type": "string"},
+                    },
+                    "required": ["phrase", "type", "raison"],
+                },
+            },
+        },
+        "required": ["claims_a_risque"],
+    },
+}
+
+
+def _audit_business_claims(full_text, client):
+    """Retourne la liste des phrases citant un chiffre d'economie officinale NON
+    rattache a une source officielle citee (liste vide = rien a risque)."""
+    prompt = (
+        "Tu es un pharmacien titulaire expert des marges officinales. Voici un article "
+        "business Pharm'Actus destine a des pharmaciens, publie sous le nom d'un Docteur "
+        "en Pharmacie. Ton SEUL role : reperer les affirmations CHIFFREES sur l'economie "
+        "de l'officine qui presentent un RISQUE d'erreur factuelle parce qu'elles ne sont "
+        "PAS explicitement rattachees a une source officielle NOMMEE dans la phrase.\n\n"
+        "A SIGNALER (via l'outil) des qu'un de ces chiffres est AFFIRME ou CALCULE sans "
+        "source nommee dans la phrase : un taux de marge ou de MDL (%), une borne de "
+        "tranche, un PFHT / prix fabricant, un honoraire de dispensation, une marge ou "
+        "perte en centimes/euros PAR BOITE, un impact en euros PAR OFFICINE ou pour le "
+        "RESEAU, un volume de boites (national ou par officine).\n"
+        "NE PAS signaler : un chiffre explicitement attribue dans la phrase a une source "
+        "nommee (arrete cite, Ameli, CEPS, 'selon le gouvernement', un chiffre repris "
+        "textuellement de la source). En cas de doute, SIGNALE (mieux vaut retirer un "
+        "chiffre douteux que publier un chiffre faux).\n\n"
+        f"Article :\n---\n{full_text}\n---\n\n"
+        "Utilise l'outil audit_chiffres_business. Si aucun chiffre a risque, retourne une liste vide."
+    )
+    resp = claude_create(client,
+        model="claude-sonnet-4-6",
+        max_tokens=1500,
+        tools=[_BUSINESS_AUDIT_TOOL],
+        tool_choice={"type": "tool", "name": "audit_chiffres_business"},
+        messages=[{"role": "user", "content": prompt}],
+    )
+    for b in resp.content:
+        if getattr(b, "type", "") == "tool_use" and getattr(b, "name", "") == "audit_chiffres_business":
+            return (b.input or {}).get("claims_a_risque", [])
+    return []
+
+
+def sanitize_business_figures(business, client=None):
+    """Retire AUTOMATIQUEMENT les chiffres d'economie officinale non sources de
+    l'article business (sans introduire de nouveau chiffre, sans jamais bloquer).
+    Retourne (business, n_chiffres_retires). Fail-open : en cas d'erreur d'API,
+    l'article garde ses garde-fous de prompt (on ne bloque jamais l'envoi)."""
+    if not business:
+        return business, 0
+    ft = business.get("full_text", "")
+    if not ft:
+        return business, 0
+    client = client or anthropic.Anthropic()
+    try:
+        claims = _audit_business_claims(ft, client)
+    except Exception as e:
+        print(f"  [BIZ-AUDIT-ERR] audit indisponible ({e}) - article garde ses garde-fous prompt")
+        return business, 0
+    if not claims:
+        return business, 0
+
+    flagged = "\n".join(
+        f'- "{c.get("phrase", "")}" [{c.get("type", "")}] : {c.get("raison", "")}'
+        for c in claims
+    )
+    fix_prompt = (
+        "Voici un article business Pharm'Actus. Les phrases listees ci-dessous contiennent "
+        "des chiffres d'economie officinale NON sources, donc a RISQUE d'etre faux. "
+        "Reecris l'article en RETIRANT ou en rendant QUALITATIVES uniquement ces "
+        "affirmations chiffrees.\n"
+        "REGLES ABSOLUES : (1) n'introduis AUCUN nouveau chiffre ; (2) ne modifie RIEN "
+        "d'autre dans le texte ; (3) garde exactement le meme style, la meme structure et "
+        "les memes titres en gras (**Contexte**, **Analyse business**, etc.) ; (4) si une "
+        "phrase repose entierement sur le chiffre faux, remplace-la par une formulation "
+        "QUALITATIVE (ex: 'l'impact sur la marge reste marginal', 'le detail chiffre depend "
+        "du volume de chaque officine') sans jamais inventer de valeur.\n\n"
+        f"Phrases a risque :\n{flagged}\n\n"
+        f"Article :\n---\n{ft}\n---\n\n"
+        "Retourne UNIQUEMENT le texte reecrit de l'article, rien d'autre."
+    )
+    try:
+        resp = claude_create(client,
+            model="claude-sonnet-4-6",
+            max_tokens=6000,
+            messages=[{"role": "user", "content": fix_prompt}],
+        )
+        fixed = "".join(getattr(b, "text", "") for b in resp.content).strip()
+        fixed = _no_emdash(_strip_article_meta(fixed))
+        if fixed and len(fixed) > 200:
+            business["full_text"] = fixed
+            biz_w = business.setdefault("warnings", [])
+            biz_w.append(f"{len(claims)} chiffre(s) non source retire(s) par l'audit auto")
+            return business, len(claims)
+    except Exception as e:
+        print(f"  [BIZ-AUDIT-FIX-ERR] {e}")
+    return business, 0
+
+
 # ── PEXELS : photos libres de droit ──────────────────────────────────
 
 PEXELS_API_KEY = "UapwydwlfWpQrgkN8rfyClS3foJ6zuFYyL4UVqFYtomh7tlTVcM5t6g1"
@@ -2702,6 +2827,14 @@ def main():
         if business:
             print(f"  Business: {business.get('titre', '')[:60]}...")
             print(f"  Confidence: {business.get('confidence_score', 0)*100:.0f}%")
+            # Audit anti-invention : retire auto les chiffres officinaux non sources
+            # (marge/MDL/PFHT/honoraire/impact) AVANT publication. 100% automatique,
+            # jamais bloquant. Regle Stephen 2026-07-23.
+            business, n_fixed = sanitize_business_figures(business)
+            if n_fixed:
+                print(f"  [BIZ-AUDIT] {n_fixed} chiffre(s) non source retire(s) automatiquement")
+            else:
+                print("  [BIZ-AUDIT] aucun chiffre a risque")
             curated.append(business)
         else:
             print("  [WARN] Pas d'article business genere")
