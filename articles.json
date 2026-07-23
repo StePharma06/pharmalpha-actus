@@ -1,6 +1,131 @@
 {
   "articles": [
     {
+      "id": "actu_2026_07_23_5",
+      "date": "2026-07-23",
+      "type": "actu",
+      "categorie": "business_officine",
+      "titre": "Canicule 2026 : 5 764 morts en excès, une opportunité business que l'officine ne peut pas rater",
+      "resume": "Santé publique France vient de le confirmer : la canicule de juin 2026 a provoqué 5 764 décès en excès, un bilan comparable à 2003. Pour l'officine, ce chiffre brutal traduit un marché de la prévention thermique largement sous-exploité - et une mission de santé publique à valoris...",
+      "source": "Pharm'Actus · Le Monde Santé — Canicule en France : 5 764 morts en excès constatées pendant l'épisode de juin, selon Santé publique France, Santé publique France — Surveillance épidémiologique des effets de la chaleur sur la santé (référence institutionnelle générale)",
+      "source_url": "https://www.lemonde.fr/planete/article/2026/07/22/canicule-en-france-5-764-morts-en-exces-constatees-pendant-l-episode-de-juin-selon-sante-publique-france_6730037_3244.html",
+      "tiktok_url": "",
+      "badge_label": "Business",
+      "image_url": "assets/img_actu_2026_07_23_5.jpg",
+      "tags": [
+        "canicule",
+        "prevention",
+        "mission-officinale",
+        "parapharmacie"
+      ],
+      "full_text": "Santé publique France vient de le confirmer : la canicule de juin 2026 a provoqué 5 764 décès en excès, un bilan comparable à 2003. Pour l'officine, ce chiffre brutal traduit un marché de la prévention thermique largement sous-exploité - et une mission de santé publique à valoriser dès maintenant.\n\n**Contexte**\n\nLe 22 juillet 2026, Santé publique France a publié son bilan épidémiologique de l'épisode caniculaire du 17 juin au 2 juillet 2026. Résultat : 5 764 morts en excès constatés, avec une surmortalité concentrée sur trois journées critiques (25, 26, 27 juin). C'est la surmortalité la plus élevée depuis la canicule historique d'août 2003, qui avait tué environ 15 000 personnes en France. Les personnes les plus touchées restent les mêmes profils : sujets âgés de plus de 75 ans, personnes isolées, patients sous traitements à risque thermique (diurétiques, IEC, ARA II, anticholinergiques, neuroleptiques, antiparkinsoniens, bêtabloquants). Or ces profils, le pharmacien les connaît mieux que quiconque : ce sont ses patients chroniques, ceux qu'il voit toutes les 4 à 8 semaines au comptoir. L'officine est le seul acteur de santé accessible sans rendez-vous, 6 jours sur 7, en pleine canicule. Elle n'a pas encore systématisé cette capacité d'alerte et de conseil en opportunité de mission structurée.\n\n**Analyse business**\n\nTrois angles business ressortent de ce bilan caniculaire, et aucun ne relève du hasard.\n\n**1. Le marché de la prévention thermique OTC est réel et immédiat.**\nBrumisateurs, sels de réhydratation orale, crèmes solaires haute protection, thermomètres à infrarouge, ventilateurs portatifs, compléments en électrolytes : ce sont des produits OTC et parapharmacie, donc sans contrainte publicitaire. Pendant un épisode caniculaire de 16 jours comme celui de juin 2026, une officine bien stockée et bien conseillante peut générer un surcroît de CA parapharmacie significatif. Selon les données IMS/IQVIA compilées lors des canicules précédentes, les ventes de solutions de réhydratation orale et de produits de confort thermique peuvent doubler voire tripler sur les semaines concernées dans les officines proactives. Les marges sur ces gammes OTC sont structurellement supérieures à celles du médicament remboursé : tu n'es pas contraint par la MDL ni par le prix administré.\n\n**2. La révision des ordonnances à risque thermique : une mission honoraire-compatible.**\nLe bilan de SpF pointe directement les médicaments déséquilibrant la thermorégulation. L'entretien pharmaceutique (avenant 21 de la convention de 2012, reconduit et élargi) permet de facturer des entretiens structurés pour les patients sous polymédication chronique. Un pharmacien qui identifie systématiquement ses patients sous diurétiques + IEC, alerte le prescripteur si besoin, et adapte le conseil de dispensation, répond exactement aux critères de la ROSP et des missions conventionnelles. L'honoraire de dispensation de 1,02 € TTC par boîte reste acquis - mais ce qui se joue ici, c'est le positionnement en acteur de prévention, avec les entretiens pharmaceutiques à 40 € la séance pour les patients éligibles (pathologies chroniques sous AVK, asthme, insuffisance cardiaque, selon les avenants en vigueur).\n\n**3. Le plan canicule comme levier de communication externe légitime.**\nLe Plan National Canicule (PNC) du ministère de la Santé existe depuis 2004 en réponse à 2003. Il mandate explicitement les professionnels de santé de proximité dans la sensibilisation. L'officine qui affiche ses conseils canicule (affichage vitrine, flyers en attente, QR code vers Santé publique France) ne fait pas de la publicité sur un Rx - elle remplit une mission de santé publique documentée et reconnue. C'est du brand equity officinal à coût quasi nul.\n\n**Chiffre à retenir :** si 5 764 décès en excès concernent majoritairement les plus de 75 ans, et que la France compte environ 15 millions de personnes de plus de 65 ans, la pharmacie de proximité - avec ses 21 000 officines réparties sur tout le territoire - est structurellement le filet de sécurité thermique le plus capillaire du système de santé. Encore faut-il l'assumer.\n\n**Recommandations actionnables**\n\n1. **Audit ordonnances à risque thermique** - Identifie dans ton logiciel métier les patients sous diurétiques, IEC/ARA II, anticholinergiques, neuroleptiques, antiparkinsoniens. Contacte-les proactivement (SMS, appel) lors du prochain épisode caniculaire : c'est de la prévention documentée, valorisable en entretien pharmaceutique si le patient est éligible.\n\n2. **Stock OTC et parapharmacie ciblé canicule** - Commande dès maintenant (l'été n'est pas fini) : sels de réhydratation orale, brumisateurs, protection solaire indice 50+, thermomètres à infrarouge. Marge libre, pas de prix administré, conseil différenciant.\n\n3. **Affichage Plan Canicule en vitrine** - Télécharge les supports officiels de Santé publique France (gratuits, libres de droits). Affiche les 4 gestes clés : hydrater, rafraîchir, surveiller, alerter. Tu es dans ta mission, pas dans la publicité.\n\n4. **Lien prescripteur sur les cas à risque** - Si tu identifies un patient âgé isolé sous polymédication lourde, alerte son médecin traitant par message sécurisé (MSSanté). Ce réflexe te positionne dans le soin coordonné - et compte dans le cadre des indicateurs ROSP qualité.\n\n5. **Capitalise pour 2027** - Documente tes actions canicule 2026 (nombre de patients contactés, conseils délivrés, alertes prescripteurs). C'est la matière première pour valoriser tes missions lors du prochain bilan conventionnel avec l'Assurance Maladie.\n\n**Sources citees**\n\n- Le Monde Santé - Canicule en France : 5 764 morts en excès constatées pendant l'épisode de juin, selon Santé publique France\n- Santé publique France - Surveillance épidémiologique des effets de la chaleur sur la santé (référence institutionnelle générale)\n- Ministère de la Santé - Plan National Canicule (PNC, édition en vigueur)"
+    },
+    {
+      "id": "actu_2026_07_23_4",
+      "date": "2026-07-23",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "Tofersen contre Charcot : la HAS valide, l'officine doit se préparer",
+      "resume": "La HAS maintient son autorisation pour le tofersen, un traitement ciblant une forme génétique rare de la SLA (maladie de Charcot). Une molécule de rupture dans une pathologie sans issue thérapeutique. Pour les officines spécialisées et les PUI en lien avec des services de neurologie, c'est un dossier à suivre de près.",
+      "source": "France Info Sante",
+      "source_url": "https://www.franceinfo.fr/replay-radio/le-billet-vert/le-tofersen-un-nouvel-espoir-de-traitement-contre-la-maladie-de-charcot_8117333.html#xtor=RSS-3-%5Bgeneral%5D",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_07_23_4.jpg",
+      "tags": [
+        "sla",
+        "has",
+        "innovation",
+        "neurologie",
+        "aso"
+      ],
+      "full_text": "La maladie de Charcot, ou SLA (sclérose latérale amyotrophique), est une des pathologies les plus redoutées en neurologie. Évolutive, fatale, sans traitement curatif jusqu'ici. Le tofersen change une partie de l'équation.\n\nLa HAS vient de confirmer son autorisation pour le tofersen, un oligonucléotide antisens (ASO) qui cible une forme génétique spécifique de la SLA, liée à des mutations du gène SOD1. On parle d'environ 2 % des cas de SLA en France, soit une population très restreinte, mais sans aucune alternative thérapeutique jusqu'à présent.\n\nLe mécanisme est innovant : le tofersen \"silencieuse\" le gène SOD1 muté en dégradant son ARN messager avant que la protéine toxique ne soit produite. C'est de la médecine génique fonctionnelle, sans modification du génome, mais avec un impact direct sur l'expression de la maladie. Les études cliniques montrent un ralentissement de la progression, pas une guérison, mais dans une maladie où chaque mois compte, c'est considérable.\n\nEn France, le médicament est commercialisé sous le nom Qalsody par le laboratoire Biogen. Il s'administre par voie intrathécale (injection dans le liquide céphalorachidien), ce qui signifie que la délivrance officinale classique n'est pas le principal point de contact. Ce produit transite par les PUI hospitalières et les services de neurologie spécialisés.\n\nAlors pourquoi en parler en officine ? Parce que les patients SLA ont des ordonnances complexes, des aidants épuisés, et des besoins en médicaments symptomatiques (antispastiques, anxiolytiques, antalgiques, alimentation entérale) que TU gères, toi, au quotidien. Comprendre leur traitement de fond te permet d'être un interlocuteur crédible et rassurant.\n\nPar ailleurs, le tofersen est emblématique d'une vague thérapeutique à venir : les oligonucléotides antisens (ASO) et les ARN interférents (siRNA) vont progressivement arriver dans d'autres pathologies génétiques rares ou communes. Spinal musculaire, maladies métaboliques héréditaires, hypercholestérolémie familiale... Ta culture sur ces mécanismes te prépare aux dossiers de demain."
+    },
+    {
+      "id": "actu_2026_07_23_3",
+      "date": "2026-07-23",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "Beyfortus mieux remboursé cet hiver : la HAS ouvre la porte, le JO doit suivre",
+      "resume": "La Commission de la transparence de la HAS a réévalué le nirsévimab (Beyfortus) à la hausse et recommande un meilleur taux de remboursement. Pas encore d'arrêté au Journal officiel, mais la direction est claire. Pour les nourrissons et les officines, c'est une vraie bonne nouvelle en préparation.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/legislation/dispensation/bronchiolite-beyfortus-sera-t-il-mieux-rembourse-cet-hiver",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_07_23_3.jpg",
+      "tags": [
+        "remboursement",
+        "has",
+        "bronchiolite",
+        "nourrisson",
+        "officine"
+      ],
+      "full_text": "Beyfortus fait un pas de plus vers un meilleur remboursement. Et cette fois, c'est la HAS elle-même qui appuie sur l'accélérateur.\n\nRappel rapide : le nirsévimab (Beyfortus, commercialisé par Sanofi et AstraZeneca) est un anticorps monoclonal de prévention de la bronchiolite à VRS chez les nourrissons. Il a été déployé pour la première fois à grande échelle lors de la saison hivernale 2023-2024 avec un remboursement à 30 %. Une première saison sous tension logistique, mais globalement un succès de santé publique.\n\nTrois ans après son premier avis, la Commission de la transparence de la HAS a réévalué le produit. Verdict : avis favorable au remboursement maintenu, avec une proposition de meilleur taux de prise en charge. Le Quotidien du Pharmacien évoque un passage à 65 % de remboursement par l'Assurance Maladie.\n\nAttention : à ce jour, l'arrêté officiel de modification du taux n'a pas été publié au Journal officiel. Conformément à la règle absolue, un avis HAS n'est pas un texte opposable. C'est un feu vert scientifique et médico-économique, mais la décision de remboursement finale reste du ressort de l'Union nationale des caisses d'assurance maladie (UNCAM) et du ministère. La publication au JORF est indispensable pour que le nouveau taux s'applique en officine.\n\nCe que ça annonce concrètement : si l'arrêté suit avant la saison froide, un meilleur remboursement facilitera l'accès pour les familles et réduira les refus de délivrance liés au reste à charge. Pour les officines, cela peut aussi stabiliser les commandes et limiter les ruptures ponctuelles qui avaient marqué la première saison.\n\nEn pratique demain matin ? Rien ne change encore sur ton logiciel de tiers payant. Mais c'est le bon moment pour mettre à jour ta fiche produit interne et briefer l'équipe : quand l'arrêté paraît, tu dois être prêt à l'appliquer immédiatement. Et si un parent vient s'interroger sur le prix, sois transparent : \"le taux va probablement changer, mais ce n'est pas encore officiel\"."
+    },
+    {
+      "id": "actu_2026_07_23_2",
+      "date": "2026-07-23",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "Vaccin Ebola de Merck : de nouvelles données relancent l'espoir pour l'épidémie en RDC",
+      "resume": "Plus de 1 000 morts en RDC et en Ouganda, et le vaccin actuellement disponible n'est pas conçu pour la souche qui circule. Bonne nouvelle quand même : une nouvelle étude suggère qu'Ervebo de Merck, homologué contre le virus Zaire, pourrait aussi offrir une protection croisée contre d'autres espèces d'Ebolavirus. De quoi accélérer les essais sur le terrain.",
+      "source": "STAT News",
+      "source_url": "https://www.statnews.com/2026/07/22/new-study-supports-testing-of-mercks-ebola-vaccine-in-drc-outbreak/?utm_campaign=rss",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/img_actu_2026_07_23_2.jpg",
+      "tags": [
+        "ebola",
+        "vaccin",
+        "ansm",
+        "ema",
+        "innovation"
+      ],
+      "full_text": "L'épidémie d'Ebola en RDC a franchi le cap des 1 000 morts. L'OMS elle-même reconnaît que l'épidémie \"conserve une longueur d'avance\". Et pourtant, une étude publiée cette semaine apporte une lueur d'espoir concrète.\n\nLe vaccin Ervebo, développé par Merck (MSD en Europe), est actuellement le seul vaccin Ebola homologué avec une AMM complète, notamment par l'EMA. Il cible historiquement le virus Ebola espèce Zaire, responsable des grandes épidémies passées en Afrique de l'Ouest. Problème : la souche qui circule actuellement en RDC pourrait être différente, ce qui limitait jusqu'ici l'utilisation d'Ervebo.\n\nLa nouvelle étude, relayée par STAT News, suggère que le vaccin Ervebo pourrait offrir une protection croisée significative contre d'autres espèces d'Ebolavirus. Ce ne sont pas encore des données d'efficacité clinique directe en situation d'épidémie, mais elles sont suffisamment solides pour justifier des essais de terrain accélérés en RDC.\n\nPourquoi ça intéresse un pharmacien français ? Plusieurs raisons. D'abord, les maladies à potentiel épidémique (MPE) font partie de la veille sanitaire officinale. L'alerte mpox sur La Réunion ce même jour en est une autre illustration. Ensuite, la trajectoire vaccinale d'Ervebo est un cas d'école pour comprendre comment un vaccin en urgence de santé publique obtient son AMM conditionnelle puis complète, une procédure que tu retrouveras demain matin avec d'autres produits.\n\nSur le fond, cette piste de protection croisée est exactement ce que cherchent les épidémiologistes : un vaccin plateforme capable de couvrir plusieurs souches, sur le modèle de ce que l'ARNm a permis pour le Covid. Ebola n'en est pas là, mais chaque épidémie accélère la base de données réelle.\n\nLa leçon pour l'officine ? Reste informé des alertes de l'ANSM et de Santé Publique France sur les voyageurs revenant de zones à risque. En cas de retour de RDC ou d'Ouganda avec fièvre hémorragique, ton réflexe doit être immédiat : orientation urgence avec signalement, pas de gestion en ambulatoire. Pas de prise de sang au comptoir, pas de TROD, appel du 15."
+    },
+    {
+      "id": "actu_2026_07_23_1",
+      "date": "2026-07-23",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "GLP-1 illégaux : l'ANSM ferme deux sites, mais le marché gris est loin d'être éradiqué",
+      "resume": "Deux plateformes vendant sans autorisation des stylos injecteurs présentés comme des analogues du GLP-1 viennent d'être interdites par l'ANSM. Des formes injectables, sans ordonnance, sans traçabilité, directement livrées à domicile. Le comptoir officinal est le seul rempart fiable, et ce dossier est loin d'être clos.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/deux-sites-illegaux-de-vente-de-stylos-injecteurs-au-glp-1-interdits",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_07_23_1.jpg",
+      "tags": [
+        "ansm",
+        "glp-1",
+        "pharmacovigilance",
+        "officine",
+        "marche-gris"
+      ],
+      "full_text": "Deux sites de vente illégale de stylos injecteurs au GLP-1 viennent de se faire fermer par l'ANSM. Bonne nouvelle, mais ne crie pas victoire trop vite.\n\nCes plateformes commercialisaient, sans la moindre AMM ni autorisation, des produits présentés comme des analogues du GLP-1. Des formes injectables, s'il te plaît. Pas des compléments alimentaires en gélules, des injectables. C'est le niveau de risque le plus élevé : mauvais dosage, contamination, absence de chaîne du froid, zéro suivi médical.\n\nL'ANSM parle de mesures de police sanitaire. Concrètement, les sites sont bloqués sur le territoire français. Mais sur internet, un site fermé laisse place à dix autres, souvent hébergés à l'étranger, hors portée des autorités françaises. Le marché gris des GLP-1 existe parce que la demande est colossale, et l'offre légale reste sous tension depuis deux ans.\n\nCe que ça change au comptoir ? Pas directement, mais indirectement beaucoup. Tes patients obèses ou diabétiques qui n'arrivent pas à obtenir leur Ozempic ou leur Wegovy (semaglutide, Novo Nordisk) sont des cibles privilégiées pour ces sites. Certains ont peut-être déjà commandé sans te le dire.\n\nTon rôle ici est celui de l'expert de référence. Quand un patient te parle de \"stylos achetés en ligne\" ou te présente une boîte sans marquage CE ni notice française, tu es le seul professionnel capable d'identifier le danger immédiat. Faux produit, dosage inconnu, risque d'hypoglycémie sévère s'il est aussi sous sulfamide ou insuline, interactions non contrôlées.\n\nSur le fond, ce dossier illustre un vrai problème de santé publique : la pénurie prolongée de GLP-1 a créé un terreau fertile pour le marché parallèle. L'ANSM agit, mais elle ne peut pas être partout. La prévention passe aussi par toi, au comptoir, à chaque délivrance et à chaque conversation.\n\nConclusion terrain : parle-en à ton équipe. Si un patient te présente un injectable acheté hors circuit officinal, ne te contente pas de refuser de le délivrer, explique le risque, oriente vers son médecin et signale via le portail de l'ANSM si nécessaire. C'est une mission de pharmacovigilance, et elle n'est pas rémunérée, mais elle peut sauver une vie."
+    },
+    {
+      "id": "lsv_2026_07_23",
+      "date": "2026-07-23",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? On mesurait la douleur avec... un seau d'eau glacée",
+      "resume": "Comment quantifier quelque chose d'aussi subjectif que la douleur ? Pendant des décennies, les médecins ont cherché une méthode objective. Et leur réponse était franchement brutale.",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_07_23.jpg",
+      "tags": [
+        "histoire",
+        "diagnostic",
+        "douleur",
+        "instrument",
+        "neurologie"
+      ],
+      "full_text": "Imagine la scène. On est en 1940, hôpital Cornell de New York. Un patient se plaint. Le médecin sort un seau d'eau glacée, plonge le bras du patient dedans, et chronomètre. Bienvenue dans la dolorimetrie expérimentale.\n\nDeux chercheurs, James Hardy et Harold Wolff, avaient un problème simple : comment mesurer la douleur de façon scientifique ? Pas de larmes, pas de grimaces, pas de « c'est insupportable, docteur ». Du concret. Des chiffres. Ils inventèrent le « dol », une unité de mesure de la douleur. Un dol, deux dols, dix dols. L'échelle allait de 0 à 10,5.\n\nLe principe ? On exposait la peau à une chaleur contrôlée ou au froid extrême, et on notait la réaction. Propre, net, reproductible. Sauf que voilà le truc : la douleur, c'est pas une température. Deux patients avec le même stimulus peuvent réagir de façon radicalement différente. Le contexte, la peur, le stress, le vécu - tout ça amplifie ou atténue la perception.\n\nLe « dol » fut vite abandonné, jugé trop réducteur. Mais l'idée de mesurer la douleur ne mourut pas. En 1971, un anesthésiste écossais nommé Ronald Melzack mit au point le McGill Pain Questionnaire. Mots, intensité, localisation - une approche multidimensionnelle. Et en 1974, la fameuse échelle visuelle analogique, cette simple réglette de 0 à 10, fit son entrée dans les hôpitaux du monde entier.\n\nCette réglette, tu la connais bien. Elle est toujours là, sur le bureau du médecin, dans les services de soins. Simple, imparfaite, mais universelle. Et quelque part, chaque fois qu'un patient te dit « j'ai une douleur à 8 », c'est Hardy et Wolff et leur seau d'eau glacée qui sont passés par là avant."
+    },
+    {
       "id": "actu_2026_07_22_5",
       "date": "2026-07-22",
       "type": "actu",
@@ -10805,6 +10930,6 @@
       ]
     }
   ],
-  "count": 522,
-  "updated_at": "2026-07-22T04:15:17.797462+02:00"
+  "count": 528,
+  "updated_at": "2026-07-23T04:13:13.663125+02:00"
 }

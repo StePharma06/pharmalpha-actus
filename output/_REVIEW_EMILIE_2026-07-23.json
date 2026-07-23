@@ -1,0 +1,47 @@
+{
+  "generated_at": "2026-07-23T04:13:11.433667+02:00",
+  "run_date": "2026-07-23",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_monde",
+      "titre": "Vaccin Ebola de Merck : de nouvelles données relancent l'espoir pour l'épidémie en RDC",
+      "resume": "Plus de 1 000 morts en RDC et en Ouganda, et le vaccin actuellement disponible n'est pas conçu pour la souche qui circule. Bonne nouvelle quand même : une nouvelle étude suggère qu'Ervebo de Merck, homologué contre le virus Zaire, pourrait aussi offrir une protection croisée contre d'autres espèces d'Ebolavirus. De quoi accélérer les essais sur le terrain.",
+      "source": "STAT News",
+      "source_url": "https://www.statnews.com/2026/07/22/new-study-supports-testing-of-mercks-ebola-vaccine-in-drc-outbreak/?utm_campaign=rss",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "Beyfortus mieux remboursé cet hiver : la HAS ouvre la porte, le JO doit suivre",
+      "resume": "La Commission de la transparence de la HAS a réévalué le nirsévimab (Beyfortus) à la hausse et recommande un meilleur taux de remboursement. Pas encore d'arrêté au Journal officiel, mais la direction est claire. Pour les nourrissons et les officines, c'est une vraie bonne nouvelle en préparation.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/legislation/dispensation/bronchiolite-beyfortus-sera-t-il-mieux-rembourse-cet-hiver",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Canicule 2026 : 5 764 morts en excès, une opportunité business que l'officine ne peut pas rater",
+      "resume": "Santé publique France vient de le confirmer : la canicule de juin 2026 a provoqué 5 764 décès en excès, un bilan comparable à 2003. Pour l'officine, ce chiffre brutal traduit un marché de la prévention thermique largement sous-exploité - et une mission de santé publique à valoris...",
+      "source": "Pharm'Actus · Le Monde Santé — Canicule en France : 5 764 morts en excès constatées pendant l'épisode de juin, selon Santé publique France, Santé publique France — Surveillance épidémiologique des effets de la chaleur sur la santé (référence institutionnelle générale)",
+      "source_url": "https://www.lemonde.fr/planete/article/2026/07/22/canicule-en-france-5-764-morts-en-exces-constatees-pendant-l-episode-de-juin-selon-sante-publique-france_6730037_3244.html",
+      "confidence_score": 0.72,
+      "warnings": [
+        "Le chiffre de 5 764 décès en excès est celui rapporté par Le Monde citant Santé publique France (22/07/2026) — à croiser avec la publication primaire SpF dès qu'elle est accessible en ligne.",
+        "Les données sur le doublement/triplement des ventes de réhydratation en canicule sont citées comme tendance IQVIA/IMS issue de canicules précédentes : aucun chiffre officiel 2026 disponible à ce jour — formulation qualitative maintenue volontairement.",
+        "Le montant de 40 € par entretien pharmaceutique est cité à titre indicatif : les tarifs exacts dépendent de l'avenant conventionnel et du type d'entretien (AVK, asthme, etc.). Vérifier l'avenant en vigueur et le type de pathologie pour chaque patient avant facturation.",
+        "L'avenant 21 est cité comme base juridique des entretiens pharmaceutiques : il a été suivi d'autres avenants (notamment avenant 22, 23 selon les années). Vérifier l'avenant le plus récent en vigueur auprès de l'Assurance Maladie.",
+        "Le chiffre de 15 millions de personnes de plus de 65 ans en France est une estimation démographique INSEE (ordre de grandeur 2025-2026) : à vérifier sur data.insee.fr pour la précision exacte.",
+        "Aucun syndicat (FSPF, USPO, UPGF) ne s'est exprimé publiquement sur ce bilan caniculaire à date de rédaction — règle d'équilibre syndical non applicable ici car l'angle n'est pas syndical."
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-22",
-  "window_label": "16 juil. au 22 juil. 2026",
+  "generated_at": "2026-07-23",
+  "window_label": "17 juil. au 23 juil. 2026",
   "has_history": true,
   "delta_source": "pytrends_rising",
   "pathologies": [
@@ -32,33 +32,33 @@
   ],
   "soins": [
     {
-      "display": "Immunite presidentielle",
-      "delta_label": "↑ 351 400",
-      "trend": "up"
-    },
-    {
       "display": "What causes poor digestion",
-      "delta_label": "↑ 312 050",
+      "delta_label": "↑ 307 800",
       "trend": "up"
     },
     {
-      "display": "Immunite diplomatique",
-      "delta_label": "↑ 112 550",
+      "display": "Immunite presidentielle",
+      "delta_label": "↑ 186 850",
       "trend": "up"
     },
     {
-      "display": "Walmart near me",
-      "delta_label": "↑ 70 900",
+      "display": "Oscillo immunite",
+      "delta_label": "↑ 138 450",
       "trend": "up"
     },
     {
-      "display": "Calmosine digestion nourrisson",
-      "delta_label": "↑ 66 000",
+      "display": "Immunite parlementaire",
+      "delta_label": "↑ 80 050",
+      "trend": "up"
+    },
+    {
+      "display": "Digestion difficile remède grand-mère",
+      "delta_label": "↑ 49 350",
       "trend": "up"
     }
   ],
   "pathologies_stale": false,
-  "pathologies_from": "2026-07-22",
+  "pathologies_from": "2026-07-23",
   "soins_stale": false,
-  "soins_from": "2026-07-22"
+  "soins_from": "2026-07-23"
 }
