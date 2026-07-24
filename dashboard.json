@@ -1,21 +1,21 @@
 {
- "genere_le": "2026-07-23T07:45:36+02:00",
+ "genere_le": "2026-07-24T07:41:40+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1024,
+ "abonnes_total": 1022,
  "nouveaux_7j": 3,
- "nouveaux_cumul": 1017,
+ "nouveaux_cumul": 1015,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-07-16",
-  "au": "2026-07-23",
-  "delivres": 6622,
-  "ouvertures": 2350,
-  "ouvertures_uniques": 1689,
-  "clics": 3140,
-  "clics_uniques": 472,
-  "taux_ouverture_pct": 25.5,
-  "taux_clic_pct": 7.1,
-  "ctor_pct": 27.9,
+  "du": "2026-07-17",
+  "au": "2026-07-24",
+  "delivres": 6606,
+  "ouvertures": 2331,
+  "ouvertures_uniques": 1693,
+  "clics": 2905,
+  "clics_uniques": 442,
+  "taux_ouverture_pct": 25.6,
+  "taux_clic_pct": 6.7,
+  "ctor_pct": 26.1,
   "top_articles": [
    {
     "id": "actu_2026_07_17_1",
@@ -26,27 +26,11 @@
     "lecteurs": 47
    },
    {
-    "id": "actu_2026_07_16_2",
-    "titre": "CDC americains face a 7 000 cas de cyclosporose : ce parasite qui ne nous epargne pas",
-    "date": "2026-07-16",
-    "categorie": "pharma_monde",
-    "clics": 81,
-    "lecteurs": 43
-   },
-   {
     "id": "actu_2026_07_18_1",
     "titre": "Tiers payant contre biosimilaires : ça démarre le 1er septembre",
     "date": "2026-07-18",
     "categorie": "pharma_france",
-    "clics": 85,
-    "lecteurs": 42
-   },
-   {
-    "id": "actu_2026_07_16_3",
-    "titre": "Aide a mourir : la loi est votee, le pharmacien entre dans l'histoire (et dans l'equation)",
-    "date": "2026-07-16",
-    "categorie": "bonne_nouvelle",
-    "clics": 80,
+    "clics": 87,
     "lecteurs": 42
    },
    {
@@ -54,23 +38,15 @@
     "titre": "Paracétamol : 1 centime de marge en moins par boîte, et le vrai sujet est ailleurs",
     "date": "2026-07-18",
     "categorie": "business_officine",
-    "clics": 85,
+    "clics": 87,
     "lecteurs": 41
-   },
-   {
-    "id": "actu_2026_07_16_1",
-    "titre": "Désogestrel et étonogestrel : le risque de méningiome est désormais gravé dans le RCP",
-    "date": "2026-07-16",
-    "categorie": "pharma_france",
-    "clics": 81,
-    "lecteurs": 40
    },
    {
     "id": "actu_2026_07_18_4",
     "titre": "OSyS se généralise : la pharmacie clinique entre dans le droit commun",
     "date": "2026-07-18",
     "categorie": "avenir_pharma",
-    "clics": 78,
+    "clics": 80,
     "lecteurs": 40
    },
    {
@@ -86,7 +62,7 @@
     "titre": "Dénosumab : l'ANSM ouvre la voie à la substitution en officine",
     "date": "2026-07-18",
     "categorie": "bonne_nouvelle",
-    "clics": 82,
+    "clics": 84,
     "lecteurs": 38
    },
    {
@@ -96,20 +72,44 @@
     "categorie": "pharma_monde",
     "clics": 70,
     "lecteurs": 35
+   },
+   {
+    "id": "actu_2026_07_17_5",
+    "titre": "Aide à mourir : 18 mois pour s'organiser, combien ça coûte à l'officine ?",
+    "date": "2026-07-17",
+    "categorie": "business_officine",
+    "clics": 64,
+    "lecteurs": 34
+   },
+   {
+    "id": "actu_2026_07_17_4",
+    "titre": "Wegovy en comprimé : l'AMM européenne est là, le sémaglutide oral entre dans la course",
+    "date": "2026-07-17",
+    "categorie": "avenir_pharma",
+    "clics": 68,
+    "lecteurs": 33
+   },
+   {
+    "id": "actu_2026_07_17_2",
+    "titre": "IA et renouvellement d'ordonnances dans l'Utah : coup de génie ou terrain glissant ?",
+    "date": "2026-07-17",
+    "categorie": "pharma_monde",
+    "clics": 67,
+    "lecteurs": 33
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-07-23",
-  "delivres": 61297,
-  "ouvertures": 24848,
-  "ouvertures_uniques": 17016,
-  "clics": 26062,
-  "clics_uniques": 4682,
+  "au": "2026-07-24",
+  "delivres": 62214,
+  "ouvertures": 25206,
+  "ouvertures_uniques": 17274,
+  "clics": 26367,
+  "clics_uniques": 4733,
   "taux_ouverture_pct": 27.8,
   "taux_clic_pct": 7.6,
-  "ctor_pct": 27.5,
+  "ctor_pct": 27.4,
   "top_articles": [
    {
     "id": "actu_2026_06_18_1",
