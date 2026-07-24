@@ -1,0 +1,47 @@
+{
+  "generated_at": "2026-07-24T04:15:54.301323+02:00",
+  "run_date": "2026-07-24",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Franchises médicales : le plafond double à 200 euros, et c'est demain",
+      "resume": "Le gouvernement passe par décret pour doubler le plafond annuel des franchises médicales, de 100 à 200 euros. Les patients gros consommateurs de médicaments vont le sentir. Au comptoir, prépare-toi aux questions.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/franchises-medicales-le-gouvernement-double-le-plafond-annuel-pour-les-medicaments",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "avenir_pharma",
+      "titre": "129 millions de dollars pour éditer les gènes contre le cholestérol : Scribe Therapeutics entre en bourse",
+      "resume": "Scribe Therapeutics lève 129 millions de dollars en s'introduisant en bourse, une première dans l'édition génique depuis plus de deux ans. Sa cible prioritaire : PCSK9 et Lp(a), deux acteurs majeurs du risque cardiovasculaire. L'avenir de la cardioprotection se joue peut-être là.",
+      "source": "BioPharma Dive",
+      "source_url": "https://www.biopharmadive.com/news/scribe-ipo-price-gene-editing-biotech-pcsk9-lpa/825933/",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Concentration officinale : +6,3% pour les grandes, +1,6% pour les petites - le fossé se creuse",
+      "resume": "En 2025, les pharmacies dépassant 2,2 M€ de CA ont progressé quatre fois plus vite que celles sous 1,1 M€. La concentration du marché officinal n'est pas un fantasme : c'est un fait chiffré. Et pour toi, titulaire, c'est un signal d'alarme ou une feuille de route.",
+      "source": "Pharm'Actus · Le Moniteur des Pharmacies — Pourquoi les grandes pharmacies continuent de gagner du terrain, Le Moniteur des Pharmacies — Le Parlement est-il prêt à reprendre la main sur la financiarisation des officines ?",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/business/economie/strategie-et-gestion/pourquoi-les-grandes-pharmacies-continuent-de-gagner-du-terrain",
+      "confidence_score": 0.78,
+      "warnings": [
+        "Les chiffres 6,3% et 1,6% et les seuils de CA (2,2 M€ et 1,1 M€) proviennent de Rydge Conseil via Le Moniteur des Pharmacies — source secondaire non vérifiable directement dans ce format. À confirmer sur le rapport Rydge Conseil original.",
+        "Le chiffre de 20 800 pharmacies est une estimation courante mais le chiffre exact à date 2025 peut varier selon la source (DREES, Ordre national). À vérifier sur le dernier rapport statistique de l'Ordre.",
+        "L'impact quantitatif des remises fournisseurs n'est pas chiffré précisément dans cet article car les données de volume d'achat par tranche de CA ne sont pas sourcées — l'impact est décrit qualitativement conformément à la règle financière.",
+        "Le nombre de 4 à 6 ETP pour les grandes officines est une estimation professionnelle courante, non sourcée dans les articles disponibles — présenté comme ordre de grandeur indicatif.",
+        "La proposition de loi anti-financiarisation (article 5) est citée en recommandation : son état d'avancement législatif précis (commission, première lecture, etc.) n'est pas précisé dans le résumé disponible — à vérifier avant publication.",
+        "5 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

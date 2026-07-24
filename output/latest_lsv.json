@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? On mesurait la douleur avec... un seau d'eau glacée",
-  "resume": "Comment quantifier quelque chose d'aussi subjectif que la douleur ? Pendant des décennies, les médecins ont cherché une méthode objective. Et leur réponse était franchement brutale.",
-  "full_text": "Imagine la scène. On est en 1940, hôpital Cornell de New York. Un patient se plaint. Le médecin sort un seau d'eau glacée, plonge le bras du patient dedans, et chronomètre. Bienvenue dans la dolorimetrie expérimentale.\n\nDeux chercheurs, James Hardy et Harold Wolff, avaient un problème simple : comment mesurer la douleur de façon scientifique ? Pas de larmes, pas de grimaces, pas de « c'est insupportable, docteur ». Du concret. Des chiffres. Ils inventèrent le « dol », une unité de mesure de la douleur. Un dol, deux dols, dix dols. L'échelle allait de 0 à 10,5.\n\nLe principe ? On exposait la peau à une chaleur contrôlée ou au froid extrême, et on notait la réaction. Propre, net, reproductible. Sauf que voilà le truc : la douleur, c'est pas une température. Deux patients avec le même stimulus peuvent réagir de façon radicalement différente. Le contexte, la peur, le stress, le vécu - tout ça amplifie ou atténue la perception.\n\nLe « dol » fut vite abandonné, jugé trop réducteur. Mais l'idée de mesurer la douleur ne mourut pas. En 1971, un anesthésiste écossais nommé Ronald Melzack mit au point le McGill Pain Questionnaire. Mots, intensité, localisation - une approche multidimensionnelle. Et en 1974, la fameuse échelle visuelle analogique, cette simple réglette de 0 à 10, fit son entrée dans les hôpitaux du monde entier.\n\nCette réglette, tu la connais bien. Elle est toujours là, sur le bureau du médecin, dans les services de soins. Simple, imparfaite, mais universelle. Et quelque part, chaque fois qu'un patient te dit « j'ai une douleur à 8 », c'est Hardy et Wolff et leur seau d'eau glacée qui sont passés par là avant.",
-  "image_keywords": "pain scale medical",
+  "titre": "Le saviez-vous ? On diagnostiquait les maladies du cœur... à l'oreille nue",
+  "resume": "Avant le stéthoscope, les médecins collaient littéralement leur oreille contre la poitrine du patient. Mais un médecin français a tout changé en 1816 pour une raison aussi simple que gênante. Et son invention a sauvé des millions de vies.",
+  "full_text": "Paris, 1816. René Laennec, médecin à l'Hôpital Necker, se retrouve face à une patiente corpulente avec des symptômes cardiaques suspects.\n\nProblème : coller son oreille directement sur sa poitrine ? Hors de question. Trop intime. Trop indécent. Les convenances de l'époque rendaient l'examen quasi impossible sur une femme de bonne famille.\n\nAlors Laennec fait quelque chose de complètement instinctif. Il roule une feuille de papier en cylindre, pose un bout sur la poitrine de la patiente, l'autre sur son oreille… et là, stupéfaction. Il entend le cœur battre avec une clarté absolument incroyable. Bien mieux qu'à l'oreille nue.\n\nVoilà comment le stéthoscope est né d'un embarras social, pas d'un grand projet scientifique. Laennec affine son invention, passe du papier au bois, lui donne un nom grec : « stethos » (poitrine) + « skopein » (examiner). En 1819, il publie un traité de 900 pages sur l'auscultation médiate. Un monument.\n\nLe twist fascinant ? Laennec lui-même est mort de tuberculose en 1826, à 45 ans. La maladie qu'il avait appris à diagnostiquer mieux que quiconque grâce à son invention. Ses élèves ont d'ailleurs utilisé son propre stéthoscope pour confirmer son diagnostic en phase terminale.\n\nAujourd'hui, le stéthoscope reste l'un des symboles les plus universels de la médecine. Il trône autour du cou de chaque soignant. Mais avec l'arrivée des échographies portables et de l'IA d'analyse cardiaque, certains prédisent sa disparition d'ici 20 ans. Deux cents ans d'histoire… et peut-être une retraite bien méritée qui approche.",
+  "image_keywords": "vintage stethoscope doctor",
   "tags": [
     "histoire",
-    "diagnostic",
-    "douleur",
     "instrument",
-    "neurologie"
+    "diagnostic",
+    "cardiologie",
+    "decouverte"
   ],
-  "date": "2026-07-23",
+  "date": "2026-07-24",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",
