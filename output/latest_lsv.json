@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? On diagnostiquait les maladies du cœur... à l'oreille nue",
-  "resume": "Avant le stéthoscope, les médecins collaient littéralement leur oreille contre la poitrine du patient. Mais un médecin français a tout changé en 1816 pour une raison aussi simple que gênante. Et son invention a sauvé des millions de vies.",
-  "full_text": "Paris, 1816. René Laennec, médecin à l'Hôpital Necker, se retrouve face à une patiente corpulente avec des symptômes cardiaques suspects.\n\nProblème : coller son oreille directement sur sa poitrine ? Hors de question. Trop intime. Trop indécent. Les convenances de l'époque rendaient l'examen quasi impossible sur une femme de bonne famille.\n\nAlors Laennec fait quelque chose de complètement instinctif. Il roule une feuille de papier en cylindre, pose un bout sur la poitrine de la patiente, l'autre sur son oreille… et là, stupéfaction. Il entend le cœur battre avec une clarté absolument incroyable. Bien mieux qu'à l'oreille nue.\n\nVoilà comment le stéthoscope est né d'un embarras social, pas d'un grand projet scientifique. Laennec affine son invention, passe du papier au bois, lui donne un nom grec : « stethos » (poitrine) + « skopein » (examiner). En 1819, il publie un traité de 900 pages sur l'auscultation médiate. Un monument.\n\nLe twist fascinant ? Laennec lui-même est mort de tuberculose en 1826, à 45 ans. La maladie qu'il avait appris à diagnostiquer mieux que quiconque grâce à son invention. Ses élèves ont d'ailleurs utilisé son propre stéthoscope pour confirmer son diagnostic en phase terminale.\n\nAujourd'hui, le stéthoscope reste l'un des symboles les plus universels de la médecine. Il trône autour du cou de chaque soignant. Mais avec l'arrivée des échographies portables et de l'IA d'analyse cardiaque, certains prédisent sa disparition d'ici 20 ans. Deux cents ans d'histoire… et peut-être une retraite bien méritée qui approche.",
-  "image_keywords": "vintage stethoscope doctor",
+  "titre": "Le saviez-vous ? On soignait l'angine avec des sangsues dans la gorge",
+  "resume": "Avant les antibiotiques, les médecins avaient une solution radicale contre les angines purulentes : planter des sangsues directement sur les amygdales. Une technique aussi terrifiante qu'elle était sérieuse, pratiquée pendant plus d'un siècle dans les hôpitaux européens.",
+  "full_text": "Imagine la scène. Ton patient arrive avec une angine bien purulente, 39°C, gorge en feu. Et toi, au lieu de lui tendre un sachet d'amoxicilline, tu saisis une pince longue et tu lui demandes d'ouvrir grand la bouche.\n\nParce qu'entre 1780 et 1880 environ, le traitement de référence pour les angines sévères - et plus largement pour les inflammations profondes de la gorge - c'était la sangsue pharyngée. On plaçait des Hirudo medicinalis directement sur les amygdales gonflées, parfois deux ou trois d'un coup, maintenues en place à l'aide de petits tubes métalliques spécialement conçus pour ça. On les appelait des « sangsues internes » dans les traités médicaux de l'époque.\n\nLe twist qui fait froid dans le dos : le vrai danger n'était pas la douleur. C'était l'oubli. Une sangsue rassasiée peut décrocher et glisser vers le larynx. Des patients sont morts asphyxiés. Les médecins le savaient. Ils attachaient donc un fil de soie à chaque sangsue pour pouvoir la récupérer. Un fil. Dans la gorge. Pour ne pas perdre l'animal.\n\nCette pratique s'inscrivait dans la grande théorie des « phlébotomies locales » popularisée par François-Joseph-Victor Broussais, médecin parisien à qui on doit aussi d'avoir rendu la France entière addict aux saignées entre 1820 et 1840. À son apogée, la France importait 40 millions de sangsues par an. Par an.\n\nLa chute de ce système ? Louis Pasteur et les travaux sur les bactéries ont démontré que l'inflammation était causée par des agents microbiens, pas par un excès de sang à évacuer. Les sangsues médicales ont été progressivement abandonnées... avant de revenir discrètement.\n\nAujourd'hui, la sangsue médicale est inscrite sur la liste des dispositifs médicaux en France et utilisée en chirurgie reconstructrice pour relancer la microcirculation après des greffes de doigts ou d'oreilles. Si un jour un collègue en commande à la pharmacie, ne t'affole pas. Et garde le fil de soie, juste au cas où.",
+  "image_keywords": "medical leech therapy",
   "tags": [
     "histoire",
+    "chirurgie",
     "instrument",
-    "diagnostic",
-    "cardiologie",
-    "decouverte"
+    "medecine-ancienne",
+    "saignee"
   ],
-  "date": "2026-07-24",
+  "date": "2026-07-25",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",

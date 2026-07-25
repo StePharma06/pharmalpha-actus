@@ -1,0 +1,48 @@
+{
+  "generated_at": "2026-07-25T04:15:42.468168+02:00",
+  "run_date": "2026-07-25",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Génériques : nouvelle vague de baisses de prix, le rivaroxaban encore dans le viseur",
+      "resume": "Le Comité de suivi des génériques a planché le 23 juillet sur une nouvelle salve de baisses tarifaires. Objectif affiché : 41 millions d'euros d'économies, dont 14 millions sur les génériques seuls. Et le rivaroxaban repart pour un tour.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/generiques-encore-des-baisses-de-prix-attendues",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "Gaviscon Nourrisson redevalorise : le CEPS corrige enfin le tir",
+      "resume": "Le Comité économique des produits de santé (CEPS) revalorise le prix de Gaviscon Nourrisson, la suspension buvable en flacon de 150 ml. Une bonne nouvelle pour une spécialité largement prescrite chez les tout-petits, qui souffrait d'un tarif déconnecté des réalités économiques.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/business/economie/achat/gaviscon-nourrisson-le-ceps-revalorise-le-prix",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Franchises médicales doublées : 750 M€ d'économies, mais quel impact sur le flux officine ?",
+      "resume": "Le gouvernement annonce le doublement du plafond des franchises médicales et une hausse du ticket modérateur. Économies attendues : entre 1 et 2 milliards d'euros. Pour l'officine, la mécanique est plus subtile qu'il n'y paraît - et les vrais risques sont ailleurs.",
+      "source": "Pharm'Actus · France Info Santé – Doublement des franchises médicales et hausse du ticket modérateur, Le Monde Santé – Remboursements de soins : le gouvernement engage de nouveaux transferts vers les mutuelles",
+      "source_url": "https://www.franceinfo.fr/sante/doublement-des-franchises-medicales-et-hausse-du-ticket-moderateur-les-economies-esperees-sont-de-pres-de-3-milliards-d-euros_8120318.html",
+      "confidence_score": 0.72,
+      "warnings": [
+        "Le montant exact du doublement du plafond (passant de 50 € à ~100 €) est une extrapolation logique depuis le terme 'doublement' — le décret d'application n'est pas encore publié au JORF à la date de rédaction. À vérifier dès parution.",
+        "Le chiffre de 750 M€ d'économies sur les franchises est issu de France Info ('selon nos informations') et non d'un document officiel publié. À confirmer sur le site de l'AM ou dans le PLFSS.",
+        "Le montant total du transfert AM→mutuelles sur le ticket modérateur n'a pas été communiqué par la ministre (Le Monde, 24/07) — aucun chiffre précis n'a été inventé dans cet article.",
+        "Les chiffres FSPF sur mai 2026 (CA +0,17 % sur Rx remboursables, HD –2 %, volumes en chute) sont issus du communiqué FSPF du 24/07 — non vérifiables sur source AM indépendante à ce stade.",
+        "La fourchette '1 à 2 milliards' d'économies totales est reprise telle quelle de France Info. Le Monde cite un paquet plus large incluant dentaire et transports sanitaires — les périmètres ne sont pas strictement superposables.",
+        "Aucun calcul d'impact par officine n'a été réalisé (volume non sourcé) — conformément aux règles de la checklist finances.",
+        "3 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}
