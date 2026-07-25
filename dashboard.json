@@ -1,30 +1,22 @@
 {
- "genere_le": "2026-07-24T07:41:40+02:00",
+ "genere_le": "2026-07-25T07:36:38+02:00",
  "liste_brevo": 5,
  "abonnes_total": 1022,
  "nouveaux_7j": 3,
  "nouveaux_cumul": 1015,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-07-17",
-  "au": "2026-07-24",
-  "delivres": 6606,
-  "ouvertures": 2331,
-  "ouvertures_uniques": 1693,
-  "clics": 2905,
-  "clics_uniques": 442,
-  "taux_ouverture_pct": 25.6,
-  "taux_clic_pct": 6.7,
-  "ctor_pct": 26.1,
+  "du": "2026-07-18",
+  "au": "2026-07-25",
+  "delivres": 6590,
+  "ouvertures": 2284,
+  "ouvertures_uniques": 1660,
+  "clics": 2708,
+  "clics_uniques": 424,
+  "taux_ouverture_pct": 25.2,
+  "taux_clic_pct": 6.4,
+  "ctor_pct": 25.5,
   "top_articles": [
-   {
-    "id": "actu_2026_07_17_1",
-    "titre": "Tiers payant contre biosimilaires et hybrides : ça démarre le 1er septembre",
-    "date": "2026-07-17",
-    "categorie": "pharma_france",
-    "clics": 83,
-    "lecteurs": 47
-   },
    {
     "id": "actu_2026_07_18_1",
     "titre": "Tiers payant contre biosimilaires : ça démarre le 1er septembre",
@@ -74,40 +66,48 @@
     "lecteurs": 35
    },
    {
-    "id": "actu_2026_07_17_5",
-    "titre": "Aide à mourir : 18 mois pour s'organiser, combien ça coûte à l'officine ?",
-    "date": "2026-07-17",
-    "categorie": "business_officine",
-    "clics": 64,
+    "id": "actu_2026_07_21_1",
+    "titre": "Quétiapine LP : retour au droit commun, mode d'emploi au comptoir",
+    "date": "2026-07-21",
+    "categorie": "pharma_france",
+    "clics": 61,
     "lecteurs": 34
    },
    {
-    "id": "actu_2026_07_17_4",
-    "titre": "Wegovy en comprimé : l'AMM européenne est là, le sémaglutide oral entre dans la course",
-    "date": "2026-07-17",
-    "categorie": "avenir_pharma",
-    "clics": 68,
+    "id": "actu_2026_07_20_3",
+    "titre": "Officine pensée pour les missions : Guillaume Paquin montre que c'est possible",
+    "date": "2026-07-20",
+    "categorie": "bonne_nouvelle",
+    "clics": 60,
     "lecteurs": 33
    },
    {
-    "id": "actu_2026_07_17_2",
-    "titre": "IA et renouvellement d'ordonnances dans l'Utah : coup de génie ou terrain glissant ?",
-    "date": "2026-07-17",
-    "categorie": "pharma_monde",
-    "clics": 67,
-    "lecteurs": 33
+    "id": "actu_2026_07_20_5",
+    "titre": "Aide à mourir : ce que la loi du 15 juillet change concrètement pour ton officine",
+    "date": "2026-07-20",
+    "categorie": "business_officine",
+    "clics": 55,
+    "lecteurs": 32
+   },
+   {
+    "id": "actu_2026_07_20_1",
+    "titre": "Regroupements d'officines : le réseau se restructure, les chiffres 2025 parlent",
+    "date": "2026-07-20",
+    "categorie": "pharma_france",
+    "clics": 66,
+    "lecteurs": 31
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-07-24",
-  "delivres": 62214,
-  "ouvertures": 25206,
-  "ouvertures_uniques": 17274,
-  "clics": 26367,
-  "clics_uniques": 4733,
-  "taux_ouverture_pct": 27.8,
+  "au": "2026-07-25",
+  "delivres": 63132,
+  "ouvertures": 25515,
+  "ouvertures_uniques": 17484,
+  "clics": 26663,
+  "clics_uniques": 4784,
+  "taux_ouverture_pct": 27.7,
   "taux_clic_pct": 7.6,
   "ctor_pct": 27.4,
   "top_articles": [
