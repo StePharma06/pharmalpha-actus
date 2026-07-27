@@ -1600,6 +1600,10 @@ def update_index_html(new_articles):
 
     new_js_entries = []
     actu_idx = 0
+    # image_url du tout premier entry ajoute = ARTICLES[0] apres prepend =
+    # image de la card i===0 (fetchpriority=high dans renderCard) -> sert a
+    # regenerer le <link rel="preload"> LCP plus bas (cf. sprint perf 2026-07-27).
+    first_img_url = None
 
     for a in new_articles:
         # Skip if same source URL already exists (avoid duplicates across days)
@@ -1700,6 +1704,8 @@ def update_index_html(new_articles):
             f'    tags: {tags_js}\n'
             '  }'
         )
+        if first_img_url is None:
+            first_img_url = img_url  # premier entry ajoute = futur ARTICLES[0]
         new_js_entries.append(entry)
 
     if not new_js_entries:
@@ -1720,6 +1726,21 @@ def update_index_html(new_articles):
         updated_block = "\n" + ",\n".join(kept) + "\n"
 
     updated_html = html[:match.start(1)] + updated_block + html[match.end(1):]
+
+    # Preload LCP : pointe toujours vers l'image de ARTICLES[0] (card i===0,
+    # fetchpriority=high dans renderCard). Remplace le <link rel="preload">
+    # existant ; si absent (avant premiere execution de ce fix), remplace le
+    # placeholder <!-- LCP_PRELOAD --> a la place.
+    if first_img_url:
+        preload_html = f'<link rel="preload" as="image" href="{first_img_url}" fetchpriority="high">'
+        updated_html, n = re.subn(
+            r'<link rel="preload" as="image"[^>]*>',
+            preload_html,
+            updated_html,
+            count=1,
+        )
+        if not n:
+            updated_html = updated_html.replace("<!-- LCP_PRELOAD -->", preload_html, 1)
 
     # Inject "Expression du jour" banner.
     # The placeholder <!-- EXPRESSION_DU_JOUR --> only exists on the first run;

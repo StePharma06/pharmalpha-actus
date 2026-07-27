@@ -50,8 +50,8 @@ URL_NEW = "pharmalpha.fr/actus"
 # Required because vercel.json has trailingSlash:false: /actus/ is
 # redirected to /actus, breaking relative resolution for assets/img.
 RELATIVE_PATH_FIXES = [
-    (re.compile(r'(\b(?:src|href)=)(["\'])(assets/)'), r'\1\2/actus/\3'),
-    (re.compile(r'(\b(?:src|href)=)(["\'])(articles/)'), r'\1\2/actus/\3'),
+    (re.compile(r'(\b(?:src|href|srcset)=)(["\'])(assets/)'), r'\1\2/actus/\3'),
+    (re.compile(r'(\b(?:src|href|srcset)=)(["\'])(articles/)'), r'\1\2/actus/\3'),
     (re.compile(r'(image_url\s*:\s*)(["\'])(assets/)'), r'\1\2/actus/\3'),
     (re.compile(r'(fetch\()(["\'])(articles\.json)'), r'\1\2/actus/\3'),
     (re.compile(r'(fetch\()(["\'])(output/)'), r'\1\2/actus/\3'),

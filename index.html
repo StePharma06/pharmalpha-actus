@@ -26,6 +26,13 @@
 <!-- Canonical statique — P0-5 (sera transformé en pharmalpha.fr/actus par sync_to_vercel.py ; le JS le surcharge pour ?a= articles individuels) -->
 <link rel="canonical" href="https://actus.pharmalpha.fr">
 
+<!-- Preload image LCP (1ere card, i===0 dans renderCard) — genere/mis a jour
+     chaque jour par update_index_html() dans update_actus.py. Sans ce preload,
+     l'image n'est decouverte qu'apres execution du JS qui construit les cards
+     (le <img> n'existe qu'a l'interieur d'un template literal JS, invisible au
+     preload scanner) -> LCP non deterministe, cf. sprint perf 2026-07-27. -->
+<link rel="preload" as="image" href="assets/img_actu_2026_07_27_1.jpg" fetchpriority="high">
+
 <!-- Font cohesion site principal -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1703,7 +1710,10 @@ body.pa-has-nav #actusHeader {
 <!-- BIO -->
 <section class="bio-section">
   <div class="bio-card">
-    <img src="assets/stephen.png" alt="Stephen ROBERT" class="bio-photo">
+    <picture>
+      <source srcset="assets/stephen.webp" type="image/webp">
+      <img src="assets/stephen.png" alt="Stephen ROBERT" class="bio-photo" width="90" height="90" loading="lazy" decoding="async">
+    </picture>
     <div class="bio-info">
       <h3>Stephen ROBERT</h3>
       <p class="bio-title">Consultant, Formateur &amp; Communicant Pharma</p>
