@@ -23,6 +23,7 @@ import os
 import sys
 import datetime
 import re
+import unicodedata
 
 # Force UTF-8 sur Windows
 if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
@@ -96,13 +97,96 @@ SEEDS_SOIN = [
 ]
 
 # ── Filtrage bruit ────────────────────────────────────────────────────
-# Blocklist : sujets clairement hors-sujet pharma
+# STRATEGIE (revue 2026-07-21) : on est passe d'une simple BLOCKLIST (negative,
+# jeu du chat et de la souris : "immunite parlementaire" passait car aucun mot
+# bloque) a un filtre POSITIF. Un terme n'est publie que s'il parle vraiment de
+# sante/officine (racine FR reconnue) ET qu'il ne declenche aucun garde-fou.
+# Ordre des controles : corrompu -> blocklist -> anglais -> racine sante.
+
+def _norm(s: str) -> str:
+    """Minuscules + accents retires + espaces normalises (pour comparer/filtrer)."""
+    s = unicodedata.normalize("NFD", str(s).lower())
+    s = "".join(c for c in s if unicodedata.category(c) != "Mn")
+    return " ".join(s.split())
+
+
+def _tokens(query: str) -> list:
+    return re.findall(r"[a-z0-9']+", _norm(query))
+
+
+# 1) Sujets hors-sujet (actualite politique/justice/sport/conso...). Complete
+#    le filtre positif : un terme peut contenir une racine sante ET rester
+#    hors-sujet (ex : "immunite parlementaire", "proces medicament").
 _BLOCKLIST_RE = re.compile(
     r"\b(prix|acheter|achat|promo|solde|pas cher|gratuit|livraison|"
-    r"recette|cuisine|restaurant|sport|foot|musique|film|serie|"
-    r"politique|election|immobilier|voiture|bourse|crypto|"
-    r"meteo|voyag|hotel|airbnb|amazon|aliexpress)\b",
+    r"recette|cuisine|restaurant|sport|foot|match|ligue|psg|equipe|"
+    r"musique|film|serie|streaming|netflix|jeu|game|concert|festival|"
+    r"politique|election|president|ministre|gouvernement|parlement|"
+    r"parlementaire|senat|senateur|depute|assemblee|loi|decret|justice|"
+    r"proces|tribunal|prison|garde a vue|greve|manifestation|guerre|"
+    r"attentat|immobilier|voiture|bourse|crypto|bitcoin|impot|salaire|"
+    r"meteo|voyag|hotel|airbnb|amazon|aliexpress|horoscope|loto)\b",
     re.I | re.UNICODE,
+)
+
+# 2) Marqueurs d'anglais : mots qui n'existent pas en francais. Un seul suffit
+#    a ecarter le terme (Google Trends FR remonte parfois des requetes EN).
+#    NB : les racines sante ci-dessous sont des radicaux FRANCAIS complets
+#    ("vitamine" et non "vitamin"), donc "vitamin d" est deja rejete faute de
+#    racine reconnue -- cette liste attrape le reste ("acne treatment"...).
+#    ATTENTION : ne mettre ici QUE des mots inexistants en francais. Ecartes
+#    volontairement car francais ou franglais courant en sante :
+#    "me", "on", "vs", "top", "boost/booster", "gain", "supplement", "test".
+_ENGLISH_MARKERS = {
+    "the", "and", "for", "with", "without", "your", "you", "my", "is", "are",
+    "of", "to", "in", "how", "what", "why", "when", "does", "do", "can",
+    "best", "buy", "cheap", "free", "near", "review", "reviews", "benefits",
+    "treatment", "remedy", "remedies", "symptoms", "disease", "health",
+    "care", "skin", "hair", "weight", "loss", "food", "diet", "oil",
+    "powder", "pills", "pill", "tablets", "cream", "natural", "relief",
+    "side", "effects", "vitamin", "vitamins", "immunity", "sleep", "pain",
+    "home", "quick", "fast", "daily", "women", "men", "kids",
+}
+
+# 3) Racines SANTE / OFFICINE (radicaux francais, accents retires).
+#    Un terme doit contenir au moins un token commencant par l'une d'elles.
+#    C'est le coeur du ciblage : tout ce qui ne parle pas sante est ecarte.
+_HEALTH_ROOTS = (
+    # officine / medicament
+    "pharmac", "officin", "medicament", "ordonnance", "posologie", "generique",
+    "comprime", "gelule", "sirop", "pastille", "sachet", "ampoule", "collyre",
+    "pommade", "creme", "patch", "spray", "serum", "complement", "probiotique",
+    "paracetamol", "ibuprofene", "doliprane", "spasfon", "smecta", "gaviscon",
+    "antibiotique", "antihistaminique", "anti-inflammatoire", "vaccin",
+    "ordonnanc", "automedication", "homeopath", "phytotherap", "aromatherap",
+    "huile essentielle", "tisane", "veinotonique", "laxatif", "antitussif",
+    # symptomes / pathologies
+    "grippe", "rhume", "angine", "toux", "fievre", "migraine", "cephale",
+    "douleur", "courbatur", "crampe", "inflammat", "infection", "virus",
+    "bacterie", "allergi", "pollen", "asthm", "eczema", "psoriasis", "acne",
+    "mycose", "herpes", "zona", "verrue", "poux", "gale", "urticaire",
+    "cystite", "urinaire", "gastro", "diarrhee", "constipation", "ballonn",
+    "reflux", "nausee", "vomiss", "digest", "transit", "intestin", "colon",
+    "estomac", "foie", "insomnie", "sommeil", "dormir", "ronflement", "apnee",
+    "stress", "anxiet", "angoisse", "deprim", "depress", "burn-out", "nervos",
+    "fatigue", "asthenie", "epuisement", "energie", "tonus", "vitalite",
+    "carence", "anemie", "diabet", "hypertension", "tension", "cholesterol",
+    "thyroide", "arthrose", "arthrite", "tendinite", "entorse", "lumbago",
+    "sciatique", "articulation", "osteoporose", "hemorroide", "varice",
+    "jambes lourdes", "circulation", "covid", "bronchite", "sinusite", "otite",
+    "conjonctivite", "aphte", "gingivite", "carie", "brulure", "piqure",
+    "coup de soleil", "insolation", "deshydratation", "canicule", "menopause",
+    "regles", "grossesse", "allaitement", "contracept", "fertilite", "libido",
+    "prostate", "incontinence", "chute de cheveux", "pellicule", "secheresse",
+    # soins / bien-etre / cosmeto officine
+    "peau", "cheveux", "ongle", "dent", "gencive", "yeux", "oeil", "nez",
+    "gorge", "hydratant", "solaire", "spf", "cicatris", "anti-age", "ride",
+    "cerne", "minceur", "amaigriss", "detox", "drainant", "immunit",
+    "defenses", "vitamine", "magnesium", "zinc", "calcium", "omega",
+    "collagene", "probiotiq", "prebiotiq", "fer ", "iode", "melatonine",
+    "bebe", "nourrisson", "enfant", "senior", "sevrage", "tabac", "nicotine",
+    "sante", "symptome", "traitement", "soigner", "guerir", "prevention",
+    "depistage", "analyse", "prise de sang", "test", "diagnostic",
 )
 
 # Mots parasites issus des seeds (pas utiles dans l'affichage)
@@ -112,8 +196,60 @@ _STRIP_WORDS = [
 ]
 
 
+def _is_corrupted(query: str) -> bool:
+    """Caracteres de remplacement / mojibake -> terme impubliable."""
+    return "�" in query or "Ã" in query or "â€" in query
+
+
+def _is_english(query: str) -> bool:
+    return bool(set(_tokens(query)) & _ENGLISH_MARKERS)
+
+
+def _is_health_related(query: str) -> bool:
+    """Filtre POSITIF : au moins une racine sante/officine reconnue."""
+    n = _norm(query)
+    toks = n.split()
+    for root in _HEALTH_ROOTS:
+        if " " in root or root.endswith(" "):
+            if root.strip() in n:            # racine multi-mots ("jambes lourdes")
+                return True
+        elif any(t.startswith(root) for t in toks):
+            return True
+    return False
+
+
 def _is_noise(query: str) -> bool:
-    return bool(_BLOCKLIST_RE.search(query))
+    """True = terme a ecarter du radar."""
+    if _is_corrupted(query):
+        return True
+    if _BLOCKLIST_RE.search(_norm(query)):
+        return True
+    if _is_english(query):
+        return True
+    if not _is_health_related(query):        # filtre positif (le plus discriminant)
+        return True
+    return False
+
+
+def _sanitize_cached(items: list) -> list:
+    """Repasse le filtre sur des donnees REUTILISEES (fallback / carry-forward).
+
+    Sans ca, un terme parasite ou corrompu enregistre AVANT le durcissement du
+    filtre (ex : "immunite parlementaire", "Fatigue apr�s canicule") ressort
+    indefiniment les jours ou pytrends rate-limite. On deduplique aussi sur la
+    forme sans accents pour purger les quasi-doublons historiques.
+    """
+    out, seen = [], set()
+    for it in items or []:
+        disp = (it or {}).get("display", "")
+        if not disp or _is_noise(disp):
+            continue
+        key = _norm(disp)
+        if key in seen:
+            continue
+        seen.add(key)
+        out.append(it)
+    return out
 
 
 def _clean_display(query: str) -> str:
@@ -174,7 +310,10 @@ def _extract_items(related: dict, seeds: list, query_type: str) -> list:
             if _is_noise(raw_query):
                 continue
 
-            key = raw_query.lower()
+            # Dedup insensible aux accents : "fatigue apres canicule" et
+            # "fatigue apres canicule" (accentue) sont le MEME terme -> une
+            # seule ligne dans le radar (avant : 2 lignes quasi identiques).
+            key = _norm(raw_query)
             if key in seen:
                 continue
             seen.add(key)
@@ -189,12 +328,40 @@ def _extract_items(related: dict, seeds: list, query_type: str) -> list:
                 "delta_label": delta_label,
                 "trend":       trend,
                 "_sort":       sort_val,
+                "_seed":       seed,
+                "_head":       (_norm(raw_query).split() or [""])[0][:5],
             })
 
     items.sort(key=lambda x: -x["_sort"])
-    for item in items:
-        del item["_sort"]
-    return items[:TOP_N]
+
+    # Diversite : on evite un radar ou les 5 lignes disent la meme chose
+    # (ex : 5x "Fatigue ..."). Passe 1 = max 2 termes par seed ET par mot-tete ;
+    # passe 2 = on complete par score si la passe 1 n'a pas rempli TOP_N
+    # (indispensable quand pytrends rate-limite et ne renvoie qu'un seul seed).
+    picked, per_seed, per_head = [], {}, {}
+
+    def _take(check_seed: bool, check_head: bool) -> None:
+        for it in items:
+            if len(picked) >= TOP_N:
+                return
+            if it in picked:
+                continue
+            s, h = it["_seed"], it["_head"]
+            if check_seed and per_seed.get(s, 0) >= 2:
+                continue
+            if check_head and per_head.get(h, 0) >= 2:
+                continue
+            per_seed[s] = per_seed.get(s, 0) + 1
+            per_head[h] = per_head.get(h, 0) + 1
+            picked.append(it)
+
+    _take(check_seed=True,  check_head=True)   # ideal : varie en seed ET en sujet
+    _take(check_seed=False, check_head=True)   # 1 seed a repondu : on garde la variete de sujet
+    _take(check_seed=False, check_head=False)  # dernier recours : remplir les 5 lignes
+
+    for item in picked:
+        del item["_sort"], item["_seed"], item["_head"]
+    return picked
 
 
 def discover_rising(seeds: list, pt: TrendReq, label: str) -> list:
@@ -284,11 +451,11 @@ def main():
             pass
 
     if not patho_top and prev_data.get("pathologies"):
-        patho_top = prev_data["pathologies"]
+        patho_top = _sanitize_cached(prev_data["pathologies"])
         print(f"  [FALLBACK] pathologies vide -> reutilise donnees precedentes ({len(patho_top)} termes)")
 
     if not soin_top and prev_data.get("soins"):
-        soin_top = prev_data["soins"]
+        soin_top = _sanitize_cached(prev_data["soins"])
         print(f"  [FALLBACK] soins vide -> reutilise donnees precedentes ({len(soin_top)} termes)")
 
     # ── Carry-forward par colonne (anti colonne-vide, PERENNE) ────────
@@ -305,7 +472,7 @@ def main():
         last_good["pathologies"] = patho_top
         last_good["pathologies_from"] = today.isoformat()
     elif last_good.get("pathologies"):
-        patho_top = last_good["pathologies"]
+        patho_top = _sanitize_cached(last_good["pathologies"])
         patho_stale = True
         print(f"  [CARRY] pathologies vide -> reprise du {last_good.get('pathologies_from','?')} ({len(patho_top)} termes)")
 
@@ -314,7 +481,7 @@ def main():
         last_good["soins"] = soin_top
         last_good["soins_from"] = today.isoformat()
     elif last_good.get("soins"):
-        soin_top = last_good["soins"]
+        soin_top = _sanitize_cached(last_good["soins"])
         soin_stale = True
         print(f"  [CARRY] soins vide -> reprise du {last_good.get('soins_from','?')} ({len(soin_top)} termes)")
 
