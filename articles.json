@@ -1,6 +1,131 @@
 {
   "articles": [
     {
+      "id": "actu_2026_07_27_5",
+      "date": "2026-07-27",
+      "type": "actu",
+      "categorie": "business_officine",
+      "titre": "Doctolib aspire vos ordonnances dès août : ce que ça change pour l'officine",
+      "resume": "À partir d'août 2026, Doctolib utilisera les données de santé de ses 60 millions d'utilisateurs français - ordonnances incluses - pour entraîner ses modèles d'IA. Pour le pharmacien titulaire, l'enjeu est existentiel : qui contrôle la donnée patient contrôle demain le parcours de...",
+      "source": "Pharm'Actus · Le Monde — Doctolib et l'IA : ce qu'il faut savoir sur son programme de recherche utilisant vos données personnelles, RGPD — Règlement UE 2016/679 (cadre applicable aux données de santé)",
+      "source_url": "https://www.lemonde.fr/pixels/article/2026/07/26/doctolib-et-l-ia-ce-qu-il-faut-savoir-sur-son-programme-de-recherche-utilisant-vos-donnees-personnelles-a-partir-du-mois-d-aout_6732692_4408996.html",
+      "tiktok_url": "",
+      "badge_label": "Business",
+      "image_url": "assets/img_actu_2026_07_27_5.jpg",
+      "tags": [
+        "donnees-de-sante",
+        "numerique",
+        "doctolib",
+        "dossier-pharmaceutique"
+      ],
+      "full_text": "À partir d'août 2026, Doctolib utilisera les données de santé de ses 60 millions d'utilisateurs français - ordonnances incluses - pour entraîner ses modèles d'IA. Pour le pharmacien titulaire, l'enjeu est existentiel : qui contrôle la donnée patient contrôle demain le parcours de soins.\n\n**Contexte**\n\nDepuis le 26 juillet 2026, Le Monde révèle que Doctolib active un programme de recherche en IA utilisant les données personnelles de ses utilisateurs : ordonnances, antécédents médicaux, listes de médicaments. Le dispositif entre en vigueur en août 2026. Les patients peuvent s'y opposer (opt-out), mais le mécanisme par défaut reste l'inclusion automatique.\n\nDoctolib, c'est aujourd'hui 60 millions de patients inscrits en France, 350 000 professionnels de santé connectés, et une valorisation estimée à plus de 6 milliards d'euros lors de sa dernière levée de fonds (2021). La plateforme est déjà présente dans la gestion des rendez-vous de vaccination officinale dans de nombreuses pharmacies.\n\nLe cadre réglementaire applicable est celui du RGPD (règlement UE 2016/679) et de la loi Informatique et Libertés. Le Health Data Hub, opérateur national des données de santé, n'est pas cité comme partenaire dans les informations disponibles à ce stade. Ce programme Doctolib est donc distinct du circuit réglementé du Système National des Données de Santé (SNDS). C'est précisément ce point qui interpelle : une entreprise privée agrège des données médicales sensibles en dehors du cadre souverain habituel.\n\n**Analyse business**\n\n**Pourquoi c'est un sujet business pour l'officine - et pas seulement éthique**\n\nPremier angle : la désintermédiation. Doctolib collecte aujourd'hui ce que l'officine possède en exclusivité depuis 30 ans - la connaissance de l'historique médicamenteux du patient. Avec 60 millions de profils enrichis d'ordonnances numérisées, la plateforme devient potentiellement capable de proposer des alertes d'interactions, des rappels de renouvellement, voire des orientations vers des services de soins. Des fonctions qui sont aujourd'hui le cœur de valeur ajoutée du pharmacien.\n\nDeuxième angle : la concurrence sur les services. Doctolib a déjà lancé Doctolib Pro avec des modules de télésuivi. Si demain la plateforme exploite la donnée ordonnance pour proposer un service de renouvellement automatisé ou d'accompagnement thérapeutique à l'IA, elle marche directement sur le terrain des entretiens pharmaceutiques (dont les honoraires sont définis par avenants conventionnels) et des bilans de médication.\n\nTroisième angle : la donnée comme actif stratégique non rémunéré. L'officine française dispense un volume considérable de boîtes chaque année. Chaque dispensation génère une donnée qui, agrégée, représente une valeur stratégique très significative pour un acteur de la donnée de santé. La pharmacie cède cette valeur gratuitement via les ordonnances numérisées que le patient charge lui-même sur Doctolib - sans aucune contrepartie conventionnelle ni rémunération.\n\nQuatrième angle : le risque RGPD pour l'officine. Si un patient demande à sa pharmacie d'expliquer pourquoi ses données figurent dans un algorithme Doctolib, l'officine n'est pas responsable - mais elle sera en première ligne de la question. Former l'équipe à répondre à ces interpellations devient une nécessité opérationnelle dès août 2026.\n\nEnfin, la question de l'opt-out par défaut mérite attention : seuls les patients proactifs et informés se désengageront. La majorité des 60 millions d'utilisateurs restera incluse, faute d'information suffisante.\n\n**Recommandations actionnables**\n\n1. **Auditer ta présence Doctolib** - Vérifie quelles données transitent via Doctolib dans tes flux de prise de rendez-vous vaccination ou entretiens. Si tu as intégré Doctolib dans ton parcours patient, identifie exactement ce que la plateforme voit.\n\n2. **Former l'équipe aux questions patients** - Dès août, des patients vont poser des questions en comptoir. Prépare une réponse courte, factuelle et rassurante : \"Doctolib utilise les données que vous avez vous-même renseignées sur leur plateforme - votre officine n'y est pas partie prenante.\"\n\n3. **Valoriser ton propre outil de relation patient** - Face à Doctolib, ton Dossier Pharmaceutique (DP, alimenté par des millions de patients) reste sous maîtrise professionnelle. Rappelle à tes patients que le DP est géré par l'Ordre des pharmaciens, hors logique commerciale.\n\n4. **Surveiller l'évolution réglementaire** - La CNIL instruit actuellement plusieurs dossiers sur l'usage des données de santé par des acteurs privés. Un recadrage est possible d'ici fin 2026. Reste en veille via les alertes CNIL et les publications de l'Ordre.\n\n5. **Positionner tes entretiens pharmaceutiques comme alternative souveraine** - Face à l'IA Doctolib, le suivi humain et réglementé que tu proposes (bilans partagés de médication, entretiens AVK, asthme...) est un argument de différenciation fort. C'est le bon moment pour communiquer dessus auprès de tes patients fidèles.\n\n**Sources citees**\n\n- Le Monde - Doctolib et l'IA : ce qu'il faut savoir sur son programme de recherche utilisant vos données personnelles\n- RGPD - Règlement UE 2016/679 (cadre applicable aux données de santé)\n- Ordre national des pharmaciens - Dossier Pharmaceutique"
+    },
+    {
+      "id": "actu_2026_07_27_4",
+      "date": "2026-07-27",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "Dépakote en tension : l'ANSM prend la main sur la gestion des stocks",
+      "resume": "L'ANSM signale une tension d'approvisionnement sur les deux dosages de Dépakote (divalproate de sodium, 250 mg et 500 mg comprimés gastrorésistants) commercialisés par Sanofi. Une molécule indiquée dans les épisodes maniaques du trouble bipolaire. L'Agence organise la gestion des stocks disponibles.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/therapeutique/vigilances/depakote-lansm-organise-la-gestion-des-stocks-disponibles",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_07_27_4.jpg",
+      "tags": [
+        "rupture",
+        "ansm",
+        "divalproate",
+        "bipolaire",
+        "approvisionnement"
+      ],
+      "full_text": "Encore une rupture, encore du divalproate. L'ANSM vient de placer sous tension d'approvisionnement les deux dosages de Dépakote commercialisés par Sanofi en comprimés gastrorésistants : 250 mg et 500 mg. Deux dosages, un seul laboratoire, zéro alternative de substitution simple. Ca commence mal.\n\nPour rappel, Dépakote (divalproate de sodium) est indiqué dans le traitement des épisodes maniaques du trouble bipolaire. Ce n'est pas un médicament qu'on peut interrompre brutalement ou remplacer à la légère : les enjeux de tolérance et de suivi plasmatique sont réels. Tes patients bipolaires sous Dépakote ont souvent mis du temps à trouver leur équilibre thérapeutique. Une rupture, c'est un risque de déstabilisation.\n\nL'ANSM a donc décidé d'organiser activement la gestion des stocks disponibles, ce qui signifie concrètement : priorisation des patients déjà traités, dispensation encadrée, et probablement des recommandations de ne pas initier de nouveaux traitements sur cette spécialité pendant la tension.\n\nQue faire au comptoir ? Plusieurs réflexes immédiats. Identifier tes patients actuellement sous Dépakote et vérifier leur stock personnel : si quelqu'un est à quelques jours de renouvellement, anticipe maintenant. Contacter tes grossistes pour évaluer les disponibilités réelles dans ton secteur. Et alerter les prescripteurs (psychiatres, médecins traitants) pour qu'ils soient informés de la situation.\n\nLa question de la substitution par Dépakine (valproate de sodium) ou d'autres formes galéniques est une décision MEDICALE, pas officinale : ne substitue pas de ta propre initiative sur une molécule à index thérapeutique étroit avec autant d'enjeux psychiatriques. Le médecin doit être dans la boucle.\n\nEt devinez quoi ? Ce n'est pas la première tension sur le divalproate. C'est une molécule ancienne, peu rentable à produire, avec une demande stable mais pas glamour pour les industriels. Le sujet structurel des pénuries sur les médicaments psychiatriques mériterait une vraie réponse de fond au niveau européen. On attend toujours.\n\nDemain matin au comptoir : check immédiat de tes stocks Dépakote, contact grossiste, et alerte proactive à tes prescripteurs référents en psychiatrie. Ne laisse pas un patient bipolaire stable se retrouver sans traitement faute d'anticipation."
+    },
+    {
+      "id": "actu_2026_07_27_3",
+      "date": "2026-07-27",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "Rougeole et vaccin voyageurs : les recommandations 2026 sont là",
+      "resume": "Les recommandations 2026 sur la vaccination rougeole avant voyage sont publiées. Qui vacciner, quel calendrier, quelles populations prioritaires : le point complet. Et bonne nouvelle, le pharmacien vaccinateur est pleinement dans la boucle.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/nouvelles-missions/vaccination/rougeole-pourquoi-mettre-a-jour-la-vaccination-avant-un-voyage",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_07_27_3.jpg",
+      "tags": [
+        "vaccination",
+        "rougeole",
+        "voyage",
+        "nouvelles-missions",
+        "officine"
+      ],
+      "full_text": "La rougeole, c'est une maladie qu'on aurait dû éradiquer depuis longtemps. Et pourtant, elle revient régulièrement sur le devant de la scène, notamment via les voyageurs non ou mal immunisés qui ramènent le virus dans les bagages.\n\nLes recommandations 2026 pour la vaccination des voyageurs contre la rougeole viennent d'être actualisées. Le Moniteur des Pharmacies en fait la synthèse : qui vacciner, selon quel calendrier, et avec quel intérêt individuel ET collectif. Parce que oui, un malade peut contaminer jusqu'à 15 à 20 personnes non immunisées. C'est l'une des maladies les plus contagieuses qui existent.\n\nBonne nouvelle dans ce contexte : en tant que pharmacien formé à la vaccination, tu es pleinement habilité à vacciner contre la rougeole (via le vaccin ROR, Priorix ou M-M-Rvaxpro) pour les personnes de 11 ans et plus, conformément au cadre national issu de l'arrêté et du décret du 8 août 2023. Tu peux également, dans ce cadre, établir l'ordonnance si le patient ne dispose pas de prescription médicale préalable. C'est une mission valorisable, concrète, et qui correspond exactement au profil du voyageur qui passe en officine quelques semaines avant son départ.\n\nL'été est la période typique des départs vers des zones à risque (Afrique, Asie du Sud-Est, Moyen-Orient, Amérique latine). C'est aussi le moment où les gens pensent enfin à vérifier leur carnet de vaccination, souvent à la dernière minute.\n\nLe point de vigilance : deux doses de ROR à au moins un mois d'intervalle sont nécessaires pour être considéré comme protégé. Si le patient se présente 3 semaines avant le départ sans aucune dose documentée, une seule injection est réalisable dans ce délai. Protège partiellement, mais vaut mieux que rien. Et au retour, on complète.\n\nDemain matin au comptoir : c'est le moment idéal pour systématiser la question \"Vous partez en voyage cet été ? Votre vaccination rougeole est à jour ?\" sur toutes les ordonnances de voyageurs ou les demandes de conseils voyage. Ca prend 10 secondes et ça peut changer beaucoup."
+    },
+    {
+      "id": "actu_2026_07_27_2",
+      "date": "2026-07-27",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "130 millions de dollars pour un nouvel inhibiteur de la goutte : le URAT1 revient en force",
+      "resume": "Crystalys Therapeutics lève 130 millions de dollars pour financer les essais pivotaux de son dotinurad, un inhibiteur du URAT1 ciblant la goutte. La même cible qu'une molécule pour laquelle Sobi a déboursé 950 millions. En France, la goutte reste sous-traitée et sous-dépistée. Intéressant à suivre.",
+      "source": "MedCity News",
+      "source_url": "https://medcitynews.com/2026/07/crystalys-gout-urat1-inhibitor-dotinurad-arthritis-inflammation/",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/img_actu_2026_07_27_2.jpg",
+      "tags": [
+        "goutte",
+        "urat1",
+        "innovation",
+        "pipeline",
+        "recherche"
+      ],
+      "full_text": "130 millions de dollars sur la table pour traiter la goutte. Ca peut paraître surprenant pour une pathologie qu'on associe encore aux banquets du XVIIIe siècle, mais la réalité épidémiologique est là : la goutte touche environ 1% de la population générale en France, et reste chroniquement sous-traitée.\n\nCrystalys Therapeutics vient de boucler ce tour de financement pour financer les essais pivotaux de son dotinurad. La molécule cible le transporteur URAT1, responsable de la réabsorption rénale de l'urate. Bloquer URAT1, c'est augmenter l'élimination urinaire de l'acide urique, donc faire baisser l'uricémie. L'objectif : réduire les crises et les dépôts de cristaux de monosodium urate.\n\nEt devinez quoi ? Cette même cible URAT1 a tellement convaincu que Sobi a déboursé 950 millions de dollars pour intégrer une molécule similaire dans son pipeline. Deux acteurs majeurs sur le même mécanisme d'action, c'est rarement un hasard.\n\nPourquoi ça devrait t'intéresser au comptoir ? Parce que le traitement de fond de la goutte en France repose encore très majoritairement sur l'allopurinol, avec le fébuxostat en deuxième ligne, et une observance qui laisse souvent à désirer. Les crises aigues sont gérées par colchicine ou AINS, mais le fond du problème (l'hyperuricémie chronique) est rarement bien contrôlé. Des alternatives avec un mécanisme différent, c'est une option thérapeutique supplémentaire potentielle pour tes patients insuffisamment contrôlés.\n\nLe dotinurad est déjà commercialisé au Japon depuis 2020 sous le nom Urece, ce qui donne une visibilité sur son profil de tolérance en vie réelle. Les essais pivotaux en cours visent les marchés occidental, notamment américain et européen.\n\nHorizon d'arrivée en France : pas avant 3 à 5 ans minimum, procédure EMA incluse. Mais à l'heure où les ruptures d'allopurinol reviennent périodiquement et où la demande de meilleures options pour la goutte est réelle, ce pipeline mérite d'être sur ton radar.\n\nDemain matin au comptoir : si tu as des patients goutteux sous allopurinol avec un contrôle insuffisant de leur uricémie, c'est déjà l'occasion de relancer le dialogue avec leur médecin. Les options de demain se préparent avec la prescription d'aujourd'hui."
+    },
+    {
+      "id": "actu_2026_07_27_1",
+      "date": "2026-07-27",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "Franchises médicales : les médicaments à SMR faible dans le collimateur",
+      "resume": "La ministre a annoncé le 23 juillet un relèvement du plafond des franchises médicales, avec un ciblage assumé des médicaments à SMR faible et modéré. Derrière l'annonce, un rééquilibrage profond entre Assurance maladie et complémentaires santé se dessine. Au comptoir, ça risque de faire des vagues.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/franchises-medicales-les-medicaments-a-smr-faible-et-modere-dans-le-viseur",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_07_27_1.jpg",
+      "tags": [
+        "franchise",
+        "smr",
+        "remboursement",
+        "assurance-maladie",
+        "lfss"
+      ],
+      "full_text": "Le gouvernement a dit la partie silencieuse à voix haute. Derrière le relèvement du plafond des franchises médicales annoncé le 23 juillet par la ministre, c'est bien les médicaments à SMR faible et modéré qui sont visés en priorité.\n\nLa logique est claire : si ton médicament ne rend pas suffisamment service médical, le patient va payer davantage. L'Assurance maladie se désengage progressivement, et les mutuelles héritent du reste. Un transfert de charge en douceur, mais assumé.\n\nConcrètement, ça concerne quoi ? Des médicaments encore très présents dans les ordonnances : antalgiques de palier 1, antispasmodiques, certains veinotoniques, des protecteurs gastriques de confort... Des lignes d'ordonnances que tu délivres encore quotidiennement.\n\nL'enjeu pour l'officine est double. Premier impact : des patients qui vont poser des questions sur le reste à charge, et qui risquent de renoncer à certains traitements. Tu vas devoir expliquer, rassurer, et parfois orienter vers des alternatives. Deuxième impact : si les mutuelles remboursent moins (ou si les plafonds de franchises augmentent), certains patients pourraient se détourner de ces produits au profit de l'automédication OTC... dont la marge te revient directement. Ca te rappelle quelque chose ?\n\nLe Moniteur des Pharmacies souligne que plusieurs autres leviers d'économies émergent au-delà des seules baisses de prix, et que les prochaines étapes réglementaires sont encore à venir avant entrée en vigueur effective. Rien n'est donc gravé dans le marbre à ce stade : reste en veille active sur la parution des textes au JORF.\n\nDu côté des syndicats, ni la FSPF ni l'USPO n'ont publié à ce jour de réaction officielle sur ce volet spécifique des franchises SMR faible. A suivre de près lors des prochaines concertations LFSS.\n\nDemain matin au comptoir : prépare ton équipe à la question \"pourquoi je paie plus ?\" sur des médicaments que les patients considèrent comme acquis. Et commence à identifier quels SMR faibles de ton assortiment pourraient basculer en OTC conseillé si la pression remboursement s'accentue."
+    },
+    {
+      "id": "lsv_2026_07_27",
+      "date": "2026-07-27",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? La première greffe de cheveux utilisait du cuir chevelu entier",
+      "resume": "Avant les implants capillaires modernes, les chirurgiens transplantaient des lambeaux entiers de peau pour traiter les calvities ou cicatrices. Une technique radicale, douloureuse, et franchement gore - qui a pourtant posé les bases de la microchirurgie d'aujourd'hui.",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_07_27.jpg",
+      "tags": [
+        "histoire",
+        "chirurgie",
+        "greffe",
+        "dermatologie",
+        "decouverte"
+      ],
+      "full_text": "On parle souvent des grandes greffes d'organes, mais celle-là, on l'oublie vite. Et pourtant, elle mérite sa place au panthéon des idées médicales aussi audacieuses que terrifiantes.\n\nTout commence en 1822, à Würzburg, en Allemagne. Un chirurgien du nom de Johann Friedrich Dieffenbach - oui, le nom fait déjà mal - transplante des lambeaux entiers de peau capillaire d'un endroit à un autre du crâne. Pas des follicules pileux, pas des micro-greffons. Des morceaux de cuir chevelu. Découpés, déplacés, recousus. À vif, sans anesthésie digne de ce nom, avec des instruments qu'on utiliserait aujourd'hui pour tailler une planche à fromage.\n\nEt ça marchait. Enfin, parfois. Le taux de rejet était catastrophique, les infections nombreuses, et les résultats esthétiques… mettons que personne ne ressortait de là couvert de gloire capillaire. Mais Dieffenbach prouvait quelque chose de fondamental : la peau peut survivre après transplantation. Ce principe, anodin aujourd'hui, était révolutionnaire à l'époque.\n\nLe vrai twist ? Il faut attendre 1939 pour que le Dr Okuda, un dermatologue japonais, publie la première description des micro-greffons folliculaires - des tout petits greffons de 1 à 3 follicules. Mais son article, rédigé en japonais, passe totalement inaperçu en Occident. La guerre. Le contexte. L'oubli. Ce n'est que dans les années 1980 que la technique sera redécouverte indépendamment aux États-Unis.\n\nAujourd'hui, la greffe capillaire FUE (Follicular Unit Extraction) est une des chirurgies esthétiques les plus pratiquées au monde. Des millions de patients, des milliers de cliniques, un marché à plusieurs milliards d'euros. Et au comptoir, on reçoit régulièrement des questions sur le minoxidil, le finastéride, les shampoings kérato-stimulants. Derrière chaque flacon de lotion capillaire, il y a deux siècles d'une histoire aussi dense que… la chevelure qu'on espère retrouver."
+    },
+    {
       "id": "actu_2026_07_25_5",
       "date": "2026-07-25",
       "type": "actu",
@@ -11180,6 +11305,6 @@
       ]
     }
   ],
-  "count": 540,
-  "updated_at": "2026-07-25T04:15:45.357015+02:00"
+  "count": 546,
+  "updated_at": "2026-07-27T04:09:23.032077+02:00"
 }

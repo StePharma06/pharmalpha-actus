@@ -1,0 +1,38 @@
+{
+  "generated_at": "2026-07-27T04:09:20.347450+02:00",
+  "run_date": "2026-07-27",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Franchises médicales : les médicaments à SMR faible dans le collimateur",
+      "resume": "La ministre a annoncé le 23 juillet un relèvement du plafond des franchises médicales, avec un ciblage assumé des médicaments à SMR faible et modéré. Derrière l'annonce, un rééquilibrage profond entre Assurance maladie et complémentaires santé se dessine. Au comptoir, ça risque de faire des vagues.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/franchises-medicales-les-medicaments-a-smr-faible-et-modere-dans-le-viseur",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Doctolib aspire vos ordonnances dès août : ce que ça change pour l'officine",
+      "resume": "À partir d'août 2026, Doctolib utilisera les données de santé de ses 60 millions d'utilisateurs français - ordonnances incluses - pour entraîner ses modèles d'IA. Pour le pharmacien titulaire, l'enjeu est existentiel : qui contrôle la donnée patient contrôle demain le parcours de...",
+      "source": "Pharm'Actus · Le Monde — Doctolib et l'IA : ce qu'il faut savoir sur son programme de recherche utilisant vos données personnelles, RGPD — Règlement UE 2016/679 (cadre applicable aux données de santé)",
+      "source_url": "https://www.lemonde.fr/pixels/article/2026/07/26/doctolib-et-l-ia-ce-qu-il-faut-savoir-sur-son-programme-de-recherche-utilisant-vos-donnees-personnelles-a-partir-du-mois-d-aout_6732692_4408996.html",
+      "confidence_score": 0.72,
+      "warnings": [
+        "Le chiffre de 60 millions d'utilisateurs Doctolib est celui communiqué par la société en 2025-2026 — à vérifier sur le site officiel Doctolib ou rapport annuel.",
+        "La valorisation de 6 milliards d'euros date de la levée de fonds 2021 (série D) — la valorisation actuelle n'est pas publique.",
+        "Le chiffre de 1,5 milliard de boîtes dispensées par an est une approximation GERS/ANSM : à recouper avec les dernières données GERS disponibles.",
+        "Les honoraires d'entretiens pharmaceutiques cités (5 à 60 €) sont des fourchettes indicatives issues des avenants conventionnels — les montants exacts varient selon le type d'entretien et l'avenant applicable : à vérifier sur ameli.fr.",
+        "Le partenariat ou non de Doctolib avec le Health Data Hub n'est pas confirmé publiquement à ce stade — formulé avec prudence.",
+        "Aucune position syndicale (FSPF, USPO, UPGF) n'est disponible à ce jour sur ce sujet spécifique — non citée pour éviter toute invention.",
+        "L'instruction CNIL mentionnée est une hypothèse de veille réglementaire, pas une procédure confirmée publiquement.",
+        "4 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

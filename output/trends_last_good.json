@@ -1,58 +1,58 @@
 {
   "pathologies": [
     {
-      "display": "What causes tiredness and fatigue",
-      "delta_label": "↑ 87 150",
+      "display": "Fatigue apres canicule",
+      "delta_label": "↑ 81 700",
       "trend": "up"
     },
     {
       "display": "Fatigue après canicule",
-      "delta_label": "↑ 36 150",
+      "delta_label": "↑ 43 450",
       "trend": "up"
     },
     {
-      "display": "Canicule fatigue intense",
-      "delta_label": "↑ 23 400",
+      "display": "Fatigue post canicule",
+      "delta_label": "↑ 25 900",
       "trend": "up"
     },
     {
-      "display": "Coup de fatigue symptômes",
-      "delta_label": "↑ 15 600",
+      "display": "Fatigue constante",
+      "delta_label": "↑ 15 550",
       "trend": "up"
     },
     {
-      "display": "Walmart near me",
-      "delta_label": "↑ 14 500",
+      "display": "Douleurs aux articulations et fatigue",
+      "delta_label": "↑ 14 350",
       "trend": "up"
     }
   ],
-  "pathologies_from": "2026-07-25",
+  "pathologies_from": "2026-07-27",
   "soins": [
     {
-      "display": "What causes poor digestion",
-      "delta_label": "↑ 307 800",
+      "display": "Bicarbonate de sodium digestion",
+      "delta_label": "↑ 27 000",
       "trend": "up"
     },
     {
-      "display": "Immunite presidentielle",
-      "delta_label": "↑ 186 850",
+      "display": "Medicament pour la digestion",
+      "delta_label": "↑ 8 550",
       "trend": "up"
     },
     {
-      "display": "Oscillo immunite",
-      "delta_label": "↑ 138 450",
+      "display": "Matcha digestion",
+      "delta_label": "↑ 6 750",
       "trend": "up"
     },
     {
-      "display": "Immunite parlementaire",
-      "delta_label": "↑ 80 050",
+      "display": "Digestion difficile que prendre",
+      "delta_label": "↑ 6 650",
       "trend": "up"
     },
     {
-      "display": "Digestion difficile remède grand-mère",
-      "delta_label": "↑ 49 350",
+      "display": "Temps de digestion d'un repas",
+      "delta_label": "↑ 6 150",
       "trend": "up"
     }
   ],
-  "soins_from": "2026-07-25"
+  "soins_from": "2026-07-27"
 }
