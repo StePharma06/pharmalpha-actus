@@ -3,9 +3,10 @@ name: Sync to pharmalpha-site (Vercel)
 # Mirror new actus content into pharmalpha-site/actus/ so Vercel
 # serves the same articles under https://pharmalpha.fr/actus/.
 #
-# IMPORTANT: this is a DUAL PUSH. The GitHub Pages deploy
-# (actus.pharmalpha.fr) MUST keep running in parallel until
-# Stephen validates the final DNS switch.
+# GitHub Pages deploy for this repo has been retired (Stephen validated
+# the cut on 2026-07-28): DNS was already on Vercel, Pages was only
+# serving a duplicate copy that diluted crawl budget (GSC "duplicate,
+# no canonical"). This sync is now the ONLY publication path.
 
 on:
   workflow_run:
