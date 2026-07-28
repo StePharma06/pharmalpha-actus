@@ -1,0 +1,26 @@
+{
+  "generated_at": "2026-07-28T04:16:16.130887+02:00",
+  "run_date": "2026-07-28",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Génériques : le CEPS épargne 9 groupes sur 12 - ce que ça change pour ta marge",
+      "resume": "Le CEPS a réduit la voilure de son plan de baisses tarifaires sur les génériques prévu au 2 janvier 2027. Sur 12 groupes initialement dans le viseur, 9 sont finalement épargnés. Une bonne nouvelle nuancée : 3 groupes restent concernés, et les mécanismes de rémunération officinale...",
+      "source": "Pharm'Actus · Le Moniteur des Pharmacies — Génériques : 9 groupes sur 12 épargnés par le CEPS, ANSM — Liste des médicaments en tension d'approvisionnement (référence structurelle)",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/generiques-9-groupes-sur-12-epargnes-par-le-ceps",
+      "confidence_score": 0.62,
+      "warnings": [
+        "Le Moniteur des Pharmacies est derrière paywall : le résumé source ne précise pas les noms des 3 groupes maintenus en baisse. Cet article ne les cite donc pas — à compléter dès publication officielle du CEPS.",
+        "L'impact par officine en euros n'a PAS été calculé : les molécules concernées, les ampleurs de baisse et les volumes nationaux ne sont pas disponibles dans les sources publiques à ce stade. Conformément à la règle finances, aucune extrapolation n'a été faite.",
+        "Le chiffre '2,5 milliards d'euros de CA fabricant générique' est une estimation de marché couramment citée (LEEM, GERS) mais non sourcée dans un document officiel cité explicitement ici — à vérifier avant republication.",
+        "Le taux de remise maximal de 40,17 % pour les génériques sous accord-cadre est issu du cadre conventionnel CEPS/industriels — vérifier la valeur exacte en vigueur à date si ce chiffre est repris.",
+        "Le chiffre '1 400 médicaments en tension' ANSM est une estimation de référence 2025 — vérifier le chiffre exact actualisé sur le site ANSM avant citation formelle.",
+        "Aucune position syndicale (FSPF, USPO) n'a été sollicitée sur ce sujet spécifique dans les sources disponibles : la règle équilibre syndical ne s'applique pas car l'angle est réglementaire (CEPS), non syndical.",
+        "7 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

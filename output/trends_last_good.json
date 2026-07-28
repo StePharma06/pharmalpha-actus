@@ -21,7 +21,7 @@
       "trend": "up"
     }
   ],
-  "pathologies_from": "2026-07-27",
+  "pathologies_from": "2026-07-28",
   "soins": [
     {
       "display": "Bicarbonate de sodium digestion",
@@ -49,5 +49,5 @@
       "trend": "up"
     }
   ],
-  "soins_from": "2026-07-27"
+  "soins_from": "2026-07-28"
 }
