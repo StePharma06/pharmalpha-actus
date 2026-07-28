@@ -16,7 +16,15 @@ on:
     branches: [master]
     paths:
       - '*.html'
+      # 'articles/**' est INDISPENSABLE : les articles PILLAR vivent dans des
+      # sous-dossiers (articles/<theme>/*.html) et '*.html' ne matche QUE la
+      # racine. Sans cette ligne, editer un pillar ne declenche aucune sync et
+      # la correction n'arrive jamais en prod (vecu le 2026-07-28 : correction
+      # de tarif restee bloquee jusqu'a un push racine sans rapport).
+      - 'articles/**'
       - 'assets/**'
+      - 'output/**'
+      - 'articles.json'
       - 'scripts/sync_to_vercel.py'
   workflow_dispatch:
 
