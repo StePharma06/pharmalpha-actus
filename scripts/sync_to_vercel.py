@@ -156,6 +156,15 @@ def regenerate_sitemap_actus():
             date = a.get("date", "")
             if aid:
                 urls.append((f"https://pharmalpha.fr/actus/articles/{aid}.html", date, "monthly", "0.5"))
+        # Articles PILLAR (sous-dossiers articles/<theme>/*.html) : ils ne sont PAS
+        # dans articles.json, une regeneration naive les faisait disparaitre du sitemap.
+        pillar_dir = TARGET / "articles"
+        if pillar_dir.exists():
+            for sub in sorted(p for p in pillar_dir.iterdir() if p.is_dir()):
+                for html in sorted(sub.glob("*.html")):
+                    urls.append((
+                        f"https://pharmalpha.fr/actus/articles/{sub.name}/{html.name}",
+                        None, "monthly", "0.8"))
         # Build XML
         lines = ['<?xml version="1.0" encoding="UTF-8"?>',
                  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
