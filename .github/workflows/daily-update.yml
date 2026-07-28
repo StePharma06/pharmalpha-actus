@@ -7,8 +7,6 @@ on:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 jobs:
   check-day:
@@ -78,25 +76,3 @@ jobs:
             if [ "$pushed" != "true" ]; then echo "ERREUR: push impossible apres 5 tentatives"; exit 1; fi
             echo "has_changes=true" >> $GITHUB_OUTPUT
           fi
-
-      # --- Deploiement GitHub Pages (directement ici, car le push
-      #     par github-actions[bot] ne declenche pas deploy.yml) ---
-      - uses: actions/configure-pages@v4
-
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: .
-
-  deploy:
-    needs: [check-day, update]
-    if: needs.check-day.outputs.skip != 'true'
-    runs-on: ubuntu-latest
-    concurrency:
-      group: pages
-      cancel-in-progress: true
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
