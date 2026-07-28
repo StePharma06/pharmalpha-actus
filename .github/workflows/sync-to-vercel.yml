@@ -62,7 +62,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add actus/
+          # sitemap-actus.xml est regenere A LA RACINE par sync_to_vercel.py.
+          # Sans ce add, il etait regenere puis jete a chaque run : Google n'a plus
+          # decouvert un seul article entre le 2026-06-30 et le 2026-07-28.
+          git add actus/ sitemap-actus.xml
           if git diff --staged --quiet; then
             echo "No changes to sync"
           else
