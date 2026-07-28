@@ -1979,7 +1979,7 @@ def generate_articles_json(index_html, full_text_by_id=None):
     print(f"  articles-count.json genere (count: {pubs_count})")
 
 
-def _build_article_page_html(article_id: str, titre_raw: str, resume_raw: str, image_url: str, date_str: str, categorie: str, full_text_raw: str = "", source_url: str = "", source_name: str = "") -> str:
+def _build_article_page_html(article_id: str, titre_raw: str, resume_raw: str, image_url: str, date_str: str, categorie: str, full_text_raw: str = "", source_url: str = "", source_name: str = "", date_modified_str: str = "") -> str:
     """Build a single article stub HTML with full SEO metadata.
 
     The canonical and og:url both point to pharmalpha.fr/actus (Vercel target),
@@ -2012,7 +2012,15 @@ def _build_article_page_html(article_id: str, titre_raw: str, resume_raw: str, i
 
     # Date ISO for schema (article date is YYYY-MM-DD, no time known)
     date_published = f"{date_str}T06:00:00+02:00" if date_str else ""
-    date_modified = date_published  # no separate modified date available
+    # dateModified reflete la DERNIERE modification reelle (champ "date_modified" de
+    # l'article, pose lors d'une correction). Sans ca, un article corrige gardait la
+    # date de publication : perte du signal de fraicheur Google/LLM et opacite sur
+    # les corrections. Fallback = date de publication.
+    if date_modified_str:
+        date_modified = (date_modified_str if "T" in date_modified_str
+                         else f"{date_modified_str}T06:00:00+02:00")
+    else:
+        date_modified = date_published
 
     # Schema: map internal categorie to a human-readable articleSection
     section_map = {
@@ -2150,6 +2158,7 @@ def generate_article_pages(articles):
             full_text_raw=a.get("full_text", ""),
             source_url=a.get("source_url", ""),
             source_name=a.get("source", ""),
+            date_modified_str=a.get("date_modified", ""),
         )
         page_path = articles_dir / f"{article_id}.html"
         page_path.write_text(page_html, encoding="utf-8")
