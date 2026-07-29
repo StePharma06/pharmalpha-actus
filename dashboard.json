@@ -1,45 +1,29 @@
 {
- "genere_le": "2026-07-28T07:39:07+02:00",
+ "genere_le": "2026-07-29T07:43:43+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1020,
+ "abonnes_total": 1021,
  "nouveaux_7j": 4,
- "nouveaux_cumul": 1013,
+ "nouveaux_cumul": 1014,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-07-21",
-  "au": "2026-07-28",
-  "delivres": 6560,
-  "ouvertures": 2293,
-  "ouvertures_uniques": 1693,
-  "clics": 2207,
-  "clics_uniques": 401,
-  "taux_ouverture_pct": 25.8,
-  "taux_clic_pct": 6.1,
-  "ctor_pct": 23.7,
+  "du": "2026-07-22",
+  "au": "2026-07-29",
+  "delivres": 6559,
+  "ouvertures": 2292,
+  "ouvertures_uniques": 1711,
+  "clics": 2109,
+  "clics_uniques": 376,
+  "taux_ouverture_pct": 26.1,
+  "taux_clic_pct": 5.7,
+  "ctor_pct": 22.0,
   "top_articles": [
-   {
-    "id": "actu_2026_07_21_5",
-    "titre": "Vaccination grippe obligatoire : ce que ça change vraiment pour tes 6 000 € de ROSP",
-    "date": "2026-07-21",
-    "categorie": "business_officine",
-    "clics": 65,
-    "lecteurs": 39
-   },
    {
     "id": "actu_2026_07_25_5",
     "titre": "Franchises médicales doublées : 750 M€ d'économies, mais quel impact sur le flux officine ?",
     "date": "2026-07-25",
     "categorie": "business_officine",
-    "clics": 54,
-    "lecteurs": 35
-   },
-   {
-    "id": "actu_2026_07_21_1",
-    "titre": "Quétiapine LP : retour au droit commun, mode d'emploi au comptoir",
-    "date": "2026-07-21",
-    "categorie": "pharma_france",
-    "clics": 63,
-    "lecteurs": 34
+    "clics": 57,
+    "lecteurs": 36
    },
    {
     "id": "actu_2026_07_27_1",
@@ -54,8 +38,8 @@
     "titre": "Doctolib aspire vos ordonnances dès août : ce que ça change pour l'officine",
     "date": "2026-07-27",
     "categorie": "business_officine",
-    "clics": 41,
-    "lecteurs": 30
+    "clics": 42,
+    "lecteurs": 31
    },
    {
     "id": "actu_2026_07_24_1",
@@ -66,6 +50,14 @@
     "lecteurs": 27
    },
    {
+    "id": "actu_2026_07_24_5",
+    "titre": "Concentration officinale : +6,3% pour les grandes, +1,6% pour les petites - le fossé se creuse",
+    "date": "2026-07-24",
+    "categorie": "business_officine",
+    "clics": 44,
+    "lecteurs": 25
+   },
+   {
     "id": "actu_2026_07_22_1",
     "titre": "Loi Neuder : la mission HTA des pharmaciens est confirmée, les décrets restent à venir",
     "date": "2026-07-22",
@@ -74,42 +66,50 @@
     "lecteurs": 24
    },
    {
-    "id": "actu_2026_07_21_3",
-    "titre": "Wegovy en comprimé : l'AMM européenne est là, le comptoir devra encore patienter",
-    "date": "2026-07-21",
-    "categorie": "bonne_nouvelle",
-    "clics": 48,
-    "lecteurs": 24
-   },
-   {
-    "id": "actu_2026_07_24_5",
-    "titre": "Concentration officinale : +6,3% pour les grandes, +1,6% pour les petites - le fossé se creuse",
-    "date": "2026-07-24",
+    "id": "actu_2026_07_28_5",
+    "titre": "Génériques : le CEPS épargne 9 groupes sur 12 - ce que ça change pour ta marge",
+    "date": "2026-07-28",
     "categorie": "business_officine",
-    "clics": 42,
+    "clics": 47,
     "lecteurs": 24
    },
    {
-    "id": "actu_2026_07_21_4",
-    "titre": "Cybersécurité à l'officine : la FSPF et l'ANSSI passent à l'action",
-    "date": "2026-07-21",
+    "id": "actu_2026_07_22_5",
+    "titre": "Antennes officinales : 13 ouvertes, des centaines de communes encore sans pharmacie",
+    "date": "2026-07-22",
+    "categorie": "business_officine",
+    "clics": 45,
+    "lecteurs": 20
+   },
+   {
+    "id": "actu_2026_07_22_4",
+    "titre": "La sonobiopsie : bientôt des diagnostics cancer et Alzheimer sans biopsie chirurgicale",
+    "date": "2026-07-22",
     "categorie": "avenir_pharma",
     "clics": 45,
-    "lecteurs": 21
+    "lecteurs": 20
+   },
+   {
+    "id": "actu_2026_07_27_3",
+    "titre": "Rougeole et vaccin voyageurs : les recommandations 2026 sont là",
+    "date": "2026-07-27",
+    "categorie": "bonne_nouvelle",
+    "clics": 30,
+    "lecteurs": 20
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-07-28",
-  "delivres": 65084,
-  "ouvertures": 26228,
-  "ouvertures_uniques": 18000,
-  "clics": 27253,
-  "clics_uniques": 4909,
+  "au": "2026-07-29",
+  "delivres": 66013,
+  "ouvertures": 26645,
+  "ouvertures_uniques": 18302,
+  "clics": 27603,
+  "clics_uniques": 4961,
   "taux_ouverture_pct": 27.7,
   "taux_clic_pct": 7.5,
-  "ctor_pct": 27.3,
+  "ctor_pct": 27.1,
   "top_articles": [
    {
     "id": "actu_2026_06_18_1",
