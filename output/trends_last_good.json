@@ -1,53 +1,58 @@
 {
   "pathologies": [
     {
-      "display": "Fatigue apres canicule",
-      "delta_label": "↑ 81 700",
+      "display": "Fatigue après canicule",
+      "delta_label": "↑ 25 000",
       "trend": "up"
     },
     {
-      "display": "Fatigue post canicule",
-      "delta_label": "↑ 25 900",
+      "display": "La fatigue en anglais",
+      "delta_label": "↑ 18 750",
       "trend": "up"
     },
     {
-      "display": "Fatigue constante",
-      "delta_label": "↑ 15 550",
+      "display": "Allergie a la poussiere",
+      "delta_label": "↑ 10 250",
       "trend": "up"
     },
     {
-      "display": "Douleurs aux articulations et fatigue",
-      "delta_label": "↑ 14 350",
+      "display": "Allergie à l'alcool",
+      "delta_label": "↑ 2 950",
+      "trend": "up"
+    },
+    {
+      "display": "Vitamine saint cyprien",
+      "delta_label": "↑ 180",
       "trend": "up"
     }
   ],
-  "pathologies_from": "2026-07-28",
+  "pathologies_from": "2026-07-29",
   "soins": [
     {
-      "display": "Bicarbonate de sodium digestion",
-      "delta_label": "↑ 27 000",
+      "display": "Immunite presidentielle",
+      "delta_label": "↑ 518 600",
       "trend": "up"
     },
     {
-      "display": "Medicament pour la digestion",
-      "delta_label": "↑ 8 550",
+      "display": "Azinc immunite",
+      "delta_label": "↑ 70 100",
       "trend": "up"
     },
     {
-      "display": "Matcha digestion",
-      "delta_label": "↑ 6 750",
+      "display": "Temps de digestion des aliments",
+      "delta_label": "↑ 24 300",
       "trend": "up"
     },
     {
-      "display": "Digestion difficile que prendre",
-      "delta_label": "↑ 6 650",
+      "display": "Calmosine digestion",
+      "delta_label": "↑ 18 700",
       "trend": "up"
     },
     {
-      "display": "Temps de digestion d'un repas",
-      "delta_label": "↑ 6 150",
+      "display": "Quies specific sommeil",
+      "delta_label": "↑ 13 250",
       "trend": "up"
     }
   ],
-  "soins_from": "2026-07-28"
+  "soins_from": "2026-07-29"
 }
