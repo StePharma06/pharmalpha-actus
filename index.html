@@ -1313,14 +1313,21 @@ body.pa-has-nav #actusHeader {
   100%     { left: 135%; }
 }
 
-/* Accroche qui alterne : 3 messages, fondu + leger glissement vertical. */
+/* Accroche qui alterne : 3 messages, fondu + leger glissement vertical.
+   La hauteur n'est PAS figee : un "sizer" invisible contenant le message le
+   plus long occupe le flux et dicte la hauteur. Sans lui, une hauteur en em
+   rognait le texte des que le message passait a 3 lignes en mobile (constat
+   375px sur le 2e bandeau). Les messages animes sont superposes en absolu. */
 .ad-rotate {
   position: relative;
   display: block;
-  height: 1.4em;
   overflow: hidden;
 }
-.ad-rotate span {
+.ad-rotate .ad-rot-sizer {
+  visibility: hidden;
+  animation: none;
+}
+.ad-rotate .ad-rot-item {
   position: absolute;
   left: 0;
   top: 0;
@@ -1328,8 +1335,8 @@ body.pa-has-nav #actusHeader {
   opacity: 0;
   animation: adRotate 13.5s ease-in-out infinite;
 }
-.ad-rotate span:nth-child(2) { animation-delay: 4.5s; }
-.ad-rotate span:nth-child(3) { animation-delay: 9s; }
+.ad-rotate .ad-rot-item:nth-child(3) { animation-delay: 4.5s; }
+.ad-rotate .ad-rot-item:nth-child(4) { animation-delay: 9s; }
 @keyframes adRotate {
   0%              { opacity: 0; transform: translateY(7px); }
   3%, 30%         { opacity: 1; transform: translateY(0); }
@@ -1340,8 +1347,8 @@ body.pa-has-nav #actusHeader {
    contenu perdu, la 1re accroche reste affichee). */
 @media (prefers-reduced-motion: reduce) {
   .ad-slot::after { animation: none; opacity: 0; }
-  .ad-rotate span { animation: none; opacity: 0; }
-  .ad-rotate span:first-child { opacity: 1; transform: none; }
+  .ad-rotate .ad-rot-item { animation: none; opacity: 0; }
+  .ad-rotate .ad-rot-item:first-of-type { opacity: 1; transform: none; }
 }
 .ad-slot:hover {
   transform: translateY(-2px);
@@ -1415,8 +1422,6 @@ body.pa-has-nav #actusHeader {
     padding: 20px 22px;
   }
   .ad-slot-line1, .ad-slot-line2 { font-size: 15px; }
-  /* Le rotator doit encaisser 2 lignes en etroit sans rogner le texte. */
-  .ad-rotate { height: 2.8em; }
 }
 
 /* === EXPRESSION DU JOUR — bandeau éditorial === */
@@ -1743,9 +1748,10 @@ body.pa-has-nav #actusHeader {
       <p class="ad-slot-label">Espace partenaire</p>
       <p class="ad-slot-line1">Vous avez remarqué cette publicité.</p>
       <p class="ad-slot-line2 ad-rotate">
-        <span>La prochaine pourrait être la vôtre.</span>
-        <span>Votre marque, ici, chaque matin.</span>
-        <span>Cet emplacement vous attend.</span>
+        <span class="ad-rot-sizer" aria-hidden="true">La prochaine pourrait être la vôtre.</span>
+        <span class="ad-rot-item">La prochaine pourrait être la vôtre.</span>
+        <span class="ad-rot-item">Votre marque, ici, chaque matin.</span>
+        <span class="ad-rot-item">Cet emplacement vous attend.</span>
       </p>
     </div>
     <span class="ad-slot-cta">Réserver cet espace</span>
@@ -2781,9 +2787,10 @@ function renderArticles() {
           <p class="ad-slot-label">Espace partenaire</p>
           <p class="ad-slot-line1">Cet emplacement est vu chaque matin par plus de 1 000 pharmaciens.</p>
           <p class="ad-slot-line2 ad-rotate">
-            <span>Le prochain message affiché ici pourrait être le vôtre.</span>
-            <span>Votre marque, devant une audience 100 % officine.</span>
-            <span>Un seul emplacement, réservé à un partenaire.</span>
+            <span class="ad-rot-sizer" aria-hidden="true">Le prochain message affiché ici pourrait être le vôtre.</span>
+            <span class="ad-rot-item">Le prochain message affiché ici pourrait être le vôtre.</span>
+            <span class="ad-rot-item">Votre marque, devant une audience 100 % officine.</span>
+            <span class="ad-rot-item">Un seul emplacement, réservé à un partenaire.</span>
           </p>
         </div>
         <span class="ad-slot-cta">Réserver cet espace</span>
