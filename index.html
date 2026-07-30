@@ -1278,7 +1278,7 @@ body.pa-has-nav #actusHeader {
    Traitement sobre facon maison de luxe : fond sombre, typo légère très espacée,
    un seul accent orange. Version "maison" tant qu'aucun annonceur n'occupe
    l'emplacement : elle montre le placement en le vendant. */
-.ad-slot {
+.spotlight-band {
   display: block;
   position: relative;          /* ancre le reflet ::after */
   max-width: 1200px;
@@ -1296,7 +1296,7 @@ body.pa-has-nav #actusHeader {
 /* Reflet lumineux qui balaie le bandeau : anime SANS aucun fichier video
    (0 octet charge, pas d'impact LCP). Long temps mort entre 2 passages pour
    rester discret et ne pas parasiter la lecture des actus. */
-.ad-slot::after {
+.spotlight-band::after {
   content: '';
   position: absolute;
   top: 0;
@@ -1306,9 +1306,9 @@ body.pa-has-nav #actusHeader {
   background: linear-gradient(100deg, transparent 0%, rgba(255, 255, 255, 0.10) 50%, transparent 100%);
   transform: skewX(-18deg);
   pointer-events: none;
-  animation: adSheen 8s ease-in-out infinite;
+  animation: spotlightSheen 8s ease-in-out infinite;
 }
-@keyframes adSheen {
+@keyframes spotlightSheen {
   0%, 62%  { left: -45%; }
   100%     { left: 135%; }
 }
@@ -1318,26 +1318,26 @@ body.pa-has-nav #actusHeader {
    plus long occupe le flux et dicte la hauteur. Sans lui, une hauteur en em
    rognait le texte des que le message passait a 3 lignes en mobile (constat
    375px sur le 2e bandeau). Les messages animes sont superposes en absolu. */
-.ad-rotate {
+.spotlight-rotate {
   position: relative;
   display: block;
   overflow: hidden;
 }
-.ad-rotate .ad-rot-sizer {
+.spotlight-rotate .spotlight-sizer {
   visibility: hidden;
   animation: none;
 }
-.ad-rotate .ad-rot-item {
+.spotlight-rotate .spotlight-item {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   opacity: 0;
-  animation: adRotate 13.5s ease-in-out infinite;
+  animation: spotlightRotate 13.5s ease-in-out infinite;
 }
-.ad-rotate .ad-rot-item:nth-child(3) { animation-delay: 4.5s; }
-.ad-rotate .ad-rot-item:nth-child(4) { animation-delay: 9s; }
-@keyframes adRotate {
+.spotlight-rotate .spotlight-item:nth-child(3) { animation-delay: 4.5s; }
+.spotlight-rotate .spotlight-item:nth-child(4) { animation-delay: 9s; }
+@keyframes spotlightRotate {
   0%              { opacity: 0; transform: translateY(7px); }
   3%, 30%         { opacity: 1; transform: translateY(0); }
   33%, 100%       { opacity: 0; transform: translateY(-7px); }
@@ -1346,16 +1346,16 @@ body.pa-has-nav #actusHeader {
 /* Accessibilite : mouvement neutralise pour qui le demande (et pas de
    contenu perdu, la 1re accroche reste affichee). */
 @media (prefers-reduced-motion: reduce) {
-  .ad-slot::after { animation: none; opacity: 0; }
-  .ad-rotate .ad-rot-item { animation: none; opacity: 0; }
-  .ad-rotate .ad-rot-item:first-of-type { opacity: 1; transform: none; }
+  .spotlight-band::after { animation: none; opacity: 0; }
+  .spotlight-rotate .spotlight-item { animation: none; opacity: 0; }
+  .spotlight-rotate .spotlight-item:first-of-type { opacity: 1; transform: none; }
 }
-.ad-slot:hover {
+.spotlight-band:hover {
   transform: translateY(-2px);
   border-color: rgba(255, 145, 77, 0.5);
   box-shadow: 0 10px 28px rgba(20, 20, 27, 0.18);
 }
-.ad-slot-inner {
+.spotlight-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1363,7 +1363,7 @@ body.pa-has-nav #actusHeader {
   padding: 22px 32px;
   font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
-.ad-slot-label {
+.spotlight-label {
   font-size: 9px;
   font-weight: 600;
   letter-spacing: 0.22em;
@@ -1371,7 +1371,7 @@ body.pa-has-nav #actusHeader {
   color: var(--orange);
   margin: 0 0 8px;
 }
-.ad-slot-line1 {
+.spotlight-line1 {
   font-size: 17px;
   font-weight: 300;
   letter-spacing: 0.02em;
@@ -1379,7 +1379,7 @@ body.pa-has-nav #actusHeader {
   margin: 0;
   line-height: 1.35;
 }
-.ad-slot-line2 {
+.spotlight-line2 {
   font-size: 17px;
   font-weight: 300;
   letter-spacing: 0.02em;
@@ -1387,7 +1387,7 @@ body.pa-has-nav #actusHeader {
   margin: 0;
   line-height: 1.35;
 }
-.ad-slot-cta {
+.spotlight-cta {
   flex-shrink: 0;
   font-size: 12px;
   font-weight: 500;
@@ -1400,7 +1400,7 @@ body.pa-has-nav #actusHeader {
   white-space: nowrap;
   transition: background .25s ease, border-color .25s ease;
 }
-.ad-slot:hover .ad-slot-cta {
+.spotlight-band:hover .spotlight-cta {
   background: var(--orange);
   border-color: var(--orange);
 }
@@ -1408,20 +1408,20 @@ body.pa-has-nav #actusHeader {
    10px et une marge de 20px : le bandeau DOIT suivre exactement, sinon les
    deux blocs n'ont plus la meme largeur (constat mobile 327px vs 343px). */
 @media (max-width: 768px) {
-  .ad-slot {
+  .spotlight-band {
     width: calc(100% - 32px);
     border-radius: 10px;
     margin-bottom: 20px;
   }
 }
 @media (max-width: 700px) {
-  .ad-slot-inner {
+  .spotlight-inner {
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
     padding: 20px 22px;
   }
-  .ad-slot-line1, .ad-slot-line2 { font-size: 15px; }
+  .spotlight-line1, .spotlight-line2 { font-size: 15px; }
 }
 
 /* === EXPRESSION DU JOUR — bandeau éditorial === */
@@ -1742,19 +1742,19 @@ body.pa-has-nav #actusHeader {
 <!-- ESPACE PARTENAIRE 1 (entre Expression du jour et Aujourd'hui).
      Statique : reste visible meme si le JS ne s'execute pas. Le 2e emplacement
      (entre Aujourd'hui et Hier) est injecte par renderArticles(). -->
-<a class="ad-slot" href="https://pharmalpha.fr/#contact" target="_blank" rel="noopener" aria-label="Espace partenaire disponible : nous contacter">
-  <div class="ad-slot-inner">
+<a class="spotlight-band" href="https://pharmalpha.fr/#contact" target="_blank" rel="noopener" aria-label="Espace partenaire disponible : nous contacter">
+  <div class="spotlight-inner">
     <div>
-      <p class="ad-slot-label">Espace partenaire</p>
-      <p class="ad-slot-line1">Vous avez remarqué cette publicité.</p>
-      <p class="ad-slot-line2 ad-rotate">
-        <span class="ad-rot-sizer" aria-hidden="true">La prochaine pourrait être la vôtre.</span>
-        <span class="ad-rot-item">La prochaine pourrait être la vôtre.</span>
-        <span class="ad-rot-item">Votre marque, ici, chaque matin.</span>
-        <span class="ad-rot-item">Cet emplacement vous attend.</span>
+      <p class="spotlight-label">Espace partenaire</p>
+      <p class="spotlight-line1">Vous avez remarqué cette publicité.</p>
+      <p class="spotlight-line2 spotlight-rotate">
+        <span class="spotlight-sizer" aria-hidden="true">La prochaine pourrait être la vôtre.</span>
+        <span class="spotlight-item">La prochaine pourrait être la vôtre.</span>
+        <span class="spotlight-item">Votre marque, ici, chaque matin.</span>
+        <span class="spotlight-item">Cet emplacement vous attend.</span>
       </p>
     </div>
-    <span class="ad-slot-cta">Réserver cet espace</span>
+    <span class="spotlight-cta">Réserver cet espace</span>
   </div>
 </a>
 
@@ -2780,20 +2780,20 @@ function renderArticles() {
 
   // Espace partenaire n°2 : intercale entre la fin d'Aujourd'hui et le debut
   // d'Hier. Meme markup que l'emplacement statique du haut de page.
-  const AD_SLOT = `
-    <a class="ad-slot" href="https://pharmalpha.fr/#contact" target="_blank" rel="noopener" aria-label="Espace partenaire disponible : nous contacter">
-      <div class="ad-slot-inner">
+  const SPOTLIGHT_BAND = `
+    <a class="spotlight-band" href="https://pharmalpha.fr/#contact" target="_blank" rel="noopener" aria-label="Espace partenaire disponible : nous contacter">
+      <div class="spotlight-inner">
         <div>
-          <p class="ad-slot-label">Espace partenaire</p>
-          <p class="ad-slot-line1">Vu chaque matin par plus de 1 000 pharmaciens.</p>
-          <p class="ad-slot-line2 ad-rotate">
-            <span class="ad-rot-sizer" aria-hidden="true">Un seul emplacement, réservé à un partenaire.</span>
-            <span class="ad-rot-item">Le prochain pourrait être le vôtre.</span>
-            <span class="ad-rot-item">Votre marque, devant une audience 100 % officine.</span>
-            <span class="ad-rot-item">Un seul emplacement, réservé à un partenaire.</span>
+          <p class="spotlight-label">Espace partenaire</p>
+          <p class="spotlight-line1">Vu chaque matin par plus de 1 000 pharmaciens.</p>
+          <p class="spotlight-line2 spotlight-rotate">
+            <span class="spotlight-sizer" aria-hidden="true">Un seul emplacement, réservé à un partenaire.</span>
+            <span class="spotlight-item">Le prochain pourrait être le vôtre.</span>
+            <span class="spotlight-item">Votre marque, devant une audience 100 % officine.</span>
+            <span class="spotlight-item">Un seul emplacement, réservé à un partenaire.</span>
           </p>
         </div>
-        <span class="ad-slot-cta">Réserver cet espace</span>
+        <span class="spotlight-cta">Réserver cet espace</span>
       </div>
     </a>`;
 
@@ -2801,7 +2801,7 @@ function renderArticles() {
     if (groups[key].length === 0) return;
     // Le bandeau ne s'affiche que s'il separe reellement deux blocs d'actus
     // (sinon il se retrouverait colle a celui du haut de page).
-    if (key === 'yesterday' && groups.today.length > 0) html += AD_SLOT;
+    if (key === 'yesterday' && groups.today.length > 0) html += SPOTLIGHT_BAND;
     html += `<div class="section-title">${labels[key]}</div>`;
     html += '<div class="grid">';
     html += groups[key].map(a => renderCard(a, cardIdx++)).join('');
