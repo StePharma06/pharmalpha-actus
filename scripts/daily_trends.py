@@ -121,8 +121,14 @@ _BLOCKLIST_RE = re.compile(
     r"\b(prix|acheter|achat|promo|solde|pas cher|gratuit|livraison|"
     r"recette|cuisine|restaurant|sport|foot|match|ligue|psg|equipe|"
     r"musique|film|serie|streaming|netflix|jeu|game|concert|festival|"
-    r"politique|election|president|ministre|gouvernement|parlement|"
-    r"parlementaire|senat|senateur|depute|assemblee|loi|decret|justice|"
+    r"politique|election|president\w*|ministre|gouvernement|parlement\w*|"
+    r"senat|senateur|depute|assemblee|loi|decret|justice|"
+    # Recherches LINGUISTIQUES : contiennent souvent une racine sante mais ne
+    # sont pas des questions de sante (signale par Stephen 2026-07-30 :
+    # "la fatigue en anglais" = une traduction, pas une recherche sante).
+    r"en anglais|en espagnol|en allemand|en italien|en portugais|en latin|"
+    r"traduction|traduire|synonyme|definition|signification|conjugaison|"
+    r"scrabble|wikipedia|paroles|paralleles|citation|"
     r"proces|tribunal|prison|garde a vue|greve|manifestation|guerre|"
     r"attentat|immobilier|voiture|bourse|crypto|bitcoin|impot|salaire|"
     r"meteo|voyag|hotel|airbnb|amazon|aliexpress|horoscope|loto)\b",
