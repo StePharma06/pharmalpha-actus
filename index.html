@@ -2778,30 +2778,9 @@ function renderArticles() {
   let html = '';
   let cardIdx = 0;
 
-  // Espace partenaire n°2 : intercale entre la fin d'Aujourd'hui et le debut
-  // d'Hier. Meme markup que l'emplacement statique du haut de page.
-  const SPOTLIGHT_BAND = `
-    <a class="spotlight-band" href="https://pharmalpha.fr/#contact" target="_blank" rel="noopener" aria-label="Espace partenaire disponible : nous contacter">
-      <div class="spotlight-inner">
-        <div>
-          <p class="spotlight-label">Espace partenaire</p>
-          <p class="spotlight-line1">Vu chaque matin par plus de 1 000 pharmaciens.</p>
-          <p class="spotlight-line2 spotlight-rotate">
-            <span class="spotlight-sizer" aria-hidden="true">Un seul emplacement, réservé à un partenaire.</span>
-            <span class="spotlight-item">Le prochain pourrait être le vôtre.</span>
-            <span class="spotlight-item">Votre marque, devant une audience 100 % officine.</span>
-            <span class="spotlight-item">Un seul emplacement, réservé à un partenaire.</span>
-          </p>
-        </div>
-        <span class="spotlight-cta">Réserver cet espace</span>
-      </div>
-    </a>`;
 
   ['today', 'yesterday'].forEach(key => {
     if (groups[key].length === 0) return;
-    // Le bandeau ne s'affiche que s'il separe reellement deux blocs d'actus
-    // (sinon il se retrouverait colle a celui du haut de page).
-    if (key === 'yesterday' && groups.today.length > 0) html += SPOTLIGHT_BAND;
     html += `<div class="section-title">${labels[key]}</div>`;
     html += '<div class="grid">';
     html += groups[key].map(a => renderCard(a, cardIdx++)).join('');

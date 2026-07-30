@@ -2426,6 +2426,42 @@ def _build_expression_email_block(expr):
   <tr><td style="padding:20px 32px 0;"><div style="border-top:1px solid #e5e5e5;"></div></td></tr>'''
 
 
+def _build_partner_slot_email(slot: str = "haut") -> str:
+    """Emplacement partenaire pour l'EMAIL (pub maison tant qu'aucun annonceur).
+
+    Contraintes email, volontairement differentes du site :
+    - AUCUNE animation : Outlook (moteur Word) et la majorite des clients
+      ignorent les keyframes CSS. Le bandeau est donc fixe.
+    - Pas de flexbox ni de gradient (non supportes par Outlook) : table +
+      couleur unie. Le border-radius degrade proprement en angles droits.
+    - Colonne unique : c'est le seul agencement fiable sur tous les clients,
+      mobile compris (pas de colonnes qui se cassent).
+    - Tout en styles inline : Gmail retire une partie des blocs <style>.
+    Les UTM permettent d'isoler les clics de l'emplacement dans GA4, ce qui
+    donne a Stephen une preuve de performance a montrer a un annonceur.
+    """
+    url = ("https://pharmalpha.fr/#contact"
+           f"?utm_source=pharmactus&utm_medium=email"
+           f"&utm_campaign=espace_partenaire&utm_content={slot}")
+    if slot == "haut":
+        line1 = "Vous avez remarqué cette publicité."
+        line2 = "La prochaine pourrait être la vôtre."
+    else:
+        line1 = "Vu chaque matin par plus de 1 000 pharmaciens."
+        line2 = "Un seul emplacement, réservé à un partenaire."
+    return f'''
+  <tr><td style="padding:20px 32px 0;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#14141b;border-radius:10px;">
+      <tr><td style="padding:22px 24px;">
+        <p style="margin:0 0 10px;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#ff914d;">Espace partenaire</p>
+        <p style="margin:0 0 3px;font-size:16px;font-weight:400;color:#ffffff;line-height:1.4;">{line1}</p>
+        <p style="margin:0 0 16px;font-size:16px;font-weight:400;color:#8f8f9c;line-height:1.4;">{line2}</p>
+        <a href="{url}" style="display:inline-block;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#ffffff;text-decoration:none;border:1px solid #4a4a58;border-radius:100px;padding:11px 22px;">Réserver cet espace</a>
+      </td></tr>
+    </table>
+  </td></tr>'''
+
+
 def build_newsletter_html(articles, custom_intro=None):
     """Build newsletter HTML from today's articles."""
     today = datetime.now(PARIS_TZ)
@@ -2452,6 +2488,11 @@ def build_newsletter_html(articles, custom_intro=None):
         return f"https://actus.pharmalpha.fr/articles/{aid}.html" if aid else "https://actus.pharmalpha.fr/"
 
     articles_html = ""
+    # UN SEUL emplacement partenaire pour l'instant (decision Stephen
+    # 2026-07-30) : celui du haut, apres l'Expression du jour. Pour en
+    # reactiver un 2e au milieu du flux, reinserer apres la Ne actu :
+    #     articles_html += _build_partner_slot_email("milieu")
+    # (la variante "milieu" du texte est deja prete dans la fonction).
     for i, a in enumerate(actus):
         bg, fg = badge_colors.get(a.get("categorie", ""), ("#fff7ed", "#f97316"))
         pad = "24px" if i == 0 else "20px"
@@ -2495,6 +2536,10 @@ def build_newsletter_html(articles, custom_intro=None):
     # Tendances email block (top 5, compact)
     trends_email_block = _build_trends_email_block(load_trends_data())
 
+    # Emplacement partenaire n°1 : juste apres l'Expression du jour, comme sur
+    # le site (meme ordre de lecture entre les 2 supports).
+    partner_slot_haut = _build_partner_slot_email("haut")
+
     _html = f'''<!DOCTYPE html>
 <html lang="fr">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
@@ -2530,6 +2575,7 @@ def build_newsletter_html(articles, custom_intro=None):
   </td></tr>
   <tr><td style="padding:0 32px;"><div style="border-top:1px solid #e5e5e5;"></div></td></tr>
   {expression_email_block}
+  {partner_slot_haut}
   {articles_html}
   {trends_email_block}
   <tr><td style="padding:28px 32px 0;" align="center">
