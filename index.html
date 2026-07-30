@@ -1272,6 +1272,141 @@ body.pa-has-nav #actusHeader {
   .jn-form button { width: 100%; }
   .jn-captcha { transform: scale(0.85); transform-origin: center; }
 }
+/* === ESPACE PARTENAIRE — bandeau publicitaire ===
+   Calé sur la bulle Expression du jour : MEME largeur (1200px, gouttière 48px),
+   hauteur volontairement PLUS COURTE pour ne jamais dominer l'éditorial.
+   Traitement sobre facon maison de luxe : fond sombre, typo légère très espacée,
+   un seul accent orange. Version "maison" tant qu'aucun annonceur n'occupe
+   l'emplacement : elle montre le placement en le vendant. */
+.ad-slot {
+  display: block;
+  position: relative;          /* ancre le reflet ::after */
+  max-width: 1200px;
+  width: calc(100% - 48px);
+  margin: 0 auto 28px auto;
+  box-sizing: border-box;
+  border-radius: 14px;
+  overflow: hidden;
+  text-decoration: none;
+  background: linear-gradient(115deg, #14141b 0%, #1e1e29 55%, #14141b 100%);
+  border: 1px solid rgba(255, 145, 77, 0.22);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+/* Reflet lumineux qui balaie le bandeau : anime SANS aucun fichier video
+   (0 octet charge, pas d'impact LCP). Long temps mort entre 2 passages pour
+   rester discret et ne pas parasiter la lecture des actus. */
+.ad-slot::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -45%;
+  width: 45%;
+  height: 100%;
+  background: linear-gradient(100deg, transparent 0%, rgba(255, 255, 255, 0.10) 50%, transparent 100%);
+  transform: skewX(-18deg);
+  pointer-events: none;
+  animation: adSheen 8s ease-in-out infinite;
+}
+@keyframes adSheen {
+  0%, 62%  { left: -45%; }
+  100%     { left: 135%; }
+}
+
+/* Accroche qui alterne : 3 messages, fondu + leger glissement vertical. */
+.ad-rotate {
+  position: relative;
+  display: block;
+  height: 1.4em;
+  overflow: hidden;
+}
+.ad-rotate span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  opacity: 0;
+  animation: adRotate 13.5s ease-in-out infinite;
+}
+.ad-rotate span:nth-child(2) { animation-delay: 4.5s; }
+.ad-rotate span:nth-child(3) { animation-delay: 9s; }
+@keyframes adRotate {
+  0%              { opacity: 0; transform: translateY(7px); }
+  3%, 30%         { opacity: 1; transform: translateY(0); }
+  33%, 100%       { opacity: 0; transform: translateY(-7px); }
+}
+
+/* Accessibilite : mouvement neutralise pour qui le demande (et pas de
+   contenu perdu, la 1re accroche reste affichee). */
+@media (prefers-reduced-motion: reduce) {
+  .ad-slot::after { animation: none; opacity: 0; }
+  .ad-rotate span { animation: none; opacity: 0; }
+  .ad-rotate span:first-child { opacity: 1; transform: none; }
+}
+.ad-slot:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 145, 77, 0.5);
+  box-shadow: 0 10px 28px rgba(20, 20, 27, 0.18);
+}
+.ad-slot-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  padding: 22px 32px;
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+.ad-slot-label {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin: 0 0 8px;
+}
+.ad-slot-line1 {
+  font-size: 17px;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.35;
+}
+.ad-slot-line2 {
+  font-size: 17px;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0;
+  line-height: 1.35;
+}
+.ad-slot-cta {
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 100px;
+  padding: 11px 22px;
+  white-space: nowrap;
+  transition: background .25s ease, border-color .25s ease;
+}
+.ad-slot:hover .ad-slot-cta {
+  background: var(--orange);
+  border-color: var(--orange);
+}
+@media (max-width: 700px) {
+  .ad-slot-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 22px;
+  }
+  .ad-slot-line1, .ad-slot-line2 { font-size: 15px; }
+}
+
 /* === EXPRESSION DU JOUR — bandeau éditorial === */
 .expression-du-jour {
   background: rgba(109, 40, 217, 0.08);
@@ -1586,6 +1721,24 @@ body.pa-has-nav #actusHeader {
 
 <!-- EXPRESSION DU JOUR (injectée par update_actus.py à chaque run) -->
 <aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Perdre la tête</h2><p class="expression-corps">Les médecins de l'Antiquité tardive et médiévaux localisaient la raison dans le cerveau - siège des « esprits animaux ». Perdre la tête, c'était médicalement perdre le contrôle de ces esprits, sombrer dans la démence ou la passion incontrôlable. L'expression a conservé ce sens de perte totale du contrôle.</p></aside>
+
+<!-- ESPACE PARTENAIRE 1 (entre Expression du jour et Aujourd'hui).
+     Statique : reste visible meme si le JS ne s'execute pas. Le 2e emplacement
+     (entre Aujourd'hui et Hier) est injecte par renderArticles(). -->
+<a class="ad-slot" href="https://pharmalpha.fr/#contact" target="_blank" rel="noopener" aria-label="Espace partenaire disponible : nous contacter">
+  <div class="ad-slot-inner">
+    <div>
+      <p class="ad-slot-label">Espace partenaire</p>
+      <p class="ad-slot-line1">Vous avez remarqué cette publicité.</p>
+      <p class="ad-slot-line2 ad-rotate">
+        <span>La prochaine pourrait être la vôtre.</span>
+        <span>Votre marque, ici, chaque matin.</span>
+        <span>Cet emplacement vous attend.</span>
+      </p>
+    </div>
+    <span class="ad-slot-cta">Réserver cet espace</span>
+  </div>
+</a>
 
 <!-- ARTICLES (groupes par date) -->
 <div id="articles-container"></div>
@@ -2607,8 +2760,29 @@ function renderArticles() {
   let html = '';
   let cardIdx = 0;
 
+  // Espace partenaire n°2 : intercale entre la fin d'Aujourd'hui et le debut
+  // d'Hier. Meme markup que l'emplacement statique du haut de page.
+  const AD_SLOT = `
+    <a class="ad-slot" href="https://pharmalpha.fr/#contact" target="_blank" rel="noopener" aria-label="Espace partenaire disponible : nous contacter">
+      <div class="ad-slot-inner">
+        <div>
+          <p class="ad-slot-label">Espace partenaire</p>
+          <p class="ad-slot-line1">Cet emplacement est vu chaque matin par plus de 1 000 pharmaciens.</p>
+          <p class="ad-slot-line2 ad-rotate">
+            <span>Le prochain message affiché ici pourrait être le vôtre.</span>
+            <span>Votre marque, devant une audience 100 % officine.</span>
+            <span>Un seul emplacement, réservé à un partenaire.</span>
+          </p>
+        </div>
+        <span class="ad-slot-cta">Réserver cet espace</span>
+      </div>
+    </a>`;
+
   ['today', 'yesterday'].forEach(key => {
     if (groups[key].length === 0) return;
+    // Le bandeau ne s'affiche que s'il separe reellement deux blocs d'actus
+    // (sinon il se retrouverait colle a celui du haut de page).
+    if (key === 'yesterday' && groups.today.length > 0) html += AD_SLOT;
     html += `<div class="section-title">${labels[key]}</div>`;
     html += '<div class="grid">';
     html += groups[key].map(a => renderCard(a, cardIdx++)).join('');
