@@ -1,21 +1,21 @@
 {
- "genere_le": "2026-07-29T07:43:43+02:00",
+ "genere_le": "2026-07-30T07:32:11+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1021,
+ "abonnes_total": 1020,
  "nouveaux_7j": 4,
- "nouveaux_cumul": 1014,
+ "nouveaux_cumul": 1013,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-07-22",
-  "au": "2026-07-29",
+  "du": "2026-07-23",
+  "au": "2026-07-30",
   "delivres": 6559,
-  "ouvertures": 2292,
-  "ouvertures_uniques": 1711,
-  "clics": 2109,
-  "clics_uniques": 376,
-  "taux_ouverture_pct": 26.1,
-  "taux_clic_pct": 5.7,
-  "ctor_pct": 22.0,
+  "ouvertures": 2134,
+  "ouvertures_uniques": 1564,
+  "clics": 2067,
+  "clics_uniques": 364,
+  "taux_ouverture_pct": 23.8,
+  "taux_clic_pct": 5.5,
+  "ctor_pct": 23.3,
   "top_articles": [
    {
     "id": "actu_2026_07_25_5",
@@ -46,70 +46,70 @@
     "titre": "Franchises médicales : le plafond double à 200 euros, et c'est demain",
     "date": "2026-07-24",
     "categorie": "pharma_france",
-    "clics": 48,
+    "clics": 50,
     "lecteurs": 27
-   },
-   {
-    "id": "actu_2026_07_24_5",
-    "titre": "Concentration officinale : +6,3% pour les grandes, +1,6% pour les petites - le fossé se creuse",
-    "date": "2026-07-24",
-    "categorie": "business_officine",
-    "clics": 44,
-    "lecteurs": 25
-   },
-   {
-    "id": "actu_2026_07_22_1",
-    "titre": "Loi Neuder : la mission HTA des pharmaciens est confirmée, les décrets restent à venir",
-    "date": "2026-07-22",
-    "categorie": "pharma_france",
-    "clics": 49,
-    "lecteurs": 24
    },
    {
     "id": "actu_2026_07_28_5",
     "titre": "Génériques : le CEPS épargne 9 groupes sur 12 - ce que ça change pour ta marge",
     "date": "2026-07-28",
     "categorie": "business_officine",
-    "clics": 47,
+    "clics": 48,
+    "lecteurs": 25
+   },
+   {
+    "id": "actu_2026_07_24_5",
+    "titre": "Concentration officinale : +6,3% pour les grandes, +1,6% pour les petites - le fossé se creuse",
+    "date": "2026-07-24",
+    "categorie": "business_officine",
+    "clics": 46,
+    "lecteurs": 25
+   },
+   {
+    "id": "actu_2026_07_29_3",
+    "titre": "Mesure de la PA officiellement inscrite dans les missions du pharmacien",
+    "date": "2026-07-29",
+    "categorie": "bonne_nouvelle",
+    "clics": 51,
     "lecteurs": 24
    },
    {
-    "id": "actu_2026_07_22_5",
-    "titre": "Antennes officinales : 13 ouvertes, des centaines de communes encore sans pharmacie",
-    "date": "2026-07-22",
-    "categorie": "business_officine",
-    "clics": 45,
-    "lecteurs": 20
-   },
-   {
-    "id": "actu_2026_07_22_4",
-    "titre": "La sonobiopsie : bientôt des diagnostics cancer et Alzheimer sans biopsie chirurgicale",
-    "date": "2026-07-22",
+    "id": "actu_2026_07_29_4",
+    "titre": "GLP-1 remboursés : les chercheurs avouent qu'ils ne savent pas encore tout",
+    "date": "2026-07-29",
     "categorie": "avenir_pharma",
-    "clics": 45,
+    "clics": 44,
+    "lecteurs": 21
+   },
+   {
+    "id": "actu_2026_07_29_2",
+    "titre": "L'ADA en crise de gouvernance : ce que ca dit du monde du diabète",
+    "date": "2026-07-29",
+    "categorie": "pharma_monde",
+    "clics": 42,
     "lecteurs": 20
    },
    {
-    "id": "actu_2026_07_27_3",
-    "titre": "Rougeole et vaccin voyageurs : les recommandations 2026 sont là",
-    "date": "2026-07-27",
-    "categorie": "bonne_nouvelle",
-    "clics": 30,
+    "id": "actu_2026_07_29_1",
+    "titre": "CEPS : l'USPO sauve 20 millions d'euros de baisses de prix sur les génériques",
+    "date": "2026-07-29",
+    "categorie": "pharma_france",
+    "clics": 40,
     "lecteurs": 20
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-07-29",
-  "delivres": 66013,
-  "ouvertures": 26645,
-  "ouvertures_uniques": 18302,
-  "clics": 27603,
-  "clics_uniques": 4961,
-  "taux_ouverture_pct": 27.7,
+  "au": "2026-07-30",
+  "delivres": 66936,
+  "ouvertures": 26878,
+  "ouvertures_uniques": 18418,
+  "clics": 27944,
+  "clics_uniques": 5007,
+  "taux_ouverture_pct": 27.5,
   "taux_clic_pct": 7.5,
-  "ctor_pct": 27.1,
+  "ctor_pct": 27.2,
   "top_articles": [
    {
     "id": "actu_2026_06_18_1",
