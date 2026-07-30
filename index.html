@@ -1397,6 +1397,16 @@ body.pa-has-nav #actusHeader {
   background: var(--orange);
   border-color: var(--orange);
 }
+/* Sous 768px, la bulle Expression passe a une gouttiere de 32px, un rayon de
+   10px et une marge de 20px : le bandeau DOIT suivre exactement, sinon les
+   deux blocs n'ont plus la meme largeur (constat mobile 327px vs 343px). */
+@media (max-width: 768px) {
+  .ad-slot {
+    width: calc(100% - 32px);
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+}
 @media (max-width: 700px) {
   .ad-slot-inner {
     flex-direction: column;
@@ -1405,6 +1415,8 @@ body.pa-has-nav #actusHeader {
     padding: 20px 22px;
   }
   .ad-slot-line1, .ad-slot-line2 { font-size: 15px; }
+  /* Le rotator doit encaisser 2 lignes en etroit sans rogner le texte. */
+  .ad-rotate { height: 2.8em; }
 }
 
 /* === EXPRESSION DU JOUR — bandeau éditorial === */
