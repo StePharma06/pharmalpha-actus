@@ -1,6 +1,131 @@
 {
   "articles": [
     {
+      "id": "actu_2026_07_30_5",
+      "date": "2026-07-30",
+      "type": "actu",
+      "categorie": "business_officine",
+      "titre": "Mutuelles : la danse des remboursements va rebattre les cartes à l'officine",
+      "resume": "Le gouvernement transfère une partie des remboursements vers les complémentaires santé. Résultat : des millions d'assurés vont regarder leur mutuelle de plus près - et ton officine va devoir s'adapter à un reste à charge en mouvement.",
+      "source": "Pharm'Actus · France Info Santé — Le tarif des mutuelles va-t-il augmenter l'an prochain ?, Légifrance — Arrêté du 27 juillet 2026 relatif à l'arrêt de la prise en charge précoce (L.162-16-5-1)",
+      "source_url": "https://www.franceinfo.fr/replay-jt/france-2/13-heures/le-tarif-des-mutuelles-va-t-il-augmenter-l-an-prochain_8127209.html",
+      "tiktok_url": "",
+      "badge_label": "Business",
+      "image_url": "assets/img_actu_2026_07_30_5.jpg",
+      "tags": [
+        "remboursement",
+        "mutuelles",
+        "tiers-payant",
+        "officine"
+      ],
+      "full_text": "Le gouvernement transfère une partie des remboursements vers les complémentaires santé. Résultat : des millions d'assurés vont regarder leur mutuelle de plus près - et ton officine va devoir s'adapter à un reste à charge en mouvement.\n\n**Contexte**\n\nLe sujet est confirmé par France Info ce 29 juillet 2026 : le gouvernement acte une réduction de certains remboursements de l'Assurance Maladie - médicaments à service médical rendu insuffisant (SMRi), soins dentaires, transports sanitaires. Le mécanisme est connu : quand la Cnam se désengage, les complémentaires santé (mutuelles, institutions de prévoyance, assureurs) absorbent une partie du différentiel, et les cotisations augmentent en cascade. C'est exactement ce que prédit la LFSS 2026, qui prolonge la logique de déremboursement progressif des SMRi engagée depuis plusieurs années. Pour l'officine, ce n'est pas une abstraction : les médicaments visés sont dispensés chaque jour au comptoir. Quand le taux de remboursement AM baisse ou qu'un produit bascule en non-remboursé, le pharmacien doit gérer en temps réel l'incompréhension du patient, la gestion du ticket modérateur, le tiers payant complémentaire - et parfois un refus de prise en charge qui bloque la délivrance. Le sujet touche directement la fluidité opérationnelle de l'officine, la relation patient, et à terme l'orientation vers des substituts OTC.\n\n**Analyse business**\n\nCommençons par cadrer les ordres de grandeur. Le réseau officinal français représente plusieurs milliers de points de dispensation répartis sur l'ensemble du territoire. Les médicaments remboursables représentent une part majoritaire du chiffre d'affaires d'une pharmacie, structurellement prépondérante. Tout mouvement sur les taux de remboursement AM crée donc une friction directe sur le flux de clientèle et la gestion du tiers payant.\n\nSur les SMRi : la Cnam recense un ensemble de spécialités à SMR insuffisant encore remboursées à des taux résiduels. Leur déremboursement progressif n'est pas une nouveauté - il se poursuit depuis les vagues de 2003, 2012 et 2017. À chaque vague, la logique est identique : le patient ne disparaît pas du comptoir, il revient avec une ordonnance identique mais un reste à charge qui a augmenté, parfois sans en avoir été informé par le prescripteur.\n\nSur l'impact complémentaires : les organismes complémentaires financent déjà une part significative de la dépense totale de santé en France. Si l'Assurance Maladie réduit sa part sur certaines lignes, les mutuelles ont le choix entre absorber (hausse de cotisation prévisible pour 2027, confirmée par France Info) ou exclure les actes de leurs garanties. Dans les deux cas, le patient final supporte davantage.\n\nPour l'officine, trois impacts concrets :\n- **Tiers payant complémentaire** : si une mutuelle exclut un médicament de sa prise en charge, la délivrance en tiers payant total devient impossible. L'officine doit encaisser le reste à charge au patient - friction, file d'attente, litige.\n- **Substitution OTC** : un médicament déremboursé ouvre mécaniquement une opportunité de basculement vers un équivalent conseil (paracétamol EG, antihistaminiques OTC…). La marge sur le conseil non remboursé est structurellement plus favorable que la MDL + honoraire sur un remboursable bas de gamme.\n- **ROSP et objectifs qualité** : si les volumes de certains SMRi baissent, l'impact sur les indicateurs ROSP dépend de la formulation exacte des objectifs - à surveiller lors du prochain avenant conventionnel.\n\nLe risque sous-estimé : une hausse des cotisations mutuelles en 2027 réduira le pouvoir d'achat santé de certains patients qui pourraient réduire leur consommation médicamenteuse ou sauter des renouvellements. C'est un signal faible mais réel sur la fréquentation officinale.\n\n**Recommandations actionnables**\n\n1. **Auditer ton portefeuille tiers payant complémentaire** - Identifie les 10-15 lignes de produits SMRi que tu dispenses le plus souvent. Anticipe ceux dont le statut de remboursement pourrait évoluer d'ici fin 2026 (liste ANSM / JO à surveiller). Forme ton équipe à la gestion du rejet tiers payant complémentaire sans bloquer la file.\n\n2. **Préparer des alternatives OTC argumentées** - Pour chaque SMRi à risque de déremboursement, identifie dès maintenant l'équivalent conseil ou le dispositif médical de substitution. L'entretien pharmaceutique est l'outil légal pour orienter sans prescrire.\n\n3. **Informer proactivement les patients fragiles** - Les patients polypathologiques sous traitement chronique incluant des SMRi sont les plus exposés à la surprise tarifaire. Un message ciblé (SMS, affichage, entretien officinal) maintient la confiance et réduit les abandons de traitement.\n\n4. **Surveiller les arrêtés de déremboursement au JO** - L'arrêté du 27 juillet 2026 sur la fin de prise en charge précoce (TEPKINLY®) est un signal : le rythme des sorties de liste s'accélère. Abonne-toi aux flux Légifrance Pharmacie pour réagir dans les 48h.\n\n5. **Anticiper l'avenant conventionnel 2027** - Les syndicats (FSPF, USPO) vont négocier les compensations liées aux nouvelles missions dans ce contexte de transfert de charges. Reste attentif à leurs positions respectives : elles conditionnent ta future rémunération conventionnelle.\n\n**Sources citees**\n\n- France Info Santé - Le tarif des mutuelles va-t-il augmenter l'an prochain ?\n- Légifrance - Arrêté du 27 juillet 2026 relatif à l'arrêt de la prise en charge précoce (L.162-16-5-1)"
+    },
+    {
+      "id": "actu_2026_07_30_4",
+      "date": "2026-07-30",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "Falaise des brevets : le jackpot generiques arrive d'ici 2035, es-tu pret ?",
+      "resume": "Une vague sans précédent d'expirations de brevets se profile d'ici 2035. Des dizaines de blockbusters vont tomber dans le domaine public. Pour l'officine, c'est une opportunité majeure sur les génériques et les biosimilaires, à condition d'anticiper.",
+      "source": "Le Monde Sante",
+      "source_url": "https://www.lemonde.fr/economie/article/2026/07/29/la-falaise-des-brevets-ce-grand-chambardement-a-venir-dans-l-industrie-pharmaceutique-d-ici-a-2035_6735904_3234.html",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/img_actu_2026_07_30_4.jpg",
+      "tags": [
+        "generiques",
+        "biosimilaires",
+        "brevet",
+        "substitution",
+        "innovation"
+      ],
+      "full_text": "On appelle ça la \"falaise des brevets\". D'ici 2035, une quantité historique de médicaments blockbusters vont voir leurs brevets expirer. Des molécules qui génèrent des milliards de dollars de chiffre d'affaires vont s'ouvrir à la concurrence générique et biosimilaire. Et pour l'officine française, ça va changer beaucoup de choses.\n\nLe Monde détaille l'ampleur du phénomène : les laboratoires de génériques et de biosimilaires se préparent activement. Des pipelines entiers sont constitués autour de ces futures expirations. Côté systèmes de santé, les économies potentielles sont colossales. L'Assurance Maladie française a toujours été très agressive sur la substitution génériques, et on peut s'attendre à ce que la pression sur les taux de substitution s'intensifie encore.\n\nPour les biosimilaires, c'est encore plus structurant. Des anticorps monoclonaux et des biothérapies de grande diffusion arrivent en fin de protection. Le marché des biosimilaires en officine est encore sous-développé en France comparé à certains pays nordiques. Mais avec l'élargissement de la liste de substitution biosimilaire (11 groupes actuellement inscrits), le mouvement est enclenché.\n\nAttention cependant : biosimilaire ne veut pas dire copie conforme au sens chimique. La formation des équipes officinales sur les différences pharmacologiques, les conditions de conservation, et la traçabilité des biothérapies devient un enjeu de compétence réel. Un patient sous adalimumab qu'on substitue sans accompagnement, c'est un risque d'incompréhension et d'inobservance.\n\nCôté économique pour l'officine : la marge sur les génériques est structurellement différente de celle sur les princeps. Le modèle de rémunération à l'honoraire de dispensation amortit en partie cet écart, mais la valorisation du conseil et de l'accompagnement devient d'autant plus critique quand le volume progresse sur des lignes à faible valeur unitaire.\n\nLes laboratoires princeps, eux, vont se battre. Reformulations, nouvelles indications, extensions de brevet : les stratégies d'évitement sont connues. Ton rôle au comptoir sera aussi d'expliquer aux patients pourquoi une \"nouvelle version\" d'une molécule connue peut parfois n'être qu'un habillage marketing.\n\nAu comptoir demain matin : identifie dans ton portefeuille de patients quelles biothérapies sont concernées par les prochaines expirations. Anticipe la formation de ton équipe sur les biosimilaires. C'est maintenant que ça se prépare."
+    },
+    {
+      "id": "actu_2026_07_30_3",
+      "date": "2026-07-30",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "Incendies en Gironde : les pharmaciens ont tenu la ligne sanitaire",
+      "resume": "23 communes évacuées en urgence, des milliers de patients sans leurs traitements chroniques. Les pharmaciens d'officine ont assuré la continuité des soins dans le chaos. Un rôle de premier recours que personne d'autre n'aurait pu tenir.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "https://www.lequotidiendupharmacien.fr/exercice-pro/eclipse-du-12-aout-les-pharmaciens-en-premiere-ligne-contre-les-risques-daccidents-oculaires",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_07_30_3.jpg",
+      "tags": [
+        "dp",
+        "urgence",
+        "officine",
+        "crise-sanitaire",
+        "premier-recours"
+      ],
+      "full_text": "\"Les gens sont partis en se disant que le traitement n'était pas urgent.\" Cette phrase résume tout. Quand les incendies ont ravagé une partie de la Gironde et contraint 23 communes à l'évacuation, les patients ont fui. Leurs ordonnances, leurs boites, leur DP : ils ont tout laissé.\n\nEt c'est l'officine qui a rattrapé le coup. Les pharmaciens sur place et dans les communes d'accueil ont délivré en urgence, reconstitué les historiques via le Dossier Pharmaceutique, contacté les médecins, géré les stocks en flux tendu. Sans filet, sans protocole préétabli dans la plupart des cas.\n\nCe que ça illustre concrètement : le DP n'est pas un outil administratif de plus. En situation de crise, c'est littéralement le seul moyen de savoir ce que prend un patient qui arrive sans rien. L'alimentation rigoureuse du DP au quotidien, c'est ce qui a permis de ne pas improviser dans l'urgence.\n\nDeuxième enseignement : la proximité géographique du réseau officinal est irremplaçable. Pas de rendez-vous, pas de liste d'attente, pas de délai. Le patient entre, le pharmacien prend en charge. C'est ce qu'on appelle le premier recours, et cette crise en est une démonstration grandeur nature.\n\nTroisième point, moins glorieux : on ne peut que constater que les protocoles de crise sanitaire pour l'officine restent insuffisamment formalisés à l'échelle nationale. Chaque pharmacien a géré comme il pouvait, avec son bon sens et sa formation. Ça a fonctionné grâce aux hommes et aux femmes derrière les comptoirs. Mais ça mériterait un cadre réglementaire plus solide, des stocks de crise mieux définis, des lignes directes avec les SAMU et les ARS.\n\nLa ministre de la Santé Stéphanie Rist a par ailleurs annoncé la distribution de plus de 5 millions de masques FFP2 via les pharmacies pour protéger les populations exposées aux fumées. Encore une fois : c'est le réseau officinal qui est mobilisé en première ligne.\n\nAu comptoir demain matin : vérifie que ton DP est bien alimenté pour chaque patient. Et si tu n'as pas de procédure interne pour les situations de crise (patient sans ordonnance, évacuation, rupture d'approvisionnement locale), c'est le bon moment pour en poser les bases."
+    },
+    {
+      "id": "actu_2026_07_30_2",
+      "date": "2026-07-30",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "Douleur aiguë sans opioïdes : Latigo fait trembler le monopole de Vertex",
+      "resume": "Latigo Biotherapeutics annonce des résultats positifs en phase 2 pour son candidat LTG-001, un antalgique non opioïde pour la douleur aiguë. Il vise le même mécanisme que Journavx de Vertex, déjà sur le marché américain. La guerre des Nav1.8 vient de s'ouvrir.",
+      "source": "STAT News",
+      "source_url": "https://www.statnews.com/2026/07/29/latigo-phase-2-results-non-opioid-pain-reliever-ltg-001/?utm_campaign=rss",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_07_30_2.jpg",
+      "tags": [
+        "analgesie",
+        "innovation",
+        "phase-2",
+        "douleur",
+        "recherche"
+      ],
+      "full_text": "On s'en souvient tous : l'AMM américaine de suzetrigine (Journavx, Vertex) début 2025 avait été présentée comme une révolution dans la douleur aiguë. Un bloqueur sélectif de Nav1.8, sans effet opioïde, sans dépendance. Et bien un challenger vient de débarquer.\n\nLatigo Biotherapeutics publie des données de phase 2 positives pour LTG-001, son propre inhibiteur du canal sodique Nav1.8. La molécule est conçue pour traiter la douleur aiguë, le même segment qu'attaque Journavx. Pas encore de données complètes dans le domaine public, mais le signal est suffisamment solide pour que la communauté scientifique retienne son souffle.\n\nPourquoi c'est important pour nous, en France ? Parce que Journavx n'a pas encore d'AMM européenne à ce stade. Le dossier EMA suit son chemin. Mais si la classe des Nav1.8 sélectifs s'impose avec deux molécules en compétition, la pression sur les prix en Europe sera structurellement différente de celle d'une molécule en situation de monopole thérapeutique.\n\nLa douleur aiguë sans opioïde, c'est un enjeu colossal pour l'officine. On le voit chaque jour : les patients sous tramadol, codéine, ou même oxycodone pour des douleurs post-opératoires modérées. Une alternative sans risque d'addiction, c'est ce que la profession attend depuis des années.\n\nLTG-001 doit encore passer la phase 3. Le chemin jusqu'à l'AMM européenne est long, 3 à 5 ans minimum dans le meilleur des cas. Mais le fait qu'un second acteur valide le mécanisme Nav1.8 en phase 2 renforce la crédibilité de toute la classe.\n\nÀ surveiller de près : les critères d'inclusion de la phase 3 (types de douleur, populations), la durée de traitement étudiée, et surtout les comparaisons tête-à-tête avec suzetrigine si elles ont lieu. Ce sera déterminant pour le positionnement en commission de transparence.\n\nAu comptoir demain matin : rien de concret à proposer encore, mais commence à te former sur les mécanismes Nav1.8. Quand ces molécules arriveront en Europe, les patients auront vu les articles, ils poseront des questions. Autant être le premier à répondre."
+    },
+    {
+      "id": "actu_2026_07_30_1",
+      "date": "2026-07-30",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "Franchises, remboursements : la Cnam dit non au gouvernement",
+      "resume": "Le conseil de la Cnam a rejeté les cinq projets de décrets portant sur la hausse du reste à charge et le transfert de remboursements. 2 milliards d'euros d'économies attendus sur le dos des patients et des mutuelles. Ça ne va pas rester sans conséquences au comptoir.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/franchises-remboursements-la-cnam-desavoue-le-gouvernement",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_07_30_1.jpg",
+      "tags": [
+        "remboursement",
+        "franchise",
+        "cnam",
+        "reste-a-charge",
+        "lfss"
+      ],
+      "full_text": "La Cnam vient de claquer la porte au nez du gouvernement. Son conseil a rejeté les cinq projets de décrets visant à transférer des remboursements et à augmenter le reste à charge des assurés. Un avis consultatif, certes, mais symboliquement, c'est un camouflet.\n\nLe gouvernement vise 2 milliards d'euros d'économies. Sur la table : dispositifs médicaux, dentaire, transports sanitaires... et probablement des médicaments à faible service médical rendu. Le tout rogné sur le remboursement de l'Assurance Maladie.\n\nConcrètement, si ces décrets passent en force, les franchises augmentent et les tickets modérateurs s'alourdissent. Le patient paie plus. Ou sa mutuelle paie plus, ce qui revient à ce que le patient paie plus, via ses cotisations. Ça te rappelle quelque chose ? On est exactement dans la logique inverse de ce que la profession défend depuis des années sur le non-recours aux soins.\n\nPour l'officine, l'impact est double. D'abord, un reste à charge plus élevé peut freiner le renouvellement d'ordonnances chez les patients les plus précaires. Tu vas te retrouver à gérer la question \"je peux pas me permettre de tout prendre ce mois-ci\" plus souvent qu'à ton tour. Ensuite, si des spécialités tombent en déremboursement partiel ou total, les substitutions et les conseils associés vont se multiplier.\n\nLa CNAM rejette, mais le gouvernement n'est pas lié par cet avis. Les décrets peuvent passer en l'état. Le calendrier reste flou à ce stade, mais la direction de voyage, elle, est très claire : l'Assurance Maladie cherche à faire porter davantage le risque financier sur les complémentaires et les assurés.\n\nEt les mutuelles ? Elles ont déjà annoncé que la facture se retrouverait dans les cotisations 2027. Donc le patient paiera dans tous les cas, directement ou indirectement.\n\nAu comptoir demain matin : prépare-toi à des patients qui questionnent leur reste à charge, qui demandent des génériques par réflexe économique, et qui ont besoin qu'on leur explique ce que leur mutuelle couvre vraiment. Ton rôle de conseil n'a jamais été aussi concret qu'en période de déremboursement rampant."
+    },
+    {
+      "id": "lsv_2026_07_30",
+      "date": "2026-07-30",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? On soignait les fractures avec des cataplasmes de bouse de vache",
+      "resume": "Avant le plâtre, les médecins ne manquaient pas d'imagination pour immobiliser un os cassé. Et ce qu'ils utilisaient va te laisser sans voix. Spoiler : ça sortait directement de l'étable.",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_07_30.jpg",
+      "tags": [
+        "histoire",
+        "chirurgie",
+        "instrument",
+        "medecine-ancienne",
+        "os"
+      ],
+      "full_text": "Casse-toi un bras aujourd'hui, et tu repars avec un beau plâtre blanc, propre, efficace. Mais pendant des millénaires, les médecins ont dû improviser avec ce qu'ils avaient sous la main. Et parfois, ce qu'ils avaient sous la main, c'était littéralement sous les sabots des vaches.\n\nDans l'Égypte ancienne déjà, les papyrus médicaux - notamment le papyrus Edwin Smith, daté de 1600 av. J.-C. - décrivent des techniques d'immobilisation à base d'attelles de bois enveloppées dans du lin. Rien de choquant jusque-là. Mais au Moyen Âge européen, et bien au-delà, les guérisseurs populaires ajoutaient au mélange un ingrédient surprise : la bouse de vache fraîche, appliquée en cataplasme chaud autour du membre fracturé.\n\nL'idée n'était pas si absurde qu'elle en a l'air. La bouse, en séchant, rigidifiait légèrement. Elle gardait la chaleur, ce qui était censé « nourrir » l'os selon la médecine humorale. Et comme on croyait dur comme fer aux vertus « purifiantes » de certaines matières organiques… on y allait franco. Résultat : des infections à gogo, des mal-unions osseuses, et des membres difformes pour la vie.\n\nLe vrai tournant arrive en 1852. Un médecin néerlandais, Antonius Mathijsen, invente le plâtre de Paris tel qu'on le connaît : des bandelettes de gaze imprégnées de sulfate de calcium. Simple, rapide, propre. En quelques minutes, le membre est immobilisé. Révolutionnaire. Et pourtant, certaines campagnes rurales européennes ont continué à utiliser des remèdes traditionnels à base de terres argileuses ou de décoctions végétales jusqu'au début du XXe siècle.\n\nAujourd'hui, on va encore plus loin : résines légères, plâtres étanches, orthèses thermoformées. Certains hôpitaux testent même des coques en fibre de carbone imprimées en 3D. De la bouse de vache à l'impression 3D en à peine deux siècles - et au comptoir, on répond encore aux questions des patients qui rentrent des urgences avec leur beau plâtre blanc en se demandant s'ils peuvent se doucher avec."
+    },
+    {
       "id": "actu_2026_07_29_5",
       "date": "2026-07-29",
       "type": "actu",
@@ -11559,6 +11684,6 @@
       ]
     }
   ],
-  "count": 558,
-  "updated_at": "2026-07-29T04:15:37.474386+02:00"
+  "count": 564,
+  "updated_at": "2026-07-30T04:15:57.418165+02:00"
 }
