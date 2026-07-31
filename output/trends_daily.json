@@ -1,17 +1,12 @@
 {
-  "generated_at": "2026-07-30",
-  "window_label": "24 juil. au 30 juil. 2026",
+  "generated_at": "2026-07-31",
+  "window_label": "25 juil. au 31 juil. 2026",
   "has_history": true,
   "delta_source": "pytrends_rising",
   "pathologies": [
     {
       "display": "Fatigue après canicule",
       "delta_label": "↑ 25 000",
-      "trend": "up"
-    },
-    {
-      "display": "La fatigue en anglais",
-      "delta_label": "↑ 18 750",
       "trend": "up"
     },
     {
@@ -31,11 +26,6 @@
     }
   ],
   "soins": [
-    {
-      "display": "Immunite presidentielle",
-      "delta_label": "↑ 518 600",
-      "trend": "up"
-    },
     {
       "display": "Azinc immunite",
       "delta_label": "↑ 70 100",
@@ -58,7 +48,7 @@
     }
   ],
   "pathologies_stale": false,
-  "pathologies_from": "2026-07-30",
+  "pathologies_from": "2026-07-31",
   "soins_stale": false,
-  "soins_from": "2026-07-30"
+  "soins_from": "2026-07-31"
 }

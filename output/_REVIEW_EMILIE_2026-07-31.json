@@ -1,0 +1,59 @@
+{
+  "generated_at": "2026-07-31T04:15:47.713819+02:00",
+  "run_date": "2026-07-31",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Protections périodiques remboursées : les syndicats disent stop au flou",
+      "resume": "Le remboursement des protections périodiques réutilisables démarre le 1er octobre, mais FSPF et USPO tirent la sonnette d'alarme. Stocks, logiciels, approvisionnement : rien n'est prêt. Les syndicats refusent que les pharmaciens portent le risque d'indus sans outils fiables.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/protections-periodiques-les-pharmaciens-refusent-de-jouer-aux-gendarmes-a-partir-du-1er-octobre",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "pharma_monde",
+      "titre": "FDA, Replimune et mélanome : le comité d'experts donne son feu vert à RP1",
+      "resume": "Le comité consultatif de la FDA vient de voter en faveur du traitement expérimental RP1 de Replimune contre le mélanome avancé. Une thérapie oncolytique de nouvelle génération qui pourrait changer la donne dans la prise en charge de ce cancer agressif. Ce que ça annonce pour les officines françaises spécialisées en oncologie.",
+      "source": "STAT News",
+      "source_url": "https://www.statnews.com/2026/07/30/replimune-melanoma-drug-rp1-fda-expert-meeting-live-blog/?utm_campaign=rss",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "avenir_pharma",
+      "titre": "Doctolib donne vos données à une IA en août : ce que ça change pour les patients et le comptoir",
+      "resume": "En août, Doctolib lance un programme de recherche scientifique basé sur les données de santé de ses 50 millions d'utilisateurs. Objectif : explorer les usages de l'IA dans les parcours de soins. Les patients peuvent s'y opposer, mais encore faut-il qu'ils le sachent.",
+      "source": "Sciences et Avenir",
+      "source_url": "https://www.sciencesetavenir.fr/sante/ia-pourquoi-doctolib-va-t-il-utiliser-nos-donnees-de-sante-pour-des-recherches-scientifiques_194023?xtor=RSS-16",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Franchises médicales doublées : ce que ça change vraiment pour ton comptoir",
+      "resume": "Le Conseil de la CNAM a rejeté quasi unanimement le doublement des franchises médicales et leur transfert aux mutuelles. Mais si le gouvernement passe outre, l'impact sur le flux officinal est concret et mesurable.",
+      "source": "Pharm'Actus · Le Quotidien du Pharmacien — Franchises médicales et remboursement par les mutuelles : pour le Conseil de la CNAM, c'est non, Commission des comptes de la Sécurité sociale — Rapport 2025 (déficit prévisionnel)",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/franchises-medicales-et-remboursement-par-les-mutuelles-pour-le-conseil-de-la-cnam-cest-non",
+      "confidence_score": 0.62,
+      "warnings": [
+        "Le montant exact du plafond annuel de franchise médicament (50 €/an) est celui en vigueur depuis 2008 — à vérifier si une modification récente a été publiée au JO avant la rédaction de cet article.",
+        "Le chiffre '18 milliards de déficit SS 2025' est une projection — la valeur définitive dépend du rapport CCSS le plus récent disponible, à croiser avec la source officielle.",
+        "Le chiffre '96 % de la population couverte par une complémentaire' est issu de la DREES — vérifier que le rapport 2024 est bien la dernière édition disponible.",
+        "Le volume '1 800 à 2 000 feuilles de soins par jour' est une estimation métier couramment citée mais non sourcée dans cet article : à retirer ou sourcer si publication formelle.",
+        "Les positions syndicales FSPF et USPO sur ce sujet précis n'ont pas été trouvées dans les sources disponibles : l'article indique explicitement leur absence de prise de position publiée, conformément à la règle d'équilibre syndical.",
+        "L'affirmation sur la hausse des franchises actes paramédicaux en 2024 (0,50 € à 1 €) doit être vérifiée : référencer le décret exact au JO.",
+        "1 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

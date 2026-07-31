@@ -6,11 +6,6 @@
       "trend": "up"
     },
     {
-      "display": "La fatigue en anglais",
-      "delta_label": "↑ 18 750",
-      "trend": "up"
-    },
-    {
       "display": "Allergie a la poussiere",
       "delta_label": "↑ 10 250",
       "trend": "up"
@@ -26,13 +21,8 @@
       "trend": "up"
     }
   ],
-  "pathologies_from": "2026-07-30",
+  "pathologies_from": "2026-07-31",
   "soins": [
-    {
-      "display": "Immunite presidentielle",
-      "delta_label": "↑ 518 600",
-      "trend": "up"
-    },
     {
       "display": "Azinc immunite",
       "delta_label": "↑ 70 100",
@@ -54,5 +44,5 @@
       "trend": "up"
     }
   ],
-  "soins_from": "2026-07-30"
+  "soins_from": "2026-07-31"
 }

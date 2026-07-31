@@ -1,6 +1,131 @@
 {
   "articles": [
     {
+      "id": "actu_2026_07_31_5",
+      "date": "2026-07-31",
+      "type": "actu",
+      "categorie": "business_officine",
+      "titre": "Franchises médicales doublées : ce que ça change vraiment pour ton comptoir",
+      "resume": "Le Conseil de la CNAM a rejeté quasi unanimement le doublement des franchises médicales et leur transfert aux mutuelles. Mais si le gouvernement passe outre, l'impact sur le flux officinal est concret et mesurable.",
+      "source": "Pharm'Actus · Le Quotidien du Pharmacien — Franchises médicales et remboursement par les mutuelles : pour le Conseil de la CNAM, c'est non, Commission des comptes de la Sécurité sociale — Rapport 2025 (déficit prévisionnel)",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/franchises-medicales-et-remboursement-par-les-mutuelles-pour-le-conseil-de-la-cnam-cest-non",
+      "tiktok_url": "",
+      "badge_label": "Business",
+      "image_url": "assets/img_actu_2026_07_31_5.jpg",
+      "tags": [
+        "franchise-medicale",
+        "assurance-maladie",
+        "remboursement",
+        "reste-a-charge"
+      ],
+      "full_text": "Le Conseil de la CNAM a rejeté quasi unanimement le doublement des franchises médicales et leur transfert aux mutuelles. Mais si le gouvernement passe outre, l'impact sur le flux officinal est concret et mesurable.\n\n**Contexte**\n\nLe gouvernement a mis sur la table deux projets de décrets explosifs : doubler les plafonds annuels des franchises médicales (actuellement 50 € par an et par assuré pour les médicaments) et organiser un transfert partiel du reste-à-charge vers les mutuelles complémentaires. Le Conseil de la CNAM a rendu son avis le 30 juillet 2026 : rejet quasi unanime. Ce n'est pas la première fois que ce levier est activé - les franchises médicales existent depuis 2008, avec une franchise de 0,50 € par boîte de médicament, plafonnée à 50 €/an. Le doublement du plafond porterait ce seuil à 100 €/an. La mesure vise à réduire le déficit de la Sécurité sociale, estimé à plus de 18 milliards d'euros en 2025 selon les projections de la Commission des comptes de la Sécurité sociale. Toutes les officines sont concernées : le réseau compte environ 20 900 pharmacies en France selon les dernières données de l'Ordre national des pharmaciens (rapport 2024). Les patients âgés, polymédicamentés ou atteints de maladies chroniques sont les premiers exposés à ce relèvement.\n\n**Analyse business**\n\nDécryptons les deux volets séparément - parce que leur impact officinal est très différent.\n\n**Volet 1 : doublement du plafond de franchise.**\nAujourd'hui, la franchise de 0,50 € par boîte est prélevée sur le remboursement AM, jusqu'à 50 €/an. Le patient ne la 'voit' pas directement au comptoir : l'officine encaisse le ticket modérateur normal, l'AM déduit la franchise de son remboursement. Si le plafond passe à 100 €/an, les patients chroniques atteignent ce plafond deux fois plus tard dans l'année - ils continuent donc à payer leur franchise plus longtemps. Conséquence directe : pour certains patients sans complémentaire santé ou avec une complémentaire qui ne couvre pas les franchises (rappel : les contrats responsables ne remboursent PAS les franchises par définition), le reste-à-charge augmente. Le risque de non-observance et de reports d'achats OTC est réel. Mais attention : l'impact sur la trésorerie immédiate de l'officine est indirect - ce n'est pas l'officine qui 'perd' la franchise, c'est l'AM qui la récupère sur le remboursement. L'impact officinal est comportemental, pas comptable direct.\n\n**Volet 2 : transfert vers les mutuelles.**\nC'est là que ça devient structurellement plus sensible. Si certains remboursements AM basculent vers les complémentaires, la mécanique de tiers payant se complexifie davantage. Aujourd'hui, selon la DREES (rapport 2024), 96 % de la population bénéficie d'une complémentaire santé, mais avec des niveaux de couverture très hétérogènes. Le risque pour l'officine : multiplication des flux de paiement, délais de remboursement allongés côté complémentaires, et potentiel accroissement des impayés sur les 4 % non couverts. Les officines traitent déjà un volume considérable de feuilles de soins électroniques quotidiennement - toute complexification du circuit amplifie la charge administrative sans rémunération supplémentaire.\n\n**Signal politique à surveiller.**\nLe rejet par le Conseil de la CNAM n'est pas bloquant juridiquement : le gouvernement peut passer par décret. Historiquement, les hausses de franchises ont systématiquement été actées malgré les avis défavorables (franchises créées en 2008, rehaussées en 2024 de 0,50 € à 1 € pour les actes paramédicaux sans consensus). La probabilité d'application reste élevée dans un contexte de rigueur budgétaire.\n\n**Recommandations actionnables**\n\n1. **Cartographie tes patients à risque** - Identifie les profils chroniques/polymédicamentés sans bonne couverture complémentaire dans ta patientèle. Ce sont eux qui viendront te poser des questions au comptoir dès l'entrée en vigueur. Prépare une fiche synthétique sur ce qui est ou non couvert par les contrats responsables.\n\n2. **Vérifie ton paramétrage tiers payant** - Anticipe dès maintenant avec ton logiciel métier (PGI) les évolutions de flux si de nouveaux remboursements complémentaires entrent en jeu. Un flux mal paramétré = impayé qui dort 90 jours.\n\n3. **Positionne ton rôle de conseil** - Une hausse du reste-à-charge est une opportunité de conseil en automédication raisonnée et en prévention. Ce sont des actes non remboursés mais à valeur ajoutée perçue : valorise-les.\n\n4. **Surveille les textes au Journal officiel** - Le passage en décret peut intervenir sans concertation supplémentaire. Mets une alerte sur Légifrance pour les mots-clés 'franchise médicale' et 'décret'.\n\n5. **Contacte ton syndicat** - FSPF et USPO n'ont pas encore publié de position coordonnée sur l'impact officinal spécifique. C'est le moment de remonter tes observations de terrain.\n\n**Sources citees**\n\n- Le Quotidien du Pharmacien - Franchises médicales et remboursement par les mutuelles : pour le Conseil de la CNAM, c'est non\n- Commission des comptes de la Sécurité sociale - Rapport 2025 (déficit prévisionnel)\n- Ordre national des pharmaciens - Rapport annuel 2024 (nombre d'officines)\n- DREES - La complémentaire santé en France, rapport 2024"
+    },
+    {
+      "id": "actu_2026_07_31_4",
+      "date": "2026-07-31",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "Doctolib donne vos données à une IA en août : ce que ça change pour les patients et le comptoir",
+      "resume": "En août, Doctolib lance un programme de recherche scientifique basé sur les données de santé de ses 50 millions d'utilisateurs. Objectif : explorer les usages de l'IA dans les parcours de soins. Les patients peuvent s'y opposer, mais encore faut-il qu'ils le sachent.",
+      "source": "Sciences et Avenir",
+      "source_url": "https://www.sciencesetavenir.fr/sante/ia-pourquoi-doctolib-va-t-il-utiliser-nos-donnees-de-sante-pour-des-recherches-scientifiques_194023?xtor=RSS-16",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_07_31_4.jpg",
+      "tags": [
+        "ia",
+        "donnees-sante",
+        "doctolib",
+        "numerique",
+        "parcours-soins"
+      ],
+      "full_text": "50 millions d'utilisateurs. C'est la base de données que Doctolib s'apprête à mettre au service d'un programme de recherche en intelligence artificielle à partir d'août 2026. Autant dire que ce n'est pas une expérimentation confidentielle.\n\nConcrètement, les données de santé des utilisateurs de la plateforme (rendez-vous, spécialités consultées, historique de prise en charge) seront exploitées pour entraîner et tester des modèles d'IA censés optimiser les parcours de soins. La finalité affichée : améliorer l'orientation des patients et anticiper les besoins de santé.\n\nLe droit d'opposition existe. Les patients peuvent refuser que leurs données soient utilisées dans ce cadre. Mais on connaît la chanson : entre le droit théorique et l'exercice pratique, il y a souvent un gouffre. Combien de patients savent qu'ils ont cette option, comment y accéder, dans quel délai ? Les réponses restent floues à ce stade.\n\nPourquoi c'est un sujet pour les pharmaciens ? D'abord parce que vos patients vont vous en parler. Les plus connectés, les plus méfiants, ou tout simplement ceux qui ont vu passer l'info. Il faut être capable d'expliquer simplement ce qu'il se passe sans alimenter la psychose, ni balayer d'un revers de main des questions légitimes sur la confidentialité des données de santé.\n\nEnsuite, parce que ce type de programme annonce une transformation profonde du parcours de soins numérique. Si l'IA de Doctolib devient capable d'orienter un patient vers telle ou telle officine, tel ou tel service de proximité, les pharmaciens ont tout intérêt à comprendre comment ces algorithmes fonctionnent et comment leur officine peut y apparaître.\n\nEnfin, c'est un signal fort sur la valeur des données de santé. Les GAFAM de la santé (Doctolib en est un, en France) ont compris que la donnée est le pétrole du XXIe siècle médical. L'IA n'est que l'outil de raffinage.\n\nDemain au comptoir : si un patient t'interroge sur Doctolib et ses données, oriente-le vers les paramètres de confidentialité de son compte et le droit d'opposition. Et reste attentif aux évolutions réglementaires autour du Health Data Hub et du RGPD santé : ce dossier n'en est qu'à ses débuts."
+    },
+    {
+      "id": "actu_2026_07_31_3",
+      "date": "2026-07-31",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "Chikungunya en Guyane : les pharmaciens vaccinateurs, c'est acté",
+      "resume": "L'USPO Guyane remporte sa première victoire syndicale : les pharmaciens d'officine habilités pourront administrer le vaccin contre le chikungunya dans les territoires où le virus circule activement. Une avancée concrète pour les compétences vaccinales des officinaux ultramarins.",
+      "source": "USPO",
+      "source_url": "https://uspo.fr/tout-juste-constituee-luspo-guyane-obtient-sa-premiere-victoire-syndicale-les-pharmacies-pourront-participer-a-la-vaccination-contre-le-chikungunya-dans-les-territoires-concernes/",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_07_31_3.jpg",
+      "tags": [
+        "vaccination",
+        "chikungunya",
+        "uspo",
+        "guyane",
+        "officine"
+      ],
+      "full_text": "Bonne nouvelle du jour, et elle vient de loin, littéralement. En Guyane, les pharmaciens d'officine habilités sont désormais autorisés à vacciner contre le chikungunya dans les zones où le virus circule activement et où un risque épidémique est identifié.\n\nC'est le calendrier vaccinal 2026 qui entérine cette évolution. Les personnes éligibles à cette vaccination en officine sont celles ciblées par les recommandations sanitaires dans les territoires concernés. Le dispositif s'applique aux pharmaciens ayant suivi la formation habilitante à la vaccination, conformément au cadre national.\n\nDerrière cette victoire, il y a un acteur clairement identifié : l'USPO Guyane, toute jeune section syndicale, qui a porté ce dossier auprès de l'ARS dès sa création. Son président Fabien Sublet a conduit ce travail de fond avec les autorités sanitaires locales. Résultat : quelques mois après sa constitution, c'est une avancée concrète et mesurable.\n\nÉquilibre syndical oblige : à ce stade, ni la FSPF ni l'UPGF ne se sont exprimées publiquement sur cette avancée spécifique à la Guyane. Ce n'est pas une surprise, le dossier étant piloté localement par l'USPO Guyane en lien avec l'ARS Guyane.\n\nPourquoi c'est une bonne nouvelle au-delà des frontières guyanaises ? Parce que ça démontre une fois de plus que l'extension des compétences vaccinales des pharmaciens n'est pas un vœu pieux : c'est un levier opérationnel que les ARS peuvent actionner rapidement quand le besoin sanitaire est là. Et que les syndicats locaux ont un vrai pouvoir d'influence quand ils bossent dans les règles.\n\nLe chikungunya, rappelons-le, est une arbovirose transmise par l'Aedes. En Guyane et dans les zones d'endémie, l'accès à la vaccination en officine est un vrai gain d'accessibilité pour les patients. Le pharmacien de proximité, encore une fois, devient le premier rempart sanitaire.\n\nDemain au comptoir (si tu exerces en Guyane ou dans un territoire concerné) : vérifie ton habilitation vaccinale, identifie le vaccin disponible et prends contact avec ton ARS pour les modalités pratiques. Pour les confrères de métropole : surveillez les cas autochtones en Occitanie, où des cas de chikungunya et de dengue ont déjà été signalés cet été."
+    },
+    {
+      "id": "actu_2026_07_31_2",
+      "date": "2026-07-31",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "FDA, Replimune et mélanome : le comité d'experts donne son feu vert à RP1",
+      "resume": "Le comité consultatif de la FDA vient de voter en faveur du traitement expérimental RP1 de Replimune contre le mélanome avancé. Une thérapie oncolytique de nouvelle génération qui pourrait changer la donne dans la prise en charge de ce cancer agressif. Ce que ça annonce pour les officines françaises spécialisées en oncologie.",
+      "source": "STAT News",
+      "source_url": "https://www.statnews.com/2026/07/30/replimune-melanoma-drug-rp1-fda-expert-meeting-live-blog/?utm_campaign=rss",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/img_actu_2026_07_31_2.jpg",
+      "tags": [
+        "fda",
+        "oncologie",
+        "innovation",
+        "melanome",
+        "immunotherapie"
+      ],
+      "full_text": "Un vote consultatif de la FDA, ça ne change pas la vie d'un pharmacien de Melun ou de Pau du jour au lendemain. Mais celui du 30 juillet mérite qu'on y prête attention.\n\nLe comité d'experts de l'agence américaine a voté en faveur de RP1 (vusolimogène oderparepvec), le traitement expérimental de Replimune contre le mélanome avancé. Ce n'est pas une AMM, mais c'est l'étape d'avant. Et quand la FDA donne ce signal, l'EMA et les autorités européennes emboîtent généralement le pas dans les 12 à 24 mois.\n\nQu'est-ce que RP1 ? C'est une thérapie oncolytique, c'est-à-dire un virus modifié génétiquement (herpès simplex type 1) qui infecte et détruit sélectivement les cellules tumorales tout en activant la réponse immunitaire locale. Le principe : faire du cancer lui-même un déclencheur de l'immunité antitumorale. Intelligent, non ?\n\nLe mélanome avancé ou métastatique est une indication où les options thérapeutiques restent limitées malgré les progrès de l'immunothérapie (anti-PD1, anti-CTLA4). RP1 se positionnerait en association avec pembrolizumab pour les patients en échec ou en situation réfractaire.\n\nPour les pharmacies françaises orientées oncologie, comme il en existe de plus en plus (on en a d'ailleurs une belle vitrine à Vieux-Condé dans l'actu du jour), ce type de pipeline est à surveiller de près. Les thérapies oncolytiques nécessitent des conditions de stockage et de manipulation spécifiques que peu d'officines maîtrisent aujourd'hui.\n\nLa décision finale de la FDA est attendue dans les prochains mois. Une demande d'AMM européenne n'a pas encore été annoncée officiellement par Replimune. Mais dans un contexte où l'accès précoce via l'ATU (désormais AAP en France) est activé de plus en plus vite pour les innovations en oncologie, ce vote américain place RP1 sur le radar des équipes de pharmacie hospitalière et des officines partenaires de réseaux cancérologie.\n\nDemain au comptoir : pas d'action immédiate, mais si tu travailles avec des patients sous immunothérapie mélanome, prends note. Cette molécule pourrait arriver plus vite qu'on ne le croit en accès précoce."
+    },
+    {
+      "id": "actu_2026_07_31_1",
+      "date": "2026-07-31",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "Protections périodiques remboursées : les syndicats disent stop au flou",
+      "resume": "Le remboursement des protections périodiques réutilisables démarre le 1er octobre, mais FSPF et USPO tirent la sonnette d'alarme. Stocks, logiciels, approvisionnement : rien n'est prêt. Les syndicats refusent que les pharmaciens portent le risque d'indus sans outils fiables.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/protections-periodiques-les-pharmaciens-refusent-de-jouer-aux-gendarmes-a-partir-du-1er-octobre",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_07_31_1.jpg",
+      "tags": [
+        "remboursement",
+        "officine",
+        "fspf",
+        "uspo",
+        "assurance-maladie"
+      ],
+      "full_text": "Le 1er octobre arrive vite. Et pour les protections périodiques réutilisables remboursées, c'est le bazar avant même le coup d'envoi.\n\nFSPF et USPO ont haussé le ton lors des dernières concertations. Le message est clair : on ne jouera pas aux gendarmes si on n'a pas les outils pour. Logiciels non paramétrés, stocks insuffisants, circuits d'approvisionnement non définis... Les points techniques non finalisés s'accumulent à J-60 du lancement.\n\nCe qui inquiète le plus ? Le risque d'indus. Si le pharmacien délivre sans pouvoir vérifier qu'une précédente délivrance n'a pas déjà eu lieu, c'est lui qui porte le chapeau. Sans accès temps réel à un historique fiable, contrôler les droits à remboursement relève de l'impossible.\n\nLes deux syndicats sont alignés sur ce point, chose qui mérite d'être notée. La FSPF et l'USPO demandent que les conditions techniques soient réunies AVANT le démarrage effectif, et non après coup. À ce stade, l'UPGF ne s'est pas exprimée publiquement sur ce sujet spécifique.\n\nQuid des éditeurs de logiciels ? Le délai est serré pour mettre à jour les systèmes de facturation et intégrer les nouveaux codes. Et côté grossistes-répartiteurs, la Chambre syndicale de la répartition pharmaceutique (CSRP) n'a pas encore précisé les modalités d'approvisionnement en réutilisables.\n\nLe paradoxe est savoureux : l'intention est bonne (accès facilité aux protections durables, impact environnemental positif), mais la mise en oeuvre promet d'être sportive. Le pharmacien, habituel fusible du système de santé, devra gérer les patients mécontents si les stocks font défaut ou si la facturation bugue.\n\nDemain au comptoir, il faut anticiper. Former l'équipe sur les produits concernés dès maintenant. Identifier tes fournisseurs. Et surveiller de près les communications de l'Assurance Maladie sur les modalités exactes de remboursement : référence de facturation, fréquence de renouvellement, plafond de prise en charge. Aucun de ces éléments n'est gravé dans le marbre à ce jour."
+    },
+    {
+      "id": "lsv_2026_07_31",
+      "date": "2026-07-31",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? On soignait la peste bubonique avec des pigeons vivants",
+      "resume": "Oublie les antibiotiques. Au XVIIe siècle, le remède officiel contre la peste, c'était de coller un pigeon vivant sur les bubons. Pas une métaphore. Un vrai pigeon. Et les médecins y croyaient dur comme fer.",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_07_31.jpg",
+      "tags": [
+        "histoire",
+        "epidemie",
+        "peste",
+        "traitement",
+        "medecine"
+      ],
+      "full_text": "La peste bubonique. Rien que le nom fout encore les jetons. Entre le XIVe et le XVIIe siècle, elle a tué environ un tiers de la population européenne. Et face à ce monstre, les médecins de l'époque ont sorti leur arme secrète : le pigeon.\n\nLe principe était simple - enfin, simple façon de parler. Tu prenais un pigeon vivant, tu lui rasais le derrière, et tu lui appliquais les fesses directement sur le bubon du patient. L'idée ? L'oiseau allait « aspirer » le poison de l'infection. On changeait le pigeon dès qu'il mourait - ce qui, soit dit en passant, arrivait assez vite. On enchaînait jusqu'à ce que le bubon se résorbe... ou que le patient rende l'âme.\n\nCette pratique n'était pas du folklore de village. Elle était recommandée par des médecins officiels, décrite dans des traités médicaux sérieux, et utilisée jusqu'à la fin du XVIIe siècle. Ambroise Paré lui-même, le grand chirurgien français, en parlait sans sourciller.\n\nLe twist fascinant : certains historiens pensent que ça fonctionnait... un tout petit peu. Pas à cause de la magie du pigeon, mais parce que maintenir la chaleur sur un bubon favorisait parfois sa maturation et son drainage naturel. Un bénéfice thermique accidentel, quoi.\n\nAujourd'hui, la peste se traite avec de la streptomycine ou de la doxycycline en quelques jours. Elle n'est pas éradiquée - on recense encore 600 à 2 000 cas par an dans le monde. Mais la prochaine fois qu'un patient se plaint de son traitement antibiotique, tu peux lui rappeler ce que l'alternative ressemblait autrefois. Ça remet les choses en perspective."
+    },
+    {
       "id": "actu_2026_07_30_5",
       "date": "2026-07-30",
       "type": "actu",
@@ -11684,6 +11809,6 @@
       ]
     }
   ],
-  "count": 564,
-  "updated_at": "2026-07-30T04:15:57.418165+02:00"
+  "count": 570,
+  "updated_at": "2026-07-31T04:15:51.506586+02:00"
 }
