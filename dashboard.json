@@ -1,29 +1,37 @@
 {
- "genere_le": "2026-07-30T07:32:11+02:00",
+ "genere_le": "2026-07-31T07:57:21+02:00",
  "liste_brevo": 5,
  "abonnes_total": 1020,
  "nouveaux_7j": 4,
  "nouveaux_cumul": 1013,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-07-23",
-  "au": "2026-07-30",
-  "delivres": 6559,
-  "ouvertures": 2134,
-  "ouvertures_uniques": 1564,
-  "clics": 2067,
-  "clics_uniques": 364,
-  "taux_ouverture_pct": 23.8,
-  "taux_clic_pct": 5.5,
-  "ctor_pct": 23.3,
+  "du": "2026-07-24",
+  "au": "2026-07-31",
+  "delivres": 6556,
+  "ouvertures": 2229,
+  "ouvertures_uniques": 1608,
+  "clics": 2225,
+  "clics_uniques": 373,
+  "taux_ouverture_pct": 24.5,
+  "taux_clic_pct": 5.7,
+  "ctor_pct": 23.2,
   "top_articles": [
    {
     "id": "actu_2026_07_25_5",
     "titre": "Franchises médicales doublées : 750 M€ d'économies, mais quel impact sur le flux officine ?",
     "date": "2026-07-25",
     "categorie": "business_officine",
-    "clics": 57,
-    "lecteurs": 36
+    "clics": 58,
+    "lecteurs": 37
+   },
+   {
+    "id": "actu_2026_07_27_5",
+    "titre": "Doctolib aspire vos ordonnances dès août : ce que ça change pour l'officine",
+    "date": "2026-07-27",
+    "categorie": "business_officine",
+    "clics": 44,
+    "lecteurs": 32
    },
    {
     "id": "actu_2026_07_27_1",
@@ -34,12 +42,12 @@
     "lecteurs": 31
    },
    {
-    "id": "actu_2026_07_27_5",
-    "titre": "Doctolib aspire vos ordonnances dès août : ce que ça change pour l'officine",
-    "date": "2026-07-27",
-    "categorie": "business_officine",
-    "clics": 42,
-    "lecteurs": 31
+    "id": "actu_2026_07_30_1",
+    "titre": "Franchises, remboursements : la Cnam dit non au gouvernement",
+    "date": "2026-07-30",
+    "categorie": "pharma_france",
+    "clics": 46,
+    "lecteurs": 28
    },
    {
     "id": "actu_2026_07_24_1",
@@ -50,12 +58,20 @@
     "lecteurs": 27
    },
    {
+    "id": "actu_2026_07_29_3",
+    "titre": "Mesure de la PA officiellement inscrite dans les missions du pharmacien",
+    "date": "2026-07-29",
+    "categorie": "bonne_nouvelle",
+    "clics": 54,
+    "lecteurs": 26
+   },
+   {
     "id": "actu_2026_07_28_5",
     "titre": "Génériques : le CEPS épargne 9 groupes sur 12 - ce que ça change pour ta marge",
     "date": "2026-07-28",
     "categorie": "business_officine",
-    "clics": 48,
-    "lecteurs": 25
+    "clics": 49,
+    "lecteurs": 26
    },
    {
     "id": "actu_2026_07_24_5",
@@ -66,50 +82,34 @@
     "lecteurs": 25
    },
    {
-    "id": "actu_2026_07_29_3",
-    "titre": "Mesure de la PA officiellement inscrite dans les missions du pharmacien",
-    "date": "2026-07-29",
-    "categorie": "bonne_nouvelle",
-    "clics": 51,
-    "lecteurs": 24
+    "id": "actu_2026_07_30_4",
+    "titre": "Falaise des brevets : le jackpot generiques arrive d'ici 2035, es-tu pret ?",
+    "date": "2026-07-30",
+    "categorie": "pharma_monde",
+    "clics": 41,
+    "lecteurs": 25
    },
    {
     "id": "actu_2026_07_29_4",
     "titre": "GLP-1 remboursés : les chercheurs avouent qu'ils ne savent pas encore tout",
     "date": "2026-07-29",
     "categorie": "avenir_pharma",
-    "clics": 44,
-    "lecteurs": 21
-   },
-   {
-    "id": "actu_2026_07_29_2",
-    "titre": "L'ADA en crise de gouvernance : ce que ca dit du monde du diabète",
-    "date": "2026-07-29",
-    "categorie": "pharma_monde",
-    "clics": 42,
-    "lecteurs": 20
-   },
-   {
-    "id": "actu_2026_07_29_1",
-    "titre": "CEPS : l'USPO sauve 20 millions d'euros de baisses de prix sur les génériques",
-    "date": "2026-07-29",
-    "categorie": "pharma_france",
-    "clics": 40,
-    "lecteurs": 20
+    "clics": 46,
+    "lecteurs": 23
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-07-30",
-  "delivres": 66936,
-  "ouvertures": 26878,
-  "ouvertures_uniques": 18418,
-  "clics": 27944,
-  "clics_uniques": 5007,
+  "au": "2026-07-31",
+  "delivres": 67853,
+  "ouvertures": 27266,
+  "ouvertures_uniques": 18671,
+  "clics": 28328,
+  "clics_uniques": 5066,
   "taux_ouverture_pct": 27.5,
   "taux_clic_pct": 7.5,
-  "ctor_pct": 27.2,
+  "ctor_pct": 27.1,
   "top_articles": [
    {
     "id": "actu_2026_06_18_1",
