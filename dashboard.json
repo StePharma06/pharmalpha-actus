@@ -1,21 +1,21 @@
 {
- "genere_le": "2026-07-31T07:57:21+02:00",
+ "genere_le": "2026-08-01T07:47:07+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1020,
- "nouveaux_7j": 4,
- "nouveaux_cumul": 1013,
+ "abonnes_total": 1024,
+ "nouveaux_7j": 7,
+ "nouveaux_cumul": 1017,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-07-24",
-  "au": "2026-07-31",
-  "delivres": 6556,
-  "ouvertures": 2229,
-  "ouvertures_uniques": 1608,
-  "clics": 2225,
-  "clics_uniques": 373,
-  "taux_ouverture_pct": 24.5,
-  "taux_clic_pct": 5.7,
-  "ctor_pct": 23.2,
+  "du": "2026-07-25",
+  "au": "2026-08-01",
+  "delivres": 6560,
+  "ouvertures": 2351,
+  "ouvertures_uniques": 1685,
+  "clics": 2089,
+  "clics_uniques": 346,
+  "taux_ouverture_pct": 25.7,
+  "taux_clic_pct": 5.3,
+  "ctor_pct": 20.5,
   "top_articles": [
    {
     "id": "actu_2026_07_25_5",
@@ -46,16 +46,8 @@
     "titre": "Franchises, remboursements : la Cnam dit non au gouvernement",
     "date": "2026-07-30",
     "categorie": "pharma_france",
-    "clics": 46,
-    "lecteurs": 28
-   },
-   {
-    "id": "actu_2026_07_24_1",
-    "titre": "Franchises médicales : le plafond double à 200 euros, et c'est demain",
-    "date": "2026-07-24",
-    "categorie": "pharma_france",
-    "clics": 50,
-    "lecteurs": 27
+    "clics": 48,
+    "lecteurs": 29
    },
    {
     "id": "actu_2026_07_29_3",
@@ -74,14 +66,6 @@
     "lecteurs": 26
    },
    {
-    "id": "actu_2026_07_24_5",
-    "titre": "Concentration officinale : +6,3% pour les grandes, +1,6% pour les petites - le fossé se creuse",
-    "date": "2026-07-24",
-    "categorie": "business_officine",
-    "clics": 46,
-    "lecteurs": 25
-   },
-   {
     "id": "actu_2026_07_30_4",
     "titre": "Falaise des brevets : le jackpot generiques arrive d'ici 2035, es-tu pret ?",
     "date": "2026-07-30",
@@ -96,20 +80,36 @@
     "categorie": "avenir_pharma",
     "clics": 46,
     "lecteurs": 23
+   },
+   {
+    "id": "actu_2026_07_29_1",
+    "titre": "CEPS : l'USPO sauve 20 millions d'euros de baisses de prix sur les génériques",
+    "date": "2026-07-29",
+    "categorie": "pharma_france",
+    "clics": 44,
+    "lecteurs": 23
+   },
+   {
+    "id": "actu_2026_07_31_1",
+    "titre": "Protections périodiques remboursées : les syndicats disent stop au flou",
+    "date": "2026-07-31",
+    "categorie": "pharma_france",
+    "clics": 42,
+    "lecteurs": 23
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-07-31",
-  "delivres": 67853,
-  "ouvertures": 27266,
-  "ouvertures_uniques": 18671,
-  "clics": 28328,
-  "clics_uniques": 5066,
-  "taux_ouverture_pct": 27.5,
-  "taux_clic_pct": 7.5,
-  "ctor_pct": 27.1,
+  "au": "2026-08-01",
+  "delivres": 68775,
+  "ouvertures": 27759,
+  "ouvertures_uniques": 19003,
+  "clics": 28525,
+  "clics_uniques": 5105,
+  "taux_ouverture_pct": 27.6,
+  "taux_clic_pct": 7.4,
+  "ctor_pct": 26.9,
   "top_articles": [
    {
     "id": "actu_2026_06_18_1",
