@@ -1,0 +1,59 @@
+{
+  "generated_at": "2026-08-01T04:15:49.869396+02:00",
+  "run_date": "2026-08-01",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Convention pharma : la dénonciation n'est plus un tabou",
+      "resume": "Les négociations sur l'avenant 3 sont au point mort. La dénonciation de la convention pharmaceutique est désormais évoquée ouvertement comme levier de pression. Le compte à rebours est lancé.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/convention-pharmaceutique-le-compte-a-rebours-avant-la-denonciation-est-lance",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "Apixaban générique : 16 nouveaux remboursés dès le 4 août, du concret pour l'officine",
+      "resume": "16 génériques d'apixaban (Eliquis) entrent au remboursement le 4 août 2026. KRKA, Almus, Arrow, Cristers, Evolugen, EG Labo sont dans la course. C'est une vraie bonne nouvelle pour la substitution et pour tes patients sous anticoagulant oral.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/medicament-parapharmacie/apixaban-16-generiques-rembourses-partir-du-4-aout",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "avenir_pharma",
+      "titre": "Anticancéreux oraux non utilisés : le réemploi entre dans l'arène",
+      "resume": "La LFSS 2026 autorise à titre expérimental la collecte et la redistribution d'anticancéreux oraux non utilisés dans 26 établissements de santé. Zéro gaspillage sur des molécules à plusieurs milliers d'euros le cycle, c'est l'objectif. Et demain, l'officine pourrait être dans la boucle.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/anticancereux-oraux-le-reemploi-des-medicaments-bientot-teste",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Prévention cardio : une nouvelle loi, une nouvelle mission qui peut rapporter gros",
+      "resume": "La loi Neuder sur les maladies cardio-neuro-vasculaires vient d'être publiée. Elle ouvre explicitement la voie à une mission de prévention officinale. Pour les 21 000 officines françaises, c'est potentiellement l'un des leviers de rémunération les plus significatifs depuis les en...",
+      "source": "Pharm'Actus · USPO – Prévention cardiovasculaire : nouvelle mission en vue !, Santé Publique France – Maladies cardiovasculaires, données épidémiologiques",
+      "source_url": "https://uspo.fr/prevention-cardiovasculaire-nouvelle-mission-en-vue/",
+      "confidence_score": 0.72,
+      "warnings": [
+        "Le chiffre de 500 000 BPM réalisés en 2024 est une estimation cohérente avec les données publiques disponibles mais n'est pas issu d'un rapport officiel daté et nominatif dans cet article : à vérifier précisément sur le rapport CNAM 2024/2025 avant publication.",
+        "Le chiffre de 30 millions d'euros (500 000 BPM × 60 €) est un calcul direct à partir du tarif conventionnel BPM (60 €) et du volume estimé : ne le présenter qu'avec la réserve sur le volume.",
+        "Le tarif des entretiens asthme cité à 40 € est une approximation de mémoire — vérifier le montant exact dans l'avenant conventionnel en vigueur avant publication.",
+        "L'estimation 'centaines de millions d'euros' sur la prévention cardio est volontairement qualitative et non chiffrée précisément, conformément à la règle de non-extrapolation sans source.",
+        "La position de la FSPF et de l'UPGF sur la loi Neuder n'a pas été retrouvée dans les sources disponibles à ce jour : mentionné explicitement dans l'article.",
+        "Le délai '18 mois' entre loi et avenant conventionnel est une estimation historique moyenne, non un engagement institutionnel : à présenter comme ordre de grandeur.",
+        "8 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

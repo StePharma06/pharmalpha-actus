@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? On soignait la peste bubonique avec des pigeons vivants",
-  "resume": "Oublie les antibiotiques. Au XVIIe siècle, le remède officiel contre la peste, c'était de coller un pigeon vivant sur les bubons. Pas une métaphore. Un vrai pigeon. Et les médecins y croyaient dur comme fer.",
-  "full_text": "La peste bubonique. Rien que le nom fout encore les jetons. Entre le XIVe et le XVIIe siècle, elle a tué environ un tiers de la population européenne. Et face à ce monstre, les médecins de l'époque ont sorti leur arme secrète : le pigeon.\n\nLe principe était simple - enfin, simple façon de parler. Tu prenais un pigeon vivant, tu lui rasais le derrière, et tu lui appliquais les fesses directement sur le bubon du patient. L'idée ? L'oiseau allait « aspirer » le poison de l'infection. On changeait le pigeon dès qu'il mourait - ce qui, soit dit en passant, arrivait assez vite. On enchaînait jusqu'à ce que le bubon se résorbe... ou que le patient rende l'âme.\n\nCette pratique n'était pas du folklore de village. Elle était recommandée par des médecins officiels, décrite dans des traités médicaux sérieux, et utilisée jusqu'à la fin du XVIIe siècle. Ambroise Paré lui-même, le grand chirurgien français, en parlait sans sourciller.\n\nLe twist fascinant : certains historiens pensent que ça fonctionnait... un tout petit peu. Pas à cause de la magie du pigeon, mais parce que maintenir la chaleur sur un bubon favorisait parfois sa maturation et son drainage naturel. Un bénéfice thermique accidentel, quoi.\n\nAujourd'hui, la peste se traite avec de la streptomycine ou de la doxycycline en quelques jours. Elle n'est pas éradiquée - on recense encore 600 à 2 000 cas par an dans le monde. Mais la prochaine fois qu'un patient se plaint de son traitement antibiotique, tu peux lui rappeler ce que l'alternative ressemblait autrefois. Ça remet les choses en perspective.",
-  "image_keywords": "pigeon medieval medicine",
+  "titre": "Le saviez-vous ? L'oxygène a failli rester un gaz mortel oublié",
+  "resume": "En 1774, un pasteur bricoleur découvre l'oxygène dans son salon. Personne ne comprend ce que c'est. Et pendant des décennies, les médecins vont en faire n'importe quoi - y compris tuer des patients avec.",
+  "full_text": "En août 1774, Joseph Priestley, pasteur anglais et chimiste autodidacte, chauffe de l'oxyde de mercure rouge dans son laboratoire improvisé de Wiltshire. Un gaz s'échappe. Une bougie brûle plus fort. Une souris y survit deux fois plus longtemps qu'à l'air normal. Il vient de découvrir l'oxygène - sans le savoir.\n\nPriestley appelle ça « l'air déphlogistiqué ». Il croit encore à la théorie du phlogistique, une vieille théorie fumiste selon laquelle le feu libère une substance invisible. C'est Lavoisier, à Paris, qui comprend le premier ce que c'est vraiment - et qui lui donne le nom d'oxygène en 1777. Priestley, lui, mourra en 1804 convaincu que Lavoisier a tort.\n\nLe twist ? Dès les années 1780, des médecins s'emparent de l'oxygène pur comme d'un remède miracle. On l'inhale dans des salons payants à Londres pour « purifier le sang ». On le prescrit aux tuberculeux, aux asthmatiques, aux anémiques. Résultat : des patients hyperoxygénés font des convulsions. D'autres meurent d'embolie. L'enthousiasme tourne vite au désastre.\n\nIl faut attendre 1917 et les travaux de John Scott Haldane - qui s'intoxique lui-même au monoxyde de carbone pour comprendre comment l'hémoglobine transporte les gaz - pour poser les bases d'une oxygénothérapie sérieuse. L'usage clinique rigoureux ne s'impose vraiment qu'après la Seconde Guerre mondiale, avec les premiers concentrateurs médicaux.\n\nAujourd'hui, l'oxygène est classé médicament depuis 1989 en France. Il a une AMM, une posologie, des contre-indications. On ne donne pas de l'O2 à 15 L/min à un BPCO comme si c'était de l'eau fraîche - ça peut lui couper sa commande ventilatoire. Un gaz découvert dans un salon de pasteur, devenu l'un des médicaments les plus prescrits au monde. Pas mal pour un « air déphlogistiqué ».",
+  "image_keywords": "oxygen medical vintage",
   "tags": [
     "histoire",
-    "epidemie",
-    "peste",
-    "traitement",
-    "medecine"
+    "decouverte",
+    "chimie",
+    "medicament",
+    "instrument"
   ],
-  "date": "2026-07-31",
+  "date": "2026-08-01",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",

@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-31",
-  "window_label": "25 juil. au 31 juil. 2026",
+  "generated_at": "2026-08-01",
+  "window_label": "26 juil. au 1 aout 2026",
   "has_history": true,
   "delta_source": "pytrends_rising",
   "pathologies": [
@@ -28,27 +28,32 @@
   "soins": [
     {
       "display": "Azinc immunite",
-      "delta_label": "↑ 70 100",
+      "delta_label": "↑ 530 600",
       "trend": "up"
     },
     {
-      "display": "Temps de digestion des aliments",
-      "delta_label": "↑ 24 300",
+      "display": "Eau gazeuse digestion",
+      "delta_label": "↑ 36 250",
       "trend": "up"
     },
     {
-      "display": "Calmosine digestion",
-      "delta_label": "↑ 18 700",
+      "display": "Lentilles digestion",
+      "delta_label": "↑ 31 050",
+      "trend": "up"
+    },
+    {
+      "display": "Regression sommeil 6 mois",
+      "delta_label": "↑ 400",
       "trend": "up"
     },
     {
       "display": "Quies specific sommeil",
-      "delta_label": "↑ 13 250",
+      "delta_label": "↑ 250",
       "trend": "up"
     }
   ],
   "pathologies_stale": false,
-  "pathologies_from": "2026-07-31",
+  "pathologies_from": "2026-08-01",
   "soins_stale": false,
-  "soins_from": "2026-07-31"
+  "soins_from": "2026-08-01"
 }

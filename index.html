@@ -31,7 +31,7 @@
      l'image n'est decouverte qu'apres execution du JS qui construit les cards
      (le <img> n'existe qu'a l'interieur d'un template literal JS, invisible au
      preload scanner) -> LCP non deterministe, cf. sprint perf 2026-07-27. -->
-<link rel="preload" as="image" href="assets/img_actu_2026_07_31_1.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="assets/img_actu_2026_08_01_1.jpg" fetchpriority="high">
 
 <!-- Font cohesion site principal -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1737,7 +1737,7 @@ body.pa-has-nav #actusHeader {
 </div>
 
 <!-- EXPRESSION DU JOUR (injectée par update_actus.py à chaque run) -->
-<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Syndrome (de l'imposteur, de Stockholm…)</h2><p class="expression-corps">Du grec <em>syn</em> (ensemble) et <em>dromos</em> (courir). Un syndrome est littéralement un ensemble de symptômes qui « courent ensemble » - qui apparaissent simultanément. La psychiatrie du XXe siècle a popularisé le terme pour décrire des profils comportementaux : une constellation de signes reconnaissables.</p></aside>
+<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Camphre</h2><p class="expression-corps">De l'arabe <em>kafur</em>, lui-même du sanskrit <em>karpura</em>. Connu en Asie depuis l'Antiquité, le camphre fut introduit en Europe médiévale par les marchands arabes comme médicament contre la peste et les épidémies. Son odeur pénétrante lui valut d'être utilisé dans les masques des médecins de la peste.</p></aside>
 
 <!-- ESPACE PARTENAIRE 1 (entre Expression du jour et Aujourd'hui).
      Statique : reste visible meme si le JS ne s'execute pas. Le 2e emplacement
@@ -1762,11 +1762,12 @@ body.pa-has-nav #actusHeader {
 <div id="articles-container"></div>
 
 <!-- MARQUE_TENDANCE (injectee par le pipeline hebdo, remplacee quotidiennement) -->
-<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">25 juil. au 31 juil. 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Fatigue après canicule</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 25 000</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Azinc immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 70 100</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie a la poussiere</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 10 250</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Temps de digestion des aliments</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 24 300</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie à l'alcool</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 2 950</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Calmosine digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 18 700</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Vitamine saint cyprien</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 180</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Quies specific sommeil</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 13 250</td></tr>
+<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">26 juil. au 1 aout 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Fatigue après canicule</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 25 000</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Azinc immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 530 600</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie a la poussiere</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 10 250</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Eau gazeuse digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 36 250</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie à l'alcool</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 2 950</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Lentilles digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 31 050</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Vitamine saint cyprien</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 180</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Regression sommeil 6 mois</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 400</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;"></td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#9ca3af;font-weight:600;white-space:nowrap;"></td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Quies specific sommeil</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 250</td></tr>
 </tbody></table></div><p style="margin:10px 0 0;font-size:11px;color:#9ca3af;font-style:italic;">Indice de tendance : intensite de hausse Google Trends (non comparable a un volume absolu).</p><p style="margin:12px 0 0;font-size:11px;color:#9ca3af;text-align:right;">Source&nbsp;: Google Trends France (pytrends) &middot; 7 jours glissants</p></section></div>
 
 <!-- ARCHIVES CTA -->
@@ -1916,6 +1917,90 @@ body.pa-has-nav #actusHeader {
 // Mis a jour automatiquement par n8n chaque semaine
 // ============================================================
 const ARTICLES = [
+{
+    id: "actu_2026_08_01_1",
+    date: "2026-08-01",
+    type: "actu",
+    categorie: "pharma_france",
+    titre: "Convention pharma : la dénonciation n'est plus un tabou",
+    resume: "Les négociations sur l'avenant 3 sont au point mort. La dénonciation de la convention pharmaceutique est désormais évoquée ouvertement comme levier de pression. Le compte à rebours est lancé.",
+    source: "Le Moniteur des Pharmacies",
+    source_url: "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/convention-pharmaceutique-le-compte-a-rebours-avant-la-denonciation-est-lance",
+    tiktok_url: "",
+    badge_label: "Pharma France",
+    image_url: "assets/img_actu_2026_08_01_1.jpg",
+    tags: ["convention", "rosp", "honoraires", "syndicat", "officine"]
+  },
+{
+    id: "actu_2026_08_01_2",
+    date: "2026-08-01",
+    type: "actu",
+    categorie: "pharma_monde",
+    titre: "Ebola en RDC : 3 500 cas, et personne ne semble vraiment alerté",
+    resume: "Plus de 3 500 cas d'Ebola confirmés en quelques mois dans cinq provinces de RDC, soit déjà plus que lors de l'épidémie la plus meurtrière de l'histoire du pays. Un signal qu'aucun pharmacien ne peut ignorer, même depuis son comptoir français.",
+    source: "Le Monde Santé",
+    source_url: "https://www.lemonde.fr/afrique/article/2026/07/31/ebola-en-rdc-plus-de-3-500-cas-recenses-en-quelques-mois-plus-que-lors-de-l-epidemie-la-plus-meurtriere-de-l-histoire-du-pays_6737141_3212.html",
+    tiktok_url: "",
+    badge_label: "Pharma Monde",
+    image_url: "assets/img_actu_2026_08_01_2.jpg",
+    tags: ["ebola", "epidemie", "vaccin", "voyageur", "officine"]
+  },
+{
+    id: "actu_2026_08_01_3",
+    date: "2026-08-01",
+    type: "actu",
+    categorie: "bonne_nouvelle",
+    titre: "Apixaban générique : 16 nouveaux remboursés dès le 4 août, du concret pour l'officine",
+    resume: "16 génériques d'apixaban (Eliquis) entrent au remboursement le 4 août 2026. KRKA, Almus, Arrow, Cristers, Evolugen, EG Labo sont dans la course. C'est une vraie bonne nouvelle pour la substitution et pour tes patients sous anticoagulant oral.",
+    source: "Le Quotidien du Pharmacien",
+    source_url: "http://www.lequotidiendupharmacien.fr/medicament-parapharmacie/apixaban-16-generiques-rembourses-partir-du-4-aout",
+    tiktok_url: "",
+    badge_label: "La bonne nouvelle",
+    image_url: "assets/img_actu_2026_08_01_3.jpg",
+    tags: ["generique", "remboursement", "apixaban", "substitution", "anticoagulant"]
+  },
+{
+    id: "actu_2026_08_01_4",
+    date: "2026-08-01",
+    type: "actu",
+    categorie: "avenir_pharma",
+    titre: "Anticancéreux oraux non utilisés : le réemploi entre dans l'arène",
+    resume: "La LFSS 2026 autorise à titre expérimental la collecte et la redistribution d'anticancéreux oraux non utilisés dans 26 établissements de santé. Zéro gaspillage sur des molécules à plusieurs milliers d'euros le cycle, c'est l'objectif. Et demain, l'officine pourrait être dans la boucle.",
+    source: "Le Moniteur des Pharmacies",
+    source_url: "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/anticancereux-oraux-le-reemploi-des-medicaments-bientot-teste",
+    tiktok_url: "",
+    badge_label: "L'avenir de la pharma",
+    image_url: "assets/img_actu_2026_08_01_4.jpg",
+    tags: ["anticancereux", "lfss", "innovation", "officine", "recherche"]
+  },
+{
+    id: "actu_2026_08_01_5",
+    date: "2026-08-01",
+    type: "actu",
+    categorie: "business_officine",
+    titre: "Prévention cardio : une nouvelle loi, une nouvelle mission qui peut rapporter gros",
+    resume: "La loi Neuder sur les maladies cardio-neuro-vasculaires vient d'être publiée. Elle ouvre explicitement la voie à une mission de prévention officinale. Pour les 21 000 officines françaises, c'est potentiellement l'un des leviers de rémunération les plus significatifs depuis les en...",
+    source: "Pharm'Actus · USPO – Prévention cardiovasculaire : nouvelle mission en vue !, Santé Publique France – Maladies cardiovasculaires, données épidémiologiques",
+    source_url: "https://uspo.fr/prevention-cardiovasculaire-nouvelle-mission-en-vue/",
+    tiktok_url: "",
+    badge_label: "Business",
+    image_url: "assets/img_actu_2026_08_01_5.jpg",
+    tags: ["prevention", "mission-officinale", "cardiovasculaire", "convention"]
+  },
+{
+    id: "lsv_2026_08_01",
+    date: "2026-08-01",
+    type: "lsv",
+    categorie: "lsv",
+    titre: "Le saviez-vous ? L'oxygène a failli rester un gaz mortel oublié",
+    resume: "En 1774, un pasteur bricoleur découvre l'oxygène dans son salon. Personne ne comprend ce que c'est. Et pendant des décennies, les médecins vont en faire n'importe quoi - y compris tuer des patients avec.",
+    source: "Pharm'Alpha",
+    source_url: "",
+    tiktok_url: "",
+    badge_label: "Le Saviez-Vous",
+    image_url: "assets/img_lsv_2026_08_01.jpg",
+    tags: ["histoire", "decouverte", "chimie", "medicament", "instrument"]
+  },
 {
     id: "actu_2026_07_31_1",
     date: "2026-07-31",
@@ -2531,90 +2616,6 @@ const ARTICLES = [
     badge_label: "Pharma Monde",
     image_url: "assets/img_actu_2026_07_23_2.jpg",
     tags: ["ebola", "vaccin", "ansm", "ema", "innovation"]
-  },
-{
-    id: "actu_2026_07_23_3",
-    date: "2026-07-23",
-    type: "actu",
-    categorie: "bonne_nouvelle",
-    titre: "Beyfortus mieux remboursé cet hiver : la HAS ouvre la porte, le JO doit suivre",
-    resume: "La Commission de la transparence de la HAS a réévalué le nirsévimab (Beyfortus) à la hausse et recommande un meilleur taux de remboursement. Pas encore d'arrêté au Journal officiel, mais la direction est claire. Pour les nourrissons et les officines, c'est une vraie bonne nouvelle en préparation.",
-    source: "Le Moniteur des Pharmacies",
-    source_url: "https://www.lemoniteurdespharmacies.fr/legislation/dispensation/bronchiolite-beyfortus-sera-t-il-mieux-rembourse-cet-hiver",
-    tiktok_url: "",
-    badge_label: "La bonne nouvelle",
-    image_url: "assets/img_actu_2026_07_23_3.jpg",
-    tags: ["remboursement", "has", "bronchiolite", "nourrisson", "officine"]
-  },
-{
-    id: "actu_2026_07_23_4",
-    date: "2026-07-23",
-    type: "actu",
-    categorie: "avenir_pharma",
-    titre: "Tofersen contre Charcot : la HAS valide, l'officine doit se préparer",
-    resume: "La HAS maintient son autorisation pour le tofersen, un traitement ciblant une forme génétique rare de la SLA (maladie de Charcot). Une molécule de rupture dans une pathologie sans issue thérapeutique. Pour les officines spécialisées et les PUI en lien avec des services de neurologie, c'est un dossier à suivre de près.",
-    source: "France Info Sante",
-    source_url: "https://www.franceinfo.fr/replay-radio/le-billet-vert/le-tofersen-un-nouvel-espoir-de-traitement-contre-la-maladie-de-charcot_8117333.html#xtor=RSS-3-%5Bgeneral%5D",
-    tiktok_url: "",
-    badge_label: "L'avenir de la pharma",
-    image_url: "assets/img_actu_2026_07_23_4.jpg",
-    tags: ["sla", "has", "innovation", "neurologie", "aso"]
-  },
-{
-    id: "actu_2026_07_23_5",
-    date: "2026-07-23",
-    type: "actu",
-    categorie: "business_officine",
-    titre: "Canicule 2026 : 5 764 morts en excès, une opportunité business que l'officine ne peut pas rater",
-    resume: "Santé publique France vient de le confirmer : la canicule de juin 2026 a provoqué 5 764 décès en excès, un bilan comparable à 2003. Pour l'officine, ce chiffre brutal traduit un marché de la prévention thermique largement sous-exploité - et une mission de santé publique à valoris...",
-    source: "Pharm'Actus · Le Monde Santé — Canicule en France : 5 764 morts en excès constatées pendant l'épisode de juin, selon Santé publique France, Santé publique France — Surveillance épidémiologique des effets de la chaleur sur la santé (référence institutionnelle générale)",
-    source_url: "https://www.lemonde.fr/planete/article/2026/07/22/canicule-en-france-5-764-morts-en-exces-constatees-pendant-l-episode-de-juin-selon-sante-publique-france_6730037_3244.html",
-    tiktok_url: "",
-    badge_label: "Business",
-    image_url: "assets/img_actu_2026_07_23_5.jpg",
-    tags: ["canicule", "prevention", "mission-officinale", "parapharmacie"]
-  },
-{
-    id: "lsv_2026_07_23",
-    date: "2026-07-23",
-    type: "lsv",
-    categorie: "lsv",
-    titre: "Le saviez-vous ? On mesurait la douleur avec... un seau d'eau glacée",
-    resume: "Comment quantifier quelque chose d'aussi subjectif que la douleur ? Pendant des décennies, les médecins ont cherché une méthode objective. Et leur réponse était franchement brutale.",
-    source: "Pharm'Alpha",
-    source_url: "",
-    tiktok_url: "",
-    badge_label: "Le Saviez-Vous",
-    image_url: "assets/img_lsv_2026_07_23.jpg",
-    tags: ["histoire", "diagnostic", "douleur", "instrument", "neurologie"]
-  },
-{
-    id: "actu_2026_07_22_1",
-    date: "2026-07-22",
-    type: "actu",
-    categorie: "pharma_france",
-    titre: "Loi Neuder : la mission HTA des pharmaciens est confirmée, les décrets restent à venir",
-    resume: "Le compromis parlementaire sur la proposition de loi Neuder est entériné : les pharmaciens d'officine héritent d'une nouvelle mission officielle de dépistage de l'hypertension artérielle. Mais rémunération, décrets d'application et calendrier restent encore dans les limbes. Ce qui change, ce qui attend.",
-    source: "Le Moniteur des Pharmacies",
-    source_url: "https://www.lemoniteurdespharmacies.fr/nouvelles-missions/depistage/hypertension-arterielle-les-parlementaires-enterinent-un-compromis-sur-la-proposition-de-loi-neuder",
-    tiktok_url: "",
-    badge_label: "Pharma France",
-    image_url: "assets/img_actu_2026_07_22_1.jpg",
-    tags: ["hta", "nouvelles-missions", "loi-neuder", "officine", "prevention"]
-  },
-{
-    id: "actu_2026_07_22_2",
-    date: "2026-07-22",
-    type: "actu",
-    categorie: "pharma_monde",
-    titre: "Ebola Bundibugyo en RDC : ce que le pharmacien français doit savoir sur cette souche",
-    resume: "Une épidémie d'Ebola due à la souche Bundibugyo progresse rapidement dans l'est de la République Démocratique du Congo. Moins médiatisée que la souche Zaïre, cette variante reste mortelle et interpelle sur la gestion des stocks de contre-mesures médicales en Europe. Ce que ça implique côté officinal et voyages.",
-    source: "Le Monde Sante",
-    source_url: "https://www.lemonde.fr/afrique/live/2026/07/21/ebola-en-rdc-posez-vos-questions-a-nos-journalistes-morgane-le-cam-et-philemon-barbier-de-retour-de-reportage-dans-l-epicentre-de-l-epidemie_6728461_3212.html",
-    tiktok_url: "",
-    badge_label: "Pharma Monde",
-    image_url: "assets/img_actu_2026_07_22_2.jpg",
-    tags: ["ebola", "rdc", "virus", "voyage", "vigitravel"]
   }
 ];
 
