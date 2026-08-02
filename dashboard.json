@@ -1,44 +1,36 @@
 {
- "genere_le": "2026-08-01T07:47:07+02:00",
+ "genere_le": "2026-08-02T07:48:00+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1024,
+ "abonnes_total": 1025,
  "nouveaux_7j": 7,
- "nouveaux_cumul": 1017,
+ "nouveaux_cumul": 1018,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-07-25",
-  "au": "2026-08-01",
-  "delivres": 6560,
-  "ouvertures": 2351,
-  "ouvertures_uniques": 1685,
-  "clics": 2089,
-  "clics_uniques": 346,
-  "taux_ouverture_pct": 25.7,
-  "taux_clic_pct": 5.3,
+  "du": "2026-07-26",
+  "au": "2026-08-02",
+  "delivres": 5644,
+  "ouvertures": 2221,
+  "ouvertures_uniques": 1588,
+  "clics": 1891,
+  "clics_uniques": 325,
+  "taux_ouverture_pct": 28.1,
+  "taux_clic_pct": 5.8,
   "ctor_pct": 20.5,
   "top_articles": [
-   {
-    "id": "actu_2026_07_25_5",
-    "titre": "Franchises médicales doublées : 750 M€ d'économies, mais quel impact sur le flux officine ?",
-    "date": "2026-07-25",
-    "categorie": "business_officine",
-    "clics": 58,
-    "lecteurs": 37
-   },
    {
     "id": "actu_2026_07_27_5",
     "titre": "Doctolib aspire vos ordonnances dès août : ce que ça change pour l'officine",
     "date": "2026-07-27",
     "categorie": "business_officine",
-    "clics": 44,
-    "lecteurs": 32
+    "clics": 48,
+    "lecteurs": 33
    },
    {
     "id": "actu_2026_07_27_1",
     "titre": "Franchises médicales : les médicaments à SMR faible dans le collimateur",
     "date": "2026-07-27",
     "categorie": "pharma_france",
-    "clics": 53,
+    "clics": 55,
     "lecteurs": 31
    },
    {
@@ -96,18 +88,26 @@
     "categorie": "pharma_france",
     "clics": 42,
     "lecteurs": 23
+   },
+   {
+    "id": "actu_2026_07_31_4",
+    "titre": "Doctolib donne vos données à une IA en août : ce que ça change pour les patients et le comptoir",
+    "date": "2026-07-31",
+    "categorie": "avenir_pharma",
+    "clics": 40,
+    "lecteurs": 22
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-08-01",
-  "delivres": 68775,
-  "ouvertures": 27759,
-  "ouvertures_uniques": 19003,
-  "clics": 28525,
-  "clics_uniques": 5105,
-  "taux_ouverture_pct": 27.6,
+  "au": "2026-08-02",
+  "delivres": 68776,
+  "ouvertures": 27874,
+  "ouvertures_uniques": 19075,
+  "clics": 28597,
+  "clics_uniques": 5123,
+  "taux_ouverture_pct": 27.7,
   "taux_clic_pct": 7.4,
   "ctor_pct": 26.9,
   "top_articles": [
