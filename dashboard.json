@@ -1,21 +1,21 @@
 {
- "genere_le": "2026-08-02T07:48:00+02:00",
+ "genere_le": "2026-08-03T08:11:40+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1025,
- "nouveaux_7j": 7,
- "nouveaux_cumul": 1018,
+ "abonnes_total": 1026,
+ "nouveaux_7j": 9,
+ "nouveaux_cumul": 1019,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-07-26",
-  "au": "2026-08-02",
-  "delivres": 5644,
-  "ouvertures": 2221,
-  "ouvertures_uniques": 1588,
-  "clics": 1891,
-  "clics_uniques": 325,
-  "taux_ouverture_pct": 28.1,
-  "taux_clic_pct": 5.8,
-  "ctor_pct": 20.5,
+  "du": "2026-07-27",
+  "au": "2026-08-03",
+  "delivres": 6686,
+  "ouvertures": 2319,
+  "ouvertures_uniques": 1662,
+  "clics": 2139,
+  "clics_uniques": 359,
+  "taux_ouverture_pct": 24.9,
+  "taux_clic_pct": 5.4,
+  "ctor_pct": 21.6,
   "top_articles": [
    {
     "id": "actu_2026_07_27_5",
@@ -42,6 +42,14 @@
     "lecteurs": 29
    },
    {
+    "id": "actu_2026_07_30_4",
+    "titre": "Falaise des brevets : le jackpot generiques arrive d'ici 2035, es-tu pret ?",
+    "date": "2026-07-30",
+    "categorie": "pharma_monde",
+    "clics": 44,
+    "lecteurs": 27
+   },
+   {
     "id": "actu_2026_07_29_3",
     "titre": "Mesure de la PA officiellement inscrite dans les missions du pharmacien",
     "date": "2026-07-29",
@@ -54,16 +62,16 @@
     "titre": "Génériques : le CEPS épargne 9 groupes sur 12 - ce que ça change pour ta marge",
     "date": "2026-07-28",
     "categorie": "business_officine",
-    "clics": 49,
+    "clics": 51,
     "lecteurs": 26
    },
    {
-    "id": "actu_2026_07_30_4",
-    "titre": "Falaise des brevets : le jackpot generiques arrive d'ici 2035, es-tu pret ?",
-    "date": "2026-07-30",
-    "categorie": "pharma_monde",
-    "clics": 41,
-    "lecteurs": 25
+    "id": "actu_2026_07_31_4",
+    "titre": "Doctolib donne vos données à une IA en août : ce que ça change pour les patients et le comptoir",
+    "date": "2026-07-31",
+    "categorie": "avenir_pharma",
+    "clics": 43,
+    "lecteurs": 24
    },
    {
     "id": "actu_2026_07_29_4",
@@ -88,26 +96,18 @@
     "categorie": "pharma_france",
     "clics": 42,
     "lecteurs": 23
-   },
-   {
-    "id": "actu_2026_07_31_4",
-    "titre": "Doctolib donne vos données à une IA en août : ce que ça change pour les patients et le comptoir",
-    "date": "2026-07-31",
-    "categorie": "avenir_pharma",
-    "clics": 40,
-    "lecteurs": 22
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-08-02",
-  "delivres": 68776,
-  "ouvertures": 27874,
-  "ouvertures_uniques": 19075,
-  "clics": 28597,
-  "clics_uniques": 5123,
-  "taux_ouverture_pct": 27.7,
+  "au": "2026-08-03",
+  "delivres": 69818,
+  "ouvertures": 28044,
+  "ouvertures_uniques": 19210,
+  "clics": 28859,
+  "clics_uniques": 5165,
+  "taux_ouverture_pct": 27.5,
   "taux_clic_pct": 7.4,
   "ctor_pct": 26.9,
   "top_articles": [
