@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? L'oxygène a failli rester un gaz mortel oublié",
-  "resume": "En 1774, un pasteur bricoleur découvre l'oxygène dans son salon. Personne ne comprend ce que c'est. Et pendant des décennies, les médecins vont en faire n'importe quoi - y compris tuer des patients avec.",
-  "full_text": "En août 1774, Joseph Priestley, pasteur anglais et chimiste autodidacte, chauffe de l'oxyde de mercure rouge dans son laboratoire improvisé de Wiltshire. Un gaz s'échappe. Une bougie brûle plus fort. Une souris y survit deux fois plus longtemps qu'à l'air normal. Il vient de découvrir l'oxygène - sans le savoir.\n\nPriestley appelle ça « l'air déphlogistiqué ». Il croit encore à la théorie du phlogistique, une vieille théorie fumiste selon laquelle le feu libère une substance invisible. C'est Lavoisier, à Paris, qui comprend le premier ce que c'est vraiment - et qui lui donne le nom d'oxygène en 1777. Priestley, lui, mourra en 1804 convaincu que Lavoisier a tort.\n\nLe twist ? Dès les années 1780, des médecins s'emparent de l'oxygène pur comme d'un remède miracle. On l'inhale dans des salons payants à Londres pour « purifier le sang ». On le prescrit aux tuberculeux, aux asthmatiques, aux anémiques. Résultat : des patients hyperoxygénés font des convulsions. D'autres meurent d'embolie. L'enthousiasme tourne vite au désastre.\n\nIl faut attendre 1917 et les travaux de John Scott Haldane - qui s'intoxique lui-même au monoxyde de carbone pour comprendre comment l'hémoglobine transporte les gaz - pour poser les bases d'une oxygénothérapie sérieuse. L'usage clinique rigoureux ne s'impose vraiment qu'après la Seconde Guerre mondiale, avec les premiers concentrateurs médicaux.\n\nAujourd'hui, l'oxygène est classé médicament depuis 1989 en France. Il a une AMM, une posologie, des contre-indications. On ne donne pas de l'O2 à 15 L/min à un BPCO comme si c'était de l'eau fraîche - ça peut lui couper sa commande ventilatoire. Un gaz découvert dans un salon de pasteur, devenu l'un des médicaments les plus prescrits au monde. Pas mal pour un « air déphlogistiqué ».",
-  "image_keywords": "oxygen medical vintage",
+  "titre": "Le saviez-vous ? On purifiait l'eau des armées avec des épées en argent",
+  "resume": "Avant les pastilles de purification, les militaires romains transportaient leur eau dans des amphores plombées d'argent. Pendant des siècles, personne ne comprenait pourquoi ça marchait. La réponse allait révolutionner la médecine moderne.",
+  "full_text": "Imagine le problème logistique d'une légion romaine en campagne. Dix mille soldats. Pas de robinet. Des rivières douteuses. Et pourtant, les armées romaines avaient un taux de survie face aux maladies hydriques étonnamment meilleur que leurs ennemis.\n\nLeur secret ? L'argent. Pas pour la richesse - pour l'eau. Les officiers romains transportaient leurs réserves dans des récipients en argent massif. Les soldats de rang portaient des gourdes en cuir, mais les généraux, eux, ne buvaient qu'à l'argent. Et bizarrement, ils tombaient moins malades.\n\nLe twist fascinant : en 1893, un botaniste suisse nommé Carl von Nägeli met enfin un mot dessus. Il découvre que les ions argent détruisent les bactéries à des concentrations infimes. Il appelle ça l'effet oligodynamique - du grec « oligos », petit, et « dynamis », puissance. Une force invisible, microscopique, létale pour les microbes.\n\nPendant la Première Guerre mondiale, faute d'antibiotiques, les chirurgiens américains utilisaient des fils d'argent pour suturer les plaies infectées. Ça cicatrisait mieux. Moins de gangrènes. Les infirmières de l'époque frottaient les instruments avec des feuilles d'argent comme on passe un coup d'Aseptocryl aujourd'hui.\n\nEt ça ne s'arrête pas là. Dans les années 1970, la NASA intègre des filtres à l'argent dans les systèmes d'eau des navettes spatiales. En 2024, les pansements à l'argent nanoparticulaire sont devenus un standard en dermatologie pour les plaies chroniques et les brûlures surinfectées.\n\nAu comptoir, quand tu délivres un pansement à l'argent type Mepilex Ag ou Aquacel Ag, sache que tu prolonges une tradition qui remonte aux légions de César. Deux mille ans de bactériostatique sans ordonnance - et ça, c'est une belle histoire à raconter à ton patient.",
+  "image_keywords": "silver antimicrobial wound",
   "tags": [
     "histoire",
-    "decouverte",
     "chimie",
-    "medicament",
+    "antisepsie",
+    "decouverte",
     "instrument"
   ],
-  "date": "2026-08-01",
+  "date": "2026-08-03",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",

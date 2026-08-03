@@ -1,0 +1,47 @@
+{
+  "generated_at": "2026-08-03T04:15:32.286138+02:00",
+  "run_date": "2026-08-03",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_monde",
+      "titre": "Eli Lilly dans le viseur du Michigan : l'insuline à prix \"excessif\" jugée en justice",
+      "resume": "La Cour suprême du Michigan vient d'autoriser une enquête sur la politique de prix d'Eli Lilly pour ses insulines. Des patients auraient été contraints de rationner leur traitement faute de pouvoir payer. Un signal fort qui résonne bien au-delà des États-Unis.",
+      "source": "STAT News",
+      "source_url": "https://www.statnews.com/pharmalot/2026/08/02/michigan-supreme-court-ruling-allows-probe-into-lilly-insulin-pricing/?utm_campaign=rss",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "avenir_pharma",
+      "titre": "Apnée du sommeil : la première pilule orale lève 192 millions de dollars en IPO",
+      "resume": "Apnimed entre en bourse avec 192 millions de dollars pour financer le lancement de l'Oxnimbi, un comprimé à prise nocturne unique pour l'apnée obstructive du sommeil. Une décision de la FDA est attendue en février 2027. Si le feu vert est donné, ce serait le premier traitement oral de cette indication.",
+      "source": "MedCity News",
+      "source_url": "https://medcitynews.com/2026/08/apnimed-ipo-apmd-obstructive-sleep-apnea-osa-oxnimbi-atomoxetine-aroxybutynin/",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Kiné + bilans prévention : ton chiffre d'affaires prévention sous pression dès octobre",
+      "resume": "Dès octobre 2026, les kinésithérapeutes intègrent officiellement le dispositif des rendez-vous de prévention. Une concurrence directe sur un créneau que l'officine occupait quasi seule depuis 2024. Ce que ça change pour ta stratégie.",
+      "source": "Pharm'Actus · France Info Santé — Les kinésithérapeutes pourront réaliser des bilans prévention dès octobre, IQVIA Pharmastat — Nombre d'officines en France, juin 2026",
+      "source_url": "https://www.franceinfo.fr/sante/les-kinesitherapeutes-pourront-realiser-des-bilans-prevention-des-octobre-dans-le-but-de-renforcer-l-accessibilite-du-dispositif_8132222.html#xtor=RSS-3-%5Bgeneral%5D",
+      "confidence_score": 0.72,
+      "warnings": [
+        "Le tarif de 30 € par RDV Prévention à l'officine est celui en vigueur à la date de rédaction — vérifier qu'aucun avenant ne l'a modifié récemment avant publication.",
+        "Le chiffre de 90 000 kinésithérapeutes en exercice est une estimation courante mais doit être vérifié avec les données DREES 2025-2026 les plus récentes.",
+        "Le taux de recours 'inférieur à 10 %' est une estimation qualitative basée sur les retours de terrain et les rapports AM 2024 — aucun chiffre officiel précis n'est disponible dans les sources citées : formulé prudemment.",
+        "Positions syndicales FSPF / USPO / UPGF sur l'extension kiné : aucune déclaration officielle identifiée à la date de rédaction. Formulé explicitement dans l'article.",
+        "La LFSS 2025 et les avenants conventionnels exacts encadrant le RDV Prévention méritent une vérification textuelle avant toute affirmation sur le financement exact.",
+        "3 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}
