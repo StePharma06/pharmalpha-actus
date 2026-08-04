@@ -1,37 +1,29 @@
 {
- "genere_le": "2026-08-03T08:11:40+02:00",
+ "genere_le": "2026-08-04T07:40:43+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1026,
- "nouveaux_7j": 9,
- "nouveaux_cumul": 1019,
+ "abonnes_total": 1028,
+ "nouveaux_7j": 11,
+ "nouveaux_cumul": 1021,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-07-27",
-  "au": "2026-08-03",
-  "delivres": 6686,
-  "ouvertures": 2319,
-  "ouvertures_uniques": 1662,
-  "clics": 2139,
-  "clics_uniques": 359,
-  "taux_ouverture_pct": 24.9,
-  "taux_clic_pct": 5.4,
-  "ctor_pct": 21.6,
+  "du": "2026-07-28",
+  "au": "2026-08-04",
+  "delivres": 6566,
+  "ouvertures": 2362,
+  "ouvertures_uniques": 1692,
+  "clics": 2081,
+  "clics_uniques": 327,
+  "taux_ouverture_pct": 25.8,
+  "taux_clic_pct": 5.0,
+  "ctor_pct": 19.3,
   "top_articles": [
    {
-    "id": "actu_2026_07_27_5",
-    "titre": "Doctolib aspire vos ordonnances dès août : ce que ça change pour l'officine",
-    "date": "2026-07-27",
-    "categorie": "business_officine",
-    "clics": 48,
-    "lecteurs": 33
-   },
-   {
-    "id": "actu_2026_07_27_1",
-    "titre": "Franchises médicales : les médicaments à SMR faible dans le collimateur",
-    "date": "2026-07-27",
-    "categorie": "pharma_france",
-    "clics": 55,
-    "lecteurs": 31
+    "id": "actu_2026_07_30_4",
+    "titre": "Falaise des brevets : le jackpot generiques arrive d'ici 2035, es-tu pret ?",
+    "date": "2026-07-30",
+    "categorie": "pharma_monde",
+    "clics": 51,
+    "lecteurs": 29
    },
    {
     "id": "actu_2026_07_30_1",
@@ -42,11 +34,19 @@
     "lecteurs": 29
    },
    {
-    "id": "actu_2026_07_30_4",
-    "titre": "Falaise des brevets : le jackpot generiques arrive d'ici 2035, es-tu pret ?",
-    "date": "2026-07-30",
-    "categorie": "pharma_monde",
-    "clics": 44,
+    "id": "actu_2026_07_31_4",
+    "titre": "Doctolib donne vos données à une IA en août : ce que ça change pour les patients et le comptoir",
+    "date": "2026-07-31",
+    "categorie": "avenir_pharma",
+    "clics": 53,
+    "lecteurs": 28
+   },
+   {
+    "id": "actu_2026_08_01_5",
+    "titre": "Prévention cardio : une nouvelle loi, une nouvelle mission qui peut rapporter gros",
+    "date": "2026-08-01",
+    "categorie": "business_officine",
+    "clics": 45,
     "lecteurs": 27
    },
    {
@@ -54,7 +54,7 @@
     "titre": "Mesure de la PA officiellement inscrite dans les missions du pharmacien",
     "date": "2026-07-29",
     "categorie": "bonne_nouvelle",
-    "clics": 54,
+    "clics": 56,
     "lecteurs": 26
    },
    {
@@ -66,27 +66,27 @@
     "lecteurs": 26
    },
    {
-    "id": "actu_2026_07_31_4",
-    "titre": "Doctolib donne vos données à une IA en août : ce que ça change pour les patients et le comptoir",
-    "date": "2026-07-31",
-    "categorie": "avenir_pharma",
-    "clics": 43,
-    "lecteurs": 24
+    "id": "actu_2026_08_01_1",
+    "titre": "Convention pharma : la dénonciation n'est plus un tabou",
+    "date": "2026-08-01",
+    "categorie": "pharma_france",
+    "clics": 41,
+    "lecteurs": 25
    },
    {
     "id": "actu_2026_07_29_4",
     "titre": "GLP-1 remboursés : les chercheurs avouent qu'ils ne savent pas encore tout",
     "date": "2026-07-29",
     "categorie": "avenir_pharma",
-    "clics": 46,
-    "lecteurs": 23
+    "clics": 49,
+    "lecteurs": 24
    },
    {
     "id": "actu_2026_07_29_1",
     "titre": "CEPS : l'USPO sauve 20 millions d'euros de baisses de prix sur les génériques",
     "date": "2026-07-29",
     "categorie": "pharma_france",
-    "clics": 44,
+    "clics": 46,
     "lecteurs": 23
    },
    {
@@ -101,15 +101,15 @@
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-08-03",
-  "delivres": 69818,
-  "ouvertures": 28044,
-  "ouvertures_uniques": 19210,
-  "clics": 28859,
-  "clics_uniques": 5165,
-  "taux_ouverture_pct": 27.5,
+  "au": "2026-08-04",
+  "delivres": 70737,
+  "ouvertures": 28442,
+  "ouvertures_uniques": 19504,
+  "clics": 29090,
+  "clics_uniques": 5210,
+  "taux_ouverture_pct": 27.6,
   "taux_clic_pct": 7.4,
-  "ctor_pct": 26.9,
+  "ctor_pct": 26.7,
   "top_articles": [
    {
     "id": "actu_2026_06_18_1",
