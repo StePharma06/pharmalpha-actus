@@ -21,33 +21,33 @@
       "trend": "up"
     }
   ],
-  "pathologies_from": "2026-08-03",
+  "pathologies_from": "2026-08-04",
   "soins": [
     {
       "display": "Azinc immunite",
-      "delta_label": "↑ 530 600",
+      "delta_label": "↑ 103 600",
       "trend": "up"
     },
     {
-      "display": "Eau gazeuse digestion",
-      "delta_label": "↑ 36 250",
+      "display": "Schema digestion",
+      "delta_label": "↑ 34 300",
       "trend": "up"
     },
     {
-      "display": "Lentilles digestion",
-      "delta_label": "↑ 31 050",
+      "display": "Calmosine digestion bébé",
+      "delta_label": "↑ 27 750",
       "trend": "up"
     },
     {
-      "display": "Regression sommeil 6 mois",
-      "delta_label": "↑ 400",
+      "display": "Calmosine sommeil",
+      "delta_label": "↑ 12 600",
       "trend": "up"
     },
     {
-      "display": "Quies specific sommeil",
-      "delta_label": "↑ 250",
+      "display": "Cette douleur n'est pas la mienne",
+      "delta_label": "↑ 600",
       "trend": "up"
     }
   ],
-  "soins_from": "2026-08-03"
+  "soins_from": "2026-08-04"
 }

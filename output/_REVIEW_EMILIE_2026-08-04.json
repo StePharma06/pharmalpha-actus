@@ -1,0 +1,37 @@
+{
+  "generated_at": "2026-08-04T04:11:06.843004+02:00",
+  "run_date": "2026-08-04",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Interventions pharmaceutiques : l'USPO veut les faire sortir de l'ombre",
+      "resume": "Tracer, documenter, valoriser. L'USPO pousse pour que les interventions pharmaceutiques soient enfin reconnues dans les contrôles de l'Assurance maladie. Parce qu'entre une délivrance justifiée et un indu, il n'y a souvent qu'un manque de traçabilité.",
+      "source": "USPO",
+      "source_url": "https://uspo.fr/r3c-le-dispositif-de-compensation-financiere-des-stages-detudes-specialisees-de-pharmacie-officinale/",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "DES de pharmacie officinale : ce que ça va vraiment coûter à ton officine",
+      "resume": "La réforme du 3e cycle entre en vigueur à la rentrée 2026. Accueillir un interne en DES, c'est gratification obligatoire, cotisations sociales, congés... et une aide de l'État. Décryptage business.",
+      "source": "Pharm'Actus · FSPF – Stages de DES de pharmacie officinale : gratification, cotisations, congés, aide de l'État, FSPF – Diplôme d'études spécialisées (DES) de pharmacie officinale – 2026-33",
+      "source_url": "https://www.fspf.fr/stages-de-des-de-pharmacie-officinale-gratification-cotisations-conges-aide-de-letat-maitrise-de-stage-la-fspf-vous-aide-a-y-voir-plus-clair/",
+      "confidence_score": 0.72,
+      "warnings": [
+        "Le montant exact de la gratification horaire minimale 2026 (plancher URSSAF) doit être vérifié sur le site URSSAF avant publication : le chiffre de 4,35 EUR/h est une estimation basée sur le barème 2025, la revalorisation 2026 n'est pas confirmée dans les sources disponibles.",
+        "Le montant précis de l'aide de l'État pour les maîtres de stage DES n'est pas chiffré dans les sources FSPF disponibles : ne pas inventer de montant, mentionner son existence sans le chiffrer.",
+        "Le seuil de franchise de cotisations sociales sur la gratification (15 % du plafond horaire SS) est un principe général : vérifier qu'il s'applique bien au régime DES pharmacie et non à un régime spécifique.",
+        "L'estimation du temps de tutorat (2h à 4h/semaine) est issue de retours de terrain généraux, non d'une source officielle pharmacie : à présenter comme ordre de grandeur.",
+        "La position de l'USPO sur le DES n'est pas documentée dans les sources disponibles ce jour : ne pas lui prêter de position.",
+        "Le nombre d'officines maîtres de stage concernées par la réforme 2026 n'est pas chiffré dans les sources : ne pas extrapoler.",
+        "3 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}
