@@ -1,36 +1,36 @@
 {
- "genere_le": "2026-08-04T07:40:43+02:00",
+ "genere_le": "2026-08-05T07:37:53+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1028,
- "nouveaux_7j": 11,
- "nouveaux_cumul": 1021,
+ "abonnes_total": 1031,
+ "nouveaux_7j": 13,
+ "nouveaux_cumul": 1024,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-07-28",
-  "au": "2026-08-04",
-  "delivres": 6566,
-  "ouvertures": 2362,
-  "ouvertures_uniques": 1692,
-  "clics": 2081,
-  "clics_uniques": 327,
+  "du": "2026-07-29",
+  "au": "2026-08-05",
+  "delivres": 6564,
+  "ouvertures": 2370,
+  "ouvertures_uniques": 1696,
+  "clics": 2079,
+  "clics_uniques": 325,
   "taux_ouverture_pct": 25.8,
   "taux_clic_pct": 5.0,
-  "ctor_pct": 19.3,
+  "ctor_pct": 19.2,
   "top_articles": [
-   {
-    "id": "actu_2026_07_30_4",
-    "titre": "Falaise des brevets : le jackpot generiques arrive d'ici 2035, es-tu pret ?",
-    "date": "2026-07-30",
-    "categorie": "pharma_monde",
-    "clics": 51,
-    "lecteurs": 29
-   },
    {
     "id": "actu_2026_07_30_1",
     "titre": "Franchises, remboursements : la Cnam dit non au gouvernement",
     "date": "2026-07-30",
     "categorie": "pharma_france",
-    "clics": 48,
+    "clics": 51,
+    "lecteurs": 30
+   },
+   {
+    "id": "actu_2026_07_30_4",
+    "titre": "Falaise des brevets : le jackpot generiques arrive d'ici 2035, es-tu pret ?",
+    "date": "2026-07-30",
+    "categorie": "pharma_monde",
+    "clics": 53,
     "lecteurs": 29
    },
    {
@@ -46,8 +46,8 @@
     "titre": "Prévention cardio : une nouvelle loi, une nouvelle mission qui peut rapporter gros",
     "date": "2026-08-01",
     "categorie": "business_officine",
-    "clics": 45,
-    "lecteurs": 27
+    "clics": 46,
+    "lecteurs": 28
    },
    {
     "id": "actu_2026_07_29_3",
@@ -55,14 +55,6 @@
     "date": "2026-07-29",
     "categorie": "bonne_nouvelle",
     "clics": 56,
-    "lecteurs": 26
-   },
-   {
-    "id": "actu_2026_07_28_5",
-    "titre": "Génériques : le CEPS épargne 9 groupes sur 12 - ce que ça change pour ta marge",
-    "date": "2026-07-28",
-    "categorie": "business_officine",
-    "clics": 51,
     "lecteurs": 26
    },
    {
@@ -90,6 +82,14 @@
     "lecteurs": 23
    },
    {
+    "id": "actu_2026_08_03_1",
+    "titre": "Rendez-vous de prévention : ce qui change vraiment pour toi dès octobre",
+    "date": "2026-08-03",
+    "categorie": "pharma_france",
+    "clics": 44,
+    "lecteurs": 23
+   },
+   {
     "id": "actu_2026_07_31_1",
     "titre": "Protections périodiques remboursées : les syndicats disent stop au flou",
     "date": "2026-07-31",
@@ -101,15 +101,15 @@
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-08-04",
-  "delivres": 70737,
-  "ouvertures": 28442,
-  "ouvertures_uniques": 19504,
-  "clics": 29090,
-  "clics_uniques": 5210,
+  "au": "2026-08-05",
+  "delivres": 71664,
+  "ouvertures": 28840,
+  "ouvertures_uniques": 19790,
+  "clics": 29390,
+  "clics_uniques": 5255,
   "taux_ouverture_pct": 27.6,
-  "taux_clic_pct": 7.4,
-  "ctor_pct": 26.7,
+  "taux_clic_pct": 7.3,
+  "ctor_pct": 26.6,
   "top_articles": [
    {
     "id": "actu_2026_06_18_1",
