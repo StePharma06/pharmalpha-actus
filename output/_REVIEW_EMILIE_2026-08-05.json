@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-08-05T04:18:25.747227+02:00",
+  "run_date": "2026-08-05",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Décret substitution DM : trois ans d'attente, et toujours rien",
+      "resume": "Inscrite dans la LFSS pour 2023, la substitution des dispositifs médicaux en officine n'a toujours pas de décret d'application. L'USPO monte au créneau et accuse les fabricants de bloquer les arbitrages. Et pendant ce temps, les pharmaciens attendent.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/decret-de-substitution-des-dispositifs-medicaux-encore-une-promesse-non-tenue",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Rupture BICAFRES® : quand une pénurie devient une opportunité de mission pour l'officine",
+      "resume": "La rupture d'approvisionnement de BICAFRES® (bicarbonate de sodium gastro-résistant, THERADIAL) met sous pression les officines et leurs patients dialysés. Mais elle illustre aussi comment une crise de stock bien gérée peut valoriser le rôle-clé du pharmacien - et ses honoraires.",
+      "source": "Pharm'Actus · USPO — Communiqué rupture BICAFRES®, ANSM — Portail des ruptures de stock",
+      "source_url": "https://uspo.fr/rupture-de-bicafres-luspo-demande-la-continuite-des-traitements/",
+      "confidence_score": 0.72,
+      "warnings": [
+        "Le PFHT exact de BICAFRES® n'est pas disponible dans les sources fournies : aucun calcul de MDL n'a été réalisé, conformément à la règle finances officine.",
+        "Le statut MITM de BICAFRES® est supposé d'après la gravité de la pathologie (acidose métabolique en dialyse) et la communication USPO, mais n'est pas confirmé par un document ANSM cité explicitement dans les sources disponibles — à vérifier sur ruptures.ansm.sante.fr avant publication.",
+        "Les chiffres REIN 2022 (3,2 M insuffisants rénaux, 93 000 dialysés) sont des ordres de grandeur issus du Rapport REIN publié par l'Agence de la Biomédecine — vérifier la mise à jour 2023 si disponible.",
+        "La FSPF et l'UPGF n'ont pas été interrogées directement : l'absence de communiqué public à la date du 4 août 2026 est mentionnée avec prudence, sans leur prêter de position.",
+        "BICAFRES® est présenté comme un médicament à prescription obligatoire remboursé : à confirmer sur la base du Vidal ou du répertoire ANSM si un doute subsiste sur son statut exact (liste I, liste II).",
+        "3 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}
