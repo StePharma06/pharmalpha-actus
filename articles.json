@@ -1,6 +1,131 @@
 {
   "articles": [
     {
+      "id": "actu_2026_08_06_5",
+      "date": "2026-08-06",
+      "type": "actu",
+      "categorie": "business_officine",
+      "titre": "Internes en pharmacie +15% : ce que ça change vraiment pour ton officine",
+      "resume": "Le ministère de la Santé ouvre 10 260 postes d'internes pour la promotion 2026, en hausse de 15%. Un signal fort sur la démographie des professionnels de santé - avec des implications business directes pour les officines en tension de recrutement.",
+      "source": "Pharm'Actus · France Info Santé — Annonce ministérielle 10 260 postes d'internes 2026, Legifrance — Arrêté concours internat pharmacie titre européen 2027-2028",
+      "source_url": "https://www.franceinfo.fr/sante/le-ministere-de-la-sante-annonce-l-ouverture-de-10-260-postes-d-internes-pour-la-promotion-2026-en-hausse-de-15_8136230.html",
+      "tiktok_url": "",
+      "badge_label": "Business",
+      "image_url": "assets/img_actu_2026_08_06_5.jpg",
+      "tags": [
+        "recrutement",
+        "demographie",
+        "missions-officinales",
+        "emploi-pharmaceutique"
+      ],
+      "full_text": "Le ministère de la Santé ouvre 10 260 postes d'internes pour la promotion 2026, en hausse de 15%. Un signal fort sur la démographie des professionnels de santé - avec des implications business directes pour les officines en tension de recrutement.\n\n**Contexte**\n\nLe 5 août 2026, le ministère de la Santé a annoncé l'ouverture de 10 260 postes d'internes toutes filières confondues pour la promotion 2026, soit une hausse de 15% par rapport à la promotion précédente. L'effort porte prioritairement sur les territoires en difficultés d'accès aux soins : Centre-Val de Loire, Nouvelle-Aquitaine, Hauts-de-France. En parallèle, le Journal officiel du 6 août publie l'ouverture des concours d'internat de pharmacie à titre européen et étranger pour l'année universitaire 2027-2028 - une procédure qui vient compléter le vivier de pharmaciens spécialisés (PUI, industrie, recherche) mais dont les flux se répercutent indirectement sur le marché de l'emploi officinal. Pour rappel, le réseau compte aujourd'hui 19 274 officines en France (IQVIA Pharmastat, juin 2026), dans un contexte où la pénurie de pharmaciens adjoints et de préparateurs reste l'un des premiers facteurs de contrainte opérationnelle et de frein à l'extension des horaires d'ouverture - et donc au chiffre d'affaires.\n\n**Analyse business**\n\nPourquoi cette annonce mérite ton attention, même si elle parle d'abord de médecins ?\n\nPremier point : l'effet systémique sur la prescription. 10 260 internes formés, c'est mécaniquement plus de médecins généralistes installés à 5-7 ans dans les zones sous-dotées ciblées (Centre-Val de Loire, Hauts-de-France, Nouvelle-Aquitaine). Or, moins de déserts médicaux = plus d'ordonnances captées par les officines locales. Les études DREES montrent une corrélation directe entre densité médicale et volume d'actes pharmaceutiques dans un bassin de vie. Une officine rurale qui récupère 50 ordonnances supplémentaires par semaine, c'est un impact immédiat sur son chiffre d'affaires.\n\nDeuxième point : le marché de l'emploi officinal. La hausse des postes d'internes en pharmacie - confirmée par les arrêtés JO du 6 août pour les concours européens et étrangers 2027-2028 - signale une volonté d'élargir le vivier. Mais attention : ces internes partent massivement vers la PUI hospitalière, l'industrie ou la biologie. Le flux vers l'officine reste marginal. La pénurie d'adjoints diplômés ne se résout pas par les internats.\n\nTroisième point, le vrai sujet business : dans un marché à 19 274 officines, la contrainte de main-d'œuvre est aujourd'hui le principal plafond de verre sur les missions rémunérées (entretiens pharmaceutiques, bilans de médication partagés, vaccinations). Un entretien d'accompagnement des patients asthmatiques est facturé à l'Assurance Maladie selon le barème conventionnel en vigueur. Impossible à réaliser sans pharmacien disponible. Chaque officine qui ne peut pas déployer ses missions faute d'effectifs laisse un manque à gagner significatif sur sa ROSP et ses honoraires conventionnels, dont le détail chiffré dépend du volume de missions propre à chaque officine.\n\nQuatrième point : les concours à titre européen et étranger ouverts par le JO du 6 août constituent une opportunité de recrutement sous-exploitée. Des pharmaciens UE formés à l'étranger peuvent prétendre à l'exercice en France après validation. Ce vivier est encore peu utilisé par les titulaires, notamment en zones tendues.\n\n**Recommandations actionnables**\n\n1. Cartographie ta zone de chalandise médicale - Identifie si ta commune est classée zone sous-dotée (site data.ameli.fr) : une installation médicale supplémentaire dans les 24 mois suivant une revalorisation des postes d'internes peut générer un flux d'ordonnances supplémentaires significatif. Anticipe en capacité d'accueil.\n\n2. Audite tes missions non déployées - Fais le compte des entretiens pharmaceutiques, BMP et vaccinations non réalisés faute de temps ou d'effectifs. Chaque mission non facturée est une perte sèche sur ta ROSP et tes honoraires conventionnels. Le manque à gagner est souvent sous-estimé.\n\n3. Explore le vivier UE/international - Les concours d'internat à titre européen et étranger ouverts cet été (inscriptions septembre 2026) concernent des pharmaciens déjà diplômés. Rapproche-toi de l'Ordre régional pour identifier les procédures de reconnaissance et les candidats en recherche d'officine.\n\n4. Structure ton attractivité employeur - Face à la pénurie d'adjoints, la bataille se gagne sur le projet professionnel proposé (missions, formation, OPCO EP) autant que sur la rémunération. Formalise ton offre avant la rentrée de septembre.\n\n**Sources citees**\n\n- France Info Santé - Annonce ministérielle 10 260 postes d'internes 2026\n- Legifrance - Arrêté concours internat pharmacie titre européen 2027-2028\n- Legifrance - Arrêté concours internat pharmacie titre étranger 2027-2028\n- IQVIA Pharmastat - Données réseau officinal France, juin 2026"
+    },
+    {
+      "id": "actu_2026_08_06_4",
+      "date": "2026-08-06",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "Vaccin ARNm contre Ebola : Moderna entre dans la course, le Canada donne le feu vert aux essais",
+      "resume": "Le Canada vient d'autoriser Moderna à lancer un essai clinique pour un vaccin ARNm contre Ebola, en pleine épidémie en République démocratique du Congo. La technologie ARNm s'attaque désormais aux maladies infectieuses tropicales à mortalité élevée. Le Covid n'était que le premier acte.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/le-canada-autorise-un-essai-clinique-pour-un-candidat-vaccin-contre-ebola",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_08_06_4.jpg",
+      "tags": [
+        "arnm",
+        "ebola",
+        "vaccin",
+        "moderna",
+        "recherche"
+      ],
+      "full_text": "Moderna contre Ebola. On aurait traité ça de scénario de science-fiction il y a dix ans. En 2026, c'est un essai clinique autorisé par Santé Canada. Et ça mérite qu'on en parle sérieusement.\n\nL'épidémie de virus Ebola en République démocratique du Congo est le contexte direct de cette autorisation. La pression épidémique accélère les décisions réglementaires. C'est exactement ce qu'on a vu avec les vaccins Covid en 2020-2021. La leçon a été retenue : ne pas attendre une catastrophe mondiale pour lancer la recherche sur les pathogènes à fort potentiel épidémique.\n\nCe qui est remarquable ici, c'est la plateforme ARNm appliquée à Ebola. Jusqu'ici, le vaccin de référence contre Ebola (rVSV-ZEBOV, Ervebo) repose sur une technologie à virus vésiculaire recombinant. Il est efficace mais sa fabrication est complexe et sa chaîne du froid exigeante. Un vaccin ARNm serait potentiellement plus rapide à produire en grande quantité et plus facile à adapter en cas de mutation du virus.\n\nOn en est au stade d'essai clinique autorisé, pas de résultats. Il faut des mois de recrutement, des données de phase 1 sur la sécurité, puis des phases 2 et 3 sur l'efficacité. Ce n'est pas pour demain en officine française. Mais c'est aujourd'hui en laboratoire.\n\nPourquoi un pharmacien français doit s'en préoccuper ? Parce que la technologie ARNm est en train de transformer le pipeline vaccinal mondial. GLP-1, CAR-T, ARNm : ces trois révolutions thérapeutiques vont remodeler ce que tu dispenses dans les 10 prochaines années. Et la grippe, le VRS, le CMV, voire certains cancers sont dans le viseur de la plateforme ARNm.\n\nEt parce que tes patients te poseront la question si une épidémie Ebola fait les titres. Mieux vaut avoir la réponse.\n\nDemain matin au comptoir : rien à dispenser, encore une fois. Mais une information à intégrer dans ta culture scientifique. La plateforme ARNm n'est plus un one-shot Covid. C'est une infrastructure thérapeutique en construction."
+    },
+    {
+      "id": "actu_2026_08_06_3",
+      "date": "2026-08-06",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "Livraison à domicile : les officines auront leur propre plateforme nationale en octobre",
+      "resume": "Ma Pharmacie en France (MPeF) entre en phase pilote avec 5 officines pionnières et une vingtaine de patients déjà livrés. Le déploiement à grande échelle est prévu pour octobre 2026. Pour une fois, c'est une solution pensée PAR et POUR les pharmaciens, pas imposée par un acteur extérieur.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/business/numerique/digitalisation/ma-pharmacie-en-france-la-plateforme-numerique-des-officines-sera-lancee-en-octobre",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_08_06_3.jpg",
+      "tags": [
+        "livraison",
+        "numerique",
+        "officine",
+        "innovation",
+        "domicile"
+      ],
+      "full_text": "C'est la bonne nouvelle du jour et elle mérite qu'on s'y attarde. Ma Pharmacie en France, la plateforme officinale de livraison de médicaments à domicile, sort de la case théorique. La phase pilote a démarré avec cinq officines engagées et une vingtaine de patients livrés. D'ici fin août, quarante officines testeront la solution.\n\nLe déploiement à grande échelle est prévu pour octobre 2026. C'est dans moins de deux mois. Et ça change potentiellement beaucoup de choses pour toi.\n\nPourquoi c'est une bonne nouvelle et pas juste un gadget ? Parce que depuis des années, des acteurs extérieurs au monde officinal lorgnent sur la livraison de médicaments à domicile. Certains l'ont même fait, parfois dans des zones grises réglementaires. MPeF, c'est la réponse par les pharmaciens eux-mêmes, avec un cadre sécurisé, une traçabilité et une logique de maillage territorial qui respecte le monopole officinal.\n\nL'accueil des équipes sur le terrain semble positif selon le Moniteur. C'est un signal encourageant, même si on attend de voir ce que donnent les retours à plus grande échelle et sur des officines aux profils très différents (urbain, rural, volume, mixité de patientèle).\n\nConcrètement, qu'est-ce que ça change pour toi ? D'abord, un nouveau levier pour fidéliser les patients à mobilité réduite, âgés, ou tout simplement pressés. Ensuite, une façon de rentrer dans la course de la digitalisation sans avoir à tout construire from scratch. Et enfin, un argument de différenciation face aux grandes enseignes para.\n\nLes questions qui restent ouvertes : le modèle économique précis pour l'officine adhérente, les frais d'abonnement éventuels, la gestion des retours et des médicaments thermolabiles. Autant de points à vérifier avant de signer.\n\nDemain matin au comptoir : si tu n'as pas encore regardé ce que propose MPeF, c'est le moment. Octobre arrive vite, et les premières officines en ligne auront un avantage de notoriété locale non négligeable."
+    },
+    {
+      "id": "actu_2026_08_06_2",
+      "date": "2026-08-06",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "FDA approuve un nouveau traitement de la narcolepsie, une classe inédite ouvre ses portes",
+      "resume": "La FDA vient d'approuver un médicament innovant de Takeda contre la narcolepsie, représentant une toute nouvelle classe thérapeutique. Au-delà du sommeil, les chercheurs voient dans ce mécanisme d'action un potentiel pour d'autres pathologies. Ce qui se passe aux États-Unis aujourd'hui annonce souvent ce qui arrive en officine française dans 2 à 3 ans.",
+      "source": "STAT News",
+      "source_url": "https://www.statnews.com/2026/08/05/takeda-narcolepsy-drug-fda-approval-orzeyful/",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/img_actu_2026_08_06_2.jpg",
+      "tags": [
+        "fda",
+        "narcolepsie",
+        "innovation",
+        "takeda",
+        "recherche"
+      ],
+      "full_text": "La FDA a accordé son approbation à Orzeyful, le nouveau traitement de la narcolepsie développé par Takeda. Ce n'est pas juste un nouveau médicament pour une indication rare. C'est l'inauguration d'une classe thérapeutique entière. Et ça, c'est une information à suivre de près.\n\nLa narcolepsie, ça concerne environ 30 000 personnes en France. Pas un blockbuster de masse, certes. Mais une pathologie chronique, invalidante, et souvent sous-diagnostiquée. Les patients que tu vois avec leurs ordonnances de Modafinil ou de sodium oxybate sont exactement ceux qui pourraient bénéficier de cette innovation si elle traverse l'Atlantique.\n\nCe qui intéresse les scientifiques au-delà de la narcolepsie, c'est le mécanisme d'action de cette nouvelle classe. STAT News précise que les chercheurs espèrent pouvoir l'appliquer à d'autres conditions. On ne sait pas encore lesquelles, mais quand une nouvelle classe ouvre ses portes, elle ouvre rarement sur une seule pièce.\n\nPour le contexte réglementaire européen : une approbation FDA ne vaut pas AMM européenne. Le dossier devra passer devant l'EMA, puis suivre la procédure de remboursement HAS/CEPS en France. On parle donc d'un horizon minimum de 2 à 3 ans avant une éventuelle disponibilité en officine française. Mais anticiper, c'est ton job.\n\nPourquoi tu dois t'y intéresser maintenant ? Parce que tes patients narcoleptiques vont googler. Parce que leurs neurologues vont en parler en consultation. Et parce que si tu n'as jamais entendu parler d'Orzeyful quand ils t'en parlent, tu perds en crédibilité d'un coup.\n\nNoter également que Takeda est bien le laboratoire à l'origine de ce développement et son commercialisateur principal. Pour le marché européen, surveille les accords de licence éventuels avec un partenaire local, comme c'est souvent le cas pour les lancements EU.\n\nDemain matin au comptoir : rien à dispenser. Mais beaucoup à lire. C'est exactement le type d'innovation qui justifie de se tenir informé en dehors des seules actualités franco-françaises."
+    },
+    {
+      "id": "actu_2026_08_06_1",
+      "date": "2026-08-06",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "Omalizumab biosimilaire : l'ANSM donne son feu vert à la substitution en officine",
+      "resume": "L'ANSM a rendu un avis favorable à la substitution de l'omalizumab (Xolair) par son biosimilaire Omlyclo, y compris en primo-prescription. Attention : c'est un avis, pas encore un arrêté au JORF. Le feu vert scientifique est là, l'acte opposable reste attendu. Prépare ton équipe dès maintenant.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/medicament-parapharmacie/omlyclo-bientot-substituable-au-xolair",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_08_06_1.jpg",
+      "tags": [
+        "substitution",
+        "biosimilaire",
+        "ansm",
+        "omalizumab",
+        "officine"
+      ],
+      "full_text": "L'ANSM a publié le 30 juillet 2026 un avis de non-opposition à la substitution de l'omalizumab par ses biosimilaires en officine. C'est un signal fort. Mais soyons précis : un avis d'agence, ce n'est pas un arrêté au Journal officiel.\n\nTant que l'acte réglementaire opposable n'est pas publié, tu ne peux pas substituer. La substitution biosimilaire ne devient effective qu'à la parution de l'arrêté inscrivant le groupe sur la liste L.5125-23-2. Donc : surveille le JORF, pas juste ta messagerie.\n\nMaintenant, parlons du fond. L'omalizumab, c'est l'anti-IgE de référence dans l'asthme allergique sévère et l'urticaire chronique spontanée. Le biosimilaire Omlyclo, c'est le premier candidat à rejoindre cette liste. Et la nouveauté, c'est que l'ANSM ne s'y oppose pas même en initiation de traitement. Autrement dit, pas besoin d'attendre qu'un patient soit déjà stabilisé sous Xolair pour proposer le biosimilaire.\n\nLa condition habituelle reste en vigueur : le prescripteur peut s'y opposer par une mention expresse et médicalement justifiée sur l'ordonnance. Si rien n'est écrit, tu substitues. Si la mention est là, tu respectes.\n\nPourquoi c'est important ? L'omalizumab, c'est un traitement injectable sous-cutané, mensuel ou bimensuel, souvent suivi en HAD ou en officine de ville. Le différentiel de prix entre le biosimilaire et le princeps peut être significatif pour l'Assurance Maladie. Et pour toi, c'est une mission de substitution biologique à valoriser, comme pour les anticorps monoclonaux déjà sur liste.\n\nConcrètement, à l'arrivée de l'arrêté : briefer l'équipe sur la procédure de substitution biosimilaire (traçabilité dans le DP, information du patient, mention sur l'ordonnancier). Et former tes préparateurs à reconnaître la mention d'opposition prescripteur pour ne pas substituer à tort.\n\nDemain matin au comptoir : pas encore d'action à mener. Mais guette le JORF et prépare tes fiches réflexes. Quand ça sortira, tu veux être le premier à être opérationnel, pas le dernier à comprendre ce qui se passe."
+    },
+    {
+      "id": "lsv_2026_08_06",
+      "date": "2026-08-06",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? On soignait la scarlatine avec de la peau de serpent vivant",
+      "resume": "Au XVIIIe siècle, la scarlatine tuait des milliers d'enfants par an. Le remède officiel ? Enrouler le petit malade dans une peau de serpent fraîchement dépiautée. Et le plus fou, c'est que certains médecins juraient que ça marchait.",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_08_06.jpg",
+      "tags": [
+        "histoire",
+        "epidemie",
+        "pediatrie",
+        "antibiotique",
+        "remede"
+      ],
+      "full_text": "La scarlatine, c'était un tueur d'enfants redouté. Au XVIIIe siècle, une épidémie à Londres en 1740 emporte des milliers de gamins en quelques semaines. Les médecins sont dépassés. Et comme souvent quand on ne comprend rien, on improvise.\n\nLa théorie dominante à l'époque, c'est celle des miasmes. La maladie vient d'un air corrompu, d'un déséquilibre des humeurs. Le feu intérieur brûle le malade - il faut donc attirer ce feu vers la surface. Logique imparable, non ?\n\nEntre alors la peau de serpent. Fraîchement récupérée sur un serpent encore chaud - reptile = sang froid = pouvoir d'absorber la chaleur - on l'applique directement sur la poitrine et le ventre de l'enfant. Certains praticiens l'enroulaient carrément autour du torse. D'autres recommandaient d'en frotter la peau écarlate pour faire « descendre » la fièvre.\n\nVoilà le twist : des guérisons étaient bel et bien rapportées. Explication ? La scarlatine est une maladie cyclique. Elle dure 5 à 7 jours, puis elle régresse souvent d'elle-même chez les enfants robustes. N'importe quel remède appliqué au bon moment semblait donc miraculeux. La peau de serpent avait un timing parfait.\n\nCe n'est qu'en 1874 que le microbiologiste allemand Friedrich Fehleisen identifie le streptocoque bêta-hémolytique du groupe A comme responsable. Et il faudra attendre la pénicilline, dans les années 40, pour vraiment stopper la bête. Avant ça, entre 1 et 3 % des enfants infectés mouraient - et les complications rhumatismales cardiaques pouvaient handicaper à vie.\n\nAujourd'hui, un simple Amoxicilline 10 jours et c'est réglé. Quand un parent arrive au comptoir affolé avec une ordonnance pour scarlatine, rappelle-toi que pendant deux siècles, le traitement standard impliquait un serpent. L'antibiothérapie, c'est vraiment pas rien."
+    },
+    {
       "id": "actu_2026_08_05_5",
       "date": "2026-08-05",
       "type": "actu",
@@ -12309,6 +12434,6 @@
       ]
     }
   ],
-  "count": 594,
-  "updated_at": "2026-08-05T04:18:30.687624+02:00"
+  "count": 600,
+  "updated_at": "2026-08-06T04:09:10.284079+02:00"
 }

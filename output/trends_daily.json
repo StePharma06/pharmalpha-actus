@@ -1,59 +1,64 @@
 {
-  "generated_at": "2026-08-05",
-  "window_label": "30 juil. au 5 aout 2026",
+  "generated_at": "2026-08-06",
+  "window_label": "31 juil. au 6 aout 2026",
   "has_history": true,
   "delta_source": "pytrends_rising",
   "pathologies": [
     {
-      "display": "Fatigue après canicule",
-      "delta_label": "↑ 25 000",
+      "display": "Zonne allergie",
+      "delta_label": "↑ 15 150",
       "trend": "up"
     },
     {
-      "display": "Allergie a la poussiere",
-      "delta_label": "↑ 10 250",
+      "display": "Allergie au melon",
+      "delta_label": "↑ 14 700",
       "trend": "up"
     },
     {
-      "display": "Allergie à l'alcool",
-      "delta_label": "↑ 2 950",
+      "display": "Globules blancs bas et fatigue",
+      "delta_label": "↑ 11 150",
       "trend": "up"
     },
     {
-      "display": "Vitamine saint cyprien",
-      "delta_label": "↑ 180",
+      "display": "Cure vitamine fatigue",
+      "delta_label": "↑ 8 750",
+      "trend": "up"
+    },
+    {
+      "display": "Carence en vitamine b 12",
+      "delta_label": "↑ 6 550",
       "trend": "up"
     }
   ],
   "soins": [
     {
-      "display": "Azinc immunite",
-      "delta_label": "↑ 103 600",
+      "display": "Mauvaise digestion que faire",
+      "delta_label": "↑ 24 050",
       "trend": "up"
     },
     {
-      "display": "Schema digestion",
-      "delta_label": "↑ 34 300",
+      "display": "Aide à la digestion",
+      "delta_label": "↑ 19 200",
       "trend": "up"
     },
     {
-      "display": "Calmosine digestion bébé",
-      "delta_label": "↑ 27 750",
+      "display": "Quies specific sommeil",
+      "delta_label": "↑ 11 250",
       "trend": "up"
     },
     {
-      "display": "Calmosine sommeil",
-      "delta_label": "↑ 12 600",
+      "display": "Zzz sommeil",
+      "delta_label": "↑ 5 200",
       "trend": "up"
     },
     {
-      "display": "Cette douleur n'est pas la mienne",
-      "delta_label": "↑ 600",
+      "display": "Douleur rein droit",
+      "delta_label": "↑ 110",
       "trend": "up"
     }
   ],
   "pathologies_stale": false,
-  "pathologies_from": "2026-08-05",
+  "pathologies_from": "2026-08-06",
   "soins_stale": false,
-  "soins_from": "2026-08-05"
+  "soins_from": "2026-08-06"
 }

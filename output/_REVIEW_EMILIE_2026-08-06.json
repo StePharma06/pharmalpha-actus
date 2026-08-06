@@ -1,0 +1,25 @@
+{
+  "generated_at": "2026-08-06T04:09:06.384809+02:00",
+  "run_date": "2026-08-06",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Internes en pharmacie +15% : ce que ça change vraiment pour ton officine",
+      "resume": "Le ministère de la Santé ouvre 10 260 postes d'internes pour la promotion 2026, en hausse de 15%. Un signal fort sur la démographie des professionnels de santé - avec des implications business directes pour les officines en tension de recrutement.",
+      "source": "Pharm'Actus · France Info Santé — Annonce ministérielle 10 260 postes d'internes 2026, Legifrance — Arrêté concours internat pharmacie titre européen 2027-2028",
+      "source_url": "https://www.franceinfo.fr/sante/le-ministere-de-la-sante-annonce-l-ouverture-de-10-260-postes-d-internes-pour-la-promotion-2026-en-hausse-de-15_8136230.html",
+      "confidence_score": 0.62,
+      "warnings": [
+        "La répartition exacte des 10 260 postes entre filières (médecine, pharmacie, odontologie, etc.) n'est pas détaillée dans la source France Info : le chiffre global est fiable, la ventilation par filière pharmacie reste à vérifier sur le site du ministère ou le JO.",
+        "Le chiffre '40 € par entretien asthmatique' est celui de l'avenant 21 à la convention pharmaceutique — à vérifier qu'il n'a pas été révisé par un avenant postérieur avant publication.",
+        "Le lien causal entre ouverture de postes d'internes et installations médicales futures en zones sous-dotées est structurellement documenté mais pas chiffré précisément dans les sources disponibles aujourd'hui : l'argument est qualitatif, pas quantitatif vérifiable.",
+        "IQVIA Pharmastat juin 2026 : chiffre de 19 274 officines et CA moyen 1,28 MEUR cités conformément aux données de référence Pharm'Actus — à ne pas réinventer.",
+        "Les flux vers l'officine depuis les internats restent marginaux : affirmation qualitative sans chiffre précis disponible dans les sources du jour, présentée prudemment.",
+        "3 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

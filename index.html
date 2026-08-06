@@ -31,7 +31,7 @@
      l'image n'est decouverte qu'apres execution du JS qui construit les cards
      (le <img> n'existe qu'a l'interieur d'un template literal JS, invisible au
      preload scanner) -> LCP non deterministe, cf. sprint perf 2026-07-27. -->
-<link rel="preload" as="image" href="assets/img_actu_2026_08_05_1.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="assets/img_actu_2026_08_06_1.jpg" fetchpriority="high">
 
 <!-- Font cohesion site principal -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1737,7 +1737,7 @@ body.pa-has-nav #actusHeader {
 </div>
 
 <!-- EXPRESSION DU JOUR (injectée par update_actus.py à chaque run) -->
-<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Avoir les pieds sur terre</h2><p class="expression-corps">Les médecins grecs distinguaient les tempéraments « aériens » - portés vers l'abstraction, la rêverie, le détachement du réel - des tempéraments « terrestres ». Garder les pieds sur terre, c'était rester dans les humeurs équilibrées, ancrées dans le concret, sans s'envoler vers les spéculations vaines.</p></aside>
+<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Narcotique</h2><p class="expression-corps">Du grec <em>narkê</em>, engourdissement. Les Grecs utilisaient le terme pour décrire l'effet de la torpille électrique (le poisson) sur le bras du pêcheur - une paralysie soudaine et totale. Le narcisse, lui aussi, vient de <em>narkê</em> : la fleur dont l'odeur entêtante provoque une somnolence.</p></aside>
 
 <!-- ESPACE PARTENAIRE 1 (entre Expression du jour et Aujourd'hui).
      Statique : reste visible meme si le JS ne s'execute pas. Le 2e emplacement
@@ -1762,12 +1762,12 @@ body.pa-has-nav #actusHeader {
 <div id="articles-container"></div>
 
 <!-- MARQUE_TENDANCE (injectee par le pipeline hebdo, remplacee quotidiennement) -->
-<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">30 juil. au 5 aout 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Fatigue après canicule</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 25 000</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Azinc immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 103 600</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie a la poussiere</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 10 250</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Schema digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 34 300</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie à l'alcool</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 2 950</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Calmosine digestion bébé</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 27 750</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Vitamine saint cyprien</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 180</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Calmosine sommeil</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 12 600</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;"></td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#9ca3af;font-weight:600;white-space:nowrap;"></td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Cette douleur n'est pas la mienne</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 600</td></tr>
+<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">31 juil. au 6 aout 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Zonne allergie</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 15 150</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Mauvaise digestion que faire</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 24 050</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie au melon</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 14 700</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Aide à la digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 19 200</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Globules blancs bas et fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 11 150</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Quies specific sommeil</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 11 250</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Cure vitamine fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 8 750</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Zzz sommeil</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 5 200</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Carence en vitamine b 12</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 6 550</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Douleur rein droit</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 110</td></tr>
 </tbody></table></div><p style="margin:10px 0 0;font-size:11px;color:#9ca3af;font-style:italic;">Indice de tendance : intensite de hausse Google Trends (non comparable a un volume absolu).</p><p style="margin:12px 0 0;font-size:11px;color:#9ca3af;text-align:right;">Source&nbsp;: Google Trends France (pytrends) &middot; 7 jours glissants</p></section></div>
 
 <!-- ARCHIVES CTA -->
@@ -1917,6 +1917,90 @@ body.pa-has-nav #actusHeader {
 // Mis a jour automatiquement par n8n chaque semaine
 // ============================================================
 const ARTICLES = [
+{
+    id: "actu_2026_08_06_1",
+    date: "2026-08-06",
+    type: "actu",
+    categorie: "pharma_france",
+    titre: "Omalizumab biosimilaire : l'ANSM donne son feu vert à la substitution en officine",
+    resume: "L'ANSM a rendu un avis favorable à la substitution de l'omalizumab (Xolair) par son biosimilaire Omlyclo, y compris en primo-prescription. Attention : c'est un avis, pas encore un arrêté au JORF. Le feu vert scientifique est là, l'acte opposable reste attendu. Prépare ton équipe dès maintenant.",
+    source: "Le Quotidien du Pharmacien",
+    source_url: "http://www.lequotidiendupharmacien.fr/medicament-parapharmacie/omlyclo-bientot-substituable-au-xolair",
+    tiktok_url: "",
+    badge_label: "Pharma France",
+    image_url: "assets/img_actu_2026_08_06_1.jpg",
+    tags: ["substitution", "biosimilaire", "ansm", "omalizumab", "officine"]
+  },
+{
+    id: "actu_2026_08_06_2",
+    date: "2026-08-06",
+    type: "actu",
+    categorie: "pharma_monde",
+    titre: "FDA approuve un nouveau traitement de la narcolepsie, une classe inédite ouvre ses portes",
+    resume: "La FDA vient d'approuver un médicament innovant de Takeda contre la narcolepsie, représentant une toute nouvelle classe thérapeutique. Au-delà du sommeil, les chercheurs voient dans ce mécanisme d'action un potentiel pour d'autres pathologies. Ce qui se passe aux États-Unis aujourd'hui annonce souvent ce qui arrive en officine française dans 2 à 3 ans.",
+    source: "STAT News",
+    source_url: "https://www.statnews.com/2026/08/05/takeda-narcolepsy-drug-fda-approval-orzeyful/",
+    tiktok_url: "",
+    badge_label: "Pharma Monde",
+    image_url: "assets/img_actu_2026_08_06_2.jpg",
+    tags: ["fda", "narcolepsie", "innovation", "takeda", "recherche"]
+  },
+{
+    id: "actu_2026_08_06_3",
+    date: "2026-08-06",
+    type: "actu",
+    categorie: "bonne_nouvelle",
+    titre: "Livraison à domicile : les officines auront leur propre plateforme nationale en octobre",
+    resume: "Ma Pharmacie en France (MPeF) entre en phase pilote avec 5 officines pionnières et une vingtaine de patients déjà livrés. Le déploiement à grande échelle est prévu pour octobre 2026. Pour une fois, c'est une solution pensée PAR et POUR les pharmaciens, pas imposée par un acteur extérieur.",
+    source: "Le Moniteur des Pharmacies",
+    source_url: "https://www.lemoniteurdespharmacies.fr/business/numerique/digitalisation/ma-pharmacie-en-france-la-plateforme-numerique-des-officines-sera-lancee-en-octobre",
+    tiktok_url: "",
+    badge_label: "La bonne nouvelle",
+    image_url: "assets/img_actu_2026_08_06_3.jpg",
+    tags: ["livraison", "numerique", "officine", "innovation", "domicile"]
+  },
+{
+    id: "actu_2026_08_06_4",
+    date: "2026-08-06",
+    type: "actu",
+    categorie: "avenir_pharma",
+    titre: "Vaccin ARNm contre Ebola : Moderna entre dans la course, le Canada donne le feu vert aux essais",
+    resume: "Le Canada vient d'autoriser Moderna à lancer un essai clinique pour un vaccin ARNm contre Ebola, en pleine épidémie en République démocratique du Congo. La technologie ARNm s'attaque désormais aux maladies infectieuses tropicales à mortalité élevée. Le Covid n'était que le premier acte.",
+    source: "Le Quotidien du Pharmacien",
+    source_url: "http://www.lequotidiendupharmacien.fr/exercice-pro/le-canada-autorise-un-essai-clinique-pour-un-candidat-vaccin-contre-ebola",
+    tiktok_url: "",
+    badge_label: "L'avenir de la pharma",
+    image_url: "assets/img_actu_2026_08_06_4.jpg",
+    tags: ["arnm", "ebola", "vaccin", "moderna", "recherche"]
+  },
+{
+    id: "actu_2026_08_06_5",
+    date: "2026-08-06",
+    type: "actu",
+    categorie: "business_officine",
+    titre: "Internes en pharmacie +15% : ce que ça change vraiment pour ton officine",
+    resume: "Le ministère de la Santé ouvre 10 260 postes d'internes pour la promotion 2026, en hausse de 15%. Un signal fort sur la démographie des professionnels de santé - avec des implications business directes pour les officines en tension de recrutement.",
+    source: "Pharm'Actus · France Info Santé — Annonce ministérielle 10 260 postes d'internes 2026, Legifrance — Arrêté concours internat pharmacie titre européen 2027-2028",
+    source_url: "https://www.franceinfo.fr/sante/le-ministere-de-la-sante-annonce-l-ouverture-de-10-260-postes-d-internes-pour-la-promotion-2026-en-hausse-de-15_8136230.html",
+    tiktok_url: "",
+    badge_label: "Business",
+    image_url: "assets/img_actu_2026_08_06_5.jpg",
+    tags: ["recrutement", "demographie", "missions-officinales", "emploi-pharmaceutique"]
+  },
+{
+    id: "lsv_2026_08_06",
+    date: "2026-08-06",
+    type: "lsv",
+    categorie: "lsv",
+    titre: "Le saviez-vous ? On soignait la scarlatine avec de la peau de serpent vivant",
+    resume: "Au XVIIIe siècle, la scarlatine tuait des milliers d'enfants par an. Le remède officiel ? Enrouler le petit malade dans une peau de serpent fraîchement dépiautée. Et le plus fou, c'est que certains médecins juraient que ça marchait.",
+    source: "Pharm'Alpha",
+    source_url: "",
+    tiktok_url: "",
+    badge_label: "Le Saviez-Vous",
+    image_url: "assets/img_lsv_2026_08_06.jpg",
+    tags: ["histoire", "epidemie", "pediatrie", "antibiotique", "remede"]
+  },
 {
     id: "actu_2026_08_05_1",
     date: "2026-08-05",
@@ -2532,90 +2616,6 @@ const ARTICLES = [
     badge_label: "Pharma Monde",
     image_url: "assets/img_actu_2026_07_28_2.jpg",
     tags: ["vih", "financement", "sante-mondiale", "arv", "prep"]
-  },
-{
-    id: "actu_2026_07_28_3",
-    date: "2026-07-28",
-    type: "actu",
-    categorie: "bonne_nouvelle",
-    titre: "Incendies en Gironde : les pharmacies au front, avec le DP comme bouclier",
-    resume: "Masques FFP2 distribués sur prescription ciblée, médicaments délivrés à des patients évacués sans ordonnance... Les officines de Gironde et des Landes ont démontré une fois de plus leur rôle de filet de sécurité sanitaire. Et le Dossier Pharmaceutique a fait exactement ce pour quoi il a été conçu.",
-    source: "USPO",
-    source_url: "https://uspo.fr/incendies-en-gironde-et-dans-les-landes-luspo-apporte-tout-son-soutien-aux-pharmaciens-et-rappelle-le-role-essentiel-du-dmp-et-du-dossier-pharmaceutique/",
-    tiktok_url: "",
-    badge_label: "La bonne nouvelle",
-    image_url: "assets/img_actu_2026_07_28_3.jpg",
-    tags: ["dp", "officine", "incendie", "urgence", "ffp2"]
-  },
-{
-    id: "actu_2026_07_28_4",
-    date: "2026-07-28",
-    type: "actu",
-    categorie: "avenir_pharma",
-    titre: "Thérapie génique en Chine : le décès d'une enfant relance le débat sur la transparence des essais",
-    resume: "Une fillette de 6 ans est décédée lors d'un essai d'édition génique en Chine, un décès qui n'avait pas été mentionné dans l'étude publiée. L'université concernée a ouvert une enquête. Un cas qui interroge la gouvernance mondiale de la recherche en thérapie génique, et l'exigence de transparence dans les essais cliniques.",
-    source: "Sciences et Avenir",
-    source_url: "https://www.sciencesetavenir.fr/sante/chine-deces-dissimule-d-une-fillette-lors-d-une-therapie-genique_193960?xtor=RSS-16",
-    tiktok_url: "",
-    badge_label: "L'avenir de la pharma",
-    image_url: "assets/img_actu_2026_07_28_4.jpg",
-    tags: ["therapie-genique", "essai-clinique", "crispr", "ema", "ansm"]
-  },
-{
-    id: "actu_2026_07_28_5",
-    date: "2026-07-28",
-    type: "actu",
-    categorie: "business_officine",
-    titre: "Génériques : le CEPS épargne 9 groupes sur 12 - ce que ça change pour ta marge",
-    resume: "Le CEPS a réduit la voilure de son plan de baisses tarifaires sur les génériques prévu au 2 janvier 2027. Sur 12 groupes initialement dans le viseur, 9 sont finalement épargnés. Une bonne nouvelle nuancée : 3 groupes restent concernés, et les mécanismes de rémunération officinale...",
-    source: "Pharm'Actus · Le Moniteur des Pharmacies — Génériques : 9 groupes sur 12 épargnés par le CEPS, ANSM — Liste des médicaments en tension d'approvisionnement (référence structurelle)",
-    source_url: "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/generiques-9-groupes-sur-12-epargnes-par-le-ceps",
-    tiktok_url: "",
-    badge_label: "Business",
-    image_url: "assets/img_actu_2026_07_28_5.jpg",
-    tags: ["generiques", "ceps", "marge-officinale", "prix-medicaments"]
-  },
-{
-    id: "lsv_2026_07_28",
-    date: "2026-07-28",
-    type: "lsv",
-    categorie: "lsv",
-    titre: "Le saviez-vous ? On traitait les brûlures graves avec du miel depuis 4 000 ans",
-    resume: "Bien avant les pansements hydrocolloïdes et la bétadine, les médecins égyptiens tartinaient les plaies de miel. Et ce n'était pas de la superstition. C'était de la biochimie sans le savoir.",
-    source: "Pharm'Alpha",
-    source_url: "",
-    tiktok_url: "",
-    badge_label: "Le Saviez-Vous",
-    image_url: "assets/img_lsv_2026_07_28.jpg",
-    tags: ["histoire", "plante", "cicatrisation", "decouverte", "chimie"]
-  },
-{
-    id: "actu_2026_07_27_1",
-    date: "2026-07-27",
-    type: "actu",
-    categorie: "pharma_france",
-    titre: "Franchises médicales : les médicaments à SMR faible dans le collimateur",
-    resume: "La ministre a annoncé le 23 juillet un relèvement du plafond des franchises médicales, avec un ciblage assumé des médicaments à SMR faible et modéré. Derrière l'annonce, un rééquilibrage profond entre Assurance maladie et complémentaires santé se dessine. Au comptoir, ça risque de faire des vagues.",
-    source: "Le Moniteur des Pharmacies",
-    source_url: "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/franchises-medicales-les-medicaments-a-smr-faible-et-modere-dans-le-viseur",
-    tiktok_url: "",
-    badge_label: "Pharma France",
-    image_url: "assets/img_actu_2026_07_27_1.jpg",
-    tags: ["franchise", "smr", "remboursement", "assurance-maladie", "lfss"]
-  },
-{
-    id: "actu_2026_07_27_2",
-    date: "2026-07-27",
-    type: "actu",
-    categorie: "pharma_monde",
-    titre: "130 millions de dollars pour un nouvel inhibiteur de la goutte : le URAT1 revient en force",
-    resume: "Crystalys Therapeutics lève 130 millions de dollars pour financer les essais pivotaux de son dotinurad, un inhibiteur du URAT1 ciblant la goutte. La même cible qu'une molécule pour laquelle Sobi a déboursé 950 millions. En France, la goutte reste sous-traitée et sous-dépistée. Intéressant à suivre.",
-    source: "MedCity News",
-    source_url: "https://medcitynews.com/2026/07/crystalys-gout-urat1-inhibitor-dotinurad-arthritis-inflammation/",
-    tiktok_url: "",
-    badge_label: "Pharma Monde",
-    image_url: "assets/img_actu_2026_07_27_2.jpg",
-    tags: ["goutte", "urat1", "innovation", "pipeline", "recherche"]
   }
 ];
 
