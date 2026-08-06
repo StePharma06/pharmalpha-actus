@@ -1,21 +1,21 @@
 {
- "genere_le": "2026-08-05T07:37:53+02:00",
+ "genere_le": "2026-08-06T07:40:06+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1031,
- "nouveaux_7j": 13,
- "nouveaux_cumul": 1024,
+ "abonnes_total": 1035,
+ "nouveaux_7j": 17,
+ "nouveaux_cumul": 1028,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-07-29",
-  "au": "2026-08-05",
-  "delivres": 6564,
-  "ouvertures": 2370,
-  "ouvertures_uniques": 1696,
-  "clics": 2079,
-  "clics_uniques": 325,
-  "taux_ouverture_pct": 25.8,
+  "du": "2026-07-30",
+  "au": "2026-08-06",
+  "delivres": 6577,
+  "ouvertures": 2302,
+  "ouvertures_uniques": 1690,
+  "clics": 2005,
+  "clics_uniques": 327,
+  "taux_ouverture_pct": 25.7,
   "taux_clic_pct": 5.0,
-  "ctor_pct": 19.2,
+  "ctor_pct": 19.3,
   "top_articles": [
    {
     "id": "actu_2026_07_30_1",
@@ -38,7 +38,7 @@
     "titre": "Doctolib donne vos données à une IA en août : ce que ça change pour les patients et le comptoir",
     "date": "2026-07-31",
     "categorie": "avenir_pharma",
-    "clics": 53,
+    "clics": 55,
     "lecteurs": 28
    },
    {
@@ -50,12 +50,12 @@
     "lecteurs": 28
    },
    {
-    "id": "actu_2026_07_29_3",
-    "titre": "Mesure de la PA officiellement inscrite dans les missions du pharmacien",
-    "date": "2026-07-29",
-    "categorie": "bonne_nouvelle",
-    "clics": 56,
-    "lecteurs": 26
+    "id": "actu_2026_08_03_1",
+    "titre": "Rendez-vous de prévention : ce qui change vraiment pour toi dès octobre",
+    "date": "2026-08-03",
+    "categorie": "pharma_france",
+    "clics": 47,
+    "lecteurs": 25
    },
    {
     "id": "actu_2026_08_01_1",
@@ -66,50 +66,50 @@
     "lecteurs": 25
    },
    {
-    "id": "actu_2026_07_29_4",
-    "titre": "GLP-1 remboursés : les chercheurs avouent qu'ils ne savent pas encore tout",
-    "date": "2026-07-29",
-    "categorie": "avenir_pharma",
-    "clics": 49,
-    "lecteurs": 24
-   },
-   {
-    "id": "actu_2026_07_29_1",
-    "titre": "CEPS : l'USPO sauve 20 millions d'euros de baisses de prix sur les génériques",
-    "date": "2026-07-29",
-    "categorie": "pharma_france",
-    "clics": 46,
-    "lecteurs": 23
-   },
-   {
-    "id": "actu_2026_08_03_1",
-    "titre": "Rendez-vous de prévention : ce qui change vraiment pour toi dès octobre",
-    "date": "2026-08-03",
+    "id": "actu_2026_07_31_1",
+    "titre": "Protections périodiques remboursées : les syndicats disent stop au flou",
+    "date": "2026-07-31",
     "categorie": "pharma_france",
     "clics": 44,
     "lecteurs": 23
    },
    {
-    "id": "actu_2026_07_31_1",
-    "titre": "Protections périodiques remboursées : les syndicats disent stop au flou",
+    "id": "actu_2026_07_31_5",
+    "titre": "Franchises médicales doublées : ce que ça change vraiment pour ton comptoir",
     "date": "2026-07-31",
-    "categorie": "pharma_france",
-    "clics": 42,
-    "lecteurs": 23
+    "categorie": "business_officine",
+    "clics": 50,
+    "lecteurs": 22
+   },
+   {
+    "id": "actu_2026_07_30_2",
+    "titre": "Douleur aiguë sans opioïdes : Latigo fait trembler le monopole de Vertex",
+    "date": "2026-07-30",
+    "categorie": "avenir_pharma",
+    "clics": 43,
+    "lecteurs": 22
+   },
+   {
+    "id": "actu_2026_08_01_3",
+    "titre": "Apixaban générique : 16 nouveaux remboursés dès le 4 août, du concret pour l'officine",
+    "date": "2026-08-01",
+    "categorie": "bonne_nouvelle",
+    "clics": 40,
+    "lecteurs": 21
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-08-05",
-  "delivres": 71664,
-  "ouvertures": 28840,
-  "ouvertures_uniques": 19790,
-  "clics": 29390,
-  "clics_uniques": 5255,
+  "au": "2026-08-06",
+  "delivres": 72601,
+  "ouvertures": 29175,
+  "ouvertures_uniques": 20037,
+  "clics": 29664,
+  "clics_uniques": 5302,
   "taux_ouverture_pct": 27.6,
   "taux_clic_pct": 7.3,
-  "ctor_pct": 26.6,
+  "ctor_pct": 26.5,
   "top_articles": [
    {
     "id": "actu_2026_06_18_1",
