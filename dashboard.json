@@ -1,38 +1,22 @@
 {
- "genere_le": "2026-08-06T07:40:06+02:00",
+ "genere_le": "2026-08-07T06:49:08+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1035,
- "nouveaux_7j": 17,
- "nouveaux_cumul": 1028,
+ "abonnes_total": 1036,
+ "nouveaux_7j": 18,
+ "nouveaux_cumul": 1029,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-07-30",
-  "au": "2026-08-06",
-  "delivres": 6577,
-  "ouvertures": 2302,
-  "ouvertures_uniques": 1690,
-  "clics": 2005,
-  "clics_uniques": 327,
-  "taux_ouverture_pct": 25.7,
-  "taux_clic_pct": 5.0,
-  "ctor_pct": 19.3,
+  "du": "2026-07-31",
+  "au": "2026-08-07",
+  "delivres": 6598,
+  "ouvertures": 2124,
+  "ouvertures_uniques": 1558,
+  "clics": 1839,
+  "clics_uniques": 305,
+  "taux_ouverture_pct": 23.6,
+  "taux_clic_pct": 4.6,
+  "ctor_pct": 19.6,
   "top_articles": [
-   {
-    "id": "actu_2026_07_30_1",
-    "titre": "Franchises, remboursements : la Cnam dit non au gouvernement",
-    "date": "2026-07-30",
-    "categorie": "pharma_france",
-    "clics": 51,
-    "lecteurs": 30
-   },
-   {
-    "id": "actu_2026_07_30_4",
-    "titre": "Falaise des brevets : le jackpot generiques arrive d'ici 2035, es-tu pret ?",
-    "date": "2026-07-30",
-    "categorie": "pharma_monde",
-    "clics": 53,
-    "lecteurs": 29
-   },
    {
     "id": "actu_2026_07_31_4",
     "titre": "Doctolib donne vos données à une IA en août : ce que ça change pour les patients et le comptoir",
@@ -46,7 +30,7 @@
     "titre": "Prévention cardio : une nouvelle loi, une nouvelle mission qui peut rapporter gros",
     "date": "2026-08-01",
     "categorie": "business_officine",
-    "clics": 46,
+    "clics": 48,
     "lecteurs": 28
    },
    {
@@ -62,7 +46,15 @@
     "titre": "Convention pharma : la dénonciation n'est plus un tabou",
     "date": "2026-08-01",
     "categorie": "pharma_france",
-    "clics": 41,
+    "clics": 43,
+    "lecteurs": 25
+   },
+   {
+    "id": "actu_2026_08_06_5",
+    "titre": "Internes en pharmacie +15% : ce que ça change vraiment pour ton officine",
+    "date": "2026-08-06",
+    "categorie": "business_officine",
+    "clics": 34,
     "lecteurs": 25
    },
    {
@@ -70,8 +62,8 @@
     "titre": "Protections périodiques remboursées : les syndicats disent stop au flou",
     "date": "2026-07-31",
     "categorie": "pharma_france",
-    "clics": 44,
-    "lecteurs": 23
+    "clics": 45,
+    "lecteurs": 24
    },
    {
     "id": "actu_2026_07_31_5",
@@ -82,32 +74,40 @@
     "lecteurs": 22
    },
    {
-    "id": "actu_2026_07_30_2",
-    "titre": "Douleur aiguë sans opioïdes : Latigo fait trembler le monopole de Vertex",
-    "date": "2026-07-30",
-    "categorie": "avenir_pharma",
-    "clics": 43,
-    "lecteurs": 22
-   },
-   {
     "id": "actu_2026_08_01_3",
     "titre": "Apixaban générique : 16 nouveaux remboursés dès le 4 août, du concret pour l'officine",
     "date": "2026-08-01",
     "categorie": "bonne_nouvelle",
-    "clics": 40,
+    "clics": 42,
     "lecteurs": 21
+   },
+   {
+    "id": "actu_2026_08_06_3",
+    "titre": "Livraison à domicile : les officines auront leur propre plateforme nationale en octobre",
+    "date": "2026-08-06",
+    "categorie": "bonne_nouvelle",
+    "clics": 30,
+    "lecteurs": 21
+   },
+   {
+    "id": "actu_2026_08_05_5",
+    "titre": "Rupture BICAFRES® : quand une pénurie devient une opportunité de mission pour l'officine",
+    "date": "2026-08-05",
+    "categorie": "business_officine",
+    "clics": 30,
+    "lecteurs": 16
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-08-06",
-  "delivres": 72601,
-  "ouvertures": 29175,
-  "ouvertures_uniques": 20037,
-  "clics": 29664,
-  "clics_uniques": 5302,
-  "taux_ouverture_pct": 27.6,
+  "au": "2026-08-07",
+  "delivres": 73536,
+  "ouvertures": 29398,
+  "ouvertures_uniques": 20178,
+  "clics": 29860,
+  "clics_uniques": 5339,
+  "taux_ouverture_pct": 27.4,
   "taux_clic_pct": 7.3,
   "ctor_pct": 26.5,
   "top_articles": [
