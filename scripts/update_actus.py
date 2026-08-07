@@ -23,7 +23,7 @@ BREVO_LIST_ID = 5    # "Newsletter Pharm'Alpha" — abonnes quotidien
 BREVO_LIST_HEBDO = 8  # Abonnes frequence hebdomadaire (lundi matin)
 SENDER_EMAIL = "actus@pharmalpha.fr"
 SENDER_NAME = "Pharm'Actus"
-REPLY_TO_EMAIL = "stephen.pharmacien@gmail.com"
+REPLY_TO_EMAIL = "stephen@pharmalpha.fr"
 
 
 def _no_emdash(s: str) -> str:
@@ -2614,6 +2614,12 @@ def build_newsletter_html(articles, custom_intro=None):
         <a href="https://actus.pharmalpha.fr/preferences?email={{{{ contact.EMAIL }}}}&amp;freq=daily" style="color:#888;">Fr&eacute;quence emails</a> &bull;
         <a href="{{{{ unsubscribe }}}}" style="color:#888;">Se d&eacute;sinscrire</a> &bull;
         <a href="https://actus.pharmalpha.fr/" style="color:#888;">Voir en ligne</a>
+      </p>
+      <p style="margin:12px 0 0;font-size:10px;color:#bbb;line-height:1.5;font-style:italic;">
+        Pharm'Actus est produit quotidiennement avec l'assistance d'outils d'intelligence artificielle,
+        sous la responsabilit&eacute; &eacute;ditoriale de Stephen Robert, Docteur en Pharmacie.
+        Une erreur ou une impr&eacute;cision vous saute aux yeux&nbsp;?
+        <a href="mailto:stephen@pharmalpha.fr?subject=Signalement%20Pharm'Actus" style="color:#999;text-decoration:underline;">Signalez-la</a>, elle sera corrig&eacute;e.
       </p>
     </div>
   </td></tr>

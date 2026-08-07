@@ -450,7 +450,15 @@ Pour ne rien manquer chaque jour, abonne-toi a 𝗣𝗵𝗮𝗿𝗺'𝗔𝗰𝘁
 𝗘𝘁 𝘁𝗼𝗶, 𝗾𝘂𝗲𝗹𝗹𝗲 𝗮𝗰𝘁𝘂 𝘁'𝗮 𝗹𝗲 𝗽𝗹𝘂𝘀 𝗶𝗻𝘁𝗲𝗿𝗽𝗲𝗹𝗹𝗲 𝗰𝗲𝘁𝘁𝗲 𝘀𝗲𝗺𝗮𝗶𝗻𝗲 ?
 
 Reponds en commentaire, je lis tout.
+
+
+Pharm'Actus est produit quotidiennement avec l'assistance d'outils d'intelligence artificielle, sous la responsabilite editoriale de Stephen Robert, Docteur en Pharmacie. Une erreur ou une imprecision vous saute aux yeux ? Signalez-la a stephen@pharmalpha.fr, elle sera corrigee.
 ```
+
+IMPORTANT : le dernier paragraphe (mention IA + responsabilite editoriale) doit etre
+reproduit MOT POUR MOT, sans le reformuler ni le raccourcir. C'est une mention de
+conformite (reglement europeen sur l'IA, article 50). Sur LinkedIn le lien mailto ne
+fonctionne pas : l'adresse est donc ecrite en clair, c'est voulu.
 
 ## Hashtags (commentaire 1 min apres publication)
 
