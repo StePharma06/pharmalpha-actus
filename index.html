@@ -31,7 +31,7 @@
      l'image n'est decouverte qu'apres execution du JS qui construit les cards
      (le <img> n'existe qu'a l'interieur d'un template literal JS, invisible au
      preload scanner) -> LCP non deterministe, cf. sprint perf 2026-07-27. -->
-<link rel="preload" as="image" href="assets/img_actu_2026_08_06_1.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="assets/img_actu_2026_08_07_1.jpg" fetchpriority="high">
 
 <!-- Font cohesion site principal -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1737,7 +1737,7 @@ body.pa-has-nav #actusHeader {
 </div>
 
 <!-- EXPRESSION DU JOUR (injectée par update_actus.py à chaque run) -->
-<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Narcotique</h2><p class="expression-corps">Du grec <em>narkê</em>, engourdissement. Les Grecs utilisaient le terme pour décrire l'effet de la torpille électrique (le poisson) sur le bras du pêcheur - une paralysie soudaine et totale. Le narcisse, lui aussi, vient de <em>narkê</em> : la fleur dont l'odeur entêtante provoque une somnolence.</p></aside>
+<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Pansement</h2><p class="expression-corps">Du vieux français <em>panser</em>, prendre soin - lui-même du latin <em>pensare</em>, peser, évaluer. Panser une blessure, c'était d'abord l'examiner attentivement, la « peser » du regard avant d'agir. Le mot <em>pensée</em> (la réflexion) partage la même racine : on pèse ses mots comme on évalue une plaie.</p></aside>
 
 <!-- ESPACE PARTENAIRE 1 (entre Expression du jour et Aujourd'hui).
      Statique : reste visible meme si le JS ne s'execute pas. Le 2e emplacement
@@ -1762,7 +1762,7 @@ body.pa-has-nav #actusHeader {
 <div id="articles-container"></div>
 
 <!-- MARQUE_TENDANCE (injectee par le pipeline hebdo, remplacee quotidiennement) -->
-<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">31 juil. au 6 aout 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
+<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">1 aout au 7 aout 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
 <tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Zonne allergie</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 15 150</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Mauvaise digestion que faire</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 24 050</td></tr>
 <tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie au melon</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 14 700</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Aide à la digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 19 200</td></tr>
 <tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Globules blancs bas et fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 11 150</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Quies specific sommeil</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 11 250</td></tr>
@@ -1917,6 +1917,90 @@ body.pa-has-nav #actusHeader {
 // Mis a jour automatiquement par n8n chaque semaine
 // ============================================================
 const ARTICLES = [
+{
+    id: "actu_2026_08_07_1",
+    date: "2026-08-07",
+    type: "actu",
+    categorie: "pharma_france",
+    titre: "Remises génériques : 55 000 euros par an, c'est ce qui fait tenir l'officine",
+    resume: "L'IGAS et l'IGF ont mis un chiffre brutal sur la table : 55 000 euros de remises commerciales en moyenne par officine en 2024. C'est plus un complément, c'est un pilier. Et ce pilier-là, il est dans le viseur des décideurs.",
+    source: "Le Moniteur des Pharmacies",
+    source_url: "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/remises-sur-les-generiques-les-55-000-e-qui-font-tenir-les-pharmacies",
+    tiktok_url: "",
+    badge_label: "Pharma France",
+    image_url: "assets/img_actu_2026_08_07_1.jpg",
+    tags: ["marge", "generique", "remises", "lfss", "officine"]
+  },
+{
+    id: "actu_2026_08_07_2",
+    date: "2026-08-07",
+    type: "actu",
+    categorie: "pharma_monde",
+    titre: "Premier vaccin grippe ARNm autorise aux USA : ce que ca annonce pour toi",
+    resume: "La FDA vient d'approuver mFLUSIVA, le premier vaccin antigrippal à ARNm de Moderna, chez les 50 ans et plus. Technologie déjà connue, nouvelle application. L'Europe et la France ne sont pas encore concernées, mais le signal est clair.",
+    source: "Le Moniteur des Pharmacies",
+    source_url: "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/grippe-les-etats-unis-autorisent-le-premier-vaccin-a-arnm-de-moderna",
+    tiktok_url: "",
+    badge_label: "Pharma Monde",
+    image_url: "assets/img_actu_2026_08_07_2.jpg",
+    tags: ["vaccin", "grippe", "arnm", "fda", "innovation"]
+  },
+{
+    id: "actu_2026_08_07_3",
+    date: "2026-08-07",
+    type: "actu",
+    categorie: "bonne_nouvelle",
+    titre: "Protections menstruelles remboursees : c'est officiel, ca demarre en octobre",
+    resume: "Un arrêté du 6 août 2026 inscrit les coupes et culottes menstruelles sur la liste de remboursement de l'Assurance Maladie. Entrée en vigueur le 1er octobre 2026. Pour l'officine, c'est un nouveau segment à anticiper dès maintenant.",
+    source: "LegiRSS Pharmacie",
+    source_url: "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054632785",
+    tiktok_url: "",
+    badge_label: "La bonne nouvelle",
+    image_url: "assets/img_actu_2026_08_07_3.jpg",
+    tags: ["remboursement", "lpp", "officine", "prevention", "parapharmacie"]
+  },
+{
+    id: "actu_2026_08_07_4",
+    date: "2026-08-07",
+    type: "actu",
+    categorie: "avenir_pharma",
+    titre: "Bicafres en rupture : l'USPO reclame le retour des prepa magistrales",
+    resume: "Le Bicafres 1 000 mg est en rupture depuis fin juin 2026. L'USPO demande l'autorisation de recourir aux préparations magistrales pour les patients qui en dépendent. Une rupture de plus, une solution de bon sens qui attend un feu vert réglementaire.",
+    source: "Le Quotidien du Pharmacien",
+    source_url: "http://www.lequotidiendupharmacien.fr/medicament-parapharmacie/medicament/bicafres-en-rupture-un-retour-aux-preparations-magistrales-est-attendu",
+    tiktok_url: "",
+    badge_label: "L'avenir de la pharma",
+    image_url: "assets/img_actu_2026_08_07_4.jpg",
+    tags: ["rupture", "preparation-magistrale", "ansm", "uspo", "officine"]
+  },
+{
+    id: "actu_2026_08_07_5",
+    date: "2026-08-07",
+    type: "actu",
+    categorie: "business_officine",
+    titre: "Hantavirus importé : le rôle-clé de l'officine dans la détection précoce",
+    resume: "Deux cas de hantavirus importés détectés en France en août 2026 : un signal faible, mais une opportunité réelle pour l'officine de se positionner comme premier maillon de la veille sanitaire estivale - et de valoriser ses missions de conseil.",
+    source: "Pharm'Actus · France Info Santé — Hantavirus : un touriste de passage en France testé positif, France Info Santé — Hantavirus : un touriste franco-argentin testé positif",
+    source_url: "https://www.franceinfo.fr/sante/maladie/hantavirus/hantavirus-un-touriste-de-passage-en-france-teste-positif_8137643.html",
+    tiktok_url: "",
+    badge_label: "Business",
+    image_url: "assets/img_actu_2026_08_07_5.jpg",
+    tags: ["veille-sanitaire", "maladies-importees", "missions-officinales", "conseil-voyageur"]
+  },
+{
+    id: "lsv_2026_08_07",
+    date: "2026-08-07",
+    type: "lsv",
+    categorie: "lsv",
+    titre: "Le saviez-vous ? On diagnostiquait la folie en mesurant la forme du crâne",
+    resume: "Pendant près d'un siècle, des médecins sérieux, diplômés, respectés, ont prétendu lire la santé mentale d'un patient en lui palpant le crâne. La phrénologie n'était pas une blague de foire. C'était de la médecine officielle. Et elle a failli tout changer.",
+    source: "Pharm'Alpha",
+    source_url: "",
+    tiktok_url: "",
+    badge_label: "Le Saviez-Vous",
+    image_url: "assets/img_lsv_2026_08_07.jpg",
+    tags: ["histoire", "diagnostic", "neurologie", "psychiatrie", "cerveau"]
+  },
 {
     id: "actu_2026_08_06_1",
     date: "2026-08-06",
@@ -2532,90 +2616,6 @@ const ARTICLES = [
     badge_label: "Pharma Monde",
     image_url: "assets/img_actu_2026_07_29_2.jpg",
     tags: ["diabete", "glp-1", "has", "recommandation", "officine"]
-  },
-{
-    id: "actu_2026_07_29_3",
-    date: "2026-07-29",
-    type: "actu",
-    categorie: "bonne_nouvelle",
-    titre: "Mesure de la PA officiellement inscrite dans les missions du pharmacien",
-    resume: "C'est désormais dans la loi. La LOI n° 2026-668 du 27 juillet 2026 intègre officiellement la mesure de la pression artérielle parmi les missions de prévention du pharmacien d'officine. La France se dote aussi d'une stratégie nationale contre les maladies cardio-neuro-vasculaires. Ton tensiomètre n'est plus un gadget, c'est un outil légal.",
-    source: "LegiRSS Pharmacie",
-    source_url: "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054496977",
-    tiktok_url: "",
-    badge_label: "La bonne nouvelle",
-    image_url: "assets/img_actu_2026_07_29_3.jpg",
-    tags: ["prevention", "cardiovasculaire", "missions", "officine", "loi"]
-  },
-{
-    id: "actu_2026_07_29_4",
-    date: "2026-07-29",
-    type: "actu",
-    categorie: "avenir_pharma",
-    titre: "GLP-1 remboursés : les chercheurs avouent qu'ils ne savent pas encore tout",
-    resume: "Remboursés en France depuis le 15 juin 2026, les médicaments anti-obésité à base de GLP-1 continuent de surprendre la communauté scientifique. Daniel Drucker, l'un des pères du GLP-1, rappelle que 40 ans de recherche n'ont pas encore livré tous les secrets de cette molécule. Et les nouvelles indications potentielles sont nombreuses.",
-    source: "France Info Sante",
-    source_url: "https://www.franceinfo.fr/replay-radio/ils-ont-fait-l-actu/nous-apprenons-toujours-meme-apres-40-ans-rembourses-depuis-juin-2026-les-medicaments-contre-l-obesite-continuent-de-surprendre-les-chercheurs_8069510.html#xtor=RSS-3-%5Bgeneral%5D",
-    tiktok_url: "",
-    badge_label: "L'avenir de la pharma",
-    image_url: "assets/img_actu_2026_07_29_4.jpg",
-    tags: ["glp-1", "obesite", "remboursement", "innovation", "recherche"]
-  },
-{
-    id: "actu_2026_07_29_5",
-    date: "2026-07-29",
-    type: "actu",
-    categorie: "business_officine",
-    titre: "20 000 € pour les officines fragiles : qui peut en bénéficier et comment ?",
-    resume: "L'avenant n°2 à la convention pharmaceutique, en vigueur depuis le 22 mai 2026, ouvre une aide financière pouvant atteindre 20 000 € aux officines situées en zones sous-denses. Critères, dossier, délais : le tour complet avant la clôture du 31 juillet.",
-    source: "Pharm'Actus · Le Moniteur des Pharmacies – Jusqu'à 20 000 € pour les officines fragiles, FSPF – Aide financière aux officines en zones médicales sous-denses : déposez votre demande avant le 31 juillet",
-    source_url: "https://www.lemoniteurdespharmacies.fr/business/economie/strategie-et-gestion/jusqua-20-000-e-pour-les-officines-fragiles-comment-deposer-son-dossier",
-    tiktok_url: "",
-    badge_label: "Business",
-    image_url: "assets/img_actu_2026_07_29_5.jpg",
-    tags: ["aide-financiere", "zones-sous-denses", "convention-pharmaceutique", "officine-fragile"]
-  },
-{
-    id: "lsv_2026_07_29",
-    date: "2026-07-29",
-    type: "lsv",
-    categorie: "lsv",
-    titre: "Le saviez-vous ? On guérissait l'angine de poitrine en sniffant du nitrite d'amyle",
-    resume: "Avant les patchs et les comprimés sublinguaux, les crises d'angine se traitaient avec un flacon qu'on cassait sous le nez. Un truc qui sentait le vernis à ongles et qui faisait tourner la tête en 15 secondes. Et devinez ce que les clubbers des années 70 ont détourné à des fins... récréatives.",
-    source: "Pharm'Alpha",
-    source_url: "",
-    tiktok_url: "",
-    badge_label: "Le Saviez-Vous",
-    image_url: "assets/img_lsv_2026_07_29.jpg",
-    tags: ["histoire", "cardiologie", "medicament", "decouverte", "chimie"]
-  },
-{
-    id: "actu_2026_07_28_1",
-    date: "2026-07-28",
-    type: "actu",
-    categorie: "pharma_france",
-    titre: "Violences en officine : l'Ordre et les URPS peuvent enfin porter plainte à ta place",
-    resume: "Un décret vient d'autoriser l'Ordre des pharmaciens et les URPS à porter plainte directement au nom des professionnels de santé victimes de violences. Fini le parcours du combattant en solo pour entamer une procédure pénale. Un signal fort, même si le comptoir reste un endroit parfois bien dangereux.",
-    source: "Le Quotidien du Pharmacien",
-    source_url: "http://www.lequotidiendupharmacien.fr/violences-en-officine-ordre-et-urps-des-pharmaciens-peuvent-porter-plainte-au-nom-des-professionnels-victimes-de-violences",
-    tiktok_url: "",
-    badge_label: "Pharma France",
-    image_url: "assets/img_actu_2026_07_28_1.jpg",
-    tags: ["violences", "ordre", "urps", "officine", "plainte"]
-  },
-{
-    id: "actu_2026_07_28_2",
-    date: "2026-07-28",
-    type: "actu",
-    categorie: "pharma_monde",
-    titre: "VIH mondial : les financements chutent de 18%, le spectre de la résurgence est là",
-    resume: "L'ONUSIDA tire la sonnette d'alarme : le financement international pour lutter contre le VIH a plongé de 18% l'an dernier. Un choc budgétaire mondial qui menace directement les programmes de prévention et de traitement dans les pays les plus touchés. Ce que ça dit aussi de notre modèle de santé globalisé.",
-    source: "STAT News",
-    source_url: "https://www.statnews.com/pharmalot/2026/07/27/hiv-resurgence-is-feared-as-global-fund-to-combat-the-disease-falls-18-percent/?utm_campaign=rss",
-    tiktok_url: "",
-    badge_label: "Pharma Monde",
-    image_url: "assets/img_actu_2026_07_28_2.jpg",
-    tags: ["vih", "financement", "sante-mondiale", "arv", "prep"]
   }
 ];
 

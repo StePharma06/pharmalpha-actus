@@ -1,0 +1,70 @@
+{
+  "generated_at": "2026-08-07T04:15:51.161119+02:00",
+  "run_date": "2026-08-07",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Remises génériques : 55 000 euros par an, c'est ce qui fait tenir l'officine",
+      "resume": "L'IGAS et l'IGF ont mis un chiffre brutal sur la table : 55 000 euros de remises commerciales en moyenne par officine en 2024. C'est plus un complément, c'est un pilier. Et ce pilier-là, il est dans le viseur des décideurs.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/remises-sur-les-generiques-les-55-000-e-qui-font-tenir-les-pharmacies",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "pharma_monde",
+      "titre": "Premier vaccin grippe ARNm autorise aux USA : ce que ca annonce pour toi",
+      "resume": "La FDA vient d'approuver mFLUSIVA, le premier vaccin antigrippal à ARNm de Moderna, chez les 50 ans et plus. Technologie déjà connue, nouvelle application. L'Europe et la France ne sont pas encore concernées, mais le signal est clair.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/grippe-les-etats-unis-autorisent-le-premier-vaccin-a-arnm-de-moderna",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "Protections menstruelles remboursees : c'est officiel, ca demarre en octobre",
+      "resume": "Un arrêté du 6 août 2026 inscrit les coupes et culottes menstruelles sur la liste de remboursement de l'Assurance Maladie. Entrée en vigueur le 1er octobre 2026. Pour l'officine, c'est un nouveau segment à anticiper dès maintenant.",
+      "source": "LegiRSS Pharmacie",
+      "source_url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054632785",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "avenir_pharma",
+      "titre": "Bicafres en rupture : l'USPO reclame le retour des prepa magistrales",
+      "resume": "Le Bicafres 1 000 mg est en rupture depuis fin juin 2026. L'USPO demande l'autorisation de recourir aux préparations magistrales pour les patients qui en dépendent. Une rupture de plus, une solution de bon sens qui attend un feu vert réglementaire.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/medicament-parapharmacie/medicament/bicafres-en-rupture-un-retour-aux-preparations-magistrales-est-attendu",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Hantavirus importé : le rôle-clé de l'officine dans la détection précoce",
+      "resume": "Deux cas de hantavirus importés détectés en France en août 2026 : un signal faible, mais une opportunité réelle pour l'officine de se positionner comme premier maillon de la veille sanitaire estivale - et de valoriser ses missions de conseil.",
+      "source": "Pharm'Actus · France Info Santé — Hantavirus : un touriste de passage en France testé positif, France Info Santé — Hantavirus : un touriste franco-argentin testé positif",
+      "source_url": "https://www.franceinfo.fr/sante/maladie/hantavirus/hantavirus-un-touriste-de-passage-en-france-teste-positif_8137643.html",
+      "confidence_score": 0.62,
+      "warnings": [
+        "Le chiffre de 6 millions de consultations urgences évitables (DREES 2025) est une estimation de cadrage : la source exacte doit être vérifiée avant publication, le chiffre précis peut varier selon le périmètre retenu.",
+        "Le chiffre de 18 à 22 minutes de conseil non rémunéré par heure (URPS Île-de-France 2022) est cité de mémoire : à vérifier dans le rapport URPS exact avant publication.",
+        "La létalité du hantavirus type Andes/Sin Nombre (>30%) est un ordre de grandeur épidémiologique général : elle varie selon les souches et les séries. Ne pas la présenter comme un chiffre précis.",
+        "Aucun chiffre de marge officinale n'est avancé dans cet article, conformément aux règles : le sujet ne s'y prêtait pas (pas de dispensation Rx directement liée). L'angle est délibérément qualitatif sur la rentabilité indirecte.",
+        "L'article L.5125-1-1 A CSP cité pour la mission de promotion de la santé : vérifier la numérotation exacte en vigueur (possible renumérotation post-ordonnance).",
+        "Aucune position syndicale inventée : la référence à FSPF/USPO sur la rémunération du conseil est un fait de contexte général connu, sans citation précise d'un communiqué daté — à sourcer si besoin de précision.",
+        "4 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

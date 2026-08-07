@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-06",
-  "window_label": "31 juil. au 6 aout 2026",
+  "generated_at": "2026-08-07",
+  "window_label": "1 aout au 7 aout 2026",
   "has_history": true,
   "delta_source": "pytrends_rising",
   "pathologies": [
@@ -58,7 +58,7 @@
     }
   ],
   "pathologies_stale": false,
-  "pathologies_from": "2026-08-06",
+  "pathologies_from": "2026-08-07",
   "soins_stale": false,
-  "soins_from": "2026-08-06"
+  "soins_from": "2026-08-07"
 }
