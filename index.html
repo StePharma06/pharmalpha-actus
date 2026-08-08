@@ -31,7 +31,7 @@
      l'image n'est decouverte qu'apres execution du JS qui construit les cards
      (le <img> n'existe qu'a l'interieur d'un template literal JS, invisible au
      preload scanner) -> LCP non deterministe, cf. sprint perf 2026-07-27. -->
-<link rel="preload" as="image" href="assets/img_actu_2026_08_07_1.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="assets/img_actu_2026_08_08_1.jpg" fetchpriority="high">
 
 <!-- Font cohesion site principal -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1737,7 +1737,7 @@ body.pa-has-nav #actusHeader {
 </div>
 
 <!-- EXPRESSION DU JOUR (injectée par update_actus.py à chaque run) -->
-<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Pansement</h2><p class="expression-corps">Du vieux français <em>panser</em>, prendre soin - lui-même du latin <em>pensare</em>, peser, évaluer. Panser une blessure, c'était d'abord l'examiner attentivement, la « peser » du regard avant d'agir. Le mot <em>pensée</em> (la réflexion) partage la même racine : on pèse ses mots comme on évalue une plaie.</p></aside>
+<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Thérapeutique / Thérapie</h2><p class="expression-corps">Du grec <em>therapeuein</em>, soigner, servir, prendre soin de. Les <em>therapeutai</em> étaient à la fois les médecins et les serviteurs du temple - soigner était un acte de service autant que de technique. La racine est restée dans <em>thérapie</em>, <em>thérapeute</em> et dans le prénom <em>Thérèse</em>.</p></aside>
 
 <!-- ESPACE PARTENAIRE 1 (entre Expression du jour et Aujourd'hui).
      Statique : reste visible meme si le JS ne s'execute pas. Le 2e emplacement
@@ -1762,12 +1762,12 @@ body.pa-has-nav #actusHeader {
 <div id="articles-container"></div>
 
 <!-- MARQUE_TENDANCE (injectee par le pipeline hebdo, remplacee quotidiennement) -->
-<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">1 aout au 7 aout 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Zonne allergie</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 15 150</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Mauvaise digestion que faire</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 24 050</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie au melon</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 14 700</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Aide à la digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 19 200</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Globules blancs bas et fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 11 150</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Quies specific sommeil</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 11 250</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Cure vitamine fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 8 750</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Zzz sommeil</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 5 200</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Carence en vitamine b 12</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 6 550</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Douleur rein droit</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 110</td></tr>
+<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">2 aout au 8 aout 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie aout</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 20 400</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Tisane digestion difficile</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 28 000</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Lunette éclipse solaire</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 16 600</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Massage ventre digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 25 250</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Monocytes élevés et fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 10 850</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Regression sommeil 6 mois</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 14 400</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie aux piqures de moustique</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 8 150</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Zzz sommeil</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 6 050</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Globules blancs bas et fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 4 650</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Cette douleur n'est pas la mienne</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 70</td></tr>
 </tbody></table></div><p style="margin:10px 0 0;font-size:11px;color:#9ca3af;font-style:italic;">Indice de tendance : intensite de hausse Google Trends (non comparable a un volume absolu).</p><p style="margin:12px 0 0;font-size:11px;color:#9ca3af;text-align:right;">Source&nbsp;: Google Trends France (pytrends) &middot; 7 jours glissants</p></section></div>
 
 <!-- ARCHIVES CTA -->
@@ -1918,6 +1918,90 @@ body.pa-has-nav #actusHeader {
 // Mis a jour automatiquement par n8n chaque semaine
 // ============================================================
 const ARTICLES = [
+{
+    id: "actu_2026_08_08_1",
+    date: "2026-08-08",
+    type: "actu",
+    categorie: "pharma_france",
+    titre: "Culottes menstruelles remboursées : ce qui change dès le 1er octobre",
+    resume: "L'arrêté est paru au JO le 7 août 2026 : dès le 1er octobre, tu dispenseras des culottes menstruelles et des coupes menstruelles remboursées. Les prix sont fixés à 19 € TTC pour la culotte, 15,80 € TTC pour la coupe. Concrètement, c'est une nouvelle ligne de dispensation obligatoire en officine, avec un cahier des charges produit à maîtriser.",
+    source: "USPO",
+    source_url: "https://uspo.fr/prise-en-charge-des-protections-periodiques-reutilisables-2/",
+    tiktok_url: "",
+    badge_label: "Pharma France",
+    image_url: "assets/img_actu_2026_08_08_1.jpg",
+    tags: ["remboursement", "officine", "protections-periodiques", "has", "arrête"]
+  },
+{
+    id: "actu_2026_08_08_2",
+    date: "2026-08-08",
+    type: "actu",
+    categorie: "pharma_monde",
+    titre: "Obésité : les comprimés GLP-1 arrivent, l'Europe se prépare",
+    resume: "Novo Nordisk et Eli Lilly misent désormais sur des formes orales de leurs amaigrissants après le succès des injectables. Les premières autorisations tombent aux États-Unis. Pour les pharmaciens français, une déferlante de nouveaux dosages oraux se profile, avec toutes les questions de substitution, de tension d'approvisionnement et d'accompagnement patient que ça implique.",
+    source: "Le Monde",
+    source_url: "https://www.lemonde.fr/economie/article/2026/08/07/les-comprimes-nouveau-champ-de-bataille-des-medicaments-contre-l-obesite_6740460_3234.html",
+    tiktok_url: "",
+    badge_label: "Pharma Monde",
+    image_url: "assets/img_actu_2026_08_08_2.jpg",
+    tags: ["glp-1", "obesite", "innovation", "ema", "galenique"]
+  },
+{
+    id: "actu_2026_08_08_3",
+    date: "2026-08-08",
+    type: "actu",
+    categorie: "bonne_nouvelle",
+    titre: "Rendez-vous de prévention : les pharmaciens officiellement dans la boucle",
+    resume: "Un arrêté publié au JO le 2 août 2026 acte que les pharmaciens sont pleinement habilités à réaliser les rendez-vous de prévention. Contenu des actes, modalités de tarification : le cadre est posé. C'est une reconnaissance concrète du rôle officinal dans le parcours préventif.",
+    source: "USPO",
+    source_url: "https://uspo.fr/rendez-vous-de-prevention-ce-qui-change-pour-les-pharmaciens/",
+    tiktok_url: "",
+    badge_label: "La bonne nouvelle",
+    image_url: "assets/img_actu_2026_08_08_3.jpg",
+    tags: ["prevention", "missions", "officine", "remuneration", "lfss"]
+  },
+{
+    id: "actu_2026_08_08_4",
+    date: "2026-08-08",
+    type: "actu",
+    categorie: "avenir_pharma",
+    titre: "TDAH : une nouvelle molécule approuvée aux USA, la France reste à la traîne",
+    resume: "La centanafadine vient d'obtenir le feu vert de la FDA pour le TDAH. Mode d'action innovant, alternative aux stimulants classiques. En France, les spécialistes tirent la sonnette d'alarme : le spectre thérapeutique disponible reste très étroit et les délais d'accès aux nouvelles molécules creusent l'écart avec les pays anglo-saxons.",
+    source: "Le Monde Sante",
+    source_url: "https://www.lemonde.fr/sciences/article/2026/08/07/un-nouveau-medicament-pour-le-tdah-approuve-aux-etats-unis-les-specialistes-francais-alertent-sur-le-peu-de-molecules-disponibles-en-france_6740527_1650684.html",
+    tiktok_url: "",
+    badge_label: "L'avenir de la pharma",
+    image_url: "assets/img_actu_2026_08_08_4.jpg",
+    tags: ["tdah", "fda", "innovation", "acces-aux-soins", "pipeline"]
+  },
+{
+    id: "actu_2026_08_08_5",
+    date: "2026-08-08",
+    type: "actu",
+    categorie: "business_officine",
+    titre: "Super-pharmacies : 800 fermetures en 3 ans, qui ramasse la mise ?",
+    resume: "Plus de 800 officines ont fermé en trois ans. Résultat : une concentration accélérée du réseau qui crée des gagnants très visibles - et des perdants silencieux. Décryptage d'une bifurcation structurelle.",
+    source: "Pharm'Actus · Le Moniteur des Pharmacies — La fermeture des petites officines accélère-t-elle la naissance des super-pharmacies ?, UPGF — Accompagner la transition numérique des pharmacies",
+    source_url: "https://www.lemoniteurdespharmacies.fr/business/economie/strategie-et-gestion/la-fermeture-des-petites-officines-accelere-t-elle-la-naissance-des-super-pharmacies",
+    tiktok_url: "",
+    badge_label: "Business",
+    image_url: "assets/img_actu_2026_08_08_5.jpg",
+    tags: ["concentration", "reseau-officinal", "rentabilite", "super-pharmacies"]
+  },
+{
+    id: "lsv_2026_08_08",
+    date: "2026-08-08",
+    type: "lsv",
+    categorie: "lsv",
+    titre: "Le saviez-vous ? On traitait les insomniaques en les suspendant la tête en bas",
+    resume: "Avant les somnifères, les médecins avaient des idées... radicales. Au XVIIIe siècle, l'insomnie était une affaire de circulation sanguine, et la solution tenait plus du sport de combat que de la médecine douce. Accroche-toi bien.",
+    source: "Pharm'Alpha",
+    source_url: "",
+    tiktok_url: "",
+    badge_label: "Le Saviez-Vous",
+    image_url: "assets/img_lsv_2026_08_08.jpg",
+    tags: ["histoire", "neurologie", "therapeutique", "siecle-des-lumieres", "insomnie"]
+  },
 {
     id: "actu_2026_08_07_1",
     date: "2026-08-07",
@@ -2533,90 +2617,6 @@ const ARTICLES = [
     badge_label: "L'avenir de la pharma",
     image_url: "assets/img_actu_2026_07_30_2.jpg",
     tags: ["analgesie", "innovation", "phase-2", "douleur", "recherche"]
-  },
-{
-    id: "actu_2026_07_30_3",
-    date: "2026-07-30",
-    type: "actu",
-    categorie: "bonne_nouvelle",
-    titre: "Incendies en Gironde : les pharmaciens ont tenu la ligne sanitaire",
-    resume: "23 communes évacuées en urgence, des milliers de patients sans leurs traitements chroniques. Les pharmaciens d'officine ont assuré la continuité des soins dans le chaos. Un rôle de premier recours que personne d'autre n'aurait pu tenir.",
-    source: "Le Quotidien du Pharmacien",
-    source_url: "https://www.lequotidiendupharmacien.fr/exercice-pro/eclipse-du-12-aout-les-pharmaciens-en-premiere-ligne-contre-les-risques-daccidents-oculaires",
-    tiktok_url: "",
-    badge_label: "La bonne nouvelle",
-    image_url: "assets/img_actu_2026_07_30_3.jpg",
-    tags: ["dp", "urgence", "officine", "crise-sanitaire", "premier-recours"]
-  },
-{
-    id: "actu_2026_07_30_4",
-    date: "2026-07-30",
-    type: "actu",
-    categorie: "pharma_monde",
-    titre: "Falaise des brevets : le jackpot generiques arrive d'ici 2035, es-tu pret ?",
-    resume: "Une vague sans précédent d'expirations de brevets se profile d'ici 2035. Des dizaines de blockbusters vont tomber dans le domaine public. Pour l'officine, c'est une opportunité majeure sur les génériques et les biosimilaires, à condition d'anticiper.",
-    source: "Le Monde Sante",
-    source_url: "https://www.lemonde.fr/economie/article/2026/07/29/la-falaise-des-brevets-ce-grand-chambardement-a-venir-dans-l-industrie-pharmaceutique-d-ici-a-2035_6735904_3234.html",
-    tiktok_url: "",
-    badge_label: "Pharma Monde",
-    image_url: "assets/img_actu_2026_07_30_4.jpg",
-    tags: ["generiques", "biosimilaires", "brevet", "substitution", "innovation"]
-  },
-{
-    id: "actu_2026_07_30_5",
-    date: "2026-07-30",
-    type: "actu",
-    categorie: "business_officine",
-    titre: "Mutuelles : la danse des remboursements va rebattre les cartes à l'officine",
-    resume: "Le gouvernement transfère une partie des remboursements vers les complémentaires santé. Résultat : des millions d'assurés vont regarder leur mutuelle de plus près - et ton officine va devoir s'adapter à un reste à charge en mouvement.",
-    source: "Pharm'Actus · France Info Santé — Le tarif des mutuelles va-t-il augmenter l'an prochain ?, Légifrance — Arrêté du 27 juillet 2026 relatif à l'arrêt de la prise en charge précoce (L.162-16-5-1)",
-    source_url: "https://www.franceinfo.fr/replay-jt/france-2/13-heures/le-tarif-des-mutuelles-va-t-il-augmenter-l-an-prochain_8127209.html",
-    tiktok_url: "",
-    badge_label: "Business",
-    image_url: "assets/img_actu_2026_07_30_5.jpg",
-    tags: ["remboursement", "mutuelles", "tiers-payant", "officine"]
-  },
-{
-    id: "lsv_2026_07_30",
-    date: "2026-07-30",
-    type: "lsv",
-    categorie: "lsv",
-    titre: "Le saviez-vous ? On soignait les fractures avec des cataplasmes de bouse de vache",
-    resume: "Avant le plâtre, les médecins ne manquaient pas d'imagination pour immobiliser un os cassé. Et ce qu'ils utilisaient va te laisser sans voix. Spoiler : ça sortait directement de l'étable.",
-    source: "Pharm'Alpha",
-    source_url: "",
-    tiktok_url: "",
-    badge_label: "Le Saviez-Vous",
-    image_url: "assets/img_lsv_2026_07_30.jpg",
-    tags: ["histoire", "chirurgie", "instrument", "medecine-ancienne", "os"]
-  },
-{
-    id: "actu_2026_07_29_1",
-    date: "2026-07-29",
-    type: "actu",
-    categorie: "pharma_france",
-    titre: "CEPS : l'USPO sauve 20 millions d'euros de baisses de prix sur les génériques",
-    resume: "Au Comité de suivi des génériques du 23 juillet 2026, l'USPO a obtenu du CEPS une limitation significative des baisses de prix sur les génériques. Le CEPS confirme un impact de 14 millions d'euros de baisse de CA, mais sur un périmètre restreint. Pour les syndicats, la bataille est loin d'être terminée.",
-    source: "USPO",
-    source_url: "https://uspo.fr/luspo-obtient-gain-de-cause-aupres-du-ceps-pres-de-20-millions-deuros-de-baisses-de-prix-evitees/",
-    tiktok_url: "",
-    badge_label: "Pharma France",
-    image_url: "assets/img_actu_2026_07_29_1.jpg",
-    tags: ["generique", "ceps", "marge", "substitution", "officine"]
-  },
-{
-    id: "actu_2026_07_29_2",
-    date: "2026-07-29",
-    type: "actu",
-    categorie: "pharma_monde",
-    titre: "L'ADA en crise de gouvernance : ce que ca dit du monde du diabète",
-    resume: "L'American Diabetes Association est sous pression après une gestion controversée d'un incident lors de son congrès annuel. Des chercheurs réclament des démissions au sein du conseil d'administration. Pour les pharmaciens français, c'est un signal faible sur la fiabilité institutionnelle dans l'écosystème diabète.",
-    source: "STAT News",
-    source_url: "https://www.statnews.com/2026/07/28/american-diabetes-association-fallout-researchers-expulsion/?utm_campaign=rss",
-    tiktok_url: "",
-    badge_label: "Pharma Monde",
-    image_url: "assets/img_actu_2026_07_29_2.jpg",
-    tags: ["diabete", "glp-1", "has", "recommandation", "officine"]
   }
 ];
 

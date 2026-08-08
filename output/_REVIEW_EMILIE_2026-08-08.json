@@ -1,0 +1,69 @@
+{
+  "generated_at": "2026-08-08T04:11:58.324214+02:00",
+  "run_date": "2026-08-08",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Culottes menstruelles remboursées : ce qui change dès le 1er octobre",
+      "resume": "L'arrêté est paru au JO le 7 août 2026 : dès le 1er octobre, tu dispenseras des culottes menstruelles et des coupes menstruelles remboursées. Les prix sont fixés à 19 € TTC pour la culotte, 15,80 € TTC pour la coupe. Concrètement, c'est une nouvelle ligne de dispensation obligatoire en officine, avec un cahier des charges produit à maîtriser.",
+      "source": "USPO",
+      "source_url": "https://uspo.fr/prise-en-charge-des-protections-periodiques-reutilisables-2/",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "pharma_monde",
+      "titre": "Obésité : les comprimés GLP-1 arrivent, l'Europe se prépare",
+      "resume": "Novo Nordisk et Eli Lilly misent désormais sur des formes orales de leurs amaigrissants après le succès des injectables. Les premières autorisations tombent aux États-Unis. Pour les pharmaciens français, une déferlante de nouveaux dosages oraux se profile, avec toutes les questions de substitution, de tension d'approvisionnement et d'accompagnement patient que ça implique.",
+      "source": "Le Monde",
+      "source_url": "https://www.lemonde.fr/economie/article/2026/08/07/les-comprimes-nouveau-champ-de-bataille-des-medicaments-contre-l-obesite_6740460_3234.html",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "Rendez-vous de prévention : les pharmaciens officiellement dans la boucle",
+      "resume": "Un arrêté publié au JO le 2 août 2026 acte que les pharmaciens sont pleinement habilités à réaliser les rendez-vous de prévention. Contenu des actes, modalités de tarification : le cadre est posé. C'est une reconnaissance concrète du rôle officinal dans le parcours préventif.",
+      "source": "USPO",
+      "source_url": "https://uspo.fr/rendez-vous-de-prevention-ce-qui-change-pour-les-pharmaciens/",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "avenir_pharma",
+      "titre": "TDAH : une nouvelle molécule approuvée aux USA, la France reste à la traîne",
+      "resume": "La centanafadine vient d'obtenir le feu vert de la FDA pour le TDAH. Mode d'action innovant, alternative aux stimulants classiques. En France, les spécialistes tirent la sonnette d'alarme : le spectre thérapeutique disponible reste très étroit et les délais d'accès aux nouvelles molécules creusent l'écart avec les pays anglo-saxons.",
+      "source": "Le Monde Sante",
+      "source_url": "https://www.lemonde.fr/sciences/article/2026/08/07/un-nouveau-medicament-pour-le-tdah-approuve-aux-etats-unis-les-specialistes-francais-alertent-sur-le-peu-de-molecules-disponibles-en-france_6740527_1650684.html",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Super-pharmacies : 800 fermetures en 3 ans, qui ramasse la mise ?",
+      "resume": "Plus de 800 officines ont fermé en trois ans. Résultat : une concentration accélérée du réseau qui crée des gagnants très visibles - et des perdants silencieux. Décryptage d'une bifurcation structurelle.",
+      "source": "Pharm'Actus · Le Moniteur des Pharmacies — La fermeture des petites officines accélère-t-elle la naissance des super-pharmacies ?, UPGF — Accompagner la transition numérique des pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/business/economie/strategie-et-gestion/la-fermeture-des-petites-officines-accelere-t-elle-la-naissance-des-super-pharmacies",
+      "confidence_score": 0.72,
+      "warnings": [
+        "Le chiffre '800 fermetures en 3 ans' est repris tel quel du résumé du Moniteur des Pharmacies : non vérifié de manière indépendante dans cet article — à confirmer via les données IQVIA ou DREES avant publication.",
+        "Aucun chiffre de marge nette par tranche de CA n'a été utilisé dans l'analyse : délibérément évité pour ne pas extrapoler. L'article reste qualitatif sur ce point.",
+        "Le seuil de viabilité '800 K€ de CA' est un ordre de grandeur couramment cité dans la profession mais n'est pas sourcé dans les articles disponibles — formulé avec prudence ('seuil souvent cité').",
+        "La position de la FSPF et de l'USPO sur la concentration du réseau n'a pas pu être vérifiée dans les sources disponibles aujourd'hui : aucune citation syndicale n'a donc été attribuée à ces organisations.",
+        "L'article de l'UPGF sur le numérique est utilisé en appui d'un argument, mais son contenu détaillé n'est pas accessible dans le résumé fourni : vérifier que l'angle 'numérique conditionne les missions' est bien le propos exact de l'UPGF.",
+        "4 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

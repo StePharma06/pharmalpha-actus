@@ -1,64 +1,64 @@
 {
-  "generated_at": "2026-08-07",
-  "window_label": "1 aout au 7 aout 2026",
+  "generated_at": "2026-08-08",
+  "window_label": "2 aout au 8 aout 2026",
   "has_history": true,
   "delta_source": "pytrends_rising",
   "pathologies": [
     {
-      "display": "Zonne allergie",
-      "delta_label": "↑ 15 150",
+      "display": "Allergie aout",
+      "delta_label": "↑ 20 400",
       "trend": "up"
     },
     {
-      "display": "Allergie au melon",
-      "delta_label": "↑ 14 700",
+      "display": "Lunette éclipse solaire",
+      "delta_label": "↑ 16 600",
+      "trend": "up"
+    },
+    {
+      "display": "Monocytes élevés et fatigue",
+      "delta_label": "↑ 10 850",
+      "trend": "up"
+    },
+    {
+      "display": "Allergie aux piqures de moustique",
+      "delta_label": "↑ 8 150",
       "trend": "up"
     },
     {
       "display": "Globules blancs bas et fatigue",
-      "delta_label": "↑ 11 150",
-      "trend": "up"
-    },
-    {
-      "display": "Cure vitamine fatigue",
-      "delta_label": "↑ 8 750",
-      "trend": "up"
-    },
-    {
-      "display": "Carence en vitamine b 12",
-      "delta_label": "↑ 6 550",
+      "delta_label": "↑ 4 650",
       "trend": "up"
     }
   ],
   "soins": [
     {
-      "display": "Mauvaise digestion que faire",
-      "delta_label": "↑ 24 050",
+      "display": "Tisane digestion difficile",
+      "delta_label": "↑ 28 000",
       "trend": "up"
     },
     {
-      "display": "Aide à la digestion",
-      "delta_label": "↑ 19 200",
+      "display": "Massage ventre digestion",
+      "delta_label": "↑ 25 250",
       "trend": "up"
     },
     {
-      "display": "Quies specific sommeil",
-      "delta_label": "↑ 11 250",
+      "display": "Regression sommeil 6 mois",
+      "delta_label": "↑ 14 400",
       "trend": "up"
     },
     {
       "display": "Zzz sommeil",
-      "delta_label": "↑ 5 200",
+      "delta_label": "↑ 6 050",
       "trend": "up"
     },
     {
-      "display": "Douleur rein droit",
-      "delta_label": "↑ 110",
+      "display": "Cette douleur n'est pas la mienne",
+      "delta_label": "↑ 70",
       "trend": "up"
     }
   ],
   "pathologies_stale": false,
-  "pathologies_from": "2026-08-07",
+  "pathologies_from": "2026-08-08",
   "soins_stale": false,
-  "soins_from": "2026-08-07"
+  "soins_from": "2026-08-08"
 }
