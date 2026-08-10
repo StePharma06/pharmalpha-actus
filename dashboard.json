@@ -1,29 +1,61 @@
 {
- "genere_le": "2026-08-09T06:11:33+02:00",
+ "genere_le": "2026-08-10T06:23:40+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1043,
- "nouveaux_7j": 20,
- "nouveaux_cumul": 1036,
+ "abonnes_total": 1045,
+ "nouveaux_7j": 22,
+ "nouveaux_cumul": 1038,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-08-02",
-  "au": "2026-08-09",
-  "delivres": 5689,
-  "ouvertures": 1960,
-  "ouvertures_uniques": 1457,
-  "clics": 1576,
-  "clics_uniques": 291,
-  "taux_ouverture_pct": 25.6,
-  "taux_clic_pct": 5.1,
-  "ctor_pct": 20.0,
+  "du": "2026-08-03",
+  "au": "2026-08-10",
+  "delivres": 6767,
+  "ouvertures": 2203,
+  "ouvertures_uniques": 1679,
+  "clics": 2129,
+  "clics_uniques": 365,
+  "taux_ouverture_pct": 24.8,
+  "taux_clic_pct": 5.4,
+  "ctor_pct": 21.7,
   "top_articles": [
+   {
+    "id": "actu_2026_08_10_2",
+    "titre": "Sanofi en rupture sur deux traitements de la maladie de Pompe : les patients tirent la sonnette",
+    "date": "2026-08-10",
+    "categorie": "pharma_monde",
+    "clics": 84,
+    "lecteurs": 49
+   },
+   {
+    "id": "actu_2026_08_10_1",
+    "titre": "Culottes menstruelles remboursées : les prix sont fixés, le comptoir est prêt",
+    "date": "2026-08-10",
+    "categorie": "pharma_france",
+    "clics": 73,
+    "lecteurs": 45
+   },
+   {
+    "id": "actu_2026_08_08_1",
+    "titre": "Culottes menstruelles remboursées : ce qui change dès le 1er octobre",
+    "date": "2026-08-08",
+    "categorie": "pharma_france",
+    "clics": 50,
+    "lecteurs": 34
+   },
+   {
+    "id": "actu_2026_08_08_5",
+    "titre": "Super-pharmacies : 800 fermetures en 3 ans, qui ramasse la mise ?",
+    "date": "2026-08-08",
+    "categorie": "business_officine",
+    "clics": 46,
+    "lecteurs": 28
+   },
    {
     "id": "actu_2026_08_06_5",
     "titre": "Internes en pharmacie +15% : ce que ça change vraiment pour ton officine",
     "date": "2026-08-06",
     "categorie": "business_officine",
-    "clics": 36,
-    "lecteurs": 27
+    "clics": 37,
+    "lecteurs": 28
    },
    {
     "id": "actu_2026_08_03_1",
@@ -34,19 +66,27 @@
     "lecteurs": 26
    },
    {
-    "id": "actu_2026_08_08_1",
-    "titre": "Culottes menstruelles remboursées : ce qui change dès le 1er octobre",
-    "date": "2026-08-08",
-    "categorie": "pharma_france",
-    "clics": 37,
-    "lecteurs": 24
-   },
-   {
     "id": "actu_2026_08_07_3",
     "titre": "Protections menstruelles remboursees : c'est officiel, ca demarre en octobre",
     "date": "2026-08-07",
     "categorie": "bonne_nouvelle",
-    "clics": 31,
+    "clics": 33,
+    "lecteurs": 25
+   },
+   {
+    "id": "actu_2026_08_08_3",
+    "titre": "Rendez-vous de prévention : les pharmaciens officiellement dans la boucle",
+    "date": "2026-08-08",
+    "categorie": "bonne_nouvelle",
+    "clics": 42,
+    "lecteurs": 24
+   },
+   {
+    "id": "actu_2026_08_04_2",
+    "titre": "Eli Lilly ouvre la porte au retatrutide : ce que ça annonce pour l'Europe",
+    "date": "2026-08-04",
+    "categorie": "pharma_monde",
+    "clics": 37,
     "lecteurs": 24
    },
    {
@@ -54,62 +94,22 @@
     "titre": "Livraison à domicile : les officines auront leur propre plateforme nationale en octobre",
     "date": "2026-08-06",
     "categorie": "bonne_nouvelle",
-    "clics": 32,
-    "lecteurs": 23
-   },
-   {
-    "id": "actu_2026_08_08_5",
-    "titre": "Super-pharmacies : 800 fermetures en 3 ans, qui ramasse la mise ?",
-    "date": "2026-08-08",
-    "categorie": "business_officine",
-    "clics": 29,
-    "lecteurs": 18
-   },
-   {
-    "id": "actu_2026_08_07_1",
-    "titre": "Remises génériques : 55 000 euros par an, c'est ce qui fait tenir l'officine",
-    "date": "2026-08-07",
-    "categorie": "pharma_france",
-    "clics": 27,
-    "lecteurs": 18
-   },
-   {
-    "id": "actu_2026_08_03_3",
-    "titre": "DES officinal : 3 537 euros par stagiaire, et c'est la CPAM qui paie",
-    "date": "2026-08-03",
-    "categorie": "bonne_nouvelle",
-    "clics": 33,
-    "lecteurs": 17
-   },
-   {
-    "id": "actu_2026_08_06_1",
-    "titre": "Omalizumab biosimilaire : l'ANSM donne son feu vert à la substitution en officine",
-    "date": "2026-08-06",
-    "categorie": "pharma_france",
-    "clics": 30,
-    "lecteurs": 16
-   },
-   {
-    "id": "actu_2026_08_05_5",
-    "titre": "Rupture BICAFRES® : quand une pénurie devient une opportunité de mission pour l'officine",
-    "date": "2026-08-05",
-    "categorie": "business_officine",
-    "clics": 30,
-    "lecteurs": 16
+    "clics": 34,
+    "lecteurs": 24
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-08-09",
-  "delivres": 74465,
-  "ouvertures": 29834,
-  "ouvertures_uniques": 20460,
-  "clics": 30173,
-  "clics_uniques": 5408,
-  "taux_ouverture_pct": 27.5,
+  "au": "2026-08-10",
+  "delivres": 75543,
+  "ouvertures": 30098,
+  "ouvertures_uniques": 20698,
+  "clics": 30729,
+  "clics_uniques": 5485,
+  "taux_ouverture_pct": 27.4,
   "taux_clic_pct": 7.3,
-  "ctor_pct": 26.4,
+  "ctor_pct": 26.5,
   "top_articles": [
    {
     "id": "actu_2026_06_18_1",
