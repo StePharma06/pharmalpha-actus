@@ -31,7 +31,7 @@
      l'image n'est decouverte qu'apres execution du JS qui construit les cards
      (le <img> n'existe qu'a l'interieur d'un template literal JS, invisible au
      preload scanner) -> LCP non deterministe, cf. sprint perf 2026-07-27. -->
-<link rel="preload" as="image" href="assets/img_actu_2026_08_08_1.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="assets/img_actu_2026_08_10_1.jpg" fetchpriority="high">
 
 <!-- Font cohesion site principal -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1737,7 +1737,7 @@ body.pa-has-nav #actusHeader {
 </div>
 
 <!-- EXPRESSION DU JOUR (injectée par update_actus.py à chaque run) -->
-<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Thérapeutique / Thérapie</h2><p class="expression-corps">Du grec <em>therapeuein</em>, soigner, servir, prendre soin de. Les <em>therapeutai</em> étaient à la fois les médecins et les serviteurs du temple - soigner était un acte de service autant que de technique. La racine est restée dans <em>thérapie</em>, <em>thérapeute</em> et dans le prénom <em>Thérèse</em>.</p></aside>
+<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Augmentation homéopathique</h2><p class="expression-corps">L'homéopathie, créée par Hahnemann en 1796, repose sur des dilutions si extrêmes - jusqu'à 30CH, soit $10^{-60}$ - qu'aucune molécule active ne subsiste théoriquement. Une augmentation homéopathique est donc une augmentation si infime qu'elle frôle le zéro - le terme est devenu synonyme d'inefficacité ou de geste symbolique.</p></aside>
 
 <!-- ESPACE PARTENAIRE 1 (entre Expression du jour et Aujourd'hui).
      Statique : reste visible meme si le JS ne s'execute pas. Le 2e emplacement
@@ -1762,12 +1762,12 @@ body.pa-has-nav #actusHeader {
 <div id="articles-container"></div>
 
 <!-- MARQUE_TENDANCE (injectee par le pipeline hebdo, remplacee quotidiennement) -->
-<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">2 aout au 8 aout 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie aout</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 20 400</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Tisane digestion difficile</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 28 000</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Lunette éclipse solaire</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 16 600</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Massage ventre digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 25 250</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Monocytes élevés et fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 10 850</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Regression sommeil 6 mois</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 14 400</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie aux piqures de moustique</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 8 150</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Zzz sommeil</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 6 050</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Globules blancs bas et fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 4 650</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Cette douleur n'est pas la mienne</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 70</td></tr>
+<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">4 aout au 10 aout 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Ambroisie allergie</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 47 850</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Aide à la digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 44 050</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Quelle vitamine pour la fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 27 700</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Poivron digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 27 750</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie aout</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 19 250</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Opérations spéciales lioness la douleur </td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 3 650</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Carence en vitamine b 12</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 14 000</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Oreiller pour apnée du sommeil</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 400</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Grande fatigue cause</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 9 850</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Regression sommeil 4 mois</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 200</td></tr>
 </tbody></table></div><p style="margin:10px 0 0;font-size:11px;color:#9ca3af;font-style:italic;">Indice de tendance : intensite de hausse Google Trends (non comparable a un volume absolu).</p><p style="margin:12px 0 0;font-size:11px;color:#9ca3af;text-align:right;">Source&nbsp;: Google Trends France (pytrends) &middot; 7 jours glissants</p></section></div>
 
 <!-- ARCHIVES CTA -->
@@ -1918,6 +1918,90 @@ body.pa-has-nav #actusHeader {
 // Mis a jour automatiquement par n8n chaque semaine
 // ============================================================
 const ARTICLES = [
+{
+    id: "actu_2026_08_10_1",
+    date: "2026-08-10",
+    type: "actu",
+    categorie: "pharma_france",
+    titre: "Culottes menstruelles remboursées : les prix sont fixés, le comptoir est prêt",
+    resume: "C'est officiel : au 1er octobre 2026, les protections menstruelles réutilisables seront remboursées, avec distribution obligatoire en pharmacie. Les prix sont arrêtés : 19 € TTC pour une culotte, 15,80 € TTC pour une coupe. Un nouveau flux patient, une nouvelle référence à maîtriser.",
+    source: "Le Moniteur des Pharmacies",
+    source_url: "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/culottes-menstruelles-remboursees-leur-prix-en-pharmacie-est-desormais-fixe",
+    tiktok_url: "",
+    badge_label: "Pharma France",
+    image_url: "assets/img_actu_2026_08_10_1.jpg",
+    tags: ["remboursement", "officine", "protection-menstruelle", "prix", "dispensation"]
+  },
+{
+    id: "actu_2026_08_10_2",
+    date: "2026-08-10",
+    type: "actu",
+    categorie: "pharma_monde",
+    titre: "Sanofi en rupture sur deux traitements de la maladie de Pompe : les patients tirent la sonnette",
+    resume: "Sanofi est en rupture de stock sur Myozyme et Nexviazyme, ses deux médicaments contre la maladie de Pompe. Les associations de patients sont en alerte. Une pénurie sur une pathologie rare où il n'existe aucune alternative thérapeutique, c'est une urgence absolue.",
+    source: "STAT News",
+    source_url: "https://www.statnews.com/pharmalot/2026/08/09/sanofi-pompe-disease-drug-shortage-myozyme-nexviazyme/?utm_campaign=rss",
+    tiktok_url: "",
+    badge_label: "Pharma Monde",
+    image_url: "assets/img_actu_2026_08_10_2.jpg",
+    tags: ["rupture", "maladie-rare", "sanofi", "ansm", "enzymotherapie"]
+  },
+{
+    id: "actu_2026_08_10_3",
+    date: "2026-08-10",
+    type: "actu",
+    categorie: "bonne_nouvelle",
+    titre: "Chikungunya, dengue, West Nile en France : cinq foyers, ton comptoir est en première ligne",
+    resume: "Santé publique France recense cinq épisodes de transmission autochtone d'arboviroses au 3 août 2026 : trois foyers de chikungunya dans le Tarn et la Gironde, deux cas de dengue. Le moustique tigre est là, et les patients vont te demander quoi faire.",
+    source: "Le Moniteur des Pharmacies",
+    source_url: "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/chikungunya-dengue-west-nile-nouveaux-foyers-autochtones-vigilance-renforcee-pour-les-pharmaciens",
+    tiktok_url: "",
+    badge_label: "La bonne nouvelle",
+    image_url: "assets/img_actu_2026_08_10_3.jpg",
+    tags: ["arbovirose", "dengue", "chikungunya", "prevention", "conseil-officinal"]
+  },
+{
+    id: "actu_2026_08_10_4",
+    date: "2026-08-10",
+    type: "actu",
+    categorie: "avenir_pharma",
+    titre: "346 millions de dollars pour un anti-douleur non-opioïde : la course est lancée",
+    resume: "Latigo Biotherapeutics lève 346 millions de dollars en IPO pour développer un inhibiteur Nav1.8, une nouvelle classe d'antalgiques non-opioïdes en phase pivot. Si ça marche, c'est une révolution dans la gestion de la douleur chronique à l'officine.",
+    source: "MedCity News",
+    source_url: "https://medcitynews.com/2026/08/latigo-ipo-non-opioid-pain-drug-nav1-8-inhibitor-ltgo-blossomhill-lung-cancer-c797s-blsm/",
+    tiktok_url: "",
+    badge_label: "L'avenir de la pharma",
+    image_url: "assets/img_actu_2026_08_10_4.jpg",
+    tags: ["douleur", "antalgique", "opioides", "innovation", "recherche"]
+  },
+{
+    id: "actu_2026_08_10_5",
+    date: "2026-08-10",
+    type: "actu",
+    categorie: "business_officine",
+    titre: "Préparateurs en pharmacie hospitalière : une revalorisation qui rebat les cartes du recrutement officinal",
+    resume: "Un arrêté du 7 août 2026 ouvre l'accès aux indemnités pour travaux supplémentaires aux préparateurs en pharmacie hospitalière. Signal faible mais conséquence directe : la guerre des talents entre hôpital et officine s'intensifie.",
+    source: "Pharm'Actus · Arrêté du 7 août 2026 modifiant l'arrêté du 25 avril 2002 — Légifrance, IQVIA Pharmastat — Données réseau officinal juin 2026 (cité via chiffres structurels Pharm'Actus)",
+    source_url: "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054646603",
+    tiktok_url: "",
+    badge_label: "Business",
+    image_url: "assets/img_actu_2026_08_10_5.jpg",
+    tags: ["recrutement", "preparateurs", "ressources-humaines", "reglementation"]
+  },
+{
+    id: "lsv_2026_08_10",
+    date: "2026-08-10",
+    type: "lsv",
+    categorie: "lsv",
+    titre: "Le saviez-vous ? La première banque d'yeux fonctionnait dans un frigo de boucherie",
+    resume: "En 1944, un ophtalmologue new-yorkais a eu une idée folle : conserver des cornées humaines pour les greffer à la demande. Son labo de fortune ? Une glacière empruntée à un boucher du quartier. Et pourtant, ça a tout changé.",
+    source: "Pharm'Alpha",
+    source_url: "",
+    tiktok_url: "",
+    badge_label: "Le Saviez-Vous",
+    image_url: "assets/img_lsv_2026_08_10.jpg",
+    tags: ["histoire", "chirurgie", "greffe", "ophtalmologie", "decouverte"]
+  },
 {
     id: "actu_2026_08_08_1",
     date: "2026-08-08",
@@ -2533,90 +2617,6 @@ const ARTICLES = [
     badge_label: "Pharma Monde",
     image_url: "assets/img_actu_2026_07_31_2.jpg",
     tags: ["fda", "oncologie", "innovation", "melanome", "immunotherapie"]
-  },
-{
-    id: "actu_2026_07_31_3",
-    date: "2026-07-31",
-    type: "actu",
-    categorie: "bonne_nouvelle",
-    titre: "Chikungunya en Guyane : les pharmaciens vaccinateurs, c'est acté",
-    resume: "L'USPO Guyane remporte sa première victoire syndicale : les pharmaciens d'officine habilités pourront administrer le vaccin contre le chikungunya dans les territoires où le virus circule activement. Une avancée concrète pour les compétences vaccinales des officinaux ultramarins.",
-    source: "USPO",
-    source_url: "https://uspo.fr/tout-juste-constituee-luspo-guyane-obtient-sa-premiere-victoire-syndicale-les-pharmacies-pourront-participer-a-la-vaccination-contre-le-chikungunya-dans-les-territoires-concernes/",
-    tiktok_url: "",
-    badge_label: "La bonne nouvelle",
-    image_url: "assets/img_actu_2026_07_31_3.jpg",
-    tags: ["vaccination", "chikungunya", "uspo", "guyane", "officine"]
-  },
-{
-    id: "actu_2026_07_31_4",
-    date: "2026-07-31",
-    type: "actu",
-    categorie: "avenir_pharma",
-    titre: "Doctolib donne vos données à une IA en août : ce que ça change pour les patients et le comptoir",
-    resume: "En août, Doctolib lance un programme de recherche scientifique basé sur les données de santé de ses 50 millions d'utilisateurs. Objectif : explorer les usages de l'IA dans les parcours de soins. Les patients peuvent s'y opposer, mais encore faut-il qu'ils le sachent.",
-    source: "Sciences et Avenir",
-    source_url: "https://www.sciencesetavenir.fr/sante/ia-pourquoi-doctolib-va-t-il-utiliser-nos-donnees-de-sante-pour-des-recherches-scientifiques_194023?xtor=RSS-16",
-    tiktok_url: "",
-    badge_label: "L'avenir de la pharma",
-    image_url: "assets/img_actu_2026_07_31_4.jpg",
-    tags: ["ia", "donnees-sante", "doctolib", "numerique", "parcours-soins"]
-  },
-{
-    id: "actu_2026_07_31_5",
-    date: "2026-07-31",
-    type: "actu",
-    categorie: "business_officine",
-    titre: "Franchises médicales doublées : ce que ça change vraiment pour ton comptoir",
-    resume: "Le Conseil de la CNAM a rejeté quasi unanimement le doublement des franchises médicales et leur transfert aux mutuelles. Mais si le gouvernement passe outre, l'impact sur le flux officinal est concret et mesurable.",
-    source: "Pharm'Actus · Le Quotidien du Pharmacien — Franchises médicales et remboursement par les mutuelles : pour le Conseil de la CNAM, c'est non, Commission des comptes de la Sécurité sociale — Rapport 2025 (déficit prévisionnel)",
-    source_url: "http://www.lequotidiendupharmacien.fr/exercice-pro/franchises-medicales-et-remboursement-par-les-mutuelles-pour-le-conseil-de-la-cnam-cest-non",
-    tiktok_url: "",
-    badge_label: "Business",
-    image_url: "assets/img_actu_2026_07_31_5.jpg",
-    tags: ["franchise-medicale", "assurance-maladie", "remboursement", "reste-a-charge"]
-  },
-{
-    id: "lsv_2026_07_31",
-    date: "2026-07-31",
-    type: "lsv",
-    categorie: "lsv",
-    titre: "Le saviez-vous ? On soignait la peste bubonique avec des pigeons vivants",
-    resume: "Oublie les antibiotiques. Au XVIIe siècle, le remède officiel contre la peste, c'était de coller un pigeon vivant sur les bubons. Pas une métaphore. Un vrai pigeon. Et les médecins y croyaient dur comme fer.",
-    source: "Pharm'Alpha",
-    source_url: "",
-    tiktok_url: "",
-    badge_label: "Le Saviez-Vous",
-    image_url: "assets/img_lsv_2026_07_31.jpg",
-    tags: ["histoire", "epidemie", "peste", "traitement", "medecine"]
-  },
-{
-    id: "actu_2026_07_30_1",
-    date: "2026-07-30",
-    type: "actu",
-    categorie: "pharma_france",
-    titre: "Franchises, remboursements : la Cnam dit non au gouvernement",
-    resume: "Le conseil de la Cnam a rejeté les cinq projets de décrets portant sur la hausse du reste à charge et le transfert de remboursements. 2 milliards d'euros d'économies attendus sur le dos des patients et des mutuelles. Ça ne va pas rester sans conséquences au comptoir.",
-    source: "Le Moniteur des Pharmacies",
-    source_url: "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/franchises-remboursements-la-cnam-desavoue-le-gouvernement",
-    tiktok_url: "",
-    badge_label: "Pharma France",
-    image_url: "assets/img_actu_2026_07_30_1.jpg",
-    tags: ["remboursement", "franchise", "cnam", "reste-a-charge", "lfss"]
-  },
-{
-    id: "actu_2026_07_30_2",
-    date: "2026-07-30",
-    type: "actu",
-    categorie: "avenir_pharma",
-    titre: "Douleur aiguë sans opioïdes : Latigo fait trembler le monopole de Vertex",
-    resume: "Latigo Biotherapeutics annonce des résultats positifs en phase 2 pour son candidat LTG-001, un antalgique non opioïde pour la douleur aiguë. Il vise le même mécanisme que Journavx de Vertex, déjà sur le marché américain. La guerre des Nav1.8 vient de s'ouvrir.",
-    source: "STAT News",
-    source_url: "https://www.statnews.com/2026/07/29/latigo-phase-2-results-non-opioid-pain-reliever-ltg-001/?utm_campaign=rss",
-    tiktok_url: "",
-    badge_label: "L'avenir de la pharma",
-    image_url: "assets/img_actu_2026_07_30_2.jpg",
-    tags: ["analgesie", "innovation", "phase-2", "douleur", "recherche"]
   }
 ];
 

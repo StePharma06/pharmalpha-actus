@@ -1,58 +1,58 @@
 {
   "pathologies": [
     {
+      "display": "Ambroisie allergie",
+      "delta_label": "↑ 47 850",
+      "trend": "up"
+    },
+    {
+      "display": "Quelle vitamine pour la fatigue",
+      "delta_label": "↑ 27 700",
+      "trend": "up"
+    },
+    {
       "display": "Allergie aout",
-      "delta_label": "↑ 20 400",
+      "delta_label": "↑ 19 250",
       "trend": "up"
     },
     {
-      "display": "Lunette éclipse solaire",
-      "delta_label": "↑ 16 600",
+      "display": "Carence en vitamine b 12",
+      "delta_label": "↑ 14 000",
       "trend": "up"
     },
     {
-      "display": "Monocytes élevés et fatigue",
-      "delta_label": "↑ 10 850",
-      "trend": "up"
-    },
-    {
-      "display": "Allergie aux piqures de moustique",
-      "delta_label": "↑ 8 150",
-      "trend": "up"
-    },
-    {
-      "display": "Globules blancs bas et fatigue",
-      "delta_label": "↑ 4 650",
+      "display": "Grande fatigue cause",
+      "delta_label": "↑ 9 850",
       "trend": "up"
     }
   ],
-  "pathologies_from": "2026-08-08",
+  "pathologies_from": "2026-08-10",
   "soins": [
     {
-      "display": "Tisane digestion difficile",
-      "delta_label": "↑ 28 000",
+      "display": "Aide à la digestion",
+      "delta_label": "↑ 44 050",
       "trend": "up"
     },
     {
-      "display": "Massage ventre digestion",
-      "delta_label": "↑ 25 250",
+      "display": "Poivron digestion",
+      "delta_label": "↑ 27 750",
       "trend": "up"
     },
     {
-      "display": "Regression sommeil 6 mois",
-      "delta_label": "↑ 14 400",
+      "display": "Opérations spéciales lioness la douleur ",
+      "delta_label": "↑ 3 650",
       "trend": "up"
     },
     {
-      "display": "Zzz sommeil",
-      "delta_label": "↑ 6 050",
+      "display": "Oreiller pour apnée du sommeil",
+      "delta_label": "↑ 400",
       "trend": "up"
     },
     {
-      "display": "Cette douleur n'est pas la mienne",
-      "delta_label": "↑ 70",
+      "display": "Regression sommeil 4 mois",
+      "delta_label": "↑ 200",
       "trend": "up"
     }
   ],
-  "soins_from": "2026-08-08"
+  "soins_from": "2026-08-10"
 }
