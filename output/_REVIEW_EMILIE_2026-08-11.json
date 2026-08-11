@@ -1,0 +1,47 @@
+{
+  "generated_at": "2026-08-11T04:09:13.487569+02:00",
+  "run_date": "2026-08-11",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Officines fragiles : le seuil à 1,80 M€ de CA qui fait froid dans le dos",
+      "resume": "9 pharmacies sur 10 ayant fermé en 2025 réalisaient moins de 1,80 M€ de chiffre d'affaires. Ce chiffre n'est pas un seuil de viabilité : c'est une zone rouge. Et les officines de taille intermédiaire entrent désormais elles aussi dans la spirale des fermetures.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/business/transactions/cession/existe-t-il-un-seuil-permettant-de-definir-une-officine-fragile",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "avenir_pharma",
+      "titre": "FreeStyle Libre 3 Plus en boucle semi-fermée : la tarification est là, décortiquons-la",
+      "resume": "Le CEPS vient de publier au Journal officiel la tarification du FreeStyle Libre 3 Plus d'Abbott associé à la boucle semi-fermée mylife CamAPS FX. Un avis tarifaire qui concerne directement la prise en charge des patients diabétiques de type 1 en officine et chez les prestataires HAD.",
+      "source": "LegiRSS Pharmacie",
+      "source_url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054659225",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Thérapies cellulaires illégales en ligne : l'ANSM tire la sonnette d'alarme, ton officine en première ligne",
+      "resume": "L'ANSM vient d'alerter contre la promotion illégale sur internet de thérapies par cellules souches « sans fondement scientifique ». Pour tes patients déjà exposés à ces arnaques, le pharmacien devient le premier recours. Et l'enjeu business est réel : conseil, orientation, et pro...",
+      "source": "Pharm'Actus · ANSM / France Info Santé – Alerte thérapies cellulaires illégales sur internet, EMA – Liste des médicaments de thérapie innovante autorisés",
+      "source_url": "https://www.franceinfo.fr/sante/l-agence-nationale-du-medicament-alerte-contre-la-promotion-illegale-de-therapies-cellulaires-sans-aucun-fondement-scientifique-sur-internet_8141885.html",
+      "confidence_score": 0.72,
+      "warnings": [
+        "Le chiffre '5 000 à 50 000 euros par protocole' est issu d'une estimation de la littérature académique sur le medical tourism (Barfoot & Murdoch, 2022), pas d'une source ANSM directe : à utiliser avec prudence, reformuler qualitativement si besoin.",
+        "Le nombre exact de MTI avec AMM européenne valide et commercialisées en France évolue régulièrement : vérifier sur le site EMA avant publication finale.",
+        "L'alerte ANSM du 10 août 2026 est connue via France Info Santé ; le communiqué de presse ANSM source n'a pas pu être vérifié directement dans cette session : confirmer l'URL ANSM officielle (ansm.sante.fr) avant mise en ligne.",
+        "Aucun chiffre de marge officinale ni d'impact financier direct n'a été avancé dans cet article : c'est intentionnel, car il n'existe pas de données vérifiables sur le volume de patients concernés par officine.",
+        "Le portail signalement.social.gouv.fr est cité de mémoire : vérifier qu'il est toujours l'URL de référence pour les signalements produits de santé en 2026 (il pourrait avoir évolué vers signalement-sante.gouv.fr).",
+        "5 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

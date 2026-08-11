@@ -1,58 +1,58 @@
 {
   "pathologies": [
     {
-      "display": "Ambroisie allergie",
-      "delta_label": "↑ 47 850",
-      "trend": "up"
-    },
-    {
-      "display": "Quelle vitamine pour la fatigue",
-      "delta_label": "↑ 27 700",
-      "trend": "up"
-    },
-    {
       "display": "Allergie aout",
-      "delta_label": "↑ 19 250",
+      "delta_label": "↑ 29 200",
       "trend": "up"
     },
     {
-      "display": "Carence en vitamine b 12",
-      "delta_label": "↑ 14 000",
+      "display": "Lunette eclipse",
+      "delta_label": "↑ 9 750",
       "trend": "up"
     },
     {
-      "display": "Grande fatigue cause",
-      "delta_label": "↑ 9 850",
+      "display": "Crp élevée et fatigue",
+      "delta_label": "↑ 8 200",
+      "trend": "up"
+    },
+    {
+      "display": "Vitamine prenatal",
+      "delta_label": "↑ 7 950",
+      "trend": "up"
+    },
+    {
+      "display": "Acide urique fatigue",
+      "delta_label": "↑ 7 150",
       "trend": "up"
     }
   ],
-  "pathologies_from": "2026-08-10",
+  "pathologies_from": "2026-08-11",
   "soins": [
     {
-      "display": "Aide à la digestion",
-      "delta_label": "↑ 44 050",
+      "display": "Azinc immunite",
+      "delta_label": "↑ 95 150",
       "trend": "up"
     },
     {
-      "display": "Poivron digestion",
-      "delta_label": "↑ 27 750",
+      "display": "Temps de digestion des aliments",
+      "delta_label": "↑ 51 750",
       "trend": "up"
     },
     {
-      "display": "Opérations spéciales lioness la douleur ",
-      "delta_label": "↑ 3 650",
+      "display": "Calmosine digestion nourrisson",
+      "delta_label": "↑ 51 050",
       "trend": "up"
     },
     {
-      "display": "Oreiller pour apnée du sommeil",
-      "delta_label": "↑ 400",
+      "display": "Myoclonie du sommeil",
+      "delta_label": "↑ 9 000",
       "trend": "up"
     },
     {
-      "display": "Regression sommeil 4 mois",
-      "delta_label": "↑ 200",
+      "display": "Cette douleur n'est pas la mienne",
+      "delta_label": "↑ 550",
       "trend": "up"
     }
   ],
-  "soins_from": "2026-08-10"
+  "soins_from": "2026-08-11"
 }
