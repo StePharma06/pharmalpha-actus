@@ -1,53 +1,61 @@
 {
- "genere_le": "2026-08-10T06:23:40+02:00",
+ "genere_le": "2026-08-11T06:13:04+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1045,
- "nouveaux_7j": 22,
- "nouveaux_cumul": 1038,
+ "abonnes_total": 1050,
+ "nouveaux_7j": 23,
+ "nouveaux_cumul": 1043,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-08-03",
-  "au": "2026-08-10",
-  "delivres": 6767,
-  "ouvertures": 2203,
-  "ouvertures_uniques": 1679,
-  "clics": 2129,
-  "clics_uniques": 365,
-  "taux_ouverture_pct": 24.8,
-  "taux_clic_pct": 5.4,
+  "du": "2026-08-04",
+  "au": "2026-08-11",
+  "delivres": 6660,
+  "ouvertures": 2347,
+  "ouvertures_uniques": 1834,
+  "clics": 2194,
+  "clics_uniques": 398,
+  "taux_ouverture_pct": 27.5,
+  "taux_clic_pct": 6.0,
   "ctor_pct": 21.7,
   "top_articles": [
-   {
-    "id": "actu_2026_08_10_2",
-    "titre": "Sanofi en rupture sur deux traitements de la maladie de Pompe : les patients tirent la sonnette",
-    "date": "2026-08-10",
-    "categorie": "pharma_monde",
-    "clics": 84,
-    "lecteurs": 49
-   },
    {
     "id": "actu_2026_08_10_1",
     "titre": "Culottes menstruelles remboursées : les prix sont fixés, le comptoir est prêt",
     "date": "2026-08-10",
     "categorie": "pharma_france",
-    "clics": 73,
-    "lecteurs": 45
+    "clics": 85,
+    "lecteurs": 52
+   },
+   {
+    "id": "actu_2026_08_10_2",
+    "titre": "Sanofi en rupture sur deux traitements de la maladie de Pompe : les patients tirent la sonnette",
+    "date": "2026-08-10",
+    "categorie": "pharma_monde",
+    "clics": 88,
+    "lecteurs": 51
    },
    {
     "id": "actu_2026_08_08_1",
     "titre": "Culottes menstruelles remboursées : ce qui change dès le 1er octobre",
     "date": "2026-08-08",
     "categorie": "pharma_france",
-    "clics": 50,
-    "lecteurs": 34
+    "clics": 54,
+    "lecteurs": 37
    },
    {
     "id": "actu_2026_08_08_5",
     "titre": "Super-pharmacies : 800 fermetures en 3 ans, qui ramasse la mise ?",
     "date": "2026-08-08",
     "categorie": "business_officine",
-    "clics": 46,
-    "lecteurs": 28
+    "clics": 52,
+    "lecteurs": 34
+   },
+   {
+    "id": "actu_2026_08_08_3",
+    "titre": "Rendez-vous de prévention : les pharmaciens officiellement dans la boucle",
+    "date": "2026-08-08",
+    "categorie": "bonne_nouvelle",
+    "clics": 48,
+    "lecteurs": 29
    },
    {
     "id": "actu_2026_08_06_5",
@@ -58,56 +66,48 @@
     "lecteurs": 28
    },
    {
-    "id": "actu_2026_08_03_1",
-    "titre": "Rendez-vous de prévention : ce qui change vraiment pour toi dès octobre",
-    "date": "2026-08-03",
+    "id": "actu_2026_08_10_3",
+    "titre": "Chikungunya, dengue, West Nile en France : cinq foyers, ton comptoir est en première ligne",
+    "date": "2026-08-10",
+    "categorie": "bonne_nouvelle",
+    "clics": 41,
+    "lecteurs": 27
+   },
+   {
+    "id": "actu_2026_08_11_1",
+    "titre": "Officines fragiles : le seuil à 1,80 M€ de CA qui fait froid dans le dos",
+    "date": "2026-08-11",
     "categorie": "pharma_france",
-    "clics": 50,
+    "clics": 56,
     "lecteurs": 26
    },
    {
-    "id": "actu_2026_08_07_3",
-    "titre": "Protections menstruelles remboursees : c'est officiel, ca demarre en octobre",
-    "date": "2026-08-07",
-    "categorie": "bonne_nouvelle",
-    "clics": 33,
-    "lecteurs": 25
-   },
-   {
-    "id": "actu_2026_08_08_3",
-    "titre": "Rendez-vous de prévention : les pharmaciens officiellement dans la boucle",
-    "date": "2026-08-08",
-    "categorie": "bonne_nouvelle",
-    "clics": 42,
-    "lecteurs": 24
+    "id": "actu_2026_08_11_2",
+    "titre": "La FDA rejette une radiothérapie prometteuse pour vice de fabrication : leçon pour toute la filière",
+    "date": "2026-08-11",
+    "categorie": "pharma_monde",
+    "clics": 51,
+    "lecteurs": 26
    },
    {
     "id": "actu_2026_08_04_2",
     "titre": "Eli Lilly ouvre la porte au retatrutide : ce que ça annonce pour l'Europe",
     "date": "2026-08-04",
     "categorie": "pharma_monde",
-    "clics": 37,
-    "lecteurs": 24
-   },
-   {
-    "id": "actu_2026_08_06_3",
-    "titre": "Livraison à domicile : les officines auront leur propre plateforme nationale en octobre",
-    "date": "2026-08-06",
-    "categorie": "bonne_nouvelle",
-    "clics": 34,
-    "lecteurs": 24
+    "clics": 39,
+    "lecteurs": 26
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-08-10",
-  "delivres": 75543,
-  "ouvertures": 30098,
-  "ouvertures_uniques": 20698,
-  "clics": 30729,
-  "clics_uniques": 5485,
-  "taux_ouverture_pct": 27.4,
+  "au": "2026-08-11",
+  "delivres": 76480,
+  "ouvertures": 30583,
+  "ouvertures_uniques": 21079,
+  "clics": 31172,
+  "clics_uniques": 5581,
+  "taux_ouverture_pct": 27.6,
   "taux_clic_pct": 7.3,
   "ctor_pct": 26.5,
   "top_articles": [
