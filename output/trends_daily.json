@@ -1,17 +1,12 @@
 {
-  "generated_at": "2026-08-11",
-  "window_label": "5 aout au 11 aout 2026",
+  "generated_at": "2026-08-12",
+  "window_label": "6 aout au 12 aout 2026",
   "has_history": true,
   "delta_source": "pytrends_rising",
   "pathologies": [
     {
       "display": "Allergie aout",
       "delta_label": "↑ 29 200",
-      "trend": "up"
-    },
-    {
-      "display": "Lunette eclipse",
-      "delta_label": "↑ 9 750",
       "trend": "up"
     },
     {
@@ -58,7 +53,7 @@
     }
   ],
   "pathologies_stale": false,
-  "pathologies_from": "2026-08-11",
+  "pathologies_from": "2026-08-12",
   "soins_stale": false,
-  "soins_from": "2026-08-11"
+  "soins_from": "2026-08-12"
 }

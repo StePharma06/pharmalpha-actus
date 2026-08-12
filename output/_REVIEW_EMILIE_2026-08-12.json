@@ -1,0 +1,59 @@
+{
+  "generated_at": "2026-08-12T04:18:11.832208+02:00",
+  "run_date": "2026-08-12",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Officines : CA en hausse, rentabilité en chute libre. On t'explique.",
+      "resume": "En 2025, le CA moyen des officines grimpe de 4,9 %. Mais près d'une officine sur deux voit sa performance économique reculer. La croissance du marché du médicament cache une réalité bien moins flatteuse pour les titulaires.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/business/marches/pourquoi-les-officines-gagnent-moins-malgre-un-chiffre-daffaires-en-hausse",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "pharma_monde",
+      "titre": "Statines chez les plus de 75 ans, les arrêter peut être sans risque. Ce que dit le Lancet.",
+      "resume": "Une étude publiée dans The Lancet et relayée par STAT News casse un tabou : arrêter les statines chez les plus de 75 ans à faible risque cardiovasculaire n'augmente pas la mortalité. De quoi relancer le débat sur la déprescription à l'officine.",
+      "source": "STAT News",
+      "source_url": "https://www.statnews.com/2026/08/11/stop-statins-age-75-lancet-study-suggests-safe-healthy-adults/",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "FreeStyle Libre 3 Plus + mylife CamAPS FX : la boucle semi-fermée remboursée dès le 24 août",
+      "resume": "Bonne nouvelle pour les patients diabétiques de type 1 et pour les officines. L'association du capteur Abbott FreeStyle Libre 3 Plus avec le système de boucle semi-fermée mylife CamAPS FX entre dans le remboursement le 24 août 2026. Un arrêté du 6 août officialise la prise en charge.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/diabete-lassociation-freestyle-libre-3-plus-mylife-camaps-fx-remboursee-des-le-24-aout",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Canicule à l'officine : 3 missions rémunérées à ne pas rater cet été",
+      "resume": "Les épisodes caniculaires se multiplient et battent des records en 2026. Pour le pharmacien titulaire, c'est un levier concret d'honoraires et de visibilité - à condition de savoir quelles missions sont activables et comment les valoriser.",
+      "source": "Pharm'Actus · France Info Santé — Canicules : fatigue, malaise, stress… les fortes chaleurs inquiètent, Le Monde Santé — Comment les vagues de chaleur dégradent les conditions de soins dans les hôpitaux ?",
+      "source_url": "https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/vagues-de-chaleur-canicules/canicules-fatigue-malaise-stress-les-fortes-chaleurs-inquietent_8142890.html",
+      "confidence_score": 0.72,
+      "warnings": [
+        "Le chiffre '< 15 % des officines atteignent le plafond annuel de BMP' est issu du bilan AM 2024 tel que relayé dans la presse professionnelle pharmacie — à vérifier sur le tableau de bord Ameli.fr avant publication ; si non retrouvé, remplacer par une formulation qualitative.",
+        "Le chiffre de 80 % des décès canicule chez les >75 ans est une estimation Santé publique France régulièrement citée — vérifier la date exacte du rapport source pour ne pas mélanger les millésimes.",
+        "Le panier moyen de 17,66 € et les 19 274 officines sont des données IQVIA Pharmastat juin 2026 utilisées en référence interne Pharm'Actus — cohérence maintenue avec les chiffres structurels de la rédaction.",
+        "Aucun syndicat (FSPF, USPO, UPGF) n'est cité car l'angle business est réglementaire et économique, non syndical — règle d'équilibre syndical non applicable ici.",
+        "Aucun médicament Rx spécifique n'est promu dans les recommandations — conformité L.5122 vérifiée.",
+        "Les honoraires BMP à 60 € : vérifier que le montant est toujours en vigueur (avenant 21, juillet 2022) et qu'aucun avenant postérieur ne l'a modifié avant publication.",
+        "5 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}
