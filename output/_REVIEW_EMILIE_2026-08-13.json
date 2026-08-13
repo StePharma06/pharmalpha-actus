@@ -1,0 +1,37 @@
+{
+  "generated_at": "2026-08-13T04:16:11.983400+02:00",
+  "run_date": "2026-08-13",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Faux aGLP-1 vendus en ligne : l'ANSM sort les griffes",
+      "resume": "Cinq produits injectables frauduleux retirés du marché, deux sociétés dans le collimateur de l'ANSM. Les peptides présentés comme des agonistes du GLP-1 prolifèrent sur internet, et l'Agence rappelle que d'autres décisions sont en préparation. Au comptoir, ça change tout sur le conseil à tenir.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/faux-aglp-1-cinq-produits-retires-deux-societes-dans-le-viseur-de-lansm",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Nicotine sans tabac : 3 segments OTC à investir avant que la réglementation se referme",
+      "resume": "Poches de nicotine, vapotage, tabac chauffé : ces produits sans ordonnance explosent chez les jeunes tout en contournant les interdictions. Pour l'officine, c'est un marché OTC à fort potentiel - mais la fenêtre réglementaire est étroite.",
+      "source": "Pharm'Actus · France Info Santé — Produits à base de nicotine sans tabac, formes créatives et interdictions contournées, Convention pharmaceutique — Avenant 22 (entretiens sevrage tabagique, honoraires)",
+      "source_url": "https://www.franceinfo.fr/sante/drogue-addictions/cigarette-electronique/c-est-un-leurre-les-produits-a-base-de-nicotine-reviennent-sous-des-formes-de-plus-en-plus-creatives-et-accessibles-pour-contourner-les-interdictions-et-cibler-les-jeunes_8142179.html",
+      "confidence_score": 0.72,
+      "warnings": [
+        "Le chiffre de 150 millions EUR pour le marché SNT remboursable en France est une estimation de cadrage couramment citée — à recouper avec les données IQVIA ou CNAM les plus récentes avant publication.",
+        "Le chiffre Euromonitor 4,5 Mds EUR pour le marché européen e-cigarette/nicotine sans tabac est issu de rapports sectoriels 2024 — vérifier la date et le périmètre exact (e-cig seule ou incluant sachets et tabac chauffé).",
+        "Le taux de pénétration des entretiens sevrage tabagique (<10% des officines) est une estimation basée sur des données CNAM 2024 mentionnées dans la presse professionnelle — à vérifier avec le tableau de bord CNAM actualisé.",
+        "La rémunération des entretiens sevrage (45 EUR / 3 entretiens) est à confirmer avec le texte exact de l'avenant 22 et ses éventuelles révisions ultérieures.",
+        "Le statut réglementaire exact des sachets de nicotine sans tabac en France (hors TPD) est en évolution — ne pas présenter comme définitivement établi.",
+        "Aucun syndicat (FSPF, USPO, UPGF) n'est cité car l'angle n'est pas adossé à une prise de position syndicale — règle d'équilibre non déclenchée.",
+        "7 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

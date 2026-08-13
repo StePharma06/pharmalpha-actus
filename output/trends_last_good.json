@@ -21,7 +21,7 @@
       "trend": "up"
     }
   ],
-  "pathologies_from": "2026-08-12",
+  "pathologies_from": "2026-08-13",
   "soins": [
     {
       "display": "Azinc immunite",
@@ -49,5 +49,5 @@
       "trend": "up"
     }
   ],
-  "soins_from": "2026-08-12"
+  "soins_from": "2026-08-13"
 }
