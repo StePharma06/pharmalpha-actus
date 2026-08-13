@@ -1,22 +1,38 @@
 {
- "genere_le": "2026-08-12T06:42:03+02:00",
+ "genere_le": "2026-08-13T06:45:19+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1056,
- "nouveaux_7j": 26,
- "nouveaux_cumul": 1049,
+ "abonnes_total": 1059,
+ "nouveaux_7j": 27,
+ "nouveaux_cumul": 1052,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-08-05",
-  "au": "2026-08-12",
-  "delivres": 6673,
-  "ouvertures": 2363,
-  "ouvertures_uniques": 1858,
-  "clics": 2428,
-  "clics_uniques": 442,
-  "taux_ouverture_pct": 27.8,
-  "taux_clic_pct": 6.6,
-  "ctor_pct": 23.8,
+  "du": "2026-08-06",
+  "au": "2026-08-13",
+  "delivres": 6679,
+  "ouvertures": 2355,
+  "ouvertures_uniques": 1837,
+  "clics": 2523,
+  "clics_uniques": 484,
+  "taux_ouverture_pct": 27.5,
+  "taux_clic_pct": 7.2,
+  "ctor_pct": 26.3,
   "top_articles": [
+   {
+    "id": "actu_2026_08_12_1",
+    "titre": "Officines : CA en hausse, rentabilité en chute libre. On t'explique.",
+    "date": "2026-08-12",
+    "categorie": "pharma_france",
+    "clics": 96,
+    "lecteurs": 68
+   },
+   {
+    "id": "actu_2026_08_12_2",
+    "titre": "Statines chez les plus de 75 ans, les arrêter peut être sans risque. Ce que dit le Lancet.",
+    "date": "2026-08-12",
+    "categorie": "pharma_monde",
+    "clics": 84,
+    "lecteurs": 55
+   },
    {
     "id": "actu_2026_08_10_1",
     "titre": "Culottes menstruelles remboursées : les prix sont fixés, le comptoir est prêt",
@@ -34,28 +50,28 @@
     "lecteurs": 51
    },
    {
-    "id": "actu_2026_08_12_1",
-    "titre": "Officines : CA en hausse, rentabilité en chute libre. On t'explique.",
+    "id": "actu_2026_08_12_3",
+    "titre": "FreeStyle Libre 3 Plus + mylife CamAPS FX : la boucle semi-fermée remboursée dès le 24 août",
     "date": "2026-08-12",
-    "categorie": "pharma_france",
+    "categorie": "bonne_nouvelle",
     "clics": 62,
-    "lecteurs": 43
-   },
-   {
-    "id": "actu_2026_08_12_2",
-    "titre": "Statines chez les plus de 75 ans, les arrêter peut être sans risque. Ce que dit le Lancet.",
-    "date": "2026-08-12",
-    "categorie": "pharma_monde",
-    "clics": 64,
-    "lecteurs": 41
+    "lecteurs": 42
    },
    {
     "id": "actu_2026_08_11_1",
     "titre": "Officines fragiles : le seuil à 1,80 M€ de CA qui fait froid dans le dos",
     "date": "2026-08-11",
     "categorie": "pharma_france",
-    "clics": 77,
-    "lecteurs": 40
+    "clics": 81,
+    "lecteurs": 41
+   },
+   {
+    "id": "actu_2026_08_08_5",
+    "titre": "Super-pharmacies : 800 fermetures en 3 ans, qui ramasse la mise ?",
+    "date": "2026-08-08",
+    "categorie": "business_officine",
+    "clics": 56,
+    "lecteurs": 37
    },
    {
     "id": "actu_2026_08_08_1",
@@ -66,20 +82,12 @@
     "lecteurs": 37
    },
    {
-    "id": "actu_2026_08_12_3",
-    "titre": "FreeStyle Libre 3 Plus + mylife CamAPS FX : la boucle semi-fermée remboursée dès le 24 août",
+    "id": "actu_2026_08_12_5",
+    "titre": "Canicule à l'officine : 3 missions rémunérées à ne pas rater cet été",
     "date": "2026-08-12",
-    "categorie": "bonne_nouvelle",
-    "clics": 54,
-    "lecteurs": 36
-   },
-   {
-    "id": "actu_2026_08_08_5",
-    "titre": "Super-pharmacies : 800 fermetures en 3 ans, qui ramasse la mise ?",
-    "date": "2026-08-08",
     "categorie": "business_officine",
-    "clics": 54,
-    "lecteurs": 36
+    "clics": 44,
+    "lecteurs": 33
    },
    {
     "id": "actu_2026_08_08_3",
@@ -88,28 +96,20 @@
     "categorie": "bonne_nouvelle",
     "clics": 49,
     "lecteurs": 30
-   },
-   {
-    "id": "actu_2026_08_11_2",
-    "titre": "La FDA rejette une radiothérapie prometteuse pour vice de fabrication : leçon pour toute la filière",
-    "date": "2026-08-11",
-    "categorie": "pharma_monde",
-    "clics": 56,
-    "lecteurs": 29
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-08-12",
-  "delivres": 77418,
-  "ouvertures": 31017,
-  "ouvertures_uniques": 21416,
-  "clics": 31591,
-  "clics_uniques": 5666,
-  "taux_ouverture_pct": 27.7,
+  "au": "2026-08-13",
+  "delivres": 78359,
+  "ouvertures": 31349,
+  "ouvertures_uniques": 21654,
+  "clics": 31969,
+  "clics_uniques": 5751,
+  "taux_ouverture_pct": 27.6,
   "taux_clic_pct": 7.3,
-  "ctor_pct": 26.5,
+  "ctor_pct": 26.6,
   "top_articles": [
    {
     "id": "actu_2026_06_18_1",
@@ -126,6 +126,14 @@
     "categorie": "",
     "clics": 134,
     "lecteurs": 74
+   },
+   {
+    "id": "actu_2026_08_12_1",
+    "titre": "Officines : CA en hausse, rentabilité en chute libre. On t'explique.",
+    "date": "2026-08-12",
+    "categorie": "pharma_france",
+    "clics": 96,
+    "lecteurs": 68
    },
    {
     "id": "actu_2026_06_23_2",
@@ -182,14 +190,6 @@
     "categorie": "",
     "clics": 95,
     "lecteurs": 59
-   },
-   {
-    "id": "actu_2026_07_09_2",
-    "titre": "actu_2026_07_09_2",
-    "date": "",
-    "categorie": "",
-    "clics": 111,
-    "lecteurs": 58
    }
   ]
  }
