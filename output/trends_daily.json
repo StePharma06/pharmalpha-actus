@@ -1,59 +1,64 @@
 {
-  "generated_at": "2026-08-13",
-  "window_label": "7 aout au 13 aout 2026",
+  "generated_at": "2026-08-14",
+  "window_label": "8 aout au 14 aout 2026",
   "has_history": true,
   "delta_source": "pytrends_rising",
   "pathologies": [
     {
+      "display": "Eclipse fatigue",
+      "delta_label": "↑ 35 450",
+      "trend": "up"
+    },
+    {
       "display": "Allergie aout",
-      "delta_label": "↑ 29 200",
+      "delta_label": "↑ 29 250",
       "trend": "up"
     },
     {
-      "display": "Crp élevée et fatigue",
-      "delta_label": "↑ 8 200",
+      "display": "Coup de fatigue soudain",
+      "delta_label": "↑ 20 100",
       "trend": "up"
     },
     {
-      "display": "Vitamine prenatal",
-      "delta_label": "↑ 7 950",
+      "display": "Vitamine b₁₂",
+      "delta_label": "↑ 17 300",
       "trend": "up"
     },
     {
-      "display": "Acide urique fatigue",
-      "delta_label": "↑ 7 150",
+      "display": "Lunettes éclipse solaire",
+      "delta_label": "↑ 15 550",
       "trend": "up"
     }
   ],
   "soins": [
     {
       "display": "Azinc immunite",
-      "delta_label": "↑ 95 150",
+      "delta_label": "↑ 946 900",
       "trend": "up"
     },
     {
-      "display": "Temps de digestion des aliments",
-      "delta_label": "↑ 51 750",
+      "display": "Aide à la digestion",
+      "delta_label": "↑ 47 800",
       "trend": "up"
     },
     {
-      "display": "Calmosine digestion nourrisson",
-      "delta_label": "↑ 51 050",
+      "display": "Digestion trop rapide",
+      "delta_label": "↑ 38 850",
       "trend": "up"
     },
     {
-      "display": "Myoclonie du sommeil",
-      "delta_label": "↑ 9 000",
+      "display": "Quies specific sommeil",
+      "delta_label": "↑ 12 150",
       "trend": "up"
     },
     {
-      "display": "Cette douleur n'est pas la mienne",
-      "delta_label": "↑ 550",
+      "display": "Tout pour un bon sommeil 7 lettres",
+      "delta_label": "↑ 5 150",
       "trend": "up"
     }
   ],
   "pathologies_stale": false,
-  "pathologies_from": "2026-08-13",
+  "pathologies_from": "2026-08-14",
   "soins_stale": false,
-  "soins_from": "2026-08-13"
+  "soins_from": "2026-08-14"
 }

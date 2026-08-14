@@ -31,7 +31,7 @@
      l'image n'est decouverte qu'apres execution du JS qui construit les cards
      (le <img> n'existe qu'a l'interieur d'un template literal JS, invisible au
      preload scanner) -> LCP non deterministe, cf. sprint perf 2026-07-27. -->
-<link rel="preload" as="image" href="assets/img_actu_2026_08_13_1.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="assets/img_actu_2026_08_14_1.jpg" fetchpriority="high">
 
 <!-- Font cohesion site principal -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1737,7 +1737,7 @@ body.pa-has-nav #actusHeader {
 </div>
 
 <!-- EXPRESSION DU JOUR (injectée par update_actus.py à chaque run) -->
-<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">En avoir jusqu'au cou</h2><p class="expression-corps">Les chirurgiens décrivaient les plaies et lésions par leur profondeur et leur extension sur le corps. Être blessé jusqu'au cou signifiait être touché dans une zone critique, à la limite du vital. L'expression a conservé ce sens d'une situation critique dont on ne voit pas comment se dégager.</p></aside>
+<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Incuber (une idée)</h2><p class="expression-corps">En médecine, la période d'incubation est le temps entre l'infection et l'apparition des premiers symptômes - la maladie se développe en silence dans l'organisme. Le terme vient du latin <em>incubare</em>, couver. Une idée qui « s'incube » suit le même cheminement invisible avant d'éclore.</p></aside>
 
 <!-- ESPACE PARTENAIRE 1 (entre Expression du jour et Aujourd'hui).
      Statique : reste visible meme si le JS ne s'execute pas. Le 2e emplacement
@@ -1762,12 +1762,12 @@ body.pa-has-nav #actusHeader {
 <div id="articles-container"></div>
 
 <!-- MARQUE_TENDANCE (injectee par le pipeline hebdo, remplacee quotidiennement) -->
-<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">7 aout au 13 aout 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie aout</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 29 200</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Azinc immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 95 150</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Crp élevée et fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 8 200</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Temps de digestion des aliments</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 51 750</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Vitamine prenatal</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 7 950</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Calmosine digestion nourrisson</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 51 050</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Acide urique fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 7 150</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Myoclonie du sommeil</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 9 000</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;"></td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#9ca3af;font-weight:600;white-space:nowrap;"></td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Cette douleur n'est pas la mienne</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 550</td></tr>
+<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">8 aout au 14 aout 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Eclipse fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 35 450</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Azinc immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 946 900</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie aout</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 29 250</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Aide à la digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 47 800</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Coup de fatigue soudain</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 20 100</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Digestion trop rapide</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 38 850</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Vitamine b₁₂</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 17 300</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Quies specific sommeil</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 12 150</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Lunettes éclipse solaire</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 15 550</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Tout pour un bon sommeil 7 lettres</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 5 150</td></tr>
 </tbody></table></div><p style="margin:10px 0 0;font-size:11px;color:#9ca3af;font-style:italic;">Indice de tendance : intensite de hausse Google Trends (non comparable a un volume absolu).</p><p style="margin:12px 0 0;font-size:11px;color:#9ca3af;text-align:right;">Source&nbsp;: Google Trends France (pytrends) &middot; 7 jours glissants</p></section></div>
 
 <!-- ARCHIVES CTA -->
@@ -1918,6 +1918,90 @@ body.pa-has-nav #actusHeader {
 // Mis a jour automatiquement par n8n chaque semaine
 // ============================================================
 const ARTICLES = [
+{
+    id: "actu_2026_08_14_1",
+    date: "2026-08-14",
+    type: "actu",
+    categorie: "pharma_france",
+    titre: "Cyprotérone 50 mg sort du TFR : ce que ça change au comptoir dès septembre",
+    resume: "Le CEPS a décidé la sortie du TFR pour l'acétate de cyprotérone 50 mg à partir du 1er septembre 2026. Fini les 8,48 euros figés : le prix va bouger. Ce que tu dois absolument anticiper dans ton logiciel avant la rentrée.",
+    source: "Le Moniteur des Pharmacies",
+    source_url: "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/cyproterone-50-mg-ce-quil-faut-desormais-savoir",
+    tiktok_url: "",
+    badge_label: "Pharma France",
+    image_url: "assets/img_actu_2026_08_14_1.jpg",
+    tags: ["tfr", "generique", "substitution", "ceps", "officine"]
+  },
+{
+    id: "actu_2026_08_14_2",
+    date: "2026-08-14",
+    type: "actu",
+    categorie: "pharma_monde",
+    titre: "Eli Lilly contre le marché noir du retatrutide : la bataille qui nous concerne aussi",
+    resume: "La nouvelle molécule d'Eli Lilly, le retatrutide, n'a pas encore l'AMM que son marché noir est déjà florissant aux Etats-Unis. Lilly attaque en justice les compoundeurs clandestins. Ça te rappelle quelque chose ? L'écho semaglutide est immédiat.",
+    source: "STAT News",
+    source_url: "https://www.statnews.com/2026/08/13/biotech-news-eli-lilly-targets-booming-retatrutide-black-market/?utm_campaign=rss",
+    tiktok_url: "",
+    badge_label: "Pharma Monde",
+    image_url: "assets/img_actu_2026_08_14_2.jpg",
+    tags: ["glp-1", "amm", "marche-noir", "innovation", "diabete"]
+  },
+{
+    id: "actu_2026_08_14_3",
+    date: "2026-08-14",
+    type: "actu",
+    categorie: "bonne_nouvelle",
+    titre: "Canicule et officine : tu es en première ligne, et les chiffres le confirment",
+    resume: "Jusqu'à 293 passages aux urgences par jour liés à la canicule entre fin juillet et début août, selon Santé Publique France. Les plus de 75 ans surreprésentés. Et devant chez toi ? Tu vois exactement les mêmes profils. L'officine comme filet de sécurité thermique, ce n'est pas un slogan, c'est la réalité de cet été.",
+    source: "Le Moniteur des Pharmacies",
+    source_url: "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/canicule-jusqua-293-passages-aux-urgences-par-jour-les-plus-de-75-ans-particulierement-touches",
+    tiktok_url: "",
+    badge_label: "La bonne nouvelle",
+    image_url: "assets/img_actu_2026_08_14_3.jpg",
+    tags: ["canicule", "prevention", "personnes-agees", "officine", "sante-publique"]
+  },
+{
+    id: "actu_2026_08_14_4",
+    date: "2026-08-14",
+    type: "actu",
+    categorie: "avenir_pharma",
+    titre: "Dengue en France en 2045 : le moustique tigre redessinera ta carte des actes de prévention",
+    resume: "D'ici 2045, la moitié du territoire français pourrait devenir une zone de transmission active de la dengue, selon une modélisation IRD/Cirad. Aedes albopictus progresse, le changement climatique accélère. Pour l'officine, c'est un nouveau périmètre de prévention à anticiper dès maintenant.",
+    source: "Le Moniteur des Pharmacies",
+    source_url: "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/dengue-la-moitie-de-la-france-pourrait-devenir-une-zone-de-transmission-dici-a-2045",
+    tiktok_url: "",
+    badge_label: "L'avenir de la pharma",
+    image_url: "assets/img_actu_2026_08_14_4.jpg",
+    tags: ["dengue", "prevention", "vaccination", "moustique", "sante-publique"]
+  },
+{
+    id: "actu_2026_08_14_5",
+    date: "2026-08-14",
+    type: "actu",
+    categorie: "business_officine",
+    titre: "Fermetures d'urgences : ton officine vaut 11 jours de SAU en moins",
+    resume: "Un hôpital de Meurthe-et-Moselle ferme ses urgences 11 jours faute de personnel. Ce type d'événement déclenche mécaniquement un afflux officinal documenté. Ce n'est pas de l'opportunisme : c'est ton rôle de filet de sécurité - et ça se prépare.",
+    source: "Pharm'Actus · France Info Santé – Urgences Meurthe-et-Moselle fermées 11 jours, IQVIA Pharmastat – Nombre d'officines en France (juin 2026)",
+    source_url: "https://www.franceinfo.fr/sante/hopital/les-urgences-de-l-hopital-en-meurthe-et-moselle-fermees-pendant-onze-jours-a-partir-de-vendredi-faute-de-personnel_8146088.html",
+    tiktok_url: "",
+    badge_label: "Business",
+    image_url: "assets/img_actu_2026_08_14_5.jpg",
+    tags: ["urgences", "missions-officinales", "desert-medical", "soins-non-programmes"]
+  },
+{
+    id: "lsv_2026_08_14",
+    date: "2026-08-14",
+    type: "lsv",
+    categorie: "lsv",
+    titre: "Le saviez-vous ? On cartographiait la mort pour trouver la source du choléra",
+    resume: "En 1854, un médecin londonien prend une carte, des punaises et une idée folle. Sans microscope ni analyse de sang, il va identifier la source d'une épidémie meurtrière. Et sauver des milliers de vies avec… de la statistique.",
+    source: "Pharm'Alpha",
+    source_url: "",
+    tiktok_url: "",
+    badge_label: "Le Saviez-Vous",
+    image_url: "assets/img_lsv_2026_08_14.jpg",
+    tags: ["histoire", "epidemie", "diagnostic", "epidemiologie", "cholera"]
+  },
 {
     id: "actu_2026_08_13_1",
     date: "2026-08-13",
@@ -2533,90 +2617,6 @@ const ARTICLES = [
     badge_label: "Pharma Monde",
     image_url: "assets/img_actu_2026_08_05_2.jpg",
     tags: ["ebola", "epidemie", "vaccin", "sante-publique", "international"]
-  },
-{
-    id: "actu_2026_08_05_3",
-    date: "2026-08-05",
-    type: "actu",
-    categorie: "bonne_nouvelle",
-    titre: "Endométriose : Dienogest Bailleul remboursé, une patiente sur deux va en profiter",
-    resume: "Le générique de Visanne 2 mg vient d'intégrer la liste des médicaments remboursables. Deux textes parus au JO du 4 août 2026 actent l'inscription. Pour les patientes atteintes d'endométriose, c'est un accès financier facilité à un traitement de fond.",
-    source: "Le Quotidien du Pharmacien",
-    source_url: "http://www.lequotidiendupharmacien.fr/medicament-parapharmacie/endometriose-un-nouveau-generique-remboursable",
-    tiktok_url: "",
-    badge_label: "La bonne nouvelle",
-    image_url: "assets/img_actu_2026_08_05_3.jpg",
-    tags: ["generique", "remboursement", "endometriose", "substitution", "officine"]
-  },
-{
-    id: "actu_2026_08_05_4",
-    date: "2026-08-05",
-    type: "actu",
-    categorie: "avenir_pharma",
-    titre: "IA et essais cliniques : 45 millions pour simuler avant de tester sur l'humain",
-    resume: "La startup QuantHealth lève 45 millions de dollars pour simuler des essais cliniques avant même d'enrôler un seul patient. L'objectif : tailler dans les 90 % de taux d'échec des essais. Si ça marche, les molécules de demain arrivent plus vite en pharmacie.",
-    source: "MedCity News",
-    source_url: "https://medcitynews.com/2026/08/quanthealth-ai-drug-discovery/",
-    tiktok_url: "",
-    badge_label: "L'avenir de la pharma",
-    image_url: "assets/img_actu_2026_08_05_4.jpg",
-    tags: ["ia", "recherche", "innovation", "essais-cliniques", "pipeline"]
-  },
-{
-    id: "actu_2026_08_05_5",
-    date: "2026-08-05",
-    type: "actu",
-    categorie: "business_officine",
-    titre: "Rupture BICAFRES® : quand une pénurie devient une opportunité de mission pour l'officine",
-    resume: "La rupture d'approvisionnement de BICAFRES® (bicarbonate de sodium gastro-résistant, THERADIAL) met sous pression les officines et leurs patients dialysés. Mais elle illustre aussi comment une crise de stock bien gérée peut valoriser le rôle-clé du pharmacien - et ses honoraires.",
-    source: "Pharm'Actus · USPO — Communiqué rupture BICAFRES®, ANSM — Portail des ruptures de stock",
-    source_url: "https://uspo.fr/rupture-de-bicafres-luspo-demande-la-continuite-des-traitements/",
-    tiktok_url: "",
-    badge_label: "Business",
-    image_url: "assets/img_actu_2026_08_05_5.jpg",
-    tags: ["rupture-stock", "mitm", "insuffisance-renale", "gestion-officine"]
-  },
-{
-    id: "lsv_2026_08_05",
-    date: "2026-08-05",
-    type: "lsv",
-    categorie: "lsv",
-    titre: "Le saviez-vous ? On traitait les maladies infantiles avec des suppositoires de tabac",
-    resume: "Pendant près de deux siècles, le tabac n'était pas seulement une herbe à fumer. C'était un remède officiel, prescrit aux enfants, administré par voie rectale. Et les médecins y croyaient dur comme fer.",
-    source: "Pharm'Alpha",
-    source_url: "",
-    tiktok_url: "",
-    badge_label: "Le Saviez-Vous",
-    image_url: "assets/img_lsv_2026_08_05.jpg",
-    tags: ["histoire", "pharmacie", "toxicologie", "pediatrie", "plante"]
-  },
-{
-    id: "actu_2026_08_04_1",
-    date: "2026-08-04",
-    type: "actu",
-    categorie: "pharma_france",
-    titre: "Interventions pharmaceutiques : l'USPO veut les faire sortir de l'ombre",
-    resume: "Tracer, documenter, valoriser. L'USPO pousse pour que les interventions pharmaceutiques soient enfin reconnues dans les contrôles de l'Assurance maladie. Parce qu'entre une délivrance justifiée et un indu, il n'y a souvent qu'un manque de traçabilité.",
-    source: "USPO",
-    source_url: "https://uspo.fr/r3c-le-dispositif-de-compensation-financiere-des-stages-detudes-specialisees-de-pharmacie-officinale/",
-    tiktok_url: "",
-    badge_label: "Pharma France",
-    image_url: "assets/img_actu_2026_08_04_1.jpg",
-    tags: ["intervention-pharmaceutique", "assurance-maladie", "controle", "officine", "convention"]
-  },
-{
-    id: "actu_2026_08_04_2",
-    date: "2026-08-04",
-    type: "actu",
-    categorie: "pharma_monde",
-    titre: "Eli Lilly ouvre la porte au retatrutide : ce que ça annonce pour l'Europe",
-    resume: "Eli Lilly vient d'accorder un accès compassionnel au retatrutide, son triple agoniste GIP/GLP-1/glucagon encore non approuvé. Les médecins américains se ruent sur la demande. Et en Europe, les pharmaciens d'officine vont devoir anticiper l'arrivée de cette molécule.",
-    source: "STAT News",
-    source_url: "https://www.statnews.com/2026/08/03/eli-lilly-retatrutide-mystery-patient-doctors-seek-same-access-their-patients/?utm_campaign=rss",
-    tiktok_url: "",
-    badge_label: "Pharma Monde",
-    image_url: "assets/img_actu_2026_08_04_2.jpg",
-    tags: ["glp-1", "obésité", "innovation", "ema", "accès-précoce"]
   }
 ];
 

@@ -1,0 +1,47 @@
+{
+  "generated_at": "2026-08-14T04:11:43.935174+02:00",
+  "run_date": "2026-08-14",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Cyprotérone 50 mg sort du TFR : ce que ça change au comptoir dès septembre",
+      "resume": "Le CEPS a décidé la sortie du TFR pour l'acétate de cyprotérone 50 mg à partir du 1er septembre 2026. Fini les 8,48 euros figés : le prix va bouger. Ce que tu dois absolument anticiper dans ton logiciel avant la rentrée.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/cyproterone-50-mg-ce-quil-faut-desormais-savoir",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "Canicule et officine : tu es en première ligne, et les chiffres le confirment",
+      "resume": "Jusqu'à 293 passages aux urgences par jour liés à la canicule entre fin juillet et début août, selon Santé Publique France. Les plus de 75 ans surreprésentés. Et devant chez toi ? Tu vois exactement les mêmes profils. L'officine comme filet de sécurité thermique, ce n'est pas un slogan, c'est la réalité de cet été.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/canicule-jusqua-293-passages-aux-urgences-par-jour-les-plus-de-75-ans-particulierement-touches",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Fermetures d'urgences : ton officine vaut 11 jours de SAU en moins",
+      "resume": "Un hôpital de Meurthe-et-Moselle ferme ses urgences 11 jours faute de personnel. Ce type d'événement déclenche mécaniquement un afflux officinal documenté. Ce n'est pas de l'opportunisme : c'est ton rôle de filet de sécurité - et ça se prépare.",
+      "source": "Pharm'Actus · France Info Santé – Urgences Meurthe-et-Moselle fermées 11 jours, IQVIA Pharmastat – Nombre d'officines en France (juin 2026)",
+      "source_url": "https://www.franceinfo.fr/sante/hopital/les-urgences-de-l-hopital-en-meurthe-et-moselle-fermees-pendant-onze-jours-a-partir-de-vendredi-faute-de-personnel_8146088.html",
+      "confidence_score": 0.62,
+      "warnings": [
+        "Le chiffre '350 passages/jour' pour un SAU d'un hôpital de taille intermédiaire est une estimation d'ordre de grandeur non sourcée spécifiquement pour Pont-à-Mousson : à vérifier sur les données DREES locales avant toute reprise chiffrée précise.",
+        "La fourchette '100 à 140 patients redirigés par jour' est déduite du ratio 30-40 % de motifs bénins aux urgences (SFMU 2023) appliqué à l'estimation de fréquentation : raisonnement valide dans sa logique mais non vérifiable sans données SAU locales.",
+        "Les tarifs TROD (3,00 à 6,00 €) correspondent aux grilles en vigueur au moment de rédaction : à vérifier dans l'avenant conventionnel le plus récent en cas de révision tarifaire postérieure à juin 2026.",
+        "Le nom de l'hôpital (Pont-à-Mousson) est inféré de la localisation géographique mentionnée dans la source (Meurthe-et-Moselle) : la source ne nomme pas explicitement l'établissement dans le résumé disponible. À vérifier sur l'article source complet avant publication.",
+        "L'Observatoire de la médecine générale cité pour le délai de 10 jours en consultation généraliste doit être vérifié : plusieurs sources donnent des chiffres variables selon les territoires et les années.",
+        "4 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? On combattait les épidémies en brûlant des tonnes de poudre à canon",
-  "resume": "Avant les désinfectants et les masques FFP2, les autorités sanitaires avaient une solution radicale contre la peste et le choléra : faire exploser des barils entiers de poudre à canon dans les rues. Pas pour faire peur aux microbes. Pour purifier l'air. Et pendant deux siècles, tout le monde y a cru.",
-  "full_text": "On est au XVIIe siècle. La peste frappe une ville européenne. Les médecins sont dépassés. Les cadavres s'accumulent. Et la solution officielle des autorités, c'est de sortir les canons.\n\nL'idée repose sur la théorie des miasmes - cette croyance que les maladies voyagent dans un air corrompu, putride, empoisonné. Logique de l'époque : si l'air est mauvais, il faut l'agiter, le secouer, le remplacer. Et quoi de mieux qu'une explosion pour ça ? Les détonations de poudre à canon étaient censées \"crever\" les poches d'air vicié et forcer un renouvellement salutaire de l'atmosphère.\n\nÀ Marseille en 1720, lors de la Grande Peste qui tua la moitié de la population, des canons furent effectivement tirés dans les quartiers infectés. À Londres, après la Grande Peste de 1665, des feux de fumigation brûlaient en permanence. En Russie, lors des épidémies de choléra du XIXe siècle, les autorités faisaient tirer des salves d'artillerie pendant des heures.\n\nLe twist ? Certains historiens estiment que ces explosions répétées dans des rues bondées ont parfois aggravé les choses. La panique, les foules qui fuyaient les détonations, la dispersion des populations contaminées... autant de vecteurs involontaires de propagation.\n\nCe n'est qu'avec Louis Pasteur et la théorie microbienne, dans les années 1860-1870, que cette pratique a définitivement été abandonnée. On a remplacé la poudre à canon par l'acide phénique, la chaux vive, puis les désinfectants modernes.\n\nAujourd'hui, quand tu prépares une solution hydroalcoolique ou que tu conseilles un désinfectant de surface, rappelle-toi : l'humanité a mis des millénaires à comprendre ce qu'elle combattait vraiment. Et quelques siècles à arrêter de lui tirer dessus.",
-  "image_keywords": "cannon smoke historical",
+  "titre": "Le saviez-vous ? On cartographiait la mort pour trouver la source du choléra",
+  "resume": "En 1854, un médecin londonien prend une carte, des punaises et une idée folle. Sans microscope ni analyse de sang, il va identifier la source d'une épidémie meurtrière. Et sauver des milliers de vies avec… de la statistique.",
+  "full_text": "Londres, quartier de Soho, été 1854. En dix jours, 500 personnes meurent du choléra dans un périmètre de quelques rues. La puanteur est insupportable. Les médecins de l'époque sont formels : c'est l'air vicié, les « miasmes », qui tuent. Tout le monde le sait. Tout le monde a tort.\n\nJohn Snow, lui, n'y croit pas. Ce médecin de 41 ans, pionnier de l'anesthésie, a une autre théorie : l'eau. Pas l'air. L'eau. Alors il fait quelque chose de révolutionnaire pour l'époque : il sort dans la rue, il frappe aux portes, il pose des questions. Qui est mort ? Où habitait-il ? Où puisait-il son eau ?\n\nIl reporte chaque décès sur une carte du quartier. Punaise après punaise. Et là, le motif apparaît clairement : les morts se concentrent autour d'une seule pompe à eau, Broad Street. C'est le premier cluster épidémique de l'histoire moderne. Sauf que personne ne connaît encore ce mot.\n\nLe twist ? L'eau de cette pompe avait l'air parfaitement claire. Ni odeur, ni couleur suspecte. Les habitants la trouvaient même meilleure que les autres. Et une brasserie toute proche, dont les ouvriers buvaient de la bière toute la journée et jamais d'eau, n'avait enregistré aucun mort. Coïncidence ?\n\nSnow convainc les autorités locales de retirer la poignée de la pompe. En 24 heures, l'épidémie s'effondre. Sans vaccin, sans médicament, sans comprendre encore ce qu'est une bactérie. Juste de l'observation rigoureuse et une carte.\n\nAujourd'hui, ce travail de John Snow est considéré comme l'acte fondateur de l'épidémiologie moderne. La méthode qu'on utilise encore pour tracer les clusters de Covid, de salmonellose ou de légionellose dans un hôpital, c'est la sienne. Chaque fois qu'un ARS enquête sur une toxi-infection collective après une fête de village, Snow est quelque part dans la pièce.",
+  "image_keywords": "cholera map London",
   "tags": [
     "histoire",
     "epidemie",
-    "hygiene",
-    "peste",
-    "desinfection"
+    "diagnostic",
+    "epidemiologie",
+    "cholera"
   ],
-  "date": "2026-08-13",
+  "date": "2026-08-14",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",
