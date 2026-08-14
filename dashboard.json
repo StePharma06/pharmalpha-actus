@@ -1,37 +1,37 @@
 {
- "genere_le": "2026-08-13T06:45:19+02:00",
+ "genere_le": "2026-08-14T06:43:09+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1059,
- "nouveaux_7j": 27,
- "nouveaux_cumul": 1052,
+ "abonnes_total": 1061,
+ "nouveaux_7j": 28,
+ "nouveaux_cumul": 1054,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-08-06",
-  "au": "2026-08-13",
-  "delivres": 6679,
-  "ouvertures": 2355,
-  "ouvertures_uniques": 1837,
-  "clics": 2523,
-  "clics_uniques": 484,
-  "taux_ouverture_pct": 27.5,
-  "taux_clic_pct": 7.2,
-  "ctor_pct": 26.3,
+  "du": "2026-08-07",
+  "au": "2026-08-14",
+  "delivres": 6700,
+  "ouvertures": 2265,
+  "ouvertures_uniques": 1781,
+  "clics": 2642,
+  "clics_uniques": 492,
+  "taux_ouverture_pct": 26.6,
+  "taux_clic_pct": 7.3,
+  "ctor_pct": 27.6,
   "top_articles": [
    {
     "id": "actu_2026_08_12_1",
     "titre": "Officines : CA en hausse, rentabilité en chute libre. On t'explique.",
     "date": "2026-08-12",
     "categorie": "pharma_france",
-    "clics": 96,
-    "lecteurs": 68
+    "clics": 99,
+    "lecteurs": 70
    },
    {
     "id": "actu_2026_08_12_2",
     "titre": "Statines chez les plus de 75 ans, les arrêter peut être sans risque. Ce que dit le Lancet.",
     "date": "2026-08-12",
     "categorie": "pharma_monde",
-    "clics": 84,
-    "lecteurs": 55
+    "clics": 85,
+    "lecteurs": 56
    },
    {
     "id": "actu_2026_08_10_1",
@@ -70,7 +70,7 @@
     "titre": "Super-pharmacies : 800 fermetures en 3 ans, qui ramasse la mise ?",
     "date": "2026-08-08",
     "categorie": "business_officine",
-    "clics": 56,
+    "clics": 58,
     "lecteurs": 37
    },
    {
@@ -78,7 +78,7 @@
     "titre": "Culottes menstruelles remboursées : ce qui change dès le 1er octobre",
     "date": "2026-08-08",
     "categorie": "pharma_france",
-    "clics": 54,
+    "clics": 56,
     "lecteurs": 37
    },
    {
@@ -86,27 +86,27 @@
     "titre": "Canicule à l'officine : 3 missions rémunérées à ne pas rater cet été",
     "date": "2026-08-12",
     "categorie": "business_officine",
-    "clics": 44,
-    "lecteurs": 33
+    "clics": 45,
+    "lecteurs": 34
    },
    {
     "id": "actu_2026_08_08_3",
     "titre": "Rendez-vous de prévention : les pharmaciens officiellement dans la boucle",
     "date": "2026-08-08",
     "categorie": "bonne_nouvelle",
-    "clics": 49,
+    "clics": 51,
     "lecteurs": 30
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-08-13",
-  "delivres": 78359,
-  "ouvertures": 31349,
-  "ouvertures_uniques": 21654,
-  "clics": 31969,
-  "clics_uniques": 5751,
+  "au": "2026-08-14",
+  "delivres": 79309,
+  "ouvertures": 31614,
+  "ouvertures_uniques": 21866,
+  "clics": 32349,
+  "clics_uniques": 5811,
   "taux_ouverture_pct": 27.6,
   "taux_clic_pct": 7.3,
   "ctor_pct": 26.6,
@@ -132,8 +132,8 @@
     "titre": "Officines : CA en hausse, rentabilité en chute libre. On t'explique.",
     "date": "2026-08-12",
     "categorie": "pharma_france",
-    "clics": 96,
-    "lecteurs": 68
+    "clics": 99,
+    "lecteurs": 70
    },
    {
     "id": "actu_2026_06_23_2",
