@@ -1,21 +1,21 @@
 {
- "genere_le": "2026-08-14T06:43:09+02:00",
+ "genere_le": "2026-08-15T05:32:33+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1061,
- "nouveaux_7j": 28,
- "nouveaux_cumul": 1054,
+ "abonnes_total": 1065,
+ "nouveaux_7j": 27,
+ "nouveaux_cumul": 1058,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-08-07",
-  "au": "2026-08-14",
-  "delivres": 6700,
-  "ouvertures": 2265,
-  "ouvertures_uniques": 1781,
-  "clics": 2642,
-  "clics_uniques": 492,
-  "taux_ouverture_pct": 26.6,
-  "taux_clic_pct": 7.3,
-  "ctor_pct": 27.6,
+  "du": "2026-08-08",
+  "au": "2026-08-15",
+  "delivres": 6712,
+  "ouvertures": 2335,
+  "ouvertures_uniques": 1851,
+  "clics": 2800,
+  "clics_uniques": 507,
+  "taux_ouverture_pct": 27.6,
+  "taux_clic_pct": 7.6,
+  "ctor_pct": 27.4,
   "top_articles": [
    {
     "id": "actu_2026_08_12_1",
@@ -90,24 +90,24 @@
     "lecteurs": 34
    },
    {
-    "id": "actu_2026_08_08_3",
-    "titre": "Rendez-vous de prévention : les pharmaciens officiellement dans la boucle",
-    "date": "2026-08-08",
-    "categorie": "bonne_nouvelle",
-    "clics": 51,
-    "lecteurs": 30
+    "id": "actu_2026_08_14_1",
+    "titre": "Cyprotérone 50 mg sort du TFR : ce que ça change au comptoir dès septembre",
+    "date": "2026-08-14",
+    "categorie": "pharma_france",
+    "clics": 45,
+    "lecteurs": 33
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-08-14",
-  "delivres": 79309,
-  "ouvertures": 31614,
-  "ouvertures_uniques": 21866,
-  "clics": 32349,
-  "clics_uniques": 5811,
-  "taux_ouverture_pct": 27.6,
+  "au": "2026-08-15",
+  "delivres": 80248,
+  "ouvertures": 31900,
+  "ouvertures_uniques": 22084,
+  "clics": 32720,
+  "clics_uniques": 5870,
+  "taux_ouverture_pct": 27.5,
   "taux_clic_pct": 7.3,
   "ctor_pct": 26.6,
   "top_articles": [
