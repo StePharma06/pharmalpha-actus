@@ -1,0 +1,58 @@
+{
+  "generated_at": "2026-08-15T04:09:41.351323+02:00",
+  "run_date": "2026-08-15",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Bicafres en rupture : la prépa magistrale remboursée, c'est maintenant possible",
+      "resume": "Le président des PREF, Sébastien Gallice, tape du poing sur la table : la peur des indus bloque l'accès aux préparations magistrales alors que le droit le permet déjà. Bicafres est en rupture, les patients trinquent, et les officinaux hésitent. Fin des excuses.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/bicafres-la-peur-des-indus-prive-les-patients-de-preparations-magistrales",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "VRS 2026-2027 : la campagne démarre, ton rôle est central",
+      "resume": "Un DGS-Urgent du 10 août 2026 lance officiellement la campagne de prévention contre le virus respiratoire syncytial pour la saison 2026-2027. Vaccination et immunisation passive au programme. L'officine est en première ligne, encore une fois.",
+      "source": "USPO",
+      "source_url": "https://uspo.fr/campagne-de-vaccination-et-dimmunisation-contre-le-vrs-2/",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "avenir_pharma",
+      "titre": "IRM cardiaque en couleurs et ultra-rapide : diagnostic de l'infarctus bientôt révolutionné",
+      "resume": "Une équipe de recherche développe une IRM cardiaque plus rapide, plus précise et en couleurs pour mieux visualiser les cicatrices du myocarde. Une avancée qui pourrait transformer le suivi cardio de tes patients chroniques dans les années à venir.",
+      "source": "The Conversation FR",
+      "source_url": "https://theconversation.com/demain-une-irm-cardiaque-plus-rapide-precise-confortable-et-en-couleurs-pour-mieux-visualiser-les-cicatrices-du-coeur-289106",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Missions pharma à 15 € minimum : l'UPGF ouvre le feu avant les négociations conventionnelles",
+      "resume": "L'UPGF réclame une valorisation plancher de 15 € pour chaque mission pharmaceutique, contre 6,30 € actuellement pour certains entretiens. Avec les négociations qui patinent côté ministère, cette prise de position arrive au pire - ou au meilleur - moment.",
+      "source": "Pharm'Actus · UPGF — Position officielle : Développer les missions de santé publique du pharmacien, Le Pharmacien de France (FSPF) — Éditorial 'À contresens', 14 août 2026",
+      "source_url": "https://www.upgf.fr/positions/developper-les-missions-de-sante-publique-du-pharmacien/",
+      "confidence_score": 0.72,
+      "warnings": [
+        "Le chiffre de 6,30 € pour la vaccination en officine est celui en vigueur à la date de rédaction — à vérifier si un avenant récent a été publié entre-temps.",
+        "Le montant exact des entretiens pharmaceutiques asthme/AVK/AOD (série à 40 €) et BPM (série à 60 €) est basé sur la grille conventionnelle connue à fin 2025 — confirmer qu'aucun avenant n'a modifié ces tarifs en 2026 avant publication.",
+        "L'inflation cumulée 2021-2025 'plus de 15 %' est une estimation cohérente avec les données INSEE publiées, mais le chiffre précis cumulé doit être vérifié sur insee.fr avant publication.",
+        "L'USPO et la FSPF n'ont pas publié de position chiffrée sur le plancher tarifaire à 15 € : cette absence a été correctement signalée sans leur prêter de propos — à surveiller si une réaction est publiée dans les jours suivants.",
+        "Le nombre exact de vaccinations réalisées en officine par an n'a pas été chiffré dans l'article (risque d'extrapolation non sourcée évité volontairement).",
+        "9 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

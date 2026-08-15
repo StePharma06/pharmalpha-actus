@@ -1,58 +1,58 @@
 {
   "pathologies": [
     {
-      "display": "Eclipse fatigue",
-      "delta_label": "↑ 35 450",
-      "trend": "up"
-    },
-    {
       "display": "Allergie aout",
-      "delta_label": "↑ 29 250",
+      "delta_label": "↑ 45 150",
       "trend": "up"
     },
     {
-      "display": "Coup de fatigue soudain",
-      "delta_label": "↑ 20 100",
+      "display": "Monocytes élevés et fatigue",
+      "delta_label": "↑ 21 550",
+      "trend": "up"
+    },
+    {
+      "display": "Allergie au sperme",
+      "delta_label": "↑ 16 350",
       "trend": "up"
     },
     {
       "display": "Vitamine b₁₂",
-      "delta_label": "↑ 17 300",
+      "delta_label": "↑ 12 750",
       "trend": "up"
     },
     {
-      "display": "Lunettes éclipse solaire",
-      "delta_label": "↑ 15 550",
+      "display": "Pharmacie lunette eclipse",
+      "delta_label": "↑ 11 250",
       "trend": "up"
     }
   ],
-  "pathologies_from": "2026-08-14",
+  "pathologies_from": "2026-08-15",
   "soins": [
     {
       "display": "Azinc immunite",
-      "delta_label": "↑ 946 900",
+      "delta_label": "↑ 70 750",
       "trend": "up"
     },
     {
-      "display": "Aide à la digestion",
-      "delta_label": "↑ 47 800",
+      "display": "Problème de digestion symptômes",
+      "delta_label": "↑ 53 650",
       "trend": "up"
     },
     {
-      "display": "Digestion trop rapide",
-      "delta_label": "↑ 38 850",
+      "display": "Schoum digestion",
+      "delta_label": "↑ 44 200",
       "trend": "up"
     },
     {
-      "display": "Quies specific sommeil",
-      "delta_label": "↑ 12 150",
+      "display": "Combien de temps dure un cycle de sommei",
+      "delta_label": "↑ 10 200",
       "trend": "up"
     },
     {
-      "display": "Tout pour un bon sommeil 7 lettres",
-      "delta_label": "↑ 5 150",
+      "display": "Opérations spéciales lioness la douleur ",
+      "delta_label": "↑ 3 000",
       "trend": "up"
     }
   ],
-  "soins_from": "2026-08-14"
+  "soins_from": "2026-08-15"
 }

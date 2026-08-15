@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? On cartographiait la mort pour trouver la source du choléra",
-  "resume": "En 1854, un médecin londonien prend une carte, des punaises et une idée folle. Sans microscope ni analyse de sang, il va identifier la source d'une épidémie meurtrière. Et sauver des milliers de vies avec… de la statistique.",
-  "full_text": "Londres, quartier de Soho, été 1854. En dix jours, 500 personnes meurent du choléra dans un périmètre de quelques rues. La puanteur est insupportable. Les médecins de l'époque sont formels : c'est l'air vicié, les « miasmes », qui tuent. Tout le monde le sait. Tout le monde a tort.\n\nJohn Snow, lui, n'y croit pas. Ce médecin de 41 ans, pionnier de l'anesthésie, a une autre théorie : l'eau. Pas l'air. L'eau. Alors il fait quelque chose de révolutionnaire pour l'époque : il sort dans la rue, il frappe aux portes, il pose des questions. Qui est mort ? Où habitait-il ? Où puisait-il son eau ?\n\nIl reporte chaque décès sur une carte du quartier. Punaise après punaise. Et là, le motif apparaît clairement : les morts se concentrent autour d'une seule pompe à eau, Broad Street. C'est le premier cluster épidémique de l'histoire moderne. Sauf que personne ne connaît encore ce mot.\n\nLe twist ? L'eau de cette pompe avait l'air parfaitement claire. Ni odeur, ni couleur suspecte. Les habitants la trouvaient même meilleure que les autres. Et une brasserie toute proche, dont les ouvriers buvaient de la bière toute la journée et jamais d'eau, n'avait enregistré aucun mort. Coïncidence ?\n\nSnow convainc les autorités locales de retirer la poignée de la pompe. En 24 heures, l'épidémie s'effondre. Sans vaccin, sans médicament, sans comprendre encore ce qu'est une bactérie. Juste de l'observation rigoureuse et une carte.\n\nAujourd'hui, ce travail de John Snow est considéré comme l'acte fondateur de l'épidémiologie moderne. La méthode qu'on utilise encore pour tracer les clusters de Covid, de salmonellose ou de légionellose dans un hôpital, c'est la sienne. Chaque fois qu'un ARS enquête sur une toxi-infection collective après une fête de village, Snow est quelque part dans la pièce.",
-  "image_keywords": "cholera map London",
+  "titre": "Le saviez-vous ? Le premier remède contre la dépression était de l'opium pour dames",
+  "resume": "Au XIXe siècle, la mélancolie n'était pas une maladie, c'était une faiblesse de caractère. Et le traitement ? Un sirop d'opium parfumé à la cerise, vendu sans ordonnance chez le pharmacien du coin. Bienvenue dans l'âge d'or de la dépendance recommandée par le corps médical.",
+  "full_text": "1850. Une femme entre chez son pharmacien, les traits tirés, l'humeur sombre, incapable de se lever le matin. Le médecin a posé son diagnostic : neurasthénie. Traduction de l'époque : trop de sentiments, pas assez de volonté.\n\nL'ordonnance ? Du laudanum. Un mélange d'opium dissous dans de l'alcool, agrémenté d'épices et parfois de sucre pour faire passer le goût. Inventé au XVIe siècle par Paracelse, ce liquide brun sombre était LE remède universel. Douleurs, toux, insomnies, angoisses, crampes menstruelles... le laudanum réglait tout ça en vingt minutes chrono.\n\nEt voilà le twist : c'était massivement prescrit aux femmes. Bien plus qu'aux hommes. Pourquoi ? Parce que la médecine victorienne estimait que la femme était naturellement plus « fragile nerveusement ». Du coup, les pharmacies anglaises et américaines vendaient des préparations entières ciblées sur elles. Mrs Winslow's Soothing Syrup, Godfrey's Cordial, Ayer's Cherry Pectoral... des noms charmants pour des bouteilles bourrées d'opium pur.\n\nRésultat ? Des millions de femmes de la classe moyenne britannique et américaine sont devenues dépendantes sans le savoir. Sans jamais avoir l'impression de « se droguer ». Elles prenaient juste leur remède du soir. Certains médecins parlaient de 10 à 15 % des femmes adultes en état de dépendance chronique à la fin du XIXe siècle.\n\nC'est la loi Harrison de 1914 aux États-Unis, puis des réglementations similaires en Europe, qui ont mis fin à cette vente libre. L'opium a disparu des rayons. Mais la dépression, elle, est restée sans traitement sérieux jusqu'aux années 1950 et la découverte accidentelle des premiers antidépresseurs.\n\nAujourd'hui, quand un patient vient au comptoir chercher son antidépresseur avec une ordonnance, un suivi, un bilan - c'est pas de la bureaucratie. C'est 150 ans d'erreurs qu'on essaie de ne pas répéter.",
+  "image_keywords": "victorian pharmacy bottles",
   "tags": [
     "histoire",
-    "epidemie",
-    "diagnostic",
-    "epidemiologie",
-    "cholera"
+    "medicament",
+    "psychiatrie",
+    "poison",
+    "pharmacie"
   ],
-  "date": "2026-08-14",
+  "date": "2026-08-15",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",
