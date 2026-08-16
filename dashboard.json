@@ -1,44 +1,44 @@
 {
- "genere_le": "2026-08-15T05:32:33+02:00",
+ "genere_le": "2026-08-16T05:40:21+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1065,
- "nouveaux_7j": 27,
- "nouveaux_cumul": 1058,
+ "abonnes_total": 1068,
+ "nouveaux_7j": 28,
+ "nouveaux_cumul": 1061,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-08-08",
-  "au": "2026-08-15",
-  "delivres": 6712,
-  "ouvertures": 2335,
-  "ouvertures_uniques": 1851,
-  "clics": 2800,
-  "clics_uniques": 507,
-  "taux_ouverture_pct": 27.6,
-  "taux_clic_pct": 7.6,
-  "ctor_pct": 27.4,
+  "du": "2026-08-09",
+  "au": "2026-08-16",
+  "delivres": 5790,
+  "ouvertures": 2285,
+  "ouvertures_uniques": 1798,
+  "clics": 2625,
+  "clics_uniques": 491,
+  "taux_ouverture_pct": 31.1,
+  "taux_clic_pct": 8.5,
+  "ctor_pct": 27.3,
   "top_articles": [
    {
     "id": "actu_2026_08_12_1",
     "titre": "Officines : CA en hausse, rentabilité en chute libre. On t'explique.",
     "date": "2026-08-12",
     "categorie": "pharma_france",
-    "clics": 99,
-    "lecteurs": 70
+    "clics": 101,
+    "lecteurs": 71
    },
    {
     "id": "actu_2026_08_12_2",
     "titre": "Statines chez les plus de 75 ans, les arrêter peut être sans risque. Ce que dit le Lancet.",
     "date": "2026-08-12",
     "categorie": "pharma_monde",
-    "clics": 85,
-    "lecteurs": 56
+    "clics": 89,
+    "lecteurs": 57
    },
    {
     "id": "actu_2026_08_10_1",
     "titre": "Culottes menstruelles remboursées : les prix sont fixés, le comptoir est prêt",
     "date": "2026-08-10",
     "categorie": "pharma_france",
-    "clics": 87,
+    "clics": 89,
     "lecteurs": 54
    },
    {
@@ -46,8 +46,16 @@
     "titre": "Sanofi en rupture sur deux traitements de la maladie de Pompe : les patients tirent la sonnette",
     "date": "2026-08-10",
     "categorie": "pharma_monde",
-    "clics": 88,
+    "clics": 90,
     "lecteurs": 51
+   },
+   {
+    "id": "actu_2026_08_11_1",
+    "titre": "Officines fragiles : le seuil à 1,80 M€ de CA qui fait froid dans le dos",
+    "date": "2026-08-11",
+    "categorie": "pharma_france",
+    "clics": 83,
+    "lecteurs": 42
    },
    {
     "id": "actu_2026_08_12_3",
@@ -58,58 +66,50 @@
     "lecteurs": 42
    },
    {
-    "id": "actu_2026_08_11_1",
-    "titre": "Officines fragiles : le seuil à 1,80 M€ de CA qui fait froid dans le dos",
-    "date": "2026-08-11",
-    "categorie": "pharma_france",
-    "clics": 81,
-    "lecteurs": 41
-   },
-   {
-    "id": "actu_2026_08_08_5",
-    "titre": "Super-pharmacies : 800 fermetures en 3 ans, qui ramasse la mise ?",
-    "date": "2026-08-08",
-    "categorie": "business_officine",
-    "clics": 58,
-    "lecteurs": 37
-   },
-   {
-    "id": "actu_2026_08_08_1",
-    "titre": "Culottes menstruelles remboursées : ce qui change dès le 1er octobre",
-    "date": "2026-08-08",
-    "categorie": "pharma_france",
-    "clics": 56,
-    "lecteurs": 37
-   },
-   {
     "id": "actu_2026_08_12_5",
     "titre": "Canicule à l'officine : 3 missions rémunérées à ne pas rater cet été",
     "date": "2026-08-12",
     "categorie": "business_officine",
-    "clics": 45,
-    "lecteurs": 34
+    "clics": 49,
+    "lecteurs": 36
    },
    {
     "id": "actu_2026_08_14_1",
     "titre": "Cyprotérone 50 mg sort du TFR : ce que ça change au comptoir dès septembre",
     "date": "2026-08-14",
     "categorie": "pharma_france",
-    "clics": 45,
-    "lecteurs": 33
+    "clics": 47,
+    "lecteurs": 34
+   },
+   {
+    "id": "actu_2026_08_15_3",
+    "titre": "VRS 2026-2027 : la campagne démarre, ton rôle est central",
+    "date": "2026-08-15",
+    "categorie": "bonne_nouvelle",
+    "clics": 55,
+    "lecteurs": 32
+   },
+   {
+    "id": "actu_2026_08_13_2",
+    "titre": "Trump torpille le calendrier vaccinal : ce que ca change pour nous",
+    "date": "2026-08-13",
+    "categorie": "pharma_monde",
+    "clics": 52,
+    "lecteurs": 31
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-08-15",
-  "delivres": 80248,
-  "ouvertures": 31900,
-  "ouvertures_uniques": 22084,
-  "clics": 32720,
-  "clics_uniques": 5870,
-  "taux_ouverture_pct": 27.5,
+  "au": "2026-08-16",
+  "delivres": 80255,
+  "ouvertures": 32104,
+  "ouvertures_uniques": 22205,
+  "clics": 32798,
+  "clics_uniques": 5895,
+  "taux_ouverture_pct": 27.7,
   "taux_clic_pct": 7.3,
-  "ctor_pct": 26.6,
+  "ctor_pct": 26.5,
   "top_articles": [
    {
     "id": "actu_2026_06_18_1",
@@ -132,8 +132,8 @@
     "titre": "Officines : CA en hausse, rentabilité en chute libre. On t'explique.",
     "date": "2026-08-12",
     "categorie": "pharma_france",
-    "clics": 99,
-    "lecteurs": 70
+    "clics": 101,
+    "lecteurs": 71
    },
    {
     "id": "actu_2026_06_23_2",
