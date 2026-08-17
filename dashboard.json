@@ -1,21 +1,21 @@
 {
- "genere_le": "2026-08-16T05:40:21+02:00",
+ "genere_le": "2026-08-17T05:41:53+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1068,
- "nouveaux_7j": 28,
- "nouveaux_cumul": 1061,
+ "abonnes_total": 1072,
+ "nouveaux_7j": 29,
+ "nouveaux_cumul": 1065,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-08-09",
-  "au": "2026-08-16",
-  "delivres": 5790,
-  "ouvertures": 2285,
-  "ouvertures_uniques": 1798,
-  "clics": 2625,
-  "clics_uniques": 491,
-  "taux_ouverture_pct": 31.1,
-  "taux_clic_pct": 8.5,
-  "ctor_pct": 27.3,
+  "du": "2026-08-10",
+  "au": "2026-08-17",
+  "delivres": 6904,
+  "ouvertures": 2432,
+  "ouvertures_uniques": 1920,
+  "clics": 2996,
+  "clics_uniques": 537,
+  "taux_ouverture_pct": 27.8,
+  "taux_clic_pct": 7.8,
+  "ctor_pct": 28.0,
   "top_articles": [
    {
     "id": "actu_2026_08_12_1",
@@ -54,7 +54,7 @@
     "titre": "Officines fragiles : le seuil à 1,80 M€ de CA qui fait froid dans le dos",
     "date": "2026-08-11",
     "categorie": "pharma_france",
-    "clics": 83,
+    "clics": 85,
     "lecteurs": 42
    },
    {
@@ -66,50 +66,50 @@
     "lecteurs": 42
    },
    {
-    "id": "actu_2026_08_12_5",
-    "titre": "Canicule à l'officine : 3 missions rémunérées à ne pas rater cet été",
-    "date": "2026-08-12",
-    "categorie": "business_officine",
-    "clics": 49,
-    "lecteurs": 36
-   },
-   {
-    "id": "actu_2026_08_14_1",
-    "titre": "Cyprotérone 50 mg sort du TFR : ce que ça change au comptoir dès septembre",
-    "date": "2026-08-14",
-    "categorie": "pharma_france",
-    "clics": 47,
-    "lecteurs": 34
-   },
-   {
     "id": "actu_2026_08_15_3",
     "titre": "VRS 2026-2027 : la campagne démarre, ton rôle est central",
     "date": "2026-08-15",
     "categorie": "bonne_nouvelle",
-    "clics": 55,
-    "lecteurs": 32
+    "clics": 66,
+    "lecteurs": 41
    },
    {
-    "id": "actu_2026_08_13_2",
-    "titre": "Trump torpille le calendrier vaccinal : ce que ca change pour nous",
-    "date": "2026-08-13",
+    "id": "actu_2026_08_15_1",
+    "titre": "Bicafres en rupture : la prépa magistrale remboursée, c'est maintenant possible",
+    "date": "2026-08-15",
+    "categorie": "pharma_france",
+    "clics": 63,
+    "lecteurs": 40
+   },
+   {
+    "id": "actu_2026_08_15_2",
+    "titre": "Les pédiatres américains contre le fearmongering anti-vaccins : leçon pour l'officine française",
+    "date": "2026-08-15",
     "categorie": "pharma_monde",
-    "clics": 52,
-    "lecteurs": 31
+    "clics": 71,
+    "lecteurs": 39
+   },
+   {
+    "id": "actu_2026_08_12_5",
+    "titre": "Canicule à l'officine : 3 missions rémunérées à ne pas rater cet été",
+    "date": "2026-08-12",
+    "categorie": "business_officine",
+    "clics": 50,
+    "lecteurs": 37
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-08-16",
-  "delivres": 80255,
-  "ouvertures": 32104,
-  "ouvertures_uniques": 22205,
-  "clics": 32798,
-  "clics_uniques": 5895,
-  "taux_ouverture_pct": 27.7,
+  "au": "2026-08-17",
+  "delivres": 81369,
+  "ouvertures": 32312,
+  "ouvertures_uniques": 22381,
+  "clics": 33197,
+  "clics_uniques": 5952,
+  "taux_ouverture_pct": 27.5,
   "taux_clic_pct": 7.3,
-  "ctor_pct": 26.5,
+  "ctor_pct": 26.6,
   "top_articles": [
    {
     "id": "actu_2026_06_18_1",
