@@ -1,0 +1,60 @@
+{
+  "generated_at": "2026-08-17T04:09:10.025137+02:00",
+  "run_date": "2026-08-17",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_monde",
+      "titre": "Remboursement des startups santé féminine : le rapport qui fait mal aux investisseurs",
+      "resume": "Le Milken Institute tire la sonnette d'alarme : les startups spécialisées en santé des femmes se plantent sur le remboursement, faute d'anticiper les exigences de preuve des payeurs. Un constat qui résonne fort pour la santé féminine en France aussi. Ce que ça dit de notre modèle de prise en charge.",
+      "source": "MedCity News",
+      "source_url": "https://medcitynews.com/2026/08/the-reimbursement-challenges-hurting-womens-health-companies-per-milken-institute/",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "La pharmacie rurale passe en mode urgences de proximite, et ça marche",
+      "resume": "Un pharmacien titulaire en zone rurale devient une figure des réseaux sociaux... et surtout une vraie antichambre des urgences. Pas un gadget, une réalité de terrain qui valorise concrètement le rôle du pharmacien quand les déserts médicaux s'étendent. Une bonne nouvelle pour toute la profession.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/conseils/maux-du-quotidien/la-pharmacie-rurale-antichambre-des-urgences",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "avenir_pharma",
+      "titre": "Vogenx lève 81 millions pour une molécule dans une maladie sans traitement approuvé",
+      "resume": "Vogenx entre en bourse avec 81 millions de dollars pour tester le mizagliflozin en phase 2b dans l'hypoglycémie post-bariatrique, une pathologie orpheline de traitement approuvé. Un SGLT inhibiteur oral contre une complication méconnue mais croissante de la chirurgie de l'obésité. À surveiller de près.",
+      "source": "MedCity News",
+      "source_url": "https://medcitynews.com/2026/08/vogenx-ipo-post-bariatric-hypoglycemia-pbh-mizagliflozin-metabolic-disorder-vogx/",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Aide à mourir validée : ce que ça change concrètement pour ton officine",
+      "resume": "Le Conseil constitutionnel a validé le 14 août 2026 la loi créant un droit à l'aide à mourir. Pour les pharmaciens titulaires, ce texte ouvre un nouveau terrain réglementaire - et des questions business très concrètes sur la dispensation, la clause de conscience et la responsabil...",
+      "source": "Pharm'Actus · Le Monde Santé — Conseil constitutionnel valide la loi fin de vie (14/08/2026), Le Monde Santé — Fin de vie : trois réserves du Conseil constitutionnel (14/08/2026)",
+      "source_url": "https://www.lemonde.fr/societe/article/2026/08/14/le-conseil-constitutionnel-valide-la-loi-sur-la-fin-de-vie-les-etablissements-catholiques-obtiennent-leur-clause-de-conscience_6746261_3224.html",
+      "confidence_score": 0.62,
+      "warnings": [
+        "ATTENTION : les décrets d'application de la loi aide à mourir ne sont PAS encore publiés à la date de rédaction. Tout le raisonnement sur les circuits pharmaceutiques repose sur des scénarios hypothétiques, présentés comme tels dans l'article.",
+        "Le chiffre '30% des pharmaciens belges refusant de participer' provient d'une étude KU Leuven 2019 citée de mémoire — à vérifier avant publication. Si non vérifiable, supprimer ou reformuler qualitativement.",
+        "Le chiffre 'moins de 3 000 officines réalisant des préparations magistrales significatives' est une estimation ANSM citée approximativement — vérifier la source exacte ou reformuler 'selon les données disponibles de l'ANSM'.",
+        "Les fourchettes de CA liées aux préparations magistrales (15 000 à 40 000 €) sont des ordres de grandeur professionnels non sourcés dans un rapport public — présenter explicitement comme estimations terrain.",
+        "Ni la FSPF ni l'USPO n'avaient publié de position détaillée sur le volet pharmaceutique de cette loi à la date de rédaction — vérifier leurs sites avant publication et actualiser si nécessaire.",
+        "L'Ordre national des pharmaciens n'a pas encore statué sur la clause de conscience individuelle du pharmacien dans ce cadre légal — à surveiller avant publication.",
+        "Le délai '6 à 18 mois' pour les décrets d'application est une estimation prudente non sourcée officiellement.",
+        "5 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}
