@@ -1,0 +1,37 @@
+{
+  "generated_at": "2026-08-18T04:09:13.758392+02:00",
+  "run_date": "2026-08-18",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "Une antenne de pharmacie ouvre en Nouvelle-Aquitaine : le désert recule d'un kilomètre",
+      "resume": "Lévignac-de-Guyenne accueille la première antenne de pharmacie de Nouvelle-Aquitaine, deux ans après la fermeture de son officine. Rattachée à Duras, à 6 km, elle ouvre deux jours par semaine avec un pharmacien sur place. Une victoire concrète contre les déserts pharmaceutiques.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/une-premiere-antenne-pharmacie-ouvre-ses-portes-en-nouvelle-aquitaine-a-levignac-de-guyenne",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Obésité +25 % en 11 ans : le marché GLP-1 et conseil qui s'ouvre pour l'officine",
+      "resume": "Plus d'un adulte sur deux est désormais obèse en Polynésie française, contre 40 % il y a onze ans. Un signal avancé d'une tendance mondiale qui percute déjà l'officine métropolitaine : explosion du marché obésité, pression sur l'approvisionnement, et un rôle de conseil inédit à c...",
+      "source": "Pharm'Actus · Sciences et Avenir — Un adulte sur deux obèse : la Polynésie française tente d'enrayer le phénomène, Étude Obépi-Roche 2024 — Prévalence de l'obésité en France métropolitaine",
+      "source_url": "https://www.sciencesetavenir.fr/sante/un-adulte-sur-deux-obese-la-polynesie-francaise-tente-d-enrayer-le-phenomene_194297?xtor=RSS-16",
+      "confidence_score": 0.62,
+      "warnings": [
+        "Le chiffre de 400 M€ pour le marché compléments alimentaires minceur est une estimation IQVIA 2023 souvent citée dans la presse spécialisée, mais non vérifiable directement depuis un rapport public librement accessible — à confirmer avec les données IQVIA officines ou un syndicat professionnel.",
+        "La part de marché pharmacies à 35-40% est une estimation sectorielle non sourcée par un rapport officiel : décrit comme ordre de grandeur, ne pas présenter comme donnée certifiée.",
+        "Le benchmark de 8 000 € par officine/an sur le segment poids est une extrapolation indicative : ne pas le citer comme chiffre officiel sans source distributrices confirmée.",
+        "Le BPM à 60€ est conforme à l'avenant 21 de la convention pharmaceutique — à vérifier si un avenant plus récent a modifié ce tarif avant publication.",
+        "L'affirmation sur l'absence de remboursement des GLP-1 dans l'indication obésité hors protocoles est exacte à la date de rédaction mais la situation évolue rapidement : vérifier l'état du dossier HAS au moment de la publication.",
+        "Le chiffre Obépi-Roche 2024 (17% de prévalence obésité, 47% surpoids) est celui de la dernière édition disponible : confirmer qu'aucune mise à jour 2025-2026 n'a été publiée.",
+        "7 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

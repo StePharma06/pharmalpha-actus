@@ -1,64 +1,64 @@
 {
-  "generated_at": "2026-08-17",
-  "window_label": "11 aout au 17 aout 2026",
+  "generated_at": "2026-08-18",
+  "window_label": "12 aout au 18 aout 2026",
   "has_history": true,
   "delta_source": "pytrends_rising",
   "pathologies": [
     {
-      "display": "Ou trouver lunette éclipse solaire",
-      "delta_label": "↑ 21 550",
+      "display": "Eclipse fatigue",
+      "delta_label": "↑ 47 350",
       "trend": "up"
     },
     {
-      "display": "Ou trouver lunette éclipse solaire",
-      "delta_label": "↑ 21 050",
+      "display": "Allergie aout",
+      "delta_label": "↑ 35 200",
       "trend": "up"
     },
     {
       "display": "Vitamine b₁₂",
-      "delta_label": "↑ 14 000",
+      "delta_label": "↑ 18 650",
       "trend": "up"
     },
     {
-      "display": "Eloge de la fatigue",
-      "delta_label": "↑ 13 750",
+      "display": "Cure vitamine fatigue",
+      "delta_label": "↑ 16 550",
       "trend": "up"
     },
     {
-      "display": "Allergie a l'eau",
-      "delta_label": "↑ 13 300",
+      "display": "Lunette eclipse solaire",
+      "delta_label": "↑ 9 800",
       "trend": "up"
     }
   ],
   "soins": [
     {
       "display": "Azinc immunite",
-      "delta_label": "↑ 128 900",
+      "delta_label": "↑ 91 900",
       "trend": "up"
     },
     {
-      "display": "Digestion lente que faire",
-      "delta_label": "↑ 30 150",
+      "display": "Temps de digestion humain",
+      "delta_label": "↑ 40 350",
       "trend": "up"
     },
     {
-      "display": "Quies specific sommeil",
-      "delta_label": "↑ 13 950",
+      "display": "Maïs digestion",
+      "delta_label": "↑ 32 550",
       "trend": "up"
     },
     {
-      "display": "Pois chiche digestion",
-      "delta_label": "↑ 10 100",
+      "display": "Opérations spéciales lioness la douleur ",
+      "delta_label": "↑ 4 450",
       "trend": "up"
     },
     {
       "display": "Implant apnée du sommeil",
-      "delta_label": "↑ 8 400",
+      "delta_label": "↑ 4 300",
       "trend": "up"
     }
   ],
   "pathologies_stale": false,
-  "pathologies_from": "2026-08-17",
+  "pathologies_from": "2026-08-18",
   "soins_stale": false,
-  "soins_from": "2026-08-17"
+  "soins_from": "2026-08-18"
 }
