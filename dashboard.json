@@ -1,21 +1,21 @@
 {
- "genere_le": "2026-08-18T05:37:05+02:00",
+ "genere_le": "2026-08-19T05:39:14+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1077,
- "nouveaux_7j": 29,
- "nouveaux_cumul": 1070,
+ "abonnes_total": 1083,
+ "nouveaux_7j": 28,
+ "nouveaux_cumul": 1076,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-08-11",
-  "au": "2026-08-18",
-  "delivres": 6787,
-  "ouvertures": 2459,
-  "ouvertures_uniques": 1895,
-  "clics": 2813,
-  "clics_uniques": 538,
-  "taux_ouverture_pct": 27.9,
-  "taux_clic_pct": 7.9,
-  "ctor_pct": 28.4,
+  "du": "2026-08-12",
+  "au": "2026-08-19",
+  "delivres": 6811,
+  "ouvertures": 2382,
+  "ouvertures_uniques": 1825,
+  "clics": 2754,
+  "clics_uniques": 527,
+  "taux_ouverture_pct": 26.8,
+  "taux_clic_pct": 7.7,
+  "ctor_pct": 28.9,
   "top_articles": [
    {
     "id": "actu_2026_08_12_1",
@@ -46,16 +46,8 @@
     "titre": "Bicafres en rupture : la prépa magistrale remboursée, c'est maintenant possible",
     "date": "2026-08-15",
     "categorie": "pharma_france",
-    "clics": 71,
-    "lecteurs": 46
-   },
-   {
-    "id": "actu_2026_08_11_1",
-    "titre": "Officines fragiles : le seuil à 1,80 M€ de CA qui fait froid dans le dos",
-    "date": "2026-08-11",
-    "categorie": "pharma_france",
-    "clics": 86,
-    "lecteurs": 43
+    "clics": 72,
+    "lecteurs": 47
    },
    {
     "id": "actu_2026_08_12_3",
@@ -63,6 +55,14 @@
     "date": "2026-08-12",
     "categorie": "bonne_nouvelle",
     "clics": 65,
+    "lecteurs": 43
+   },
+   {
+    "id": "actu_2026_08_17_1",
+    "titre": "Désogestrel et étonogestrel : le signal méningiome passe à la vitesse supérieure",
+    "date": "2026-08-17",
+    "categorie": "pharma_france",
+    "clics": 63,
     "lecteurs": 43
    },
    {
@@ -74,20 +74,20 @@
     "lecteurs": 40
    },
    {
-    "id": "actu_2026_08_17_1",
-    "titre": "Désogestrel et étonogestrel : le signal méningiome passe à la vitesse supérieure",
-    "date": "2026-08-17",
-    "categorie": "pharma_france",
-    "clics": 60,
-    "lecteurs": 40
-   },
-   {
     "id": "actu_2026_08_12_5",
     "titre": "Canicule à l'officine : 3 missions rémunérées à ne pas rater cet été",
     "date": "2026-08-12",
     "categorie": "business_officine",
     "clics": 56,
     "lecteurs": 40
+   },
+   {
+    "id": "actu_2026_08_18_2",
+    "titre": "Sanofi licencie 229 personnes au Massachusetts, un an après Blueprint",
+    "date": "2026-08-18",
+    "categorie": "pharma_monde",
+    "clics": 58,
+    "lecteurs": 36
    },
    {
     "id": "actu_2026_08_14_1",
@@ -101,12 +101,12 @@
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-08-18",
-  "delivres": 82331,
-  "ouvertures": 32848,
-  "ouvertures_uniques": 22729,
-  "clics": 33632,
-  "clics_uniques": 6065,
+  "au": "2026-08-19",
+  "delivres": 83291,
+  "ouvertures": 33217,
+  "ouvertures_uniques": 22980,
+  "clics": 34004,
+  "clics_uniques": 6135,
   "taux_ouverture_pct": 27.6,
   "taux_clic_pct": 7.4,
   "ctor_pct": 26.7,
