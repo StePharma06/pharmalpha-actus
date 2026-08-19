@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-18",
-  "window_label": "12 aout au 18 aout 2026",
+  "generated_at": "2026-08-19",
+  "window_label": "13 aout au 19 aout 2026",
   "has_history": true,
   "delta_source": "pytrends_rising",
   "pathologies": [
@@ -32,33 +32,33 @@
   ],
   "soins": [
     {
+      "display": "Temps de digestion des aliments",
+      "delta_label": "↑ 56 850",
+      "trend": "up"
+    },
+    {
+      "display": "Menthe poivrée digestion",
+      "delta_label": "↑ 40 600",
+      "trend": "up"
+    },
+    {
       "display": "Azinc immunite",
-      "delta_label": "↑ 91 900",
+      "delta_label": "↑ 37 850",
       "trend": "up"
     },
     {
-      "display": "Temps de digestion humain",
-      "delta_label": "↑ 40 350",
+      "display": "Fleur de bach sommeil enfant",
+      "delta_label": "↑ 10 400",
       "trend": "up"
     },
     {
-      "display": "Maïs digestion",
-      "delta_label": "↑ 32 550",
-      "trend": "up"
-    },
-    {
-      "display": "Opérations spéciales lioness la douleur ",
-      "delta_label": "↑ 4 450",
-      "trend": "up"
-    },
-    {
-      "display": "Implant apnée du sommeil",
-      "delta_label": "↑ 4 300",
+      "display": "Fabien olicard sommeil",
+      "delta_label": "↑ 9 000",
       "trend": "up"
     }
   ],
   "pathologies_stale": false,
-  "pathologies_from": "2026-08-18",
+  "pathologies_from": "2026-08-19",
   "soins_stale": false,
-  "soins_from": "2026-08-18"
+  "soins_from": "2026-08-19"
 }

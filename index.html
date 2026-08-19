@@ -31,7 +31,7 @@
      l'image n'est decouverte qu'apres execution du JS qui construit les cards
      (le <img> n'existe qu'a l'interieur d'un template literal JS, invisible au
      preload scanner) -> LCP non deterministe, cf. sprint perf 2026-07-27. -->
-<link rel="preload" as="image" href="assets/img_actu_2026_08_18_1.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="assets/img_actu_2026_08_19_1.jpg" fetchpriority="high">
 
 <!-- Font cohesion site principal -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1737,7 +1737,7 @@ body.pa-has-nav #actusHeader {
 </div>
 
 <!-- EXPRESSION DU JOUR (injectée par update_actus.py à chaque run) -->
-<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Euphorisant</h2><p class="expression-corps">Du nom d'Euphorbos, médecin du roi Juba Ier de Mauritanie au Ier siècle av. J.-C. La plante <em>Euphorbia</em> fut baptisée en son honneur. Son latex, fortement irritant, provoquait paradoxalement une sensation d'euphorie transitoire - d'où <em>euphorisant</em> pour toute substance qui procure un bien-être artificiel.</p></aside>
+<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Chronique (maladie ou article)</h2><p class="expression-corps">Du grec <em>khronos</em>, le temps. En médecine grecque, une maladie <em>chronique</em> durait dans le temps, par opposition à une maladie <em>aiguë</em> (soudaine et intense). Les journalistes du XVIIIe siècle ont emprunté le terme pour désigner leurs articles réguliers - textes qui reviennent périodiquement, comme une maladie chronique.</p></aside>
 
 <!-- ESPACE PARTENAIRE 1 (entre Expression du jour et Aujourd'hui).
      Statique : reste visible meme si le JS ne s'execute pas. Le 2e emplacement
@@ -1762,12 +1762,12 @@ body.pa-has-nav #actusHeader {
 <div id="articles-container"></div>
 
 <!-- MARQUE_TENDANCE (injectee par le pipeline hebdo, remplacee quotidiennement) -->
-<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">12 aout au 18 aout 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Eclipse fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 47 350</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Azinc immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 91 900</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie aout</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 35 200</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Temps de digestion humain</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 40 350</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Vitamine b₁₂</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 18 650</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Maïs digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 32 550</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Cure vitamine fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 16 550</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Opérations spéciales lioness la douleur </td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 4 450</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Lunette eclipse solaire</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 9 800</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Implant apnée du sommeil</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 4 300</td></tr>
+<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">13 aout au 19 aout 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Eclipse fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 47 350</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Temps de digestion des aliments</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 56 850</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie aout</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 35 200</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Menthe poivrée digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 40 600</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Vitamine b₁₂</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 18 650</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Azinc immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 37 850</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Cure vitamine fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 16 550</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Fleur de bach sommeil enfant</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 10 400</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Lunette eclipse solaire</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 9 800</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Fabien olicard sommeil</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 9 000</td></tr>
 </tbody></table></div><p style="margin:10px 0 0;font-size:11px;color:#9ca3af;font-style:italic;">Indice de tendance : intensite de hausse Google Trends (non comparable a un volume absolu).</p><p style="margin:12px 0 0;font-size:11px;color:#9ca3af;text-align:right;">Source&nbsp;: Google Trends France (pytrends) &middot; 7 jours glissants</p></section></div>
 
 <!-- ARCHIVES CTA -->
@@ -1918,6 +1918,90 @@ body.pa-has-nav #actusHeader {
 // Mis a jour automatiquement par n8n chaque semaine
 // ============================================================
 const ARTICLES = [
+{
+    id: "actu_2026_08_19_1",
+    date: "2026-08-19",
+    type: "actu",
+    categorie: "pharma_france",
+    titre: "Loi aide à mourir : ce que ça change concrètement à l'officine",
+    resume: "La loi relative au droit à l'aide à mourir est promulguée au JO du 19 août 2026. Le pharmacien d'officine va devenir un acteur incontournable de ce nouveau dispositif. Voici ce qu'il faut déjà anticiper.",
+    source: "LegiRSS Pharmacie / Le Monde Santé",
+    source_url: "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054706877",
+    tiktok_url: "",
+    badge_label: "Pharma France",
+    image_url: "assets/img_actu_2026_08_19_1.jpg",
+    tags: ["aide-a-mourir", "loi", "officine", "dispensation", "clause-de-conscience"]
+  },
+{
+    id: "actu_2026_08_19_2",
+    date: "2026-08-19",
+    type: "actu",
+    categorie: "pharma_monde",
+    titre: "FDA : Trump mise sur Heidi Overton, une novice aux commandes du gendarme du médicament mondial",
+    resume: "Trump s'apprête à nommer Heidi Overton, médecin et conseillère à la Maison-Blanche, à la tête de la FDA. Pas de background réglementaire pharma, pas d'expérience d'agence : un choix politique assumé qui fait tiquer l'industrie. Et qui aura des répercussions bien au-delà des États-Unis.",
+    source: "STAT News",
+    source_url: "https://www.statnews.com/2026/08/18/heidi-overton-fda-commissioner-nominee-white-house-adviser/?utm_campaign=rss",
+    tiktok_url: "",
+    badge_label: "Pharma Monde",
+    image_url: "assets/img_actu_2026_08_19_2.jpg",
+    tags: ["fda", "reglementation", "ema", "nomination", "pipeline"]
+  },
+{
+    id: "actu_2026_08_19_3",
+    date: "2026-08-19",
+    type: "actu",
+    categorie: "bonne_nouvelle",
+    titre: "Antenne pharmaceutique en Nouvelle-Aquitaine : le modèle qui lutte contre la désertification",
+    resume: "La 9e antenne officinale de France a ouvert le 11 août à Lévignac-de-Guyenne. Deux jours par semaine, un titulaire assure la permanence dans un territoire qui n'aurait autrement aucun accès au médicament. La preuve que le modèle fonctionne.",
+    source: "Le Quotidien du Pharmacien",
+    source_url: "http://www.lequotidiendupharmacien.fr/exercice-pro/ouverture-dune-antenne-en-nouvelle-aquitaine-les-lecons-des-premiers-jours-douverture",
+    tiktok_url: "",
+    badge_label: "La bonne nouvelle",
+    image_url: "assets/img_actu_2026_08_19_3.jpg",
+    tags: ["desertification", "antenne", "ars", "acces-aux-soins", "officine"]
+  },
+{
+    id: "actu_2026_08_19_4",
+    date: "2026-08-19",
+    type: "actu",
+    categorie: "avenir_pharma",
+    titre: "Vaccin anti-Lyme de Pfizer et Valneva : l'EMA accepte le dossier, l'évaluation peut commencer",
+    resume: "L'EMA a validé la recevabilité du dossier de demande d'AMM pour le PF-07307405, le candidat-vaccin contre la maladie de Lyme co-développé par Pfizer et Valneva. Ce n'est pas encore une approbation, mais c'est l'entrée dans la dernière ligne droite réglementaire.",
+    source: "Le Moniteur des Pharmacies",
+    source_url: "https://www.lemoniteurdespharmacies.fr/business/laboratoires/maladie-de-lyme-pfizer-et-valneva-franchissent-une-nouvelle-etape-reglementaire-avec-leur-candidat-vaccin",
+    tiktok_url: "",
+    badge_label: "L'avenir de la pharma",
+    image_url: "assets/img_actu_2026_08_19_4.jpg",
+    tags: ["vaccin", "lyme", "ema", "amm", "valneva"]
+  },
+{
+    id: "actu_2026_08_19_5",
+    date: "2026-08-19",
+    type: "actu",
+    categorie: "business_officine",
+    titre: "Incendies 2026 : ce que l'officine peut récupérer concrètement",
+    resume: "Des pharmacies sinistrées par les feux de forêt de l'été 2026, et un dispositif de soutien qui existe mais que peu de titulaires connaissent. L'USPO vient de publier un guide pratique des démarches. Voici le décryptage business.",
+    source: "Pharm'Actus · USPO — Guide pratique incendies de forêt 2026 : démarches et aides pour les officines, IQVIA Pharmastat — Chiffres structurels réseau officinal, juin 2026",
+    source_url: "https://uspo.fr/incendies-de-foret-2026/",
+    tiktok_url: "",
+    badge_label: "Business",
+    image_url: "assets/img_actu_2026_08_19_5.jpg",
+    tags: ["sinistre", "gestion-de-crise", "assurance", "officine"]
+  },
+{
+    id: "lsv_2026_08_19",
+    date: "2026-08-19",
+    type: "lsv",
+    categorie: "lsv",
+    titre: "Le saviez-vous ? On guérissait l'ulcère en buvant du plâtre liquide",
+    resume: "Pendant des décennies, les gastro-entérologues juraient que l'ulcère gastrique était une maladie du stress. Un Australien a tout remis en question en avalant un verre de bactéries. Et il a failli finir aux urgences.",
+    source: "Pharm'Alpha",
+    source_url: "",
+    tiktok_url: "",
+    badge_label: "Le Saviez-Vous",
+    image_url: "assets/img_lsv_2026_08_19.jpg",
+    tags: ["histoire", "decouverte", "bacterie", "medicament", "gastro"]
+  },
 {
     id: "actu_2026_08_18_1",
     date: "2026-08-18",
@@ -2533,90 +2617,6 @@ const ARTICLES = [
     badge_label: "Pharma Monde",
     image_url: "assets/img_actu_2026_08_10_2.jpg",
     tags: ["rupture", "maladie-rare", "sanofi", "ansm", "enzymotherapie"]
-  },
-{
-    id: "actu_2026_08_10_3",
-    date: "2026-08-10",
-    type: "actu",
-    categorie: "bonne_nouvelle",
-    titre: "Chikungunya, dengue, West Nile en France : cinq foyers, ton comptoir est en première ligne",
-    resume: "Santé publique France recense cinq épisodes de transmission autochtone d'arboviroses au 3 août 2026 : trois foyers de chikungunya dans le Tarn et la Gironde, deux cas de dengue. Le moustique tigre est là, et les patients vont te demander quoi faire.",
-    source: "Le Moniteur des Pharmacies",
-    source_url: "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/chikungunya-dengue-west-nile-nouveaux-foyers-autochtones-vigilance-renforcee-pour-les-pharmaciens",
-    tiktok_url: "",
-    badge_label: "La bonne nouvelle",
-    image_url: "assets/img_actu_2026_08_10_3.jpg",
-    tags: ["arbovirose", "dengue", "chikungunya", "prevention", "conseil-officinal"]
-  },
-{
-    id: "actu_2026_08_10_4",
-    date: "2026-08-10",
-    type: "actu",
-    categorie: "avenir_pharma",
-    titre: "346 millions de dollars pour un anti-douleur non-opioïde : la course est lancée",
-    resume: "Latigo Biotherapeutics lève 346 millions de dollars en IPO pour développer un inhibiteur Nav1.8, une nouvelle classe d'antalgiques non-opioïdes en phase pivot. Si ça marche, c'est une révolution dans la gestion de la douleur chronique à l'officine.",
-    source: "MedCity News",
-    source_url: "https://medcitynews.com/2026/08/latigo-ipo-non-opioid-pain-drug-nav1-8-inhibitor-ltgo-blossomhill-lung-cancer-c797s-blsm/",
-    tiktok_url: "",
-    badge_label: "L'avenir de la pharma",
-    image_url: "assets/img_actu_2026_08_10_4.jpg",
-    tags: ["douleur", "antalgique", "opioides", "innovation", "recherche"]
-  },
-{
-    id: "actu_2026_08_10_5",
-    date: "2026-08-10",
-    type: "actu",
-    categorie: "business_officine",
-    titre: "Préparateurs en pharmacie hospitalière : une revalorisation qui rebat les cartes du recrutement officinal",
-    resume: "Un arrêté du 7 août 2026 ouvre l'accès aux indemnités pour travaux supplémentaires aux préparateurs en pharmacie hospitalière. Signal faible mais conséquence directe : la guerre des talents entre hôpital et officine s'intensifie.",
-    source: "Pharm'Actus · Arrêté du 7 août 2026 modifiant l'arrêté du 25 avril 2002 — Légifrance, IQVIA Pharmastat — Données réseau officinal juin 2026 (cité via chiffres structurels Pharm'Actus)",
-    source_url: "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054646603",
-    tiktok_url: "",
-    badge_label: "Business",
-    image_url: "assets/img_actu_2026_08_10_5.jpg",
-    tags: ["recrutement", "preparateurs", "ressources-humaines", "reglementation"]
-  },
-{
-    id: "lsv_2026_08_10",
-    date: "2026-08-10",
-    type: "lsv",
-    categorie: "lsv",
-    titre: "Le saviez-vous ? La première banque d'yeux fonctionnait dans un frigo de boucherie",
-    resume: "En 1944, un ophtalmologue new-yorkais a eu une idée folle : conserver des cornées humaines pour les greffer à la demande. Son labo de fortune ? Une glacière empruntée à un boucher du quartier. Et pourtant, ça a tout changé.",
-    source: "Pharm'Alpha",
-    source_url: "",
-    tiktok_url: "",
-    badge_label: "Le Saviez-Vous",
-    image_url: "assets/img_lsv_2026_08_10.jpg",
-    tags: ["histoire", "chirurgie", "greffe", "ophtalmologie", "decouverte"]
-  },
-{
-    id: "actu_2026_08_08_1",
-    date: "2026-08-08",
-    type: "actu",
-    categorie: "pharma_france",
-    titre: "Culottes menstruelles remboursées : ce qui change dès le 1er octobre",
-    resume: "L'arrêté est paru au JO le 7 août 2026 : dès le 1er octobre, tu dispenseras des culottes menstruelles et des coupes menstruelles remboursées. Les prix sont fixés à 19 € TTC pour la culotte, 15,80 € TTC pour la coupe. Concrètement, c'est une nouvelle ligne de dispensation obligatoire en officine, avec un cahier des charges produit à maîtriser.",
-    source: "USPO",
-    source_url: "https://uspo.fr/prise-en-charge-des-protections-periodiques-reutilisables-2/",
-    tiktok_url: "",
-    badge_label: "Pharma France",
-    image_url: "assets/img_actu_2026_08_08_1.jpg",
-    tags: ["remboursement", "officine", "protections-periodiques", "has", "arrête"]
-  },
-{
-    id: "actu_2026_08_08_2",
-    date: "2026-08-08",
-    type: "actu",
-    categorie: "pharma_monde",
-    titre: "Obésité : les comprimés GLP-1 arrivent, l'Europe se prépare",
-    resume: "Novo Nordisk et Eli Lilly misent désormais sur des formes orales de leurs amaigrissants après le succès des injectables. Les premières autorisations tombent aux États-Unis. Pour les pharmaciens français, une déferlante de nouveaux dosages oraux se profile, avec toutes les questions de substitution, de tension d'approvisionnement et d'accompagnement patient que ça implique.",
-    source: "Le Monde",
-    source_url: "https://www.lemonde.fr/economie/article/2026/08/07/les-comprimes-nouveau-champ-de-bataille-des-medicaments-contre-l-obesite_6740460_3234.html",
-    tiktok_url: "",
-    badge_label: "Pharma Monde",
-    image_url: "assets/img_actu_2026_08_08_2.jpg",
-    tags: ["glp-1", "obesite", "innovation", "ema", "galenique"]
   }
 ];
 

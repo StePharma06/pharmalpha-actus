@@ -1,0 +1,26 @@
+{
+  "generated_at": "2026-08-19T04:11:44.126145+02:00",
+  "run_date": "2026-08-19",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Incendies 2026 : ce que l'officine peut récupérer concrètement",
+      "resume": "Des pharmacies sinistrées par les feux de forêt de l'été 2026, et un dispositif de soutien qui existe mais que peu de titulaires connaissent. L'USPO vient de publier un guide pratique des démarches. Voici le décryptage business.",
+      "source": "Pharm'Actus · USPO — Guide pratique incendies de forêt 2026 : démarches et aides pour les officines, IQVIA Pharmastat — Chiffres structurels réseau officinal, juin 2026",
+      "source_url": "https://uspo.fr/incendies-de-foret-2026/",
+      "confidence_score": 0.62,
+      "warnings": [
+        "Le guide USPO est mentionné mais son contenu précis (liste exhaustive des dispositifs cités) n'est pas accessible dans le résumé de l'article fourni : les dispositifs détaillés dans l'analyse (URSSAF, catastrophe naturelle, PE) sont des éléments réglementaires généraux, vérifiables mais non issus textuellement du guide USPO.",
+        "Le chiffre de 52 000 € de perte sur 15 jours est une extrapolation du CA moyen IQVIA (1,28 M€ / 365 * 15). Il est présenté comme un ordre de grandeur illustratif, non comme un chiffre source direct — à mentionner en transparence si republié.",
+        "Le pourcentage charges de personnel (20-25 % du CA) est une estimation sectorielle DREES/SISPEA : vérifier la dernière édition du rapport SISPEA disponible pour confirmer l'ordre de grandeur exact.",
+        "Les positions FSPF et UPGF sur ce sujet précis sont présentées comme absentes de leurs sites à ce jour : à vérifier en temps réel avant publication.",
+        "Le délai de 10 jours pour déclaration catastrophe naturelle est le délai légal standard (code des assurances L.125-1) : vérifier qu'aucune modification réglementaire récente n'a changé ce délai.",
+        "KLESIA et AGRICA sont cités comme exemples de prévoyance pharmaciens : vérifier que ce sont bien les organismes de référence pour les titulaires (régime TNS) et non uniquement pour les salariés.",
+        "3 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}
