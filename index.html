@@ -31,7 +31,7 @@
      l'image n'est decouverte qu'apres execution du JS qui construit les cards
      (le <img> n'existe qu'a l'interieur d'un template literal JS, invisible au
      preload scanner) -> LCP non deterministe, cf. sprint perf 2026-07-27. -->
-<link rel="preload" as="image" href="assets/img_actu_2026_08_19_1.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="assets/img_actu_2026_08_20_1.jpg" fetchpriority="high">
 
 <!-- Font cohesion site principal -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1737,7 +1737,7 @@ body.pa-has-nav #actusHeader {
 </div>
 
 <!-- EXPRESSION DU JOUR (injectée par update_actus.py à chaque run) -->
-<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Chronique (maladie ou article)</h2><p class="expression-corps">Du grec <em>khronos</em>, le temps. En médecine grecque, une maladie <em>chronique</em> durait dans le temps, par opposition à une maladie <em>aiguë</em> (soudaine et intense). Les journalistes du XVIIIe siècle ont emprunté le terme pour désigner leurs articles réguliers - textes qui reviennent périodiquement, comme une maladie chronique.</p></aside>
+<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Avaler la pilule</h2><p class="expression-corps">Aux XVIIe et XVIIIe siècles, les apothicaires façonnaient les médicaments à la main sous forme de petites boules - les pilules - souvent amères et difficiles à avaler. L'expression pour désigner ce qu'on accepte à contrecœur est née directement de ce geste quotidien du comptoir.</p></aside>
 
 <!-- ESPACE PARTENAIRE 1 (entre Expression du jour et Aujourd'hui).
      Statique : reste visible meme si le JS ne s'execute pas. Le 2e emplacement
@@ -1762,12 +1762,12 @@ body.pa-has-nav #actusHeader {
 <div id="articles-container"></div>
 
 <!-- MARQUE_TENDANCE (injectee par le pipeline hebdo, remplacee quotidiennement) -->
-<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">13 aout au 19 aout 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Eclipse fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 47 350</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Temps de digestion des aliments</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 56 850</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie aout</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 35 200</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Menthe poivrée digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 40 600</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Vitamine b₁₂</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 18 650</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Azinc immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 37 850</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Cure vitamine fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 16 550</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Fleur de bach sommeil enfant</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 10 400</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Lunette eclipse solaire</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 9 800</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Fabien olicard sommeil</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 9 000</td></tr>
+<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">14 aout au 20 aout 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Lunette éclipse solaire</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 58 650</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Azinc immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 79 850</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie aout</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 48 050</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Mauvaise digestion symptômes</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 54 000</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie aubergine</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 25 500</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Temps digestion estomac</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 30 600</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Eloge de la fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 14 100</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Tout pour un bon sommeil 7 lettres</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 13 800</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Vitamine b₁₂</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 13 600</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Fleur de bach sommeil enfant</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 5 000</td></tr>
 </tbody></table></div><p style="margin:10px 0 0;font-size:11px;color:#9ca3af;font-style:italic;">Indice de tendance : intensite de hausse Google Trends (non comparable a un volume absolu).</p><p style="margin:12px 0 0;font-size:11px;color:#9ca3af;text-align:right;">Source&nbsp;: Google Trends France (pytrends) &middot; 7 jours glissants</p></section></div>
 
 <!-- ARCHIVES CTA -->
@@ -1918,6 +1918,90 @@ body.pa-has-nav #actusHeader {
 // Mis a jour automatiquement par n8n chaque semaine
 // ============================================================
 const ARTICLES = [
+{
+    id: "actu_2026_08_20_1",
+    date: "2026-08-20",
+    type: "actu",
+    categorie: "pharma_france",
+    titre: "Tavneos rappelé en urgence : voici ce que tu dois faire dès aujourd'hui",
+    resume: "L'AMM de Tavneos (avacopan) est retirée par la Commission européenne depuis le 4 août 2026. Tous les lots sont rappelés immédiatement et 600 patients français sont concernés. Ton rôle au comptoir est central : identifier, contacter, accompagner.",
+    source: "Le Quotidien du Pharmacien",
+    source_url: "http://www.lequotidiendupharmacien.fr/exercice-pro/tavneos-rappel-immediat-de-tous-les-lots",
+    tiktok_url: "",
+    badge_label: "Pharma France",
+    image_url: "assets/img_actu_2026_08_20_1.jpg",
+    tags: ["rappel", "ansm", "amma", "pharmacovigilance", "officine"]
+  },
+{
+    id: "actu_2026_08_20_2",
+    date: "2026-08-20",
+    type: "actu",
+    categorie: "pharma_monde",
+    titre: "Ebola en RDC : 5 000 cas, 2 300 morts, risque de propagation internationale. L'OMS tire la sonnette d'alarme.",
+    resume: "L'épidémie d'Ebola en République démocratique du Congo est loin d'être maîtrisée, selon l'OMS. Près de 5 000 cas et plus de 2 300 décès recensés, avec un risque élevé de propagation internationale. Ce que ça signifie pour la vigilance à l'officine.",
+    source: "France Info Sante",
+    source_url: "https://www.franceinfo.fr/sante/maladie/ebola/l-epidemie-d-ebola-en-republique-democratique-du-congo-est-loin-d-etre-maitrisee-previent-l-oms_8153150.html#xtor=RSS-3-%5Bgeneral%5D",
+    tiktok_url: "",
+    badge_label: "Pharma Monde",
+    image_url: "assets/img_actu_2026_08_20_2.jpg",
+    tags: ["ebola", "oms", "epidemie", "vigilance", "voyage"]
+  },
+{
+    id: "actu_2026_08_20_3",
+    date: "2026-08-20",
+    type: "actu",
+    categorie: "bonne_nouvelle",
+    titre: "Vaccin ARNm contre le mélanome : les résultats qui redonnent espoir",
+    resume: "Moderna et Merck annoncent des résultats statistiquement significatifs pour leur vaccin thérapeutique personnalisé contre le mélanome de stade avancé, combiné à l'immunothérapie Keytruda. Une avancée qui concerne directement les patients que tu orientes en dermatologie.",
+    source: "France Info Sante",
+    source_url: "https://www.franceinfo.fr/sante/cancer/les-laboratoires-moderna-et-merck-annoncent-des-resultats-encourageants-pour-un-vaccin-therapeutique-contre-le-cancer-de-la-peau_8153651.html#xtor=RSS-3-%5Bgeneral%5D",
+    tiktok_url: "",
+    badge_label: "La bonne nouvelle",
+    image_url: "assets/img_actu_2026_08_20_3.jpg",
+    tags: ["arnm", "vaccin", "cancer", "innovation", "recherche"]
+  },
+{
+    id: "actu_2026_08_20_4",
+    date: "2026-08-20",
+    type: "actu",
+    categorie: "avenir_pharma",
+    titre: "Une bactérie génétiquement modifiée pour remplacer l'insuline injectable : la révolution qui vient de Chine",
+    resume: "Des chercheurs chinois ont développé une bactérie OGM capable de détecter les variations de glycémie et de produire automatiquement des hormones régulatrices. Si ça marche en clinique, ce sera un tournant pour les 4 millions de diabétiques français sous insuline.",
+    source: "France Info Sante",
+    source_url: "https://www.franceinfo.fr/replay-radio/bientot-chez-vous/diabete-des-scientifiques-chinois-developpent-une-bonne-bacterie-pour-remplacer-les-injections-d-insuline_8127545.html#xtor=RSS-3-%5Bgeneral%5D",
+    tiktok_url: "",
+    badge_label: "L'avenir de la pharma",
+    image_url: "assets/img_actu_2026_08_20_4.jpg",
+    tags: ["diabete", "innovation", "recherche", "insuline", "biotechnologie"]
+  },
+{
+    id: "actu_2026_08_20_5",
+    date: "2026-08-20",
+    type: "actu",
+    categorie: "business_officine",
+    titre: "Aide à mourir : loi promulguée, 19 274 officines dans l'angle mort",
+    resume: "La loi sur l'aide à mourir est publiée au Journal officiel ce 19 août 2026. Le pharmacien d'officine est au cœur du dispositif de dispensation - et personne ne lui a encore dit comment ça va se passer concrètement.",
+    source: "Pharm'Actus · Le Monde Santé — L'aide à mourir officiellement autorisée en France, LegiRSS Pharmacie — Décision n° 2026-910 DC du 14 août 2026 (Conseil constitutionnel)",
+    source_url: "https://www.lemonde.fr/societe/article/2026/08/19/l-aide-a-mourir-officiellement-autorisee-en-france-apres-la-promulgation-de-la-loi-par-emmanuel-macron_6749291_3224.html",
+    tiktok_url: "",
+    badge_label: "Business",
+    image_url: "assets/img_actu_2026_08_20_5.jpg",
+    tags: ["aide-a-mourir", "reglementation", "officine", "dispensation"]
+  },
+{
+    id: "lsv_2026_08_20",
+    date: "2026-08-20",
+    type: "lsv",
+    categorie: "lsv",
+    titre: "Le saviez-vous ? On guérissait l'hypertension en retirant... les reins",
+    resume: "Avant les antihypertenseurs, les médecins avaient une idée radicale pour faire baisser la tension. Pas de pilule, pas de régime sans sel. Non : on opérait. Et le prix à payer était colossal.",
+    source: "Pharm'Alpha",
+    source_url: "",
+    tiktok_url: "",
+    badge_label: "Le Saviez-Vous",
+    image_url: "assets/img_lsv_2026_08_20.jpg",
+    tags: ["histoire", "chirurgie", "hypertension", "decouverte", "medicament"]
+  },
 {
     id: "actu_2026_08_19_1",
     date: "2026-08-19",
@@ -2533,90 +2617,6 @@ const ARTICLES = [
     badge_label: "Pharma Monde",
     image_url: "assets/img_actu_2026_08_11_2.jpg",
     tags: ["fda", "radiopharmaceutique", "innovation", "oncologie", "fabrication"]
-  },
-{
-    id: "actu_2026_08_11_3",
-    date: "2026-08-11",
-    type: "actu",
-    categorie: "bonne_nouvelle",
-    titre: "Apnée du sommeil : 6 millions de Français mal diagnostiqués, le pharmacien en première ligne",
-    resume: "L'apnée obstructive du sommeil touche près de 6 millions de Français selon l'INSV, et plus de la moitié ne sont pas diagnostiqués. Non traitée, elle multiplie les risques cardiovasculaires, d'HTA et de diabète. Le pharmacien d'officine est idéalement placé pour repérer les patients à risque avant qu'il ne soit trop tard.",
-    source: "Le Moniteur des Pharmacies",
-    source_url: "https://www.lemoniteurdespharmacies.fr/nouvelles-missions/depistage/apnee-du-sommeil-les-pharmaciens-appeles-a-reperer-les-patients-a-risque",
-    tiktok_url: "",
-    badge_label: "La bonne nouvelle",
-    image_url: "assets/img_actu_2026_08_11_3.jpg",
-    tags: ["depistage", "sommeil", "nouvelles-missions", "officine", "cardiovasculaire"]
-  },
-{
-    id: "actu_2026_08_11_4",
-    date: "2026-08-11",
-    type: "actu",
-    categorie: "avenir_pharma",
-    titre: "FreeStyle Libre 3 Plus en boucle semi-fermée : la tarification est là, décortiquons-la",
-    resume: "Le CEPS vient de publier au Journal officiel la tarification du FreeStyle Libre 3 Plus d'Abbott associé à la boucle semi-fermée mylife CamAPS FX. Un avis tarifaire qui concerne directement la prise en charge des patients diabétiques de type 1 en officine et chez les prestataires HAD.",
-    source: "LegiRSS Pharmacie",
-    source_url: "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054659225",
-    tiktok_url: "",
-    badge_label: "L'avenir de la pharma",
-    image_url: "assets/stock/sante_1.jpg",
-    tags: ["diabete", "dispositif-medical", "remboursement", "boucle-fermee", "lppr"]
-  },
-{
-    id: "actu_2026_08_11_5",
-    date: "2026-08-11",
-    type: "actu",
-    categorie: "business_officine",
-    titre: "Thérapies cellulaires illégales en ligne : l'ANSM tire la sonnette d'alarme, ton officine en première ligne",
-    resume: "L'ANSM vient d'alerter contre la promotion illégale sur internet de thérapies par cellules souches « sans fondement scientifique ». Pour tes patients déjà exposés à ces arnaques, le pharmacien devient le premier recours. Et l'enjeu business est réel : conseil, orientation, et pro...",
-    source: "Pharm'Actus · ANSM / France Info Santé – Alerte thérapies cellulaires illégales sur internet, EMA – Liste des médicaments de thérapie innovante autorisés",
-    source_url: "https://www.franceinfo.fr/sante/l-agence-nationale-du-medicament-alerte-contre-la-promotion-illegale-de-therapies-cellulaires-sans-aucun-fondement-scientifique-sur-internet_8141885.html",
-    tiktok_url: "",
-    badge_label: "Business",
-    image_url: "assets/img_actu_2026_08_11_5.jpg",
-    tags: ["ansm", "therapies-innovantes", "pharmacovigilance", "conseil-officinal"]
-  },
-{
-    id: "lsv_2026_08_11",
-    date: "2026-08-11",
-    type: "lsv",
-    categorie: "lsv",
-    titre: "Le saviez-vous ? On traitait la folie avec des anguilles dans l'oreille",
-    resume: "Au XVIIIe siècle, certains médecins européens étaient convaincus que la folie venait d'un blocage dans le cerveau. Leur solution ? Envoyer un choc électrique naturel directement dans le conduit auditif. Avec une anguille électrique vivante.",
-    source: "Pharm'Alpha",
-    source_url: "",
-    tiktok_url: "",
-    badge_label: "Le Saviez-Vous",
-    image_url: "assets/img_lsv_2026_08_11.jpg",
-    tags: ["histoire", "psychiatrie", "electricite", "instrument", "therapie"]
-  },
-{
-    id: "actu_2026_08_10_1",
-    date: "2026-08-10",
-    type: "actu",
-    categorie: "pharma_france",
-    titre: "Culottes menstruelles remboursées : les prix sont fixés, le comptoir est prêt",
-    resume: "C'est officiel : au 1er octobre 2026, les protections menstruelles réutilisables seront remboursées, avec distribution obligatoire en pharmacie. Les prix sont arrêtés : 19 € TTC pour une culotte, 15,80 € TTC pour une coupe. Un nouveau flux patient, une nouvelle référence à maîtriser.",
-    source: "Le Moniteur des Pharmacies",
-    source_url: "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/culottes-menstruelles-remboursees-leur-prix-en-pharmacie-est-desormais-fixe",
-    tiktok_url: "",
-    badge_label: "Pharma France",
-    image_url: "assets/img_actu_2026_08_10_1.jpg",
-    tags: ["remboursement", "officine", "protection-menstruelle", "prix", "dispensation"]
-  },
-{
-    id: "actu_2026_08_10_2",
-    date: "2026-08-10",
-    type: "actu",
-    categorie: "pharma_monde",
-    titre: "Sanofi en rupture sur deux traitements de la maladie de Pompe : les patients tirent la sonnette",
-    resume: "Sanofi est en rupture de stock sur Myozyme et Nexviazyme, ses deux médicaments contre la maladie de Pompe. Les associations de patients sont en alerte. Une pénurie sur une pathologie rare où il n'existe aucune alternative thérapeutique, c'est une urgence absolue.",
-    source: "STAT News",
-    source_url: "https://www.statnews.com/pharmalot/2026/08/09/sanofi-pompe-disease-drug-shortage-myozyme-nexviazyme/?utm_campaign=rss",
-    tiktok_url: "",
-    badge_label: "Pharma Monde",
-    image_url: "assets/img_actu_2026_08_10_2.jpg",
-    tags: ["rupture", "maladie-rare", "sanofi", "ansm", "enzymotherapie"]
   }
 ];
 

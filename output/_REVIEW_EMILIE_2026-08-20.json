@@ -1,0 +1,26 @@
+{
+  "generated_at": "2026-08-20T04:09:08.942113+02:00",
+  "run_date": "2026-08-20",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Aide à mourir : loi promulguée, 19 274 officines dans l'angle mort",
+      "resume": "La loi sur l'aide à mourir est publiée au Journal officiel ce 19 août 2026. Le pharmacien d'officine est au cœur du dispositif de dispensation - et personne ne lui a encore dit comment ça va se passer concrètement.",
+      "source": "Pharm'Actus · Le Monde Santé — L'aide à mourir officiellement autorisée en France, LegiRSS Pharmacie — Décision n° 2026-910 DC du 14 août 2026 (Conseil constitutionnel)",
+      "source_url": "https://www.lemonde.fr/societe/article/2026/08/19/l-aide-a-mourir-officiellement-autorisee-en-france-apres-la-promulgation-de-la-loi-par-emmanuel-macron_6749291_3224.html",
+      "confidence_score": 0.72,
+      "warnings": [
+        "Les décrets d'application de la loi ne sont pas encore publiés au moment de la rédaction : AUCUNE modalité concrète de dispensation officinale n'est confirmée. L'article repose sur le modèle belge comme référence comparative, non comme projection certaine du droit français.",
+        "La substance létale utilisée en France n'a pas encore été identifiée/désignée publiquement par l'ANSM : aucune mention de spécialité ni de tarif MDL n'est donc possible.",
+        "Aucun honoraire de dispensation spécifique n'existe à ce jour : les extrapolations tarifaires ont été volontairement évitées.",
+        "La position officielle des syndicats (FSPF, USPO, UPGF) sur les modalités de dispensation officinale n'est pas documentée à ce jour dans les sources disponibles : formulé prudemment dans les recommandations.",
+        "Le chiffre de 19 274 officines est issu d'IQVIA Pharmastat juin 2026, cité tel quel conformément aux règles de cohérence interne.",
+        "La clause de conscience pour le pharmacien d'officine n'est pas explicitement tranchée dans le texte de loi disponible : signalé comme point à vérifier dans les décrets.",
+        "1 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

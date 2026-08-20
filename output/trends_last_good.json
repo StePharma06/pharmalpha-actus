@@ -1,58 +1,58 @@
 {
   "pathologies": [
     {
-      "display": "Eclipse fatigue",
-      "delta_label": "↑ 47 350",
+      "display": "Lunette éclipse solaire",
+      "delta_label": "↑ 58 650",
       "trend": "up"
     },
     {
       "display": "Allergie aout",
-      "delta_label": "↑ 35 200",
+      "delta_label": "↑ 48 050",
+      "trend": "up"
+    },
+    {
+      "display": "Allergie aubergine",
+      "delta_label": "↑ 25 500",
+      "trend": "up"
+    },
+    {
+      "display": "Eloge de la fatigue",
+      "delta_label": "↑ 14 100",
       "trend": "up"
     },
     {
       "display": "Vitamine b₁₂",
-      "delta_label": "↑ 18 650",
-      "trend": "up"
-    },
-    {
-      "display": "Cure vitamine fatigue",
-      "delta_label": "↑ 16 550",
-      "trend": "up"
-    },
-    {
-      "display": "Lunette eclipse solaire",
-      "delta_label": "↑ 9 800",
+      "delta_label": "↑ 13 600",
       "trend": "up"
     }
   ],
-  "pathologies_from": "2026-08-19",
+  "pathologies_from": "2026-08-20",
   "soins": [
     {
-      "display": "Temps de digestion des aliments",
-      "delta_label": "↑ 56 850",
-      "trend": "up"
-    },
-    {
-      "display": "Menthe poivrée digestion",
-      "delta_label": "↑ 40 600",
-      "trend": "up"
-    },
-    {
       "display": "Azinc immunite",
-      "delta_label": "↑ 37 850",
+      "delta_label": "↑ 79 850",
+      "trend": "up"
+    },
+    {
+      "display": "Mauvaise digestion symptômes",
+      "delta_label": "↑ 54 000",
+      "trend": "up"
+    },
+    {
+      "display": "Temps digestion estomac",
+      "delta_label": "↑ 30 600",
+      "trend": "up"
+    },
+    {
+      "display": "Tout pour un bon sommeil 7 lettres",
+      "delta_label": "↑ 13 800",
       "trend": "up"
     },
     {
       "display": "Fleur de bach sommeil enfant",
-      "delta_label": "↑ 10 400",
-      "trend": "up"
-    },
-    {
-      "display": "Fabien olicard sommeil",
-      "delta_label": "↑ 9 000",
+      "delta_label": "↑ 5 000",
       "trend": "up"
     }
   ],
-  "soins_from": "2026-08-19"
+  "soins_from": "2026-08-20"
 }
