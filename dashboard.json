@@ -1,38 +1,22 @@
 {
- "genere_le": "2026-08-19T05:39:14+02:00",
+ "genere_le": "2026-08-20T05:39:09+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1083,
- "nouveaux_7j": 28,
- "nouveaux_cumul": 1076,
+ "abonnes_total": 1088,
+ "nouveaux_7j": 29,
+ "nouveaux_cumul": 1081,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-08-12",
-  "au": "2026-08-19",
-  "delivres": 6811,
-  "ouvertures": 2382,
-  "ouvertures_uniques": 1825,
-  "clics": 2754,
-  "clics_uniques": 527,
-  "taux_ouverture_pct": 26.8,
-  "taux_clic_pct": 7.7,
-  "ctor_pct": 28.9,
+  "du": "2026-08-13",
+  "au": "2026-08-20",
+  "delivres": 6834,
+  "ouvertures": 2347,
+  "ouvertures_uniques": 1772,
+  "clics": 2706,
+  "clics_uniques": 503,
+  "taux_ouverture_pct": 25.9,
+  "taux_clic_pct": 7.4,
+  "ctor_pct": 28.4,
   "top_articles": [
-   {
-    "id": "actu_2026_08_12_1",
-    "titre": "Officines : CA en hausse, rentabilité en chute libre. On t'explique.",
-    "date": "2026-08-12",
-    "categorie": "pharma_france",
-    "clics": 104,
-    "lecteurs": 72
-   },
-   {
-    "id": "actu_2026_08_12_2",
-    "titre": "Statines chez les plus de 75 ans, les arrêter peut être sans risque. Ce que dit le Lancet.",
-    "date": "2026-08-12",
-    "categorie": "pharma_monde",
-    "clics": 91,
-    "lecteurs": 57
-   },
    {
     "id": "actu_2026_08_15_3",
     "titre": "VRS 2026-2027 : la campagne démarre, ton rôle est central",
@@ -50,12 +34,12 @@
     "lecteurs": 47
    },
    {
-    "id": "actu_2026_08_12_3",
-    "titre": "FreeStyle Libre 3 Plus + mylife CamAPS FX : la boucle semi-fermée remboursée dès le 24 août",
-    "date": "2026-08-12",
-    "categorie": "bonne_nouvelle",
-    "clics": 65,
-    "lecteurs": 43
+    "id": "actu_2026_08_19_1",
+    "titre": "Loi aide à mourir : ce que ça change concrètement à l'officine",
+    "date": "2026-08-19",
+    "categorie": "pharma_france",
+    "clics": 66,
+    "lecteurs": 45
    },
    {
     "id": "actu_2026_08_17_1",
@@ -74,39 +58,55 @@
     "lecteurs": 40
    },
    {
-    "id": "actu_2026_08_12_5",
-    "titre": "Canicule à l'officine : 3 missions rémunérées à ne pas rater cet été",
-    "date": "2026-08-12",
-    "categorie": "business_officine",
-    "clics": 56,
-    "lecteurs": 40
-   },
-   {
     "id": "actu_2026_08_18_2",
     "titre": "Sanofi licencie 229 personnes au Massachusetts, un an après Blueprint",
     "date": "2026-08-18",
     "categorie": "pharma_monde",
+    "clics": 59,
+    "lecteurs": 37
+   },
+   {
+    "id": "actu_2026_08_18_4",
+    "titre": "Abrysvo, Beyfortus, Enflonsia : la campagne VRS démarre le 14 septembre",
+    "date": "2026-08-18",
+    "categorie": "avenir_pharma",
     "clics": 58,
-    "lecteurs": 36
+    "lecteurs": 35
    },
    {
     "id": "actu_2026_08_14_1",
     "titre": "Cyprotérone 50 mg sort du TFR : ce que ça change au comptoir dès septembre",
     "date": "2026-08-14",
     "categorie": "pharma_france",
-    "clics": 48,
+    "clics": 50,
     "lecteurs": 35
+   },
+   {
+    "id": "actu_2026_08_20_3",
+    "titre": "Vaccin ARNm contre le mélanome : les résultats qui redonnent espoir",
+    "date": "2026-08-20",
+    "categorie": "bonne_nouvelle",
+    "clics": 60,
+    "lecteurs": 33
+   },
+   {
+    "id": "actu_2026_08_18_3",
+    "titre": "Une antenne de pharmacie ouvre en Nouvelle-Aquitaine : le désert recule d'un kilomètre",
+    "date": "2026-08-18",
+    "categorie": "bonne_nouvelle",
+    "clics": 54,
+    "lecteurs": 33
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-08-19",
-  "delivres": 83291,
-  "ouvertures": 33217,
-  "ouvertures_uniques": 22980,
-  "clics": 34004,
-  "clics_uniques": 6135,
+  "au": "2026-08-20",
+  "delivres": 84252,
+  "ouvertures": 33598,
+  "ouvertures_uniques": 23250,
+  "clics": 34423,
+  "clics_uniques": 6214,
   "taux_ouverture_pct": 27.6,
   "taux_clic_pct": 7.4,
   "ctor_pct": 26.7,
