@@ -1,0 +1,25 @@
+{
+  "generated_at": "2026-08-21T04:09:13.426594+02:00",
+  "run_date": "2026-08-21",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Franchises médicales : le recul du gouvernement, et ce que ça change (vraiment) pour l'officine",
+      "resume": "Le doublement des franchises de 100 à 200 € par an est suspendu, mais pas enterré. Pour l'officine, l'enjeu n'est pas la marge directe - c'est le renoncement aux soins que ce signal politique révèle, et la pression qui s'annonce sur la LFSS 2027.",
+      "source": "Pharm'Actus · Le Monde Santé — Franchises médicales : le gouvernement renonce au doublement des plafonds dans l'immédiat, France Info Santé — Le gouvernement renonce au doublement des plafonds des franchises médicales dans l'immédiat, mais prévoit malgré tout une augmentation",
+      "source_url": "https://www.lemonde.fr/politique/article/2026/08/20/franchises-medicales-le-gouvernement-renonce-au-doublement-des-plafonds-dans-l-immediat-annonce-stephanie-rist_6751296_823448.html",
+      "confidence_score": 0.72,
+      "warnings": [
+        "Le chiffre DREES 2023 sur le renoncement aux soins (28 % des assurés modestes) est cité qualitativement — vérifier la publication exacte avant mise en ligne, le pourcentage précis peut varier selon l'édition et la définition retenue de 'renoncement'.",
+        "Le déficit de la branche maladie à 14,5 Md€ pour 2025 est issu du rapport de la Commission des comptes de la Sécurité sociale (juin 2026) — à vérifier dans la version publiée officielle, le chiffre peut avoir été révisé.",
+        "L'impact chiffré sur le CA officinal (1 à 2 % de volume, soit 12 800 à 25 600 €) est un ordre de grandeur illustratif basé sur le CA moyen IQVIA 2026 : il ne constitue pas une projection économique certifiée, à présenter comme tel en rédaction.",
+        "La franchise médicale à 0,50 € par boîte et plafond à 50 centimes par ordonnance : ces montants sont ceux en vigueur depuis 2008 — vérifier qu'aucune modification réglementaire intermédiaire n'a été introduite entre 2008 et 2026.",
+        "Aucune position officielle publiée de la FSPF ou de l'USPO sur la question des franchises médicales n'a été identifiée dans les sources disponibles pour cet article — la règle d'équilibre syndical ne s'applique pas ici car l'angle ne repose pas sur la prise de position d'un syndicat.",
+        "4 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

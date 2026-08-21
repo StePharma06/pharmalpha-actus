@@ -31,7 +31,7 @@
      l'image n'est decouverte qu'apres execution du JS qui construit les cards
      (le <img> n'existe qu'a l'interieur d'un template literal JS, invisible au
      preload scanner) -> LCP non deterministe, cf. sprint perf 2026-07-27. -->
-<link rel="preload" as="image" href="assets/img_actu_2026_08_20_1.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="assets/img_actu_2026_08_21_1.jpg" fetchpriority="high">
 
 <!-- Font cohesion site principal -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1737,7 +1737,7 @@ body.pa-has-nav #actusHeader {
 </div>
 
 <!-- EXPRESSION DU JOUR (injectée par update_actus.py à chaque run) -->
-<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Avaler la pilule</h2><p class="expression-corps">Aux XVIIe et XVIIIe siècles, les apothicaires façonnaient les médicaments à la main sous forme de petites boules - les pilules - souvent amères et difficiles à avaler. L'expression pour désigner ce qu'on accepte à contrecœur est née directement de ce geste quotidien du comptoir.</p></aside>
+<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Vaccin</h2><p class="expression-corps">Du latin <em>vacca</em>, la vache. En 1796, Edward Jenner immunise contre la variole humaine en inoculant le virus de la variole bovine. Le nom de la vache est ainsi entré pour toujours dans le vocabulaire médical mondial.</p></aside>
 
 <!-- ESPACE PARTENAIRE 1 (entre Expression du jour et Aujourd'hui).
      Statique : reste visible meme si le JS ne s'execute pas. Le 2e emplacement
@@ -1762,12 +1762,12 @@ body.pa-has-nav #actusHeader {
 <div id="articles-container"></div>
 
 <!-- MARQUE_TENDANCE (injectee par le pipeline hebdo, remplacee quotidiennement) -->
-<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">14 aout au 20 aout 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Lunette éclipse solaire</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 58 650</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Azinc immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 79 850</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie aout</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 48 050</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Mauvaise digestion symptômes</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 54 000</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie aubergine</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 25 500</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Temps digestion estomac</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 30 600</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Eloge de la fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 14 100</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Tout pour un bon sommeil 7 lettres</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 13 800</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Vitamine b₁₂</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 13 600</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Fleur de bach sommeil enfant</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 5 000</td></tr>
+<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">15 aout au 21 aout 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie aout</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 49 550</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Temps de digestion chien</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 59 000</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Armoise allergie</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 37 750</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Digestion difficile remède rapide</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 31 400</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Ou trouver lunette éclipse solaire</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 21 350</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Eclipse et sommeil</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 15 000</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Vitamine b₁₂</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 12 850</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Implant apnée du sommeil</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 12 850</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Plaquettes basses et fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 12 500</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Opérations spéciales lioness la douleur </td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 2 800</td></tr>
 </tbody></table></div><p style="margin:10px 0 0;font-size:11px;color:#9ca3af;font-style:italic;">Indice de tendance : intensite de hausse Google Trends (non comparable a un volume absolu).</p><p style="margin:12px 0 0;font-size:11px;color:#9ca3af;text-align:right;">Source&nbsp;: Google Trends France (pytrends) &middot; 7 jours glissants</p></section></div>
 
 <!-- ARCHIVES CTA -->
@@ -1930,6 +1930,90 @@ body.pa-has-nav #actusHeader {
 // Mis a jour automatiquement par n8n chaque semaine
 // ============================================================
 const ARTICLES = [
+{
+    id: "actu_2026_08_21_1",
+    date: "2026-08-21",
+    type: "actu",
+    categorie: "pharma_france",
+    titre: "Protoxyde d'azote récréatif : c'est désormais un délit, et le comptoir est en première ligne",
+    resume: "Le protoxyde d'azote récréatif passe officiellement dans la case \"délit\". Vente, détention, transport : tout est encadré. Et les pros de santé, dont les pharmaciens, sont explicitement impliqués dans la prévention.",
+    source: "Le Moniteur des Pharmacies",
+    source_url: "https://www.lemoniteurdespharmacies.fr/nouvelles-missions/prevention/protoxyde-dazote-lusage-recreatif-devient-un-delit",
+    tiktok_url: "",
+    badge_label: "Pharma France",
+    image_url: "assets/img_actu_2026_08_21_1.jpg",
+    tags: ["prevention", "legislation", "officine", "vitamine-b12", "addiction"]
+  },
+{
+    id: "actu_2026_08_21_2",
+    date: "2026-08-21",
+    type: "actu",
+    categorie: "pharma_monde",
+    titre: "Vaccin ARNm contre le mélanome : Moderna et Merck annoncent des résultats en phase finale",
+    resume: "Moderna et Merck publient des résultats encourageants en phase III pour leur vaccin thérapeutique ARNm contre le mélanome. Une avancée potentiellement majeure dans la lutte anti-récidive. Ce n'est pas encore sur ton étagère, mais ça s'en approche.",
+    source: "STAT News",
+    source_url: "https://www.statnews.com/2026/08/20/cancer-vaccine-merck-moderna-biotech-observations/?utm_campaign=rss",
+    tiktok_url: "",
+    badge_label: "Pharma Monde",
+    image_url: "assets/img_actu_2026_08_21_2.jpg",
+    tags: ["arnm", "vaccin", "melanome", "oncologie", "innovation"]
+  },
+{
+    id: "actu_2026_08_21_3",
+    date: "2026-08-21",
+    type: "actu",
+    categorie: "bonne_nouvelle",
+    titre: "Aide à mourir : la loi est là, le rôle de l'officine se précise enfin",
+    resume: "La loi sur l'aide à mourir est promulguée. Pour les officines, les questions pratiques restent ouvertes : circuit de la substance létale, sécurisation, traçabilité. Une chose est sûre, l'officine sera dans la boucle.",
+    source: "Le Quotidien du Pharmacien",
+    source_url: "http://www.lequotidiendupharmacien.fr/exercice-pro/chikungunya-pourquoi-lepidemie-est-elle-encore-limitee-cette-annee",
+    tiktok_url: "",
+    badge_label: "La bonne nouvelle",
+    image_url: "assets/img_actu_2026_08_21_3.jpg",
+    tags: ["legislation", "officine", "ethique", "dispensation", "fin-de-vie"]
+  },
+{
+    id: "actu_2026_08_21_4",
+    date: "2026-08-21",
+    type: "actu",
+    categorie: "avenir_pharma",
+    titre: "Gène thérapie et maladies ultra-rares : la FDA valide l'approche d'Ultragenyx, un signal fort pour l'Europe",
+    resume: "La FDA vient d'approuver la thérapie génique d'Ultragenyx pour une maladie ultra-rare. Simultanément, Regeneron décroche une autorisation sur une pathologie osseuse rare après 30 ans de recherche. Deux approbations qui marquent un tournant pour les maladies rares et leur accès en Europe.",
+    source: "STAT News",
+    source_url: "https://www.statnews.com/pharmalot/2026/08/20/regeneron-rare-disease-drug-utragenyx-gene-therapy/?utm_campaign=rss",
+    tiktok_url: "",
+    badge_label: "L'avenir de la pharma",
+    image_url: "assets/img_actu_2026_08_21_4.jpg",
+    tags: ["therapie-genique", "maladie-rare", "fda", "innovation", "ema"]
+  },
+{
+    id: "actu_2026_08_21_5",
+    date: "2026-08-21",
+    type: "actu",
+    categorie: "business_officine",
+    titre: "Franchises médicales : le recul du gouvernement, et ce que ça change (vraiment) pour l'officine",
+    resume: "Le doublement des franchises de 100 à 200 € par an est suspendu, mais pas enterré. Pour l'officine, l'enjeu n'est pas la marge directe - c'est le renoncement aux soins que ce signal politique révèle, et la pression qui s'annonce sur la LFSS 2027.",
+    source: "Pharm'Actus · Le Monde Santé — Franchises médicales : le gouvernement renonce au doublement des plafonds dans l'immédiat, France Info Santé — Le gouvernement renonce au doublement des plafonds des franchises médicales dans l'immédiat, mais prévoit malgré tout une augmentation",
+    source_url: "https://www.lemonde.fr/politique/article/2026/08/20/franchises-medicales-le-gouvernement-renonce-au-doublement-des-plafonds-dans-l-immediat-annonce-stephanie-rist_6751296_823448.html",
+    tiktok_url: "",
+    badge_label: "Business",
+    image_url: "assets/img_actu_2026_08_21_5.jpg",
+    tags: ["franchises-medicales", "lfss", "renoncement-aux-soins", "economie-sante"]
+  },
+{
+    id: "lsv_2026_08_21",
+    date: "2026-08-21",
+    type: "lsv",
+    categorie: "lsv",
+    titre: "Le saviez-vous ? On traitait les fractures du crâne avec du beurre rance",
+    resume: "Pendant des siècles, les médecins ont soigné les traumatismes crâniens avec des substances qu'on jetterait aujourd'hui à la poubelle. Le beurre rance, le jaune d'œuf et la cire d'abeille constituaient la neurochirurgie de l'époque. Et pourtant, l'un de ces ingrédients cache un secret que la science moderne vient seulement de valider.",
+    source: "Pharm'Alpha",
+    source_url: "",
+    tiktok_url: "",
+    badge_label: "Le Saviez-Vous",
+    image_url: "assets/img_lsv_2026_08_21.jpg",
+    tags: ["histoire", "chirurgie", "neurologie", "decouverte", "plante"]
+  },
 {
     id: "actu_2026_08_20_1",
     date: "2026-08-20",
@@ -2545,90 +2629,6 @@ const ARTICLES = [
     badge_label: "Pharma Monde",
     image_url: "assets/img_actu_2026_08_12_2.jpg",
     tags: ["statines", "deprescription", "bpm", "cardiovasculaire", "lancet"]
-  },
-{
-    id: "actu_2026_08_12_3",
-    date: "2026-08-12",
-    type: "actu",
-    categorie: "bonne_nouvelle",
-    titre: "FreeStyle Libre 3 Plus + mylife CamAPS FX : la boucle semi-fermée remboursée dès le 24 août",
-    resume: "Bonne nouvelle pour les patients diabétiques de type 1 et pour les officines. L'association du capteur Abbott FreeStyle Libre 3 Plus avec le système de boucle semi-fermée mylife CamAPS FX entre dans le remboursement le 24 août 2026. Un arrêté du 6 août officialise la prise en charge.",
-    source: "Le Moniteur des Pharmacies",
-    source_url: "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/diabete-lassociation-freestyle-libre-3-plus-mylife-camaps-fx-remboursee-des-le-24-aout",
-    tiktok_url: "",
-    badge_label: "La bonne nouvelle",
-    image_url: "assets/stock/sante_1.jpg",
-    tags: ["diabete", "remboursement", "dispositif-medical", "boucle-fermee", "mcg"]
-  },
-{
-    id: "actu_2026_08_12_4",
-    date: "2026-08-12",
-    type: "actu",
-    categorie: "avenir_pharma",
-    titre: "Ebola en RDC : 2 000 morts, un vaccin en phase 3 en urgence. Ce qu'on sait.",
-    resume: "La 17e épidémie d'Ebola en République démocratique du Congo franchit le cap des 2 000 morts. Le seul vaccin homologué existant va être évalué directement en phase 3 sur le terrain. Trois autres candidats vaccins sont en développement actif.",
-    source: "Sciences et Avenir",
-    source_url: "https://www.sciencesetavenir.fr/sante/rdc-l-epidemie-causee-par-le-virus-ebola-franchit-le-cap-des-2-000-morts_194206",
-    tiktok_url: "",
-    badge_label: "L'avenir de la pharma",
-    image_url: "assets/img_actu_2026_08_12_4.jpg",
-    tags: ["ebola", "vaccin", "recherche", "epidemie", "phase-3"]
-  },
-{
-    id: "actu_2026_08_12_5",
-    date: "2026-08-12",
-    type: "actu",
-    categorie: "business_officine",
-    titre: "Canicule à l'officine : 3 missions rémunérées à ne pas rater cet été",
-    resume: "Les épisodes caniculaires se multiplient et battent des records en 2026. Pour le pharmacien titulaire, c'est un levier concret d'honoraires et de visibilité - à condition de savoir quelles missions sont activables et comment les valoriser.",
-    source: "Pharm'Actus · France Info Santé — Canicules : fatigue, malaise, stress… les fortes chaleurs inquiètent, Le Monde Santé — Comment les vagues de chaleur dégradent les conditions de soins dans les hôpitaux ?",
-    source_url: "https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/vagues-de-chaleur-canicules/canicules-fatigue-malaise-stress-les-fortes-chaleurs-inquietent_8142890.html",
-    tiktok_url: "",
-    badge_label: "Business",
-    image_url: "assets/img_actu_2026_08_12_5.jpg",
-    tags: ["canicule", "bilan-medication", "otc", "missions-officinales"]
-  },
-{
-    id: "lsv_2026_08_12",
-    date: "2026-08-12",
-    type: "lsv",
-    categorie: "lsv",
-    titre: "Le saviez-vous ? On diagnostiquait la grossesse en arrosant du blé avec de l'urine",
-    resume: "Avant les tests en pharmacie, les Égyptiens avaient leur propre stick de grossesse. Il poussait dans la terre, germait en quelques jours… et donnait le résultat. Et le plus fou ? La science a prouvé que ça marchait.",
-    source: "Pharm'Alpha",
-    source_url: "",
-    tiktok_url: "",
-    badge_label: "Le Saviez-Vous",
-    image_url: "assets/img_lsv_2026_08_12.jpg",
-    tags: ["histoire", "diagnostic", "grossesse", "antiquite", "decouverte"]
-  },
-{
-    id: "actu_2026_08_11_1",
-    date: "2026-08-11",
-    type: "actu",
-    categorie: "pharma_france",
-    titre: "Officines fragiles : le seuil à 1,80 M€ de CA qui fait froid dans le dos",
-    resume: "9 pharmacies sur 10 ayant fermé en 2025 réalisaient moins de 1,80 M€ de chiffre d'affaires. Ce chiffre n'est pas un seuil de viabilité : c'est une zone rouge. Et les officines de taille intermédiaire entrent désormais elles aussi dans la spirale des fermetures.",
-    source: "Le Moniteur des Pharmacies",
-    source_url: "https://www.lemoniteurdespharmacies.fr/business/transactions/cession/existe-t-il-un-seuil-permettant-de-definir-une-officine-fragile",
-    tiktok_url: "",
-    badge_label: "Pharma France",
-    image_url: "assets/img_actu_2026_08_11_1.jpg",
-    tags: ["officine", "marge", "economie", "fermeture", "viabilite"]
-  },
-{
-    id: "actu_2026_08_11_2",
-    date: "2026-08-11",
-    type: "actu",
-    categorie: "pharma_monde",
-    titre: "La FDA rejette une radiothérapie prometteuse pour vice de fabrication : leçon pour toute la filière",
-    resume: "La FDA vient de claquer la porte au nez d'ITM Radiopharma pour son traitement par radiopharmaceutique, non pas pour manque d'efficacité, mais pour des problèmes de fabrication. Un concurrent sérieux de Novartis qui tombe avant même d'avoir joué. Ce que ça dit sur l'industrie radiopharmaceutique, et sur ce qui arrive en France.",
-    source: "STAT News",
-    source_url: "https://www.statnews.com/2026/08/10/itm-radiopharma-fda-rejection/?utm_campaign=rss",
-    tiktok_url: "",
-    badge_label: "Pharma Monde",
-    image_url: "assets/img_actu_2026_08_11_2.jpg",
-    tags: ["fda", "radiopharmaceutique", "innovation", "oncologie", "fabrication"]
   }
 ];
 

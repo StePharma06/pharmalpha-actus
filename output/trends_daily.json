@@ -1,64 +1,64 @@
 {
-  "generated_at": "2026-08-20",
-  "window_label": "14 aout au 20 aout 2026",
+  "generated_at": "2026-08-21",
+  "window_label": "15 aout au 21 aout 2026",
   "has_history": true,
   "delta_source": "pytrends_rising",
   "pathologies": [
     {
-      "display": "Lunette éclipse solaire",
-      "delta_label": "↑ 58 650",
-      "trend": "up"
-    },
-    {
       "display": "Allergie aout",
-      "delta_label": "↑ 48 050",
+      "delta_label": "↑ 49 550",
       "trend": "up"
     },
     {
-      "display": "Allergie aubergine",
-      "delta_label": "↑ 25 500",
+      "display": "Armoise allergie",
+      "delta_label": "↑ 37 750",
       "trend": "up"
     },
     {
-      "display": "Eloge de la fatigue",
-      "delta_label": "↑ 14 100",
+      "display": "Ou trouver lunette éclipse solaire",
+      "delta_label": "↑ 21 350",
       "trend": "up"
     },
     {
       "display": "Vitamine b₁₂",
-      "delta_label": "↑ 13 600",
+      "delta_label": "↑ 12 850",
+      "trend": "up"
+    },
+    {
+      "display": "Plaquettes basses et fatigue",
+      "delta_label": "↑ 12 500",
       "trend": "up"
     }
   ],
   "soins": [
     {
-      "display": "Azinc immunite",
-      "delta_label": "↑ 79 850",
+      "display": "Temps de digestion chien",
+      "delta_label": "↑ 59 000",
       "trend": "up"
     },
     {
-      "display": "Mauvaise digestion symptômes",
-      "delta_label": "↑ 54 000",
+      "display": "Digestion difficile remède rapide",
+      "delta_label": "↑ 31 400",
       "trend": "up"
     },
     {
-      "display": "Temps digestion estomac",
-      "delta_label": "↑ 30 600",
+      "display": "Eclipse et sommeil",
+      "delta_label": "↑ 15 000",
       "trend": "up"
     },
     {
-      "display": "Tout pour un bon sommeil 7 lettres",
-      "delta_label": "↑ 13 800",
+      "display": "Implant apnée du sommeil",
+      "delta_label": "↑ 12 850",
       "trend": "up"
     },
     {
-      "display": "Fleur de bach sommeil enfant",
-      "delta_label": "↑ 5 000",
+      "display": "Opérations spéciales lioness la douleur ",
+      "delta_label": "↑ 2 800",
       "trend": "up"
     }
   ],
   "pathologies_stale": false,
-  "pathologies_from": "2026-08-20",
+  "pathologies_from": "2026-08-21",
   "soins_stale": false,
-  "soins_from": "2026-08-20"
+  "soins_from": "2026-08-21"
 }
