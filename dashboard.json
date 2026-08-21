@@ -1,21 +1,21 @@
 {
- "genere_le": "2026-08-20T05:39:09+02:00",
+ "genere_le": "2026-08-21T05:42:49+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1088,
- "nouveaux_7j": 29,
- "nouveaux_cumul": 1081,
+ "abonnes_total": 1093,
+ "nouveaux_7j": 32,
+ "nouveaux_cumul": 1086,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-08-13",
-  "au": "2026-08-20",
-  "delivres": 6834,
-  "ouvertures": 2347,
-  "ouvertures_uniques": 1772,
-  "clics": 2706,
-  "clics_uniques": 503,
-  "taux_ouverture_pct": 25.9,
-  "taux_clic_pct": 7.4,
-  "ctor_pct": 28.4,
+  "du": "2026-08-14",
+  "au": "2026-08-21",
+  "delivres": 6845,
+  "ouvertures": 2561,
+  "ouvertures_uniques": 1920,
+  "clics": 2683,
+  "clics_uniques": 510,
+  "taux_ouverture_pct": 28.0,
+  "taux_clic_pct": 7.5,
+  "ctor_pct": 26.6,
   "top_articles": [
    {
     "id": "actu_2026_08_15_3",
@@ -38,7 +38,7 @@
     "titre": "Loi aide à mourir : ce que ça change concrètement à l'officine",
     "date": "2026-08-19",
     "categorie": "pharma_france",
-    "clics": 66,
+    "clics": 67,
     "lecteurs": 45
    },
    {
@@ -46,8 +46,8 @@
     "titre": "Désogestrel et étonogestrel : le signal méningiome passe à la vitesse supérieure",
     "date": "2026-08-17",
     "categorie": "pharma_france",
-    "clics": 63,
-    "lecteurs": 43
+    "clics": 65,
+    "lecteurs": 44
    },
    {
     "id": "actu_2026_08_15_2",
@@ -56,6 +56,22 @@
     "categorie": "pharma_monde",
     "clics": 73,
     "lecteurs": 40
+   },
+   {
+    "id": "actu_2026_08_20_2",
+    "titre": "Ebola en RDC : 5 000 cas, 2 300 morts, risque de propagation internationale. L'OMS tire la sonnette d'alarme.",
+    "date": "2026-08-20",
+    "categorie": "pharma_monde",
+    "clics": 65,
+    "lecteurs": 39
+   },
+   {
+    "id": "actu_2026_08_20_3",
+    "titre": "Vaccin ARNm contre le mélanome : les résultats qui redonnent espoir",
+    "date": "2026-08-20",
+    "categorie": "bonne_nouvelle",
+    "clics": 65,
+    "lecteurs": 37
    },
    {
     "id": "actu_2026_08_18_2",
@@ -80,36 +96,20 @@
     "categorie": "pharma_france",
     "clics": 50,
     "lecteurs": 35
-   },
-   {
-    "id": "actu_2026_08_20_3",
-    "titre": "Vaccin ARNm contre le mélanome : les résultats qui redonnent espoir",
-    "date": "2026-08-20",
-    "categorie": "bonne_nouvelle",
-    "clics": 60,
-    "lecteurs": 33
-   },
-   {
-    "id": "actu_2026_08_18_3",
-    "titre": "Une antenne de pharmacie ouvre en Nouvelle-Aquitaine : le désert recule d'un kilomètre",
-    "date": "2026-08-18",
-    "categorie": "bonne_nouvelle",
-    "clics": 54,
-    "lecteurs": 33
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-08-20",
-  "delivres": 84252,
-  "ouvertures": 33598,
-  "ouvertures_uniques": 23250,
-  "clics": 34423,
-  "clics_uniques": 6214,
-  "taux_ouverture_pct": 27.6,
+  "au": "2026-08-21",
+  "delivres": 85213,
+  "ouvertures": 34058,
+  "ouvertures_uniques": 23595,
+  "clics": 34744,
+  "clics_uniques": 6280,
+  "taux_ouverture_pct": 27.7,
   "taux_clic_pct": 7.4,
-  "ctor_pct": 26.7,
+  "ctor_pct": 26.6,
   "top_articles": [
    {
     "id": "actu_2026_06_18_1",
