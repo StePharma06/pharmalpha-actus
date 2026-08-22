@@ -1,0 +1,37 @@
+{
+  "generated_at": "2026-08-22T04:07:44.767498+02:00",
+  "run_date": "2026-08-22",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "Beyfortus et Abrysvo remboursés à 65 % dès le 31 août : une bonne nouvelle pour les familles et pour toi",
+      "resume": "Bonne nouvelle pour les nourrissons et leurs parents : Beyfortus et Abrysvo passent d'un remboursement à 30 % à 65 % dès le démarrage de la campagne VRS. La HAS a revu à la hausse leur service médical rendu. Moins de reste à charge, plus d'adhésion. C'est exactement le bon signal au bon moment.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/therapeutique/medicaments/mieux-delivrer/infection-a-vrs-abrysvo-et-beyfortus-bientot-rembourses-a-65",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Franchises médicales : le recul du gouvernement, une bombe à retardement pour tes marges",
+      "resume": "Le doublement du plafond des franchises est abandonné, mais une indexation sur l'inflation est actée. Pour 48 millions de Français concernés, l'impact sur le reste à charge va grimper - et ton comptoir va en sentir les effets.",
+      "source": "Pharm'Actus · France Info Santé — Du doublement du plafond à une indexation sur l'inflation, France Info Santé — Comment fonctionnent les franchises médicales",
+      "source_url": "https://www.franceinfo.fr/sante/du-doublement-du-plafond-a-une-indexation-sur-l-inflation-le-gouvernement-change-son-fusil-d-epaule-pour-les-franchises-medicales_8155832.html",
+      "confidence_score": 0.72,
+      "warnings": [
+        "Le chiffre de 48 millions de Français concernés par la franchise provient de France Info (source secondaire) — à vérifier via une source CNAM ou DREES directe.",
+        "Le taux d'indexation sur l'inflation évoqué (3-4 %) est une estimation basée sur les projections INSEE 2025-2026 : à ce stade, le taux exact d'indexation retenu dans le PLFSS 2027 n'est pas connu — qualifié prudemment d'estimation.",
+        "Le chiffre de 19 % de renoncement aux soins (DREES 2024) est cité de mémoire — à vérifier dans le rapport exact de la DREES avant publication.",
+        "Le chiffre de 12,3 millions d'ALD (CNAM) est un ordre de grandeur régulièrement cité — à confirmer sur le dernier rapport CNAM disponible.",
+        "Les positions de la FSPF et de l'USPO sur la réforme des franchises n'ont pas été retrouvées dans les sources disponibles à ce jour : non citées conformément à la règle d'équilibre syndical.",
+        "L'indexation sur l'inflation n'est pas encore votée au moment de la rédaction : statut législatif incertain.",
+        "3 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

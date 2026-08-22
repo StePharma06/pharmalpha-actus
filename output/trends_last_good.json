@@ -1,58 +1,58 @@
 {
   "pathologies": [
     {
-      "display": "Allergie aout",
-      "delta_label": "↑ 49 550",
+      "display": "Allergie eau de mer",
+      "delta_label": "↑ 24 050",
       "trend": "up"
     },
     {
-      "display": "Armoise allergie",
-      "delta_label": "↑ 37 750",
-      "trend": "up"
-    },
-    {
-      "display": "Ou trouver lunette éclipse solaire",
-      "delta_label": "↑ 21 350",
+      "display": "Allergie aux moustiques",
+      "delta_label": "↑ 22 350",
       "trend": "up"
     },
     {
       "display": "Vitamine b₁₂",
-      "delta_label": "↑ 12 850",
+      "delta_label": "↑ 13 100",
       "trend": "up"
     },
     {
-      "display": "Plaquettes basses et fatigue",
-      "delta_label": "↑ 12 500",
+      "display": "Eloge de la fatigue",
+      "delta_label": "↑ 9 850",
+      "trend": "up"
+    },
+    {
+      "display": "Cure vitamine fatigue",
+      "delta_label": "↑ 8 700",
       "trend": "up"
     }
   ],
-  "pathologies_from": "2026-08-21",
+  "pathologies_from": "2026-08-22",
   "soins": [
     {
-      "display": "Temps de digestion chien",
-      "delta_label": "↑ 59 000",
+      "display": "Immunite diplomatique",
+      "delta_label": "↑ 373 800",
       "trend": "up"
     },
     {
-      "display": "Digestion difficile remède rapide",
-      "delta_label": "↑ 31 400",
+      "display": "Plante digestion",
+      "delta_label": "↑ 42 050",
+      "trend": "up"
+    },
+    {
+      "display": "Azinc immunite",
+      "delta_label": "↑ 41 750",
+      "trend": "up"
+    },
+    {
+      "display": "Temps de digestion chien",
+      "delta_label": "↑ 41 100",
       "trend": "up"
     },
     {
       "display": "Eclipse et sommeil",
-      "delta_label": "↑ 15 000",
-      "trend": "up"
-    },
-    {
-      "display": "Implant apnée du sommeil",
-      "delta_label": "↑ 12 850",
-      "trend": "up"
-    },
-    {
-      "display": "Opérations spéciales lioness la douleur ",
-      "delta_label": "↑ 2 800",
+      "delta_label": "↑ 12 200",
       "trend": "up"
     }
   ],
-  "soins_from": "2026-08-21"
+  "soins_from": "2026-08-22"
 }

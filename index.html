@@ -31,7 +31,7 @@
      l'image n'est decouverte qu'apres execution du JS qui construit les cards
      (le <img> n'existe qu'a l'interieur d'un template literal JS, invisible au
      preload scanner) -> LCP non deterministe, cf. sprint perf 2026-07-27. -->
-<link rel="preload" as="image" href="assets/img_actu_2026_08_21_1.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="assets/img_actu_2026_08_22_1.jpg" fetchpriority="high">
 
 <!-- Font cohesion site principal -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1737,7 +1737,7 @@ body.pa-has-nav #actusHeader {
 </div>
 
 <!-- EXPRESSION DU JOUR (injectée par update_actus.py à chaque run) -->
-<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Vaccin</h2><p class="expression-corps">Du latin <em>vacca</em>, la vache. En 1796, Edward Jenner immunise contre la variole humaine en inoculant le virus de la variole bovine. Le nom de la vache est ainsi entré pour toujours dans le vocabulaire médical mondial.</p></aside>
+<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Avoir du sang-froid</h2><p class="expression-corps">Pendant des siècles, la médecine grecque puis européenne croyait que les émotions chauffaient le sang : la colère, la peur, l'enthousiasme le rendaient bouillant. Garder le sang froid, c'était donc rester calme quand tout le monde perdait la tête - littéralement.</p></aside>
 
 <!-- ESPACE PARTENAIRE 1 (entre Expression du jour et Aujourd'hui).
      Statique : reste visible meme si le JS ne s'execute pas. Le 2e emplacement
@@ -1762,12 +1762,12 @@ body.pa-has-nav #actusHeader {
 <div id="articles-container"></div>
 
 <!-- MARQUE_TENDANCE (injectee par le pipeline hebdo, remplacee quotidiennement) -->
-<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">15 aout au 21 aout 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie aout</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 49 550</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Temps de digestion chien</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 59 000</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Armoise allergie</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 37 750</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Digestion difficile remède rapide</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 31 400</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Ou trouver lunette éclipse solaire</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 21 350</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Eclipse et sommeil</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 15 000</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Vitamine b₁₂</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 12 850</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Implant apnée du sommeil</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 12 850</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Plaquettes basses et fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 12 500</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Opérations spéciales lioness la douleur </td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 2 800</td></tr>
+<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">16 aout au 22 aout 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie eau de mer</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 24 050</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Immunite diplomatique</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 373 800</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie aux moustiques</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 22 350</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Plante digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 42 050</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Vitamine b₁₂</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 13 100</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Azinc immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 41 750</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Eloge de la fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 9 850</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Temps de digestion chien</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 41 100</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Cure vitamine fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 8 700</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Eclipse et sommeil</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 12 200</td></tr>
 </tbody></table></div><p style="margin:10px 0 0;font-size:11px;color:#9ca3af;font-style:italic;">Indice de tendance : intensite de hausse Google Trends (non comparable a un volume absolu).</p><p style="margin:12px 0 0;font-size:11px;color:#9ca3af;text-align:right;">Source&nbsp;: Google Trends France (pytrends) &middot; 7 jours glissants</p></section></div>
 
 <!-- ARCHIVES CTA -->
@@ -1930,6 +1930,90 @@ body.pa-has-nav #actusHeader {
 // Mis a jour automatiquement par n8n chaque semaine
 // ============================================================
 const ARTICLES = [
+{
+    id: "actu_2026_08_22_1",
+    date: "2026-08-22",
+    type: "actu",
+    categorie: "pharma_france",
+    titre: "Facturation électronique au 1er septembre : pas de report, débrouille-toi",
+    resume: "C'est le 1er septembre et c'est pour de vrai : la facturation électronique devient obligatoire pour toutes les entreprises, pharmacies comprises. L'administration fiscale a été claire, aucun report. Une tolérance existe, mais à une condition bien précise. Vaut mieux ne pas traîner.",
+    source: "Le Quotidien du Pharmacien",
+    source_url: "http://www.lequotidiendupharmacien.fr/exercice-pro/facturation-electronique-pharmacien-tout-ce-quil-faut-savoir-pour-le-demarrage-au-1er-septembre",
+    tiktok_url: "",
+    badge_label: "Pharma France",
+    image_url: "assets/img_actu_2026_08_22_1.jpg",
+    tags: ["facturation", "officine", "reglementation", "lgо", "conformite"]
+  },
+{
+    id: "actu_2026_08_22_2",
+    date: "2026-08-22",
+    type: "actu",
+    categorie: "pharma_monde",
+    titre: "Ebola en RDC : 2 500 morts et une épidémie qui accélère. Le vaccin, seul espoir ?",
+    resume: "L'épidémie d'Ebola en République Démocratique du Congo dépasse les 2 500 morts et progresse de façon exponentielle, alerte l'ONU. La riposte vaccinale est en cours, mais se heurte à des obstacles majeurs. Ce qui se passe là-bas nous concerne aussi.",
+    source: "Le Monde Santé",
+    source_url: "https://www.lemonde.fr/afrique/article/2026/08/21/ebola-en-rdc-l-epidemie-progresse-de-facon-exponentielle-et-depasse-2-500-morts-alerte-l-onu_6752079_3212.html",
+    tiktok_url: "",
+    badge_label: "Pharma Monde",
+    image_url: "assets/img_actu_2026_08_22_2.jpg",
+    tags: ["ebola", "vaccination", "epidemie", "sante-mondiale", "vigilance"]
+  },
+{
+    id: "actu_2026_08_22_3",
+    date: "2026-08-22",
+    type: "actu",
+    categorie: "bonne_nouvelle",
+    titre: "Beyfortus et Abrysvo remboursés à 65 % dès le 31 août : une bonne nouvelle pour les familles et pour toi",
+    resume: "Bonne nouvelle pour les nourrissons et leurs parents : Beyfortus et Abrysvo passent d'un remboursement à 30 % à 65 % dès le démarrage de la campagne VRS. La HAS a revu à la hausse leur service médical rendu. Moins de reste à charge, plus d'adhésion. C'est exactement le bon signal au bon moment.",
+    source: "Le Moniteur des Pharmacies",
+    source_url: "https://www.lemoniteurdespharmacies.fr/therapeutique/medicaments/mieux-delivrer/infection-a-vrs-abrysvo-et-beyfortus-bientot-rembourses-a-65",
+    tiktok_url: "",
+    badge_label: "La bonne nouvelle",
+    image_url: "assets/img_actu_2026_08_22_3.jpg",
+    tags: ["vrs", "remboursement", "bronchiolite", "has", "nourrisson"]
+  },
+{
+    id: "actu_2026_08_22_4",
+    date: "2026-08-22",
+    type: "actu",
+    categorie: "avenir_pharma",
+    titre: "Aide à mourir : la loi est publiée au JO, et toi tu fais quoi avec ta clause de conscience ?",
+    resume: "La loi relative au droit à l'aide à mourir est parue au Journal officiel le 19 août 2026. Le Conseil constitutionnel l'a validée avec trois réserves. Pour les pharmaciens, la clause de conscience est au coeur du débat. Ce n'est plus une question théorique.",
+    source: "USPO",
+    source_url: "https://uspo.fr/droit-a-laide-a-mourir-et-clause-de-conscience-ou-en-est-on/",
+    tiktok_url: "",
+    badge_label: "L'avenir de la pharma",
+    image_url: "assets/img_actu_2026_08_22_4.jpg",
+    tags: ["aide-a-mourir", "clause-de-conscience", "loi", "ethique", "officine"]
+  },
+{
+    id: "actu_2026_08_22_5",
+    date: "2026-08-22",
+    type: "actu",
+    categorie: "business_officine",
+    titre: "Franchises médicales : le recul du gouvernement, une bombe à retardement pour tes marges",
+    resume: "Le doublement du plafond des franchises est abandonné, mais une indexation sur l'inflation est actée. Pour 48 millions de Français concernés, l'impact sur le reste à charge va grimper - et ton comptoir va en sentir les effets.",
+    source: "Pharm'Actus · France Info Santé — Du doublement du plafond à une indexation sur l'inflation, France Info Santé — Comment fonctionnent les franchises médicales",
+    source_url: "https://www.franceinfo.fr/sante/du-doublement-du-plafond-a-une-indexation-sur-l-inflation-le-gouvernement-change-son-fusil-d-epaule-pour-les-franchises-medicales_8155832.html",
+    tiktok_url: "",
+    badge_label: "Business",
+    image_url: "assets/img_actu_2026_08_22_5.jpg",
+    tags: ["franchises-medicales", "reste-a-charge", "plfss", "economie-sante"]
+  },
+{
+    id: "lsv_2026_08_22",
+    date: "2026-08-22",
+    type: "lsv",
+    categorie: "lsv",
+    titre: "Le saviez-vous ? On soignait la pneumonie en appliquant des ventouses brûlantes",
+    resume: "Pendant des siècles, la pneumonie était un arrêt de mort. La médecine de l'époque répondait avec du feu, littéralement. Et le pire, c'est que les patients y croyaient dur comme fer.",
+    source: "Pharm'Alpha",
+    source_url: "",
+    tiktok_url: "",
+    badge_label: "Le Saviez-Vous",
+    image_url: "assets/img_lsv_2026_08_22.jpg",
+    tags: ["histoire", "pratique-medicale", "pneumonie", "chirurgie", "antibiotique"]
+  },
 {
     id: "actu_2026_08_21_1",
     date: "2026-08-21",
@@ -2545,90 +2629,6 @@ const ARTICLES = [
     badge_label: "Pharma Monde",
     image_url: "assets/img_actu_2026_08_13_2.jpg",
     tags: ["vaccination", "oms", "desinformation", "calendrier-vaccinal", "pediatrie"]
-  },
-{
-    id: "actu_2026_08_13_3",
-    date: "2026-08-13",
-    type: "actu",
-    categorie: "bonne_nouvelle",
-    titre: "VIH en officine : AIDES et les pharmaciens, une alliance qui marche",
-    resume: "La prévention du VIH passe de plus en plus par le comptoir. L'association AIDES distribue un million de préservatifs par an et réalise des tests de dépistage. Le pharmacien d'officine est un maillon clé de cette chaîne de prévention, souvent discret mais essentiel.",
-    source: "Le Moniteur des Pharmacies",
-    source_url: "https://www.lemoniteurdespharmacies.fr/conseils/pathologies/la-prevention-du-vih-passe-aussi-par-la-pharmacie",
-    tiktok_url: "",
-    badge_label: "La bonne nouvelle",
-    image_url: "assets/img_actu_2026_08_13_3.jpg",
-    tags: ["vih", "prevention", "prep", "autotest", "officine"]
-  },
-{
-    id: "actu_2026_08_13_4",
-    date: "2026-08-13",
-    type: "actu",
-    categorie: "avenir_pharma",
-    titre: "Ebola en RDC : essai clinique de phase 3 en vue, les vaccins entrent dans la course",
-    resume: "L'OMS et la République Démocratique du Congo avancent vers le lancement d'un essai clinique de phase 3 multibranche sur les vaccins Ebola. Une étape majeure dans la lutte contre un virus qui continue de frapper les populations les plus fragiles. Ce que ça signifie pour le pipeline vaccinal mondial.",
-    source: "STAT News",
-    source_url: "https://www.statnews.com/2026/08/12/ebola-who-drc-ebola-vaccine-trial/?utm_campaign=rss",
-    tiktok_url: "",
-    badge_label: "L'avenir de la pharma",
-    image_url: "assets/img_actu_2026_08_13_4.jpg",
-    tags: ["ebola", "vaccination", "essai-clinique", "oms", "recherche"]
-  },
-{
-    id: "actu_2026_08_13_5",
-    date: "2026-08-13",
-    type: "actu",
-    categorie: "business_officine",
-    titre: "Nicotine sans tabac : 3 segments OTC à investir avant que la réglementation se referme",
-    resume: "Poches de nicotine, vapotage, tabac chauffé : ces produits sans ordonnance explosent chez les jeunes tout en contournant les interdictions. Pour l'officine, c'est un marché OTC à fort potentiel - mais la fenêtre réglementaire est étroite.",
-    source: "Pharm'Actus · France Info Santé — Produits à base de nicotine sans tabac, formes créatives et interdictions contournées, Convention pharmaceutique — Avenant 22 (entretiens sevrage tabagique, honoraires)",
-    source_url: "https://www.franceinfo.fr/sante/drogue-addictions/cigarette-electronique/c-est-un-leurre-les-produits-a-base-de-nicotine-reviennent-sous-des-formes-de-plus-en-plus-creatives-et-accessibles-pour-contourner-les-interdictions-et-cibler-les-jeunes_8142179.html",
-    tiktok_url: "",
-    badge_label: "Business",
-    image_url: "assets/img_actu_2026_08_13_5.jpg",
-    tags: ["sevrage-tabagique", "nicotine", "otc-officine", "mission-conventionnelle"]
-  },
-{
-    id: "lsv_2026_08_13",
-    date: "2026-08-13",
-    type: "lsv",
-    categorie: "lsv",
-    titre: "Le saviez-vous ? On combattait les épidémies en brûlant des tonnes de poudre à canon",
-    resume: "Avant les désinfectants et les masques FFP2, les autorités sanitaires avaient une solution radicale contre la peste et le choléra : faire exploser des barils entiers de poudre à canon dans les rues. Pas pour faire peur aux microbes. Pour purifier l'air. Et pendant deux siècles, tout le monde y a cru.",
-    source: "Pharm'Alpha",
-    source_url: "",
-    tiktok_url: "",
-    badge_label: "Le Saviez-Vous",
-    image_url: "assets/img_lsv_2026_08_13.jpg",
-    tags: ["histoire", "epidemie", "hygiene", "peste", "desinfection"]
-  },
-{
-    id: "actu_2026_08_12_1",
-    date: "2026-08-12",
-    type: "actu",
-    categorie: "pharma_france",
-    titre: "Officines : CA en hausse, rentabilité en chute libre. On t'explique.",
-    resume: "En 2025, le CA moyen des officines grimpe de 4,9 %. Mais près d'une officine sur deux voit sa performance économique reculer. La croissance du marché du médicament cache une réalité bien moins flatteuse pour les titulaires.",
-    source: "Le Moniteur des Pharmacies",
-    source_url: "https://www.lemoniteurdespharmacies.fr/business/marches/pourquoi-les-officines-gagnent-moins-malgre-un-chiffre-daffaires-en-hausse",
-    tiktok_url: "",
-    badge_label: "Pharma France",
-    image_url: "assets/img_actu_2026_08_12_1.jpg",
-    tags: ["marge", "officine", "remuneration", "rosp", "rentabilite"]
-  },
-{
-    id: "actu_2026_08_12_2",
-    date: "2026-08-12",
-    type: "actu",
-    categorie: "pharma_monde",
-    titre: "Statines chez les plus de 75 ans, les arrêter peut être sans risque. Ce que dit le Lancet.",
-    resume: "Une étude publiée dans The Lancet et relayée par STAT News casse un tabou : arrêter les statines chez les plus de 75 ans à faible risque cardiovasculaire n'augmente pas la mortalité. De quoi relancer le débat sur la déprescription à l'officine.",
-    source: "STAT News",
-    source_url: "https://www.statnews.com/2026/08/11/stop-statins-age-75-lancet-study-suggests-safe-healthy-adults/",
-    tiktok_url: "",
-    badge_label: "Pharma Monde",
-    image_url: "assets/img_actu_2026_08_12_2.jpg",
-    tags: ["statines", "deprescription", "bpm", "cardiovasculaire", "lancet"]
   }
 ];
 

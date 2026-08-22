@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? On traitait les fractures du crâne avec du beurre rance",
-  "resume": "Pendant des siècles, les médecins ont soigné les traumatismes crâniens avec des substances qu'on jetterait aujourd'hui à la poubelle. Le beurre rance, le jaune d'œuf et la cire d'abeille constituaient la neurochirurgie de l'époque. Et pourtant, l'un de ces ingrédients cache un secret que la science moderne vient seulement de valider.",
-  "full_text": "Imagine qu'un paysan du XVIe siècle se prend un coup de sabot de cheval sur la tête. Fracture du crâne, plaie ouverte. Le barbier-chirurgien du village débarque avec sa trousse. Et là, il sort... du beurre. Pas du beurre frais. Du beurre rance. Exprès.\n\nLa recette vient de Guy de Chauliac, le plus grand chirurgien du Moyen Âge, qui l'a consignée dans sa Grande Chirurgie en 1363. Le protocole officiel pour les plaies crâniennes : nettoyer avec du vinaigre, appliquer un mélange de beurre rance, de graisse de poule et de cire d'abeille, puis bander serré. Répéter pendant 40 jours. Quarante jours.\n\nMais voilà le twist qui va te laisser perplexe. Le beurre rance, c'est du beurre oxydé, plein d'acides gras libres et de composés irritants. Ça sentait atrocement mauvais. Et pourtant... des études récentes sur les acides gras à courte chaîne montrent qu'ils ont des propriétés anti-inflammatoires réelles sur les tissus nerveux endommagés. Les chercheurs de l'Université de Lausanne ont publié en 2019 des données montrant que certains acides gras produits par oxydation ralentissent l'œdème cérébral post-traumatique chez le rat.\n\nDe là à dire que Guy de Chauliac avait raison pour les bonnes raisons... personne ne va jusqu'à là. Mais l'idée de graisser une plaie crânienne plutôt que de la laisser à l'air libre n'était peut-être pas aussi absurde qu'on le croit.\n\nLa cire d'abeille, elle, est aujourd'hui utilisée dans les pansements occlusifs modernes pour les brûlures. Le principe, exactement le même : créer une barrière protectrice, maintenir l'humidité, éviter la contamination.\n\nAu comptoir, quand un patient te demande si les remèdes de grand-mère ont du bon, tu peux lui répondre que parfois, le bon sens empirique de 700 ans de pratique mérite qu'on y jette un œil scientifique sérieux.",
-  "image_keywords": "medieval medicine skull",
+  "titre": "Le saviez-vous ? On soignait la pneumonie en appliquant des ventouses brûlantes",
+  "resume": "Pendant des siècles, la pneumonie était un arrêt de mort. La médecine de l'époque répondait avec du feu, littéralement. Et le pire, c'est que les patients y croyaient dur comme fer.",
+  "full_text": "En 1850, attraper une pneumonie, c'était jouer à la roulette russe. Fièvre à 40°C, poumons qui se noient, teint grisâtre. Pas d'antibiotiques, bien sûr. Mais les médecins avaient une réponse. Une réponse en verre et en flammes.\n\nLa ventouse, c'est un petit globe en verre qu'on chauffe à l'intérieur avec une flamme, puis qu'on applique directement sur la peau du dos. En refroidissant, il crée une dépression. La peau se soulève, rosit, vire au violet. Et voilà, le mal était supposé être aspiré hors du corps. Élégant, non ?\n\nLe twist, c'est que cette pratique ne date pas du Moyen Âge poussiéreux. Elle était encore recommandée dans des traités médicaux sérieux en France jusqu'à la fin du XIXe siècle. Le Dr Armand Trousseau, ponte de la médecine parisienne, prescrivait les ventouses à l'Hôtel-Dieu dans les années 1860 comme on prescrit aujourd'hui de l'amoxicilline. Avec la même conviction absolue.\n\nCe qui fascinait les médecins de l'époque, c'est la rougeur spectaculaire laissée sur la peau. Pour eux, ça prouvait que l'inflammation remontait à la surface. Logique selon la théorie des humeurs : déplacer le mal vers l'extérieur. Sauf que la pneumonie, elle, continuait son bonhomme de chemin au fond des alvéoles, complètement indifférente au spectacle.\n\nLa vraie révolution n'est arrivée qu'en 1942, quand la pénicilline a été utilisée en masse pour traiter les pneumonies bactériennes. En quelques années, une maladie qui tuait 30 % des patients hospitalisés est devenue traitable en une semaine. Les ventouses ont rejoint le musée.\n\nAujourd'hui, quand tu délivres une amoxicilline pour une pneumopathie, souviens-toi : pendant des siècles, le meilleur traitement qu'on pouvait proposer à ce même patient, c'était une cloche de verre chauffée au feu. Le comptoir n'a jamais été aussi précieux.",
+  "image_keywords": "glass cupping therapy",
   "tags": [
     "histoire",
+    "pratique medicale",
+    "pneumonie",
     "chirurgie",
-    "neurologie",
-    "decouverte",
-    "plante"
+    "antibiotique"
   ],
-  "date": "2026-08-21",
+  "date": "2026-08-22",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",
