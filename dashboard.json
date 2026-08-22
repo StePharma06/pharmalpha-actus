@@ -1,21 +1,21 @@
 {
- "genere_le": "2026-08-21T05:42:49+02:00",
+ "genere_le": "2026-08-22T05:34:46+02:00",
  "liste_brevo": 5,
  "abonnes_total": 1093,
- "nouveaux_7j": 32,
+ "nouveaux_7j": 28,
  "nouveaux_cumul": 1086,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-08-14",
-  "au": "2026-08-21",
-  "delivres": 6845,
-  "ouvertures": 2561,
-  "ouvertures_uniques": 1920,
-  "clics": 2683,
-  "clics_uniques": 510,
-  "taux_ouverture_pct": 28.0,
-  "taux_clic_pct": 7.5,
-  "ctor_pct": 26.6,
+  "du": "2026-08-15",
+  "au": "2026-08-22",
+  "delivres": 6868,
+  "ouvertures": 2630,
+  "ouvertures_uniques": 1956,
+  "clics": 2764,
+  "clics_uniques": 529,
+  "taux_ouverture_pct": 28.5,
+  "taux_clic_pct": 7.7,
+  "ctor_pct": 27.0,
   "top_articles": [
    {
     "id": "actu_2026_08_15_3",
@@ -30,8 +30,8 @@
     "titre": "Bicafres en rupture : la prépa magistrale remboursée, c'est maintenant possible",
     "date": "2026-08-15",
     "categorie": "pharma_france",
-    "clics": 72,
-    "lecteurs": 47
+    "clics": 73,
+    "lecteurs": 48
    },
    {
     "id": "actu_2026_08_19_1",
@@ -62,8 +62,8 @@
     "titre": "Ebola en RDC : 5 000 cas, 2 300 morts, risque de propagation internationale. L'OMS tire la sonnette d'alarme.",
     "date": "2026-08-20",
     "categorie": "pharma_monde",
-    "clics": 65,
-    "lecteurs": 39
+    "clics": 66,
+    "lecteurs": 40
    },
    {
     "id": "actu_2026_08_20_3",
@@ -82,31 +82,31 @@
     "lecteurs": 37
    },
    {
-    "id": "actu_2026_08_18_4",
-    "titre": "Abrysvo, Beyfortus, Enflonsia : la campagne VRS démarre le 14 septembre",
-    "date": "2026-08-18",
-    "categorie": "avenir_pharma",
-    "clics": 58,
-    "lecteurs": 35
+    "id": "actu_2026_08_21_3",
+    "titre": "Aide à mourir : la loi est là, le rôle de l'officine se précise enfin",
+    "date": "2026-08-21",
+    "categorie": "bonne_nouvelle",
+    "clics": 57,
+    "lecteurs": 37
    },
    {
-    "id": "actu_2026_08_14_1",
-    "titre": "Cyprotérone 50 mg sort du TFR : ce que ça change au comptoir dès septembre",
-    "date": "2026-08-14",
+    "id": "actu_2026_08_21_1",
+    "titre": "Protoxyde d'azote récréatif : c'est désormais un délit, et le comptoir est en première ligne",
+    "date": "2026-08-21",
     "categorie": "pharma_france",
-    "clics": 50,
-    "lecteurs": 35
+    "clics": 52,
+    "lecteurs": 37
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-08-21",
-  "delivres": 85213,
-  "ouvertures": 34058,
-  "ouvertures_uniques": 23595,
-  "clics": 34744,
-  "clics_uniques": 6280,
+  "au": "2026-08-22",
+  "delivres": 86177,
+  "ouvertures": 34435,
+  "ouvertures_uniques": 23858,
+  "clics": 35160,
+  "clics_uniques": 6353,
   "taux_ouverture_pct": 27.7,
   "taux_clic_pct": 7.4,
   "ctor_pct": 26.6,
@@ -129,9 +129,9 @@
    },
    {
     "id": "actu_2026_08_12_1",
-    "titre": "Officines : CA en hausse, rentabilité en chute libre. On t'explique.",
-    "date": "2026-08-12",
-    "categorie": "pharma_france",
+    "titre": "actu_2026_08_12_1",
+    "date": "",
+    "categorie": "",
     "clics": 104,
     "lecteurs": 72
    },
