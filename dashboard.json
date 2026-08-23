@@ -1,38 +1,22 @@
 {
- "genere_le": "2026-08-22T05:34:46+02:00",
+ "genere_le": "2026-08-23T05:42:33+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1093,
- "nouveaux_7j": 28,
- "nouveaux_cumul": 1086,
+ "abonnes_total": 1096,
+ "nouveaux_7j": 29,
+ "nouveaux_cumul": 1089,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-08-15",
-  "au": "2026-08-22",
-  "delivres": 6868,
-  "ouvertures": 2630,
-  "ouvertures_uniques": 1956,
-  "clics": 2764,
-  "clics_uniques": 529,
-  "taux_ouverture_pct": 28.5,
-  "taux_clic_pct": 7.7,
-  "ctor_pct": 27.0,
+  "du": "2026-08-16",
+  "au": "2026-08-23",
+  "delivres": 5933,
+  "ouvertures": 2585,
+  "ouvertures_uniques": 1890,
+  "clics": 2413,
+  "clics_uniques": 498,
+  "taux_ouverture_pct": 31.9,
+  "taux_clic_pct": 8.4,
+  "ctor_pct": 26.3,
   "top_articles": [
-   {
-    "id": "actu_2026_08_15_3",
-    "titre": "VRS 2026-2027 : la campagne démarre, ton rôle est central",
-    "date": "2026-08-15",
-    "categorie": "bonne_nouvelle",
-    "clics": 74,
-    "lecteurs": 48
-   },
-   {
-    "id": "actu_2026_08_15_1",
-    "titre": "Bicafres en rupture : la prépa magistrale remboursée, c'est maintenant possible",
-    "date": "2026-08-15",
-    "categorie": "pharma_france",
-    "clics": 73,
-    "lecteurs": 48
-   },
    {
     "id": "actu_2026_08_19_1",
     "titre": "Loi aide à mourir : ce que ça change concrètement à l'officine",
@@ -50,12 +34,12 @@
     "lecteurs": 44
    },
    {
-    "id": "actu_2026_08_15_2",
-    "titre": "Les pédiatres américains contre le fearmongering anti-vaccins : leçon pour l'officine française",
-    "date": "2026-08-15",
-    "categorie": "pharma_monde",
-    "clics": 73,
-    "lecteurs": 40
+    "id": "actu_2026_08_22_1",
+    "titre": "Facturation électronique au 1er septembre : pas de report, débrouille-toi",
+    "date": "2026-08-22",
+    "categorie": "pharma_france",
+    "clics": 67,
+    "lecteurs": 41
    },
    {
     "id": "actu_2026_08_20_2",
@@ -96,18 +80,34 @@
     "categorie": "pharma_france",
     "clics": 52,
     "lecteurs": 37
+   },
+   {
+    "id": "actu_2026_08_18_4",
+    "titre": "Abrysvo, Beyfortus, Enflonsia : la campagne VRS démarre le 14 septembre",
+    "date": "2026-08-18",
+    "categorie": "avenir_pharma",
+    "clics": 59,
+    "lecteurs": 36
+   },
+   {
+    "id": "actu_2026_08_22_4",
+    "titre": "Aide à mourir : la loi est publiée au JO, et toi tu fais quoi avec ta clause de conscience ?",
+    "date": "2026-08-22",
+    "categorie": "avenir_pharma",
+    "clics": 55,
+    "lecteurs": 35
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-08-22",
-  "delivres": 86177,
-  "ouvertures": 34435,
-  "ouvertures_uniques": 23858,
-  "clics": 35160,
-  "clics_uniques": 6353,
-  "taux_ouverture_pct": 27.7,
+  "au": "2026-08-23",
+  "delivres": 86188,
+  "ouvertures": 34686,
+  "ouvertures_uniques": 23989,
+  "clics": 35211,
+  "clics_uniques": 6387,
+  "taux_ouverture_pct": 27.8,
   "taux_clic_pct": 7.4,
   "ctor_pct": 26.6,
   "top_articles": [
