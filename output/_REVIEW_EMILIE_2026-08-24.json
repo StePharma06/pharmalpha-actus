@@ -1,0 +1,48 @@
+{
+  "generated_at": "2026-08-24T04:11:14.831536+02:00",
+  "run_date": "2026-08-24",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Rupture de BICAFRES : un arrêté fixe enfin le prix des préparations magistrales",
+      "resume": "BICAFRES est en rupture, et l'Assurance Maladie ne laisse pas les patients sans solution. Un arrêté du 21 août 2026, publié au JO du 22 août, encadre désormais le prix de vente au public des préparations magistrales de bicarbonate de sodium prises en charge. Concrètement, ça change quoi au comptoir ? Beaucoup.",
+      "source": "USPO",
+      "source_url": "https://uspo.fr/rupture-de-bicafres-fixation-du-prix-des-preparations-magistrales-de-bicarbonate-de-sodium/",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "Vaccination, téléconsultation, bilans : 167 millions d'euros de marge en plus pour les officines",
+      "resume": "Les nouvelles missions officinales, c'est du concret. En 2025, la marge totale générée par la vaccination, les bilans et la téléconsultation a atteint 167,5 millions d'euros. La preuve par les chiffres que le virage missions n'est pas qu'un discours syndical.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/vaccination-teleconsultation-bilans-des-relais-de-croissance-mais-a-quel-prix",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "40 000 préservatifs non conformes : l'officine au cœur d'une crise de confiance",
+      "resume": "La DGCCRF a épinglé plus de 40 000 préservatifs non conformes vendus en France, dont une partie en pharmacie. Derrière le scandale produit, un vrai sujet business : comment l'officine gère-t-elle le risque réputationnel et réglementaire sur ses rayons de dispositifs médicaux ?",
+      "source": "Pharm'Actus · France Info Santé — Produits de santé, les dangers des achats sur internet, France Info Santé — 10 à 30% de chance d'acheter un mauvais médicament",
+      "source_url": "https://www.franceinfo.fr/sante/produits-de-sante-les-dangers-des-achats-sur-internet_8157722.html",
+      "confidence_score": 0.72,
+      "warnings": [
+        "Le chiffre de 40 000 préservatifs non conformes est repris tel quel des sources DGCCRF via France Info — non vérifié directement sur le site DGCCRF.",
+        "La part de marché officinale sur les préservatifs n'est pas chiffrée précisément dans les sources : le chiffre de 130 millions d'unités/an est une estimation de marché publique (Statista/Xerfi) à vérifier avant citation externe.",
+        "Les taux de marge 30-40% sur DM non remboursés sont indicatifs (marge libre) et varient fortement selon les centrales d'achat et les gammes — ne pas les présenter comme un taux universel.",
+        "Le chiffre '10 à 30% de chance d'acheter un mauvais médicament sur internet' est cité par France Info, attribué à l'ANSM — vérifier la source primaire ANSM avant toute citation formelle.",
+        "Aucun syndicat de pharmaciens (FSPF, USPO, UPGF) ne s'est exprimé publiquement sur cette affaire spécifique à la date de rédaction — aucune position syndicale n'a donc été inventée ni attribuée.",
+        "Le règlement MDR 2017/745 et ses obligations pour les distributeurs sont correctement référencés mais la vérification des articles exacts (Art. 14) est recommandée avant publication juridique formelle.",
+        "2 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}
