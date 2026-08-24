@@ -1,22 +1,38 @@
 {
- "genere_le": "2026-08-23T05:42:33+02:00",
+ "genere_le": "2026-08-24T05:45:52+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1096,
- "nouveaux_7j": 29,
- "nouveaux_cumul": 1089,
+ "abonnes_total": 1100,
+ "nouveaux_7j": 30,
+ "nouveaux_cumul": 1093,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-08-16",
-  "au": "2026-08-23",
-  "delivres": 5933,
-  "ouvertures": 2585,
-  "ouvertures_uniques": 1890,
-  "clics": 2413,
-  "clics_uniques": 498,
-  "taux_ouverture_pct": 31.9,
-  "taux_clic_pct": 8.4,
-  "ctor_pct": 26.3,
+  "du": "2026-08-17",
+  "au": "2026-08-24",
+  "delivres": 7103,
+  "ouvertures": 2730,
+  "ouvertures_uniques": 2020,
+  "clics": 2773,
+  "clics_uniques": 549,
+  "taux_ouverture_pct": 28.4,
+  "taux_clic_pct": 7.7,
+  "ctor_pct": 27.2,
   "top_articles": [
+   {
+    "id": "actu_2026_08_22_1",
+    "titre": "Facturation électronique au 1er septembre : pas de report, débrouille-toi",
+    "date": "2026-08-22",
+    "categorie": "pharma_france",
+    "clics": 86,
+    "lecteurs": 55
+   },
+   {
+    "id": "actu_2026_08_22_4",
+    "titre": "Aide à mourir : la loi est publiée au JO, et toi tu fais quoi avec ta clause de conscience ?",
+    "date": "2026-08-22",
+    "categorie": "avenir_pharma",
+    "clics": 71,
+    "lecteurs": 45
+   },
    {
     "id": "actu_2026_08_19_1",
     "titre": "Loi aide à mourir : ce que ça change concrètement à l'officine",
@@ -34,12 +50,12 @@
     "lecteurs": 44
    },
    {
-    "id": "actu_2026_08_22_1",
-    "titre": "Facturation électronique au 1er septembre : pas de report, débrouille-toi",
-    "date": "2026-08-22",
-    "categorie": "pharma_france",
-    "clics": 67,
-    "lecteurs": 41
+    "id": "actu_2026_08_21_2",
+    "titre": "Vaccin ARNm contre le mélanome : Moderna et Merck annoncent des résultats en phase finale",
+    "date": "2026-08-21",
+    "categorie": "pharma_monde",
+    "clics": 65,
+    "lecteurs": 43
    },
    {
     "id": "actu_2026_08_20_2",
@@ -48,6 +64,14 @@
     "categorie": "pharma_monde",
     "clics": 66,
     "lecteurs": 40
+   },
+   {
+    "id": "actu_2026_08_21_3",
+    "titre": "Aide à mourir : la loi est là, le rôle de l'officine se précise enfin",
+    "date": "2026-08-21",
+    "categorie": "bonne_nouvelle",
+    "clics": 60,
+    "lecteurs": 39
    },
    {
     "id": "actu_2026_08_20_3",
@@ -62,54 +86,30 @@
     "titre": "Sanofi licencie 229 personnes au Massachusetts, un an après Blueprint",
     "date": "2026-08-18",
     "categorie": "pharma_monde",
-    "clics": 59,
+    "clics": 61,
     "lecteurs": 37
    },
    {
-    "id": "actu_2026_08_21_3",
-    "titre": "Aide à mourir : la loi est là, le rôle de l'officine se précise enfin",
-    "date": "2026-08-21",
-    "categorie": "bonne_nouvelle",
-    "clics": 57,
-    "lecteurs": 37
-   },
-   {
-    "id": "actu_2026_08_21_1",
-    "titre": "Protoxyde d'azote récréatif : c'est désormais un délit, et le comptoir est en première ligne",
-    "date": "2026-08-21",
-    "categorie": "pharma_france",
-    "clics": 52,
-    "lecteurs": 37
-   },
-   {
-    "id": "actu_2026_08_18_4",
-    "titre": "Abrysvo, Beyfortus, Enflonsia : la campagne VRS démarre le 14 septembre",
-    "date": "2026-08-18",
-    "categorie": "avenir_pharma",
-    "clics": 59,
-    "lecteurs": 36
-   },
-   {
-    "id": "actu_2026_08_22_4",
-    "titre": "Aide à mourir : la loi est publiée au JO, et toi tu fais quoi avec ta clause de conscience ?",
+    "id": "actu_2026_08_22_5",
+    "titre": "Franchises médicales : le recul du gouvernement, une bombe à retardement pour tes marges",
     "date": "2026-08-22",
-    "categorie": "avenir_pharma",
+    "categorie": "business_officine",
     "clics": 55,
-    "lecteurs": 35
+    "lecteurs": 37
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-08-23",
-  "delivres": 86188,
-  "ouvertures": 34686,
-  "ouvertures_uniques": 23989,
-  "clics": 35211,
-  "clics_uniques": 6387,
-  "taux_ouverture_pct": 27.8,
+  "au": "2026-08-24",
+  "delivres": 87359,
+  "ouvertures": 34888,
+  "ouvertures_uniques": 24137,
+  "clics": 35598,
+  "clics_uniques": 6444,
+  "taux_ouverture_pct": 27.6,
   "taux_clic_pct": 7.4,
-  "ctor_pct": 26.6,
+  "ctor_pct": 26.7,
   "top_articles": [
    {
     "id": "actu_2026_06_18_1",
