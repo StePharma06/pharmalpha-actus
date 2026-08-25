@@ -1,0 +1,58 @@
+{
+  "generated_at": "2026-08-25T04:07:12.117432+02:00",
+  "run_date": "2026-08-25",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Bicafres en rupture : la prépa magistrale de bicarbonate débarque officiellement",
+      "resume": "Un arrêté autorise la substitution du Bicafres 1 000 mg par une préparation magistrale de bicarbonate de sodium, sans nouvelle ordonnance. Deux dosages disponibles : 500 mg ou 1 000 mg en gélules non gastrorésistantes. Le médecin doit être informé sans délai pour adapter la surveillance biologique.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/medicament-parapharmacie/medicament/bicafres-deux-preparations-magistrales-sont-autorisees",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "L'ANEPF veut des pharmaciens au coeur du premier recours, et c'est une bonne nouvelle pour toi",
+      "resume": "Matthéo de Faria, nouveau président de l'ANEPF, élu à l'unanimité, affiche une ambition claire : faire des pharmaciens des acteurs à part entière des soins de premier recours. Il veut aussi améliorer la lisibilité de la filière auprès des lycéens. Une génération qui arrive avec des convictions, c'est plutôt rassurant.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/mattheo-de-faria-anepf-nous-voulons-etre-des-pharmaciens-pleinement-acteurs-des-soins-de-premier-recours",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "avenir_pharma",
+      "titre": "TDAH : trois cibles, une molécule, le traitement de demain en approche",
+      "resume": "La FDA vient d'autoriser un traitement du TDAH ciblant simultanément dopamine, noradrénaline et sérotonine, une première mondiale dans cette indication. Cette nouvelle classe thérapeutique ouvre des perspectives pour les patients en échec ou intolérants aux options actuelles. Le pipeline se densifie, l'officine doit anticiper.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/tdah-une-nouvelle-option-therapeutique-autorisee-aux-etats-unis",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Franchise médicale à 140 € : ce que ça change vraiment pour ton officine",
+      "resume": "Le gouvernement relève le plafond de la franchise médicale de 100 à 140 €, soit +40 % via décret. Derrière l'annonce politique, il y a un impact direct sur le comportement de tes patients au comptoir - et une opportunité business à ne pas rater.",
+      "source": "Pharm'Actus · Le Monde Santé — Franchises médicales : le gouvernement veut porter le plafond à 140 euros, France Info Santé — Le plafond des franchises médicales finalement fixé à 140 euros par an",
+      "source_url": "https://www.lemonde.fr/politique/article/2026/08/24/franchises-medicales-le-gouvernement-veut-porter-le-plafond-a-140-euros-par-l-adoption-d-un-decret-apres-avoir-renonce-a-le-doubler_6755438_823448.html",
+      "confidence_score": 0.82,
+      "warnings": [
+        "Le chiffre '12 millions de bénéficiaires ALD' est issu du rapport Cnam 2024 cité de mémoire — à vérifier sur le site ameli.fr avant publication.",
+        "L'impact fiscal total attendu du relèvement à 140 € n'a pas été chiffré dans les sources disponibles : ne pas l'inventer.",
+        "Le mécanisme exact de déduction de la franchise (déduction sur remboursement ou tiers payant coordonné ?) mérite vérification si cela change selon les régimes complémentaires : ne pas aller plus loin que 'déduite sur le remboursement AM' sans source précise.",
+        "Le '+10 € par an en moyenne' est attribué à la déclaration de la ministre sur France Info — chiffre non vérifié sur une source écrite officielle : à traiter comme une déclaration ministérielle, pas un rapport.",
+        "Le calcul 140 € / 0,50 € = 280 boîtes est arithmétiquement juste mais suppose que toutes les boîtes génèrent une franchise à 0,50 € — certains médicaments ont des taux différents (ex : homéopathie déremboursée, médicaments à prescription restreinte) : la simplification est acceptable pour l'angle pédagogique mais signaler la nuance.",
+        "4 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

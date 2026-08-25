@@ -31,7 +31,7 @@
      l'image n'est decouverte qu'apres execution du JS qui construit les cards
      (le <img> n'existe qu'a l'interieur d'un template literal JS, invisible au
      preload scanner) -> LCP non deterministe, cf. sprint perf 2026-07-27. -->
-<link rel="preload" as="image" href="assets/img_actu_2026_08_24_1.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="assets/img_actu_2026_08_25_1.jpg" fetchpriority="high">
 
 <!-- Space Grotesk — self-hosted WOFF2 (remplace Google Fonts, cf. mission perf/RGPD 2026-08-24) -->
 <link rel="preload" href="/assets/fonts/space-grotesk-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -1737,7 +1737,7 @@ body.pa-has-nav #actusHeader {
 </div>
 
 <!-- EXPRESSION DU JOUR (injectée par update_actus.py à chaque run) -->
-<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Alcool</h2><p class="expression-corps">De l'arabe <em>al-kuhul</em>, la poudre d'antimoine finement broyée utilisée pour noircir les yeux dans le monde arabe médiéval. Les alchimistes ont étendu le terme à toute substance purifiée par distillation - d'où l'alcool éthylique.</p></aside>
+<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Être de bonne humeur</h2><p class="expression-corps">Les médecins grecs croyaient que le corps produisait quatre « humeurs » - sang, bile jaune, bile noire et phlegme - dont l'équilibre déterminait l'état d'esprit. Être de bonne humeur, c'était avoir ses humeurs bien équilibrées. Le mot est resté, la théorie non.</p></aside>
 
 <!-- ESPACE PARTENAIRE 1 (entre Expression du jour et Aujourd'hui).
      Statique : reste visible meme si le JS ne s'execute pas. Le 2e emplacement
@@ -1762,12 +1762,12 @@ body.pa-has-nav #actusHeader {
 <div id="articles-container"></div>
 
 <!-- MARQUE_TENDANCE (injectee par le pipeline hebdo, remplacee quotidiennement) -->
-<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">18 aout au 24 aout 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Assurance maladie fatigue chronique</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 349 500</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Tisane pour la digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 75 650</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie aout</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 66 300</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Temps de digestion chien</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 62 150</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie à l'alcool</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 28 250</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Azinc immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 47 150</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Fatigue chronique que faire</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 15 300</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Implant apnée du sommeil</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 9 600</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Lunette eclipse solaire leclerc</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 15 100</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Combien de temps dure un cycle de sommei</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 6 700</td></tr>
+<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">19 aout au 25 aout 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie aout</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 62 150</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Immunite diplomatique</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 453 350</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie figue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 22 900</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Immunite familiale</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 397 950</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Vitamine b₁₂</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 13 050</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Medicament pour la digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 33 750</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Fatigue intense cause</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 12 100</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Alka seltzer digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 29 800</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Lunette eclipse</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 6 150</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Eclipse et sommeil</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 12 350</td></tr>
 </tbody></table></div><p style="margin:10px 0 0;font-size:11px;color:#9ca3af;font-style:italic;">Indice de tendance : intensite de hausse Google Trends (non comparable a un volume absolu).</p><p style="margin:12px 0 0;font-size:11px;color:#9ca3af;text-align:right;">Source&nbsp;: Google Trends France (pytrends) &middot; 7 jours glissants</p></section></div>
 
 <!-- ARCHIVES CTA -->
@@ -1930,6 +1930,90 @@ body.pa-has-nav #actusHeader {
 // Mis a jour automatiquement par n8n chaque semaine
 // ============================================================
 const ARTICLES = [
+{
+    id: "actu_2026_08_25_1",
+    date: "2026-08-25",
+    type: "actu",
+    categorie: "pharma_france",
+    titre: "Bicafres en rupture : la prépa magistrale de bicarbonate débarque officiellement",
+    resume: "Un arrêté autorise la substitution du Bicafres 1 000 mg par une préparation magistrale de bicarbonate de sodium, sans nouvelle ordonnance. Deux dosages disponibles : 500 mg ou 1 000 mg en gélules non gastrorésistantes. Le médecin doit être informé sans délai pour adapter la surveillance biologique.",
+    source: "Le Quotidien du Pharmacien",
+    source_url: "http://www.lequotidiendupharmacien.fr/medicament-parapharmacie/medicament/bicafres-deux-preparations-magistrales-sont-autorisees",
+    tiktok_url: "",
+    badge_label: "Pharma France",
+    image_url: "assets/img_actu_2026_08_25_1.jpg",
+    tags: ["rupture", "préparation-magistrale", "bicarbonate", "substitution", "ansm"]
+  },
+{
+    id: "actu_2026_08_25_2",
+    date: "2026-08-25",
+    type: "actu",
+    categorie: "pharma_monde",
+    titre: "TDAH : Otsuka décroche le feu vert FDA avec une molécule qui joue sur trois tableaux",
+    resume: "Le laboratoire Otsuka a obtenu l'autorisation de la FDA pour un nouveau traitement du TDAH, première nouvelle classe thérapeutique depuis des années. La molécule cible simultanément dopamine, noradrénaline et sérotonine. En France, le TDAH est encore sous-diagnostiqué et les options thérapeutiques restent limitées.",
+    source: "Le Quotidien du Pharmacien",
+    source_url: "http://www.lequotidiendupharmacien.fr/exercice-pro/tdah-une-nouvelle-option-therapeutique-autorisee-aux-etats-unis",
+    tiktok_url: "",
+    badge_label: "Pharma Monde",
+    image_url: "assets/img_actu_2026_08_25_2.jpg",
+    tags: ["tdah", "fda", "innovation", "neurologie", "pipeline"]
+  },
+{
+    id: "actu_2026_08_25_3",
+    date: "2026-08-25",
+    type: "actu",
+    categorie: "bonne_nouvelle",
+    titre: "L'ANEPF veut des pharmaciens au coeur du premier recours, et c'est une bonne nouvelle pour toi",
+    resume: "Matthéo de Faria, nouveau président de l'ANEPF, élu à l'unanimité, affiche une ambition claire : faire des pharmaciens des acteurs à part entière des soins de premier recours. Il veut aussi améliorer la lisibilité de la filière auprès des lycéens. Une génération qui arrive avec des convictions, c'est plutôt rassurant.",
+    source: "Le Moniteur des Pharmacies",
+    source_url: "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/mattheo-de-faria-anepf-nous-voulons-etre-des-pharmaciens-pleinement-acteurs-des-soins-de-premier-recours",
+    tiktok_url: "",
+    badge_label: "La bonne nouvelle",
+    image_url: "assets/img_actu_2026_08_25_3.jpg",
+    tags: ["anepf", "etudiant", "premier-recours", "officine", "formation"]
+  },
+{
+    id: "actu_2026_08_25_4",
+    date: "2026-08-25",
+    type: "actu",
+    categorie: "avenir_pharma",
+    titre: "TDAH : trois cibles, une molécule, le traitement de demain en approche",
+    resume: "La FDA vient d'autoriser un traitement du TDAH ciblant simultanément dopamine, noradrénaline et sérotonine, une première mondiale dans cette indication. Cette nouvelle classe thérapeutique ouvre des perspectives pour les patients en échec ou intolérants aux options actuelles. Le pipeline se densifie, l'officine doit anticiper.",
+    source: "Le Quotidien du Pharmacien",
+    source_url: "http://www.lequotidiendupharmacien.fr/exercice-pro/tdah-une-nouvelle-option-therapeutique-autorisee-aux-etats-unis",
+    tiktok_url: "",
+    badge_label: "L'avenir de la pharma",
+    image_url: "assets/img_actu_2026_08_25_4.jpg",
+    tags: ["tdah", "fda", "pipeline", "neurologie", "innovation"]
+  },
+{
+    id: "actu_2026_08_25_5",
+    date: "2026-08-25",
+    type: "actu",
+    categorie: "business_officine",
+    titre: "Franchise médicale à 140 € : ce que ça change vraiment pour ton officine",
+    resume: "Le gouvernement relève le plafond de la franchise médicale de 100 à 140 €, soit +40 % via décret. Derrière l'annonce politique, il y a un impact direct sur le comportement de tes patients au comptoir - et une opportunité business à ne pas rater.",
+    source: "Pharm'Actus · Le Monde Santé — Franchises médicales : le gouvernement veut porter le plafond à 140 euros, France Info Santé — Le plafond des franchises médicales finalement fixé à 140 euros par an",
+    source_url: "https://www.lemonde.fr/politique/article/2026/08/24/franchises-medicales-le-gouvernement-veut-porter-le-plafond-a-140-euros-par-l-adoption-d-un-decret-apres-avoir-renonce-a-le-doubler_6755438_823448.html",
+    tiktok_url: "",
+    badge_label: "Business",
+    image_url: "assets/img_actu_2026_08_25_5.jpg",
+    tags: ["franchise-medicale", "reste-a-charge", "officine", "assurance-maladie"]
+  },
+{
+    id: "lsv_2026_08_25",
+    date: "2026-08-25",
+    type: "lsv",
+    categorie: "lsv",
+    titre: "Le saviez-vous ? On guérissait la rage avec un fer rouge appliqué sur la plaie",
+    resume: "Pendant des siècles, le seul « traitement » contre la rage était de cautériser la morsure au fer chauffé à blanc. Douloureux, brutal, et pourtant pas totalement absurde. Jusqu'au jour où un chimiste français décida d'aller beaucoup plus loin.",
+    source: "Pharm'Alpha",
+    source_url: "",
+    tiktok_url: "",
+    badge_label: "Le Saviez-Vous",
+    image_url: "assets/img_lsv_2026_08_25.jpg",
+    tags: ["histoire", "vaccin", "epidemie", "decouverte", "chirurgie"]
+  },
 {
     id: "actu_2026_08_24_1",
     date: "2026-08-24",
@@ -2545,90 +2629,6 @@ const ARTICLES = [
     badge_label: "Pharma Monde",
     image_url: "assets/img_actu_2026_08_15_2.jpg",
     tags: ["vaccination", "defiance", "officine", "sante-publique", "communication"]
-  },
-{
-    id: "actu_2026_08_15_3",
-    date: "2026-08-15",
-    type: "actu",
-    categorie: "bonne_nouvelle",
-    titre: "VRS 2026-2027 : la campagne démarre, ton rôle est central",
-    resume: "Un DGS-Urgent du 10 août 2026 lance officiellement la campagne de prévention contre le virus respiratoire syncytial pour la saison 2026-2027. Vaccination et immunisation passive au programme. L'officine est en première ligne, encore une fois.",
-    source: "USPO",
-    source_url: "https://uspo.fr/campagne-de-vaccination-et-dimmunisation-contre-le-vrs-2/",
-    tiktok_url: "",
-    badge_label: "La bonne nouvelle",
-    image_url: "assets/img_actu_2026_08_15_3.jpg",
-    tags: ["vrs", "vaccination", "bronchiolite", "prevention", "officine"]
-  },
-{
-    id: "actu_2026_08_15_4",
-    date: "2026-08-15",
-    type: "actu",
-    categorie: "avenir_pharma",
-    titre: "IRM cardiaque en couleurs et ultra-rapide : diagnostic de l'infarctus bientôt révolutionné",
-    resume: "Une équipe de recherche développe une IRM cardiaque plus rapide, plus précise et en couleurs pour mieux visualiser les cicatrices du myocarde. Une avancée qui pourrait transformer le suivi cardio de tes patients chroniques dans les années à venir.",
-    source: "The Conversation FR",
-    source_url: "https://theconversation.com/demain-une-irm-cardiaque-plus-rapide-precise-confortable-et-en-couleurs-pour-mieux-visualiser-les-cicatrices-du-coeur-289106",
-    tiktok_url: "",
-    badge_label: "L'avenir de la pharma",
-    image_url: "assets/img_actu_2026_08_15_4.jpg",
-    tags: ["innovation", "cardiologie", "diagnostic", "recherche", "infarctus"]
-  },
-{
-    id: "actu_2026_08_15_5",
-    date: "2026-08-15",
-    type: "actu",
-    categorie: "business_officine",
-    titre: "Missions pharma à 15 € minimum : l'UPGF ouvre le feu avant les négociations conventionnelles",
-    resume: "L'UPGF réclame une valorisation plancher de 15 € pour chaque mission pharmaceutique, contre 6,30 € actuellement pour certains entretiens. Avec les négociations qui patinent côté ministère, cette prise de position arrive au pire - ou au meilleur - moment.",
-    source: "Pharm'Actus · UPGF — Position officielle : Développer les missions de santé publique du pharmacien, Le Pharmacien de France (FSPF) — Éditorial 'À contresens', 14 août 2026",
-    source_url: "https://www.upgf.fr/positions/developper-les-missions-de-sante-publique-du-pharmacien/",
-    tiktok_url: "",
-    badge_label: "Business",
-    image_url: "assets/img_actu_2026_08_15_5.jpg",
-    tags: ["missions-pharmaceutiques", "remuneration", "negociations-conventionnelles", "syndicats"]
-  },
-{
-    id: "lsv_2026_08_15",
-    date: "2026-08-15",
-    type: "lsv",
-    categorie: "lsv",
-    titre: "Le saviez-vous ? Le premier remède contre la dépression était de l'opium pour dames",
-    resume: "Au XIXe siècle, la mélancolie n'était pas une maladie, c'était une faiblesse de caractère. Et le traitement ? Un sirop d'opium parfumé à la cerise, vendu sans ordonnance chez le pharmacien du coin. Bienvenue dans l'âge d'or de la dépendance recommandée par le corps médical.",
-    source: "Pharm'Alpha",
-    source_url: "",
-    tiktok_url: "",
-    badge_label: "Le Saviez-Vous",
-    image_url: "assets/img_lsv_2026_08_15.jpg",
-    tags: ["histoire", "medicament", "psychiatrie", "poison", "pharmacie"]
-  },
-{
-    id: "actu_2026_08_14_1",
-    date: "2026-08-14",
-    type: "actu",
-    categorie: "pharma_france",
-    titre: "Cyprotérone 50 mg sort du TFR : ce que ça change au comptoir dès septembre",
-    resume: "Le CEPS a décidé la sortie du TFR pour l'acétate de cyprotérone 50 mg à partir du 1er septembre 2026. Fini les 8,48 euros figés : le prix va bouger. Ce que tu dois absolument anticiper dans ton logiciel avant la rentrée.",
-    source: "Le Moniteur des Pharmacies",
-    source_url: "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/cyproterone-50-mg-ce-quil-faut-desormais-savoir",
-    tiktok_url: "",
-    badge_label: "Pharma France",
-    image_url: "assets/img_actu_2026_08_14_1.jpg",
-    tags: ["tfr", "generique", "substitution", "ceps", "officine"]
-  },
-{
-    id: "actu_2026_08_14_2",
-    date: "2026-08-14",
-    type: "actu",
-    categorie: "pharma_monde",
-    titre: "Eli Lilly contre le marché noir du retatrutide : la bataille qui nous concerne aussi",
-    resume: "La nouvelle molécule d'Eli Lilly, le retatrutide, n'a pas encore l'AMM que son marché noir est déjà florissant aux Etats-Unis. Lilly attaque en justice les compoundeurs clandestins. Ça te rappelle quelque chose ? L'écho semaglutide est immédiat.",
-    source: "STAT News",
-    source_url: "https://www.statnews.com/2026/08/13/biotech-news-eli-lilly-targets-booming-retatrutide-black-market/?utm_campaign=rss",
-    tiktok_url: "",
-    badge_label: "Pharma Monde",
-    image_url: "assets/img_actu_2026_08_14_2.jpg",
-    tags: ["glp-1", "amm", "marche-noir", "innovation", "diabete"]
   }
 ];
 

@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? La première banque de venin de serpent était dans une cuisine de Miami",
-  "resume": "Dans les années 1940, un herpétologue à moitié fou stockait des centaines de serpents venimeux dans sa maison pour produire du sérum antivenimeux. Sans lui, des milliers de personnes seraient mortes. Et tout ça a commencé par une morsure qu'il s'est lui-même infligée.",
-  "full_text": "Miami, 1946. Bill Haast a 30 ans, une maison de banlieue, une femme qui tente de rester zen... et 150 serpents venimeux dans le jardin.\n\nCet ancien mécanicien de l'US Navy est obsédé par une idée fixe : produire du venin de serpent en quantité industrielle pour fabriquer des antidotes. À l'époque, les morsures de serpent tuent des milliers d'Américains chaque année, et les hôpitaux manquent cruellement de sérums. Personne ne veut financer ce projet. Haast décide donc de faire ça chez lui.\n\nIl ouvre le 'Serpentarium de Miami' en 1947 - mi-laboratoire, mi-attraction touristique - et commence à extraire manuellement le venin de cobras royaux, de mambas noirs et de taipans. Chaque jour. Avec ses mains nues ou presque. Le twist ? Pour développer une immunité, il s'injecte volontairement des doses croissantes de venin depuis 1948. Il sera mordu 172 fois au cours de sa vie. Il vivra jusqu'à 100 ans.\n\nMais l'histoire prend un tournant inattendu en 1977. Un enfant mordu par un serpent exotique rare arrive aux urgences. Aucun sérum disponible nulle part dans le pays. Les médecins appellent Haast en urgence. Il fait prélever son propre sang - chargé d'anticorps uniques - et le transfuse directement à l'enfant. L'enfant survit.\n\nSon travail a directement contribué à la standardisation des protocoles de production des sérums antivenimeux aux États-Unis, et posé les bases de ce qu'on appelle aujourd'hui la 'venomique' - l'étude systématique des venins comme sources de molécules thérapeutiques.\n\nAujourd'hui, des dérivés de venin de serpent sont présents dans des médicaments contre l'hypertension, les troubles de la coagulation et même certains cancers. La prochaine fois qu'un patient te demande l'enalapril, dis-toi qu'il y a un peu de serpent dans son ordonnance.",
-  "image_keywords": "venomous snake venom extraction",
+  "titre": "Le saviez-vous ? On guérissait la rage avec un fer rouge appliqué sur la plaie",
+  "resume": "Pendant des siècles, le seul « traitement » contre la rage était de cautériser la morsure au fer chauffé à blanc. Douloureux, brutal, et pourtant pas totalement absurde. Jusqu'au jour où un chimiste français décida d'aller beaucoup plus loin.",
+  "full_text": "La rage. Rien qu'à prononcer le mot, on voit des images de cauchemar. Convulsions, hydrophobie, mort quasi certaine. Pendant des millénaires, l'humanité entière n'avait qu'une seule réponse à une morsure suspecte : le feu.\n\nConcrètement, on chauffait un tisonnier, une lame ou un clou jusqu'au rouge vif, et on l'appliquait directement sur la plaie. Sans anesthésie, évidemment. L'idée ? Détruire le « venin » avant qu'il remonte jusqu'au cerveau. C'était brutal. C'était archaïque. Et bizarrement, ça marchait... parfois. Parce que si la morsure est traitée assez tôt et assez profondément, la chaleur peut effectivement détruire le virus avant qu'il migre le long des nerfs.\n\nMais voilà le twist que personne n'attend : c'est Louis Pasteur, un chimiste qui n'était même pas médecin, qui a changé la donne. En 1885, il met au point un vaccin contre la rage. Et son premier patient humain, c'est Joseph Meister, un gamin alsacien de 9 ans mordu 14 fois par un chien enragé. Le 6 juillet 1885, Pasteur lui injecte du virus atténué. Pendant 10 jours, 13 injections. Résultat ? Joseph survive. Il vivra jusqu'en 1940.\n\nCe qui est fou, c'est que Pasteur n'avait aucune certitude. Il risquait la prison si l'enfant mourait. Il a quand même tenté. Parce que sans vaccin, Joseph était condamné à 100 %.\n\nAujourd'hui, le vaccin antirabique post-exposition reste l'un des rares traitements qui s'administre APRÈS le contact avec le pathogène, et qui sauve quand même la vie. Un concept révolutionnaire que Pasteur a inventé il y a 140 ans, à une époque où le fer rouge était encore la norme. Au comptoir, quand un patient revient d'une zone endémique avec une morsure de chatte de gouttière... tu penses peut-être urgences. Pasteur aurait pensé pareil.",
+  "image_keywords": "rabies vaccine history",
   "tags": [
     "histoire",
-    "poison",
+    "vaccin",
+    "epidemie",
     "decouverte",
-    "chimie",
-    "medicament"
+    "chirurgie"
   ],
-  "date": "2026-08-24",
+  "date": "2026-08-25",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",

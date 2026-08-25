@@ -1,6 +1,131 @@
 {
   "articles": [
     {
+      "id": "actu_2026_08_25_5",
+      "date": "2026-08-25",
+      "type": "actu",
+      "categorie": "business_officine",
+      "titre": "Franchise médicale à 140 € : ce que ça change vraiment pour ton officine",
+      "resume": "Le gouvernement relève le plafond de la franchise médicale de 100 à 140 €, soit +40 % via décret. Derrière l'annonce politique, il y a un impact direct sur le comportement de tes patients au comptoir - et une opportunité business à ne pas rater.",
+      "source": "Pharm'Actus · Le Monde Santé — Franchises médicales : le gouvernement veut porter le plafond à 140 euros, France Info Santé — Le plafond des franchises médicales finalement fixé à 140 euros par an",
+      "source_url": "https://www.lemonde.fr/politique/article/2026/08/24/franchises-medicales-le-gouvernement-veut-porter-le-plafond-a-140-euros-par-l-adoption-d-un-decret-apres-avoir-renonce-a-le-doubler_6755438_823448.html",
+      "tiktok_url": "",
+      "badge_label": "Business",
+      "image_url": "assets/img_actu_2026_08_25_5.jpg",
+      "tags": [
+        "franchise-medicale",
+        "reste-a-charge",
+        "officine",
+        "assurance-maladie"
+      ],
+      "full_text": "Le gouvernement relève le plafond de la franchise médicale de 100 à 140 €, soit +40 % via décret. Derrière l'annonce politique, il y a un impact direct sur le comportement de tes patients au comptoir - et une opportunité business à ne pas rater.\n\n**Contexte**\n\nLe 20 août 2026, la ministre de la Santé Stéphanie Rist a annoncé le relèvement du plafond annuel des franchises médicales de 100 € à 140 €, par voie de décret. Un arbitrage en demi-teinte : le gouvernement avait initialement envisagé de le doubler à 200 €, avant de reculer sous pression politique. La franchise médicale, instaurée en 2008, est prélevée sur chaque boîte de médicament remboursée (0,50 € par boîte, plafonné annuellement), sur les actes paramédicaux et les transports sanitaires. Elle est acquittée par le patient, déduite sur le remboursement Assurance Maladie, et n'est PAS collectée à l'officine : ce n'est pas le pharmacien qui l'encaisse ni qui la reverse. En revanche, c'est le pharmacien qui fait face, au comptoir, aux patients qui ne comprennent pas pourquoi leur remboursement est réduit. Ce relèvement est justifié par le gouvernement comme une indexation sur l'inflation depuis 2005 - soit +40 % sur 20 ans, ce qui correspond grossièrement à l'évolution des prix sur la période. L'impact fiscal attendu sur les finances publiques n'a pas été chiffré officiellement dans les sources disponibles.\n\n**Analyse business**\n\n**Ce que ça ne change PAS pour toi :** la franchise n'est pas une charge officinale. Elle ne touche ni ta MDL, ni ton honoraire de dispensation, ni ta trésorerie. Le flux financier est entièrement entre l'Assurance Maladie et l'assuré. Rappel de base : ne jamais présenter la franchise comme un coût pour l'officine.\n\n**Ce que ça change VRAIMENT :** le comportement de tes patients. Passer de 100 € à 140 € de plafond annuel, c'est +40 € par an pour les gros consommateurs de médicaments - typiquement les patients poly-médiqués, souvent âgés, souvent atteints de pathologies chroniques. Ce sont exactement tes patients les plus fidèles, ceux qui viennent le plus souvent au comptoir.\n\nLe nombre de boîtes remboursées à partir duquel le nouveau plafond est atteint dépend du montant de franchise appliqué par boîte et varie donc selon les textes réglementaires en vigueur. Pour un patient diabétique ou hypertendu sous traitement lourd, ce seuil est souvent dépassé dès le premier semestre.\n\nLes patients exonérés du ticket modérateur (ALD, maternité, accidents du travail) restent exonérés de franchise également : ils ne sont pas concernés. En France, environ 12 millions de personnes bénéficient d'une exonération ALD (source : Cnam 2024). Ce sont donc les patients NON-ALD, notamment ceux sous traitement ponctuel ou semi-chronique, qui encaisseront le plus fortement cette hausse.\n\nLa ministre a évoqué un coût moyen par assuré en moyenne nationale, mais ce chiffre est une moyenne : pour la part de la population qui consomme peu, l'impact est nul (ils n'atteignent pas le plafond). Pour les gros consommateurs non-ALD, l'impact réel sera bien supérieur à cette moyenne.\n\n**Le risque comptoir :** une incompréhension accrue des patients sur leurs remboursements, du temps perdu à expliquer, et un risque de renoncement aux soins pour certains profils fragiles non-ALD. C'est exactement le terrain sur lequel le pharmacien a une valeur ajoutée de conseil - et potentiellement de service (accompagnement, orientation vers des dispositifs de protection complémentaire).\n\n**Recommandations actionnables**\n\n1. **Forme ton équipe sur la franchise médicale** - Chaque préparateur et pharmacien adjoint doit être capable d'expliquer en 30 secondes ce qu'est la franchise, qui la paie, et pourquoi le remboursement est réduit. Évite le temps perdu en caisse et la frustration du patient.\n\n2. **Identifie tes patients non-ALD à fort volume de boîtes** - Ce sont eux qui vont ressentir la hausse à 140 €. Un entretien pharmaceutique ciblé, une orientation vers un dispositif de mutuelle adaptée, ou simplement une information proactive renforce ta posture de professionnel de santé de premier recours.\n\n3. **Valorise les dispositifs d'exonération existants** - Rappelle à tes patients qui pourraient être éligibles à une ALD ou à la complémentaire santé solidaire (C2S) qu'ils peuvent être exonérés de franchise. C'est un conseil concret, gratuit pour toi, précieux pour eux.\n\n4. **Anticipe les questions sur la LFSS 2027** - Ce relèvement par décret préfigure probablement d'autres mesures de déremboursement ou de responsabilisation dans la prochaine loi de financement. Reste en veille : chaque modification du reste à charge patient impacte indirectement le flux comptoir et le recours à l'automédication OTC, là où ta marge est plus libre.\n\n**Sources citees**\n\n- Le Monde Santé - Franchises médicales : le gouvernement veut porter le plafond à 140 euros\n- France Info Santé - Le plafond des franchises médicales finalement fixé à 140 euros par an"
+    },
+    {
+      "id": "actu_2026_08_25_4",
+      "date": "2026-08-25",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "TDAH : trois cibles, une molécule, le traitement de demain en approche",
+      "resume": "La FDA vient d'autoriser un traitement du TDAH ciblant simultanément dopamine, noradrénaline et sérotonine, une première mondiale dans cette indication. Cette nouvelle classe thérapeutique ouvre des perspectives pour les patients en échec ou intolérants aux options actuelles. Le pipeline se densifie, l'officine doit anticiper.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/tdah-une-nouvelle-option-therapeutique-autorisee-aux-etats-unis",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_08_25_4.jpg",
+      "tags": [
+        "tdah",
+        "fda",
+        "pipeline",
+        "neurologie",
+        "innovation"
+      ],
+      "full_text": "Le TDAH, c'est une pathologie qu'on croyait bien cartographiée côté thérapeutique. Et là, un nouveau mécanisme d'action débarque. C'est rare, et ça mérite qu'on y prête attention.\n\nLe laboratoire Otsuka vient d'obtenir l'autorisation de mise sur le marché de la FDA pour une nouvelle molécule dans le traitement du trouble du déficit de l'attention avec ou sans hyperactivité (TDAH). Ce qui la distingue de tout ce qu'on a déjà : elle agit simultanément sur les récepteurs de la dopamine, de la noradrénaline ET de la sérotonine.\n\nJusqu'ici, les traitements du TDAH disponibles en Europe et en France (méthylphénidate, lisdexamfétamine, atomoxétine, guanfacine) jouaient sur un ou deux de ces systèmes. Intégrer la sérotonine dans le tableau, c'est potentiellement une meilleure prise en charge des patients TDAH avec comorbidités anxieuses ou dépressives, un profil extrêmement fréquent en pratique.\n\nOù en est-on sur la voie réglementaire européenne ? Nulle part encore. Il s'agit d'une autorisation FDA, pas d'une AMM EMA. Avant d'arriver dans ta pharmacie française, il faudra : le dossier EMA, l'AMM européenne, l'avis de la HAS sur le SMR/ASMR, une inscription au remboursement, et une négociation de prix avec le CEPS. Comptez au minimum 3 à 5 ans dans le meilleur des cas.\n\nPourquoi en parler maintenant ? Parce que les patients TDAH adultes, en explosion de prévalence diagnostique en France, vont entendre parler de ce traitement avant toi si tu ne t'y prépares pas. La presse grand public va s'en emparer, et ce sera dans ta boîte à questions dès la semaine prochaine.\n\nLa bonne réponse au comptoir : \"Oui, j'en ai entendu parler. C'est prometteur, la FDA vient de le valider aux États-Unis. En France, il faudra encore plusieurs années avant d'y avoir accès. En attendant, parlons de comment optimiser votre traitement actuel.\"\n\nDemain matin : c'est le bon moment pour actualiser ta fiche patient sur le TDAH et anticiper les questions. Un pharmacien qui suit le pipeline, c'est un pharmacien crédible."
+    },
+    {
+      "id": "actu_2026_08_25_3",
+      "date": "2026-08-25",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "L'ANEPF veut des pharmaciens au coeur du premier recours, et c'est une bonne nouvelle pour toi",
+      "resume": "Matthéo de Faria, nouveau président de l'ANEPF, élu à l'unanimité, affiche une ambition claire : faire des pharmaciens des acteurs à part entière des soins de premier recours. Il veut aussi améliorer la lisibilité de la filière auprès des lycéens. Une génération qui arrive avec des convictions, c'est plutôt rassurant.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/mattheo-de-faria-anepf-nous-voulons-etre-des-pharmaciens-pleinement-acteurs-des-soins-de-premier-recours",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_08_25_3.jpg",
+      "tags": [
+        "anepf",
+        "etudiant",
+        "premier-recours",
+        "officine",
+        "formation"
+      ],
+      "full_text": "Des étudiants en pharmacie qui veulent se battre pour leur place dans le système de soins. Ca change des vocations qui s'arrêtent au comptoir.\n\nMatthéo de Faria vient d'être élu à l'unanimité à la tête de l'ANEPF, l'association nationale des étudiants en pharmacie de France. Et il ne mâche pas ses mots : son mandat sera placé sous le signe de l'engagement dans les soins de premier recours. Pas juste délivrer et encaisser. Être acteurs, au sens plein du terme.\n\nDeux priorités affichées. D'abord, renforcer la lisibilité de la filière pharmacie. Le constat est posé sans détour : beaucoup de lycéens, et même des étudiants, ne savent pas vraiment ce que fait un pharmacien au quotidien. Quand on recrute des talents, c'est un problème structurel. Si les jeunes n'imaginent pas la diversité des débouchés (officine, hôpital, industrie, recherche, biologie), on perd des vocations avant même qu'elles germent.\n\nDeuxième axe : positionner le pharmacien comme pivot du premier recours. Ce n'est pas une nouveauté dans le discours politique, mais le fait que ça vienne d'une organisation étudiante élue à l'unanimité, c'est un signal fort sur les attentes de la génération qui va prendre tes comptoirs dans 5 à 10 ans.\n\nPourquoi c'est une bonne nouvelle pour toi, pharmacien titulaire ou adjoint aujourd'hui ? Parce que les batailles que tu mènes sur la reconnaissance des missions (entretiens pharmaceutiques, bilan de médication, vaccination, TROD) auront d'autant plus de force si la relève arrive déjà convaincue de leur légitimité. Une profession qui ne croit pas en elle-même ne convainc pas les tutelles.\n\nEt la continuité revendiquée par Matthéo de Faria par rapport à l'équipe précédente, c'est aussi un gage de cohérence dans les négociations avec les pouvoirs publics. Les dossiers longs (refonte des études, reconnaissance du diplôme en Europe, missions élargies) n'avancent que si le même cap est tenu sur plusieurs mandats.\n\nDemain matin : si tu accueilles des étudiants en stage, parle-leur de ce qui te passionne dans ton exercice. Ils construiront la profession de demain avec ce que tu leur transmets aujourd'hui."
+    },
+    {
+      "id": "actu_2026_08_25_2",
+      "date": "2026-08-25",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "TDAH : Otsuka décroche le feu vert FDA avec une molécule qui joue sur trois tableaux",
+      "resume": "Le laboratoire Otsuka a obtenu l'autorisation de la FDA pour un nouveau traitement du TDAH, première nouvelle classe thérapeutique depuis des années. La molécule cible simultanément dopamine, noradrénaline et sérotonine. En France, le TDAH est encore sous-diagnostiqué et les options thérapeutiques restent limitées.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/tdah-une-nouvelle-option-therapeutique-autorisee-aux-etats-unis",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/img_actu_2026_08_25_2.jpg",
+      "tags": [
+        "tdah",
+        "fda",
+        "innovation",
+        "neurologie",
+        "pipeline"
+      ],
+      "full_text": "Pendant qu'on gère les ruptures de Ritaline, les Américains valident une nouvelle classe pour le TDAH. Ca ne manque pas d'ironie.\n\nLe laboratoire japonais Otsuka vient d'obtenir le feu vert de la FDA pour commercialiser un nouveau traitement du trouble du déficit de l'attention avec ou sans hyperactivité (TDAH). Ce qui rend cette autorisation notable : il ne s'agit pas d'un énième dérivé amphétaminique ou d'un inhibiteur de la recapture de la noradrénaline. C'est une nouvelle classe thérapeutique à part entière.\n\nLa molécule agit sur trois systèmes de neurotransmetteurs simultanément : dopamine, noradrénaline et sérotonine. Jusqu'ici, les traitements du TDAH disponibles (méthylphénidate, atomoxétine, lisdexamfétamine) jouaient essentiellement sur les deux premiers. Ajouter la sérotonine dans l'équation ouvre potentiellement la porte à une meilleure gestion des comorbidités anxieuses et dépressives, fréquentes dans cette population.\n\nPour l'instant, c'est une autorisation américaine. Pas d'AMM européenne, pas d'avis HAS, pas de remboursement en vue en France à court terme. Le chemin est encore long avant d'arriver dans ton tiroir de comptoir. Mais c'est exactement ce que tu dois surveiller dans les 18 à 36 mois qui viennent.\n\nPourquoi ça te concerne dès maintenant ? Parce que le TDAH est une pathologie en forte croissance de diagnostic en France, notamment chez l'adulte. Les familles et les patients cherchent des alternatives quand le méthylphénidate est en rupture, quand il est mal toléré, ou quand la réponse est partielle. Tu es souvent le premier interlocuteur quand un patient te pose la question \"est-ce qu'il y a autre chose ?\"\n\nConnaître le pipeline thérapeutique, c'est ce qui te permet de répondre avec crédibilité. Et d'anticiper les demandes qui arriveront dès que la presse généraliste s'emparera du sujet, ce qui ne tardera pas.\n\nDemain matin : si tu suis des patients sous méthylphénidate ou atomoxétine avec une tolérance imparfaite, note ce dossier dans un coin de ta tête. La donne thérapeutique sur le TDAH est en train de bouger."
+    },
+    {
+      "id": "actu_2026_08_25_1",
+      "date": "2026-08-25",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "Bicafres en rupture : la prépa magistrale de bicarbonate débarque officiellement",
+      "resume": "Un arrêté autorise la substitution du Bicafres 1 000 mg par une préparation magistrale de bicarbonate de sodium, sans nouvelle ordonnance. Deux dosages disponibles : 500 mg ou 1 000 mg en gélules non gastrorésistantes. Le médecin doit être informé sans délai pour adapter la surveillance biologique.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/medicament-parapharmacie/medicament/bicafres-deux-preparations-magistrales-sont-autorisees",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_08_25_1.jpg",
+      "tags": [
+        "rupture",
+        "préparation-magistrale",
+        "bicarbonate",
+        "substitution",
+        "ansm"
+      ],
+      "full_text": "Le Bicafres est en rupture, et l'officine assure la continuité. C'est exactement le rôle qu'on attendait de toi.\n\nUn arrêté paru au Journal officiel le 22 août 2026 autorise, à titre exceptionnel et transitoire, la substitution du Bicafres 1 000 mg (bicarbonate de sodium, laboratoire Théradial) par une préparation magistrale sans nouvelle ordonnance. Deux formules sont validées : gélules non gastrorésistantes à 500 mg ou à 1 000 mg de bicarbonate de sodium.\n\nCôté pratique au comptoir : tu délivres la préparation magistrale sur présentation de l'ordonnance de Bicafres existante. Pas besoin de renvoyer le patient chez son médecin pour une nouvelle ordo. Mais attention, obligation d'informer le prescripteur sans délai, parce que le suivi biologique (notamment la kaliémie et le pH) peut nécessiter une adaptation de prise en charge.\n\nLe texte précise également les prix autorisés pour ces préparations, ce qui sécurise la facturation côté officine. On évite ainsi le flou tarifaire habituel quand on improvise face à une rupture.\n\nPourquoi c'est important ? Le Bicafres est prescrit dans l'insuffisance rénale chronique pour corriger l'acidose métabolique. C'est une population fragile, souvent polymédicamentée, dont on ne peut pas se permettre d'interrompre le traitement. La rupture de stock touche un médicament sans alternative directe remboursée sur étagère. La prépa magistrale, c'est la seule solution.\n\nCe type de décision confirme un mouvement de fond : l'officine, et plus précisément la pharmacie à usage préparatoire, est un maillon de sécurité du système de soins. Pas une simple boîte aux lettres de l'industrie.\n\nDemain matin au comptoir : vérifie que ta PUI ou ton prestataire de préparations magistrales est en capacité de produire ces gélules dans les délais. Informe le prescripteur dès la première délivrance. Et garde une traçabilité rigoureuse, c'est une mesure transitoire et exceptionnelle, donc elle sera scrutée."
+    },
+    {
+      "id": "lsv_2026_08_25",
+      "date": "2026-08-25",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? On guérissait la rage avec un fer rouge appliqué sur la plaie",
+      "resume": "Pendant des siècles, le seul « traitement » contre la rage était de cautériser la morsure au fer chauffé à blanc. Douloureux, brutal, et pourtant pas totalement absurde. Jusqu'au jour où un chimiste français décida d'aller beaucoup plus loin.",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_08_25.jpg",
+      "tags": [
+        "histoire",
+        "vaccin",
+        "epidemie",
+        "decouverte",
+        "chirurgie"
+      ],
+      "full_text": "La rage. Rien qu'à prononcer le mot, on voit des images de cauchemar. Convulsions, hydrophobie, mort quasi certaine. Pendant des millénaires, l'humanité entière n'avait qu'une seule réponse à une morsure suspecte : le feu.\n\nConcrètement, on chauffait un tisonnier, une lame ou un clou jusqu'au rouge vif, et on l'appliquait directement sur la plaie. Sans anesthésie, évidemment. L'idée ? Détruire le « venin » avant qu'il remonte jusqu'au cerveau. C'était brutal. C'était archaïque. Et bizarrement, ça marchait... parfois. Parce que si la morsure est traitée assez tôt et assez profondément, la chaleur peut effectivement détruire le virus avant qu'il migre le long des nerfs.\n\nMais voilà le twist que personne n'attend : c'est Louis Pasteur, un chimiste qui n'était même pas médecin, qui a changé la donne. En 1885, il met au point un vaccin contre la rage. Et son premier patient humain, c'est Joseph Meister, un gamin alsacien de 9 ans mordu 14 fois par un chien enragé. Le 6 juillet 1885, Pasteur lui injecte du virus atténué. Pendant 10 jours, 13 injections. Résultat ? Joseph survive. Il vivra jusqu'en 1940.\n\nCe qui est fou, c'est que Pasteur n'avait aucune certitude. Il risquait la prison si l'enfant mourait. Il a quand même tenté. Parce que sans vaccin, Joseph était condamné à 100 %.\n\nAujourd'hui, le vaccin antirabique post-exposition reste l'un des rares traitements qui s'administre APRÈS le contact avec le pathogène, et qui sauve quand même la vie. Un concept révolutionnaire que Pasteur a inventé il y a 140 ans, à une époque où le fer rouge était encore la norme. Au comptoir, quand un patient revient d'une zone endémique avec une morsure de chatte de gouttière... tu penses peut-être urgences. Pasteur aurait pensé pareil."
+    },
+    {
       "id": "actu_2026_08_24_5",
       "date": "2026-08-24",
       "type": "actu",
@@ -14309,6 +14434,6 @@
       ]
     }
   ],
-  "count": 690,
-  "updated_at": "2026-08-24T04:11:19.713431+02:00"
+  "count": 696,
+  "updated_at": "2026-08-25T04:07:15.001238+02:00"
 }

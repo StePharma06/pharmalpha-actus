@@ -1,58 +1,58 @@
 {
   "pathologies": [
     {
-      "display": "Assurance maladie fatigue chronique",
-      "delta_label": "↑ 349 500",
-      "trend": "up"
-    },
-    {
       "display": "Allergie aout",
-      "delta_label": "↑ 66 300",
-      "trend": "up"
-    },
-    {
-      "display": "Allergie à l'alcool",
-      "delta_label": "↑ 28 250",
-      "trend": "up"
-    },
-    {
-      "display": "Fatigue chronique que faire",
-      "delta_label": "↑ 15 300",
-      "trend": "up"
-    },
-    {
-      "display": "Lunette eclipse solaire leclerc",
-      "delta_label": "↑ 15 100",
-      "trend": "up"
-    }
-  ],
-  "pathologies_from": "2026-08-24",
-  "soins": [
-    {
-      "display": "Tisane pour la digestion",
-      "delta_label": "↑ 75 650",
-      "trend": "up"
-    },
-    {
-      "display": "Temps de digestion chien",
       "delta_label": "↑ 62 150",
       "trend": "up"
     },
     {
-      "display": "Azinc immunite",
-      "delta_label": "↑ 47 150",
+      "display": "Allergie figue",
+      "delta_label": "↑ 22 900",
       "trend": "up"
     },
     {
-      "display": "Implant apnée du sommeil",
-      "delta_label": "↑ 9 600",
+      "display": "Vitamine b₁₂",
+      "delta_label": "↑ 13 050",
       "trend": "up"
     },
     {
-      "display": "Combien de temps dure un cycle de sommei",
-      "delta_label": "↑ 6 700",
+      "display": "Fatigue intense cause",
+      "delta_label": "↑ 12 100",
+      "trend": "up"
+    },
+    {
+      "display": "Lunette eclipse",
+      "delta_label": "↑ 6 150",
       "trend": "up"
     }
   ],
-  "soins_from": "2026-08-24"
+  "pathologies_from": "2026-08-25",
+  "soins": [
+    {
+      "display": "Immunite diplomatique",
+      "delta_label": "↑ 453 350",
+      "trend": "up"
+    },
+    {
+      "display": "Immunite familiale",
+      "delta_label": "↑ 397 950",
+      "trend": "up"
+    },
+    {
+      "display": "Medicament pour la digestion",
+      "delta_label": "↑ 33 750",
+      "trend": "up"
+    },
+    {
+      "display": "Alka seltzer digestion",
+      "delta_label": "↑ 29 800",
+      "trend": "up"
+    },
+    {
+      "display": "Eclipse et sommeil",
+      "delta_label": "↑ 12 350",
+      "trend": "up"
+    }
+  ],
+  "soins_from": "2026-08-25"
 }
