@@ -1,0 +1,48 @@
+{
+  "generated_at": "2026-08-26T04:11:25.506044+02:00",
+  "run_date": "2026-08-26",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Siklos : une confusion de dosage x10 et ça peut tuer",
+      "resume": "L'ANSM signale un nouveau cas d'erreur médicamenteuse entre Siklos 100 mg et Siklos 1 000 mg à la délivrance. Dix fois la dose chez un enfant drépanocytaire, ce n'est pas un détail. Contrôle visuel obligatoire, maintenant.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/therapeutique/vigilances/siklos-une-nouvelle-erreur-medicamenteuse-appelle-a-la-vigilance",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "Culottes menstruelles remboursables : le 1er octobre, ça démarre en officine",
+      "resume": "L'arrêté du 6 août a fixé les modalités de prise en charge des culottes et coupes menstruelles réutilisables, avec un démarrage au 1er octobre. Les premières marques certifiées se positionnent déjà. Un nouveau rayon, de nouvelles références, un nouveau flux à gérer.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/coupes-et-culottes-menstruelles-les-premieres-references-remboursees-se-font-connaitre",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Ticket modérateur en hausse : ce que ça change vraiment pour ton officine",
+      "resume": "Le gouvernement relève les franchises et le ticket modérateur pour combler le déficit de l'Assurance Maladie. Derrière l'enjeu de solidarité, il y a un impact concret sur le flux officinal, la délivrance et la relation patient. Décryptage.",
+      "source": "Pharm'Actus · Le Monde Santé — Mutuelles, professionnels de santé et associations de patients inquiets de la hausse du ticket modérateur, DREES — Enquête sur la couverture complémentaire santé 2023",
+      "source_url": "https://www.lemonde.fr/societe/article/2026/08/25/assurance-maladie-mutuelles-professionnels-de-sante-et-associations-de-patients-inquiets-de-la-hausse-du-ticket-moderateur-et-des-plafonds-des-franchises_6756628_3224.html",
+      "confidence_score": 0.72,
+      "warnings": [
+        "Le relèvement exact des plafonds de franchise (50 € vers 70-80 €) est un scénario évoqué dans les media mais NON confirmé par un texte officiel à ce stade — présenté comme tel dans l'article.",
+        "Le taux de substitution générique à 85 % en ville (AMELI 2024) est une estimation couramment citée mais à vérifier sur le rapport charges et produits exact.",
+        "La hausse de cotisation mutuelle de +3 à +5 % est une anticipation des fédérations, non un chiffre officiel publié.",
+        "Les chiffres DREES sur les 5,4 millions de non-couverts datent de 2023 : vérifier si une mise à jour 2024-2025 est disponible.",
+        "La chute de 30 à 50 % des volumes sur les veinotoniques déremboursés est un ordre de grandeur mémoriel — à consolider avec une source CNAM précise si possible.",
+        "Aucune position syndicale (FSPF, USPO) n'a été attribuée dans cet article car aucune prise de position publique datée sur CE sujet spécifique n'est disponible dans les sources fournies — conformément à la règle d'équilibre syndical.",
+        "4 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

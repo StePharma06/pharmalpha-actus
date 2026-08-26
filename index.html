@@ -31,7 +31,7 @@
      l'image n'est decouverte qu'apres execution du JS qui construit les cards
      (le <img> n'existe qu'a l'interieur d'un template literal JS, invisible au
      preload scanner) -> LCP non deterministe, cf. sprint perf 2026-07-27. -->
-<link rel="preload" as="image" href="assets/img_actu_2026_08_25_1.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="assets/img_actu_2026_08_26_1.jpg" fetchpriority="high">
 
 <!-- Space Grotesk — self-hosted WOFF2 (remplace Google Fonts, cf. mission perf/RGPD 2026-08-24) -->
 <link rel="preload" href="/assets/fonts/space-grotesk-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -1737,7 +1737,7 @@ body.pa-has-nav #actusHeader {
 </div>
 
 <!-- EXPRESSION DU JOUR (injectée par update_actus.py à chaque run) -->
-<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Être de bonne humeur</h2><p class="expression-corps">Les médecins grecs croyaient que le corps produisait quatre « humeurs » - sang, bile jaune, bile noire et phlegme - dont l'équilibre déterminait l'état d'esprit. Être de bonne humeur, c'était avoir ses humeurs bien équilibrées. Le mot est resté, la théorie non.</p></aside>
+<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Mettre en quarantaine</h2><p class="expression-corps">Venise, XIVe siècle : face à la peste noire, la République impose aux navires suspects 40 jours d'isolement au large - <em>quaranta giorni</em> en italien. Ce fut le premier protocole de santé publique de l'histoire, et son nom a traversé les siècles.</p></aside>
 
 <!-- ESPACE PARTENAIRE 1 (entre Expression du jour et Aujourd'hui).
      Statique : reste visible meme si le JS ne s'execute pas. Le 2e emplacement
@@ -1762,12 +1762,12 @@ body.pa-has-nav #actusHeader {
 <div id="articles-container"></div>
 
 <!-- MARQUE_TENDANCE (injectee par le pipeline hebdo, remplacee quotidiennement) -->
-<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">19 aout au 25 aout 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie aout</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 62 150</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Immunite diplomatique</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 453 350</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie figue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 22 900</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Immunite familiale</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 397 950</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Vitamine b₁₂</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 13 050</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Medicament pour la digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 33 750</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Fatigue intense cause</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 12 100</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Alka seltzer digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 29 800</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Lunette eclipse</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 6 150</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Eclipse et sommeil</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 12 350</td></tr>
+<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">20 aout au 26 aout 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie aout</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 62 150</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Immunite diplomatique</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 104 400</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie figue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 22 900</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Purina pro plan sensitive digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 73 250</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Vitamine b₁₂</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 13 050</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Alka seltzer digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 48 000</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Fatigue intense cause</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 12 100</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Azinc immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 39 750</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;"></td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#9ca3af;font-weight:600;white-space:nowrap;"></td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Implant apnée du sommeil</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 12 000</td></tr>
 </tbody></table></div><p style="margin:10px 0 0;font-size:11px;color:#9ca3af;font-style:italic;">Indice de tendance : intensite de hausse Google Trends (non comparable a un volume absolu).</p><p style="margin:12px 0 0;font-size:11px;color:#9ca3af;text-align:right;">Source&nbsp;: Google Trends France (pytrends) &middot; 7 jours glissants</p></section></div>
 
 <!-- ARCHIVES CTA -->
@@ -1930,6 +1930,90 @@ body.pa-has-nav #actusHeader {
 // Mis a jour automatiquement par n8n chaque semaine
 // ============================================================
 const ARTICLES = [
+{
+    id: "actu_2026_08_26_1",
+    date: "2026-08-26",
+    type: "actu",
+    categorie: "pharma_france",
+    titre: "Siklos : une confusion de dosage x10 et ça peut tuer",
+    resume: "L'ANSM signale un nouveau cas d'erreur médicamenteuse entre Siklos 100 mg et Siklos 1 000 mg à la délivrance. Dix fois la dose chez un enfant drépanocytaire, ce n'est pas un détail. Contrôle visuel obligatoire, maintenant.",
+    source: "Le Moniteur des Pharmacies",
+    source_url: "https://www.lemoniteurdespharmacies.fr/therapeutique/vigilances/siklos-une-nouvelle-erreur-medicamenteuse-appelle-a-la-vigilance",
+    tiktok_url: "",
+    badge_label: "Pharma France",
+    image_url: "assets/img_actu_2026_08_26_1.jpg",
+    tags: ["ansm", "vigilance", "erreur-medicamenteuse", "drepanocytose", "officine"]
+  },
+{
+    id: "actu_2026_08_26_2",
+    date: "2026-08-26",
+    type: "actu",
+    categorie: "pharma_monde",
+    titre: "Oura devant les tribunaux : la montre santé peut-elle vraiment mesurer ton sommeil ?",
+    resume: "Une class action vient d'être lancée aux États-Unis contre Oura, le fabricant de la bague connectée, pour exagération des capacités de suivi du sommeil. L'IA génère des estimations, pas des mesures cliniques. Un débat qui arrive bientôt à ton comptoir.",
+    source: "MedCity News",
+    source_url: "https://medcitynews.com/2026/08/oura-wearable-ring-lawsuit/",
+    tiktok_url: "",
+    badge_label: "Pharma Monde",
+    image_url: "assets/img_actu_2026_08_26_2.jpg",
+    tags: ["ia", "wearable", "sante-connectee", "dispositif-medical", "sommeil"]
+  },
+{
+    id: "actu_2026_08_26_3",
+    date: "2026-08-26",
+    type: "actu",
+    categorie: "bonne_nouvelle",
+    titre: "Culottes menstruelles remboursables : le 1er octobre, ça démarre en officine",
+    resume: "L'arrêté du 6 août a fixé les modalités de prise en charge des culottes et coupes menstruelles réutilisables, avec un démarrage au 1er octobre. Les premières marques certifiées se positionnent déjà. Un nouveau rayon, de nouvelles références, un nouveau flux à gérer.",
+    source: "Le Quotidien du Pharmacien",
+    source_url: "http://www.lequotidiendupharmacien.fr/exercice-pro/coupes-et-culottes-menstruelles-les-premieres-references-remboursees-se-font-connaitre",
+    tiktok_url: "",
+    badge_label: "La bonne nouvelle",
+    image_url: "assets/img_actu_2026_08_26_3.jpg",
+    tags: ["remboursement", "officine", "dispositif-medical", "patiente", "nouvelles-missions"]
+  },
+{
+    id: "actu_2026_08_26_4",
+    date: "2026-08-26",
+    type: "actu",
+    categorie: "avenir_pharma",
+    titre: "Adragos double sa prod au Japon et renforce sa présence en France : la CDMO monte en puissance",
+    resume: "Adragos Pharma va plus que doubler ses capacités de production de formes solides au Japon via un accord avec Towa Pharmaceutical. La CDMO allemande développe aussi ses capacités en France. Un signal fort pour la sécurisation des approvisionnements en génériques.",
+    source: "ActuLabo",
+    source_url: "https://www.actulabo.com/adragos-renforce-ses-capacites-au-japon-et-en-france/",
+    tiktok_url: "",
+    badge_label: "L'avenir de la pharma",
+    image_url: "assets/img_actu_2026_08_26_4.jpg",
+    tags: ["generique", "cdmo", "production", "rupture", "approvisionnement"]
+  },
+{
+    id: "actu_2026_08_26_5",
+    date: "2026-08-26",
+    type: "actu",
+    categorie: "business_officine",
+    titre: "Ticket modérateur en hausse : ce que ça change vraiment pour ton officine",
+    resume: "Le gouvernement relève les franchises et le ticket modérateur pour combler le déficit de l'Assurance Maladie. Derrière l'enjeu de solidarité, il y a un impact concret sur le flux officinal, la délivrance et la relation patient. Décryptage.",
+    source: "Pharm'Actus · Le Monde Santé — Mutuelles, professionnels de santé et associations de patients inquiets de la hausse du ticket modérateur, DREES — Enquête sur la couverture complémentaire santé 2023",
+    source_url: "https://www.lemonde.fr/societe/article/2026/08/25/assurance-maladie-mutuelles-professionnels-de-sante-et-associations-de-patients-inquiets-de-la-hausse-du-ticket-moderateur-et-des-plafonds-des-franchises_6756628_3224.html",
+    tiktok_url: "",
+    badge_label: "Business",
+    image_url: "assets/img_actu_2026_08_26_5.jpg",
+    tags: ["assurance-maladie", "ticket-moderateur", "franchise-medicale", "remboursement"]
+  },
+{
+    id: "lsv_2026_08_26",
+    date: "2026-08-26",
+    type: "lsv",
+    categorie: "lsv",
+    titre: "Le saviez-vous ? On traitait la cataracte en poussant le cristallin avec une aiguille",
+    resume: "Pendant près de 2 500 ans, la seule opération des yeux connue consistait à enfoncer une aiguille dans l'œil pour 'pousser' le cristallin trouble hors du champ de vision. Sans anesthésie. Sans bloc opératoire. Avec un taux de cécité post-opératoire qui donnait le frisson.",
+    source: "Pharm'Alpha",
+    source_url: "",
+    tiktok_url: "",
+    badge_label: "Le Saviez-Vous",
+    image_url: "assets/img_lsv_2026_08_26.jpg",
+    tags: ["histoire", "chirurgie", "ophtalmologie", "instrument", "decouverte"]
+  },
 {
     id: "actu_2026_08_25_1",
     date: "2026-08-25",
@@ -2545,90 +2629,6 @@ const ARTICLES = [
     badge_label: "Pharma Monde",
     image_url: "assets/img_actu_2026_08_17_2.jpg",
     tags: ["remboursement", "has", "sante-femmes", "innovation", "acces-precoce"]
-  },
-{
-    id: "actu_2026_08_17_3",
-    date: "2026-08-17",
-    type: "actu",
-    categorie: "bonne_nouvelle",
-    titre: "La pharmacie rurale passe en mode urgences de proximite, et ça marche",
-    resume: "Un pharmacien titulaire en zone rurale devient une figure des réseaux sociaux... et surtout une vraie antichambre des urgences. Pas un gadget, une réalité de terrain qui valorise concrètement le rôle du pharmacien quand les déserts médicaux s'étendent. Une bonne nouvelle pour toute la profession.",
-    source: "Le Moniteur des Pharmacies",
-    source_url: "https://www.lemoniteurdespharmacies.fr/conseils/maux-du-quotidien/la-pharmacie-rurale-antichambre-des-urgences",
-    tiktok_url: "",
-    badge_label: "La bonne nouvelle",
-    image_url: "assets/img_actu_2026_08_17_3.jpg",
-    tags: ["officine", "rural", "desert-medical", "cpts", "premier-recours"]
-  },
-{
-    id: "actu_2026_08_17_4",
-    date: "2026-08-17",
-    type: "actu",
-    categorie: "avenir_pharma",
-    titre: "Vogenx lève 81 millions pour une molécule dans une maladie sans traitement approuvé",
-    resume: "Vogenx entre en bourse avec 81 millions de dollars pour tester le mizagliflozin en phase 2b dans l'hypoglycémie post-bariatrique, une pathologie orpheline de traitement approuvé. Un SGLT inhibiteur oral contre une complication méconnue mais croissante de la chirurgie de l'obésité. À surveiller de près.",
-    source: "MedCity News",
-    source_url: "https://medcitynews.com/2026/08/vogenx-ipo-post-bariatric-hypoglycemia-pbh-mizagliflozin-metabolic-disorder-vogx/",
-    tiktok_url: "",
-    badge_label: "L'avenir de la pharma",
-    image_url: "assets/img_actu_2026_08_17_4.jpg",
-    tags: ["diabete", "innovation", "chirurgie-bariatrique", "sglt", "recherche"]
-  },
-{
-    id: "actu_2026_08_17_5",
-    date: "2026-08-17",
-    type: "actu",
-    categorie: "business_officine",
-    titre: "Aide à mourir validée : ce que ça change concrètement pour ton officine",
-    resume: "Le Conseil constitutionnel a validé le 14 août 2026 la loi créant un droit à l'aide à mourir. Pour les pharmaciens titulaires, ce texte ouvre un nouveau terrain réglementaire - et des questions business très concrètes sur la dispensation, la clause de conscience et la responsabil...",
-    source: "Pharm'Actus · Le Monde Santé — Conseil constitutionnel valide la loi fin de vie (14/08/2026), Le Monde Santé — Fin de vie : trois réserves du Conseil constitutionnel (14/08/2026)",
-    source_url: "https://www.lemonde.fr/societe/article/2026/08/14/le-conseil-constitutionnel-valide-la-loi-sur-la-fin-de-vie-les-etablissements-catholiques-obtiennent-leur-clause-de-conscience_6746261_3224.html",
-    tiktok_url: "",
-    badge_label: "Business",
-    image_url: "assets/img_actu_2026_08_17_5.jpg",
-    tags: ["aide-a-mourir", "reglementation", "fin-de-vie", "officine"]
-  },
-{
-    id: "lsv_2026_08_17",
-    date: "2026-08-17",
-    type: "lsv",
-    categorie: "lsv",
-    titre: "Le saviez-vous ? On traitait les calculs vésicaux en buvant de l'huile de scorpion",
-    resume: "Pendant des siècles, la lithiase urinaire était une condamnation à mort déguisée en diagnostic. Les remèdes proposés étaient parfois plus terrifiants que la maladie elle-même. Et pourtant, un chirurgien du XVIe siècle a tout changé avec une lame et un courage insensé.",
-    source: "Pharm'Alpha",
-    source_url: "",
-    tiktok_url: "",
-    badge_label: "Le Saviez-Vous",
-    image_url: "assets/img_lsv_2026_08_17.jpg",
-    tags: ["histoire", "chirurgie", "urologie", "instrument", "decouverte"]
-  },
-{
-    id: "actu_2026_08_15_1",
-    date: "2026-08-15",
-    type: "actu",
-    categorie: "pharma_france",
-    titre: "Bicafres en rupture : la prépa magistrale remboursée, c'est maintenant possible",
-    resume: "Le président des PREF, Sébastien Gallice, tape du poing sur la table : la peur des indus bloque l'accès aux préparations magistrales alors que le droit le permet déjà. Bicafres est en rupture, les patients trinquent, et les officinaux hésitent. Fin des excuses.",
-    source: "Le Moniteur des Pharmacies",
-    source_url: "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/bicafres-la-peur-des-indus-prive-les-patients-de-preparations-magistrales",
-    tiktok_url: "",
-    badge_label: "Pharma France",
-    image_url: "assets/img_actu_2026_08_15_1.jpg",
-    tags: ["preparation", "rupture", "remboursement", "indu", "mitm"]
-  },
-{
-    id: "actu_2026_08_15_2",
-    date: "2026-08-15",
-    type: "actu",
-    categorie: "pharma_monde",
-    titre: "Les pédiatres américains contre le fearmongering anti-vaccins : leçon pour l'officine française",
-    resume: "Le président de l'American Academy of Pediatrics monte au front dans STAT News : les dirigeants fédéraux américains alimentent la défiance vaccinale par désinformation, et les pédiatres doivent naviguer dans ce brouillard politique. Un miroir utile pour le pharmacien français, premier vaccinateur de proximité.",
-    source: "STAT News",
-    source_url: "https://www.statnews.com/2026/08/14/vaccine-executive-order-policy-aap-president/?utm_campaign=rss",
-    tiktok_url: "",
-    badge_label: "Pharma Monde",
-    image_url: "assets/img_actu_2026_08_15_2.jpg",
-    tags: ["vaccination", "defiance", "officine", "sante-publique", "communication"]
   }
 ];
 

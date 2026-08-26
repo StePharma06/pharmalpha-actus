@@ -1,6 +1,131 @@
 {
   "articles": [
     {
+      "id": "actu_2026_08_26_5",
+      "date": "2026-08-26",
+      "type": "actu",
+      "categorie": "business_officine",
+      "titre": "Ticket modérateur en hausse : ce que ça change vraiment pour ton officine",
+      "resume": "Le gouvernement relève les franchises et le ticket modérateur pour combler le déficit de l'Assurance Maladie. Derrière l'enjeu de solidarité, il y a un impact concret sur le flux officinal, la délivrance et la relation patient. Décryptage.",
+      "source": "Pharm'Actus · Le Monde Santé — Mutuelles, professionnels de santé et associations de patients inquiets de la hausse du ticket modérateur, DREES — Enquête sur la couverture complémentaire santé 2023",
+      "source_url": "https://www.lemonde.fr/societe/article/2026/08/25/assurance-maladie-mutuelles-professionnels-de-sante-et-associations-de-patients-inquiets-de-la-hausse-du-ticket-moderateur-et-des-plafonds-des-franchises_6756628_3224.html",
+      "tiktok_url": "",
+      "badge_label": "Business",
+      "image_url": "assets/img_actu_2026_08_26_5.jpg",
+      "tags": [
+        "assurance-maladie",
+        "ticket-moderateur",
+        "franchise-medicale",
+        "remboursement"
+      ],
+      "full_text": "Le gouvernement relève les franchises et le ticket modérateur pour combler le déficit de l'Assurance Maladie. Derrière l'enjeu de solidarité, il y a un impact concret sur le flux officinal, la délivrance et la relation patient. Décryptage.\n\n**Contexte**\n\nDepuis plusieurs semaines, le gouvernement prépare des mesures de déremboursement partiel et de relèvement des plafonds de franchises médicales dans le cadre de la prochaine LFSS. L'information est confirmée par Le Monde Santé (25 août 2026) : mutuelles, professionnels de santé et associations de patients montent au créneau contre cette orientation. La franchise médicale, instaurée en 2008, est aujourd'hui plafonnée à 50 €/an par patient (franchise de 0,50 € par boîte de médicament, plafonnée à 2 €/jour). Le ticket modérateur, lui, représente la part non remboursée par l'Assurance Maladie de base, avant intervention des complémentaires. Ces deux leviers touchent directement le reste à charge patient. Dans un contexte où 5,4 millions de Français n'ont pas de complémentaire santé (DREES 2023) et où le renoncement aux soins progresse, toute hausse de ces seuils a des effets en cascade sur la dispensation officinale : non-retrait d'ordonnances, reports, tensions au comptoir. C'est un sujet qui te concerne directement en tant que titulaire.\n\n**Analyse business**\n\nTrois impacts business à ne pas sous-estimer.\n\n**1. Le non-retrait d'ordonnances : un risque réel sur ton CA.**\nQuand le reste à charge augmente, une fraction des patients arbitre. Ce n'est pas théorique : lors du passage du taux de remboursement de certaines classes de 65 % à 30 % (ex. veinotoniques, déremboursés progressivement entre 2008 et 2014), les volumes dispensés ont chuté significativement selon les classes. Le mécanisme est identique avec une hausse de franchise ou de ticket modérateur : le patient perçoit un surcoût immédiat au comptoir, même si sa mutuelle rembourse en différé. Le reflex de report ou de non-retrait est documenté dans les études DREES sur le renoncement aux soins.\n\n**2. La pression sur les génériques et les biosimilaires s'intensifie.**\nHausse du reste à charge = pression accrue sur le prix de vente perçu. Le patient arbitre davantage en faveur du moins cher disponible. Cela renforce mécaniquement la substitution générique (déjà à 85 % de taux de substitution en ville selon l'Assurance Maladie 2024) et va accélérer la demande de biosimilaires. Pour toi : la MDL est calculée sur un PFHT généralement plus bas, et l'honoraire de dispensation (fixe par boîte) devient proportionnellement le levier de rémunération dominant. Ça te protège partiellement, mais ça ne compense pas un non-retrait.\n\n**3. Les mutuelles vont répercuter : attention à l'érosion du pouvoir d'achat santé.**\nLes mutuelles (FNMF, CTIP, FNMI) ont déjà prévenu qu'elles répercuteront les surcoûts sur leurs cotisants. Une hausse de cotisation mutuelle est anticipée par les fédérations pour 2027, dont l'ampleur dépendra des arbitrages définitifs. Pour les 5,4 millions de non-couverts, chaque euro supplémentaire de franchise est un euro net de leur poche. Ces patients sont souvent des habitués du comptoir pour des ordonnances chroniques : hypertension, diabète, insuffisance cardiaque. C'est ton flux de base qui est potentiellement fragilisé.\n\n**Le signal réglementaire à surveiller :** le PLFSS 2027, attendu en septembre 2026, fixera les seuils définitifs. Les arbitrages en cours portent sur un relèvement du plafond annuel de franchise et sur un élargissement du périmètre du ticket modérateur à certains actes aujourd'hui à 100 %. Aucun chiffre officiel publié à ce stade : suivre le texte dès son dépôt.\n\n**Recommandations actionnables**\n\n1. **Anticipe les non-retraits sur les chroniques** - Identifie dès maintenant tes patients sous ordonnances renouvelables longue durée sans mutuelle ou avec de faibles garanties. Un rappel proactif (SMS, appel) au moment du renouvellement limite le non-retrait et maintient ton flux.\n\n2. **Renforce le conseil sur les génériques et biosimilaires** - La substitution va s'accélérer mécaniquement. Forme ton équipe à expliquer positivement l'équivalence thérapeutique : c'est toi qui gardes la main sur la substitution, pas le patient qui choisit de ne pas revenir.\n\n3. **Positionne-toi sur l'accompagnement des sans-mutuelle** - CSS (Complémentaire Santé Solidaire), aide à la souscription : oriente les patients éligibles. C'est un acte de service qui fidélise et réduit les impayés de tiers-payant.\n\n4. **Surveille le PLFSS 2027 dès septembre** - Le texte déterminera les seuils définitifs. Paramètre ton logiciel de gestion pour simuler l'impact sur le reste à charge patient dès que les chiffres sont publiés.\n\n5. **Documente l'impact sur ton officine** - Syndicats (FSPF, USPO) vont négocier des compensations éventuelles. Des données locales chiffrées (taux de non-retrait, part de patients sans mutuelle) sont un levier si tu veux alimenter les remontées terrain.\n\n**Sources citees**\n\n- Le Monde Santé - Mutuelles, professionnels de santé et associations de patients inquiets de la hausse du ticket modérateur\n- DREES - Enquête sur la couverture complémentaire santé 2023\n- Assurance Maladie - Rapport charges et produits 2024 (taux de substitution générique)"
+    },
+    {
+      "id": "actu_2026_08_26_4",
+      "date": "2026-08-26",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "Adragos double sa prod au Japon et renforce sa présence en France : la CDMO monte en puissance",
+      "resume": "Adragos Pharma va plus que doubler ses capacités de production de formes solides au Japon via un accord avec Towa Pharmaceutical. La CDMO allemande développe aussi ses capacités en France. Un signal fort pour la sécurisation des approvisionnements en génériques.",
+      "source": "ActuLabo",
+      "source_url": "https://www.actulabo.com/adragos-renforce-ses-capacites-au-japon-et-en-france/",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_08_26_4.jpg",
+      "tags": [
+        "generique",
+        "cdmo",
+        "production",
+        "rupture",
+        "approvisionnement"
+      ],
+      "full_text": "Adragos Pharma n'est pas une CDMO comme les autres. L'allemande, née du rachat des sites de production européens de Pfizer, est en train de se constituer un réseau de fabrication mondial qui mérite qu'on s'y attarde sérieusement.\n\nDernière annonce : un accord de principe avec Towa Pharmaceutical au Japon pour sécuriser l'approvisionnement du marché japonais en médicaments hors brevet. Le contrat prévoit jusqu'à 1,5 milliard de comprimés par an sur le site d'Adragos au Japon. C'est une capacité industrielle considérable, plus que doublée par rapport à la situation actuelle.\n\nMais le plus intéressant pour nous, c'est le volet France. Adragos renforce simultanément ses capacités sur le territoire français. On parle d'un acteur qui fabrique des formes solides, des génériques, des médicaments matures dont certains approvisionnent directement nos rayons et nos grossistes.\n\nPourquoi c'est important au comptoir ? Parce que les ruptures de génériques sont l'un de nos cauchemars quotidiens. Chaque investissement dans une capacité de production supplémentaire pour des molécules matures, c'est potentiellement moins de substitutions impossibles, moins de DP en rupture, moins de patients renvoyés sans traitement.\n\nLe modèle CDMO, c'est l'avenir de la production pharmaceutique européenne : des sites spécialisés, mutualisés entre plusieurs donneurs d'ordre, capables de basculer rapidement d'une molécule à l'autre en fonction de la demande. Adragos opère déjà sur plusieurs sites en Europe, dont en France, ce qui lui donne une résilience que les labos intégrés verticalement n'ont plus les moyens d'assurer seuls.\n\nL'accord avec Towa au Japon est aussi stratégique : il ancre Adragos sur un marché générique mature et très exigeant sur la qualité pharmaceutique, ce qui tirera les standards de production vers le haut sur l'ensemble du réseau.\n\nDemain au comptoir : ça ne change rien immédiatement, mais c'est le type d'investissement industriel qui, dans 18 à 24 mois, peut significativement réduire les tensions d'approvisionnement sur certaines formes solides. À suivre."
+    },
+    {
+      "id": "actu_2026_08_26_3",
+      "date": "2026-08-26",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "Culottes menstruelles remboursables : le 1er octobre, ça démarre en officine",
+      "resume": "L'arrêté du 6 août a fixé les modalités de prise en charge des culottes et coupes menstruelles réutilisables, avec un démarrage au 1er octobre. Les premières marques certifiées se positionnent déjà. Un nouveau rayon, de nouvelles références, un nouveau flux à gérer.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/coupes-et-culottes-menstruelles-les-premieres-references-remboursees-se-font-connaitre",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_08_26_3.jpg",
+      "tags": [
+        "remboursement",
+        "officine",
+        "dispositif-medical",
+        "patiente",
+        "nouvelles-missions"
+      ],
+      "full_text": "C'est acté. Les culottes menstruelles et coupes réutilisables seront remboursées par l'Assurance Maladie à partir du 1er octobre 2026. L'arrêté du 6 août a été publié au Journal officiel, les modalités de prise en charge et les tarifs sont fixés. Plusieurs marques annoncent déjà avoir obtenu leur certification pour le remboursement en pharmacie.\n\nParmi elles, Elia, marque française lancée en 2018, qui revendique être la première à avoir reçu la certification de la Direction de la sécurité sociale pour ses culottes menstruelles. La démarche impose un cahier des charges strict : composition des tissus, absence de substances préoccupantes, performances d'absorption certifiées, étiquetage conforme.\n\nCe que ça change concrètement pour toi : tu vas devoir référencer ces produits, les intégrer dans ton logiciel de gestion, former ton équipe à la délivrance et au conseil. Et surtout, il faudra s'assurer que les références proposées figurent bien sur la liste des produits remboursables, faute de quoi le tiers-payant ne passera pas.\n\nLa prise en charge s'inscrit dans une logique de santé publique : accessibilité financière pour toutes les patientes, réduction des déchets, alternative aux protections jetables. L'officine devient un point de dispensation naturel, avec un rôle de conseil fort sur l'entretien, l'hygiène et le bon usage.\n\nBonne nouvelle pour le chiffre d'affaires aussi : c'est un nouveau flux de patientes, une nouvelle catégorie qui entre dans le périmètre remboursable et qui va logiquement chercher ces produits là où elle peut les faire prendre en charge, c'est-à-dire chez toi.\n\nLe cahier des charges imposé aux fabricants est exigeant, et c'est une bonne chose : tu peux valoriser ces produits certifiés en toute légitimité, en expliquant à tes patientes ce que la certification garantit réellement.\n\nDemain matin : prends contact avec tes grossistes répartiteurs pour identifier les premières références disponibles et certifiées. Le 1er octobre, c'est dans cinq semaines."
+    },
+    {
+      "id": "actu_2026_08_26_2",
+      "date": "2026-08-26",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "Oura devant les tribunaux : la montre santé peut-elle vraiment mesurer ton sommeil ?",
+      "resume": "Une class action vient d'être lancée aux États-Unis contre Oura, le fabricant de la bague connectée, pour exagération des capacités de suivi du sommeil. L'IA génère des estimations, pas des mesures cliniques. Un débat qui arrive bientôt à ton comptoir.",
+      "source": "MedCity News",
+      "source_url": "https://medcitynews.com/2026/08/oura-wearable-ring-lawsuit/",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/img_actu_2026_08_26_2.jpg",
+      "tags": [
+        "ia",
+        "wearable",
+        "sante-connectee",
+        "dispositif-medical",
+        "sommeil"
+      ],
+      "full_text": "Oura, la bague connectée star du tracking santé, se retrouve au tribunal. Une class action vient d'être déposée aux États-Unis : les plaignants accusent la société d'avoir surestimé la précision de son suivi du sommeil. Le cœur du problème ? L'appareil utilise des algorithmes d'IA pour estimer les stades de sommeil, pas des capteurs cliniques validés comme la polysomnographie. Et la différence, elle est massive.\n\nConcrètement, Oura mesure le mouvement, la fréquence cardiaque et la température cutanée, puis un modèle d'IA en déduit \"REM\", \"sommeil profond\", \"sommeil léger\". C'est une inférence statistique, pas une mesure électrophysiologique. Aucun EEG, aucun EOG. Les études de validation indépendantes montrent des discordances significatives avec la polysomnographie, notamment sur les stades de sommeil léger et profond.\n\nPourquoi ça te concerne, toi, pharmacien d'officine ? Parce que Oura, Apple Watch, Withings et consorts atterrissent dans tes conversations quotidiennes. Des patients arrivent avec leurs \"rapports de sommeil\" estampillés IA et te demandent de l'interprétation clinique, voire des conseils sur la mélatonine, les phytos ou des somnifères.\n\nLe vrai risque : un patient convaincu d'avoir un \"sommeil profond insuffisant\" parce que sa bague le dit, qui s'auto-médicamentera sans que la plainte soit réelle. Ou à l'inverse, quelqu'un avec un vrai trouble du sommeil rassuré par un score IA flatteur.\n\nCette affaire judiciaire va probablement forcer les fabricants de wearables à clarifier leurs notices et leurs communications marketing. Le terme \"sleep staging\" va devoir être accompagné de sérieuses réserves méthodologiques. En Europe, le marquage CE dispositif médical (ou son absence) est déjà une boussole : si ce n'est pas un DM de classe IIa minimum, les allégations cliniques sont dans le flou réglementaire.\n\nDemain au comptoir : quand un patient sort sa bague Oura pour te montrer ses stats de sommeil, rappelle-lui avec tact que c'est un outil de tendance, pas un diagnostic. Et oriente vers un médecin si la plainte fonctionnelle est réelle."
+    },
+    {
+      "id": "actu_2026_08_26_1",
+      "date": "2026-08-26",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "Siklos : une confusion de dosage x10 et ça peut tuer",
+      "resume": "L'ANSM signale un nouveau cas d'erreur médicamenteuse entre Siklos 100 mg et Siklos 1 000 mg à la délivrance. Dix fois la dose chez un enfant drépanocytaire, ce n'est pas un détail. Contrôle visuel obligatoire, maintenant.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/therapeutique/vigilances/siklos-une-nouvelle-erreur-medicamenteuse-appelle-a-la-vigilance",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_08_26_1.jpg",
+      "tags": [
+        "ansm",
+        "vigilance",
+        "erreur-medicamenteuse",
+        "drepanocytose",
+        "officine"
+      ],
+      "full_text": "L'ANSM vient de tirer la sonnette d'alarme une nouvelle fois sur Siklos. Un nouveau cas d'erreur à la délivrance, toujours le même schéma : confusion entre le 100 mg et le 1 000 mg. Facteur dix. Sur de l'hydroxycarbamide. Chez des patients drépanocytaires.\n\nSiklos, c'est l'hydroxycarbamide en formulation pédiatrique, indiqué dès 2 ans dans la drépanocytose pour prévenir les crises vaso-occlusives. Le médicament est prescrit en mg/kg, les doses sont individualisées, et les deux dosages coexistent dans les logiciels, les tiroirs, et parfois les bacs de délivrance. Un terrain parfait pour l'erreur.\n\nLe risque concret ? Une dose dix fois trop élevée d'hydroxycarbamide, c'est une aplasie médullaire potentielle. Toxicité hématologique sévère, hospitalisations, voire pire. La marge thérapeutique n'est pas large.\n\nCe que tu dois faire dès ce soir, ou demain matin à l'ouverture : vérifier que tes deux références Siklos ne sont pas stockées côte à côte sans différenciation visuelle forte. Revoir le rangement. Coller une étiquette d'alerte si besoin. Et surtout, former ou rappeler à l'équipe que la vérification du dosage sur l'ordonnance ET sur la boîte est non négociable pour cette spécialité.\n\nL'ANSM recommande aussi de lire attentivement l'ordonnance en mg et en dosage unitaire, de vérifier le poids du patient si disponible dans le DP, et de ne jamais se fier au seul nom commercial sans contrôler le chiffre derrière.\n\nCe n'est pas le premier signalement. L'ANSM avait déjà alerté sur Siklos par le passé. La répétition de ces cas devrait nous interpeller collectivement : on n'est pas à l'abri d'une erreur de picking quand deux boîtes se ressemblent et que le comptoir tourne à plein régime.\n\nDemain matin au comptoir : Siklos = réflexe de double lecture systématique dosage ordonnance vs boîte. Pas de délivrance en automatique sur ce dossier."
+    },
+    {
+      "id": "lsv_2026_08_26",
+      "date": "2026-08-26",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? On traitait la cataracte en poussant le cristallin avec une aiguille",
+      "resume": "Pendant près de 2 500 ans, la seule opération des yeux connue consistait à enfoncer une aiguille dans l'œil pour 'pousser' le cristallin trouble hors du champ de vision. Sans anesthésie. Sans bloc opératoire. Avec un taux de cécité post-opératoire qui donnait le frisson.",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_08_26.jpg",
+      "tags": [
+        "histoire",
+        "chirurgie",
+        "ophtalmologie",
+        "instrument",
+        "decouverte"
+      ],
+      "full_text": "Imagine la scène : on t'installe dans un fauteuil, on te demande de ne pas bouger, et un type s'approche avec une longue aiguille... qu'il va enfoncer dans ton globe oculaire. Bienvenue dans le monde de l'abaissement du cristallin, la chirurgie ophtalmologique dominante de l'Antiquité jusqu'au XVIIIe siècle.\n\nLa technique s'appelait la 'couching' - mot anglais qui désigne encore aujourd'hui cette méthode ancestrale. Le principe : le cristallin devient opaque avec l'âge, il trouble la vision. Solution radicale de l'époque ? On le pousse vers le bas, dans le fond de l'œil, pour dégager l'axe optique. Premiers écrits connus en Inde, vers 600 avant J.-C., dans le traité de chirurgie de Sushruta. La technique s'est ensuite répandue dans tout le monde arabe, grec, puis européen.\n\nEt voilà le twist : ça marchait. Partiellement, du moins. Juste après l'opération, le patient voyait flou mais distinguait la lumière, les silhouettes. Suffisant pour certains. Mais quelques semaines plus tard, le cristallin déplacé déclenchait des infections, des inflammations, des décollements de rétine. Résultat : la cécité complète dans une majorité de cas traités par des opérateurs peu expérimentés.\n\nC'est en 1748 que le chirurgien français Jacques Daviel change tout. Il ose retirer complètement le cristallin au lieu de le déplacer - une extraction totale, révolutionnaire pour l'époque. Sa première opération réussie ouvre la voie à l'ophtalmologie moderne. En 1949, Harold Ridley va encore plus loin : il implante le premier cristallin artificiel en polymère, après avoir observé que des éclats de plexiglas dans les yeux de pilotes de la RAF pendant la guerre n'avaient pas provoqué de rejet.\n\nAujourd'hui, l'opération de la cataracte est l'acte chirurgical le plus pratiqué au monde - plus de 700 000 interventions par an en France. Elle dure 15 minutes, se fait sous anesthésie locale, et le patient repart chez lui le jour même. La prochaine fois qu'un patient te demande si 'l'opération des yeux' c'est risqué, tu peux lui répondre que depuis qu'on a arrêté de tripoter les cristallins avec des aiguilles, les progrès ont été franchement impressionnants."
+    },
+    {
       "id": "actu_2026_08_25_5",
       "date": "2026-08-25",
       "type": "actu",
@@ -14434,6 +14559,6 @@
       ]
     }
   ],
-  "count": 696,
-  "updated_at": "2026-08-25T04:07:15.001238+02:00"
+  "count": 702,
+  "updated_at": "2026-08-26T04:11:27.930798+02:00"
 }
