@@ -1,21 +1,21 @@
 {
- "genere_le": "2026-08-26T05:45:22+02:00",
+ "genere_le": "2026-08-27T15:22:56+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1107,
- "nouveaux_7j": 29,
- "nouveaux_cumul": 1100,
+ "abonnes_total": 1109,
+ "nouveaux_7j": 27,
+ "nouveaux_cumul": 1102,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-08-19",
-  "au": "2026-08-26",
-  "delivres": 6978,
-  "ouvertures": 2750,
-  "ouvertures_uniques": 2009,
-  "clics": 2723,
-  "clics_uniques": 528,
-  "taux_ouverture_pct": 28.8,
-  "taux_clic_pct": 7.6,
-  "ctor_pct": 26.3,
+  "du": "2026-08-20",
+  "au": "2026-08-27",
+  "delivres": 6996,
+  "ouvertures": 2969,
+  "ouvertures_uniques": 2153,
+  "clics": 2961,
+  "clics_uniques": 582,
+  "taux_ouverture_pct": 30.8,
+  "taux_clic_pct": 8.3,
+  "ctor_pct": 27.0,
   "top_articles": [
    {
     "id": "actu_2026_08_22_1",
@@ -26,11 +26,27 @@
     "lecteurs": 59
    },
    {
+    "id": "actu_2026_08_27_1",
+    "titre": "Ordonnance falsifiée ? Une faute d'ortho les a trahis",
+    "date": "2026-08-27",
+    "categorie": "pharma_france",
+    "clics": 76,
+    "lecteurs": 53
+   },
+   {
     "id": "actu_2026_08_22_5",
     "titre": "Franchises médicales : le recul du gouvernement, une bombe à retardement pour tes marges",
     "date": "2026-08-22",
     "categorie": "business_officine",
-    "clics": 67,
+    "clics": 68,
+    "lecteurs": 48
+   },
+   {
+    "id": "actu_2026_08_27_2",
+    "titre": "Zostavax est mort, Shingrix protège ton coeur et ton cerveau",
+    "date": "2026-08-27",
+    "categorie": "pharma_monde",
+    "clics": 79,
     "lecteurs": 47
    },
    {
@@ -38,16 +54,16 @@
     "titre": "Aide à mourir : la loi est publiée au JO, et toi tu fais quoi avec ta clause de conscience ?",
     "date": "2026-08-22",
     "categorie": "avenir_pharma",
-    "clics": 72,
-    "lecteurs": 46
+    "clics": 73,
+    "lecteurs": 47
    },
    {
-    "id": "actu_2026_08_19_1",
-    "titre": "Loi aide à mourir : ce que ça change concrètement à l'officine",
-    "date": "2026-08-19",
-    "categorie": "pharma_france",
-    "clics": 67,
-    "lecteurs": 45
+    "id": "actu_2026_08_26_3",
+    "titre": "Culottes menstruelles remboursables : le 1er octobre, ça démarre en officine",
+    "date": "2026-08-26",
+    "categorie": "bonne_nouvelle",
+    "clics": 70,
+    "lecteurs": 44
    },
    {
     "id": "actu_2026_08_21_2",
@@ -58,6 +74,14 @@
     "lecteurs": 44
    },
    {
+    "id": "actu_2026_08_20_2",
+    "titre": "Ebola en RDC : 5 000 cas, 2 300 morts, risque de propagation internationale. L'OMS tire la sonnette d'alarme.",
+    "date": "2026-08-20",
+    "categorie": "pharma_monde",
+    "clics": 68,
+    "lecteurs": 41
+   },
+   {
     "id": "actu_2026_08_21_3",
     "titre": "Aide à mourir : la loi est là, le rôle de l'officine se précise enfin",
     "date": "2026-08-21",
@@ -66,50 +90,26 @@
     "lecteurs": 41
    },
    {
-    "id": "actu_2026_08_20_2",
-    "titre": "Ebola en RDC : 5 000 cas, 2 300 morts, risque de propagation internationale. L'OMS tire la sonnette d'alarme.",
-    "date": "2026-08-20",
-    "categorie": "pharma_monde",
-    "clics": 66,
+    "id": "actu_2026_08_27_3",
+    "titre": "Cancer du pancréas : une première thérapie ciblée FDA approuvée",
+    "date": "2026-08-27",
+    "categorie": "bonne_nouvelle",
+    "clics": 70,
     "lecteurs": 40
-   },
-   {
-    "id": "actu_2026_08_20_3",
-    "titre": "Vaccin ARNm contre le mélanome : les résultats qui redonnent espoir",
-    "date": "2026-08-20",
-    "categorie": "bonne_nouvelle",
-    "clics": 65,
-    "lecteurs": 37
-   },
-   {
-    "id": "actu_2026_08_21_1",
-    "titre": "Protoxyde d'azote récréatif : c'est désormais un délit, et le comptoir est en première ligne",
-    "date": "2026-08-21",
-    "categorie": "pharma_france",
-    "clics": 52,
-    "lecteurs": 37
-   },
-   {
-    "id": "actu_2026_08_24_3",
-    "titre": "Vaccination, téléconsultation, bilans : 167 millions d'euros de marge en plus pour les officines",
-    "date": "2026-08-24",
-    "categorie": "bonne_nouvelle",
-    "clics": 61,
-    "lecteurs": 36
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-08-26",
-  "delivres": 89310,
-  "ouvertures": 35858,
-  "ouvertures_uniques": 24795,
-  "clics": 36442,
-  "clics_uniques": 6625,
-  "taux_ouverture_pct": 27.8,
-  "taux_clic_pct": 7.4,
-  "ctor_pct": 26.7,
+  "au": "2026-08-27",
+  "delivres": 90287,
+  "ouvertures": 36448,
+  "ouvertures_uniques": 25183,
+  "clics": 37034,
+  "clics_uniques": 6753,
+  "taux_ouverture_pct": 27.9,
+  "taux_clic_pct": 7.5,
+  "ctor_pct": 26.8,
   "top_articles": [
    {
     "id": "actu_2026_06_18_1",
