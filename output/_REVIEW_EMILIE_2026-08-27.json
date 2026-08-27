@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-08-27T04:09:57.197547+02:00",
+  "run_date": "2026-08-27",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "Cancer du pancréas : une première thérapie ciblée FDA approuvée",
+      "resume": "La FDA vient d'approuver Rasonque, développé par Revolution Medicines, premier traitement ciblant une cause génétique du cancer du pancréas. Un comprimé, une avancée majeure pour l'une des pathologies les plus létales. Ce que ça change pour la prise en charge de demain.",
+      "source": "STAT News",
+      "source_url": "https://www.statnews.com/2026/08/26/pancreatic-cancer-drug-rasonque-approved/",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Fraude AM : 70 % due aux pros de santé - ce que ça change pour l'officine",
+      "resume": "70 % du montant total de la fraude à l'Assurance maladie est imputable aux professionnels de santé. Un chiffre brut qui amalgame des réalités très différentes - et qui annonce un durcissement des contrôles dont les pharmaciens doivent impérativement prendre la mesure.",
+      "source": "Pharm'Actus · France Info Santé — Assurance maladie, qui fraude le plus ?, CNAM — Rapport annuel de lutte contre la fraude 2024 (données structurelles citées)",
+      "source_url": "https://www.franceinfo.fr/sante/assurance-maladie-qui-fraude-le-plus_8161070.html",
+      "confidence_score": 0.72,
+      "warnings": [
+        "Le chiffre '466 millions d'euros de fraude détectée en 2024' est cohérent avec les ordres de grandeur publiés par la CNAM dans ses rapports annuels, mais le chiffre exact de la dernière édition disponible doit être vérifié sur ameli.fr avant publication — ne pas le présenter comme certifié.",
+        "La répartition '70 % pros de santé / 30 % assurés' est confirmée par la source France Info, mais la source primaire CNAM doit être citée avec le rapport exact (millésime 2024 ou 2023 selon disponibilité).",
+        "L'article 47 LFSS 2025 sur la compensation directe AM : la numérotation de l'article est donnée à titre indicatif — vérifier sur Légifrance avant publication.",
+        "Les montants imputables spécifiquement aux pharmaciens (vs infirmiers, transporteurs) ne sont pas chiffrés dans la source disponible : l'analyse qualifie correctement ce point mais ne chiffre pas la part pharmaciens, ce qui est volontairement prudent.",
+        "L'honoraire de dispensation à 1,02 EUR TTC est celui en vigueur à la date de rédaction — vérifier qu'aucun avenant n'a modifié ce montant depuis l'avenant 22.",
+        "4 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

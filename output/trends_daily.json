@@ -1,59 +1,64 @@
 {
-  "generated_at": "2026-08-26",
-  "window_label": "20 aout au 26 aout 2026",
+  "generated_at": "2026-08-27",
+  "window_label": "21 aout au 27 aout 2026",
   "has_history": true,
   "delta_source": "pytrends_rising",
   "pathologies": [
     {
+      "display": "Assurance maladie fatigue chronique",
+      "delta_label": "↑ 353 150",
+      "trend": "up"
+    },
+    {
       "display": "Allergie aout",
-      "delta_label": "↑ 62 150",
+      "delta_label": "↑ 68 250",
       "trend": "up"
     },
     {
       "display": "Allergie figue",
-      "delta_label": "↑ 22 900",
+      "delta_label": "↑ 20 050",
       "trend": "up"
     },
     {
       "display": "Vitamine b₁₂",
-      "delta_label": "↑ 13 050",
+      "delta_label": "↑ 10 850",
       "trend": "up"
     },
     {
-      "display": "Fatigue intense cause",
-      "delta_label": "↑ 12 100",
+      "display": "Fatigue oculaire que faire",
+      "delta_label": "↑ 8 400",
       "trend": "up"
     }
   ],
   "soins": [
     {
       "display": "Immunite diplomatique",
-      "delta_label": "↑ 104 400",
+      "delta_label": "↑ 91 300",
       "trend": "up"
     },
     {
-      "display": "Purina pro plan sensitive digestion",
-      "delta_label": "↑ 73 250",
+      "display": "Immunite familiale",
+      "delta_label": "↑ 84 050",
       "trend": "up"
     },
     {
-      "display": "Alka seltzer digestion",
-      "delta_label": "↑ 48 000",
+      "display": "Temps digestion estomac",
+      "delta_label": "↑ 51 750",
       "trend": "up"
     },
     {
-      "display": "Azinc immunite",
-      "delta_label": "↑ 39 750",
+      "display": "Calmosine digestion nourrisson",
+      "delta_label": "↑ 50 100",
       "trend": "up"
     },
     {
-      "display": "Implant apnée du sommeil",
-      "delta_label": "↑ 12 000",
+      "display": "Dors ton sommeil de brute",
+      "delta_label": "↑ 12 900",
       "trend": "up"
     }
   ],
   "pathologies_stale": false,
-  "pathologies_from": "2026-08-26",
+  "pathologies_from": "2026-08-27",
   "soins_stale": false,
-  "soins_from": "2026-08-26"
+  "soins_from": "2026-08-27"
 }
