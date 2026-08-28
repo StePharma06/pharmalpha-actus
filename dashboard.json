@@ -1,21 +1,21 @@
 {
- "genere_le": "2026-08-27T15:22:56+02:00",
+ "genere_le": "2026-08-28T16:44:20+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1109,
- "nouveaux_7j": 27,
- "nouveaux_cumul": 1102,
+ "abonnes_total": 1113,
+ "nouveaux_7j": 29,
+ "nouveaux_cumul": 1106,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-08-20",
-  "au": "2026-08-27",
-  "delivres": 6996,
-  "ouvertures": 2969,
-  "ouvertures_uniques": 2153,
-  "clics": 2961,
-  "clics_uniques": 582,
-  "taux_ouverture_pct": 30.8,
-  "taux_clic_pct": 8.3,
-  "ctor_pct": 27.0,
+  "du": "2026-08-21",
+  "au": "2026-08-28",
+  "delivres": 7016,
+  "ouvertures": 2945,
+  "ouvertures_uniques": 2118,
+  "clics": 3030,
+  "clics_uniques": 598,
+  "taux_ouverture_pct": 30.2,
+  "taux_clic_pct": 8.5,
+  "ctor_pct": 28.2,
   "top_articles": [
    {
     "id": "actu_2026_08_22_1",
@@ -30,8 +30,16 @@
     "titre": "Ordonnance falsifiée ? Une faute d'ortho les a trahis",
     "date": "2026-08-27",
     "categorie": "pharma_france",
-    "clics": 76,
-    "lecteurs": 53
+    "clics": 82,
+    "lecteurs": 55
+   },
+   {
+    "id": "actu_2026_08_27_2",
+    "titre": "Zostavax est mort, Shingrix protège ton coeur et ton cerveau",
+    "date": "2026-08-27",
+    "categorie": "pharma_monde",
+    "clics": 82,
+    "lecteurs": 48
    },
    {
     "id": "actu_2026_08_22_5",
@@ -42,20 +50,20 @@
     "lecteurs": 48
    },
    {
-    "id": "actu_2026_08_27_2",
-    "titre": "Zostavax est mort, Shingrix protège ton coeur et ton cerveau",
-    "date": "2026-08-27",
-    "categorie": "pharma_monde",
-    "clics": 79,
-    "lecteurs": 47
-   },
-   {
     "id": "actu_2026_08_22_4",
     "titre": "Aide à mourir : la loi est publiée au JO, et toi tu fais quoi avec ta clause de conscience ?",
     "date": "2026-08-22",
     "categorie": "avenir_pharma",
     "clics": 73,
     "lecteurs": 47
+   },
+   {
+    "id": "actu_2026_08_28_3",
+    "titre": "VRS : remboursement d'Abrysvo et Beyfortus passe à 65% dès le 31 août",
+    "date": "2026-08-28",
+    "categorie": "bonne_nouvelle",
+    "clics": 75,
+    "lecteurs": 44
    },
    {
     "id": "actu_2026_08_26_3",
@@ -74,39 +82,31 @@
     "lecteurs": 44
    },
    {
-    "id": "actu_2026_08_20_2",
-    "titre": "Ebola en RDC : 5 000 cas, 2 300 morts, risque de propagation internationale. L'OMS tire la sonnette d'alarme.",
-    "date": "2026-08-20",
+    "id": "actu_2026_08_28_2",
+    "titre": "Cancer du pancréas : la FDA approuve le premier traitement ciblant KRAS",
+    "date": "2026-08-28",
     "categorie": "pharma_monde",
-    "clics": 68,
+    "clics": 69,
     "lecteurs": 41
    },
    {
-    "id": "actu_2026_08_21_3",
-    "titre": "Aide à mourir : la loi est là, le rôle de l'officine se précise enfin",
-    "date": "2026-08-21",
-    "categorie": "bonne_nouvelle",
+    "id": "actu_2026_08_28_1",
+    "titre": "Siklos 100 mg vs 1000 mg : l'ANSM sonne l'alarme après une erreur grave",
+    "date": "2026-08-28",
+    "categorie": "pharma_france",
     "clics": 63,
     "lecteurs": 41
-   },
-   {
-    "id": "actu_2026_08_27_3",
-    "titre": "Cancer du pancréas : une première thérapie ciblée FDA approuvée",
-    "date": "2026-08-27",
-    "categorie": "bonne_nouvelle",
-    "clics": 70,
-    "lecteurs": 40
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-08-27",
-  "delivres": 90287,
-  "ouvertures": 36448,
-  "ouvertures_uniques": 25183,
-  "clics": 37034,
-  "clics_uniques": 6753,
+  "au": "2026-08-28",
+  "delivres": 91268,
+  "ouvertures": 36868,
+  "ouvertures_uniques": 25480,
+  "clics": 37498,
+  "clics_uniques": 6835,
   "taux_ouverture_pct": 27.9,
   "taux_clic_pct": 7.5,
   "ctor_pct": 26.8,
