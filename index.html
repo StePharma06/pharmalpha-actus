@@ -31,7 +31,7 @@
      l'image n'est decouverte qu'apres execution du JS qui construit les cards
      (le <img> n'existe qu'a l'interieur d'un template literal JS, invisible au
      preload scanner) -> LCP non deterministe, cf. sprint perf 2026-07-27. -->
-<link rel="preload" as="image" href="assets/img_actu_2026_08_27_1.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="assets/img_actu_2026_08_28_1.jpg" fetchpriority="high">
 
 <!-- Space Grotesk — self-hosted WOFF2 (remplace Google Fonts, cf. mission perf/RGPD 2026-08-24) -->
 <link rel="preload" href="/assets/fonts/space-grotesk-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -1737,7 +1737,7 @@ body.pa-has-nav #actusHeader {
 </div>
 
 <!-- EXPRESSION DU JOUR (injectée par update_actus.py à chaque run) -->
-<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Morphine</h2><p class="expression-corps">Isolée en 1804 par le pharmacien allemand Friedrich Sertürner, elle fut baptisée d'après Morphée, dieu grec des songes, dont les pavots décoraient le sanctuaire. Son effet soporifique semblait répondre directement à l'invocation du dieu du sommeil.</p></aside>
+<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Être flegmatique</h2><p class="expression-corps">Dans la médecine des humeurs, le phlegme était l'humeur froide et humide associée au calme, à la lenteur, à l'impassibilité. Un tempérament dominé par le phlegme était dit flegmatique - et rien, pas même l'urgence, ne semblait l'agiter.</p></aside>
 
 <!-- ESPACE PARTENAIRE 1 (entre Expression du jour et Aujourd'hui).
      Statique : reste visible meme si le JS ne s'execute pas. Le 2e emplacement
@@ -1762,12 +1762,12 @@ body.pa-has-nav #actusHeader {
 <div id="articles-container"></div>
 
 <!-- MARQUE_TENDANCE (injectee par le pipeline hebdo, remplacee quotidiennement) -->
-<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">21 aout au 27 aout 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Assurance maladie fatigue chronique</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 353 150</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Immunite diplomatique</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 91 300</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie aout</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 68 250</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Immunite familiale</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 84 050</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie figue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 20 050</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Temps digestion estomac</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 51 750</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Vitamine b₁₂</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 10 850</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Calmosine digestion nourrisson</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 50 100</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Fatigue oculaire que faire</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 8 400</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Dors ton sommeil de brute</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 12 900</td></tr>
+<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">22 aout au 28 aout 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Assurance maladie fatigue chronique</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 352 300</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Immunite diplomatique</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 87 450</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie aout</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 65 100</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Purina pro plan sensitive digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 61 550</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Eclipse fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 36 250</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Azinc immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 46 750</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie à l'iode</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 11 300</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Temps de digestion chien</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 32 850</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Lunette eclipse</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 5 600</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Eclipse et sommeil</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 15 850</td></tr>
 </tbody></table></div><p style="margin:10px 0 0;font-size:11px;color:#9ca3af;font-style:italic;">Indice de tendance : intensite de hausse Google Trends (non comparable a un volume absolu).</p><p style="margin:12px 0 0;font-size:11px;color:#9ca3af;text-align:right;">Source&nbsp;: Google Trends France (pytrends) &middot; 7 jours glissants</p></section></div>
 
 <!-- ARCHIVES CTA -->
@@ -1930,6 +1930,90 @@ body.pa-has-nav #actusHeader {
 // Mis a jour automatiquement par n8n chaque semaine
 // ============================================================
 const ARTICLES = [
+{
+    id: "actu_2026_08_28_1",
+    date: "2026-08-28",
+    type: "actu",
+    categorie: "pharma_france",
+    titre: "Siklos 100 mg vs 1000 mg : l'ANSM sonne l'alarme après une erreur grave",
+    resume: "Un nouveau cas d'erreur médicamenteuse grave signalé par l'ANSM à la dispensation de Siklos (hydroxycarbamide). La confusion entre les deux dosages peut provoquer un surdosage ou un sous-dosage aux conséquences sérieuses. C'est le genre d'alerte qui se gère au comptoir, pas après.",
+    source: "USPO",
+    source_url: "https://uspo.fr/156373-2/",
+    tiktok_url: "",
+    badge_label: "Pharma France",
+    image_url: "assets/img_actu_2026_08_28_1.jpg",
+    tags: ["ansm", "erreur-medicamenteuse", "siklos", "vigilance", "officine"]
+  },
+{
+    id: "actu_2026_08_28_2",
+    date: "2026-08-28",
+    type: "actu",
+    categorie: "pharma_monde",
+    titre: "Cancer du pancréas : la FDA approuve le premier traitement ciblant KRAS",
+    resume: "La FDA vient d'accorder son AMM à un traitement de Revolution Medicines contre le cancer du pancréas avancé. C'est la première thérapie à cibler directement une mutation KRAS, longtemps considérée comme indruggable. Une avancée qui intéresse directement l'oncologie officinale de demain.",
+    source: "STAT News",
+    source_url: "https://www.statnews.com/pharmalot/2026/08/27/pancreatic-cancer-drug-approved-trump-deal-with-biotechs/?utm_campaign=rss",
+    tiktok_url: "",
+    badge_label: "Pharma Monde",
+    image_url: "assets/img_actu_2026_08_28_2.jpg",
+    tags: ["fda", "oncologie", "innovation", "kras", "amm"]
+  },
+{
+    id: "actu_2026_08_28_3",
+    date: "2026-08-28",
+    type: "actu",
+    categorie: "bonne_nouvelle",
+    titre: "VRS : remboursement d'Abrysvo et Beyfortus passe à 65% dès le 31 août",
+    resume: "Bonne nouvelle pour les familles et pour l'officine : à partir du 31 août 2026, la prise en charge par l'Assurance Maladie d'Abrysvo et de Beyfortus passe de 30 % à 65 %. Un geste concret qui lève un frein financier majeur à la vaccination VRS.",
+    source: "USPO",
+    source_url: "https://uspo.fr/vaccination-contre-le-vrs-modalites-de-prise-en-charge-dabrysvo-beyfortus-et-enflonsia/",
+    tiktok_url: "",
+    badge_label: "La bonne nouvelle",
+    image_url: "assets/img_actu_2026_08_28_3.jpg",
+    tags: ["vrs", "remboursement", "vaccination", "beyfortus", "nourrisson"]
+  },
+{
+    id: "actu_2026_08_28_4",
+    date: "2026-08-28",
+    type: "actu",
+    categorie: "avenir_pharma",
+    titre: "Vaccin cancer + IA : Merck et Moderna dévoilent l'algo qui personnalise la thérapie",
+    resume: "Merck et Moderna avancent sur leur vaccin ARNm personnalisé contre le cancer. L'algorithme qui pilote la fabrication de chaque vaccin individuel commence à être décrypté. C'est l'avenir de l'oncologie, et il ressemble à tout ce qu'on n'apprend pas encore à la fac.",
+    source: "STAT News",
+    source_url: "https://www.statnews.com/2026/08/27/biotech-news-whats-in-merck-and-modernas-cancer-vaccine-algorithm/?utm_campaign=rss",
+    tiktok_url: "",
+    badge_label: "L'avenir de la pharma",
+    image_url: "assets/img_actu_2026_08_28_4.jpg",
+    tags: ["arnm", "ia", "oncologie", "vaccin", "innovation"]
+  },
+{
+    id: "actu_2026_08_28_5",
+    date: "2026-08-28",
+    type: "actu",
+    categorie: "business_officine",
+    titre: "Durée de vie des médicaments allongée : 8 800 t collectées, et l'officine en première ligne",
+    resume: "L'ANSM vient d'annoncer que 47 médicaments parmi les plus vendus en France vont voir leur durée de conservation portée à 4 ans ou plus. Derrière l'angle anti-gaspillage, il y a un vrai enjeu de gestion de stock pour ton officine.",
+    source: "Pharm'Actus · France Info Santé — Des médicaments parmi les plus vendus en France pourront voir leur durée de vie allongée, France Info Santé — Allonger la durée de conservation des médicaments pour éviter le gaspillage ?",
+    source_url: "https://www.franceinfo.fr/sante/des-medicaments-parmi-les-plus-vendus-en-france-pourront-voir-leur-duree-de-vie-allongee-pour-lutter-contre-le-gaspillage_8164208.html",
+    tiktok_url: "",
+    badge_label: "Business",
+    image_url: "assets/img_actu_2026_08_28_5.jpg",
+    tags: ["gestion-de-stock", "ansm", "cyclamed", "gaspillage-medicaments"]
+  },
+{
+    id: "lsv_2026_08_28",
+    date: "2026-08-28",
+    type: "lsv",
+    categorie: "lsv",
+    titre: "Le saviez-vous ? On mesurait la puissance des lunettes avec... une bougie",
+    resume: "Avant les opticiens modernes, prescrire des lunettes relevait du hasard et de l'artisanat pur. Pendant des siècles, le seul outil de mesure était une flamme, une feuille de papier et beaucoup d'espoir. Et pourtant, des millions de gens y ont vu clair grâce à ce système bricolé.",
+    source: "Pharm'Alpha",
+    source_url: "",
+    tiktok_url: "",
+    badge_label: "Le Saviez-Vous",
+    image_url: "assets/img_lsv_2026_08_28.jpg",
+    tags: ["histoire", "instrument", "optique", "pharmacie", "diagnostic"]
+  },
 {
     id: "actu_2026_08_27_1",
     date: "2026-08-27",
@@ -2545,90 +2629,6 @@ const ARTICLES = [
     badge_label: "Pharma Monde",
     image_url: "assets/img_actu_2026_08_19_2.jpg",
     tags: ["fda", "reglementation", "ema", "nomination", "pipeline"]
-  },
-{
-    id: "actu_2026_08_19_3",
-    date: "2026-08-19",
-    type: "actu",
-    categorie: "bonne_nouvelle",
-    titre: "Antenne pharmaceutique en Nouvelle-Aquitaine : le modèle qui lutte contre la désertification",
-    resume: "La 9e antenne officinale de France a ouvert le 11 août à Lévignac-de-Guyenne. Deux jours par semaine, un titulaire assure la permanence dans un territoire qui n'aurait autrement aucun accès au médicament. La preuve que le modèle fonctionne.",
-    source: "Le Quotidien du Pharmacien",
-    source_url: "http://www.lequotidiendupharmacien.fr/exercice-pro/ouverture-dune-antenne-en-nouvelle-aquitaine-les-lecons-des-premiers-jours-douverture",
-    tiktok_url: "",
-    badge_label: "La bonne nouvelle",
-    image_url: "assets/img_actu_2026_08_19_3.jpg",
-    tags: ["desertification", "antenne", "ars", "acces-aux-soins", "officine"]
-  },
-{
-    id: "actu_2026_08_19_4",
-    date: "2026-08-19",
-    type: "actu",
-    categorie: "avenir_pharma",
-    titre: "Vaccin anti-Lyme de Pfizer et Valneva : l'EMA accepte le dossier, l'évaluation peut commencer",
-    resume: "L'EMA a validé la recevabilité du dossier de demande d'AMM pour le PF-07307405, le candidat-vaccin contre la maladie de Lyme co-développé par Pfizer et Valneva. Ce n'est pas encore une approbation, mais c'est l'entrée dans la dernière ligne droite réglementaire.",
-    source: "Le Moniteur des Pharmacies",
-    source_url: "https://www.lemoniteurdespharmacies.fr/business/laboratoires/maladie-de-lyme-pfizer-et-valneva-franchissent-une-nouvelle-etape-reglementaire-avec-leur-candidat-vaccin",
-    tiktok_url: "",
-    badge_label: "L'avenir de la pharma",
-    image_url: "assets/img_actu_2026_08_19_4.jpg",
-    tags: ["vaccin", "lyme", "ema", "amm", "valneva"]
-  },
-{
-    id: "actu_2026_08_19_5",
-    date: "2026-08-19",
-    type: "actu",
-    categorie: "business_officine",
-    titre: "Incendies 2026 : ce que l'officine peut récupérer concrètement",
-    resume: "Des pharmacies sinistrées par les feux de forêt de l'été 2026, et un dispositif de soutien qui existe mais que peu de titulaires connaissent. L'USPO vient de publier un guide pratique des démarches. Voici le décryptage business.",
-    source: "Pharm'Actus · USPO — Guide pratique incendies de forêt 2026 : démarches et aides pour les officines, IQVIA Pharmastat — Chiffres structurels réseau officinal, juin 2026",
-    source_url: "https://uspo.fr/incendies-de-foret-2026/",
-    tiktok_url: "",
-    badge_label: "Business",
-    image_url: "assets/img_actu_2026_08_19_5.jpg",
-    tags: ["sinistre", "gestion-de-crise", "assurance", "officine"]
-  },
-{
-    id: "lsv_2026_08_19",
-    date: "2026-08-19",
-    type: "lsv",
-    categorie: "lsv",
-    titre: "Le saviez-vous ? On guérissait l'ulcère en buvant du plâtre liquide",
-    resume: "Pendant des décennies, les gastro-entérologues juraient que l'ulcère gastrique était une maladie du stress. Un Australien a tout remis en question en avalant un verre de bactéries. Et il a failli finir aux urgences.",
-    source: "Pharm'Alpha",
-    source_url: "",
-    tiktok_url: "",
-    badge_label: "Le Saviez-Vous",
-    image_url: "assets/img_lsv_2026_08_19.jpg",
-    tags: ["histoire", "decouverte", "bacterie", "medicament", "gastro"]
-  },
-{
-    id: "actu_2026_08_18_1",
-    date: "2026-08-18",
-    type: "actu",
-    categorie: "pharma_france",
-    titre: "Aide à mourir : le Conseil constitutionnel te donne le droit de refuser",
-    resume: "Le Conseil constitutionnel a étendu la clause de conscience aux pharmaciens dans le cadre de la loi sur l'aide à mourir. Tu ne peux pas être contraint de préparer la substance létale si ça heurte tes convictions. Un droit acquis, mais pas sans questions.",
-    source: "Le Quotidien du Pharmacien",
-    source_url: "http://www.lequotidiendupharmacien.fr/exercice-pro/aide-mourir-la-clause-de-conscience-etendue-aux-pharmaciens-par-le-conseil-constitutionnel",
-    tiktok_url: "",
-    badge_label: "Pharma France",
-    image_url: "assets/img_actu_2026_08_18_1.jpg",
-    tags: ["clause-de-conscience", "aide-a-mourir", "deontologie", "officine", "reglementation"]
-  },
-{
-    id: "actu_2026_08_18_2",
-    date: "2026-08-18",
-    type: "actu",
-    categorie: "pharma_monde",
-    titre: "Sanofi licencie 229 personnes au Massachusetts, un an après Blueprint",
-    resume: "Un an après avoir déboursé 9,1 milliards de dollars pour racheter Blueprint Medicines, Sanofi supprime 229 postes dans le Massachusetts. La stratégie post-acquisition fait grincer des dents. Ce que ça dit de la concentration industrielle en oncologie.",
-    source: "STAT News",
-    source_url: "https://www.statnews.com/2026/08/17/sanofi-layoffs-mass-blueprint-medicines/?utm_campaign=rss",
-    tiktok_url: "",
-    badge_label: "Pharma Monde",
-    image_url: "assets/img_actu_2026_08_18_2.jpg",
-    tags: ["sanofi", "oncologie", "biotech", "acquisition", "pipeline"]
   }
 ];
 

@@ -1,0 +1,37 @@
+{
+  "generated_at": "2026-08-28T04:06:55.569231+02:00",
+  "run_date": "2026-08-28",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "VRS : remboursement d'Abrysvo et Beyfortus passe à 65% dès le 31 août",
+      "resume": "Bonne nouvelle pour les familles et pour l'officine : à partir du 31 août 2026, la prise en charge par l'Assurance Maladie d'Abrysvo et de Beyfortus passe de 30 % à 65 %. Un geste concret qui lève un frein financier majeur à la vaccination VRS.",
+      "source": "USPO",
+      "source_url": "https://uspo.fr/vaccination-contre-le-vrs-modalites-de-prise-en-charge-dabrysvo-beyfortus-et-enflonsia/",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Durée de vie des médicaments allongée : 8 800 t collectées, et l'officine en première ligne",
+      "resume": "L'ANSM vient d'annoncer que 47 médicaments parmi les plus vendus en France vont voir leur durée de conservation portée à 4 ans ou plus. Derrière l'angle anti-gaspillage, il y a un vrai enjeu de gestion de stock pour ton officine.",
+      "source": "Pharm'Actus · France Info Santé — Des médicaments parmi les plus vendus en France pourront voir leur durée de vie allongée, France Info Santé — Allonger la durée de conservation des médicaments pour éviter le gaspillage ?",
+      "source_url": "https://www.franceinfo.fr/sante/des-medicaments-parmi-les-plus-vendus-en-france-pourront-voir-leur-duree-de-vie-allongee-pour-lutter-contre-le-gaspillage_8164208.html",
+      "confidence_score": 0.72,
+      "warnings": [
+        "Le volume exact de médicaments détruits par les officines elles-mêmes (vs retours patients) n'est pas publié par l'ANSM ni par Cyclamed dans les sources disponibles : cet impact n'a pas été chiffré volontairement pour éviter toute extrapolation.",
+        "La liste précise des 47 médicaments concernés n'est pas disponible dans le communiqué ANSM cité par franceinfo : l'article ne les nomme pas. Il faut surveiller la publication JORF des modifications d'AMM.",
+        "Aucune date de mise en œuvre n'est précisée dans les sources : la réforme est conditionnée à la validation des études de stabilité, durée non communiquée.",
+        "Le ratio 'durée actuelle 3 ans maximum' est issu du contenu des articles de franceinfo : à vérifier sur le site ANSM en cas de publication d'article définitif.",
+        "L'honoraire de dispensation à 1,02 € TTC est le tarif conventionnel en vigueur à la date de rédaction : vérifier si un avenant tarifaire a modifié ce montant depuis la LFSS 2026.",
+        "Les 8 800 tonnes de médicaments collectés sont citées dans les articles franceinfo comme chiffre 'l'an dernier' (2025) : source primaire Cyclamed non vérifiée directement.",
+        "4 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

@@ -2,57 +2,57 @@
   "pathologies": [
     {
       "display": "Assurance maladie fatigue chronique",
-      "delta_label": "↑ 353 150",
+      "delta_label": "↑ 352 300",
       "trend": "up"
     },
     {
       "display": "Allergie aout",
-      "delta_label": "↑ 68 250",
+      "delta_label": "↑ 65 100",
       "trend": "up"
     },
     {
-      "display": "Allergie figue",
-      "delta_label": "↑ 20 050",
+      "display": "Eclipse fatigue",
+      "delta_label": "↑ 36 250",
       "trend": "up"
     },
     {
-      "display": "Vitamine b₁₂",
-      "delta_label": "↑ 10 850",
+      "display": "Allergie à l'iode",
+      "delta_label": "↑ 11 300",
       "trend": "up"
     },
     {
-      "display": "Fatigue oculaire que faire",
-      "delta_label": "↑ 8 400",
+      "display": "Lunette eclipse",
+      "delta_label": "↑ 5 600",
       "trend": "up"
     }
   ],
-  "pathologies_from": "2026-08-27",
+  "pathologies_from": "2026-08-28",
   "soins": [
     {
       "display": "Immunite diplomatique",
-      "delta_label": "↑ 91 300",
+      "delta_label": "↑ 87 450",
       "trend": "up"
     },
     {
-      "display": "Immunite familiale",
-      "delta_label": "↑ 84 050",
+      "display": "Purina pro plan sensitive digestion",
+      "delta_label": "↑ 61 550",
       "trend": "up"
     },
     {
-      "display": "Temps digestion estomac",
-      "delta_label": "↑ 51 750",
+      "display": "Azinc immunite",
+      "delta_label": "↑ 46 750",
       "trend": "up"
     },
     {
-      "display": "Calmosine digestion nourrisson",
-      "delta_label": "↑ 50 100",
+      "display": "Temps de digestion chien",
+      "delta_label": "↑ 32 850",
       "trend": "up"
     },
     {
-      "display": "Dors ton sommeil de brute",
-      "delta_label": "↑ 12 900",
+      "display": "Eclipse et sommeil",
+      "delta_label": "↑ 15 850",
       "trend": "up"
     }
   ],
-  "soins_from": "2026-08-27"
+  "soins_from": "2026-08-28"
 }

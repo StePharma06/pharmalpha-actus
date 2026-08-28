@@ -1,6 +1,131 @@
 {
   "articles": [
     {
+      "id": "actu_2026_08_28_5",
+      "date": "2026-08-28",
+      "type": "actu",
+      "categorie": "business_officine",
+      "titre": "Durée de vie des médicaments allongée : 8 800 t collectées, et l'officine en première ligne",
+      "resume": "L'ANSM vient d'annoncer que 47 médicaments parmi les plus vendus en France vont voir leur durée de conservation portée à 4 ans ou plus. Derrière l'angle anti-gaspillage, il y a un vrai enjeu de gestion de stock pour ton officine.",
+      "source": "Pharm'Actus · France Info Santé — Des médicaments parmi les plus vendus en France pourront voir leur durée de vie allongée, France Info Santé — Allonger la durée de conservation des médicaments pour éviter le gaspillage ?",
+      "source_url": "https://www.franceinfo.fr/sante/des-medicaments-parmi-les-plus-vendus-en-france-pourront-voir-leur-duree-de-vie-allongee-pour-lutter-contre-le-gaspillage_8164208.html",
+      "tiktok_url": "",
+      "badge_label": "Business",
+      "image_url": "assets/img_actu_2026_08_28_5.jpg",
+      "tags": [
+        "gestion-de-stock",
+        "ansm",
+        "cyclamed",
+        "gaspillage-medicaments"
+      ],
+      "full_text": "L'ANSM vient d'annoncer que 47 médicaments parmi les plus vendus en France vont voir leur durée de conservation portée à 4 ans ou plus. Derrière l'angle anti-gaspillage, il y a un vrai enjeu de gestion de stock pour ton officine.\n\n**Contexte**\n\nChaque année, des dizaines de milliers de tonnes de médicaments non utilisés sont collectées en France, principalement via le réseau Cyclamed qui s'appuie sur les officines comme point de collecte obligatoire. L'ANSM a publié courant août 2026 un communiqué annonçant le relancement d'études de stabilité sur des spécialités très vendues, avec pour objectif de faire passer leur durée de conservation de 3 ans (durée maximale actuelle pour la majorité d'entre elles) à 4 ans ou plus pour 47 médicaments ciblés. Ce n'est pas une décision isolée : depuis plusieurs années, la Commission européenne et l'EMA poussent dans ce sens pour réduire le gaspillage pharmaceutique, dans le cadre de la stratégie pharmaceutique européenne. En France, la démarche prend une dimension supplémentaire : les officines, qui portent à la fois le stock, la logistique de collecte et la relation patient, sont directement concernées par tout changement de durée de péremption. C'est une mécanique qui touche le réassort, la gestion des dates courtes et la fréquence de rotation de tes linéaires.\n\n**Analyse business**\n\nSur le fond, allonger la durée de conservation de 3 à 4 ans - soit +33 % de durée de vie - c'est potentiellement beaucoup moins de destruction de stock en officine. Rappelons que sur le volume considérable collecté annuellement, une part significative provient des retours patients (médicaments non entamés ou partiellement utilisés), mais une autre fraction provient des retours officine eux-mêmes : dates courtes, invendus, erreurs de commande. L'ANSM ne ventile pas publiquement ce ratio officine / patient dans son communiqué, donc je ne chiffre pas cette fraction - prudence absolue sur ce point.\n\nCe qui est certain, en revanche :\n\n**1. Impact direct sur la gestion de stock.** Avec des durées de péremption plus longues, tu peux commander en quantités plus importantes sans risque de destruction. Pour les médicaments à forte rotation et à faible valeur (antalgiques, antihistaminiques, antiacides - typiquement des spécialités en bas de MDL, donc à marge MDL variable selon les spécialités concernées), chaque boîte détruite est une perte nette, MDL + honoraire de dispensation non récupérés. L'honoraire de dispensation par boîte ne se récupère pas si la boîte part à Cyclamed.\n\n**2. Les 47 médicaments ciblés sont « parmi les plus vendus ».** Ce sont donc des références à fort volume de rotation, probablement des génériques et des OTC sous prescription. Ce sont précisément les références sur lesquelles les grossistes répartiteurs pratiquent des offres de volume. Une durée de vie plus longue te donne une meilleure capacité de négociation sur les achats groupés, avec un risque de dépréciation réduit.\n\n**3. Cyclamed et l'obligation de collecte.** Le réseau repose sur l'ensemble des officines françaises. Réduire le volume collecté allège une charge logistique réelle - tri, stockage temporaire, enlèvements - qui n'est à ce jour pas rémunérée directement par une ligne conventionnelle spécifique.\n\n**4. Vigilance réglementaire.** L'allongement de durée de conservation ne sera effectif qu'après validation des études de stabilité par l'ANSM et modification des AMM concernées. Aucune date officielle de mise en œuvre n'est communiquée dans le communiqué de l'agence. Ne modifie donc rien dans tes process de commande avant publication des décisions officielles au JORF.\n\n**Recommandations actionnables**\n\n1. **Cartographie tes références à dates courtes** - Identifie dans ton logiciel de gestion les spécialités qui font le plus l'objet de retours ou de destructions pour péremption. Ce sont probablement tes premières bénéficiaires quand les nouvelles durées de conservation seront actées. Note-les pour ajuster ta politique de réassort dès que l'ANSM publie les avis de modification d'AMM.\n\n2. **Ne précipite pas tes achats de volume maintenant** - Tant que les études de stabilité ne sont pas validées et les AMM modifiées, aucune référence n'a officiellement une durée de vie allongée. Commander en grande quantité sur anticipation te fait prendre un risque de destruction si la validation traîne.\n\n3. **Revois ton protocole Cyclamed à la rentrée** - Profite de la rentrée pour auditer le volume réel collecté dans ton officine et identifier la part qui vient de tes propres destructions versus les retours patients. Ce chiffre est ton indicateur de départ pour mesurer l'impact réel de la réforme dans 12 à 18 mois.\n\n4. **Suis la publication ANSM / JORF** - Abonne-toi aux alertes LegiRSS Pharmacie ou aux newsletters ANSM. L'allongement de durée de conservation se matérialisera par des modifications d'AMM publiées au JORF : c'est là que tu auras les noms des 47 spécialités concernées.\n\n5. **Valorise-le en conseil patient** - Un médicament avec une date de péremption plus lointaine, c'est un argument concret pour encourager les patients à constituer une armoire à pharmacie raisonnée sans surconsommation. C'est du conseil à valeur ajoutée, sans aucun risque L.5122.\n\n**Sources citees**\n\n- France Info Santé - Des médicaments parmi les plus vendus en France pourront voir leur durée de vie allongée\n- France Info Santé - Allonger la durée de conservation des médicaments pour éviter le gaspillage ?\n- IQVIA Pharmastat - Nombre d'officines en France, juin 2026 (cité dans données structurelles réseau)"
+    },
+    {
+      "id": "actu_2026_08_28_4",
+      "date": "2026-08-28",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "Vaccin cancer + IA : Merck et Moderna dévoilent l'algo qui personnalise la thérapie",
+      "resume": "Merck et Moderna avancent sur leur vaccin ARNm personnalisé contre le cancer. L'algorithme qui pilote la fabrication de chaque vaccin individuel commence à être décrypté. C'est l'avenir de l'oncologie, et il ressemble à tout ce qu'on n'apprend pas encore à la fac.",
+      "source": "STAT News",
+      "source_url": "https://www.statnews.com/2026/08/27/biotech-news-whats-in-merck-and-modernas-cancer-vaccine-algorithm/?utm_campaign=rss",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_08_28_4.jpg",
+      "tags": [
+        "arnm",
+        "ia",
+        "oncologie",
+        "vaccin",
+        "innovation"
+      ],
+      "full_text": "Un vaccin anticancer fabriqué sur mesure pour chaque patient en quelques semaines. Ce n'est plus de la science-fiction, c'est le pipeline Merck-Moderna, et l'algo qui le fait tourner commence à se dévoiler.\n\nSTAT News rapporte que le partenariat entre Merck et Moderna sur leur vaccin ARNm personnalisé contre le cancer, connu sous le nom de mRNA-4157/V940, lève en partie le voile sur l'algorithme d'intelligence artificielle qui sélectionne les néoantigènes à cibler pour chaque patient. En clair : une biopsie tumorale est séquencée, l'IA identifie jusqu'à 34 mutations spécifiques de la tumeur, et un vaccin ARNm unique est fabriqué pour entraîner le système immunitaire du patient à les reconnaître et à les attaquer.\n\nLes données de phase 2B sur le mélanome à haut risque avaient déjà montré une réduction significative du risque de récidive ou de décès en combinaison avec le pembrolizumab (Keytruda). La phase 3 est en cours. On attend des résultats pour les prochaines années.\n\nCe qui est nouveau et important, c'est la transparence sur le fonctionnement de l'algorithme. Jusqu'ici, la sélection des néoantigènes cibles était une boîte noire. Comprendre comment l'IA priorise les mutations, c'est comprendre pourquoi certains patients répondent mieux que d'autres, et c'est la clé pour améliorer l'efficacité en phase 3.\n\nPour l'officine, ce type de thérapie ne sera pas dispensé au comptoir, c'est évident. Mais tes patients en oncologie, leurs familles, te poseront des questions dessus. Et le pharmacien clinicien de demain, notamment en PUI et en HDJ, aura un rôle dans le suivi de ces thérapies combinées ARNm et immunothérapie.\n\nL'angle ARNm ne se limite plus au Covid. Il remodèle l'oncologie, les maladies rares, et bientôt d'autres territoires thérapeutiques. La fac ne t'a pas formé là-dessus. C'est à toi de faire ta veille.\n\nDemain matin : note \"mRNA-4157 mélanome phase 3\" dans ta veille oncologie. Dans 2 à 3 ans, ce sera dans les journaux grand public, et tes patients te poseront la question avant que tu aies pu lire le Vidal."
+    },
+    {
+      "id": "actu_2026_08_28_3",
+      "date": "2026-08-28",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "VRS : remboursement d'Abrysvo et Beyfortus passe à 65% dès le 31 août",
+      "resume": "Bonne nouvelle pour les familles et pour l'officine : à partir du 31 août 2026, la prise en charge par l'Assurance Maladie d'Abrysvo et de Beyfortus passe de 30 % à 65 %. Un geste concret qui lève un frein financier majeur à la vaccination VRS.",
+      "source": "USPO",
+      "source_url": "https://uspo.fr/vaccination-contre-le-vrs-modalites-de-prise-en-charge-dabrysvo-beyfortus-et-enflonsia/",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_08_28_3.jpg",
+      "tags": [
+        "vrs",
+        "remboursement",
+        "vaccination",
+        "beyfortus",
+        "nourrisson"
+      ],
+      "full_text": "Le VRS fait des dégâts chaque hiver. Et jusqu'ici, le ticket modérateur sur Abrysvo et Beyfortus freinait clairement l'adhésion des familles. Ça change maintenant.\n\nA compter du 31 août 2026, selon l'USPO, la prise en charge par l'Assurance Maladie des vaccins Abrysvo (vaccin maternel) et de l'anticorps monoclonal Beyfortus (nirsévimab) passe de 30 % à 65 %. Concrètement, le reste à charge pour les familles chute significativement, ce qui devrait lever un frein réel à l'utilisation de ces produits.\n\nC'est une bonne nouvelle à double titre. Pour les nourrissons et les femmes enceintes d'abord : une meilleure couverture VRS, c'est moins d'hospitalisations pédiatriques, moins de bronchiolites sévères, moins de passage aux urgences en plein hiver. Pour l'officine ensuite : quand le reste à charge baisse, l'acceptabilité monte, et les actes de dispensation et de conseil augmentent avec.\n\nRappel du positionnement de chaque produit : Beyfortus (nirsévimab) est un anticorps monoclonal administré au nourrisson, pas un vaccin au sens strict. Abrysvo est le vaccin administré à la femme enceinte pour protéger le nouveau-né par transfert d'anticorps. Ce sont deux stratégies complémentaires, pas interchangeables. L'USPO mentionne également Enflonsia dans ses modalités, à vérifier selon les recommandations en vigueur pour ton stock.\n\nPas de décret de remboursement à attendre ici : la date du 31 août est annoncée par l'USPO comme effective. Vérifie la mise à jour dans ton logiciel de caisse et auprès de ton grossiste pour anticiper la demande.\n\nDemain matin : mets à jour ton équipe sur les nouveaux taux, identifie tes patientes enceintes dans le suivi officinal, et prépare-toi à une saison VRS où la dispensation sera facilitée par un remboursement enfin à la hauteur de l'enjeu."
+    },
+    {
+      "id": "actu_2026_08_28_2",
+      "date": "2026-08-28",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "Cancer du pancréas : la FDA approuve le premier traitement ciblant KRAS",
+      "resume": "La FDA vient d'accorder son AMM à un traitement de Revolution Medicines contre le cancer du pancréas avancé. C'est la première thérapie à cibler directement une mutation KRAS, longtemps considérée comme indruggable. Une avancée qui intéresse directement l'oncologie officinale de demain.",
+      "source": "STAT News",
+      "source_url": "https://www.statnews.com/pharmalot/2026/08/27/pancreatic-cancer-drug-approved-trump-deal-with-biotechs/?utm_campaign=rss",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/img_actu_2026_08_28_2.jpg",
+      "tags": [
+        "fda",
+        "oncologie",
+        "innovation",
+        "kras",
+        "amm"
+      ],
+      "full_text": "KRAS muté. Deux mots qui ont longtemps rimé avec impasse thérapeutique. La FDA vient de réécrire ce chapitre.\n\nLa Food and Drug Administration américaine a approuvé un nouveau traitement de Revolution Medicines pour les cancers du pancréas avancés portant une mutation KRAS. C'est une première mondiale : jamais encore une molécule n'avait obtenu une AMM en ciblant directement cette altération génétique dans ce type de cancer. Et c'est une information à suivre de très près, même depuis une officine française.\n\nPourquoi KRAS, c'est si important ? Parce que la mutation KRAS concerne environ 90 % des adénocarcinomes pancréatiques. C'est le driver oncogénique le plus fréquent, et il a résisté pendant des décennies à tous les efforts de ciblage moléculaire. La communauté scientifique le considérait comme \"undruggable\", soit littéralement impossible à inhiber avec un médicament. Revolution Medicines vient de démontrer que ce verrou peut sauter.\n\nLe cancer du pancréas, c'est l'un des pronostics les plus sombres en oncologie : survie à 5 ans inférieure à 13 %, souvent diagnostiqué à un stade avancé, peu de lignes thérapeutiques disponibles. Chaque nouvelle option compte.\n\nCôté AMM européenne et France, on n'y est pas encore. L'EMA devra évaluer le dossier, et le laboratoire n'a pas encore communiqué de calendrier de dépôt européen. Mais l'expérience des thérapies ciblées récentes montre que les délais entre FDA et EMA se sont raccourcis. À surveiller dans les 12 à 24 mois.\n\nPour toi au comptoir, l'impact immédiat est limité, mais l'impact pédagogique est réel. Des patients ou des proches vont googler cette info dès aujourd'hui. Savoir que cette approbation existe, que c'est une première sur KRAS, que l'accès en France est une question de mois à années, c'est exactement ce qui te permet de répondre avec autorité plutôt que de dire \"je ne sais pas\".\n\nDemain matin : note \"KRAS pancréas Revolution Medicines\" dans ton radar innovation. C'est le genre de molécule dont on reparlera."
+    },
+    {
+      "id": "actu_2026_08_28_1",
+      "date": "2026-08-28",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "Siklos 100 mg vs 1000 mg : l'ANSM sonne l'alarme après une erreur grave",
+      "resume": "Un nouveau cas d'erreur médicamenteuse grave signalé par l'ANSM à la dispensation de Siklos (hydroxycarbamide). La confusion entre les deux dosages peut provoquer un surdosage ou un sous-dosage aux conséquences sérieuses. C'est le genre d'alerte qui se gère au comptoir, pas après.",
+      "source": "USPO",
+      "source_url": "https://uspo.fr/156373-2/",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_08_28_1.jpg",
+      "tags": [
+        "ansm",
+        "erreur-medicamenteuse",
+        "siklos",
+        "vigilance",
+        "officine"
+      ],
+      "full_text": "Un facteur 10 d'écart. C'est ce qui sépare le Siklos 100 mg du Siklos 1000 mg. Et c'est exactement ce qui rend cette confusion médicamenteuse potentiellement catastrophique.\n\nL'ANSM vient de signaler un nouveau cas d'erreur médicamenteuse grave lors de la dispensation de Siklos (hydroxycarbamide) en officine. La confusion entre les deux dosages est documentée, répétée, et elle continue de se produire. Un surdosage en hydroxycarbamide sur un patient drépanocytaire, c'est une toxicité hématologique majeure. Un sous-dosage, c'est une perte de contrôle de la maladie.\n\nPourquoi ce risque persiste ? Les deux boîtes se ressemblent. Le nom de marque est identique. Seul le dosage change. Dans la précipitation d'un comptoir chargé, l'oeil peut glisser. Et glisser ici, ça peut coûter cher au patient.\n\nQue faire concrètement ? Primo : identifier tous les patients sous Siklos dans ton logiciel de dispensation, et poser un marqueur de vigilance sur leur fiche. Secundo : à chaque délivrance, lire le dosage à voix haute avec le patient ou l'aidant. Tertio : ne jamais préparer les deux dosages côte à côte sur le plan de travail. Quadro : former l'équipe, y compris les préparateurs et les étudiants en stage, car cette alerte les concerne autant.\n\nSiklos est un médicament de la liste I, réservé aux centres spécialisés pour son initiation. Mais la dispensation de renouvellement passe par l'officine. C'est donc toi qui es en première ligne sur ce risque.\n\nL'ANSM ne précise pas le nombre total de cas documentés à ce jour, mais le qualificatif \"grave\" est explicite dans son alerte. Ce n'est pas une mise en garde préventive de routine, c'est une réaction à un incident réel.\n\nDemain matin au comptoir : check immédiat dans ton logiciel, identification de tes patients Siklos, et briefing de l'équipe avant l'ouverture. Deux minutes de vigilance pour éviter une erreur aux conséquences potentiellement irréversibles."
+    },
+    {
+      "id": "lsv_2026_08_28",
+      "date": "2026-08-28",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? On mesurait la puissance des lunettes avec... une bougie",
+      "resume": "Avant les opticiens modernes, prescrire des lunettes relevait du hasard et de l'artisanat pur. Pendant des siècles, le seul outil de mesure était une flamme, une feuille de papier et beaucoup d'espoir. Et pourtant, des millions de gens y ont vu clair grâce à ce système bricolé.",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_08_28.jpg",
+      "tags": [
+        "histoire",
+        "instrument",
+        "optique",
+        "pharmacie",
+        "diagnostic"
+      ],
+      "full_text": "Imagine-toi en 1750, dans l'arrière-boutique d'un apothicaire parisien. Un client arrive, les yeux plissés, incapable de lire son ordonnance. Pas de réfractomètre, pas d'échelle de Monoyer, pas d'opticien diplômé. Ce qu'on lui propose ? Une bougie et une planche percée de trous.\n\nC'est ce qu'on appelait le 'bôtelier' ou parfois la 'boîte à trous'. Le principe était simple : le patient regardait la flamme à travers des verres de dioptries différentes, et choisissait celui qui rendait la lumière la plus nette. Les verres étaient classés par numéros empiriques, sans unité standardisée, variant d'un fabricant à l'autre. Un '3' chez un lunetier de Lyon n'était pas le même qu'un '3' à Bordeaux.\n\nMais voilà le vrai twist : les lunettes n'étaient même pas prescrites par des médecins. C'était le boulot des apothicaires, des merciers, des colporteurs et même des dentistes ambulants. On achetait ses lunettes à la foire, comme une paire de gants. Le client essayait, le vendeur observait sa grimace, et hop - affaire conclue.\n\nCe n'est qu'en 1866 que le Hollandais Frans Donders publie son traité révolutionnaire sur les anomalies de la réfraction, posant les bases scientifiques de l'optométrie moderne. Et l'échelle de Monoyer, celle avec les lettres qui rétrécissent ? Elle arrive en 1875 seulement - soit 600 ans après les premières lunettes européennes.\n\nAujourd'hui, quand un patient débarque au comptoir avec son ordonnance à -3,25 (-0,75 à 90°), on a parfois tendance à trouver ça compliqué. Mais pense à l'apothicaire du XVIIIe, sa bougie à la main, qui faisait de son mieux pour que Monsieur le Curé lise son bréviaire. Finalement, la précision qu'on exige aujourd'hui pour chaque demi-dioptrie, c'est le fruit de trois siècles de tâtonnements lumineux."
+    },
+    {
       "id": "actu_2026_08_27_5",
       "date": "2026-08-27",
       "type": "actu",
@@ -14684,6 +14809,6 @@
       ]
     }
   ],
-  "count": 708,
-  "updated_at": "2026-08-27T04:10:00.330989+02:00"
+  "count": 714,
+  "updated_at": "2026-08-28T04:06:59.066574+02:00"
 }
