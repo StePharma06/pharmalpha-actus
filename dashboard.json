@@ -1,21 +1,21 @@
 {
- "genere_le": "2026-08-28T16:44:20+02:00",
+ "genere_le": "2026-08-29T11:35:35+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1113,
+ "abonnes_total": 1115,
  "nouveaux_7j": 29,
- "nouveaux_cumul": 1106,
+ "nouveaux_cumul": 1108,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-08-21",
-  "au": "2026-08-28",
-  "delivres": 7016,
-  "ouvertures": 2945,
-  "ouvertures_uniques": 2118,
-  "clics": 3030,
-  "clics_uniques": 598,
-  "taux_ouverture_pct": 30.2,
-  "taux_clic_pct": 8.5,
-  "ctor_pct": 28.2,
+  "du": "2026-08-22",
+  "au": "2026-08-29",
+  "delivres": 7025,
+  "ouvertures": 2785,
+  "ouvertures_uniques": 2026,
+  "clics": 3131,
+  "clics_uniques": 587,
+  "taux_ouverture_pct": 28.8,
+  "taux_clic_pct": 8.4,
+  "ctor_pct": 29.0,
   "top_articles": [
    {
     "id": "actu_2026_08_22_1",
@@ -62,8 +62,8 @@
     "titre": "VRS : remboursement d'Abrysvo et Beyfortus passe à 65% dès le 31 août",
     "date": "2026-08-28",
     "categorie": "bonne_nouvelle",
-    "clics": 75,
-    "lecteurs": 44
+    "clics": 76,
+    "lecteurs": 45
    },
    {
     "id": "actu_2026_08_26_3",
@@ -74,12 +74,12 @@
     "lecteurs": 44
    },
    {
-    "id": "actu_2026_08_21_2",
-    "titre": "Vaccin ARNm contre le mélanome : Moderna et Merck annoncent des résultats en phase finale",
-    "date": "2026-08-21",
-    "categorie": "pharma_monde",
-    "clics": 66,
-    "lecteurs": 44
+    "id": "actu_2026_08_28_1",
+    "titre": "Siklos 100 mg vs 1000 mg : l'ANSM sonne l'alarme après une erreur grave",
+    "date": "2026-08-28",
+    "categorie": "pharma_france",
+    "clics": 64,
+    "lecteurs": 42
    },
    {
     "id": "actu_2026_08_28_2",
@@ -90,26 +90,26 @@
     "lecteurs": 41
    },
    {
-    "id": "actu_2026_08_28_1",
-    "titre": "Siklos 100 mg vs 1000 mg : l'ANSM sonne l'alarme après une erreur grave",
-    "date": "2026-08-28",
-    "categorie": "pharma_france",
-    "clics": 63,
-    "lecteurs": 41
+    "id": "actu_2026_08_27_3",
+    "titre": "Cancer du pancréas : une première thérapie ciblée FDA approuvée",
+    "date": "2026-08-27",
+    "categorie": "bonne_nouvelle",
+    "clics": 72,
+    "lecteurs": 40
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-08-28",
-  "delivres": 91268,
-  "ouvertures": 36868,
-  "ouvertures_uniques": 25480,
-  "clics": 37498,
-  "clics_uniques": 6835,
-  "taux_ouverture_pct": 27.9,
+  "au": "2026-08-29",
+  "delivres": 92246,
+  "ouvertures": 37114,
+  "ouvertures_uniques": 25671,
+  "clics": 37936,
+  "clics_uniques": 6896,
+  "taux_ouverture_pct": 27.8,
   "taux_clic_pct": 7.5,
-  "ctor_pct": 26.8,
+  "ctor_pct": 26.9,
   "top_articles": [
    {
     "id": "actu_2026_06_18_1",
