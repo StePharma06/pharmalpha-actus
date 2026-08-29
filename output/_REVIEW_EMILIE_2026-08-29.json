@@ -1,0 +1,59 @@
+{
+  "generated_at": "2026-08-29T04:07:39.486252+02:00",
+  "run_date": "2026-08-29",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Salaires officine : FO sort les cartes postales, la branche sociale coince",
+      "resume": "Force Ouvrière appelle tous les salariés d'officine à inonder les organisations patronales de cartes postales pour débloquer les négociations de grille. Une action à l'ancienne pour un blocage qui, lui, dure depuis trop longtemps. Qu'est-ce que ça dit sur l'état social du réseau officinal ?",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/des-cartes-postales-pour-reclamer-une-hausse-des-salaires-en-officine",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "pharma_monde",
+      "titre": "AstraZeneca et Ionis : le silence-ARN qui parle trop fort pour le coeur",
+      "resume": "L'essai sur l'eplontersen dans la cardiomyopathie à transthyrétine vient de se planter. AstraZeneca et Ionis cherchent les raisons, et c'est toute la classe des \"silenceurs\" d'ARN qui tremble. Pour le pharmacien francais, le dossier amyloidose cardiaque reste sous haute surveillance.",
+      "source": "STAT News",
+      "source_url": "https://www.statnews.com/2026/08/28/astrazeneca-ionis-wainua-eplontersen-attr-cm-study-failure-bridgebio-alnylam/?utm_campaign=rss",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "avenir_pharma",
+      "titre": "Biosimilaires en PACA : la gamification pour booster la substitution",
+      "resume": "L'URPS pharmacie PACA lance un championnat DCI pour toute l'équipe officinale, sur les génériques et biosimilaires. Gamification, mises à jour réglementaires, compétition inter-officines : la formation continue se réinvente. Et si c'était le modèle à exporter nationalement ?",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/generiques-et-biosimilaires-une-competition-entre-equipes-officinales-en-region-paca",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "UPGF rentrée 2026 : derrière le manifeste, quels leviers business pour l'officine ?",
+      "resume": "L'UPGF tire la sonnette d'alarme pour la rentrée 2026 et réclame un mécanisme structurant d'équité territoriale. Derrière la posture syndicale, des enjeux très concrets de rentabilité, de démographie officinale et d'accès aux missions rémunérées.",
+      "source": "Pharm'Actus · UPGF – Rentrée de tous les dangers : l'UPGF réaffirme ses engagements, IQVIA Pharmastat – Nombre d'officines en France, juin 2026",
+      "source_url": "https://www.upgf.fr/positions/rentree-de-tous-les-dangers-l-upgf-reaffirme-ses-engagements/",
+      "confidence_score": 0.62,
+      "warnings": [
+        "Le chiffre '20 % des officines rurales sous 800 000 EUR de CA' est une estimation de contexte général non sourced dans la tribune UPGF elle-même : à vérifier via un rapport DREES ou CNAM avant publication.",
+        "Le plafond ROSP '~6 500 EUR annuels' est une estimation basée sur des données CNAM 2024 non officiellement publiées sous ce format agrégé : formuler avec précaution ou retirer si non confirmable.",
+        "Le chiffre '5,7 millions de Français sans médecin à moins de 15 min' (DREES 2025) : à vérifier dans le rapport exact DREES sur les déserts médicaux — le chiffre et l'année doivent être confirmés.",
+        "L'honoraire de vaccination à 7,50 EUR : vérifier que ce tarif est bien celui de l'avenant en vigueur en 2026 — des revalorisations ont pu intervenir.",
+        "La position des syndicats FSPF et USPO est reconstituée à partir de leurs communications publiques générales de rentrée, et non d'une réponse directe à la tribune UPGF du 28/08/2026 : indiquer explicitement qu'ils ne se sont pas prononcés sur CE texte précis.",
+        "L'honoraire de dispensation à 1,02 EUR TTC : vérifier qu'aucune revalorisation n'a eu lieu depuis la dernière révision conventionnelle connue.",
+        "7 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

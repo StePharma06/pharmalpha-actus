@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? On mesurait la puissance des lunettes avec... une bougie",
-  "resume": "Avant les opticiens modernes, prescrire des lunettes relevait du hasard et de l'artisanat pur. Pendant des siècles, le seul outil de mesure était une flamme, une feuille de papier et beaucoup d'espoir. Et pourtant, des millions de gens y ont vu clair grâce à ce système bricolé.",
-  "full_text": "Imagine-toi en 1750, dans l'arrière-boutique d'un apothicaire parisien. Un client arrive, les yeux plissés, incapable de lire son ordonnance. Pas de réfractomètre, pas d'échelle de Monoyer, pas d'opticien diplômé. Ce qu'on lui propose ? Une bougie et une planche percée de trous.\n\nC'est ce qu'on appelait le 'bôtelier' ou parfois la 'boîte à trous'. Le principe était simple : le patient regardait la flamme à travers des verres de dioptries différentes, et choisissait celui qui rendait la lumière la plus nette. Les verres étaient classés par numéros empiriques, sans unité standardisée, variant d'un fabricant à l'autre. Un '3' chez un lunetier de Lyon n'était pas le même qu'un '3' à Bordeaux.\n\nMais voilà le vrai twist : les lunettes n'étaient même pas prescrites par des médecins. C'était le boulot des apothicaires, des merciers, des colporteurs et même des dentistes ambulants. On achetait ses lunettes à la foire, comme une paire de gants. Le client essayait, le vendeur observait sa grimace, et hop - affaire conclue.\n\nCe n'est qu'en 1866 que le Hollandais Frans Donders publie son traité révolutionnaire sur les anomalies de la réfraction, posant les bases scientifiques de l'optométrie moderne. Et l'échelle de Monoyer, celle avec les lettres qui rétrécissent ? Elle arrive en 1875 seulement - soit 600 ans après les premières lunettes européennes.\n\nAujourd'hui, quand un patient débarque au comptoir avec son ordonnance à -3,25 (-0,75 à 90°), on a parfois tendance à trouver ça compliqué. Mais pense à l'apothicaire du XVIIIe, sa bougie à la main, qui faisait de son mieux pour que Monsieur le Curé lise son bréviaire. Finalement, la précision qu'on exige aujourd'hui pour chaque demi-dioptrie, c'est le fruit de trois siècles de tâtonnements lumineux.",
-  "image_keywords": "vintage eyeglasses candle",
+  "titre": "Le saviez-vous ? On traitait la malaria avec de l'écorce d'arbre volée aux Incas",
+  "resume": "Au XVIIe siècle, un arbre péruvien a bouleversé la médecine mondiale. Son écorce contenait le secret contre le paludisme, et les Jésuites ont failli en faire un monopole religieux. Sans ce vol botanique, Napoléon aurait peut-être perdu ses guerres encore plus tôt.",
+  "full_text": "En 1638, la comtesse d'Alcantara, vice-reine du Pérou, tombe malade d'une fièvre mystérieuse qui tue des milliers d'Européens chaque année. Les médecins locaux sont dépassés. Alors des guérisseurs quechuas lui proposent quelque chose d'insolite : boire une décoction d'écorce d'un arbre qu'ils appellent \"quina-quina\".\n\nElle guérit en quelques jours. La nouvelle se répand comme une traînée de poudre. Les Jésuites saisissent l'opportunité : ils ramènent l'écorce en Europe, la commercialisent sous le nom de \"poudre des Jésuites\" et en font un remède quasi mystique, vendu à prix d'or. Pendant 50 ans, ils contrôlent l'accès au seul traitement efficace contre le paludisme.\n\nLe twist ? Le botaniste français Charles-Marie de La Condamine ne va pas les laisser faire. En 1735, lors d'une expédition en Amazonie, il décrit scientifiquement l'arbre, le Cinchona officinalis, le fait connaître à toute l'Europe savante et brise le monopole religieux. C'est lui qui donne à l'arbre son nom scientifique, en hommage à... la comtesse guérie un siècle plus tôt.\n\nLa molécule active, la quinine, ne sera isolée qu'en 1820 par deux pharmaciens français : Pierre-Joseph Pelletier et Joseph-Bienaimé Caventou. Ces deux-là travaillaient à Paris, à l'École de Pharmacie, et leur extraction de la quinine est considérée comme l'un des actes fondateurs de la chimie pharmaceutique moderne. Sans eux, pas de quinine pure, pas de chloroquine, pas d'antipaludéens contemporains.\n\nNapoléon, lui, avait distribué des tonnes d'écorce à ses troupes lors de la campagne d'Égypte. Ça n'a pas tout sauvé, mais ça a limité les dégâts.\n\nAujourd'hui, le paludisme tue encore 600 000 personnes par an, surtout des enfants africains. Et la quinine, tu la retrouves encore au comptoir, dans certains traitements des crampes nocturnes. Un arbre péruvien du XVIIe siècle qui continue de tourner en rayons officinaux. Ça mérite le respect.",
+  "image_keywords": "cinchona bark quinine",
   "tags": [
     "histoire",
-    "instrument",
-    "optique",
-    "pharmacie",
-    "diagnostic"
+    "medicament",
+    "plante",
+    "chimie",
+    "epidemie"
   ],
-  "date": "2026-08-28",
+  "date": "2026-08-29",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",

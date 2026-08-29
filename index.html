@@ -31,7 +31,7 @@
      l'image n'est decouverte qu'apres execution du JS qui construit les cards
      (le <img> n'existe qu'a l'interieur d'un template literal JS, invisible au
      preload scanner) -> LCP non deterministe, cf. sprint perf 2026-07-27. -->
-<link rel="preload" as="image" href="assets/img_actu_2026_08_28_1.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="assets/img_actu_2026_08_29_1.jpg" fetchpriority="high">
 
 <!-- Space Grotesk — self-hosted WOFF2 (remplace Google Fonts, cf. mission perf/RGPD 2026-08-24) -->
 <link rel="preload" href="/assets/fonts/space-grotesk-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -1737,7 +1737,7 @@ body.pa-has-nav #actusHeader {
 </div>
 
 <!-- EXPRESSION DU JOUR (injectée par update_actus.py à chaque run) -->
-<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Être flegmatique</h2><p class="expression-corps">Dans la médecine des humeurs, le phlegme était l'humeur froide et humide associée au calme, à la lenteur, à l'impassibilité. Un tempérament dominé par le phlegme était dit flegmatique - et rien, pas même l'urgence, ne semblait l'agiter.</p></aside>
+<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Un remède de cheval</h2><p class="expression-corps">Jusqu'au XIXe siècle, les vétérinaires prescrivaient des doses de médicament bien supérieures à celles des humains - les chevaux, lourds et résistants, exigeaient des traitements massifs. Un remède de cheval, c'est donc une médication aussi radicale qu'efficace.</p></aside>
 
 <!-- ESPACE PARTENAIRE 1 (entre Expression du jour et Aujourd'hui).
      Statique : reste visible meme si le JS ne s'execute pas. Le 2e emplacement
@@ -1762,12 +1762,12 @@ body.pa-has-nav #actusHeader {
 <div id="articles-container"></div>
 
 <!-- MARQUE_TENDANCE (injectee par le pipeline hebdo, remplacee quotidiennement) -->
-<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">22 aout au 28 aout 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Assurance maladie fatigue chronique</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 352 300</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Immunite diplomatique</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 87 450</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie aout</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 65 100</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Purina pro plan sensitive digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 61 550</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Eclipse fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 36 250</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Azinc immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 46 750</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie à l'iode</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 11 300</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Temps de digestion chien</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 32 850</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Lunette eclipse</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 5 600</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Eclipse et sommeil</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 15 850</td></tr>
+<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">23 aout au 29 aout 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Assurance maladie fatigue chronique</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 348 800</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Pois chiche digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 59 800</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie aout</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 77 300</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Temps de digestion chien</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 58 400</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie figue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 30 550</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Azinc immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 55 500</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Vitamine b₁₂</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 12 350</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Eclipse et sommeil</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 17 500</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Arret tabac fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 10 700</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Implant apnée du sommeil</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 9 750</td></tr>
 </tbody></table></div><p style="margin:10px 0 0;font-size:11px;color:#9ca3af;font-style:italic;">Indice de tendance : intensite de hausse Google Trends (non comparable a un volume absolu).</p><p style="margin:12px 0 0;font-size:11px;color:#9ca3af;text-align:right;">Source&nbsp;: Google Trends France (pytrends) &middot; 7 jours glissants</p></section></div>
 
 <!-- ARCHIVES CTA -->
@@ -1930,6 +1930,90 @@ body.pa-has-nav #actusHeader {
 // Mis a jour automatiquement par n8n chaque semaine
 // ============================================================
 const ARTICLES = [
+{
+    id: "actu_2026_08_29_1",
+    date: "2026-08-29",
+    type: "actu",
+    categorie: "pharma_france",
+    titre: "Salaires officine : FO sort les cartes postales, la branche sociale coince",
+    resume: "Force Ouvrière appelle tous les salariés d'officine à inonder les organisations patronales de cartes postales pour débloquer les négociations de grille. Une action à l'ancienne pour un blocage qui, lui, dure depuis trop longtemps. Qu'est-ce que ça dit sur l'état social du réseau officinal ?",
+    source: "Le Quotidien du Pharmacien",
+    source_url: "http://www.lequotidiendupharmacien.fr/exercice-pro/des-cartes-postales-pour-reclamer-une-hausse-des-salaires-en-officine",
+    tiktok_url: "",
+    badge_label: "Pharma France",
+    image_url: "assets/img_actu_2026_08_29_1.jpg",
+    tags: ["salaires", "convention", "officine", "syndicat", "social"]
+  },
+{
+    id: "actu_2026_08_29_2",
+    date: "2026-08-29",
+    type: "actu",
+    categorie: "pharma_monde",
+    titre: "AstraZeneca et Ionis : le silence-ARN qui parle trop fort pour le coeur",
+    resume: "L'essai sur l'eplontersen dans la cardiomyopathie à transthyrétine vient de se planter. AstraZeneca et Ionis cherchent les raisons, et c'est toute la classe des \"silenceurs\" d'ARN qui tremble. Pour le pharmacien francais, le dossier amyloidose cardiaque reste sous haute surveillance.",
+    source: "STAT News",
+    source_url: "https://www.statnews.com/2026/08/28/astrazeneca-ionis-wainua-eplontersen-attr-cm-study-failure-bridgebio-alnylam/?utm_campaign=rss",
+    tiktok_url: "",
+    badge_label: "Pharma Monde",
+    image_url: "assets/img_actu_2026_08_29_2.jpg",
+    tags: ["arn", "innovation", "cardiologie", "ema", "recherche"]
+  },
+{
+    id: "actu_2026_08_29_3",
+    date: "2026-08-29",
+    type: "actu",
+    categorie: "bonne_nouvelle",
+    titre: "Extension de DPE des meds : le paracetamol gagne deux ans de vie utile",
+    resume: "Bonne nouvelle concrète pour le gaspillage médicamenteux : 73 médicaments du quotidien, dont le paracétamol sous toutes ses formes commerciales, vont voir leur durée de conservation allongée d'environ deux ans. Moins de retours DASTRI, moins de culpabilité du patient, moins de dispense inutile.",
+    source: "France Info Sante",
+    source_url: "https://www.franceinfo.fr/replay-jt/france-2/13-heures/efferalgan-dafalgan-la-duree-de-conservation-de-certains-medicaments-va-augmenter_8166560.html#xtor=RSS-3-%5Bgeneral%5D",
+    tiktok_url: "",
+    badge_label: "La bonne nouvelle",
+    image_url: "assets/img_actu_2026_08_29_3.jpg",
+    tags: ["paracetamol", "peremption", "gaspillage", "officine", "remboursement"]
+  },
+{
+    id: "actu_2026_08_29_4",
+    date: "2026-08-29",
+    type: "actu",
+    categorie: "avenir_pharma",
+    titre: "Biosimilaires en PACA : la gamification pour booster la substitution",
+    resume: "L'URPS pharmacie PACA lance un championnat DCI pour toute l'équipe officinale, sur les génériques et biosimilaires. Gamification, mises à jour réglementaires, compétition inter-officines : la formation continue se réinvente. Et si c'était le modèle à exporter nationalement ?",
+    source: "Le Moniteur des Pharmacies",
+    source_url: "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/generiques-et-biosimilaires-une-competition-entre-equipes-officinales-en-region-paca",
+    tiktok_url: "",
+    badge_label: "L'avenir de la pharma",
+    image_url: "assets/img_actu_2026_08_29_4.jpg",
+    tags: ["biosimilaires", "substitution", "formation", "dpc", "urps"]
+  },
+{
+    id: "actu_2026_08_29_5",
+    date: "2026-08-29",
+    type: "actu",
+    categorie: "business_officine",
+    titre: "UPGF rentrée 2026 : derrière le manifeste, quels leviers business pour l'officine ?",
+    resume: "L'UPGF tire la sonnette d'alarme pour la rentrée 2026 et réclame un mécanisme structurant d'équité territoriale. Derrière la posture syndicale, des enjeux très concrets de rentabilité, de démographie officinale et d'accès aux missions rémunérées.",
+    source: "Pharm'Actus · UPGF – Rentrée de tous les dangers : l'UPGF réaffirme ses engagements, IQVIA Pharmastat – Nombre d'officines en France, juin 2026",
+    source_url: "https://www.upgf.fr/positions/rentree-de-tous-les-dangers-l-upgf-reaffirme-ses-engagements/",
+    tiktok_url: "",
+    badge_label: "Business",
+    image_url: "assets/img_actu_2026_08_29_5.jpg",
+    tags: ["upgf", "rentabilite-officine", "convention-pharmaceutique", "missions-remunerees"]
+  },
+{
+    id: "lsv_2026_08_29",
+    date: "2026-08-29",
+    type: "lsv",
+    categorie: "lsv",
+    titre: "Le saviez-vous ? On traitait la malaria avec de l'écorce d'arbre volée aux Incas",
+    resume: "Au XVIIe siècle, un arbre péruvien a bouleversé la médecine mondiale. Son écorce contenait le secret contre le paludisme, et les Jésuites ont failli en faire un monopole religieux. Sans ce vol botanique, Napoléon aurait peut-être perdu ses guerres encore plus tôt.",
+    source: "Pharm'Alpha",
+    source_url: "",
+    tiktok_url: "",
+    badge_label: "Le Saviez-Vous",
+    image_url: "assets/img_lsv_2026_08_29.jpg",
+    tags: ["histoire", "medicament", "plante", "chimie", "epidemie"]
+  },
 {
     id: "actu_2026_08_28_1",
     date: "2026-08-28",
@@ -2545,90 +2629,6 @@ const ARTICLES = [
     badge_label: "Pharma Monde",
     image_url: "assets/img_actu_2026_08_20_2.jpg",
     tags: ["ebola", "oms", "epidemie", "vigilance", "voyage"]
-  },
-{
-    id: "actu_2026_08_20_3",
-    date: "2026-08-20",
-    type: "actu",
-    categorie: "bonne_nouvelle",
-    titre: "Vaccin ARNm contre le mélanome : les résultats qui redonnent espoir",
-    resume: "Moderna et Merck annoncent des résultats statistiquement significatifs pour leur vaccin thérapeutique personnalisé contre le mélanome de stade avancé, combiné à l'immunothérapie Keytruda. Une avancée qui concerne directement les patients que tu orientes en dermatologie.",
-    source: "France Info Sante",
-    source_url: "https://www.franceinfo.fr/sante/cancer/les-laboratoires-moderna-et-merck-annoncent-des-resultats-encourageants-pour-un-vaccin-therapeutique-contre-le-cancer-de-la-peau_8153651.html#xtor=RSS-3-%5Bgeneral%5D",
-    tiktok_url: "",
-    badge_label: "La bonne nouvelle",
-    image_url: "assets/img_actu_2026_08_20_3.jpg",
-    tags: ["arnm", "vaccin", "cancer", "innovation", "recherche"]
-  },
-{
-    id: "actu_2026_08_20_4",
-    date: "2026-08-20",
-    type: "actu",
-    categorie: "avenir_pharma",
-    titre: "Une bactérie génétiquement modifiée pour remplacer l'insuline injectable : la révolution qui vient de Chine",
-    resume: "Des chercheurs chinois ont développé une bactérie OGM capable de détecter les variations de glycémie et de produire automatiquement des hormones régulatrices. Si ça marche en clinique, ce sera un tournant pour les 4 millions de diabétiques français sous insuline.",
-    source: "France Info Sante",
-    source_url: "https://www.franceinfo.fr/replay-radio/bientot-chez-vous/diabete-des-scientifiques-chinois-developpent-une-bonne-bacterie-pour-remplacer-les-injections-d-insuline_8127545.html#xtor=RSS-3-%5Bgeneral%5D",
-    tiktok_url: "",
-    badge_label: "L'avenir de la pharma",
-    image_url: "assets/img_actu_2026_08_20_4.jpg",
-    tags: ["diabete", "innovation", "recherche", "insuline", "biotechnologie"]
-  },
-{
-    id: "actu_2026_08_20_5",
-    date: "2026-08-20",
-    type: "actu",
-    categorie: "business_officine",
-    titre: "Aide à mourir : loi promulguée, 19 274 officines dans l'angle mort",
-    resume: "La loi sur l'aide à mourir est publiée au Journal officiel ce 19 août 2026. Le pharmacien d'officine est au cœur du dispositif de dispensation - et personne ne lui a encore dit comment ça va se passer concrètement.",
-    source: "Pharm'Actus · Le Monde Santé — L'aide à mourir officiellement autorisée en France, LegiRSS Pharmacie — Décision n° 2026-910 DC du 14 août 2026 (Conseil constitutionnel)",
-    source_url: "https://www.lemonde.fr/societe/article/2026/08/19/l-aide-a-mourir-officiellement-autorisee-en-france-apres-la-promulgation-de-la-loi-par-emmanuel-macron_6749291_3224.html",
-    tiktok_url: "",
-    badge_label: "Business",
-    image_url: "assets/img_actu_2026_08_20_5.jpg",
-    tags: ["aide-a-mourir", "reglementation", "officine", "dispensation"]
-  },
-{
-    id: "lsv_2026_08_20",
-    date: "2026-08-20",
-    type: "lsv",
-    categorie: "lsv",
-    titre: "Le saviez-vous ? On guérissait l'hypertension en retirant... les reins",
-    resume: "Avant les antihypertenseurs, les médecins avaient une idée radicale pour faire baisser la tension. Pas de pilule, pas de régime sans sel. Non : on opérait. Et le prix à payer était colossal.",
-    source: "Pharm'Alpha",
-    source_url: "",
-    tiktok_url: "",
-    badge_label: "Le Saviez-Vous",
-    image_url: "assets/img_lsv_2026_08_20.jpg",
-    tags: ["histoire", "chirurgie", "hypertension", "decouverte", "medicament"]
-  },
-{
-    id: "actu_2026_08_19_1",
-    date: "2026-08-19",
-    type: "actu",
-    categorie: "pharma_france",
-    titre: "Loi aide à mourir : ce que ça change concrètement à l'officine",
-    resume: "La loi relative au droit à l'aide à mourir est promulguée au JO du 19 août 2026. Le pharmacien d'officine va devenir un acteur incontournable de ce nouveau dispositif. Voici ce qu'il faut déjà anticiper.",
-    source: "LegiRSS Pharmacie / Le Monde Santé",
-    source_url: "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054706877",
-    tiktok_url: "",
-    badge_label: "Pharma France",
-    image_url: "assets/img_actu_2026_08_19_1.jpg",
-    tags: ["aide-a-mourir", "loi", "officine", "dispensation", "clause-de-conscience"]
-  },
-{
-    id: "actu_2026_08_19_2",
-    date: "2026-08-19",
-    type: "actu",
-    categorie: "pharma_monde",
-    titre: "FDA : Trump mise sur Heidi Overton, une novice aux commandes du gendarme du médicament mondial",
-    resume: "Trump s'apprête à nommer Heidi Overton, médecin et conseillère à la Maison-Blanche, à la tête de la FDA. Pas de background réglementaire pharma, pas d'expérience d'agence : un choix politique assumé qui fait tiquer l'industrie. Et qui aura des répercussions bien au-delà des États-Unis.",
-    source: "STAT News",
-    source_url: "https://www.statnews.com/2026/08/18/heidi-overton-fda-commissioner-nominee-white-house-adviser/?utm_campaign=rss",
-    tiktok_url: "",
-    badge_label: "Pharma Monde",
-    image_url: "assets/img_actu_2026_08_19_2.jpg",
-    tags: ["fda", "reglementation", "ema", "nomination", "pipeline"]
   }
 ];
 
