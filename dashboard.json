@@ -1,30 +1,22 @@
 {
- "genere_le": "2026-08-29T11:35:35+02:00",
+ "genere_le": "2026-08-30T10:43:28+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1115,
- "nouveaux_7j": 29,
- "nouveaux_cumul": 1108,
+ "abonnes_total": 1120,
+ "nouveaux_7j": 31,
+ "nouveaux_cumul": 1113,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-08-22",
-  "au": "2026-08-29",
-  "delivres": 7025,
-  "ouvertures": 2785,
-  "ouvertures_uniques": 2026,
-  "clics": 3131,
-  "clics_uniques": 587,
-  "taux_ouverture_pct": 28.8,
-  "taux_clic_pct": 8.4,
-  "ctor_pct": 29.0,
+  "du": "2026-08-23",
+  "au": "2026-08-30",
+  "delivres": 6059,
+  "ouvertures": 2509,
+  "ouvertures_uniques": 1850,
+  "clics": 2774,
+  "clics_uniques": 516,
+  "taux_ouverture_pct": 30.5,
+  "taux_clic_pct": 8.5,
+  "ctor_pct": 27.9,
   "top_articles": [
-   {
-    "id": "actu_2026_08_22_1",
-    "titre": "Facturation électronique au 1er septembre : pas de report, débrouille-toi",
-    "date": "2026-08-22",
-    "categorie": "pharma_france",
-    "clics": 91,
-    "lecteurs": 59
-   },
    {
     "id": "actu_2026_08_27_1",
     "titre": "Ordonnance falsifiée ? Une faute d'ortho les a trahis",
@@ -40,22 +32,6 @@
     "categorie": "pharma_monde",
     "clics": 82,
     "lecteurs": 48
-   },
-   {
-    "id": "actu_2026_08_22_5",
-    "titre": "Franchises médicales : le recul du gouvernement, une bombe à retardement pour tes marges",
-    "date": "2026-08-22",
-    "categorie": "business_officine",
-    "clics": 68,
-    "lecteurs": 48
-   },
-   {
-    "id": "actu_2026_08_22_4",
-    "titre": "Aide à mourir : la loi est publiée au JO, et toi tu fais quoi avec ta clause de conscience ?",
-    "date": "2026-08-22",
-    "categorie": "avenir_pharma",
-    "clics": 73,
-    "lecteurs": 47
    },
    {
     "id": "actu_2026_08_28_3",
@@ -96,20 +72,44 @@
     "categorie": "bonne_nouvelle",
     "clics": 72,
     "lecteurs": 40
+   },
+   {
+    "id": "actu_2026_08_29_1",
+    "titre": "Salaires officine : FO sort les cartes postales, la branche sociale coince",
+    "date": "2026-08-29",
+    "categorie": "pharma_france",
+    "clics": 70,
+    "lecteurs": 39
+   },
+   {
+    "id": "actu_2026_08_27_4",
+    "titre": "Vaccin ARNm contre le mélanome : Moderna passe un cap décisif",
+    "date": "2026-08-27",
+    "categorie": "avenir_pharma",
+    "clics": 65,
+    "lecteurs": 38
+   },
+   {
+    "id": "actu_2026_08_24_3",
+    "titre": "Vaccination, téléconsultation, bilans : 167 millions d'euros de marge en plus pour les officines",
+    "date": "2026-08-24",
+    "categorie": "bonne_nouvelle",
+    "clics": 63,
+    "lecteurs": 36
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-08-29",
-  "delivres": 92246,
-  "ouvertures": 37114,
-  "ouvertures_uniques": 25671,
-  "clics": 37936,
-  "clics_uniques": 6896,
-  "taux_ouverture_pct": 27.8,
+  "au": "2026-08-30",
+  "delivres": 92247,
+  "ouvertures": 37189,
+  "ouvertures_uniques": 25706,
+  "clics": 37984,
+  "clics_uniques": 6900,
+  "taux_ouverture_pct": 27.9,
   "taux_clic_pct": 7.5,
-  "ctor_pct": 26.9,
+  "ctor_pct": 26.8,
   "top_articles": [
    {
     "id": "actu_2026_06_18_1",
