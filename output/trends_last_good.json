@@ -2,57 +2,57 @@
   "pathologies": [
     {
       "display": "Assurance maladie fatigue chronique",
-      "delta_label": "↑ 348 800",
-      "trend": "up"
-    },
-    {
-      "display": "Allergie aout",
-      "delta_label": "↑ 77 300",
+      "delta_label": "↑ 369 200",
       "trend": "up"
     },
     {
       "display": "Allergie figue",
-      "delta_label": "↑ 30 550",
+      "delta_label": "↑ 31 550",
       "trend": "up"
     },
     {
-      "display": "Vitamine b₁₂",
-      "delta_label": "↑ 12 350",
+      "display": "Allergie au soleil symptômes",
+      "delta_label": "↑ 10 750",
       "trend": "up"
     },
     {
       "display": "Arret tabac fatigue",
-      "delta_label": "↑ 10 700",
+      "delta_label": "↑ 10 150",
+      "trend": "up"
+    },
+    {
+      "display": "Pharmacie ouverte le 15 août",
+      "delta_label": "↑ 2 500",
       "trend": "up"
     }
   ],
-  "pathologies_from": "2026-08-29",
+  "pathologies_from": "2026-08-31",
   "soins": [
     {
-      "display": "Pois chiche digestion",
-      "delta_label": "↑ 59 800",
+      "display": "Schoum digestion",
+      "delta_label": "↑ 60 000",
       "trend": "up"
     },
     {
-      "display": "Temps de digestion chien",
-      "delta_label": "↑ 58 400",
+      "display": "Digestion poivron",
+      "delta_label": "↑ 46 150",
       "trend": "up"
     },
     {
-      "display": "Azinc immunite",
-      "delta_label": "↑ 55 500",
+      "display": "Heure de sommeil adulte",
+      "delta_label": "↑ 14 000",
       "trend": "up"
     },
     {
-      "display": "Eclipse et sommeil",
-      "delta_label": "↑ 17 500",
+      "display": "Heure de sommeil par age",
+      "delta_label": "↑ 3 950",
       "trend": "up"
     },
     {
-      "display": "Implant apnée du sommeil",
-      "delta_label": "↑ 9 750",
+      "display": "Douleur thoracique non cardiaque",
+      "delta_label": "↑ 100",
       "trend": "up"
     }
   ],
-  "soins_from": "2026-08-29"
+  "soins_from": "2026-08-31"
 }

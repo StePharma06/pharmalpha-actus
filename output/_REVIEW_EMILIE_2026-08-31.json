@@ -1,0 +1,48 @@
+{
+  "generated_at": "2026-08-31T04:12:02.369855+02:00",
+  "run_date": "2026-08-31",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Biosimilaires : 150 millions d'euros sur la table, t'es prêt ?",
+      "resume": "Le mécanisme « tiers payant contre biosimilaire » entre en vigueur en septembre 2026. Le plafond des remises à 20 % pourrait générer 150 à 160 millions d'euros supplémentaires par an pour le réseau. Mais un quart des officines capte déjà la moitié des volumes : la redistribution ne sera pas automatique.",
+      "source": "Le Quotidien du Pharmacien / Le Moniteur des Pharmacies",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/en-paca-un-championnat-pour-reviser-la-substitution-des-biosimilaires",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "pharma_monde",
+      "titre": "FDA approuve Mimrylo : une nouvelle ère pour la polyglobulie de Vaquez",
+      "resume": "La FDA vient de donner son feu vert à Mimrylo, développé par Takeda et Protagonist Therapeutics, pour traiter la polyglobulie de Vaquez. Un mécanisme d'action inédit dans cette indication, qui pourrait redéfinir la prise en charge d'une hémopathie chronique souvent sous-estimée. Ce que ça dit du pipeline hématologie à surveiller de près.",
+      "source": "STAT News",
+      "source_url": "https://www.statnews.com/2026/08/30/fda-approves-mimrylo-takeda-protagonist-treatment-for-polycythemia-vera/",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Apprentissage en officine : le décret du 29 août change la donne sur tes coûts de formation",
+      "resume": "Un décret publié le 29 août 2026 révise les niveaux de prise en charge des contrats d'apprentissage. Pour les officines qui recrutent des étudiants en pharmacie ou des préparateurs en alternance, c'est un levier RH et financier à réévaluer dès la rentrée.",
+      "source": "Pharm'Actus · Décret n° 2026-832 du 29 août 2026 fixant les niveaux de prise en charge des contrats d'apprentissage — Légifrance, IQVIA Pharmastat, Données réseau officinal France, juin 2026 (cité via Pharm'Alpha)",
+      "source_url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054762162",
+      "confidence_score": 0.62,
+      "warnings": [
+        "Le NPEC exact fixé par le décret n° 2026-832 pour le diplôme de préparateur en pharmacie n'est pas disponible dans le texte du résumé fourni : le chiffre de 6 500 € à 9 500 € est basé sur les grilles France Compétences antérieures et doit être vérifié sur Légifrance ou auprès de l'OPCO EP avant publication.",
+        "Les taux de rémunération des apprentis cités (27 % à 100 % du SMIC) correspondent au barème légal 2026 basé sur un SMIC à 11,88 €/h : à vérifier si une revalorisation du SMIC est intervenue entre juillet et août 2026.",
+        "L'affirmation selon laquelle la CPNEFP de la branche officinale n'a pas encore publié ses propres NPEC révisés est une inférence logique (le décret s'applique à défaut) : à confirmer auprès de l'OPCO EP ou de la branche.",
+        "Aucune position syndicale (FSPF, USPO) sur ce décret spécifique n'est disponible dans les sources : le sujet ne repose pas sur une prise de position syndicale, donc la règle d'équilibre syndical ne déclenche pas d'obligation, mais il serait utile de solliciter une réaction syndicale avant publication.",
+        "La fourchette de masse salariale de 35-45 % du CA est un ordre de grandeur sectoriel couramment cité mais non sourcé dans cet article : à citer avec prudence ou à sourcer via un rapport XERFI ou FSPF.",
+        "L'aide exceptionnelle à l'embauche d'apprentis mentionnée en recommandation n°5 : vérifier son existence et ses conditions exactes pour 2026-2027 avant publication (elle a connu plusieurs modifications depuis 2020).",
+        "4 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

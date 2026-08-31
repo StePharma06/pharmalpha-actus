@@ -31,7 +31,7 @@
      l'image n'est decouverte qu'apres execution du JS qui construit les cards
      (le <img> n'existe qu'a l'interieur d'un template literal JS, invisible au
      preload scanner) -> LCP non deterministe, cf. sprint perf 2026-07-27. -->
-<link rel="preload" as="image" href="assets/img_actu_2026_08_29_1.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="assets/img_actu_2026_08_31_1.jpg" fetchpriority="high">
 
 <!-- Space Grotesk — self-hosted WOFF2 (remplace Google Fonts, cf. mission perf/RGPD 2026-08-24) -->
 <link rel="preload" href="/assets/fonts/space-grotesk-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -1737,7 +1737,7 @@ body.pa-has-nav #actusHeader {
 </div>
 
 <!-- EXPRESSION DU JOUR (injectée par update_actus.py à chaque run) -->
-<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Un remède de cheval</h2><p class="expression-corps">Jusqu'au XIXe siècle, les vétérinaires prescrivaient des doses de médicament bien supérieures à celles des humains - les chevaux, lourds et résistants, exigeaient des traitements massifs. Un remède de cheval, c'est donc une médication aussi radicale qu'efficace.</p></aside>
+<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Avoir les tripes</h2><p class="expression-corps">Dans l'Antiquité et le Moyen Âge, le ventre - et surtout les intestins - était considéré comme le siège du courage et de la force vitale. Les haruspices romains lisaient l'avenir dans les entrailles des animaux sacrifiés. Avoir les tripes, c'était posséder cette force viscérale.</p></aside>
 
 <!-- ESPACE PARTENAIRE 1 (entre Expression du jour et Aujourd'hui).
      Statique : reste visible meme si le JS ne s'execute pas. Le 2e emplacement
@@ -1762,12 +1762,12 @@ body.pa-has-nav #actusHeader {
 <div id="articles-container"></div>
 
 <!-- MARQUE_TENDANCE (injectee par le pipeline hebdo, remplacee quotidiennement) -->
-<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">23 aout au 29 aout 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Assurance maladie fatigue chronique</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 348 800</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Pois chiche digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 59 800</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie aout</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 77 300</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Temps de digestion chien</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 58 400</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie figue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 30 550</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Azinc immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 55 500</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Vitamine b₁₂</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 12 350</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Eclipse et sommeil</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 17 500</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Arret tabac fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 10 700</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Implant apnée du sommeil</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 9 750</td></tr>
+<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">25 aout au 31 aout 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Assurance maladie fatigue chronique</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 369 200</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Schoum digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 60 000</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie figue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 31 550</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Digestion poivron</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 46 150</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie au soleil symptômes</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 10 750</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Heure de sommeil adulte</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 14 000</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Arret tabac fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 10 150</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Heure de sommeil par age</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 3 950</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Pharmacie ouverte le 15 août</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 2 500</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Douleur thoracique non cardiaque</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 100</td></tr>
 </tbody></table></div><p style="margin:10px 0 0;font-size:11px;color:#9ca3af;font-style:italic;">Indice de tendance : intensite de hausse Google Trends (non comparable a un volume absolu).</p><p style="margin:12px 0 0;font-size:11px;color:#9ca3af;text-align:right;">Source&nbsp;: Google Trends France (pytrends) &middot; 7 jours glissants</p></section></div>
 
 <!-- ARCHIVES CTA -->
@@ -1930,6 +1930,90 @@ body.pa-has-nav #actusHeader {
 // Mis a jour automatiquement par n8n chaque semaine
 // ============================================================
 const ARTICLES = [
+{
+    id: "actu_2026_08_31_1",
+    date: "2026-08-31",
+    type: "actu",
+    categorie: "pharma_france",
+    titre: "Biosimilaires : 150 millions d'euros sur la table, t'es prêt ?",
+    resume: "Le mécanisme « tiers payant contre biosimilaire » entre en vigueur en septembre 2026. Le plafond des remises à 20 % pourrait générer 150 à 160 millions d'euros supplémentaires par an pour le réseau. Mais un quart des officines capte déjà la moitié des volumes : la redistribution ne sera pas automatique.",
+    source: "Le Quotidien du Pharmacien / Le Moniteur des Pharmacies",
+    source_url: "http://www.lequotidiendupharmacien.fr/exercice-pro/en-paca-un-championnat-pour-reviser-la-substitution-des-biosimilaires",
+    tiktok_url: "",
+    badge_label: "Pharma France",
+    image_url: "assets/img_actu_2026_08_31_1.jpg",
+    tags: ["biosimilaires", "substitution", "tiers-payant", "marge", "officine"]
+  },
+{
+    id: "actu_2026_08_31_2",
+    date: "2026-08-31",
+    type: "actu",
+    categorie: "pharma_monde",
+    titre: "FDA approuve Mimrylo : une nouvelle ère pour la polyglobulie de Vaquez",
+    resume: "La FDA vient de donner son feu vert à Mimrylo, développé par Takeda et Protagonist Therapeutics, pour traiter la polyglobulie de Vaquez. Un mécanisme d'action inédit dans cette indication, qui pourrait redéfinir la prise en charge d'une hémopathie chronique souvent sous-estimée. Ce que ça dit du pipeline hématologie à surveiller de près.",
+    source: "STAT News",
+    source_url: "https://www.statnews.com/2026/08/30/fda-approves-mimrylo-takeda-protagonist-treatment-for-polycythemia-vera/",
+    tiktok_url: "",
+    badge_label: "Pharma Monde",
+    image_url: "assets/img_actu_2026_08_31_2.jpg",
+    tags: ["fda", "hematologie", "maladies-rares", "innovation", "pipeline"]
+  },
+{
+    id: "actu_2026_08_31_3",
+    date: "2026-08-31",
+    type: "actu",
+    categorie: "bonne_nouvelle",
+    titre: "Rentrée et asthme de l'enfant : ton comptoir peut faire la différence",
+    resume: "La première semaine de rentrée scolaire est une période à haut risque pour les enfants asthmatiques. L'oubli ou l'arrêt du traitement de fond pendant les vacances, combiné au retour en collectivité, crée un cocktail explosif. Le pharmacien est souvent le premier professionnel de santé revu à cette période.",
+    source: "Le Moniteur des Pharmacies",
+    source_url: "https://www.lemoniteurdespharmacies.fr/conseils/pathologies/rentree-vigilance-accrue-pour-les-enfants-asthmatiques",
+    tiktok_url: "",
+    badge_label: "La bonne nouvelle",
+    image_url: "assets/img_actu_2026_08_31_3.jpg",
+    tags: ["asthme", "pediatrie", "observance", "rentree", "officine"]
+  },
+{
+    id: "actu_2026_08_31_4",
+    date: "2026-08-31",
+    type: "actu",
+    categorie: "avenir_pharma",
+    titre: "ATTR cardiomyopathie : l'eplontersen marque des points, mais pas pour tout le monde",
+    resume: "Les résultats de l'essai CARDIOTTRansform, présentés au Congrès ESC 2026, montrent qu'eplontersen est efficace dans la cardiomyopathie amyloïde à transthyrétine, à une condition majeure : le patient ne doit pas déjà être sous stabilisateurs de transthyrétine. Un résultat qui repose la question des séquences thérapeutiques en hématologie-cardiologie.",
+    source: "Nature Medicine",
+    source_url: "https://www.nature.com/articles/s41591-026-04670-6",
+    tiktok_url: "",
+    badge_label: "L'avenir de la pharma",
+    image_url: "assets/img_actu_2026_08_31_4.jpg",
+    tags: ["aso", "amylose", "cardiologie", "pipeline", "ema"]
+  },
+{
+    id: "actu_2026_08_31_5",
+    date: "2026-08-31",
+    type: "actu",
+    categorie: "business_officine",
+    titre: "Apprentissage en officine : le décret du 29 août change la donne sur tes coûts de formation",
+    resume: "Un décret publié le 29 août 2026 révise les niveaux de prise en charge des contrats d'apprentissage. Pour les officines qui recrutent des étudiants en pharmacie ou des préparateurs en alternance, c'est un levier RH et financier à réévaluer dès la rentrée.",
+    source: "Pharm'Actus · Décret n° 2026-832 du 29 août 2026 fixant les niveaux de prise en charge des contrats d'apprentissage — Légifrance, IQVIA Pharmastat, Données réseau officinal France, juin 2026 (cité via Pharm'Alpha)",
+    source_url: "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054762162",
+    tiktok_url: "",
+    badge_label: "Business",
+    image_url: "assets/img_actu_2026_08_31_5.jpg",
+    tags: ["apprentissage", "formation", "ressources-humaines", "reglementation"]
+  },
+{
+    id: "lsv_2026_08_31",
+    date: "2026-08-31",
+    type: "lsv",
+    categorie: "lsv",
+    titre: "Le saviez-vous ? On traitait l'infertilité masculine avec des testicules de singe",
+    resume: "Dans les années 1920, un chirurgien franco-russe convainc l'élite mondiale qu'il peut rendre la jeunesse et la virilité grâce à des greffes de tissu testiculaire de singe. Des milliers d'hommes riches et célèbres se ruent sur sa clinique. La médecine n'en revient toujours pas.",
+    source: "Pharm'Alpha",
+    source_url: "",
+    tiktok_url: "",
+    badge_label: "Le Saviez-Vous",
+    image_url: "assets/img_lsv_2026_08_31.jpg",
+    tags: ["histoire", "chirurgie", "transplantation", "immunologie", "serendipite"]
+  },
 {
     id: "actu_2026_08_29_1",
     date: "2026-08-29",
@@ -2545,90 +2629,6 @@ const ARTICLES = [
     badge_label: "Pharma Monde",
     image_url: "assets/img_actu_2026_08_21_2.jpg",
     tags: ["arnm", "vaccin", "melanome", "oncologie", "innovation"]
-  },
-{
-    id: "actu_2026_08_21_3",
-    date: "2026-08-21",
-    type: "actu",
-    categorie: "bonne_nouvelle",
-    titre: "Aide à mourir : la loi est là, le rôle de l'officine se précise enfin",
-    resume: "La loi sur l'aide à mourir est promulguée. Pour les officines, les questions pratiques restent ouvertes : circuit de la substance létale, sécurisation, traçabilité. Une chose est sûre, l'officine sera dans la boucle.",
-    source: "Le Quotidien du Pharmacien",
-    source_url: "http://www.lequotidiendupharmacien.fr/exercice-pro/chikungunya-pourquoi-lepidemie-est-elle-encore-limitee-cette-annee",
-    tiktok_url: "",
-    badge_label: "La bonne nouvelle",
-    image_url: "assets/img_actu_2026_08_21_3.jpg",
-    tags: ["legislation", "officine", "ethique", "dispensation", "fin-de-vie"]
-  },
-{
-    id: "actu_2026_08_21_4",
-    date: "2026-08-21",
-    type: "actu",
-    categorie: "avenir_pharma",
-    titre: "Gène thérapie et maladies ultra-rares : la FDA valide l'approche d'Ultragenyx, un signal fort pour l'Europe",
-    resume: "La FDA vient d'approuver la thérapie génique d'Ultragenyx pour une maladie ultra-rare. Simultanément, Regeneron décroche une autorisation sur une pathologie osseuse rare après 30 ans de recherche. Deux approbations qui marquent un tournant pour les maladies rares et leur accès en Europe.",
-    source: "STAT News",
-    source_url: "https://www.statnews.com/pharmalot/2026/08/20/regeneron-rare-disease-drug-utragenyx-gene-therapy/?utm_campaign=rss",
-    tiktok_url: "",
-    badge_label: "L'avenir de la pharma",
-    image_url: "assets/img_actu_2026_08_21_4.jpg",
-    tags: ["therapie-genique", "maladie-rare", "fda", "innovation", "ema"]
-  },
-{
-    id: "actu_2026_08_21_5",
-    date: "2026-08-21",
-    type: "actu",
-    categorie: "business_officine",
-    titre: "Franchises médicales : le recul du gouvernement, et ce que ça change (vraiment) pour l'officine",
-    resume: "Le doublement des franchises de 100 à 200 € par an est suspendu, mais pas enterré. Pour l'officine, l'enjeu n'est pas la marge directe - c'est le renoncement aux soins que ce signal politique révèle, et la pression qui s'annonce sur la LFSS 2027.",
-    source: "Pharm'Actus · Le Monde Santé — Franchises médicales : le gouvernement renonce au doublement des plafonds dans l'immédiat, France Info Santé — Le gouvernement renonce au doublement des plafonds des franchises médicales dans l'immédiat, mais prévoit malgré tout une augmentation",
-    source_url: "https://www.lemonde.fr/politique/article/2026/08/20/franchises-medicales-le-gouvernement-renonce-au-doublement-des-plafonds-dans-l-immediat-annonce-stephanie-rist_6751296_823448.html",
-    tiktok_url: "",
-    badge_label: "Business",
-    image_url: "assets/img_actu_2026_08_21_5.jpg",
-    tags: ["franchises-medicales", "lfss", "renoncement-aux-soins", "economie-sante"]
-  },
-{
-    id: "lsv_2026_08_21",
-    date: "2026-08-21",
-    type: "lsv",
-    categorie: "lsv",
-    titre: "Le saviez-vous ? On traitait les fractures du crâne avec du beurre rance",
-    resume: "Pendant des siècles, les médecins ont soigné les traumatismes crâniens avec des substances qu'on jetterait aujourd'hui à la poubelle. Le beurre rance, le jaune d'œuf et la cire d'abeille constituaient la neurochirurgie de l'époque. Et pourtant, l'un de ces ingrédients cache un secret que la science moderne vient seulement de valider.",
-    source: "Pharm'Alpha",
-    source_url: "",
-    tiktok_url: "",
-    badge_label: "Le Saviez-Vous",
-    image_url: "assets/img_lsv_2026_08_21.jpg",
-    tags: ["histoire", "chirurgie", "neurologie", "decouverte", "plante"]
-  },
-{
-    id: "actu_2026_08_20_1",
-    date: "2026-08-20",
-    type: "actu",
-    categorie: "pharma_france",
-    titre: "Tavneos rappelé en urgence : voici ce que tu dois faire dès aujourd'hui",
-    resume: "L'AMM de Tavneos (avacopan) est retirée par la Commission européenne depuis le 4 août 2026. Tous les lots sont rappelés immédiatement et 600 patients français sont concernés. Ton rôle au comptoir est central : identifier, contacter, accompagner.",
-    source: "Le Quotidien du Pharmacien",
-    source_url: "http://www.lequotidiendupharmacien.fr/exercice-pro/tavneos-rappel-immediat-de-tous-les-lots",
-    tiktok_url: "",
-    badge_label: "Pharma France",
-    image_url: "assets/img_actu_2026_08_20_1.jpg",
-    tags: ["rappel", "ansm", "amma", "pharmacovigilance", "officine"]
-  },
-{
-    id: "actu_2026_08_20_2",
-    date: "2026-08-20",
-    type: "actu",
-    categorie: "pharma_monde",
-    titre: "Ebola en RDC : 5 000 cas, 2 300 morts, risque de propagation internationale. L'OMS tire la sonnette d'alarme.",
-    resume: "L'épidémie d'Ebola en République démocratique du Congo est loin d'être maîtrisée, selon l'OMS. Près de 5 000 cas et plus de 2 300 décès recensés, avec un risque élevé de propagation internationale. Ce que ça signifie pour la vigilance à l'officine.",
-    source: "France Info Sante",
-    source_url: "https://www.franceinfo.fr/sante/maladie/ebola/l-epidemie-d-ebola-en-republique-democratique-du-congo-est-loin-d-etre-maitrisee-previent-l-oms_8153150.html#xtor=RSS-3-%5Bgeneral%5D",
-    tiktok_url: "",
-    badge_label: "Pharma Monde",
-    image_url: "assets/img_actu_2026_08_20_2.jpg",
-    tags: ["ebola", "oms", "epidemie", "vigilance", "voyage"]
   }
 ];
 
