@@ -1975,10 +1975,13 @@ def generate_articles_json(index_html, full_text_by_id=None):
 
     # Fichier leger dedie au compteur "archives-count" de index.html (sprint perf
     # 2026-07-06) : evite de fetch les ~1 Mo d'articles.json juste pour un total.
+    # Contient AUSSI updated_at depuis le 2026-08-31 : la home de pharmalpha.fr
+    # telechargeait 2,18 Mo (726 articles) juste pour afficher "Mis a jour le X",
+    # avec cache:no-store donc a CHAQUE visite. LCP mobile home 6,3s -> alerte CWV.
     pubs_count = len([a for a in merged if a.get("categorie") != "lsv"])
     count_path = ROOT_DIR / "articles-count.json"
     with open(count_path, "w", encoding="utf-8") as f:
-        json.dump({"count": pubs_count}, f)
+        json.dump({"count": pubs_count, "updated_at": datetime.now(PARIS_TZ).isoformat()}, f)
     print(f"  articles-count.json genere (count: {pubs_count})")
 
 
