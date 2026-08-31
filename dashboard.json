@@ -1,22 +1,46 @@
 {
- "genere_le": "2026-08-30T10:43:28+02:00",
+ "genere_le": "2026-08-31T11:06:23+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1120,
- "nouveaux_7j": 31,
- "nouveaux_cumul": 1113,
+ "abonnes_total": 1127,
+ "nouveaux_7j": 33,
+ "nouveaux_cumul": 1120,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-08-23",
-  "au": "2026-08-30",
-  "delivres": 6059,
-  "ouvertures": 2509,
-  "ouvertures_uniques": 1850,
-  "clics": 2774,
-  "clics_uniques": 516,
-  "taux_ouverture_pct": 30.5,
-  "taux_clic_pct": 8.5,
-  "ctor_pct": 27.9,
+  "du": "2026-08-24",
+  "au": "2026-08-31",
+  "delivres": 7276,
+  "ouvertures": 2948,
+  "ouvertures_uniques": 2186,
+  "clics": 3443,
+  "clics_uniques": 644,
+  "taux_ouverture_pct": 30.0,
+  "taux_clic_pct": 8.9,
+  "ctor_pct": 29.5,
   "top_articles": [
+   {
+    "id": "actu_2026_08_27_2",
+    "titre": "Zostavax est mort, Shingrix protège ton coeur et ton cerveau",
+    "date": "2026-08-27",
+    "categorie": "pharma_monde",
+    "clics": 115,
+    "lecteurs": 66
+   },
+   {
+    "id": "actu_2026_08_28_3",
+    "titre": "VRS : remboursement d'Abrysvo et Beyfortus passe à 65% dès le 31 août",
+    "date": "2026-08-28",
+    "categorie": "bonne_nouvelle",
+    "clics": 105,
+    "lecteurs": 64
+   },
+   {
+    "id": "actu_2026_08_29_1",
+    "titre": "Salaires officine : FO sort les cartes postales, la branche sociale coince",
+    "date": "2026-08-29",
+    "categorie": "pharma_france",
+    "clics": 94,
+    "lecteurs": 57
+   },
    {
     "id": "actu_2026_08_27_1",
     "titre": "Ordonnance falsifiée ? Une faute d'ortho les a trahis",
@@ -26,20 +50,28 @@
     "lecteurs": 55
    },
    {
-    "id": "actu_2026_08_27_2",
-    "titre": "Zostavax est mort, Shingrix protège ton coeur et ton cerveau",
-    "date": "2026-08-27",
-    "categorie": "pharma_monde",
-    "clics": 82,
-    "lecteurs": 48
+    "id": "actu_2026_08_31_1",
+    "titre": "Biosimilaires : 150 millions d'euros sur la table, t'es prêt ?",
+    "date": "2026-08-31",
+    "categorie": "pharma_france",
+    "clics": 70,
+    "lecteurs": 49
    },
    {
-    "id": "actu_2026_08_28_3",
-    "titre": "VRS : remboursement d'Abrysvo et Beyfortus passe à 65% dès le 31 août",
-    "date": "2026-08-28",
+    "id": "actu_2026_08_31_3",
+    "titre": "Rentrée et asthme de l'enfant : ton comptoir peut faire la différence",
+    "date": "2026-08-31",
     "categorie": "bonne_nouvelle",
-    "clics": 76,
+    "clics": 73,
     "lecteurs": 45
+   },
+   {
+    "id": "actu_2026_08_27_4",
+    "titre": "Vaccin ARNm contre le mélanome : Moderna passe un cap décisif",
+    "date": "2026-08-27",
+    "categorie": "avenir_pharma",
+    "clics": 74,
+    "lecteurs": 44
    },
    {
     "id": "actu_2026_08_26_3",
@@ -54,8 +86,8 @@
     "titre": "Siklos 100 mg vs 1000 mg : l'ANSM sonne l'alarme après une erreur grave",
     "date": "2026-08-28",
     "categorie": "pharma_france",
-    "clics": 64,
-    "lecteurs": 42
+    "clics": 65,
+    "lecteurs": 43
    },
    {
     "id": "actu_2026_08_28_2",
@@ -64,52 +96,20 @@
     "categorie": "pharma_monde",
     "clics": 69,
     "lecteurs": 41
-   },
-   {
-    "id": "actu_2026_08_27_3",
-    "titre": "Cancer du pancréas : une première thérapie ciblée FDA approuvée",
-    "date": "2026-08-27",
-    "categorie": "bonne_nouvelle",
-    "clics": 72,
-    "lecteurs": 40
-   },
-   {
-    "id": "actu_2026_08_29_1",
-    "titre": "Salaires officine : FO sort les cartes postales, la branche sociale coince",
-    "date": "2026-08-29",
-    "categorie": "pharma_france",
-    "clics": 70,
-    "lecteurs": 39
-   },
-   {
-    "id": "actu_2026_08_27_4",
-    "titre": "Vaccin ARNm contre le mélanome : Moderna passe un cap décisif",
-    "date": "2026-08-27",
-    "categorie": "avenir_pharma",
-    "clics": 65,
-    "lecteurs": 38
-   },
-   {
-    "id": "actu_2026_08_24_3",
-    "titre": "Vaccination, téléconsultation, bilans : 167 millions d'euros de marge en plus pour les officines",
-    "date": "2026-08-24",
-    "categorie": "bonne_nouvelle",
-    "clics": 63,
-    "lecteurs": 36
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-08-30",
-  "delivres": 92247,
-  "ouvertures": 37189,
-  "ouvertures_uniques": 25706,
-  "clics": 37984,
-  "clics_uniques": 6900,
+  "au": "2026-08-31",
+  "delivres": 93464,
+  "ouvertures": 37696,
+  "ouvertures_uniques": 26092,
+  "clics": 38660,
+  "clics_uniques": 7032,
   "taux_ouverture_pct": 27.9,
   "taux_clic_pct": 7.5,
-  "ctor_pct": 26.8,
+  "ctor_pct": 27.0,
   "top_articles": [
    {
     "id": "actu_2026_06_18_1",
@@ -152,11 +152,27 @@
     "lecteurs": 66
    },
    {
+    "id": "actu_2026_08_27_2",
+    "titre": "Zostavax est mort, Shingrix protège ton coeur et ton cerveau",
+    "date": "2026-08-27",
+    "categorie": "pharma_monde",
+    "clics": 115,
+    "lecteurs": 66
+   },
+   {
+    "id": "actu_2026_08_28_3",
+    "titre": "VRS : remboursement d'Abrysvo et Beyfortus passe à 65% dès le 31 août",
+    "date": "2026-08-28",
+    "categorie": "bonne_nouvelle",
+    "clics": 105,
+    "lecteurs": 64
+   },
+   {
     "id": "actu_2026_07_04_1",
     "titre": "actu_2026_07_04_1",
     "date": "",
     "categorie": "",
-    "clics": 98,
+    "clics": 100,
     "lecteurs": 64
    },
    {
@@ -174,22 +190,6 @@
     "categorie": "",
     "clics": 119,
     "lecteurs": 63
-   },
-   {
-    "id": "actu_2026_06_22_1",
-    "titre": "actu_2026_06_22_1",
-    "date": "",
-    "categorie": "",
-    "clics": 98,
-    "lecteurs": 61
-   },
-   {
-    "id": "actu_2026_06_22_4",
-    "titre": "actu_2026_06_22_4",
-    "date": "",
-    "categorie": "",
-    "clics": 95,
-    "lecteurs": 59
    }
   ]
  }
