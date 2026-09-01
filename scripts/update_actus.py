@@ -1669,7 +1669,7 @@ def update_index_html(new_articles):
         if pexels_cdn_url:
             a["email_image_url"] = pexels_cdn_url
         elif img_url:
-            a["email_image_url"] = f"https://actus.pharmalpha.fr/{img_url}"
+            a["email_image_url"] = f"https://pharmalpha.fr/actus/{img_url}"
         else:
             a["email_image_url"] = ""
         a["id"] = article_id
@@ -2009,7 +2009,7 @@ def _build_article_page_html(article_id: str, titre_raw: str, resume_raw: str, i
 
     # OG image: prefer article image, fallback to default actus OG
     if image_url:
-        og_image = f"https://actus.pharmalpha.fr/{image_url}"
+        og_image = f"https://pharmalpha.fr/actus/{image_url}"
     else:
         og_image = "https://pharmalpha.fr/assets/og-default-actus.png"
 
@@ -2491,7 +2491,7 @@ def build_newsletter_html(articles, custom_intro=None):
 
     def article_url(article):
         aid = article.get("id", "")
-        return f"https://actus.pharmalpha.fr/articles/{aid}.html" if aid else "https://actus.pharmalpha.fr/"
+        return f"https://pharmalpha.fr/actus/articles/{aid}.html" if aid else "https://pharmalpha.fr/actus"
 
     articles_html = ""
     # UN SEUL emplacement partenaire pour l'instant (decision Stephen
@@ -2506,7 +2506,7 @@ def build_newsletter_html(articles, custom_intro=None):
         img_html = ""
         art_url = article_url(a)
         if email_img:
-            full_url = email_img if email_img.startswith("http") else f"https://actus.pharmalpha.fr/{email_img}"
+            full_url = email_img if email_img.startswith("http") else f"https://pharmalpha.fr/actus/{email_img}"
             img_html = f'<tr><td style="padding-top:12px;"><a href="{art_url}"><img src="{full_url}" alt="" width="536" style="width:100%;max-width:536px;height:auto;border-radius:8px;display:block;border:0;" /></a></td></tr>'
         articles_html += f'''
   <tr><td style="padding:{pad} 32px 0;">
@@ -2555,7 +2555,7 @@ def build_newsletter_html(articles, custom_intro=None):
 <tr><td align="center" style="padding:24px 16px;">
 <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
   <tr><td style="background:#ffffff;padding:28px 32px 16px;text-align:center;border-bottom:2px solid #f97316;">
-    <a href="https://actus.pharmalpha.fr/" style="text-decoration:none;display:inline-block;"><img src="https://actus.pharmalpha.fr/assets/logo_pharmactus.png" alt="Pharm'Actus" width="280" style="max-width:280px;height:auto;display:block;border:0;margin:0 auto;" /></a>
+    <a href="https://pharmalpha.fr/actus" style="text-decoration:none;display:inline-block;"><img src="https://pharmalpha.fr/actus/assets/logo_pharmactus.png" alt="Pharm'Actus" width="280" style="max-width:280px;height:auto;display:block;border:0;margin:0 auto;" /></a>
     <div style="margin-top:10px;"><span style="font-size:13px;color:#888;letter-spacing:0.3px;">Chaque matin, retrouve l'actus pharma &agrave; lire entre deux ordo.</span></div>
   </td></tr>
   <tr><td style="background:#fafafa;padding:10px 32px;text-align:center;">
@@ -2575,7 +2575,7 @@ def build_newsletter_html(articles, custom_intro=None):
       <p style="margin:0;font-size:13px;color:#92400e;line-height:1.6;">
         Tu re&ccedil;ois cet email <strong>chaque matin</strong> (lundi&ndash;samedi).
         Tu pr&eacute;f&egrave;res un r&eacute;sum&eacute; hebdo le lundi&nbsp;?
-        &rarr;&nbsp;<a href="https://actus.pharmalpha.fr/preferences?email={{{{ contact.EMAIL }}}}&amp;freq=daily" style="color:#f97316;font-weight:700;text-decoration:none;">Ajuster ma fr&eacute;quence</a>
+        &rarr;&nbsp;<a href="https://pharmalpha.fr/actus/preferences?email={{{{ contact.EMAIL }}}}&amp;freq=daily" style="color:#f97316;font-weight:700;text-decoration:none;">Ajuster ma fr&eacute;quence</a>
       </p>
     </div>
   </td></tr>
@@ -2587,7 +2587,7 @@ def build_newsletter_html(articles, custom_intro=None):
   <tr><td style="padding:28px 32px 0;" align="center">
     <table role="presentation" cellpadding="0" cellspacing="0"><tr>
       <td style="background:#f97316;border-radius:8px;">
-        <a href="https://actus.pharmalpha.fr/" style="display:inline-block;padding:14px 32px;color:#ffffff;font-size:15px;font-weight:700;text-decoration:none;letter-spacing:0.3px;">Lire les articles complets &rarr;</a>
+        <a href="https://pharmalpha.fr/actus" style="display:inline-block;padding:14px 32px;color:#ffffff;font-size:15px;font-weight:700;text-decoration:none;letter-spacing:0.3px;">Lire les articles complets &rarr;</a>
       </td>
     </tr></table>
   </td></tr>
@@ -2596,7 +2596,7 @@ def build_newsletter_html(articles, custom_intro=None):
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
         <tr>
           <td style="vertical-align:top;width:70px;padding-right:16px;">
-            <img src="https://actus.pharmalpha.fr/assets/stephen.png" alt="Stephen ROBERT" width="60" height="60" style="width:60px;height:60px;border-radius:50%;display:block;" />
+            <img src="https://pharmalpha.fr/actus/assets/stephen.png" alt="Stephen ROBERT" width="60" height="60" style="width:60px;height:60px;border-radius:50%;display:block;" />
           </td>
           <td style="vertical-align:top;">
             <p style="margin:0 0 2px;font-size:15px;font-weight:700;color:#1a1a1a;">Stephen ROBERT</p>
@@ -2612,11 +2612,11 @@ def build_newsletter_html(articles, custom_intro=None):
       <p style="margin:0 0 8px;font-size:13px;font-weight:700;color:#f97316;">Pharm'Alpha</p>
       <p style="margin:0;font-size:11px;color:#aaa;line-height:1.5;">
         Tu re&ccedil;ois cet email car tu t'es inscrit(e) sur
-        <a href="https://actus.pharmalpha.fr/" style="color:#888;">Pharm'Actus</a>.<br>
-        <a href="https://actus.pharmalpha.fr/print" style="color:#888;">Imprimer</a> &bull;
-        <a href="https://actus.pharmalpha.fr/preferences?email={{{{ contact.EMAIL }}}}&amp;freq=daily" style="color:#888;">Fr&eacute;quence emails</a> &bull;
+        <a href="https://pharmalpha.fr/actus" style="color:#888;">Pharm'Actus</a>.<br>
+        <a href="https://pharmalpha.fr/actus/print" style="color:#888;">Imprimer</a> &bull;
+        <a href="https://pharmalpha.fr/actus/preferences?email={{{{ contact.EMAIL }}}}&amp;freq=daily" style="color:#888;">Fr&eacute;quence emails</a> &bull;
         <a href="{{{{ unsubscribe }}}}" style="color:#888;">Se d&eacute;sinscrire</a> &bull;
-        <a href="https://actus.pharmalpha.fr/" style="color:#888;">Voir en ligne</a>
+        <a href="https://pharmalpha.fr/actus" style="color:#888;">Voir en ligne</a>
       </p>
       <p style="margin:12px 0 0;font-size:10px;color:#bbb;line-height:1.5;font-style:italic;">
         Pharm'Actus est produit quotidiennement avec l'assistance d'outils d'intelligence artificielle,

@@ -70,7 +70,7 @@ def mark_linkedin_sent():
 
 
 LOOKBACK_DAYS = 7
-SITE_URL = "https://actus.pharmalpha.fr"
+SITE_URL = "https://pharmalpha.fr/actus"
 
 BREVO_API_BASE = "https://api.brevo.com/v3"
 SENDER_EMAIL = "actus@pharmalpha.fr"
@@ -379,7 +379,7 @@ Retourne le markdown complet ci-dessous. Le format est aere, SANS separateurs �
 
 Voici l'essentiel des 7 derniers jours, et pourquoi ca compte pour toi. Cette newsletter reprend les actus principales de la semaine derniere.
 
-Pour garder un oeil sur ce type d'actus tous les jours, abonnez-vous sur https://actus.pharmalpha.fr/.
+Pour garder un oeil sur ce type d'actus tous les jours, abonnez-vous sur https://pharmalpha.fr/actus/.
 
 Bonne lecture !
 ```
@@ -477,7 +477,7 @@ fonctionne pas : l'adresse est donc ecrite en clair, c'est voulu.
 6. Pas d'emoji 📰 🔗 devant les liens : juste "Lire sur Pharm'Actus :" et "Source :".
 7. L.5122 : ZERO merch sur Rx.
 8. Le bloc 1 (intro) DOIT inclure litteralement la phrase :
-   "Cette newsletter reprend les actus principales de la semaine derniere. Pour garder un oeil sur ce type d'actus tous les jours, abonnez-vous sur https://actus.pharmalpha.fr/. Bonne lecture !"
+   "Cette newsletter reprend les actus principales de la semaine derniere. Pour garder un oeil sur ce type d'actus tous les jours, abonnez-vous sur https://pharmalpha.fr/actus/. Bonne lecture !"
 
 Retourne UNIQUEMENT le markdown complet, rien d'autre."""
 
