@@ -1,29 +1,29 @@
 {
- "genere_le": "2026-08-31T11:06:23+02:00",
+ "genere_le": "2026-09-01T10:08:29+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1127,
- "nouveaux_7j": 33,
- "nouveaux_cumul": 1120,
+ "abonnes_total": 1130,
+ "nouveaux_7j": 31,
+ "nouveaux_cumul": 1123,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-08-24",
-  "au": "2026-08-31",
-  "delivres": 7276,
-  "ouvertures": 2948,
-  "ouvertures_uniques": 2186,
-  "clics": 3443,
-  "clics_uniques": 644,
-  "taux_ouverture_pct": 30.0,
-  "taux_clic_pct": 8.9,
-  "ctor_pct": 29.5,
+  "du": "2026-08-25",
+  "au": "2026-09-01",
+  "delivres": 7099,
+  "ouvertures": 2805,
+  "ouvertures_uniques": 2084,
+  "clics": 3519,
+  "clics_uniques": 640,
+  "taux_ouverture_pct": 29.4,
+  "taux_clic_pct": 9.0,
+  "ctor_pct": 30.7,
   "top_articles": [
    {
     "id": "actu_2026_08_27_2",
     "titre": "Zostavax est mort, Shingrix protège ton coeur et ton cerveau",
     "date": "2026-08-27",
     "categorie": "pharma_monde",
-    "clics": 115,
-    "lecteurs": 66
+    "clics": 118,
+    "lecteurs": 68
    },
    {
     "id": "actu_2026_08_28_3",
@@ -34,12 +34,28 @@
     "lecteurs": 64
    },
    {
+    "id": "actu_2026_09_01_1",
+    "titre": "Tiers payant contre biosimilaire : ce qui change dès aujourd'hui au comptoir",
+    "date": "2026-09-01",
+    "categorie": "pharma_france",
+    "clics": 88,
+    "lecteurs": 62
+   },
+   {
     "id": "actu_2026_08_29_1",
     "titre": "Salaires officine : FO sort les cartes postales, la branche sociale coince",
     "date": "2026-08-29",
     "categorie": "pharma_france",
-    "clics": 94,
-    "lecteurs": 57
+    "clics": 96,
+    "lecteurs": 58
+   },
+   {
+    "id": "actu_2026_09_01_2",
+    "titre": "Trump négocie les prix des médicaments : 9 labos de plus au pied du mur",
+    "date": "2026-09-01",
+    "categorie": "pharma_monde",
+    "clics": 93,
+    "lecteurs": 56
    },
    {
     "id": "actu_2026_08_27_1",
@@ -54,16 +70,24 @@
     "titre": "Biosimilaires : 150 millions d'euros sur la table, t'es prêt ?",
     "date": "2026-08-31",
     "categorie": "pharma_france",
-    "clics": 70,
-    "lecteurs": 49
+    "clics": 74,
+    "lecteurs": 53
    },
    {
     "id": "actu_2026_08_31_3",
     "titre": "Rentrée et asthme de l'enfant : ton comptoir peut faire la différence",
     "date": "2026-08-31",
     "categorie": "bonne_nouvelle",
-    "clics": 73,
-    "lecteurs": 45
+    "clics": 76,
+    "lecteurs": 48
+   },
+   {
+    "id": "actu_2026_09_01_4",
+    "titre": "Hormone de grossesse et coeur : et si la relaxine ouvrait une nouvelle voie cardio ?",
+    "date": "2026-09-01",
+    "categorie": "avenir_pharma",
+    "clics": 76,
+    "lecteurs": 44
    },
    {
     "id": "actu_2026_08_27_4",
@@ -72,43 +96,19 @@
     "categorie": "avenir_pharma",
     "clics": 74,
     "lecteurs": 44
-   },
-   {
-    "id": "actu_2026_08_26_3",
-    "titre": "Culottes menstruelles remboursables : le 1er octobre, ça démarre en officine",
-    "date": "2026-08-26",
-    "categorie": "bonne_nouvelle",
-    "clics": 70,
-    "lecteurs": 44
-   },
-   {
-    "id": "actu_2026_08_28_1",
-    "titre": "Siklos 100 mg vs 1000 mg : l'ANSM sonne l'alarme après une erreur grave",
-    "date": "2026-08-28",
-    "categorie": "pharma_france",
-    "clics": 65,
-    "lecteurs": 43
-   },
-   {
-    "id": "actu_2026_08_28_2",
-    "titre": "Cancer du pancréas : la FDA approuve le premier traitement ciblant KRAS",
-    "date": "2026-08-28",
-    "categorie": "pharma_monde",
-    "clics": 69,
-    "lecteurs": 41
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-08-31",
-  "delivres": 93464,
-  "ouvertures": 37696,
-  "ouvertures_uniques": 26092,
-  "clics": 38660,
-  "clics_uniques": 7032,
+  "au": "2026-09-01",
+  "delivres": 94459,
+  "ouvertures": 38120,
+  "ouvertures_uniques": 26401,
+  "clics": 39236,
+  "clics_uniques": 7140,
   "taux_ouverture_pct": 27.9,
-  "taux_clic_pct": 7.5,
+  "taux_clic_pct": 7.6,
   "ctor_pct": 27.0,
   "top_articles": [
    {
@@ -136,6 +136,14 @@
     "lecteurs": 72
    },
    {
+    "id": "actu_2026_08_27_2",
+    "titre": "Zostavax est mort, Shingrix protège ton coeur et ton cerveau",
+    "date": "2026-08-27",
+    "categorie": "pharma_monde",
+    "clics": 118,
+    "lecteurs": 68
+   },
+   {
     "id": "actu_2026_06_23_2",
     "titre": "actu_2026_06_23_2",
     "date": "",
@@ -149,14 +157,6 @@
     "date": "",
     "categorie": "",
     "clics": 122,
-    "lecteurs": 66
-   },
-   {
-    "id": "actu_2026_08_27_2",
-    "titre": "Zostavax est mort, Shingrix protège ton coeur et ton cerveau",
-    "date": "2026-08-27",
-    "categorie": "pharma_monde",
-    "clics": 115,
     "lecteurs": 66
    },
    {
