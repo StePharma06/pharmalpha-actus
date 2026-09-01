@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-31",
-  "window_label": "25 aout au 31 aout 2026",
+  "generated_at": "2026-09-01",
+  "window_label": "26 aout au 1 sept. 2026",
   "has_history": true,
   "delta_source": "pytrends_rising",
   "pathologies": [
@@ -32,33 +32,33 @@
   ],
   "soins": [
     {
-      "display": "Schoum digestion",
-      "delta_label": "↑ 60 000",
+      "display": "Lentilles digestion",
+      "delta_label": "↑ 62 550",
       "trend": "up"
     },
     {
-      "display": "Digestion poivron",
-      "delta_label": "↑ 46 150",
+      "display": "Quinoa digestion",
+      "delta_label": "↑ 52 700",
       "trend": "up"
     },
     {
-      "display": "Heure de sommeil adulte",
-      "delta_label": "↑ 14 000",
+      "display": "Azinc immunite",
+      "delta_label": "↑ 29 900",
       "trend": "up"
     },
     {
-      "display": "Heure de sommeil par age",
-      "delta_label": "↑ 3 950",
+      "display": "Tout pour un bon sommeil 7 lettres",
+      "delta_label": "↑ 8 350",
       "trend": "up"
     },
     {
-      "display": "Douleur thoracique non cardiaque",
-      "delta_label": "↑ 100",
+      "display": "Opérations spéciales lioness la douleur ",
+      "delta_label": "↑ 2 750",
       "trend": "up"
     }
   ],
   "pathologies_stale": false,
-  "pathologies_from": "2026-08-31",
+  "pathologies_from": "2026-09-01",
   "soins_stale": false,
-  "soins_from": "2026-08-31"
+  "soins_from": "2026-09-01"
 }

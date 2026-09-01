@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-09-01T04:12:16.258160+02:00",
+  "run_date": "2026-09-01",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_monde",
+      "titre": "Trump négocie les prix des médicaments : 9 labos de plus au pied du mur",
+      "resume": "Le président américain vient d'annoncer une deuxième vague d'accords sur les prix avec 9 nouveaux laboratoires. La politique du \"Most Favored Nation\" s'accélère outre-Atlantique. Et pour nous en France, ça mérite qu'on lève le nez du comptoir.",
+      "source": "STAT News",
+      "source_url": "https://www.statnews.com/2026/08/31/trump-most-favored-nation-drug-pricing-new-round-price-cuts-announced/?utm_campaign=rss",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "PERIMED : 32 000 boîtes analysées, et si le gaspillage médicamenteux était ton prochain levier business ?",
+      "resume": "L'étude PERIMED (ANSM / Assurance maladie / Cyclamed, 2025) a passé au crible plus de 32 000 unités de médicaments non utilisés. Ce que révèle cette radiographie du gaspillage devrait changer ta façon d'aborder l'entretien de dispensation.",
+      "source": "Pharm'Actus · Le Moniteur des Pharmacies — Médicaments : la fabrique du gaspillage (étude PERIMED), Cyclamed — Rapport d'activité 2022-2023",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/medicaments-la-fabrique-du-gaspillage",
+      "confidence_score": 0.62,
+      "warnings": [
+        "Le résumé de l'article source ne détaille pas les résultats chiffrés de PERIMED (classes thérapeutiques les plus gaspillées, taux par catégorie) : l'analyse s'appuie sur des données antérieures (Cyclamed 2022, IRDES) et non sur les résultats publiés de PERIMED — à vérifier à la publication intégrale.",
+        "Le chiffre '500 millions à 1 milliard d'euros' de gaspillage annuel est une estimation AM souvent citée mais dont la source primaire exacte (rapport, année) n'a pas pu être vérifiée dans les sources disponibles : à confirmer avant publication.",
+        "La rémunération des entretiens pharmaceutiques (30 à 60 €) est donnée en fourchette pour refléter la diversité des pathologies concernées (anticoagulants, asthme, insuffisance cardiaque) selon les avenants conventionnels : vérifier les montants exacts en vigueur à date si l'article cite une pathologie précise.",
+        "Le chiffre '15 000 tonnes de MNU collectées par an' est attribué à Cyclamed 2023 : vérifier la donnée exacte sur le site Cyclamed avant publication.",
+        "Aucun syndicat de pharmaciens (FSPF, USPO) n'ayant pris de position publique spécifique sur PERIMED à ce jour, la règle d'équilibre syndical ne s'applique pas — mais à surveiller si des réactions émergent à la publication intégrale de l'étude.",
+        "6 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}
