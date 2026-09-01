@@ -411,6 +411,61 @@ NEW_ARTICLES_PER_RUN = 4  # 1 pharma_france + 1 pharma_monde + 1 bonne_nouvelle 
 # + 1 business_officine (generation separee en format long) + 1 LSV
 
 
+GARDE_FOUS_OFFICINE = """=== REGLE TEMPORALITE & FIDELITE SANITAIRE (CRITIQUE - YMYL) ===
+- NE JAMAIS inventer ni inferer QUAND un evenement se produit. N'ecris JAMAIS qu'un fait a lieu a une date/mois/saison precis ("en juin", "cet ete", "ca demarre maintenant", "precoce", "atypique") si la source ne l'affirme PAS EXPLICITEMENT.
+- Les evenements saisonniers (epidemie de grippe, bronchiolite, gastro, campagne de vaccination, allergies polliniques) suivent un calendrier connu : une epidemie de grippe demarre EN HIVER, pas en juin. Si un titre de source decrit un tel evenement sans annee/date claire, NE LE TRAITE PAS comme une actu du jour et ne fabrique JAMAIS un angle "inedit/precoce/atypique".
+- Si la date affichee d'un article te parait INCOHERENTE avec son contenu (ex: une news hivernale datee d'un jour d'ete), NE LE SELECTIONNE PAS : choisis un autre article. La date "Date: AAAA-MM-JJ" fournie peut etre erronee, ne t'y fie pas aveuglement.
+- CONTENU SANTE (YMYL) : reste STRICTEMENT fidele a la source. N'amplifie aucune affirmation epidemiologique, ne cree pas de caractere "exceptionnel/alarmant/historique" absent de la source. La credibilite medicale de Stephen (Docteur en Pharmacie) est engagee a chaque article.
+- PERIMETRE D'EXERCICE DU PHARMACIEN (CRITIQUE) : n'affirme JAMAIS qu'un pharmacien d'officine peut realiser un ACTE (depistage/TROD, vaccination, prescription, entretien remunere) sans certitude que c'est autorise en DROIT COMMUN national. Distingue toujours VENDRE/delivrer un produit (ex: autotest VIH, que le patient realise lui-meme) de REALISER l'acte (le depistage execute par le pharmacien). Une experimentation locale (CPTS, un departement, un protocole ARS) NE VAUT PAS autorisation nationale : presente-la comme experimentation, jamais comme la regle. N'invente JAMAIS un honoraire/remuneration conventionnelle ("tu peux facturer X") sans certitude qu'il existe dans la convention pharmaceutique. En cas de doute sur une mission, un acte autorise ou une remuneration officinale : reste factuel et prudent, n'affirme rien que la source ne garantit. PIEGE INVERSE (4 corrections lecteurs, TOUJOURS le meme) : quand un changement reglementaire semble RESTREINDRE l'acces (reclassement liste I/II, ordonnance rendue obligatoire, nouvelle contrainte), NE conclus JAMAIS a une "limitation d'acces" ni a un "patient renvoye chez son medecin" AVANT d'avoir etabli explicitement si le PHARMACIEN lui-meme conserve ou acquiert le droit de PRESCRIRE et/ou ADMINISTRER. Exemple concret : vaccins grippe classes liste I en 2026 -> le pharmacien FORME reste prescripteur ET vaccinateur pour les 11 ans et plus (Arrete + Decret du 08/08/2023), donc il redige l'ordonnance au comptoir et vaccine ; un classement liste I = tracabilite/encadrement, PAS fermeture d'acces. Precise toujours le perimetre exact (populations concernees) et le seul frein residuel reel (ex: moins de 11 ans, pharmacien non forme).
+- AVIS / FEU VERT SCIENTIFIQUE != TEXTE APPLICABLE (correction lecteur denosumab 07/2026) : un AVIS d'agence (ANSM non-opposition, avis HAS, recommandation, position syndicale) ou toute etape preparatoire NE REND PAS une mesure applicable. Une substitution biosimilaire, un nouvel acte, une nouvelle prise en charge ne deviennent EFFECTIFS qu'a la parution de l'ACTE OPPOSABLE (arrete au JORF, decret, avenant conventionnel publie). Tant que l'acte n'est pas paru, ecris "l'ANSM a rendu un avis favorable, effectif des la parution de l'arrete", JAMAIS "c'est desormais substituable/autorise/rembourse". Exemple : denosumab 60/120 mg, avis ANSM du 10/07/2026 = feu vert scientifique, mais PAS encore inscrit par arrete sur la liste L.5125-23-2 (11 groupes) -> PAS encore substituable en officine. Ne confonds jamais "la voie est ouverte" avec "c'est en vigueur", ni "avis" avec "arrete".
+
+=== CHECKLIST FAITS OFFICINAUX SENSIBLES (OBLIGATOIRE avant toute affirmation) ===
+Avant toute affirmation sur le cadre officinal francais, verifier mentalement :
+- Qui paie quoi ? (Assurance Maladie / officine / patient / Etat) La reponse n'est JAMAIS symetrique entre medecins et pharmaciens.
+- Qui remunere qui ? (forfait, remuneration a l'acte, dotation, honoraire de dispensation, majoration de coordination) Ces regimes sont distincts par profession.
+- Quel est le statut conventionnel exact ? (avenant convention pharmacien, LFSS article precise, decret en Conseil d'Etat, arrete tarifaire) Citer l'acte reglementaire.
+- NE JAMAIS inferer par symetrie medecin<->pharmacien : leurs statuts conventionnels, leurs modes de financement et leurs obligations sont FONDAMENTALEMENT DIFFERENTS.
+  Exemple contre-indique : si un TROD ou une mission est gratuit pour le medecin (finance par l'AM dans son forfait), ce n'est PAS automatiquement gratuit pour l'officine (qui peut acheter les kits a sa charge ou etre rembourse differemment). Verifier la source originale.
+- En cas de doute sur un fait chiffre, un financement ou un statut conventionnel : CITER TEXTUELLEMENT la source au lieu de reformuler. Ne pas paraphraser ce qu'on ne peut pas verifier.
+
+REGLES DE SOURCES (STRICTES) :
+1. REGLE ABSOLUE : JAMAIS 2 articles du meme media dans une meme journee. 1 seul Moniteur max, 1 seul Quotidien du Pharmacien max, etc. Si Pharma France choisit Moniteur, aucune autre categorie ne peut piocher dans Moniteur.
+2. ALTERNANCE OBLIGATOIRE : Le Moniteur et Le Quotidien du Pharmacien sont des references mais NE DOIVENT PAS etre utilises TOUS les jours. Sur une semaine, varie au maximum. Alterne avec : Egora, HAS, Ordre des Pharmaciens, LEEM, Le Pharmacien de France, VIDAL, Sciences et Avenir, Pourquoi Docteur, APMnews, The Conversation, INSERM, ANSM, Medscape FR, FSPF, USPO, UPGF, Caducee.net, Sante Publique France, LegiRSS Pharmacie, ActuLabo, etc. Priorite aux sources nouvelles si leur actu du jour est de qualite egale.
+3. Pour Pharma Monde : UNIQUEMENT des sources ETRANGERES (Reuters, STAT News, Pharmaceutical Journal, Fierce Pharma, FierceBiotech, Endpoints News, European Pharmaceutical Review, Pharmacy Times, MedCity News, Pharmaphorum, PharmaTimes UK, EMA News, Pharmaceutical Executive, Nature Medicine, BioPharma Dive). Traduis en francais. Si aucune actu internationale claire dans les articles fournis, prends quand meme un article etranger et adapte-le au contexte francais.
+
+=== REGLE FINANCES & CALCULS OFFICINE (CRITIQUE - une erreur ici tue la credibilite) ===
+Les lecteurs sont des pharmaciens titulaires : ils connaissent leurs marges par coeur et refont le calcul en 10 secondes. Incident reel 07/2026 : un article affirmait "paracetamol a 1,50 EUR de PFHT, marge 26% en bas de MDL, soit 39 centimes, perte 3 centimes par boite" -> PFHT reel 0,76 EUR, taux de premiere tranche 10%, marge reelle 7,6 centimes, perte reelle 1 centime. Signalement d'un pharmacien en colere.
+- N'INVENTE JAMAIS un prix (PFHT, PPTTC), un taux de marge, une borne de tranche, un volume de boites. Si la source ne donne pas le chiffre, NE FAIS PAS LE CALCUL : decris l'impact qualitativement, sans chiffrer.
+- MARGE DEGRESSIVE LISSEE (MDL) : ne cite un taux QUE si tu as la tranche ET le taux exacts du bareme EN VIGUEUR. Bareme actuel (arrete du 04/08/1987 modifie le 12/11/2018, en vigueur depuis 2020) : 0 a 1,91 EUR = 10% ; 1,92 a 22,90 EUR = 7% ; 22,91 a 150 EUR = 5,5% ; 150,01 a 1930 EUR = 5% ; au-dela = 0%. Le taux de 26,1% sur 0 a 22,90 EUR est ABROGE depuis 2018 : ne l'utilise JAMAIS.
+- La remuneration officinale sur une boite remboursee = MDL + HONORAIRE DE DISPENSATION (1,02 EUR TTC a la boite, insensible au PFHT). Ne presente JAMAIS la seule MDL comme "ce que gagne le pharmacien" : ca surevalue enormement l'impact d'une variation de PFHT.
+- Les remises laboratoires s'appliquent sur les ACHATS (PFHT), JAMAIS sur le chiffre d'affaires.
+- CHIFFRES STRUCTURELS DU RESEAU (a citer TELS QUELS, ne jamais arrondir ni reinventer d'un article a l'autre) : **19 274 officines** en France (IQVIA Pharmastat, juin 2026) ; panier moyen comptoir 17,66 EUR ; CA moyen par officine 1,28 MEUR. Incident 08/2026 : le nombre d'officines variait selon les articles (21 000 cite 24 fois, 22 000, 21 400, 20 931, 20 614, 19 400...), alors que c'est une donnee stable et connue par coeur des lecteurs. Si tu n'es pas sur d'un chiffre structurel, ecris-le qualitativement plutot que d'en inventer un.
+- SANTE PUBLIQUE, ordres de grandeur verifies : 17 millions d'hypertendus en France dont plus de 6 millions l'ignorent (Sante publique France 2023) ; environ 140 000 deces cardio-neuro-vasculaires par an. Ne pas confondre "hypertendus non diagnostiques" (6 M) et "hypertendus traites mais non controles" (environ 4 M) : ce sont deux populations differentes.
+- ORGANISMES DE FORMATION : les OPCA n'existent PLUS depuis avril 2019, remplaces par les OPCO (pour l'officine : OPCO EP). N'ecris jamais "OPCA".
+- Tout chiffre agrege (boites vendues en France, economies attendues, perte par officine, impact reseau) doit venir de la SOURCE. N'extrapole JAMAIS un "impact par officine" a partir d'un volume supposé : si le volume n'est pas source, ne publie pas de total. Et ne melange jamais deux bases de volume differentes dans le meme raisonnement.
+- Avant de dramatiser un impact ("ca coute cher aux officines"), verifie l'ordre de grandeur REEL par rapport a la remuneration totale. Un titre alarmiste sur un impact de 1 centime detruit la credibilite.
+
+=== MISSIONS OFFICINALES REMUNEREES : LISTE FERMEE (2 corrections de la MEME lectrice) ===
+Une pharmacienne tabacologue nous a corriges DEUX FOIS sur le meme point : un article a invente un
+"entretien sevrage tabagique remunere" (30/15 EUR en juin 2026), puis un autre a recidive en aout
+("honoraire issu de l'avenant 22", "finance a 100% par l'Assurance Maladie", "declarer l'activite a
+la CNAM"). Tout cela est FAUX.
+- Les entretiens pharmaceutiques REMUNERES au niveau national forment une LISTE FERMEE : AVK/AOD,
+  asthme, anticancereux oraux, et le bilan partage de medication. Le sevrage tabagique N'EN FAIT
+  PAS PARTIE.
+- Quand une remuneration du sevrage tabagique existe, elle vient d'une action REGIONALE (URPS, ARS)
+  ou d'une experimentation, jamais de la convention nationale. Exemple reel : 60 EUR par dossier en
+  PACA. Ne generalise JAMAIS un dispositif regional en dispositif national.
+- N'invente JAMAIS un numero d'avenant conventionnel. L'avenant 22 porte sur l'efficience et la
+  substitution des generiques, pas sur le tabac. N'invente jamais non plus une "declaration
+  d'activite a la CNAM" ni un financement "a 100% par l'Assurance Maladie".
+- REGLE GENERALE : avant d'ecrire qu'une mission officinale est remuneree, il faut pouvoir citer le
+  texte exact. Sinon, ecris que la mission existe mais n'est pas remuneree nationalement, ou n'en
+  parle pas. Les lecteurs sont des titulaires : ils verifient.
+
+"""
+
+
 # ── RSS ──────────────────────────────────────────────────────────────
 
 def fetch_rss_articles():
@@ -587,27 +642,7 @@ Selectionne et redige EXACTEMENT {target_count} articles dans les categories ci-
 
 NE PAS generer d'article categorie "sante" (cette categorie est desactivee). NE PAS generer d'article "business" (genere separement en format analytique long).
 
-=== CHECKLIST FAITS OFFICINAUX SENSIBLES (OBLIGATOIRE avant toute affirmation) ===
-Avant toute affirmation sur le cadre officinal francais, verifier mentalement :
-- Qui paie quoi ? (Assurance Maladie / officine / patient / Etat) La reponse n'est JAMAIS symetrique entre medecins et pharmaciens.
-- Qui remunere qui ? (forfait, remuneration a l'acte, dotation, honoraire de dispensation, majoration de coordination) Ces regimes sont distincts par profession.
-- Quel est le statut conventionnel exact ? (avenant convention pharmacien, LFSS article precise, decret en Conseil d'Etat, arrete tarifaire) Citer l'acte reglementaire.
-- NE JAMAIS inferer par symetrie medecin<->pharmacien : leurs statuts conventionnels, leurs modes de financement et leurs obligations sont FONDAMENTALEMENT DIFFERENTS.
-  Exemple contre-indique : si un TROD ou une mission est gratuit pour le medecin (finance par l'AM dans son forfait), ce n'est PAS automatiquement gratuit pour l'officine (qui peut acheter les kits a sa charge ou etre rembourse differemment). Verifier la source originale.
-- En cas de doute sur un fait chiffre, un financement ou un statut conventionnel : CITER TEXTUELLEMENT la source au lieu de reformuler. Ne pas paraphraser ce qu'on ne peut pas verifier.
-
-REGLES DE SOURCES (STRICTES) :
-1. REGLE ABSOLUE : JAMAIS 2 articles du meme media dans une meme journee. 1 seul Moniteur max, 1 seul Quotidien du Pharmacien max, etc. Si Pharma France choisit Moniteur, aucune autre categorie ne peut piocher dans Moniteur.
-2. ALTERNANCE OBLIGATOIRE : Le Moniteur et Le Quotidien du Pharmacien sont des references mais NE DOIVENT PAS etre utilises TOUS les jours. Sur une semaine, varie au maximum. Alterne avec : Egora, HAS, Ordre des Pharmaciens, LEEM, Le Pharmacien de France, VIDAL, Sciences et Avenir, Pourquoi Docteur, APMnews, The Conversation, INSERM, ANSM, Medscape FR, FSPF, USPO, UPGF, Caducee.net, Sante Publique France, LegiRSS Pharmacie, ActuLabo, etc. Priorite aux sources nouvelles si leur actu du jour est de qualite egale.
-3. Pour Pharma Monde : UNIQUEMENT des sources ETRANGERES (Reuters, STAT News, Pharmaceutical Journal, Fierce Pharma, FierceBiotech, Endpoints News, European Pharmaceutical Review, Pharmacy Times, MedCity News, Pharmaphorum, PharmaTimes UK, EMA News, Pharmaceutical Executive, Nature Medicine, BioPharma Dive). Traduis en francais. Si aucune actu internationale claire dans les articles fournis, prends quand meme un article etranger et adapte-le au contexte francais.
-
-=== REGLE TEMPORALITE & FIDELITE SANITAIRE (CRITIQUE - YMYL) ===
-- NE JAMAIS inventer ni inferer QUAND un evenement se produit. N'ecris JAMAIS qu'un fait a lieu a une date/mois/saison precis ("en juin", "cet ete", "ca demarre maintenant", "precoce", "atypique") si la source ne l'affirme PAS EXPLICITEMENT.
-- Les evenements saisonniers (epidemie de grippe, bronchiolite, gastro, campagne de vaccination, allergies polliniques) suivent un calendrier connu : une epidemie de grippe demarre EN HIVER, pas en juin. Si un titre de source decrit un tel evenement sans annee/date claire, NE LE TRAITE PAS comme une actu du jour et ne fabrique JAMAIS un angle "inedit/precoce/atypique".
-- Si la date affichee d'un article te parait INCOHERENTE avec son contenu (ex: une news hivernale datee d'un jour d'ete), NE LE SELECTIONNE PAS : choisis un autre article. La date "Date: AAAA-MM-JJ" fournie peut etre erronee, ne t'y fie pas aveuglement.
-- CONTENU SANTE (YMYL) : reste STRICTEMENT fidele a la source. N'amplifie aucune affirmation epidemiologique, ne cree pas de caractere "exceptionnel/alarmant/historique" absent de la source. La credibilite medicale de Stephen (Docteur en Pharmacie) est engagee a chaque article.
-- PERIMETRE D'EXERCICE DU PHARMACIEN (CRITIQUE) : n'affirme JAMAIS qu'un pharmacien d'officine peut realiser un ACTE (depistage/TROD, vaccination, prescription, entretien remunere) sans certitude que c'est autorise en DROIT COMMUN national. Distingue toujours VENDRE/delivrer un produit (ex: autotest VIH, que le patient realise lui-meme) de REALISER l'acte (le depistage execute par le pharmacien). Une experimentation locale (CPTS, un departement, un protocole ARS) NE VAUT PAS autorisation nationale : presente-la comme experimentation, jamais comme la regle. N'invente JAMAIS un honoraire/remuneration conventionnelle ("tu peux facturer X") sans certitude qu'il existe dans la convention pharmaceutique. En cas de doute sur une mission, un acte autorise ou une remuneration officinale : reste factuel et prudent, n'affirme rien que la source ne garantit. PIEGE INVERSE (4 corrections lecteurs, TOUJOURS le meme) : quand un changement reglementaire semble RESTREINDRE l'acces (reclassement liste I/II, ordonnance rendue obligatoire, nouvelle contrainte), NE conclus JAMAIS a une "limitation d'acces" ni a un "patient renvoye chez son medecin" AVANT d'avoir etabli explicitement si le PHARMACIEN lui-meme conserve ou acquiert le droit de PRESCRIRE et/ou ADMINISTRER. Exemple concret : vaccins grippe classes liste I en 2026 -> le pharmacien FORME reste prescripteur ET vaccinateur pour les 11 ans et plus (Arrete + Decret du 08/08/2023), donc il redige l'ordonnance au comptoir et vaccine ; un classement liste I = tracabilite/encadrement, PAS fermeture d'acces. Precise toujours le perimetre exact (populations concernees) et le seul frein residuel reel (ex: moins de 11 ans, pharmacien non forme).
-- AVIS / FEU VERT SCIENTIFIQUE != TEXTE APPLICABLE (correction lecteur denosumab 07/2026) : un AVIS d'agence (ANSM non-opposition, avis HAS, recommandation, position syndicale) ou toute etape preparatoire NE REND PAS une mesure applicable. Une substitution biosimilaire, un nouvel acte, une nouvelle prise en charge ne deviennent EFFECTIFS qu'a la parution de l'ACTE OPPOSABLE (arrete au JORF, decret, avenant conventionnel publie). Tant que l'acte n'est pas paru, ecris "l'ANSM a rendu un avis favorable, effectif des la parution de l'arrete", JAMAIS "c'est desormais substituable/autorise/rembourse". Exemple : denosumab 60/120 mg, avis ANSM du 10/07/2026 = feu vert scientifique, mais PAS encore inscrit par arrete sur la liste L.5125-23-2 (11 groupes) -> PAS encore substituable en officine. Ne confonds jamais "la voie est ouverte" avec "c'est en vigueur", ni "avis" avec "arrete".
+{GARDE_FOUS_OFFICINE}
 
 === EQUILIBRE SYNDICAL (OBLIGATOIRE si la source est un syndicat) ===
 Si l'article repose sur la prise de position d'un syndicat de pharmaciens (FSPF, USPO, UPGF ou autre), tu DOIS situer cette position par rapport aux AUTRES grands syndicats representatifs, pour montrer que TOUS les avis sont scrutes quel que soit l'horizon politique. Regles :
@@ -1017,25 +1052,7 @@ C'est CE qui fait que les pharmaciens s'abonnent et partagent. Il NE DOIT JAMAIS
 Si aucun angle business evident n'emerge de l'actu, extrais la dimension business d'un sujet reglementaire, economique ou structurel.
 Donne-toi a fond sur cet article : chiffres precis, comparaisons, ton consultant.
 
-=== CHECKLIST FAITS OFFICINAUX SENSIBLES (OBLIGATOIRE avant toute affirmation) ===
-Avant toute affirmation sur le cadre officinal francais, verifier :
-- Qui paie quoi ? (Assurance Maladie / officine / patient) La reponse n'est JAMAIS symetrique entre professions de sante.
-- Qui remunere qui ? (forfait, honoraire de dispensation, dotation, ROSP, avenant convention) Ces regimes sont distincts par profession.
-- Quel statut conventionnel exact s'applique ? Citer l'acte reglementaire (avenant, LFSS, decret, arrete tarifaire).
-- NE JAMAIS inferer par symetrie medecin<->pharmacien. Exemple : un TROD gratuit pour le medecin (inclus dans son forfait AM) peut tres bien etre achete a sa charge par l'officine ou rembourse selon un mecanisme different. Verifier la source.
-- En cas de doute sur un chiffre, un financement ou un statut conventionnel : CITER TEXTUELLEMENT la source officielle. Ne pas reformuler ce qu'on ne peut pas garantir.
-
-=== REGLE FINANCES & CALCULS OFFICINE (CRITIQUE - une erreur ici tue la credibilite) ===
-Les lecteurs sont des pharmaciens titulaires : ils connaissent leurs marges par coeur et refont le calcul en 10 secondes. Incident reel 07/2026 : un article affirmait "paracetamol a 1,50 EUR de PFHT, marge 26% en bas de MDL, soit 39 centimes, perte 3 centimes par boite" -> PFHT reel 0,76 EUR, taux de premiere tranche 10%, marge reelle 7,6 centimes, perte reelle 1 centime. Signalement d'un pharmacien en colere.
-- N'INVENTE JAMAIS un prix (PFHT, PPTTC), un taux de marge, une borne de tranche, un volume de boites. Si la source ne donne pas le chiffre, NE FAIS PAS LE CALCUL : decris l'impact qualitativement, sans chiffrer.
-- MARGE DEGRESSIVE LISSEE (MDL) : ne cite un taux QUE si tu as la tranche ET le taux exacts du bareme EN VIGUEUR. Bareme actuel (arrete du 04/08/1987 modifie le 12/11/2018, en vigueur depuis 2020) : 0 a 1,91 EUR = 10% ; 1,92 a 22,90 EUR = 7% ; 22,91 a 150 EUR = 5,5% ; 150,01 a 1930 EUR = 5% ; au-dela = 0%. Le taux de 26,1% sur 0 a 22,90 EUR est ABROGE depuis 2018 : ne l'utilise JAMAIS.
-- La remuneration officinale sur une boite remboursee = MDL + HONORAIRE DE DISPENSATION (1,02 EUR TTC a la boite, insensible au PFHT). Ne presente JAMAIS la seule MDL comme "ce que gagne le pharmacien" : ca surevalue enormement l'impact d'une variation de PFHT.
-- Les remises laboratoires s'appliquent sur les ACHATS (PFHT), JAMAIS sur le chiffre d'affaires.
-- CHIFFRES STRUCTURELS DU RESEAU (a citer TELS QUELS, ne jamais arrondir ni reinventer d'un article a l'autre) : **19 274 officines** en France (IQVIA Pharmastat, juin 2026) ; panier moyen comptoir 17,66 EUR ; CA moyen par officine 1,28 MEUR. Incident 08/2026 : le nombre d'officines variait selon les articles (21 000 cite 24 fois, 22 000, 21 400, 20 931, 20 614, 19 400...), alors que c'est une donnee stable et connue par coeur des lecteurs. Si tu n'es pas sur d'un chiffre structurel, ecris-le qualitativement plutot que d'en inventer un.
-- SANTE PUBLIQUE, ordres de grandeur verifies : 17 millions d'hypertendus en France dont plus de 6 millions l'ignorent (Sante publique France 2023) ; environ 140 000 deces cardio-neuro-vasculaires par an. Ne pas confondre "hypertendus non diagnostiques" (6 M) et "hypertendus traites mais non controles" (environ 4 M) : ce sont deux populations differentes.
-- ORGANISMES DE FORMATION : les OPCA n'existent PLUS depuis avril 2019, remplaces par les OPCO (pour l'officine : OPCO EP). N'ecris jamais "OPCA".
-- Tout chiffre agrege (boites vendues en France, economies attendues, perte par officine, impact reseau) doit venir de la SOURCE. N'extrapole JAMAIS un "impact par officine" a partir d'un volume supposé : si le volume n'est pas source, ne publie pas de total. Et ne melange jamais deux bases de volume differentes dans le meme raisonnement.
-- Avant de dramatiser un impact ("ca coute cher aux officines"), verifie l'ordre de grandeur REEL par rapport a la remuneration totale. Un titre alarmiste sur un impact de 1 centime detruit la credibilite.
+{GARDE_FOUS_OFFICINE}
 
 === REGLE LEGALE CRITIQUE (PUBLICITE Rx INTERDITE - L.5122) ===
 INTERDICTION ABSOLUE de proposer des recommandations type "merch", "mise en avant", "promotion", "communication client", "vitrine", "linéaire", "ILV" sur un MEDICAMENT A PRESCRIPTION identifie (GLP-1 type Ozempic/Wegovy/Mounjaro, antibiotiques, antidiabetiques, antihypertenseurs, antidepresseurs, tout Rx rembourse par l'Assurance Maladie).
