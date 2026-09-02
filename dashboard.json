@@ -1,28 +1,36 @@
 {
- "genere_le": "2026-09-01T10:08:29+02:00",
+ "genere_le": "2026-09-02T09:27:45+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1130,
+ "abonnes_total": 1133,
  "nouveaux_7j": 31,
- "nouveaux_cumul": 1123,
+ "nouveaux_cumul": 1126,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-08-25",
-  "au": "2026-09-01",
-  "delivres": 7099,
-  "ouvertures": 2805,
-  "ouvertures_uniques": 2084,
-  "clics": 3519,
-  "clics_uniques": 640,
-  "taux_ouverture_pct": 29.4,
-  "taux_clic_pct": 9.0,
-  "ctor_pct": 30.7,
+  "du": "2026-08-26",
+  "au": "2026-09-02",
+  "delivres": 7124,
+  "ouvertures": 2764,
+  "ouvertures_uniques": 2072,
+  "clics": 3734,
+  "clics_uniques": 651,
+  "taux_ouverture_pct": 29.1,
+  "taux_clic_pct": 9.1,
+  "ctor_pct": 31.4,
   "top_articles": [
    {
     "id": "actu_2026_08_27_2",
     "titre": "Zostavax est mort, Shingrix protège ton coeur et ton cerveau",
     "date": "2026-08-27",
     "categorie": "pharma_monde",
-    "clics": 118,
+    "clics": 121,
+    "lecteurs": 69
+   },
+   {
+    "id": "actu_2026_09_01_1",
+    "titre": "Tiers payant contre biosimilaire : ce qui change dès aujourd'hui au comptoir",
+    "date": "2026-09-01",
+    "categorie": "pharma_france",
+    "clics": 95,
     "lecteurs": 68
    },
    {
@@ -30,16 +38,16 @@
     "titre": "VRS : remboursement d'Abrysvo et Beyfortus passe à 65% dès le 31 août",
     "date": "2026-08-28",
     "categorie": "bonne_nouvelle",
-    "clics": 105,
-    "lecteurs": 64
+    "clics": 106,
+    "lecteurs": 65
    },
    {
-    "id": "actu_2026_09_01_1",
-    "titre": "Tiers payant contre biosimilaire : ce qui change dès aujourd'hui au comptoir",
+    "id": "actu_2026_09_01_2",
+    "titre": "Trump négocie les prix des médicaments : 9 labos de plus au pied du mur",
     "date": "2026-09-01",
-    "categorie": "pharma_france",
-    "clics": 88,
-    "lecteurs": 62
+    "categorie": "pharma_monde",
+    "clics": 99,
+    "lecteurs": 59
    },
    {
     "id": "actu_2026_08_29_1",
@@ -50,19 +58,11 @@
     "lecteurs": 58
    },
    {
-    "id": "actu_2026_09_01_2",
-    "titre": "Trump négocie les prix des médicaments : 9 labos de plus au pied du mur",
-    "date": "2026-09-01",
-    "categorie": "pharma_monde",
-    "clics": 93,
-    "lecteurs": 56
-   },
-   {
     "id": "actu_2026_08_27_1",
     "titre": "Ordonnance falsifiée ? Une faute d'ortho les a trahis",
     "date": "2026-08-27",
     "categorie": "pharma_france",
-    "clics": 82,
+    "clics": 84,
     "lecteurs": 55
    },
    {
@@ -82,34 +82,34 @@
     "lecteurs": 48
    },
    {
-    "id": "actu_2026_09_01_4",
-    "titre": "Hormone de grossesse et coeur : et si la relaxine ouvrait une nouvelle voie cardio ?",
-    "date": "2026-09-01",
-    "categorie": "avenir_pharma",
-    "clics": 76,
-    "lecteurs": 44
-   },
-   {
     "id": "actu_2026_08_27_4",
     "titre": "Vaccin ARNm contre le mélanome : Moderna passe un cap décisif",
     "date": "2026-08-27",
     "categorie": "avenir_pharma",
-    "clics": 74,
+    "clics": 79,
+    "lecteurs": 46
+   },
+   {
+    "id": "actu_2026_09_01_4",
+    "titre": "Hormone de grossesse et coeur : et si la relaxine ouvrait une nouvelle voie cardio ?",
+    "date": "2026-09-01",
+    "categorie": "avenir_pharma",
+    "clics": 78,
     "lecteurs": 44
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-09-01",
-  "delivres": 94459,
-  "ouvertures": 38120,
-  "ouvertures_uniques": 26401,
-  "clics": 39236,
-  "clics_uniques": 7140,
-  "taux_ouverture_pct": 27.9,
+  "au": "2026-09-02",
+  "delivres": 95459,
+  "ouvertures": 38518,
+  "ouvertures_uniques": 26692,
+  "clics": 39858,
+  "clics_uniques": 7233,
+  "taux_ouverture_pct": 28.0,
   "taux_clic_pct": 7.6,
-  "ctor_pct": 27.0,
+  "ctor_pct": 27.1,
   "top_articles": [
    {
     "id": "actu_2026_06_18_1",
@@ -140,7 +140,15 @@
     "titre": "Zostavax est mort, Shingrix protège ton coeur et ton cerveau",
     "date": "2026-08-27",
     "categorie": "pharma_monde",
-    "clics": 118,
+    "clics": 121,
+    "lecteurs": 69
+   },
+   {
+    "id": "actu_2026_09_01_1",
+    "titre": "Tiers payant contre biosimilaire : ce qui change dès aujourd'hui au comptoir",
+    "date": "2026-09-01",
+    "categorie": "pharma_france",
+    "clics": 95,
     "lecteurs": 68
    },
    {
@@ -164,8 +172,8 @@
     "titre": "VRS : remboursement d'Abrysvo et Beyfortus passe à 65% dès le 31 août",
     "date": "2026-08-28",
     "categorie": "bonne_nouvelle",
-    "clics": 105,
-    "lecteurs": 64
+    "clics": 106,
+    "lecteurs": 65
    },
    {
     "id": "actu_2026_07_04_1",
@@ -181,14 +189,6 @@
     "date": "",
     "categorie": "",
     "clics": 126,
-    "lecteurs": 63
-   },
-   {
-    "id": "actu_2026_07_10_1",
-    "titre": "actu_2026_07_10_1",
-    "date": "",
-    "categorie": "",
-    "clics": 119,
     "lecteurs": 63
    }
   ]
