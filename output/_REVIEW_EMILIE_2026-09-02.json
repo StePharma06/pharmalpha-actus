@@ -1,0 +1,38 @@
+{
+  "generated_at": "2026-09-02T04:17:25.561756+02:00",
+  "run_date": "2026-09-02",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Tiers payant contre biosimilaires : ça démarre aujourd'hui, t'es prêt ?",
+      "resume": "Depuis ce 1er septembre, le dispositif LFSS 2026 est en vigueur : pas de substitution biosimilaire ou hybride possible, pas de tiers payant pour le patient. C'est le levier de pression le plus direct jamais mis entre les mains du pharmacien au comptoir. Le mode d'emploi, c'est maintenant.",
+      "source": "FSPF",
+      "source_url": "https://www.fspf.fr/tiers-payant-contre-biosimilaires-et-hybrides-2026-34/",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "PLFSS 2027 : l'USPO pose 20 propositions - ce que ça change pour ton officine",
+      "resume": "L'USPO publie une lettre ouverte à la ministre de la Santé avec 20 propositions d'efficience pour le PLFSS 2027. Derrière le discours collectif, plusieurs mesures touchent directement la rentabilité officinale. Décryptage.",
+      "source": "Pharm'Actus · USPO — PLFSS 2027 : nos 20 propositions pour faire de l'efficience un projet collectif",
+      "source_url": "https://uspo.fr/plfss-2027-nos-20-propositions-pour-faire-de-lefficience-un-projet-collectif-pour-notre-systeme-de-sante/",
+      "confidence_score": 0.62,
+      "warnings": [
+        "Le contenu détaillé des 20 propositions USPO n'est pas accessible via l'article disponible (résumé partiel) : les propositions spécifiques citées dans l'analyse sont déduites du contexte PLFSS habituel, pas du document lui-même. À vérifier avant publication en consultant uspo.fr directement.",
+        "Le chiffre '3 milliards de boîtes remboursées par an' est un ordre de grandeur communément cité dans la littérature officinale mais n'est pas sourcé dans les articles fournis — à vérifier avec les données IQVIA ou ANSM les plus récentes.",
+        "Le chiffre du déficit Sécu 2026 (>18 Mds€) provient d'une projection courante mais n'est pas sourcé dans les articles du jour — à vérifier avec le dernier rapport HCFP ou PLFSS en cours.",
+        "L'honoraire de dispensation à 1,02 € TTC et la date de gel depuis l'avenant 11 (2019) sont des données conventionnelles connues, mais le montant exact doit être vérifié dans le texte de l'avenant avant publication.",
+        "Position FSPF et UPGF sur le PLFSS 2027 : déclarée 'non exprimée à ce stade' — vérifier sur fspf.fr et upgf.fr le jour de publication.",
+        "Le calcul '30 millions d'euros par centime d'honoraire sur le réseau' découle du volume de 3 milliards de boîtes : si ce volume est inexact, le chiffre doit être recalculé ou supprimé.",
+        "Règle équilibre syndical appliquée : FSPF et UPGF citées comme non exprimées à ce stade, sans leur prêter de position.",
+        "7 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

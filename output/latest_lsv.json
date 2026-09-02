@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? On guérissait l'angine de poitrine en coupant les nerfs du cœur",
-  "resume": "Dans les années 1920, les cardiologues avaient une idée lumineuse pour stopper les douleurs thoraciques : couper les nerfs qui transmettent la douleur. Sauf que sans douleur, le cœur peut crever en silence. Une logique imparable... et terrifiante.",
-  "full_text": "Imagine le tableau : on est en 1920, l'angine de poitrine terrorise les médecins. Ces douleurs thoraciques fulgurantes, ces patients qui s'effondrent en serrant la chemise... Personne ne comprend vraiment pourquoi le cœur fait aussi mal. Alors un chirurgien français, René Leriche, propose une solution radicale : couper les nerfs sympathiques qui relient le cœur au cerveau. Pas de nerfs, pas de douleur. Logique, non ?\n\nL'opération s'appelle la sympathectomie. Entre 1920 et 1940, elle est pratiquée sur des centaines de patients en Europe et aux États-Unis. Les résultats sont... spectaculaires. Les malades ne souffrent plus. Les médecins se félicitent. Les journaux parlent de révolution médicale.\n\nMais voilà le twist que personne n'avait anticipé. Ces patients qui ne souffraient plus ? Certains mouraient d'infarctus massifs sans ressentir le moindre signe avant-coureur. Pas de douleur thoracique, pas d'alerte, pas d'appel aux secours. Le cœur se nécrosait en silence, et le patient continuait à jardiner jusqu'à l'effondrement terminal. On avait coupé l'alarme incendie en pensant éteindre le feu.\n\nLeriche lui-même finira par admettre que la douleur n'est pas l'ennemi - c'est le messager. Supprimer le message ne guérit pas la maladie. Cette prise de conscience a mis des décennies à s'imposer pleinement dans la médecine occidentale.\n\nAujourd'hui, ce principe on le retrouve dans un débat que tu connais bien au comptoir : les antalgiques centraux puissants, les opioïdes à hautes doses - ils soulagent formidablement, mais ils masquent aussi des signaux d'alerte vitaux. La douleur, aussi pénible à entendre pour le patient que pour le soignant, reste l'un des meilleurs outils diagnostiques qu'on ait. Certaines vieilles erreurs valent toutes les formations continues du monde.",
-  "image_keywords": "heart surgery vintage",
+  "titre": "Le saviez-vous ? On mesurait la santé des poumons avec une bougie à souffler",
+  "resume": "Avant les spiromètres électroniques, les médecins évaluaient la capacité respiratoire de leurs patients avec une flamme. Une bougie, une règle, et beaucoup d'espoir. La pneumologie du XVIIIe siècle, c'était aussi simple et aussi brutal que ça.",
+  "full_text": "Imagine le cabinet d'un médecin londonien en 1750. Pas de saturomètre, pas de peak-flow, pas de courbe débit-volume. Pour savoir si les poumons d'un patient tenaient encore la route, le praticien posait une bougie allumée sur une table, reculait jusqu'à une certaine distance... et demandait au malade de souffler de toutes ses forces.\n\nPlus la flamme vacillait loin, meilleurs étaient les poumons. Simple, non ? Trop simple, évidemment. Mais cette méthode n'était pas qu'une curiosité de charlatan : elle reflétait une vraie réflexion sur la ventilation pulmonaire, à une époque où on cherchait désespérément à quantifier ce qu'on ne pouvait pas voir.\n\nLe twist, c'est que le premier vrai spiromètre - inventé par le médecin britannique John Hutchinson en 1846 - était lui-même une machine à souffler. Hutchinson a mesuré la capacité vitale de plus de 2 000 personnes : soldats, pêcheurs, mineurs, géants de foire. Il a compris que la taille du thorax ne suffisait pas à prédire la santé respiratoire. Révolutionnaire pour l'époque.\n\nMais voilà le détail qui tue : Hutchinson est mort dans la misère en 1861, en Australie, oublié de tous. Son invention a continué sans lui, affinée, numérisée, jusqu'aux appareils qu'on connaît aujourd'hui. Le spiromètre moderne mesure en quelques secondes ce que lui avait mis une vie entière à théoriser.\n\nAujourd'hui, au comptoir, quand tu délivres un Ventoline ou un Symbicort, c'est souvent après un test de spirométrie qui repose exactement sur les mêmes principes qu'Hutchinson. Souffler dans un tube, mesurer le souffle. L'idée n'a pas changé. On a juste retiré la bougie.",
+  "image_keywords": "vintage spirometer lung",
   "tags": [
     "histoire",
-    "chirurgie",
-    "cardiologie",
-    "douleur",
-    "anesthesie"
+    "instrument",
+    "diagnostic",
+    "poumon",
+    "chirurgie"
   ],
-  "date": "2026-09-01",
+  "date": "2026-09-02",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",
