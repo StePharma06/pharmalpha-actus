@@ -1,0 +1,48 @@
+{
+  "generated_at": "2026-09-03T04:07:17.923078+02:00",
+  "run_date": "2026-09-03",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Eliquis générique : le premier AOD substituable débarque en officine",
+      "resume": "C'est historique : le premier générique d'apixaban remboursable et substituable est arrivé. L'Eliquis de BMS, l'un des médicaments les plus prescrits en ville, n'est plus seul sur l'étagère. Ce que ça change concrètement pour toi dès demain.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/therapeutique/medicaments/mieux-delivrer/eliquis-le-premier-generique-remboursable-et-substituable",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "pharma_monde",
+      "titre": "Angelman : l'espoir d'Ultragenyx s'effondre en phase 3",
+      "resume": "Ultragenyx voulait révolutionner la prise en charge du syndrome d'Angelman. Son traitement expérimental vient de se prendre un mur en phase 3 : aucun bénéfice vs placebo. Une leçon de plus sur la difficulté de cibler le système nerveux central.",
+      "source": "STAT News",
+      "source_url": "https://www.statnews.com/2026/09/02/ultragenyx-drug-angelman-syndrome-clinical-trial/?utm_campaign=rss",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "IJ accident du travail : 555 M€ d'économies qui vont coûter cher à tes adjoints",
+      "resume": "À partir du 1er novembre, le plafond des indemnités journalières AT/MP pourrait être drastiquement réduit et les IJ intégralement fiscalisées. Économies projetées : 555 millions d'euros en 2027. Pour tes collaborateurs salariés, l'impact peut être brutal.",
+      "source": "Pharm'Actus · Le Quotidien du Pharmacien – Accident du travail : baisse des indemnités journalières à venir",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/accident-du-travail-baisse-des-indemnites-journalieres-venir",
+      "confidence_score": 0.72,
+      "warnings": [
+        "Le chiffre de 555 M€ est repris de la source (Le Quotidien du Pharmacien) sans pouvoir vérifier le document budgétaire originel (PLFSS, rapport IGF ou autre) : à sourcer dans le texte de loi dès publication.",
+        "La réforme est présentée comme 'envisagée' / 'pourrait' par la source elle-même : elle n'est PAS adoptée à ce jour. L'article le précise mais vigilance si le calendrier évolue.",
+        "L'exemple chiffré (adjoint à 2 200 € bruts) est illustratif : la perte individuelle réelle n'est pas calculée car la source ne donne pas le nouveau plafond précis ni le nouveau taux d'imposition exact. Conforme à la règle de non-invention de calculs.",
+        "L'impact sur les cotisations patronales AT/MP n'est pas mentionné dans la source : prudence maintenue, aucune affirmation sur une éventuelle baisse de charges employeur.",
+        "Le taux de sinistralité AT du secteur pharmaceutique est mentionné qualitativement (données Assurance Maladie – Risques Professionnels) sans chiffre précis car aucun chiffre sectoriel n'est disponible dans les sources fournies.",
+        "La CCN officine du 26 août 1995 est citée de mémoire : vérifier que la date et les garanties prévoyance AT/MP minimales sont bien à jour avec les derniers avenants.",
+        "3 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

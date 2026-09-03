@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? On mesurait la santé des poumons avec une bougie à souffler",
-  "resume": "Avant les spiromètres électroniques, les médecins évaluaient la capacité respiratoire de leurs patients avec une flamme. Une bougie, une règle, et beaucoup d'espoir. La pneumologie du XVIIIe siècle, c'était aussi simple et aussi brutal que ça.",
-  "full_text": "Imagine le cabinet d'un médecin londonien en 1750. Pas de saturomètre, pas de peak-flow, pas de courbe débit-volume. Pour savoir si les poumons d'un patient tenaient encore la route, le praticien posait une bougie allumée sur une table, reculait jusqu'à une certaine distance... et demandait au malade de souffler de toutes ses forces.\n\nPlus la flamme vacillait loin, meilleurs étaient les poumons. Simple, non ? Trop simple, évidemment. Mais cette méthode n'était pas qu'une curiosité de charlatan : elle reflétait une vraie réflexion sur la ventilation pulmonaire, à une époque où on cherchait désespérément à quantifier ce qu'on ne pouvait pas voir.\n\nLe twist, c'est que le premier vrai spiromètre - inventé par le médecin britannique John Hutchinson en 1846 - était lui-même une machine à souffler. Hutchinson a mesuré la capacité vitale de plus de 2 000 personnes : soldats, pêcheurs, mineurs, géants de foire. Il a compris que la taille du thorax ne suffisait pas à prédire la santé respiratoire. Révolutionnaire pour l'époque.\n\nMais voilà le détail qui tue : Hutchinson est mort dans la misère en 1861, en Australie, oublié de tous. Son invention a continué sans lui, affinée, numérisée, jusqu'aux appareils qu'on connaît aujourd'hui. Le spiromètre moderne mesure en quelques secondes ce que lui avait mis une vie entière à théoriser.\n\nAujourd'hui, au comptoir, quand tu délivres un Ventoline ou un Symbicort, c'est souvent après un test de spirométrie qui repose exactement sur les mêmes principes qu'Hutchinson. Souffler dans un tube, mesurer le souffle. L'idée n'a pas changé. On a juste retiré la bougie.",
-  "image_keywords": "vintage spirometer lung",
+  "titre": "Le saviez-vous ? On mesurait la dose de médicament... avec le pouce du médecin",
+  "resume": "Avant les milligrammes et les fioles graduées, la posologie se mesurait avec les doigts. Littéralement. Et ce n'était pas une métaphore - c'était une technique médicale officielle, enseignée dans les universités.",
+  "full_text": "Imagine le décor : on est au XIIe siècle, quelque part dans une école de médecine de Salerne, en Italie. La plus grande université médicale du monde à l'époque. Un professeur explique à ses étudiants comment doser une préparation de plantes. Il lève son pouce et dit : « Voilà ta mesure. »\n\nLa « drachme de doigt » ou « pugil » - du latin pugnus, le poing - était une unité de mesure réelle. On prenait autant de poudre qu'on pouvait en pincer entre le pouce et l'index, ou entre trois doigts joints. Ce que les médecins appelaient une « prise ». On retrouve encore cette expression dans notre langage courant, mais plus personne ne sait qu'elle désignait autrefois une posologie précise.\n\nLe twist qui tue : ces doses variaient évidemment d'un médecin à l'autre. Un gros pouce corsé de chirurgien et le petit doigt fuselé d'un apothicaire n'ont pas le même volume. Résultat : pour une même « prise » d'ellébore - une plante puissamment purgative et toxique - certains patients étaient à peine soulagés, d'autres frôlaient l'empoisonnement. La posologie dépendait littéralement de la morphologie du praticien.\n\nC'est cette anarchie des mesures qui a poussé les apothicaires à s'organiser. Dès le XIVe siècle, les premières « pharmacopées » locales tentent de standardiser les doses. En 1498, Florence publie le Ricettario Fiorentino, considéré comme la première vraie pharmacopée officielle. Balances, poids en cuivre calibrés, unités codifiées : la profession commence à s'arracher aux doigts du médecin.\n\nAujourd'hui, quand tu vérifies une ordonnance à la milligramme près ou qu'un patient te demande « c'est combien une prise ? », pense à tous les pouces qui ont précédé ta balance. La rigueur posologique qu'on tient pour acquise au comptoir a mis des siècles à s'imposer - et des générations d'apothicaires têtus pour y arriver.",
+  "image_keywords": "apothecary medieval herbs",
   "tags": [
     "histoire",
-    "instrument",
-    "diagnostic",
-    "poumon",
-    "chirurgie"
+    "posologie",
+    "pharmacopee",
+    "mesure",
+    "apothicaire"
   ],
-  "date": "2026-09-02",
+  "date": "2026-09-03",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",
