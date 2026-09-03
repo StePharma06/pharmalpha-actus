@@ -1,21 +1,21 @@
 {
- "genere_le": "2026-09-02T09:27:45+02:00",
+ "genere_le": "2026-09-03T09:31:49+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1133,
- "nouveaux_7j": 31,
- "nouveaux_cumul": 1126,
+ "abonnes_total": 1137,
+ "nouveaux_7j": 33,
+ "nouveaux_cumul": 1130,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-08-26",
-  "au": "2026-09-02",
-  "delivres": 7124,
-  "ouvertures": 2764,
-  "ouvertures_uniques": 2072,
-  "clics": 3734,
-  "clics_uniques": 651,
-  "taux_ouverture_pct": 29.1,
-  "taux_clic_pct": 9.1,
-  "ctor_pct": 31.4,
+  "du": "2026-08-27",
+  "au": "2026-09-03",
+  "delivres": 7150,
+  "ouvertures": 2825,
+  "ouvertures_uniques": 2120,
+  "clics": 3840,
+  "clics_uniques": 675,
+  "taux_ouverture_pct": 29.7,
+  "taux_clic_pct": 9.4,
+  "ctor_pct": 31.8,
   "top_articles": [
    {
     "id": "actu_2026_08_27_2",
@@ -30,8 +30,8 @@
     "titre": "Tiers payant contre biosimilaire : ce qui change dès aujourd'hui au comptoir",
     "date": "2026-09-01",
     "categorie": "pharma_france",
-    "clics": 95,
-    "lecteurs": 68
+    "clics": 96,
+    "lecteurs": 69
    },
    {
     "id": "actu_2026_08_28_3",
@@ -46,8 +46,8 @@
     "titre": "Trump négocie les prix des médicaments : 9 labos de plus au pied du mur",
     "date": "2026-09-01",
     "categorie": "pharma_monde",
-    "clics": 99,
-    "lecteurs": 59
+    "clics": 100,
+    "lecteurs": 60
    },
    {
     "id": "actu_2026_08_29_1",
@@ -70,8 +70,24 @@
     "titre": "Biosimilaires : 150 millions d'euros sur la table, t'es prêt ?",
     "date": "2026-08-31",
     "categorie": "pharma_france",
-    "clics": 74,
+    "clics": 75,
+    "lecteurs": 54
+   },
+   {
+    "id": "actu_2026_09_03_1",
+    "titre": "Eliquis générique : le premier AOD substituable débarque en officine",
+    "date": "2026-09-03",
+    "categorie": "pharma_france",
+    "clics": 79,
     "lecteurs": 53
+   },
+   {
+    "id": "actu_2026_09_02_1",
+    "titre": "Tiers payant contre biosimilaires : ça démarre aujourd'hui, t'es prêt ?",
+    "date": "2026-09-02",
+    "categorie": "pharma_france",
+    "clics": 92,
+    "lecteurs": 51
    },
    {
     "id": "actu_2026_08_31_3",
@@ -80,33 +96,17 @@
     "categorie": "bonne_nouvelle",
     "clics": 76,
     "lecteurs": 48
-   },
-   {
-    "id": "actu_2026_08_27_4",
-    "titre": "Vaccin ARNm contre le mélanome : Moderna passe un cap décisif",
-    "date": "2026-08-27",
-    "categorie": "avenir_pharma",
-    "clics": 79,
-    "lecteurs": 46
-   },
-   {
-    "id": "actu_2026_09_01_4",
-    "titre": "Hormone de grossesse et coeur : et si la relaxine ouvrait une nouvelle voie cardio ?",
-    "date": "2026-09-01",
-    "categorie": "avenir_pharma",
-    "clics": 78,
-    "lecteurs": 44
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-09-02",
-  "delivres": 95459,
-  "ouvertures": 38518,
-  "ouvertures_uniques": 26692,
-  "clics": 39858,
-  "clics_uniques": 7233,
+  "au": "2026-09-03",
+  "delivres": 96460,
+  "ouvertures": 38953,
+  "ouvertures_uniques": 26999,
+  "clics": 40368,
+  "clics_uniques": 7323,
   "taux_ouverture_pct": 28.0,
   "taux_clic_pct": 7.6,
   "ctor_pct": 27.1,
@@ -132,8 +132,8 @@
     "titre": "actu_2026_08_12_1",
     "date": "",
     "categorie": "",
-    "clics": 104,
-    "lecteurs": 72
+    "clics": 105,
+    "lecteurs": 73
    },
    {
     "id": "actu_2026_08_27_2",
@@ -148,8 +148,8 @@
     "titre": "Tiers payant contre biosimilaire : ce qui change dès aujourd'hui au comptoir",
     "date": "2026-09-01",
     "categorie": "pharma_france",
-    "clics": 95,
-    "lecteurs": 68
+    "clics": 96,
+    "lecteurs": 69
    },
    {
     "id": "actu_2026_06_23_2",
