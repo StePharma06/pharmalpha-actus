@@ -31,7 +31,7 @@
      l'image n'est decouverte qu'apres execution du JS qui construit les cards
      (le <img> n'existe qu'a l'interieur d'un template literal JS, invisible au
      preload scanner) -> LCP non deterministe, cf. sprint perf 2026-07-27. -->
-<link rel="preload" as="image" href="assets/img_actu_2026_09_03_1.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="assets/img_actu_2026_09_04_1.jpg" fetchpriority="high">
 
 <!-- Space Grotesk — self-hosted WOFF2 (remplace Google Fonts, cf. mission perf/RGPD 2026-08-24) -->
 <link rel="preload" href="/assets/fonts/space-grotesk-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -1737,7 +1737,7 @@ body.pa-has-nav #actusHeader {
 </div>
 
 <!-- EXPRESSION DU JOUR (injectée par update_actus.py à chaque run) -->
-<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Aspirine</h2><p class="expression-corps">Le préfixe <em>a-</em> pour acétyl, et <em>spirine</em> de <em>Spiraea ulmaria</em> - la reine-des-prés dont l'acide salicylique fut extrait au XIXe siècle. Bayer déposa la marque en 1899, inventant au passage le concept de médicament de marque.</p></aside>
+<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Avoir du cachet</h2><p class="expression-corps">Le cachet pharmaceutique était une petite enveloppe de pain azyme dans laquelle les apothicaires plaçaient une dose précise de médicament - identifiée, mesurée, distinctive. Avoir du cachet, c'est avoir ce caractère particulier qui vous distingue, comme la marque de l'apothicaire sur son préparation.</p></aside>
 
 <!-- ESPACE PARTENAIRE 1 (entre Expression du jour et Aujourd'hui).
      Statique : reste visible meme si le JS ne s'execute pas. Le 2e emplacement
@@ -1762,12 +1762,12 @@ body.pa-has-nav #actusHeader {
 <div id="articles-container"></div>
 
 <!-- MARQUE_TENDANCE (injectee par le pipeline hebdo, remplacee quotidiennement) -->
-<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">28 aout au 3 sept. 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Assurance maladie fatigue chronique</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 360 450</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Azinc immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 108 250</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie aout</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 90 500</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Aide à la digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 64 350</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Pai allergie alimentaire pdf</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 28 050</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Immunite diplomatique</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 48 000</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Syndrome de la fatigue chronique</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 20 950</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Poivron digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 41 000</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Vitamine b₁₂</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 11 050</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Eclipse et sommeil</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 15 950</td></tr>
+<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">29 aout au 4 sept. 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie septembre</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 55 100</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Azinc immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 78 700</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie au soleil symptômes</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 21 900</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Digestion difficile remède grand-mère</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 51 350</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Syndrome de la fatigue chronique</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 20 500</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Digestion difficile fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 41 750</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Vitamine b₁₂</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 14 000</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Opérations spéciales lioness la douleur </td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 3 600</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Nausée sans vomissement et fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 11 200</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Stylo anti douleur</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 950</td></tr>
 </tbody></table></div><p style="margin:10px 0 0;font-size:11px;color:#9ca3af;font-style:italic;">Indice de tendance : intensite de hausse Google Trends (non comparable a un volume absolu).</p><p style="margin:12px 0 0;font-size:11px;color:#9ca3af;text-align:right;">Source&nbsp;: Google Trends France (pytrends) &middot; 7 jours glissants</p></section></div>
 
 <!-- ARCHIVES CTA -->
@@ -1930,6 +1930,90 @@ body.pa-has-nav #actusHeader {
 // Mis a jour automatiquement par n8n chaque semaine
 // ============================================================
 const ARTICLES = [
+{
+    id: "actu_2026_09_04_1",
+    date: "2026-09-04",
+    type: "actu",
+    categorie: "pharma_france",
+    titre: "Convention pharmaceutique : la lettre de cadrage se fait attendre, la tension monte",
+    resume: "La lettre de cadrage attendue depuis juillet n'est toujours pas arrivée au 2 septembre. Les syndicats s'impatientent et la dénonciation de la convention est sur la table. Ce dossier concerne directement ta rémunération de demain.",
+    source: "Le Moniteur des Pharmacies",
+    source_url: "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/remuneration-la-lettre-de-cadrage-tarde-la-convention-pourrait-etre-denoncee",
+    tiktok_url: "",
+    badge_label: "Pharma France",
+    image_url: "assets/img_actu_2026_09_04_1.jpg",
+    tags: ["convention", "remuneration", "rosp", "syndicat", "honoraires"]
+  },
+{
+    id: "actu_2026_09_04_2",
+    date: "2026-09-04",
+    type: "actu",
+    categorie: "pharma_monde",
+    titre: "Bêtabloquants post-infarctus : deux études relancent le débat sur l'arret precoce",
+    resume: "Deux études majeures interrogent le dogme du bêtabloquant à vie après une crise cardiaque. Arrêter ce traitement assez rapidement post-infarctus ne semblerait pas augmenter le risque de récidive. Une piste thérapeutique qui va faire parler dans tes entretiens pharmaceutiques AVK/AOD.",
+    source: "France Info Sante",
+    source_url: "https://www.franceinfo.fr/sante/arret-de-certains-medicaments-traitement-plus-efficace-deux-etudes-interrogent-la-prise-en-charge-des-patients-qui-viennent-de-faire-une-crise-cardiaque_8174813.html",
+    tiktok_url: "",
+    badge_label: "Pharma Monde",
+    image_url: "assets/img_actu_2026_09_04_2.jpg",
+    tags: ["betabloquant", "cardio", "deprescription", "infarctus", "recherche"]
+  },
+{
+    id: "actu_2026_09_04_3",
+    date: "2026-09-04",
+    type: "actu",
+    categorie: "bonne_nouvelle",
+    titre: "Septembre Turquoise : tes affiches anti-cancers gynecos sont disponibles, sers-t'en",
+    resume: "L'Uspo met à disposition des pharmaciens affiches et plaquettes pour sensibiliser les femmes aux cancers gynécologiques pendant tout le mois de septembre. Un levier de santé publique simple à activer, avec le matériel déjà prêt.",
+    source: "Le Quotidien du Pharmacien",
+    source_url: "http://www.lequotidiendupharmacien.fr/exercice-pro/septembre-turquoise-les-pharmaciens-encourages-sensibiliser-les-femmes-aux-cancers-gynecologiques",
+    tiktok_url: "",
+    badge_label: "La bonne nouvelle",
+    image_url: "assets/img_actu_2026_09_04_3.jpg",
+    tags: ["prevention", "cancer", "depistage", "uspo", "officine"]
+  },
+{
+    id: "actu_2026_09_04_4",
+    date: "2026-09-04",
+    type: "actu",
+    categorie: "avenir_pharma",
+    titre: "Vaccination HPV : les pharmaciens ont les cartes en main pour faire grimper la couverture",
+    resume: "La couverture vaccinale HPV reste insuffisante en France malgré une priorité de santé publique affichée. Les pharmaciens, habilités à vacciner, ont un rôle central à jouer pour combler ce retard. L'enjeu : des cancers évitables, un acte valorisé, une mission qui fait sens.",
+    source: "Le Moniteur des Pharmacies",
+    source_url: "https://www.lemoniteurdespharmacies.fr/nouvelles-missions/vaccination/vaccination-hpv-les-campagnes-et-au-dela",
+    tiktok_url: "",
+    badge_label: "L'avenir de la pharma",
+    image_url: "assets/img_actu_2026_09_04_4.jpg",
+    tags: ["vaccination", "hpv", "prevention", "cancer", "officine"]
+  },
+{
+    id: "actu_2026_09_04_5",
+    date: "2026-09-04",
+    type: "actu",
+    categorie: "business_officine",
+    titre: "Un \"Défenseur de la santé\" indépendant : bonne idée pour qui ?",
+    resume: "Un collectif de scientifiques, dont Irène Frachon, propose une autorité indépendante chargée d'évaluer l'impact sanitaire des lois. Derrière la tribune, un vrai enjeu pour la régulation du médicament et la place des professionnels de santé dans les décisions publiques.",
+    source: "Pharm'Actus · Le Monde Santé – Tribune \"Défenseur de la santé\" (Descola, Frachon, Sujobert), IQVIA Pharmastat – Nombre d'officines en France, juin 2026 (19 274)",
+    source_url: "https://www.lemonde.fr/idees/article/2026/09/03/nous-proposons-la-creation-d-une-autorite-independante-dont-la-mission-sera-d-evaluer-l-impact-sanitaire-des-lois-et-des-politiques-publiques_6765130_3232.html",
+    tiktok_url: "",
+    badge_label: "Business",
+    image_url: "assets/img_actu_2026_09_04_5.jpg",
+    tags: ["gouvernance", "politique-du-medicament", "remboursement", "regulation"]
+  },
+{
+    id: "lsv_2026_09_04",
+    date: "2026-09-04",
+    type: "lsv",
+    categorie: "lsv",
+    titre: "Le saviez-vous ? On guérissait les brûlures d'estomac avec de la craie mâchée",
+    resume: "Avant les IPP et les anti-H2, l'acidité gastrique se combattait avec ce qu'on avait sous la main. Et pendant des siècles, 'sous la main', c'était littéralement du carbonate de calcium brut. L'ancêtre de ton Maalox, c'était du calcaire pilé vendu chez l'apothicaire.",
+    source: "Pharm'Alpha",
+    source_url: "",
+    tiktok_url: "",
+    badge_label: "Le Saviez-Vous",
+    image_url: "assets/img_lsv_2026_09_04.jpg",
+    tags: ["histoire", "medicament", "gastroenterologie", "chimie", "apothicaire"]
+  },
 {
     id: "actu_2026_09_03_1",
     date: "2026-09-03",
@@ -2545,90 +2629,6 @@ const ARTICLES = [
     badge_label: "Pharma Monde",
     image_url: "assets/img_actu_2026_08_26_2.jpg",
     tags: ["ia", "wearable", "sante-connectee", "dispositif-medical", "sommeil"]
-  },
-{
-    id: "actu_2026_08_26_3",
-    date: "2026-08-26",
-    type: "actu",
-    categorie: "bonne_nouvelle",
-    titre: "Culottes menstruelles remboursables : le 1er octobre, ça démarre en officine",
-    resume: "L'arrêté du 6 août a fixé les modalités de prise en charge des culottes et coupes menstruelles réutilisables, avec un démarrage au 1er octobre. Les premières marques certifiées se positionnent déjà. Un nouveau rayon, de nouvelles références, un nouveau flux à gérer.",
-    source: "Le Quotidien du Pharmacien",
-    source_url: "http://www.lequotidiendupharmacien.fr/exercice-pro/coupes-et-culottes-menstruelles-les-premieres-references-remboursees-se-font-connaitre",
-    tiktok_url: "",
-    badge_label: "La bonne nouvelle",
-    image_url: "assets/img_actu_2026_08_26_3.jpg",
-    tags: ["remboursement", "officine", "dispositif-medical", "patiente", "nouvelles-missions"]
-  },
-{
-    id: "actu_2026_08_26_4",
-    date: "2026-08-26",
-    type: "actu",
-    categorie: "avenir_pharma",
-    titre: "Adragos double sa prod au Japon et renforce sa présence en France : la CDMO monte en puissance",
-    resume: "Adragos Pharma va plus que doubler ses capacités de production de formes solides au Japon via un accord avec Towa Pharmaceutical. La CDMO allemande développe aussi ses capacités en France. Un signal fort pour la sécurisation des approvisionnements en génériques.",
-    source: "ActuLabo",
-    source_url: "https://www.actulabo.com/adragos-renforce-ses-capacites-au-japon-et-en-france/",
-    tiktok_url: "",
-    badge_label: "L'avenir de la pharma",
-    image_url: "assets/img_actu_2026_08_26_4.jpg",
-    tags: ["generique", "cdmo", "production", "rupture", "approvisionnement"]
-  },
-{
-    id: "actu_2026_08_26_5",
-    date: "2026-08-26",
-    type: "actu",
-    categorie: "business_officine",
-    titre: "Ticket modérateur en hausse : ce que ça change vraiment pour ton officine",
-    resume: "Le gouvernement relève les franchises et le ticket modérateur pour combler le déficit de l'Assurance Maladie. Derrière l'enjeu de solidarité, il y a un impact concret sur le flux officinal, la délivrance et la relation patient. Décryptage.",
-    source: "Pharm'Actus · Le Monde Santé — Mutuelles, professionnels de santé et associations de patients inquiets de la hausse du ticket modérateur, DREES — Enquête sur la couverture complémentaire santé 2023",
-    source_url: "https://www.lemonde.fr/societe/article/2026/08/25/assurance-maladie-mutuelles-professionnels-de-sante-et-associations-de-patients-inquiets-de-la-hausse-du-ticket-moderateur-et-des-plafonds-des-franchises_6756628_3224.html",
-    tiktok_url: "",
-    badge_label: "Business",
-    image_url: "assets/img_actu_2026_08_26_5.jpg",
-    tags: ["assurance-maladie", "ticket-moderateur", "franchise-medicale", "remboursement"]
-  },
-{
-    id: "lsv_2026_08_26",
-    date: "2026-08-26",
-    type: "lsv",
-    categorie: "lsv",
-    titre: "Le saviez-vous ? On traitait la cataracte en poussant le cristallin avec une aiguille",
-    resume: "Pendant près de 2 500 ans, la seule opération des yeux connue consistait à enfoncer une aiguille dans l'œil pour 'pousser' le cristallin trouble hors du champ de vision. Sans anesthésie. Sans bloc opératoire. Avec un taux de cécité post-opératoire qui donnait le frisson.",
-    source: "Pharm'Alpha",
-    source_url: "",
-    tiktok_url: "",
-    badge_label: "Le Saviez-Vous",
-    image_url: "assets/img_lsv_2026_08_26.jpg",
-    tags: ["histoire", "chirurgie", "ophtalmologie", "instrument", "decouverte"]
-  },
-{
-    id: "actu_2026_08_25_1",
-    date: "2026-08-25",
-    type: "actu",
-    categorie: "pharma_france",
-    titre: "Bicafres en rupture : la prépa magistrale de bicarbonate débarque officiellement",
-    resume: "Un arrêté autorise la substitution du Bicafres 1 000 mg par une préparation magistrale de bicarbonate de sodium, sans nouvelle ordonnance. Deux dosages disponibles : 500 mg ou 1 000 mg en gélules non gastrorésistantes. Le médecin doit être informé sans délai pour adapter la surveillance biologique.",
-    source: "Le Quotidien du Pharmacien",
-    source_url: "http://www.lequotidiendupharmacien.fr/medicament-parapharmacie/medicament/bicafres-deux-preparations-magistrales-sont-autorisees",
-    tiktok_url: "",
-    badge_label: "Pharma France",
-    image_url: "assets/img_actu_2026_08_25_1.jpg",
-    tags: ["rupture", "préparation-magistrale", "bicarbonate", "substitution", "ansm"]
-  },
-{
-    id: "actu_2026_08_25_2",
-    date: "2026-08-25",
-    type: "actu",
-    categorie: "pharma_monde",
-    titre: "TDAH : Otsuka décroche le feu vert FDA avec une molécule qui joue sur trois tableaux",
-    resume: "Le laboratoire Otsuka a obtenu l'autorisation de la FDA pour un nouveau traitement du TDAH, première nouvelle classe thérapeutique depuis des années. La molécule cible simultanément dopamine, noradrénaline et sérotonine. En France, le TDAH est encore sous-diagnostiqué et les options thérapeutiques restent limitées.",
-    source: "Le Quotidien du Pharmacien",
-    source_url: "http://www.lequotidiendupharmacien.fr/exercice-pro/tdah-une-nouvelle-option-therapeutique-autorisee-aux-etats-unis",
-    tiktok_url: "",
-    badge_label: "Pharma Monde",
-    image_url: "assets/img_actu_2026_08_25_2.jpg",
-    tags: ["tdah", "fda", "innovation", "neurologie", "pipeline"]
   }
 ];
 

@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-09-04T04:15:34.539461+02:00",
+  "run_date": "2026-09-04",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Convention pharmaceutique : la lettre de cadrage se fait attendre, la tension monte",
+      "resume": "La lettre de cadrage attendue depuis juillet n'est toujours pas arrivée au 2 septembre. Les syndicats s'impatientent et la dénonciation de la convention est sur la table. Ce dossier concerne directement ta rémunération de demain.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/remuneration-la-lettre-de-cadrage-tarde-la-convention-pourrait-etre-denoncee",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Un \"Défenseur de la santé\" indépendant : bonne idée pour qui ?",
+      "resume": "Un collectif de scientifiques, dont Irène Frachon, propose une autorité indépendante chargée d'évaluer l'impact sanitaire des lois. Derrière la tribune, un vrai enjeu pour la régulation du médicament et la place des professionnels de santé dans les décisions publiques.",
+      "source": "Pharm'Actus · Le Monde Santé – Tribune \"Défenseur de la santé\" (Descola, Frachon, Sujobert), IQVIA Pharmastat – Nombre d'officines en France, juin 2026 (19 274)",
+      "source_url": "https://www.lemonde.fr/idees/article/2026/09/03/nous-proposons-la-creation-d-une-autorite-independante-dont-la-mission-sera-d-evaluer-l-impact-sanitaire-des-lois-et-des-politiques-publiques_6765130_3232.html",
+      "confidence_score": 0.35,
+      "warnings": [
+        "SCORE DE CONFIANCE VOLONTAIREMENT BAS (0.35) : les articles disponibles ce jour n'offrent aucun angle business officinal direct avec des chiffres vérifiables.",
+        "L'article est un exercice d'angle indirect sur une tribune académique : aucun chiffre d'impact économique direct sur l'officine n'est disponible dans la source.",
+        "Les chiffres cités (19 274 officines IQVIA juin 2026) sont des données structurelles, pas liées à la source du jour.",
+        "Aucune position syndicale (FSPF, USPO, UPGF) n'existe à ce jour sur cette tribune : non-expressions explicitement signalées dans l'article.",
+        "La proposition de 'Défenseur de la santé' n'a aucun équivalent législatif existant : il s'agit d'une proposition, pas d'un texte en cours.",
+        "RECOMMANDATION RÉDACTIONNELLE : si possible, attendre une actu avec un vrai angle business chiffré pour cette rubrique. En l'état, cet article est honnête mais peu différenciant."
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

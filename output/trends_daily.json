@@ -1,64 +1,64 @@
 {
-  "generated_at": "2026-09-03",
-  "window_label": "28 aout au 3 sept. 2026",
+  "generated_at": "2026-09-04",
+  "window_label": "29 aout au 4 sept. 2026",
   "has_history": true,
   "delta_source": "pytrends_rising",
   "pathologies": [
     {
-      "display": "Assurance maladie fatigue chronique",
-      "delta_label": "↑ 360 450",
+      "display": "Allergie septembre",
+      "delta_label": "↑ 55 100",
       "trend": "up"
     },
     {
-      "display": "Allergie aout",
-      "delta_label": "↑ 90 500",
-      "trend": "up"
-    },
-    {
-      "display": "Pai allergie alimentaire pdf",
-      "delta_label": "↑ 28 050",
+      "display": "Allergie au soleil symptômes",
+      "delta_label": "↑ 21 900",
       "trend": "up"
     },
     {
       "display": "Syndrome de la fatigue chronique",
-      "delta_label": "↑ 20 950",
+      "delta_label": "↑ 20 500",
       "trend": "up"
     },
     {
       "display": "Vitamine b₁₂",
-      "delta_label": "↑ 11 050",
+      "delta_label": "↑ 14 000",
+      "trend": "up"
+    },
+    {
+      "display": "Nausée sans vomissement et fatigue",
+      "delta_label": "↑ 11 200",
       "trend": "up"
     }
   ],
   "soins": [
     {
       "display": "Azinc immunite",
-      "delta_label": "↑ 108 250",
+      "delta_label": "↑ 78 700",
       "trend": "up"
     },
     {
-      "display": "Aide à la digestion",
-      "delta_label": "↑ 64 350",
+      "display": "Digestion difficile remède grand-mère",
+      "delta_label": "↑ 51 350",
       "trend": "up"
     },
     {
-      "display": "Immunite diplomatique",
-      "delta_label": "↑ 48 000",
+      "display": "Digestion difficile fatigue",
+      "delta_label": "↑ 41 750",
       "trend": "up"
     },
     {
-      "display": "Poivron digestion",
-      "delta_label": "↑ 41 000",
+      "display": "Opérations spéciales lioness la douleur ",
+      "delta_label": "↑ 3 600",
       "trend": "up"
     },
     {
-      "display": "Eclipse et sommeil",
-      "delta_label": "↑ 15 950",
+      "display": "Stylo anti douleur",
+      "delta_label": "↑ 950",
       "trend": "up"
     }
   ],
   "pathologies_stale": false,
-  "pathologies_from": "2026-09-03",
+  "pathologies_from": "2026-09-04",
   "soins_stale": false,
-  "soins_from": "2026-09-03"
+  "soins_from": "2026-09-04"
 }
