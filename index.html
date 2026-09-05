@@ -31,7 +31,7 @@
      l'image n'est decouverte qu'apres execution du JS qui construit les cards
      (le <img> n'existe qu'a l'interieur d'un template literal JS, invisible au
      preload scanner) -> LCP non deterministe, cf. sprint perf 2026-07-27. -->
-<link rel="preload" as="image" href="assets/img_actu_2026_09_04_1.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="assets/img_actu_2026_09_05_1.jpg" fetchpriority="high">
 
 <!-- Space Grotesk — self-hosted WOFF2 (remplace Google Fonts, cf. mission perf/RGPD 2026-08-24) -->
 <link rel="preload" href="/assets/fonts/space-grotesk-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -1737,7 +1737,7 @@ body.pa-has-nav #actusHeader {
 </div>
 
 <!-- EXPRESSION DU JOUR (injectée par update_actus.py à chaque run) -->
-<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Avoir du cachet</h2><p class="expression-corps">Le cachet pharmaceutique était une petite enveloppe de pain azyme dans laquelle les apothicaires plaçaient une dose précise de médicament - identifiée, mesurée, distinctive. Avoir du cachet, c'est avoir ce caractère particulier qui vous distingue, comme la marque de l'apothicaire sur son préparation.</p></aside>
+<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Pharmacie</h2><p class="expression-corps">Du grec <em>pharmakon</em>, mot à double sens : remède et poison. Les Grecs n'opposaient pas les deux - la même plante pouvait soigner ou tuer selon la dose. Paracelse l'a formulé 2000 ans plus tard : « La dose fait le poison. »</p></aside>
 
 <!-- ESPACE PARTENAIRE 1 (entre Expression du jour et Aujourd'hui).
      Statique : reste visible meme si le JS ne s'execute pas. Le 2e emplacement
@@ -1762,12 +1762,12 @@ body.pa-has-nav #actusHeader {
 <div id="articles-container"></div>
 
 <!-- MARQUE_TENDANCE (injectee par le pipeline hebdo, remplacee quotidiennement) -->
-<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">29 aout au 4 sept. 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie septembre</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 55 100</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Azinc immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 78 700</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie au soleil symptômes</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 21 900</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Digestion difficile remède grand-mère</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 51 350</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Syndrome de la fatigue chronique</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 20 500</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Digestion difficile fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 41 750</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Vitamine b₁₂</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 14 000</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Opérations spéciales lioness la douleur </td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 3 600</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Nausée sans vomissement et fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 11 200</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Stylo anti douleur</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 950</td></tr>
+<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">30 aout au 5 sept. 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Assurance maladie fatigue chronique</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 354 900</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Eau gazeuse digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 79 350</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie aout</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 79 100</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Azinc immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 78 800</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Corps de ferme</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 63 350</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Digestion rapide</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 77 150</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie septembre</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 46 400</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Immunite diplomatique</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 43 300</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Vitamine b₁₂</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 15 350</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Eclipse et sommeil</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 13 650</td></tr>
 </tbody></table></div><p style="margin:10px 0 0;font-size:11px;color:#9ca3af;font-style:italic;">Indice de tendance : intensite de hausse Google Trends (non comparable a un volume absolu).</p><p style="margin:12px 0 0;font-size:11px;color:#9ca3af;text-align:right;">Source&nbsp;: Google Trends France (pytrends) &middot; 7 jours glissants</p></section></div>
 
 <!-- ARCHIVES CTA -->
@@ -1930,6 +1930,90 @@ body.pa-has-nav #actusHeader {
 // Mis a jour automatiquement par n8n chaque semaine
 // ============================================================
 const ARTICLES = [
+{
+    id: "actu_2026_09_05_1",
+    date: "2026-09-05",
+    type: "actu",
+    categorie: "pharma_france",
+    titre: "Tiers payant contre biosimilaire : le dispositif est enfin opérationnel",
+    resume: "C'est parti pour de vrai. Le tiers payant conditionnel étendu aux biosimilaires et hybrides substituables est désormais opérationnel. Concrètement, si le patient refuse la substitution, il avance les frais. Voici ce qu'il faut maîtriser avant d'ouvrir le comptoir.",
+    source: "Le Pharmacien de France",
+    source_url: "https://lepharmaciendefrance.fr/tiers-payant-contre-biosimilaire-et-hybride-cest-parti/",
+    tiktok_url: "",
+    badge_label: "Pharma France",
+    image_url: "assets/img_actu_2026_09_05_1.jpg",
+    tags: ["biosimilaire", "tiers-payant", "substitution", "officine", "fspf"]
+  },
+{
+    id: "actu_2026_09_05_2",
+    date: "2026-09-05",
+    type: "actu",
+    categorie: "pharma_monde",
+    titre: "Novartis prend un coup dur : pelacarsen recale en phase pivot",
+    resume: "Grosse déconvenue pour Novartis. Son candidat cardiovasculaire pelacarsen vient d'échouer dans son étude pivot. Un revers majeur pour la firme suisse, et un signal à surveiller pour le pipeline cardio mondial.",
+    source: "STAT News",
+    source_url: "https://www.statnews.com/2026/09/04/novartis-therapy-pelacarsen-fails-cardiovascular-trial/?utm_campaign=rss",
+    tiktok_url: "",
+    badge_label: "Pharma Monde",
+    image_url: "assets/img_actu_2026_09_05_2.jpg",
+    tags: ["cardiovasculaire", "novartis", "pipeline", "innovation", "recherche"]
+  },
+{
+    id: "actu_2026_09_05_3",
+    date: "2026-09-05",
+    type: "actu",
+    categorie: "bonne_nouvelle",
+    titre: "Pfizer rejoint RECYPEN : les stylos préremplis ont désormais leur filière",
+    resume: "Bonne nouvelle pour l'environnement et pour l'image de la pharmacie. Pfizer intègre officiellement RECYPEN, le dispositif de recyclage des stylos préremplis. Un arrêté paru au Journal officiel entérine son entrée aux côtés de Sanofi et Eli Lilly.",
+    source: "Le Quotidien du Pharmacien",
+    source_url: "http://www.lequotidiendupharmacien.fr/exercice-pro/le-laboratoire-pfizer-integre-le-dispositif-recypen",
+    tiktok_url: "",
+    badge_label: "La bonne nouvelle",
+    image_url: "assets/img_actu_2026_09_05_3.jpg",
+    tags: ["recypen", "recyclage", "stylo", "officine", "environnement"]
+  },
+{
+    id: "actu_2026_09_05_4",
+    date: "2026-09-05",
+    type: "actu",
+    categorie: "avenir_pharma",
+    titre: "Psilocybine et chimio : les champignons hallucinogènes protègent les nerfs ?",
+    resume: "Une étude publiée dans Science ouvre une piste inattendue : la psilocybine pourrait prévenir la neuropathie périphérique induite par la chimiothérapie. Les données sont encore préliminaires, mais le mécanisme identifié est sérieux. À suivre de très près.",
+    source: "Sciences et Avenir",
+    source_url: "https://www.sciencesetavenir.fr/sante/et-si-les-psychedeliques-nous-permettaient-de-lutter-contre-les-effets-deleteres-de-la-chimio_194652?xtor=RSS-16",
+    tiktok_url: "",
+    badge_label: "L'avenir de la pharma",
+    image_url: "assets/img_actu_2026_09_05_4.jpg",
+    tags: ["psilocybine", "oncologie", "neuropathie", "recherche", "innovation"]
+  },
+{
+    id: "actu_2026_09_05_5",
+    date: "2026-09-05",
+    type: "actu",
+    categorie: "business_officine",
+    titre: "PLFSS 2027 : ce que les pharmaciens doivent redouter (et quoi défendre) avant fin septembre",
+    resume: "Le projet de loi de financement de la Sécurité sociale 2027 sera présenté fin septembre. Entre rabot tarifaire prévisible, indexation des franchises et virage préventif annoncé, les officines ont 3 semaines pour peser sur le texte.",
+    source: "Pharm'Actus · UPGF — PLFSS 2027 : non au rabot punitif, oui au virage préventif, France Info Santé — Franchises médicales : indexation sur l'inflation confirmée par la ministre Rist",
+    source_url: "https://www.upgf.fr/positions/plfss-2027-non-au-rabot-punitif-oui-au-virage-preventif/",
+    tiktok_url: "",
+    badge_label: "Business",
+    image_url: "assets/img_actu_2026_09_05_5.jpg",
+    tags: ["plfss", "economie-officine", "franchises-medicales", "syndicats-pharmaciens"]
+  },
+{
+    id: "lsv_2026_09_05",
+    date: "2026-09-05",
+    type: "lsv",
+    categorie: "lsv",
+    titre: "Le saviez-vous ? On mesurait la santé du foie en goûtant les selles du patient",
+    resume: "Pendant des siècles, le médecin ne se contentait pas de regarder ou de palper. Il goûtait. Les excréments, la bile, l'urine... tout passait par la langue. Et le foie était la grande star de ce diagnostic gustatif totalement sérieux.",
+    source: "Pharm'Alpha",
+    source_url: "",
+    tiktok_url: "",
+    badge_label: "Le Saviez-Vous",
+    image_url: "assets/img_lsv_2026_09_05.jpg",
+    tags: ["histoire", "diagnostic", "foie", "medecine-ancienne", "humeurs"]
+  },
 {
     id: "actu_2026_09_04_1",
     date: "2026-09-04",
@@ -2545,90 +2629,6 @@ const ARTICLES = [
     badge_label: "Pharma Monde",
     image_url: "assets/img_actu_2026_08_27_2.jpg",
     tags: ["vaccination", "zona", "cardiovasculaire", "shingrix", "recherche"]
-  },
-{
-    id: "actu_2026_08_27_3",
-    date: "2026-08-27",
-    type: "actu",
-    categorie: "bonne_nouvelle",
-    titre: "Cancer du pancréas : une première thérapie ciblée FDA approuvée",
-    resume: "La FDA vient d'approuver Rasonque, développé par Revolution Medicines, premier traitement ciblant une cause génétique du cancer du pancréas. Un comprimé, une avancée majeure pour l'une des pathologies les plus létales. Ce que ça change pour la prise en charge de demain.",
-    source: "STAT News",
-    source_url: "https://www.statnews.com/2026/08/26/pancreatic-cancer-drug-rasonque-approved/",
-    tiktok_url: "",
-    badge_label: "La bonne nouvelle",
-    image_url: "assets/img_actu_2026_08_27_3.jpg",
-    tags: ["cancer", "fda", "innovation", "oncologie", "acces-precoce"]
-  },
-{
-    id: "actu_2026_08_27_4",
-    date: "2026-08-27",
-    type: "actu",
-    categorie: "avenir_pharma",
-    titre: "Vaccin ARNm contre le mélanome : Moderna passe un cap décisif",
-    resume: "Moderna annonce des résultats très positifs pour son vaccin ARNm personnalisé contre le mélanome. La technologie qui a révolutionné le Covid-19 s'attaque maintenant aux cancers solides. Cinq choses à savoir sur cette avancée qui pourrait redéfinir l'immunothérapie.",
-    source: "Sciences et Avenir",
-    source_url: "https://www.sciencesetavenir.fr/sante/que-faut-il-savoir-sur-le-vaccin-a-arn-contre-le-melanome_194434",
-    tiktok_url: "",
-    badge_label: "L'avenir de la pharma",
-    image_url: "assets/img_actu_2026_08_27_4.jpg",
-    tags: ["arnm", "melanome", "immunotherapie", "innovation", "recherche"]
-  },
-{
-    id: "actu_2026_08_27_5",
-    date: "2026-08-27",
-    type: "actu",
-    categorie: "business_officine",
-    titre: "Fraude AM : 70 % due aux pros de santé - ce que ça change pour l'officine",
-    resume: "70 % du montant total de la fraude à l'Assurance maladie est imputable aux professionnels de santé. Un chiffre brut qui amalgame des réalités très différentes - et qui annonce un durcissement des contrôles dont les pharmaciens doivent impérativement prendre la mesure.",
-    source: "Pharm'Actus · France Info Santé — Assurance maladie, qui fraude le plus ?, CNAM — Rapport annuel de lutte contre la fraude 2024 (données structurelles citées)",
-    source_url: "https://www.franceinfo.fr/sante/assurance-maladie-qui-fraude-le-plus_8161070.html",
-    tiktok_url: "",
-    badge_label: "Business",
-    image_url: "assets/img_actu_2026_08_27_5.jpg",
-    tags: ["fraude", "assurance-maladie", "controles", "reglementation"]
-  },
-{
-    id: "lsv_2026_08_27",
-    date: "2026-08-27",
-    type: "lsv",
-    categorie: "lsv",
-    titre: "Le saviez-vous ? On soignait les maladies de peau avec de l'arsenic en bonbon",
-    resume: "Pendant près de deux siècles, l'arsenic était prescrit comme un médicament courant, présenté sous forme de pilules, de solutions buvables et même de bonbons colorés. Des milliers de patients l'avalaient chaque matin pour traiter leur psoriasis, leur eczéma ou leur asthme. Et les médecins trouvaient ça parfaitement raisonnable.",
-    source: "Pharm'Alpha",
-    source_url: "",
-    tiktok_url: "",
-    badge_label: "Le Saviez-Vous",
-    image_url: "assets/img_lsv_2026_08_27.jpg",
-    tags: ["histoire", "poison", "dermatologie", "chimie", "medicament"]
-  },
-{
-    id: "actu_2026_08_26_1",
-    date: "2026-08-26",
-    type: "actu",
-    categorie: "pharma_france",
-    titre: "Siklos : une confusion de dosage x10 et ça peut tuer",
-    resume: "L'ANSM signale un nouveau cas d'erreur médicamenteuse entre Siklos 100 mg et Siklos 1 000 mg à la délivrance. Dix fois la dose chez un enfant drépanocytaire, ce n'est pas un détail. Contrôle visuel obligatoire, maintenant.",
-    source: "Le Moniteur des Pharmacies",
-    source_url: "https://www.lemoniteurdespharmacies.fr/therapeutique/vigilances/siklos-une-nouvelle-erreur-medicamenteuse-appelle-a-la-vigilance",
-    tiktok_url: "",
-    badge_label: "Pharma France",
-    image_url: "assets/img_actu_2026_08_26_1.jpg",
-    tags: ["ansm", "vigilance", "erreur-medicamenteuse", "drepanocytose", "officine"]
-  },
-{
-    id: "actu_2026_08_26_2",
-    date: "2026-08-26",
-    type: "actu",
-    categorie: "pharma_monde",
-    titre: "Oura devant les tribunaux : la montre santé peut-elle vraiment mesurer ton sommeil ?",
-    resume: "Une class action vient d'être lancée aux États-Unis contre Oura, le fabricant de la bague connectée, pour exagération des capacités de suivi du sommeil. L'IA génère des estimations, pas des mesures cliniques. Un débat qui arrive bientôt à ton comptoir.",
-    source: "MedCity News",
-    source_url: "https://medcitynews.com/2026/08/oura-wearable-ring-lawsuit/",
-    tiktok_url: "",
-    badge_label: "Pharma Monde",
-    image_url: "assets/img_actu_2026_08_26_2.jpg",
-    tags: ["ia", "wearable", "sante-connectee", "dispositif-medical", "sommeil"]
   }
 ];
 

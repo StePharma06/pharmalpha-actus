@@ -1,64 +1,64 @@
 {
-  "generated_at": "2026-09-04",
-  "window_label": "29 aout au 4 sept. 2026",
+  "generated_at": "2026-09-05",
+  "window_label": "30 aout au 5 sept. 2026",
   "has_history": true,
   "delta_source": "pytrends_rising",
   "pathologies": [
     {
+      "display": "Assurance maladie fatigue chronique",
+      "delta_label": "↑ 354 900",
+      "trend": "up"
+    },
+    {
+      "display": "Allergie aout",
+      "delta_label": "↑ 79 100",
+      "trend": "up"
+    },
+    {
+      "display": "Corps de ferme",
+      "delta_label": "↑ 63 350",
+      "trend": "up"
+    },
+    {
       "display": "Allergie septembre",
-      "delta_label": "↑ 55 100",
-      "trend": "up"
-    },
-    {
-      "display": "Allergie au soleil symptômes",
-      "delta_label": "↑ 21 900",
-      "trend": "up"
-    },
-    {
-      "display": "Syndrome de la fatigue chronique",
-      "delta_label": "↑ 20 500",
+      "delta_label": "↑ 46 400",
       "trend": "up"
     },
     {
       "display": "Vitamine b₁₂",
-      "delta_label": "↑ 14 000",
-      "trend": "up"
-    },
-    {
-      "display": "Nausée sans vomissement et fatigue",
-      "delta_label": "↑ 11 200",
+      "delta_label": "↑ 15 350",
       "trend": "up"
     }
   ],
   "soins": [
     {
+      "display": "Eau gazeuse digestion",
+      "delta_label": "↑ 79 350",
+      "trend": "up"
+    },
+    {
       "display": "Azinc immunite",
-      "delta_label": "↑ 78 700",
+      "delta_label": "↑ 78 800",
       "trend": "up"
     },
     {
-      "display": "Digestion difficile remède grand-mère",
-      "delta_label": "↑ 51 350",
+      "display": "Digestion rapide",
+      "delta_label": "↑ 77 150",
       "trend": "up"
     },
     {
-      "display": "Digestion difficile fatigue",
-      "delta_label": "↑ 41 750",
+      "display": "Immunite diplomatique",
+      "delta_label": "↑ 43 300",
       "trend": "up"
     },
     {
-      "display": "Opérations spéciales lioness la douleur ",
-      "delta_label": "↑ 3 600",
-      "trend": "up"
-    },
-    {
-      "display": "Stylo anti douleur",
-      "delta_label": "↑ 950",
+      "display": "Eclipse et sommeil",
+      "delta_label": "↑ 13 650",
       "trend": "up"
     }
   ],
   "pathologies_stale": false,
-  "pathologies_from": "2026-09-04",
+  "pathologies_from": "2026-09-05",
   "soins_stale": false,
-  "soins_from": "2026-09-04"
+  "soins_from": "2026-09-05"
 }

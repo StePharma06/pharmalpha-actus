@@ -1,0 +1,25 @@
+{
+  "generated_at": "2026-09-05T04:07:32.675981+02:00",
+  "run_date": "2026-09-05",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "PLFSS 2027 : ce que les pharmaciens doivent redouter (et quoi défendre) avant fin septembre",
+      "resume": "Le projet de loi de financement de la Sécurité sociale 2027 sera présenté fin septembre. Entre rabot tarifaire prévisible, indexation des franchises et virage préventif annoncé, les officines ont 3 semaines pour peser sur le texte.",
+      "source": "Pharm'Actus · UPGF — PLFSS 2027 : non au rabot punitif, oui au virage préventif, France Info Santé — Franchises médicales : indexation sur l'inflation confirmée par la ministre Rist",
+      "source_url": "https://www.upgf.fr/positions/plfss-2027-non-au-rabot-punitif-oui-au-virage-preventif/",
+      "confidence_score": 0.72,
+      "warnings": [
+        "Le montant exact des baisses de prix médicaments prévues au PLFSS 2027 n'est pas encore public (texte non déposé à la date de rédaction) : les chiffres historiques 500-900 M€ sont issus de rapports LFSS et Cour des comptes antérieurs — à vérifier sur le rapport annuel exact avant publication.",
+        "Le chiffre de plafond franchise actuel (50 €/an) et de franchise unitaire (0,50 €/boîte) est celui en vigueur depuis 2008 pour les médicaments — à confirmer qu'aucune revalorisation intermédiaire n'a eu lieu entre 2008 et 2026.",
+        "La projection inflation 2-3% sur le plafond franchise est une estimation illustrative, non un chiffre officiel du gouvernement : la reformuler en conditionnel si possible.",
+        "Ni la FSPF ni l'USPO n'ont publié de position sur le PLFSS 2027 à la date de rédaction (vérification sur leurs sites respectifs recommandée avant publication).",
+        "Le chiffre 19 274 officines (IQVIA Pharmastat juin 2026) est la référence maison Pharm'Actus — cohérent avec la règle interne.",
+        "4 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

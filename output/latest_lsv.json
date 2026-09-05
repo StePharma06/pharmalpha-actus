@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? On guérissait les brûlures d'estomac avec de la craie mâchée",
-  "resume": "Avant les IPP et les anti-H2, l'acidité gastrique se combattait avec ce qu'on avait sous la main. Et pendant des siècles, 'sous la main', c'était littéralement du carbonate de calcium brut. L'ancêtre de ton Maalox, c'était du calcaire pilé vendu chez l'apothicaire.",
-  "full_text": "Ça te paraît barbare ? Attends la suite.\n\nLes Grecs de l'Antiquité avaient déjà compris un truc fondamental : quand l'estomac brûle, il faut neutraliser. Dioscoride, au 1er siècle après J.-C., recommandait la craie blanche finement pulvérisée mélangée à de l'eau de rose. Classe. Mais surtout, chimiquement, pas si faux que ça.\n\nLe carbonate de calcium - CaCO3 pour les amis - réagit avec l'acide chlorhydrique gastrique pour donner du CO2, de l'eau et du chlorure de calcium. Neutralisation basique, efficacité immédiate. La même réaction que dans ton Rennie d'aujourd'hui. Sauf que pendant 1 500 ans, la 'formule galénique', c'était un mortier, un pilon et une bonne dose de poudre blanche.\n\nLe twist ? Au XVIIIe siècle, les apothicaires ont commencé à vendre cette craie sous des noms poétiques : 'Terre de Lemnis', 'Magnésie blanche de Murray', 'Craie préparée de Londres'. Pure opération marketing avant l'heure. Certains mélangeaient avec de la menthe, du sucre, voire de l'opium pour 'calmer les spasmes'. L'opium dans l'antiacide, c'était l'époque.\n\nCe n'est qu'en 1910 que le Dr Bertram Sippy - oui, c'est son vrai nom - a formalisé un 'régime antiacide' à base de lait et de poudres alcalinisantes pour soigner l'ulcère. Le régime Sippy. Respecté pendant 60 ans. Avant qu'on réalise que le lait stimule finalement la sécrétion acide. Raté.\n\nLa vraie révolution, c'est 1977 : la cimétidine, premier anti-H2, puis les IPP dans les années 80. Et aujourd'hui, l'oméprazole est dans le top 3 des médicaments les plus délivrés en officine.\n\nLa prochaine fois qu'un patient te demande si le Maalox 'c'est vraiment de la craie', tu peux répondre : oui, et Hippocrate était d'accord.",
-  "image_keywords": "antacid chalk pharmacy",
+  "titre": "Le saviez-vous ? On mesurait la santé du foie en goûtant les selles du patient",
+  "resume": "Pendant des siècles, le médecin ne se contentait pas de regarder ou de palper. Il goûtait. Les excréments, la bile, l'urine... tout passait par la langue. Et le foie était la grande star de ce diagnostic gustatif totalement sérieux.",
+  "full_text": "Accroche-toi bien parce que celle-là, tu vas la raconter au comptoir.\n\nAu XVIIe siècle, diagnostiquer une maladie du foie, c'était une affaire de sens. Tous les sens. La médecine humorale d'Hippocrate, encore omniprésente 2 000 ans après sa mort, enseignait que le foie produisait la bile jaune et la bile noire. Et pour savoir si ces humeurs étaient en déséquilibre, le médecin avait une méthode redoutablement directe : il goûtait les selles du patient.\n\nPas métaphoriquement. Littéralement.\n\nUn foie malade produisait une bile trop amère, trop acide ou trop sucrée. Cette bile colorait et aromatisait les excréments de façon caractéristique. Des selles pâles et fades ? Obstruction biliaire. Trop amères ? Excès de bile jaune, donc tempérament colérique en crise. Étrangement sucrées ? Signe d'un foie qui « fermente » - ce qu'on appellerait aujourd'hui une cirrhose débutante, et qui n'est pas si loin de la vérité sur le fond.\n\nLe twist, c'est que cette pratique n'était pas réservée aux charlatans de foire. Elle figurait dans des traités médicaux sérieux, enseignée dans les facultés de Montpellier et de Bologne. Thomas Willis, le médecin qui a nommé le diabète « mellitus » (sucré) en 1675 après avoir goûté l'urine de ses patients, appliquait exactement la même logique. Le goût, c'était leur spectrométrie à eux.\n\nCe qui est bluffant, c'est qu'ils n'avaient pas entièrement tort. Le corps exprime vraiment des informations biochimiques dans ses sécrétions. On le sait aujourd'hui grâce aux biomarqueurs fécaux : la calprotectine dans les selles détecte une inflammation intestinale, et certains profils métaboliques dans les matières fécales peuvent orienter vers une pathologie hépatique.\n\nLa prochaine fois qu'un patient te demande à quoi servent ses analyses de selles, dis-lui qu'au moins maintenant, personne ne les goûte. C'est déjà un progrès considérable.",
+  "image_keywords": "medieval physician diagnosis",
   "tags": [
     "histoire",
-    "medicament",
-    "gastroenterologie",
-    "chimie",
-    "apothicaire"
+    "diagnostic",
+    "foie",
+    "medecine-ancienne",
+    "humeurs"
   ],
-  "date": "2026-09-04",
+  "date": "2026-09-05",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",
