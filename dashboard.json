@@ -1,21 +1,21 @@
 {
- "genere_le": "2026-09-04T09:33:45+02:00",
+ "genere_le": "2026-09-05T09:14:41+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1140,
- "nouveaux_7j": 33,
- "nouveaux_cumul": 1133,
+ "abonnes_total": 1149,
+ "nouveaux_7j": 39,
+ "nouveaux_cumul": 1142,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-08-28",
-  "au": "2026-09-04",
-  "delivres": 7176,
-  "ouvertures": 2878,
-  "ouvertures_uniques": 2158,
-  "clics": 3850,
-  "clics_uniques": 671,
-  "taux_ouverture_pct": 30.1,
-  "taux_clic_pct": 9.4,
-  "ctor_pct": 31.1,
+  "du": "2026-08-29",
+  "au": "2026-09-05",
+  "delivres": 7218,
+  "ouvertures": 2788,
+  "ouvertures_uniques": 2105,
+  "clics": 3941,
+  "clics_uniques": 673,
+  "taux_ouverture_pct": 29.2,
+  "taux_clic_pct": 9.3,
+  "ctor_pct": 32.0,
   "top_articles": [
    {
     "id": "actu_2026_09_01_1",
@@ -26,20 +26,12 @@
     "lecteurs": 69
    },
    {
-    "id": "actu_2026_08_28_3",
-    "titre": "VRS : remboursement d'Abrysvo et Beyfortus passe à 65% dès le 31 août",
-    "date": "2026-08-28",
-    "categorie": "bonne_nouvelle",
-    "clics": 106,
-    "lecteurs": 65
-   },
-   {
     "id": "actu_2026_09_03_1",
     "titre": "Eliquis générique : le premier AOD substituable débarque en officine",
     "date": "2026-09-03",
     "categorie": "pharma_france",
-    "clics": 95,
-    "lecteurs": 65
+    "clics": 96,
+    "lecteurs": 66
    },
    {
     "id": "actu_2026_09_01_2",
@@ -82,6 +74,14 @@
     "lecteurs": 48
    },
    {
+    "id": "actu_2026_09_04_1",
+    "titre": "Convention pharmaceutique : la lettre de cadrage se fait attendre, la tension monte",
+    "date": "2026-09-04",
+    "categorie": "pharma_france",
+    "clics": 72,
+    "lecteurs": 45
+   },
+   {
     "id": "actu_2026_09_01_4",
     "titre": "Hormone de grossesse et coeur : et si la relaxine ouvrait une nouvelle voie cardio ?",
     "date": "2026-09-01",
@@ -90,24 +90,24 @@
     "lecteurs": 44
    },
    {
-    "id": "actu_2026_08_28_1",
-    "titre": "Siklos 100 mg vs 1000 mg : l'ANSM sonne l'alarme après une erreur grave",
-    "date": "2026-08-28",
-    "categorie": "pharma_france",
-    "clics": 65,
-    "lecteurs": 43
+    "id": "actu_2026_09_05_3",
+    "titre": "Pfizer rejoint RECYPEN : les stylos préremplis ont désormais leur filière",
+    "date": "2026-09-05",
+    "categorie": "bonne_nouvelle",
+    "clics": 75,
+    "lecteurs": 44
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-09-04",
-  "delivres": 97463,
-  "ouvertures": 39367,
-  "ouvertures_uniques": 27274,
-  "clics": 40915,
-  "clics_uniques": 7410,
-  "taux_ouverture_pct": 28.0,
+  "au": "2026-09-05",
+  "delivres": 98486,
+  "ouvertures": 39675,
+  "ouvertures_uniques": 27495,
+  "clics": 41440,
+  "clics_uniques": 7489,
+  "taux_ouverture_pct": 27.9,
   "taux_clic_pct": 7.6,
   "ctor_pct": 27.2,
   "top_articles": [
@@ -168,19 +168,19 @@
     "lecteurs": 66
    },
    {
+    "id": "actu_2026_09_03_1",
+    "titre": "Eliquis générique : le premier AOD substituable débarque en officine",
+    "date": "2026-09-03",
+    "categorie": "pharma_france",
+    "clics": 96,
+    "lecteurs": 66
+   },
+   {
     "id": "actu_2026_08_28_3",
     "titre": "VRS : remboursement d'Abrysvo et Beyfortus passe à 65% dès le 31 août",
     "date": "2026-08-28",
     "categorie": "bonne_nouvelle",
     "clics": 106,
-    "lecteurs": 65
-   },
-   {
-    "id": "actu_2026_09_03_1",
-    "titre": "Eliquis générique : le premier AOD substituable débarque en officine",
-    "date": "2026-09-03",
-    "categorie": "pharma_france",
-    "clics": 95,
     "lecteurs": 65
    },
    {
