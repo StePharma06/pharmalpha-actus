@@ -1,21 +1,21 @@
 {
- "genere_le": "2026-09-05T09:14:41+02:00",
+ "genere_le": "2026-09-06T09:26:33+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1149,
- "nouveaux_7j": 39,
- "nouveaux_cumul": 1142,
+ "abonnes_total": 1151,
+ "nouveaux_7j": 37,
+ "nouveaux_cumul": 1144,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-08-29",
-  "au": "2026-09-05",
-  "delivres": 7218,
-  "ouvertures": 2788,
-  "ouvertures_uniques": 2105,
-  "clics": 3941,
-  "clics_uniques": 673,
-  "taux_ouverture_pct": 29.2,
-  "taux_clic_pct": 9.3,
-  "ctor_pct": 32.0,
+  "du": "2026-08-30",
+  "au": "2026-09-06",
+  "delivres": 6240,
+  "ouvertures": 2638,
+  "ouvertures_uniques": 1959,
+  "clics": 3511,
+  "clics_uniques": 621,
+  "taux_ouverture_pct": 31.4,
+  "taux_clic_pct": 10.0,
+  "ctor_pct": 31.7,
   "top_articles": [
    {
     "id": "actu_2026_09_01_1",
@@ -42,19 +42,11 @@
     "lecteurs": 61
    },
    {
-    "id": "actu_2026_08_29_1",
-    "titre": "Salaires officine : FO sort les cartes postales, la branche sociale coince",
-    "date": "2026-08-29",
-    "categorie": "pharma_france",
-    "clics": 98,
-    "lecteurs": 58
-   },
-   {
     "id": "actu_2026_08_31_1",
     "titre": "Biosimilaires : 150 millions d'euros sur la table, t'es prêt ?",
     "date": "2026-08-31",
     "categorie": "pharma_france",
-    "clics": 75,
+    "clics": 77,
     "lecteurs": 54
    },
    {
@@ -70,7 +62,7 @@
     "titre": "Rentrée et asthme de l'enfant : ton comptoir peut faire la différence",
     "date": "2026-08-31",
     "categorie": "bonne_nouvelle",
-    "clics": 76,
+    "clics": 78,
     "lecteurs": 48
    },
    {
@@ -94,6 +86,14 @@
     "titre": "Pfizer rejoint RECYPEN : les stylos préremplis ont désormais leur filière",
     "date": "2026-09-05",
     "categorie": "bonne_nouvelle",
+    "clics": 77,
+    "lecteurs": 44
+   },
+   {
+    "id": "actu_2026_09_05_1",
+    "titre": "Tiers payant contre biosimilaire : le dispositif est enfin opérationnel",
+    "date": "2026-09-05",
+    "categorie": "pharma_france",
     "clics": 75,
     "lecteurs": 44
    }
@@ -101,13 +101,13 @@
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-09-05",
-  "delivres": 98486,
-  "ouvertures": 39675,
-  "ouvertures_uniques": 27495,
-  "clics": 41440,
-  "clics_uniques": 7489,
-  "taux_ouverture_pct": 27.9,
+  "au": "2026-09-06",
+  "delivres": 98487,
+  "ouvertures": 39820,
+  "ouvertures_uniques": 27575,
+  "clics": 41493,
+  "clics_uniques": 7496,
+  "taux_ouverture_pct": 28.0,
   "taux_clic_pct": 7.6,
   "ctor_pct": 27.2,
   "top_articles": [
