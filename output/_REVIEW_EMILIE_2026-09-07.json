@@ -1,0 +1,48 @@
+{
+  "generated_at": "2026-09-07T04:07:54.371145+02:00",
+  "run_date": "2026-09-07",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Wegovy oral autorisé en Allemagne : la France peut-elle encore attendre ?",
+      "resume": "L'Allemagne devient le premier pays de l'UE à autoriser le sémaglutide oral dans l'obésité. En France, on attend encore. Mais la pression réglementaire et commerciale va s'accélérer.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/medicament-parapharmacie/dietetique-et-nutrition/la-forme-orale-de-wegovy-autorisee-en-allemagne",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "Biosimilaires substituables : l'USPO sort la fiche pratique qu'on attendait",
+      "resume": "Extension du tiers payant contre génériques aux biosimilaires et hybrides substituables : l'USPO publie une fiche pratique opérationnelle. Concret, utile, à mettre direct dans la main de ton équipe.",
+      "source": "USPO",
+      "source_url": "https://uspo.fr/biosimilaires-fiche-pratique/",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Avenant n°3 : ce que la rentrée conventionnelle va changer pour ta trésorerie",
+      "resume": "La FSPF et la CNAM ont ouvert les négociations de l'avenant n°3. Entretiens pharmaceutiques élargis, lettre de cadrage toujours attendue : le business model de 19 274 officines est en jeu dès cet automne.",
+      "source": "Pharm'Actus · Le Pharmacien de France – La lettre de cadrage se fait attendre, FSPF – Économie de l'officine : un rattrapage des mauvais chiffres du mois de mai",
+      "source_url": "https://lepharmaciendefrance.fr/la-lettre-de-cadrage-se-fait-attendre/",
+      "confidence_score": 0.72,
+      "warnings": [
+        "Le chiffre de ROSP moyenne par officine (7 000–8 000 €/an) est une estimation citée comme provenant de données FSPF : vérifier sur le rapport annuel CNAM ou le tableau de bord économique FSPF avant publication.",
+        "Le tarif exact des entretiens pharmaceutiques (40€/30€ AVK-AOD, asthme ; 60€/30€ BPM) est issu de la convention pharmaceutique en vigueur : vérifier qu'aucun avenant postérieur n'a modifié ces montants avant de les publier.",
+        "Les pathologies pressenties pour l'extension (diabète type 2, insuffisance cardiaque, insuffisance rénale) ne sont pas explicitement nommées dans les sources disponibles : présentées comme 'pistes les plus citées', formulation prudente maintenue.",
+        "L'USPO et l'UPGF n'ont pas été trouvées en position publique sur ce dossier dans les sources disponibles : vérifier leurs sites officiels avant publication pour s'assurer de l'exactitude de cette mention.",
+        "Le CA de 2 595 M€ en juin 2026 (médicaments remboursables AMM) est issu du tableau de bord FSPF : chiffre cité tel quel, sans retraitement.",
+        "Le chiffre de 19 274 officines est la donnée structurelle de référence IQVIA Pharmastat juin 2026.",
+        "7 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

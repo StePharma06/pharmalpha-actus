@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? On mesurait la santé du foie en goûtant les selles du patient",
-  "resume": "Pendant des siècles, le médecin ne se contentait pas de regarder ou de palper. Il goûtait. Les excréments, la bile, l'urine... tout passait par la langue. Et le foie était la grande star de ce diagnostic gustatif totalement sérieux.",
-  "full_text": "Accroche-toi bien parce que celle-là, tu vas la raconter au comptoir.\n\nAu XVIIe siècle, diagnostiquer une maladie du foie, c'était une affaire de sens. Tous les sens. La médecine humorale d'Hippocrate, encore omniprésente 2 000 ans après sa mort, enseignait que le foie produisait la bile jaune et la bile noire. Et pour savoir si ces humeurs étaient en déséquilibre, le médecin avait une méthode redoutablement directe : il goûtait les selles du patient.\n\nPas métaphoriquement. Littéralement.\n\nUn foie malade produisait une bile trop amère, trop acide ou trop sucrée. Cette bile colorait et aromatisait les excréments de façon caractéristique. Des selles pâles et fades ? Obstruction biliaire. Trop amères ? Excès de bile jaune, donc tempérament colérique en crise. Étrangement sucrées ? Signe d'un foie qui « fermente » - ce qu'on appellerait aujourd'hui une cirrhose débutante, et qui n'est pas si loin de la vérité sur le fond.\n\nLe twist, c'est que cette pratique n'était pas réservée aux charlatans de foire. Elle figurait dans des traités médicaux sérieux, enseignée dans les facultés de Montpellier et de Bologne. Thomas Willis, le médecin qui a nommé le diabète « mellitus » (sucré) en 1675 après avoir goûté l'urine de ses patients, appliquait exactement la même logique. Le goût, c'était leur spectrométrie à eux.\n\nCe qui est bluffant, c'est qu'ils n'avaient pas entièrement tort. Le corps exprime vraiment des informations biochimiques dans ses sécrétions. On le sait aujourd'hui grâce aux biomarqueurs fécaux : la calprotectine dans les selles détecte une inflammation intestinale, et certains profils métaboliques dans les matières fécales peuvent orienter vers une pathologie hépatique.\n\nLa prochaine fois qu'un patient te demande à quoi servent ses analyses de selles, dis-lui qu'au moins maintenant, personne ne les goûte. C'est déjà un progrès considérable.",
-  "image_keywords": "medieval physician diagnosis",
+  "titre": "Le saviez-vous ? On mesurait la santé du cœur en regardant les ongles",
+  "resume": "Avant les ECG et les tensiomètres, les médecins avaient une technique redoutable pour évaluer la circulation sanguine : observer attentivement les ongles du patient. Simple, gratuit, et parfois remarquablement efficace. Mais la méthode cachait un détail que personne n'avait anticipé.",
+  "full_text": "Avant les stéthoscopes, les ECG et les saturomètres, le médecin avait pour tout instrument... ses yeux. Et ses yeux, il les posait souvent sur les ongles du patient.\n\nDès le XVIIe siècle, les médecins européens observaient la couleur, la forme et la texture des ongles pour diagnostiquer les maladies cardiaques et respiratoires. Un ongle bleuté ? Signe de mauvaise oxygénation du sang. Des ongles en verre de montre, bombés comme une loupe ? On soupçonnait une maladie pulmonaire chronique ou une cardiopathie congénitale. C'était empirique, mais pas stupide.\n\nLe twist ? Ce signe des ongles en verre de montre, qu'on appelle aujourd'hui \"hippocratisme digital\", tire son nom d'Hippocrate lui-même, qui l'avait décrit 400 ans avant Jésus-Christ chez des patients atteints d'empyème pulmonaire. Pendant plus de 2 000 ans, les médecins l'ont utilisé... sans comprendre pourquoi ça marchait. Ce n'est qu'au XXe siècle qu'on a identifié le mécanisme : la prolifération anormale de tissu conjonctif sous l'ongle, liée à une hypoxie chronique ou à des médiateurs inflammatoires.\n\nEncore plus fort : en 1950, un médecin britannique nommé William Evans a publié une étude montrant que l'examen des ongles permettait de prédire certaines valvulopathies avec une précision étonnante, sans le moindre appareil. Il trouvait que ses collègues passaient trop de temps sur leurs machines et plus assez sur leurs patients.\n\nAujourd'hui, l'hippocratisme digital reste un signe clinique enseigné dans toutes les facultés de médecine. Et au comptoir, si un patient te montre des ongles bombés et bleutés en demandant une crème hydratante, tu sais quoi faire : poser des questions, pas juste vendre une crème.",
+  "image_keywords": "fingernails medical examination",
   "tags": [
     "histoire",
     "diagnostic",
-    "foie",
-    "medecine-ancienne",
-    "humeurs"
+    "cardiologie",
+    "semiologie",
+    "instrument"
   ],
-  "date": "2026-09-05",
+  "date": "2026-09-07",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",

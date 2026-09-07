@@ -1,64 +1,64 @@
 {
-  "generated_at": "2026-09-05",
-  "window_label": "30 aout au 5 sept. 2026",
+  "generated_at": "2026-09-07",
+  "window_label": "1 sept. au 7 sept. 2026",
   "has_history": true,
   "delta_source": "pytrends_rising",
   "pathologies": [
     {
       "display": "Assurance maladie fatigue chronique",
-      "delta_label": "↑ 354 900",
-      "trend": "up"
-    },
-    {
-      "display": "Allergie aout",
-      "delta_label": "↑ 79 100",
-      "trend": "up"
-    },
-    {
-      "display": "Corps de ferme",
-      "delta_label": "↑ 63 350",
+      "delta_label": "↑ 357 500",
       "trend": "up"
     },
     {
       "display": "Allergie septembre",
-      "delta_label": "↑ 46 400",
+      "delta_label": "↑ 61 150",
+      "trend": "up"
+    },
+    {
+      "display": "Allergie figue",
+      "delta_label": "↑ 33 450",
+      "trend": "up"
+    },
+    {
+      "display": "Pommeau de douche vitamine c",
+      "delta_label": "↑ 16 400",
       "trend": "up"
     },
     {
       "display": "Vitamine b₁₂",
-      "delta_label": "↑ 15 350",
+      "delta_label": "↑ 11 100",
       "trend": "up"
     }
   ],
   "soins": [
     {
-      "display": "Eau gazeuse digestion",
-      "delta_label": "↑ 79 350",
-      "trend": "up"
-    },
-    {
       "display": "Azinc immunite",
-      "delta_label": "↑ 78 800",
-      "trend": "up"
-    },
-    {
-      "display": "Digestion rapide",
-      "delta_label": "↑ 77 150",
+      "delta_label": "↑ 373 000",
       "trend": "up"
     },
     {
       "display": "Immunite diplomatique",
-      "delta_label": "↑ 43 300",
+      "delta_label": "↑ 44 200",
       "trend": "up"
     },
     {
-      "display": "Eclipse et sommeil",
-      "delta_label": "↑ 13 650",
+      "display": "Medicament pour la digestion",
+      "delta_label": "↑ 26 700",
+      "trend": "up"
+    },
+    {
+      "display": "Digestion difficile fatigue",
+      "delta_label": "↑ 23 200",
+      "trend": "up"
+    },
+    {
+      "display": "L'univers du sommeil",
+      "delta_label": "↑ 9 500",
       "trend": "up"
     }
   ],
   "pathologies_stale": false,
-  "pathologies_from": "2026-09-05",
+  "pathologies_from": "2026-09-07",
   "soins_stale": false,
-  "soins_from": "2026-09-05"
+  "soins_from": "2026-09-07"
 }
