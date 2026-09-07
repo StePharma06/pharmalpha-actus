@@ -1,28 +1,36 @@
 {
- "genere_le": "2026-09-06T09:26:33+02:00",
+ "genere_le": "2026-09-07T09:42:53+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1151,
- "nouveaux_7j": 37,
- "nouveaux_cumul": 1144,
+ "abonnes_total": 1157,
+ "nouveaux_7j": 36,
+ "nouveaux_cumul": 1150,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-08-30",
-  "au": "2026-09-06",
-  "delivres": 6240,
-  "ouvertures": 2638,
-  "ouvertures_uniques": 1959,
-  "clics": 3511,
-  "clics_uniques": 621,
-  "taux_ouverture_pct": 31.4,
+  "du": "2026-08-31",
+  "au": "2026-09-07",
+  "delivres": 7515,
+  "ouvertures": 3013,
+  "ouvertures_uniques": 2262,
+  "clics": 4269,
+  "clics_uniques": 750,
+  "taux_ouverture_pct": 30.1,
   "taux_clic_pct": 10.0,
-  "ctor_pct": 31.7,
+  "ctor_pct": 33.2,
   "top_articles": [
+   {
+    "id": "actu_2026_09_05_1",
+    "titre": "Tiers payant contre biosimilaire : le dispositif est enfin opérationnel",
+    "date": "2026-09-05",
+    "categorie": "pharma_france",
+    "clics": 128,
+    "lecteurs": 74
+   },
    {
     "id": "actu_2026_09_01_1",
     "titre": "Tiers payant contre biosimilaire : ce qui change dès aujourd'hui au comptoir",
     "date": "2026-09-01",
     "categorie": "pharma_france",
-    "clics": 96,
+    "clics": 98,
     "lecteurs": 69
    },
    {
@@ -34,11 +42,19 @@
     "lecteurs": 66
    },
    {
+    "id": "actu_2026_09_04_3",
+    "titre": "Septembre Turquoise : tes affiches anti-cancers gynecos sont disponibles, sers-t'en",
+    "date": "2026-09-04",
+    "categorie": "bonne_nouvelle",
+    "clics": 119,
+    "lecteurs": 61
+   },
+   {
     "id": "actu_2026_09_01_2",
     "titre": "Trump négocie les prix des médicaments : 9 labos de plus au pied du mur",
     "date": "2026-09-01",
     "categorie": "pharma_monde",
-    "clics": 101,
+    "clics": 103,
     "lecteurs": 61
    },
    {
@@ -58,58 +74,42 @@
     "lecteurs": 51
    },
    {
-    "id": "actu_2026_08_31_3",
-    "titre": "Rentrée et asthme de l'enfant : ton comptoir peut faire la différence",
-    "date": "2026-08-31",
+    "id": "actu_2026_09_07_3",
+    "titre": "Biosimilaires substituables : l'USPO sort la fiche pratique qu'on attendait",
+    "date": "2026-09-07",
     "categorie": "bonne_nouvelle",
     "clics": 78,
-    "lecteurs": 48
+    "lecteurs": 50
    },
    {
-    "id": "actu_2026_09_04_1",
-    "titre": "Convention pharmaceutique : la lettre de cadrage se fait attendre, la tension monte",
+    "id": "actu_2026_09_04_4",
+    "titre": "Vaccination HPV : les pharmaciens ont les cartes en main pour faire grimper la couverture",
     "date": "2026-09-04",
-    "categorie": "pharma_france",
-    "clics": 72,
-    "lecteurs": 45
-   },
-   {
-    "id": "actu_2026_09_01_4",
-    "titre": "Hormone de grossesse et coeur : et si la relaxine ouvrait une nouvelle voie cardio ?",
-    "date": "2026-09-01",
     "categorie": "avenir_pharma",
-    "clics": 78,
-    "lecteurs": 44
+    "clics": 86,
+    "lecteurs": 49
    },
    {
-    "id": "actu_2026_09_05_3",
-    "titre": "Pfizer rejoint RECYPEN : les stylos préremplis ont désormais leur filière",
+    "id": "actu_2026_09_05_5",
+    "titre": "PLFSS 2027 : ce que les pharmaciens doivent redouter (et quoi défendre) avant fin septembre",
     "date": "2026-09-05",
-    "categorie": "bonne_nouvelle",
-    "clics": 77,
-    "lecteurs": 44
-   },
-   {
-    "id": "actu_2026_09_05_1",
-    "titre": "Tiers payant contre biosimilaire : le dispositif est enfin opérationnel",
-    "date": "2026-09-05",
-    "categorie": "pharma_france",
-    "clics": 75,
-    "lecteurs": 44
+    "categorie": "business_officine",
+    "clics": 79,
+    "lecteurs": 48
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-09-06",
-  "delivres": 98487,
-  "ouvertures": 39820,
-  "ouvertures_uniques": 27575,
-  "clics": 41493,
-  "clics_uniques": 7496,
+  "au": "2026-09-07",
+  "delivres": 99762,
+  "ouvertures": 40262,
+  "ouvertures_uniques": 27909,
+  "clics": 42256,
+  "clics_uniques": 7631,
   "taux_ouverture_pct": 28.0,
   "taux_clic_pct": 7.6,
-  "ctor_pct": 27.2,
+  "ctor_pct": 27.3,
   "top_articles": [
    {
     "id": "actu_2026_06_18_1",
@@ -128,6 +128,14 @@
     "lecteurs": 74
    },
    {
+    "id": "actu_2026_09_05_1",
+    "titre": "Tiers payant contre biosimilaire : le dispositif est enfin opérationnel",
+    "date": "2026-09-05",
+    "categorie": "pharma_france",
+    "clics": 128,
+    "lecteurs": 74
+   },
+   {
     "id": "actu_2026_08_12_1",
     "titre": "actu_2026_08_12_1",
     "date": "",
@@ -137,9 +145,9 @@
    },
    {
     "id": "actu_2026_08_27_2",
-    "titre": "Zostavax est mort, Shingrix protège ton coeur et ton cerveau",
-    "date": "2026-08-27",
-    "categorie": "pharma_monde",
+    "titre": "actu_2026_08_27_2",
+    "date": "",
+    "categorie": "",
     "clics": 121,
     "lecteurs": 69
    },
@@ -148,7 +156,7 @@
     "titre": "Tiers payant contre biosimilaire : ce qui change dès aujourd'hui au comptoir",
     "date": "2026-09-01",
     "categorie": "pharma_france",
-    "clics": 96,
+    "clics": 98,
     "lecteurs": 69
    },
    {
@@ -177,19 +185,11 @@
    },
    {
     "id": "actu_2026_08_28_3",
-    "titre": "VRS : remboursement d'Abrysvo et Beyfortus passe à 65% dès le 31 août",
-    "date": "2026-08-28",
-    "categorie": "bonne_nouvelle",
-    "clics": 106,
-    "lecteurs": 65
-   },
-   {
-    "id": "actu_2026_07_04_1",
-    "titre": "actu_2026_07_04_1",
+    "titre": "actu_2026_08_28_3",
     "date": "",
     "categorie": "",
-    "clics": 100,
-    "lecteurs": 64
+    "clics": 106,
+    "lecteurs": 65
    }
   ]
  }
