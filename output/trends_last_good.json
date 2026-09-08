@@ -1,58 +1,58 @@
 {
   "pathologies": [
     {
-      "display": "Assurance maladie fatigue chronique",
-      "delta_label": "↑ 357 500",
-      "trend": "up"
-    },
-    {
-      "display": "Allergie septembre",
-      "delta_label": "↑ 61 150",
-      "trend": "up"
-    },
-    {
       "display": "Allergie figue",
-      "delta_label": "↑ 33 450",
+      "delta_label": "↑ 32 750",
+      "trend": "up"
+    },
+    {
+      "display": "Le syndrome de fatigue chronique",
+      "delta_label": "↑ 21 250",
+      "trend": "up"
+    },
+    {
+      "display": "Allergie alimentaire symptome",
+      "delta_label": "↑ 20 050",
       "trend": "up"
     },
     {
       "display": "Pommeau de douche vitamine c",
-      "delta_label": "↑ 16 400",
+      "delta_label": "↑ 13 950",
       "trend": "up"
     },
     {
-      "display": "Vitamine b₁₂",
-      "delta_label": "↑ 11 100",
+      "display": "Fatigue extreme que faire",
+      "delta_label": "↑ 7 450",
       "trend": "up"
     }
   ],
-  "pathologies_from": "2026-09-07",
+  "pathologies_from": "2026-09-08",
   "soins": [
     {
       "display": "Azinc immunite",
-      "delta_label": "↑ 373 000",
+      "delta_label": "↑ 58 450",
       "trend": "up"
     },
     {
-      "display": "Immunite diplomatique",
-      "delta_label": "↑ 44 200",
+      "display": "Upsa digestion",
+      "delta_label": "↑ 50 350",
       "trend": "up"
     },
     {
-      "display": "Medicament pour la digestion",
-      "delta_label": "↑ 26 700",
+      "display": "Quinoa digestion",
+      "delta_label": "↑ 47 050",
       "trend": "up"
     },
     {
-      "display": "Digestion difficile fatigue",
-      "delta_label": "↑ 23 200",
+      "display": "Immunite familiale",
+      "delta_label": "↑ 33 900",
       "trend": "up"
     },
     {
-      "display": "L'univers du sommeil",
-      "delta_label": "↑ 9 500",
+      "display": "Eclipse et sommeil",
+      "delta_label": "↑ 14 800",
       "trend": "up"
     }
   ],
-  "soins_from": "2026-09-07"
+  "soins_from": "2026-09-08"
 }

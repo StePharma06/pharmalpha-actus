@@ -1,0 +1,48 @@
+{
+  "generated_at": "2026-09-08T04:07:17.160184+02:00",
+  "run_date": "2026-09-08",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Mesure de la tension artérielle : 15 euros pour le pharmacien, et ça fait déjà des jaloux",
+      "resume": "Une rémunération à 15 euros par acte pour la mesure de tension artérielle en officine circule avant même que la négociation soit ouverte. Les syndicats de médecins et d'infirmiers montent au créneau. Le pharmacien, lui, attend que ça se concrétise.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/tension-arterielle-en-attente-de-negociation-la-remuneration-exaspere-deja-medecins-et-infirmiers",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Rapport Cour des comptes : la vaccination, un marché de 500 M€ que l'officine peut capturer",
+      "resume": "La Cour des comptes vient de publier un rapport sévère sur la politique vaccinale française depuis 2018. Des millions de Français ne connaissent pas leur statut vaccinal. Pour l'officine, c'est un gisement business concret, pas une abstraction.",
+      "source": "Pharm'Actus · Cour des comptes — Rapport sur la politique vaccinale depuis 2018 (via France Info Santé, 07/09/2026), France Info Santé — Alain Fischer sur les carnets papier (07/09/2026)",
+      "source_url": "https://www.franceinfo.fr/sante/vaccins/faites-vous-partie-des-francais-qui-ne-savent-pas-s-ils-sont-a-jour-sur-leurs-vaccins_8181002.html",
+      "confidence_score": 0.72,
+      "warnings": [
+        "Le montant de l'honoraire de vaccination en officine (9,60 € TTC) est celui issu de l'avenant n°21 — à vérifier que ce tarif est toujours en vigueur à la date de publication et qu'il n'a pas été révisé par un avenant ultérieur non référencé ici.",
+        "Le calcul de 9,6 M€/an (1 acte supplémentaire/semaine × 19 274 officines × 9,60 €) est une extrapolation illustrative, non sourcée : il est présenté comme un ordre de grandeur pédagogique, pas comme un chiffre officiellement publié. À mentionner clairement si l'article est relu par un syndicat.",
+        "Le taux de couverture grippale chez les 65 ans et plus (~52 %) est attribué à Santé publique France : vérifier la dernière donnée publiée, ce chiffre peut varier d'une saison à l'autre.",
+        "Le taux de couverture zona (<30 %) est une estimation HAS : préciser si un chiffre officiel plus récent est disponible.",
+        "Le rapport complet de la Cour des comptes n'a pas été consulté directement — l'analyse repose sur les résumés presse disponibles dans les sources. Certains détails du rapport (chiffres précis, recommandations officielles) mériteraient vérification sur le site de la Cour des comptes.",
+        "Aucun syndicat (FSPF, USPO, UPGF) n'est cité car l'article ne s'appuie pas sur une prise de position syndicale mais sur un rapport institutionnel — la règle d'équilibre syndical ne s'applique donc pas ici, mais à vérifier si des réactions syndicales au rapport paraissent d'ici la publication.",
+        "4 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    },
+    {
+      "id": "",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? On mesurait la qualité de l'air... avec des canaris",
+      "resume": "Avant les appareils de mesure, les mineurs descendaient dans les puits avec un oiseau en cage. Si le canari s'évanouissait, il était temps de remonter. Et cette pratique a directement influencé la médecine du travail moderne.",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    }
+  ]
+}
