@@ -1,20 +1,20 @@
 {
- "genere_le": "2026-09-07T09:42:53+02:00",
+ "genere_le": "2026-09-08T09:35:52+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1157,
- "nouveaux_7j": 36,
- "nouveaux_cumul": 1150,
+ "abonnes_total": 1158,
+ "nouveaux_7j": 32,
+ "nouveaux_cumul": 1151,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-08-31",
-  "au": "2026-09-07",
-  "delivres": 7515,
-  "ouvertures": 3013,
-  "ouvertures_uniques": 2262,
-  "clics": 4269,
-  "clics_uniques": 750,
-  "taux_ouverture_pct": 30.1,
-  "taux_clic_pct": 10.0,
+  "du": "2026-09-01",
+  "au": "2026-09-08",
+  "delivres": 7328,
+  "ouvertures": 2970,
+  "ouvertures_uniques": 2163,
+  "clics": 4107,
+  "clics_uniques": 719,
+  "taux_ouverture_pct": 29.5,
+  "taux_clic_pct": 9.8,
   "ctor_pct": 33.2,
   "top_articles": [
    {
@@ -22,8 +22,8 @@
     "titre": "Tiers payant contre biosimilaire : le dispositif est enfin opérationnel",
     "date": "2026-09-05",
     "categorie": "pharma_france",
-    "clics": 128,
-    "lecteurs": 74
+    "clics": 136,
+    "lecteurs": 77
    },
    {
     "id": "actu_2026_09_01_1",
@@ -32,6 +32,14 @@
     "categorie": "pharma_france",
     "clics": 98,
     "lecteurs": 69
+   },
+   {
+    "id": "actu_2026_09_07_3",
+    "titre": "Biosimilaires substituables : l'USPO sort la fiche pratique qu'on attendait",
+    "date": "2026-09-07",
+    "categorie": "bonne_nouvelle",
+    "clics": 107,
+    "lecteurs": 68
    },
    {
     "id": "actu_2026_09_03_1",
@@ -46,8 +54,8 @@
     "titre": "Septembre Turquoise : tes affiches anti-cancers gynecos sont disponibles, sers-t'en",
     "date": "2026-09-04",
     "categorie": "bonne_nouvelle",
-    "clics": 119,
-    "lecteurs": 61
+    "clics": 120,
+    "lecteurs": 62
    },
    {
     "id": "actu_2026_09_01_2",
@@ -58,58 +66,50 @@
     "lecteurs": 61
    },
    {
-    "id": "actu_2026_08_31_1",
-    "titre": "Biosimilaires : 150 millions d'euros sur la table, t'es prêt ?",
-    "date": "2026-08-31",
-    "categorie": "pharma_france",
-    "clics": 77,
-    "lecteurs": 54
-   },
-   {
-    "id": "actu_2026_09_02_1",
-    "titre": "Tiers payant contre biosimilaires : ça démarre aujourd'hui, t'es prêt ?",
-    "date": "2026-09-02",
-    "categorie": "pharma_france",
-    "clics": 92,
-    "lecteurs": 51
-   },
-   {
-    "id": "actu_2026_09_07_3",
-    "titre": "Biosimilaires substituables : l'USPO sort la fiche pratique qu'on attendait",
-    "date": "2026-09-07",
-    "categorie": "bonne_nouvelle",
-    "clics": 78,
-    "lecteurs": 50
+    "id": "actu_2026_09_05_5",
+    "titre": "PLFSS 2027 : ce que les pharmaciens doivent redouter (et quoi défendre) avant fin septembre",
+    "date": "2026-09-05",
+    "categorie": "business_officine",
+    "clics": 89,
+    "lecteurs": 55
    },
    {
     "id": "actu_2026_09_04_4",
     "titre": "Vaccination HPV : les pharmaciens ont les cartes en main pour faire grimper la couverture",
     "date": "2026-09-04",
     "categorie": "avenir_pharma",
-    "clics": 86,
-    "lecteurs": 49
+    "clics": 92,
+    "lecteurs": 53
    },
    {
-    "id": "actu_2026_09_05_5",
-    "titre": "PLFSS 2027 : ce que les pharmaciens doivent redouter (et quoi défendre) avant fin septembre",
-    "date": "2026-09-05",
-    "categorie": "business_officine",
-    "clics": 79,
-    "lecteurs": 48
+    "id": "actu_2026_09_02_1",
+    "titre": "Tiers payant contre biosimilaires : ça démarre aujourd'hui, t'es prêt ?",
+    "date": "2026-09-02",
+    "categorie": "pharma_france",
+    "clics": 94,
+    "lecteurs": 51
+   },
+   {
+    "id": "actu_2026_09_02_2",
+    "titre": "Anti-VIH injectables longue durée : les données réelles confirment la supériorité sur l'oral",
+    "date": "2026-09-02",
+    "categorie": "pharma_monde",
+    "clics": 106,
+    "lecteurs": 47
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-09-07",
-  "delivres": 99762,
-  "ouvertures": 40262,
-  "ouvertures_uniques": 27909,
-  "clics": 42256,
-  "clics_uniques": 7631,
+  "au": "2026-09-08",
+  "delivres": 100794,
+  "ouvertures": 40777,
+  "ouvertures_uniques": 28236,
+  "clics": 42790,
+  "clics_uniques": 7742,
   "taux_ouverture_pct": 28.0,
-  "taux_clic_pct": 7.6,
-  "ctor_pct": 27.3,
+  "taux_clic_pct": 7.7,
+  "ctor_pct": 27.4,
   "top_articles": [
    {
     "id": "actu_2026_06_18_1",
@@ -120,19 +120,19 @@
     "lecteurs": 78
    },
    {
+    "id": "actu_2026_09_05_1",
+    "titre": "Tiers payant contre biosimilaire : le dispositif est enfin opérationnel",
+    "date": "2026-09-05",
+    "categorie": "pharma_france",
+    "clics": 136,
+    "lecteurs": 77
+   },
+   {
     "id": "actu_2026_06_23_1",
     "titre": "actu_2026_06_23_1",
     "date": "",
     "categorie": "",
     "clics": 134,
-    "lecteurs": 74
-   },
-   {
-    "id": "actu_2026_09_05_1",
-    "titre": "Tiers payant contre biosimilaire : le dispositif est enfin opérationnel",
-    "date": "2026-09-05",
-    "categorie": "pharma_france",
-    "clics": 128,
     "lecteurs": 74
    },
    {
@@ -160,6 +160,14 @@
     "lecteurs": 69
    },
    {
+    "id": "actu_2026_09_07_3",
+    "titre": "Biosimilaires substituables : l'USPO sort la fiche pratique qu'on attendait",
+    "date": "2026-09-07",
+    "categorie": "bonne_nouvelle",
+    "clics": 107,
+    "lecteurs": 68
+   },
+   {
     "id": "actu_2026_06_23_2",
     "titre": "actu_2026_06_23_2",
     "date": "",
@@ -182,14 +190,6 @@
     "categorie": "pharma_france",
     "clics": 96,
     "lecteurs": 66
-   },
-   {
-    "id": "actu_2026_08_28_3",
-    "titre": "actu_2026_08_28_3",
-    "date": "",
-    "categorie": "",
-    "clics": 106,
-    "lecteurs": 65
    }
   ]
  }
