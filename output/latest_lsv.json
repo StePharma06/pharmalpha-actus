@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? On mesurait la qualité de l'air... avec des canaris",
-  "resume": "Avant les appareils de mesure, les mineurs descendaient dans les puits avec un oiseau en cage. Si le canari s'évanouissait, il était temps de remonter. Et cette pratique a directement influencé la médecine du travail moderne.",
-  "full_text": "Pendant des siècles, descendre dans une mine c'était jouer à la roulette russe. Le vrai danger, c'était pas l'effondrement. C'était l'invisible : le monoxyde de carbone, le méthane, le gaz carbonique. Des gaz sans odeur, sans couleur, qui assommaient les mineurs avant qu'ils aient le temps de dire ouf.\n\nAlors les Britanniques ont trouvé une solution aussi simple que radicale. Depuis les années 1880, chaque équipe descendait avec un canari en cage. Pourquoi le canari ? Parce que son métabolisme est deux fois plus rapide que celui d'un humain. Il consomme plus d'oxygène, il élimine plus vite le CO2, et surtout il réagit au monoxyde de carbone avant que les hommes ne ressentent quoi que ce soit. Le canari chancelait, tombait du perchoir : signal d'alarme immédiat, évacuation générale.\n\nLe twist ? Ces petits oiseaux jaunes avaient leur propre équipement de survie. Les mines anglaises ont développé des cages spéciales avec un réservoir d'oxygène intégré. Quand le canari s'effondrait, le mineur activait la valve, l'oiseau récupérait, et tout le monde rentrait vivant. Les canaris étaient tellement précieux qu'ils avaient un statut quasi-officiel. Certaines mines tenaient des registres de leurs oiseaux.\n\nCette pratique a duré jusqu'en... 1986 en Grande-Bretagne. C'est l'introduction des détecteurs électroniques de gaz qui a officiellement mis fin à la carrière minière des canaris. Mais la logique derrière - utiliser un organisme vivant plus sensible pour détecter un danger avant l'humain - a directement inspiré la toxicologie et la médecine du travail.\n\nAujourd'hui au comptoir, quand tu conseilles un salarié exposé à des substances chimiques ou que tu vérifies une ordonnance pour un syndrome d'exposition professionnelle, tu travailles dans la continuité directe de ce petit oiseau jaune. L'idée de biomarqueur sentinelle, c'est exactement ça : détecter le danger avant que les symptômes ne s'installent pour de bon.",
-  "image_keywords": "canary coal mine",
+  "titre": "Le saviez-vous ? On soignait les crises d'épilepsie avec du sang de gladiateur",
+  "resume": "Dans la Rome antique, le sang d'un gladiateur fraîchement tué était considéré comme le remède suprême contre l'épilepsie. Les patients se ruaient dans l'arène pour boire directement à la blessure. Derrière cette pratique sanglante se cache une logique médicale cohérente... pour l'époque.",
+  "full_text": "Rome, Ier siècle après J.-C. Les jeux sont terminés, l'arène encore chaude du combat. Et pendant que la foule rentre chez elle, d'autres se précipitent en sens inverse. Pas pour le spectacle. Pour le sang.\n\nL'épilepsie terrifiait les Romains. On l'appelait « morbus comitialis » - la maladie des assemblées - parce qu'une crise pendant un vote annulait toute la séance. Un mauvais présage absolu. Et un malade sans remède, c'était une famille désespérée.\n\nCelse, médecin romain du Ier siècle, le note noir sur blanc : boire le sang chaud d'un gladiateur mort au combat était réputé guérir l'épilepsie. Pas n'importe quel sang. Celui d'un combattant en pleine force, tué au sommet de sa vigueur. La logique ? Un gladiateur incarne la santé, le courage, la puissance vitale. Son sang devait en être saturé. En le buvant, le malade absorberait cette force pour contrer la faiblesse qui le faisait tomber.\n\nLe twist, c'est que cette croyance a duré des siècles. Au Moyen Âge encore, des bourreaux vendaient le sang des décapités comme médicament. En Allemagne, au XVIIe siècle, des apothicaires proposaient de la « Mumia » - de la chair ou du sang humain séché - en préparation officinale. Officiellement. Sur ordonnance.\n\nParadeius Paracelse lui-même, père de la pharmacologie moderne, croyait que le sang humain contenait un « spiritus vitae » transmissible. La frontière entre magie et médecine était franchement floue.\n\nAujourd'hui, l'épilepsie se traite avec des anticonvulsivants - valproate, lamotrigine, lévétiracétam. Des molécules précises, des mécanismes compris. Mais cette histoire rappelle que derrière chaque prescription qu'on délivre au comptoir, il y a des siècles de tâtonnements parfois sanglants. On a mis du temps à trouver. Et quelque part, c'est ce qui rend le travail d'aujourd'hui précieux.",
+  "image_keywords": "roman gladiator arena",
   "tags": [
     "histoire",
-    "medecine du travail",
-    "toxicologie",
-    "decouverte",
-    "instrument"
+    "neurologie",
+    "epilepsie",
+    "pharmacopee",
+    "antiquite"
   ],
-  "date": "2026-09-08",
+  "date": "2026-09-09",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",

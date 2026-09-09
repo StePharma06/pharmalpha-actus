@@ -31,7 +31,7 @@
      l'image n'est decouverte qu'apres execution du JS qui construit les cards
      (le <img> n'existe qu'a l'interieur d'un template literal JS, invisible au
      preload scanner) -> LCP non deterministe, cf. sprint perf 2026-07-27. -->
-<link rel="preload" as="image" href="assets/img_actu_2026_09_08_1.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="assets/img_actu_2026_09_09_1.jpg" fetchpriority="high">
 
 <!-- Space Grotesk — self-hosted WOFF2 (remplace Google Fonts, cf. mission perf/RGPD 2026-08-24) -->
 <link rel="preload" href="/assets/fonts/space-grotesk-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -1737,7 +1737,7 @@ body.pa-has-nav #actusHeader {
 </div>
 
 <!-- EXPRESSION DU JOUR (injectée par update_actus.py à chaque run) -->
-<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Pénicilline</h2><p class="expression-corps">Du latin <em>penicillus</em>, petit pinceau. Fleming nomma ainsi la moisissure <em>Penicillium notatum</em> en 1928 parce que ses spores, vues au microscope, ressemblaient à de minuscules pinceaux. Le plus grand antibiotique de l'histoire doit son nom à un outil de peinture.</p></aside>
+<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Ça me tape sur les nerfs</h2><p class="expression-corps">Jusqu'au XVIIe siècle, les médecins croyaient que les nerfs étaient des tubes creux à travers lesquels circulait un « esprit animal » - une sorte de fluide nerveux qui transmettait les sensations. Une stimulation répétée sur les nerfs créait une irritation que les anatomistes décrivaient littéralement comme un choc.</p></aside>
 
 <!-- ESPACE PARTENAIRE 1 (entre Expression du jour et Aujourd'hui).
      Statique : reste visible meme si le JS ne s'execute pas. Le 2e emplacement
@@ -1762,12 +1762,12 @@ body.pa-has-nav #actusHeader {
 <div id="articles-container"></div>
 
 <!-- MARQUE_TENDANCE (injectee par le pipeline hebdo, remplacee quotidiennement) -->
-<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">2 sept. au 8 sept. 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie figue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 32 750</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Azinc immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 58 450</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Le syndrome de fatigue chronique</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 21 250</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Upsa digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 50 350</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie alimentaire symptome</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 20 050</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Quinoa digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 47 050</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Pommeau de douche vitamine c</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 13 950</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Immunite familiale</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 33 900</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Fatigue extreme que faire</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 7 450</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Eclipse et sommeil</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 14 800</td></tr>
+<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">3 sept. au 9 sept. 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie septembre</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 74 100</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Azinc immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 91 000</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Corps de ferme</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 60 300</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Aide à la digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 66 400</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie a la poussiere</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 18 200</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Temps de digestion des aliments</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 58 200</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Fracture de fatigue cheville</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 15 050</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Immunite diplomatique</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 33 800</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Vitamine b₁₂</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 10 250</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Opérations spéciales lioness la douleur </td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 1 850</td></tr>
 </tbody></table></div><p style="margin:10px 0 0;font-size:11px;color:#9ca3af;font-style:italic;">Indice de tendance : intensite de hausse Google Trends (non comparable a un volume absolu).</p><p style="margin:12px 0 0;font-size:11px;color:#9ca3af;text-align:right;">Source&nbsp;: Google Trends France (pytrends) &middot; 7 jours glissants</p></section></div>
 
 <!-- ARCHIVES CTA -->
@@ -1930,6 +1930,90 @@ body.pa-has-nav #actusHeader {
 // Mis a jour automatiquement par n8n chaque semaine
 // ============================================================
 const ARTICLES = [
+{
+    id: "actu_2026_09_09_1",
+    date: "2026-09-09",
+    type: "actu",
+    categorie: "pharma_france",
+    titre: "Dépistage HTA en officine : d'où sort ce chiffre de 15 euros ?",
+    resume: "Des syndicats de médecins et d'infirmiers agitent le chiffre de 15 euros comme une rémunération acquise pour le dépistage tensionnel en officine. Problème : ce montant ne repose sur aucune proposition officielle, aucun avenant conventionnel, aucune négociation publiée. Avant de compter les billets, vérifions les faits.",
+    source: "Le Quotidien du Pharmacien",
+    source_url: "http://www.lequotidiendupharmacien.fr/exercice-pro/remuneration-du-depistage-hta-dou-vient-le-montant-de-15-euros",
+    tiktok_url: "",
+    badge_label: "Pharma France",
+    image_url: "assets/img_actu_2026_09_09_1.jpg",
+    tags: ["hta", "depistage", "remuneration", "convention", "officine"]
+  },
+{
+    id: "actu_2026_09_09_2",
+    date: "2026-09-09",
+    type: "actu",
+    categorie: "pharma_monde",
+    titre: "La FDA nomme enfin des directeurs permanents pour ses centres médicament et vaccin",
+    resume: "Après des mois de turbulences en haut de l'affiche, la FDA vient de nommer des directeurs permanents à la tête du CDER (médicaments) et du CBER (vaccins et biologiques). Un signal de stabilisation pour l'agence américaine, dont les décisions influencent directement les AMM européennes et le pipeline mondial.",
+    source: "STAT News",
+    source_url: "https://www.statnews.com/2026/09/08/fda-names-leaders-cder-cber-michael-davis-karim-mikhail/?utm_campaign=rss",
+    tiktok_url: "",
+    badge_label: "Pharma Monde",
+    image_url: "assets/img_actu_2026_09_09_2.jpg",
+    tags: ["fda", "ema", "amm", "biosimilaire", "pipeline"]
+  },
+{
+    id: "actu_2026_09_09_3",
+    date: "2026-09-09",
+    type: "actu",
+    categorie: "bonne_nouvelle",
+    titre: "Vaccination : la Cour des comptes valide le rôle clé des pharmaciens",
+    resume: "Le rapport de la Cour des comptes sur la politique vaccinale depuis 2018 est sorti, et c'est une reconnaissance officielle du travail des pharmaciens. Le rôle de l'officine dans la montée en puissance de la couverture vaccinale est salué noir sur blanc. C'est la bonne nouvelle du jour, et elle mérite d'être savourée.",
+    source: "Le Quotidien du Pharmacien",
+    source_url: "http://www.lequotidiendupharmacien.fr/politique-vaccinale-la-cour-des-comptes-reconnait-les-efforts-des-pharmaciens",
+    tiktok_url: "",
+    badge_label: "La bonne nouvelle",
+    image_url: "assets/img_actu_2026_09_09_3.jpg",
+    tags: ["vaccination", "dp", "officine", "couverture-vaccinale", "cour-des-comptes"]
+  },
+{
+    id: "actu_2026_09_09_4",
+    date: "2026-09-09",
+    type: "actu",
+    categorie: "avenir_pharma",
+    titre: "Vapotage et grossesse : la vanilline des e-liquides dans le viseur des chercheurs",
+    resume: "La vanilline, cette molécule aromatique omniprésente dans les e-liquides, pourrait perturber le développement embryonnaire. Une étude pointe un risque spécifique pendant la grossesse. Sujet directement dans ta zone de conseil comptoir, surtout avec les patientes qui ont substitué la cigarette par la vape.",
+    source: "Sciences et Avenir",
+    source_url: "https://www.sciencesetavenir.fr/sante/un-ingredient-dans-les-e-cigarettes-serait-dangereux-chez-les-femmes-enceintes_194697?xtor=RSS-16",
+    tiktok_url: "",
+    badge_label: "L'avenir de la pharma",
+    image_url: "assets/img_actu_2026_09_09_4.jpg",
+    tags: ["vapotage", "grossesse", "sevrage-tabagique", "toxicologie", "conseil-officinal"]
+  },
+{
+    id: "actu_2026_09_09_5",
+    date: "2026-09-09",
+    type: "actu",
+    categorie: "business_officine",
+    titre: "Carte Vitale dès 12 ans : ce que ça change concrètement au comptoir",
+    resume: "Un arrêté publié au JO du 28 août 2026 fixe enfin les modalités de délivrance de la carte Vitale aux mineurs d'au moins 12 ans. Trois ans après l'entrée en vigueur du droit, le cadre opérationnel arrive. Pour toi, c'est une nouvelle procédure à maîtriser - et une opportunité rela...",
+    source: "Pharm'Actus · FSPF – Carte Vitale pour les mineurs : les modalités de délivrance enfin publiées, USPO – Officines Avenir n°37 (avril 2026)",
+    source_url: "https://www.fspf.fr/carte-vitale-pour-les-mineurs-les-modalites-de-delivrance-enfin-publiees/",
+    tiktok_url: "",
+    badge_label: "Business",
+    image_url: "assets/img_actu_2026_09_09_5.jpg",
+    tags: ["carte-vitale", "mineurs", "tiers-payant", "reglementation"]
+  },
+{
+    id: "lsv_2026_09_09",
+    date: "2026-09-09",
+    type: "lsv",
+    categorie: "lsv",
+    titre: "Le saviez-vous ? On soignait les crises d'épilepsie avec du sang de gladiateur",
+    resume: "Dans la Rome antique, le sang d'un gladiateur fraîchement tué était considéré comme le remède suprême contre l'épilepsie. Les patients se ruaient dans l'arène pour boire directement à la blessure. Derrière cette pratique sanglante se cache une logique médicale cohérente... pour l'époque.",
+    source: "Pharm'Alpha",
+    source_url: "",
+    tiktok_url: "",
+    badge_label: "Le Saviez-Vous",
+    image_url: "assets/img_lsv_2026_09_09.jpg",
+    tags: ["histoire", "neurologie", "epilepsie", "pharmacopee", "antiquite"]
+  },
 {
     id: "actu_2026_09_08_1",
     date: "2026-09-08",
@@ -2545,90 +2629,6 @@ const ARTICLES = [
     badge_label: "Pharma Monde",
     image_url: "assets/img_actu_2026_08_31_2.jpg",
     tags: ["fda", "hematologie", "maladies-rares", "innovation", "pipeline"]
-  },
-{
-    id: "actu_2026_08_31_3",
-    date: "2026-08-31",
-    type: "actu",
-    categorie: "bonne_nouvelle",
-    titre: "Rentrée et asthme de l'enfant : ton comptoir peut faire la différence",
-    resume: "La première semaine de rentrée scolaire est une période à haut risque pour les enfants asthmatiques. L'oubli ou l'arrêt du traitement de fond pendant les vacances, combiné au retour en collectivité, crée un cocktail explosif. Le pharmacien est souvent le premier professionnel de santé revu à cette période.",
-    source: "Le Moniteur des Pharmacies",
-    source_url: "https://www.lemoniteurdespharmacies.fr/conseils/pathologies/rentree-vigilance-accrue-pour-les-enfants-asthmatiques",
-    tiktok_url: "",
-    badge_label: "La bonne nouvelle",
-    image_url: "assets/img_actu_2026_08_31_3.jpg",
-    tags: ["asthme", "pediatrie", "observance", "rentree", "officine"]
-  },
-{
-    id: "actu_2026_08_31_4",
-    date: "2026-08-31",
-    type: "actu",
-    categorie: "avenir_pharma",
-    titre: "ATTR cardiomyopathie : l'eplontersen marque des points, mais pas pour tout le monde",
-    resume: "Les résultats de l'essai CARDIOTTRansform, présentés au Congrès ESC 2026, montrent qu'eplontersen est efficace dans la cardiomyopathie amyloïde à transthyrétine, à une condition majeure : le patient ne doit pas déjà être sous stabilisateurs de transthyrétine. Un résultat qui repose la question des séquences thérapeutiques en hématologie-cardiologie.",
-    source: "Nature Medicine",
-    source_url: "https://www.nature.com/articles/s41591-026-04670-6",
-    tiktok_url: "",
-    badge_label: "L'avenir de la pharma",
-    image_url: "assets/img_actu_2026_08_31_4.jpg",
-    tags: ["aso", "amylose", "cardiologie", "pipeline", "ema"]
-  },
-{
-    id: "actu_2026_08_31_5",
-    date: "2026-08-31",
-    type: "actu",
-    categorie: "business_officine",
-    titre: "Apprentissage en officine : le décret du 29 août change la donne sur tes coûts de formation",
-    resume: "Un décret publié le 29 août 2026 révise les niveaux de prise en charge des contrats d'apprentissage. Pour les officines qui recrutent des étudiants en pharmacie ou des préparateurs en alternance, c'est un levier RH et financier à réévaluer dès la rentrée.",
-    source: "Pharm'Actus · Décret n° 2026-832 du 29 août 2026 fixant les niveaux de prise en charge des contrats d'apprentissage — Légifrance, IQVIA Pharmastat, Données réseau officinal France, juin 2026 (cité via Pharm'Alpha)",
-    source_url: "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054762162",
-    tiktok_url: "",
-    badge_label: "Business",
-    image_url: "assets/img_actu_2026_08_31_5.jpg",
-    tags: ["apprentissage", "formation", "ressources-humaines", "reglementation"]
-  },
-{
-    id: "lsv_2026_08_31",
-    date: "2026-08-31",
-    type: "lsv",
-    categorie: "lsv",
-    titre: "Le saviez-vous ? On traitait l'infertilité masculine avec des testicules de singe",
-    resume: "Dans les années 1920, un chirurgien franco-russe convainc l'élite mondiale qu'il peut rendre la jeunesse et la virilité grâce à des greffes de tissu testiculaire de singe. Des milliers d'hommes riches et célèbres se ruent sur sa clinique. La médecine n'en revient toujours pas.",
-    source: "Pharm'Alpha",
-    source_url: "",
-    tiktok_url: "",
-    badge_label: "Le Saviez-Vous",
-    image_url: "assets/img_lsv_2026_08_31.jpg",
-    tags: ["histoire", "chirurgie", "transplantation", "immunologie", "serendipite"]
-  },
-{
-    id: "actu_2026_08_29_1",
-    date: "2026-08-29",
-    type: "actu",
-    categorie: "pharma_france",
-    titre: "Salaires officine : FO sort les cartes postales, la branche sociale coince",
-    resume: "Force Ouvrière appelle tous les salariés d'officine à inonder les organisations patronales de cartes postales pour débloquer les négociations de grille. Une action à l'ancienne pour un blocage qui, lui, dure depuis trop longtemps. Qu'est-ce que ça dit sur l'état social du réseau officinal ?",
-    source: "Le Quotidien du Pharmacien",
-    source_url: "http://www.lequotidiendupharmacien.fr/exercice-pro/des-cartes-postales-pour-reclamer-une-hausse-des-salaires-en-officine",
-    tiktok_url: "",
-    badge_label: "Pharma France",
-    image_url: "assets/img_actu_2026_08_29_1.jpg",
-    tags: ["salaires", "convention", "officine", "syndicat", "social"]
-  },
-{
-    id: "actu_2026_08_29_2",
-    date: "2026-08-29",
-    type: "actu",
-    categorie: "pharma_monde",
-    titre: "AstraZeneca et Ionis : le silence-ARN qui parle trop fort pour le coeur",
-    resume: "L'essai sur l'eplontersen dans la cardiomyopathie à transthyrétine vient de se planter. AstraZeneca et Ionis cherchent les raisons, et c'est toute la classe des \"silenceurs\" d'ARN qui tremble. Pour le pharmacien francais, le dossier amyloidose cardiaque reste sous haute surveillance.",
-    source: "STAT News",
-    source_url: "https://www.statnews.com/2026/08/28/astrazeneca-ionis-wainua-eplontersen-attr-cm-study-failure-bridgebio-alnylam/?utm_campaign=rss",
-    tiktok_url: "",
-    badge_label: "Pharma Monde",
-    image_url: "assets/img_actu_2026_08_29_2.jpg",
-    tags: ["arn", "innovation", "cardiologie", "ema", "recherche"]
   }
 ];
 

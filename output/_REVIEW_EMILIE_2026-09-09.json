@@ -1,0 +1,47 @@
+{
+  "generated_at": "2026-09-09T04:07:43.918115+02:00",
+  "run_date": "2026-09-09",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Dépistage HTA en officine : d'où sort ce chiffre de 15 euros ?",
+      "resume": "Des syndicats de médecins et d'infirmiers agitent le chiffre de 15 euros comme une rémunération acquise pour le dépistage tensionnel en officine. Problème : ce montant ne repose sur aucune proposition officielle, aucun avenant conventionnel, aucune négociation publiée. Avant de compter les billets, vérifions les faits.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/remuneration-du-depistage-hta-dou-vient-le-montant-de-15-euros",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "Vaccination : la Cour des comptes valide le rôle clé des pharmaciens",
+      "resume": "Le rapport de la Cour des comptes sur la politique vaccinale depuis 2018 est sorti, et c'est une reconnaissance officielle du travail des pharmaciens. Le rôle de l'officine dans la montée en puissance de la couverture vaccinale est salué noir sur blanc. C'est la bonne nouvelle du jour, et elle mérite d'être savourée.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/politique-vaccinale-la-cour-des-comptes-reconnait-les-efforts-des-pharmaciens",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Carte Vitale dès 12 ans : ce que ça change concrètement au comptoir",
+      "resume": "Un arrêté publié au JO du 28 août 2026 fixe enfin les modalités de délivrance de la carte Vitale aux mineurs d'au moins 12 ans. Trois ans après l'entrée en vigueur du droit, le cadre opérationnel arrive. Pour toi, c'est une nouvelle procédure à maîtriser - et une opportunité rela...",
+      "source": "Pharm'Actus · FSPF – Carte Vitale pour les mineurs : les modalités de délivrance enfin publiées, USPO – Officines Avenir n°37 (avril 2026)",
+      "source_url": "https://www.fspf.fr/carte-vitale-pour-les-mineurs-les-modalites-de-delivrance-enfin-publiees/",
+      "confidence_score": 0.72,
+      "warnings": [
+        "Le contenu exact de l'arrêté du JO du 28 août 2026 n'est pas reproduit dans la source disponible (résumé FSPF uniquement) : les modalités opérationnelles précises (délais, circuit CPAM, mise à jour lecteurs) ne sont pas vérifiables ici et n'ont pas été détaillées dans l'article.",
+        "Le chiffre de 7,5 millions d'adolescents de 12-17 ans provient d'une estimation INSEE 2024 : à vérifier sur le dernier recensement disponible, n'a pas été fourni par la source de l'article.",
+        "L'USPO n'a pas été vérifiée exhaustivement sur ce sujet spécifique : la prudence s'impose sur l'affirmation d'absence de position.",
+        "Aucun honoraire ni remuneration specifique n'existe pour la gestion de la carte Vitale mineur en officine : aucun n'a ete inventé, conformément aux règles.",
+        "La position de l'UPGF sur ce sujet n'a pas pu être vérifiée dans les sources disponibles : non mentionnée.",
+        "4 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}
