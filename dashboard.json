@@ -1,52 +1,44 @@
 {
- "genere_le": "2026-09-08T09:35:52+02:00",
+ "genere_le": "2026-09-09T09:42:14+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1158,
+ "abonnes_total": 1161,
  "nouveaux_7j": 32,
- "nouveaux_cumul": 1151,
+ "nouveaux_cumul": 1154,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-09-01",
-  "au": "2026-09-08",
-  "delivres": 7328,
-  "ouvertures": 2970,
-  "ouvertures_uniques": 2163,
-  "clics": 4107,
-  "clics_uniques": 719,
-  "taux_ouverture_pct": 29.5,
-  "taux_clic_pct": 9.8,
-  "ctor_pct": 33.2,
+  "du": "2026-09-02",
+  "au": "2026-09-09",
+  "delivres": 7354,
+  "ouvertures": 2914,
+  "ouvertures_uniques": 2103,
+  "clics": 4015,
+  "clics_uniques": 702,
+  "taux_ouverture_pct": 28.6,
+  "taux_clic_pct": 9.5,
+  "ctor_pct": 33.4,
   "top_articles": [
    {
     "id": "actu_2026_09_05_1",
     "titre": "Tiers payant contre biosimilaire : le dispositif est enfin opérationnel",
     "date": "2026-09-05",
     "categorie": "pharma_france",
-    "clics": 136,
-    "lecteurs": 77
-   },
-   {
-    "id": "actu_2026_09_01_1",
-    "titre": "Tiers payant contre biosimilaire : ce qui change dès aujourd'hui au comptoir",
-    "date": "2026-09-01",
-    "categorie": "pharma_france",
-    "clics": 98,
-    "lecteurs": 69
+    "clics": 138,
+    "lecteurs": 79
    },
    {
     "id": "actu_2026_09_07_3",
     "titre": "Biosimilaires substituables : l'USPO sort la fiche pratique qu'on attendait",
     "date": "2026-09-07",
     "categorie": "bonne_nouvelle",
-    "clics": 107,
-    "lecteurs": 68
+    "clics": 109,
+    "lecteurs": 70
    },
    {
     "id": "actu_2026_09_03_1",
     "titre": "Eliquis générique : le premier AOD substituable débarque en officine",
     "date": "2026-09-03",
     "categorie": "pharma_france",
-    "clics": 96,
+    "clics": 98,
     "lecteurs": 66
    },
    {
@@ -56,14 +48,6 @@
     "categorie": "bonne_nouvelle",
     "clics": 120,
     "lecteurs": 62
-   },
-   {
-    "id": "actu_2026_09_01_2",
-    "titre": "Trump négocie les prix des médicaments : 9 labos de plus au pied du mur",
-    "date": "2026-09-01",
-    "categorie": "pharma_monde",
-    "clics": 103,
-    "lecteurs": 61
    },
    {
     "id": "actu_2026_09_05_5",
@@ -78,8 +62,8 @@
     "titre": "Vaccination HPV : les pharmaciens ont les cartes en main pour faire grimper la couverture",
     "date": "2026-09-04",
     "categorie": "avenir_pharma",
-    "clics": 92,
-    "lecteurs": 53
+    "clics": 93,
+    "lecteurs": 54
    },
    {
     "id": "actu_2026_09_02_1",
@@ -90,27 +74,51 @@
     "lecteurs": 51
    },
    {
+    "id": "actu_2026_09_08_1",
+    "titre": "Mesure de la tension artérielle : 15 euros pour le pharmacien, et ça fait déjà des jaloux",
+    "date": "2026-09-08",
+    "categorie": "pharma_france",
+    "clics": 79,
+    "lecteurs": 50
+   },
+   {
     "id": "actu_2026_09_02_2",
     "titre": "Anti-VIH injectables longue durée : les données réelles confirment la supériorité sur l'oral",
     "date": "2026-09-02",
     "categorie": "pharma_monde",
-    "clics": 106,
-    "lecteurs": 47
+    "clics": 107,
+    "lecteurs": 48
+   },
+   {
+    "id": "actu_2026_09_05_3",
+    "titre": "Pfizer rejoint RECYPEN : les stylos préremplis ont désormais leur filière",
+    "date": "2026-09-05",
+    "categorie": "bonne_nouvelle",
+    "clics": 80,
+    "lecteurs": 46
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-09-08",
-  "delivres": 100794,
-  "ouvertures": 40777,
-  "ouvertures_uniques": 28236,
-  "clics": 42790,
-  "clics_uniques": 7742,
+  "au": "2026-09-09",
+  "delivres": 101814,
+  "ouvertures": 41181,
+  "ouvertures_uniques": 28520,
+  "clics": 43293,
+  "clics_uniques": 7831,
   "taux_ouverture_pct": 28.0,
   "taux_clic_pct": 7.7,
-  "ctor_pct": 27.4,
+  "ctor_pct": 27.5,
   "top_articles": [
+   {
+    "id": "actu_2026_09_05_1",
+    "titre": "Tiers payant contre biosimilaire : le dispositif est enfin opérationnel",
+    "date": "2026-09-05",
+    "categorie": "pharma_france",
+    "clics": 138,
+    "lecteurs": 79
+   },
    {
     "id": "actu_2026_06_18_1",
     "titre": "actu_2026_06_18_1",
@@ -118,14 +126,6 @@
     "categorie": "",
     "clics": 142,
     "lecteurs": 78
-   },
-   {
-    "id": "actu_2026_09_05_1",
-    "titre": "Tiers payant contre biosimilaire : le dispositif est enfin opérationnel",
-    "date": "2026-09-05",
-    "categorie": "pharma_france",
-    "clics": 136,
-    "lecteurs": 77
    },
    {
     "id": "actu_2026_06_23_1",
@@ -144,6 +144,14 @@
     "lecteurs": 73
    },
    {
+    "id": "actu_2026_09_07_3",
+    "titre": "Biosimilaires substituables : l'USPO sort la fiche pratique qu'on attendait",
+    "date": "2026-09-07",
+    "categorie": "bonne_nouvelle",
+    "clics": 109,
+    "lecteurs": 70
+   },
+   {
     "id": "actu_2026_08_27_2",
     "titre": "actu_2026_08_27_2",
     "date": "",
@@ -158,14 +166,6 @@
     "categorie": "pharma_france",
     "clics": 98,
     "lecteurs": 69
-   },
-   {
-    "id": "actu_2026_09_07_3",
-    "titre": "Biosimilaires substituables : l'USPO sort la fiche pratique qu'on attendait",
-    "date": "2026-09-07",
-    "categorie": "bonne_nouvelle",
-    "clics": 107,
-    "lecteurs": 68
    },
    {
     "id": "actu_2026_06_23_2",
@@ -184,11 +184,11 @@
     "lecteurs": 66
    },
    {
-    "id": "actu_2026_09_03_1",
-    "titre": "Eliquis générique : le premier AOD substituable débarque en officine",
-    "date": "2026-09-03",
-    "categorie": "pharma_france",
-    "clics": 96,
+    "id": "actu_2026_08_28_3",
+    "titre": "actu_2026_08_28_3",
+    "date": "",
+    "categorie": "",
+    "clics": 107,
     "lecteurs": 66
    }
   ]
