@@ -1,21 +1,21 @@
 {
- "genere_le": "2026-09-09T09:42:14+02:00",
+ "genere_le": "2026-09-10T09:40:05+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1161,
+ "abonnes_total": 1163,
  "nouveaux_7j": 32,
- "nouveaux_cumul": 1154,
+ "nouveaux_cumul": 1156,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-09-02",
-  "au": "2026-09-09",
-  "delivres": 7354,
-  "ouvertures": 2914,
-  "ouvertures_uniques": 2103,
-  "clics": 4015,
-  "clics_uniques": 702,
-  "taux_ouverture_pct": 28.6,
-  "taux_clic_pct": 9.5,
-  "ctor_pct": 33.4,
+  "du": "2026-09-03",
+  "au": "2026-09-10",
+  "delivres": 7369,
+  "ouvertures": 2843,
+  "ouvertures_uniques": 2054,
+  "clics": 3777,
+  "clics_uniques": 674,
+  "taux_ouverture_pct": 27.9,
+  "taux_clic_pct": 9.1,
+  "ctor_pct": 32.8,
   "top_articles": [
    {
     "id": "actu_2026_09_05_1",
@@ -46,7 +46,7 @@
     "titre": "Septembre Turquoise : tes affiches anti-cancers gynecos sont disponibles, sers-t'en",
     "date": "2026-09-04",
     "categorie": "bonne_nouvelle",
-    "clics": 120,
+    "clics": 124,
     "lecteurs": 62
    },
    {
@@ -62,16 +62,8 @@
     "titre": "Vaccination HPV : les pharmaciens ont les cartes en main pour faire grimper la couverture",
     "date": "2026-09-04",
     "categorie": "avenir_pharma",
-    "clics": 93,
+    "clics": 95,
     "lecteurs": 54
-   },
-   {
-    "id": "actu_2026_09_02_1",
-    "titre": "Tiers payant contre biosimilaires : ça démarre aujourd'hui, t'es prêt ?",
-    "date": "2026-09-02",
-    "categorie": "pharma_france",
-    "clics": 94,
-    "lecteurs": 51
    },
    {
     "id": "actu_2026_09_08_1",
@@ -82,31 +74,39 @@
     "lecteurs": 50
    },
    {
-    "id": "actu_2026_09_02_2",
-    "titre": "Anti-VIH injectables longue durée : les données réelles confirment la supériorité sur l'oral",
-    "date": "2026-09-02",
-    "categorie": "pharma_monde",
-    "clics": 107,
-    "lecteurs": 48
-   },
-   {
     "id": "actu_2026_09_05_3",
     "titre": "Pfizer rejoint RECYPEN : les stylos préremplis ont désormais leur filière",
     "date": "2026-09-05",
     "categorie": "bonne_nouvelle",
     "clics": 80,
     "lecteurs": 46
+   },
+   {
+    "id": "actu_2026_09_04_1",
+    "titre": "Convention pharmaceutique : la lettre de cadrage se fait attendre, la tension monte",
+    "date": "2026-09-04",
+    "categorie": "pharma_france",
+    "clics": 75,
+    "lecteurs": 46
+   },
+   {
+    "id": "actu_2026_09_07_1",
+    "titre": "Wegovy oral autorisé en Allemagne : la France peut-elle encore attendre ?",
+    "date": "2026-09-07",
+    "categorie": "pharma_france",
+    "clics": 77,
+    "lecteurs": 45
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-09-09",
-  "delivres": 101814,
-  "ouvertures": 41181,
-  "ouvertures_uniques": 28520,
-  "clics": 43293,
-  "clics_uniques": 7831,
+  "au": "2026-09-10",
+  "delivres": 102828,
+  "ouvertures": 41541,
+  "ouvertures_uniques": 28770,
+  "clics": 43723,
+  "clics_uniques": 7903,
   "taux_ouverture_pct": 28.0,
   "taux_clic_pct": 7.7,
   "ctor_pct": 27.5,
