@@ -1,64 +1,64 @@
 {
-  "generated_at": "2026-09-09",
-  "window_label": "3 sept. au 9 sept. 2026",
+  "generated_at": "2026-09-10",
+  "window_label": "4 sept. au 10 sept. 2026",
   "has_history": true,
   "delta_source": "pytrends_rising",
   "pathologies": [
     {
       "display": "Allergie septembre",
-      "delta_label": "↑ 74 100",
-      "trend": "up"
-    },
-    {
-      "display": "Corps de ferme",
-      "delta_label": "↑ 60 300",
-      "trend": "up"
-    },
-    {
-      "display": "Allergie a la poussiere",
-      "delta_label": "↑ 18 200",
+      "delta_label": "↑ 75 200",
       "trend": "up"
     },
     {
       "display": "Fracture de fatigue cheville",
-      "delta_label": "↑ 15 050",
+      "delta_label": "↑ 11 100",
+      "trend": "up"
+    },
+    {
+      "display": "Cure vitamine fatigue",
+      "delta_label": "↑ 11 100",
+      "trend": "up"
+    },
+    {
+      "display": "Allergie au piqure de moustique",
+      "delta_label": "↑ 10 650",
       "trend": "up"
     },
     {
       "display": "Vitamine b₁₂",
-      "delta_label": "↑ 10 250",
+      "delta_label": "↑ 8 850",
       "trend": "up"
     }
   ],
   "soins": [
     {
-      "display": "Azinc immunite",
-      "delta_label": "↑ 91 000",
+      "display": "Immunite adaptative",
+      "delta_label": "↑ 281 400",
       "trend": "up"
     },
     {
-      "display": "Aide à la digestion",
-      "delta_label": "↑ 66 400",
+      "display": "Pois chiche digestion",
+      "delta_label": "↑ 51 400",
       "trend": "up"
     },
     {
-      "display": "Temps de digestion des aliments",
-      "delta_label": "↑ 58 200",
+      "display": "Alka seltzer digestion",
+      "delta_label": "↑ 45 450",
       "trend": "up"
     },
     {
-      "display": "Immunite diplomatique",
-      "delta_label": "↑ 33 800",
+      "display": "Sante-astuces.fr santé connectée",
+      "delta_label": "↑ 8 300",
       "trend": "up"
     },
     {
-      "display": "Opérations spéciales lioness la douleur ",
-      "delta_label": "↑ 1 850",
+      "display": "Gummies sommeil enfant",
+      "delta_label": "↑ 5 850",
       "trend": "up"
     }
   ],
   "pathologies_stale": false,
-  "pathologies_from": "2026-09-09",
+  "pathologies_from": "2026-09-10",
   "soins_stale": false,
-  "soins_from": "2026-09-09"
+  "soins_from": "2026-09-10"
 }

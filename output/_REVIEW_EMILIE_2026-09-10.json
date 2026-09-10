@@ -1,0 +1,47 @@
+{
+  "generated_at": "2026-09-10T04:11:42.741099+02:00",
+  "run_date": "2026-09-10",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "GLP-1 remboursés : Wegovy et Mounjaro explosent les compteurs",
+      "resume": "Depuis leur remboursement le 15 juin, Wegovy et Mounjaro ont vu leurs ventes bondir de 74 % en quelques semaines. Les trois quarts des dispensations passent en remboursement. Le marché du médicament remboursable est en train de se redistribuer sous tes yeux.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/les-analogues-du-glp-1-portent-la-croissance-du-medicament-remboursable",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "Sanofi, insuline et 400 millions d'euros : l'Europe joue enfin sa souveraineté",
+      "resume": "La Commission européenne autorise l'Allemagne à verser 400 millions d'euros à Sanofi pour maintenir son site de production d'insuline à Francfort. Sans ce coup de pouce, il ne resterait plus qu'un seul site de production d'insuline sur tout le continent. Une bonne nouvelle pour la sécurité d'approvisionnement des diabétiques européens.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/sanofi-bruxelles-autorise-400-millions-deuros-daide-pour-securiser-linsuline-en-europe",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Déremboursements 2027 : les bornes sont posées, le choc tarifaire reste à chiffrer",
+      "resume": "Quatre décrets publiés au Journal officiel du 22 août 2026 redessinant les règles du ticket modérateur sur les médicaments, les dispositifs médicaux, les transports sanitaires et les soins dentaires. Le niveau exact des baisses de taux n'est pas encore arrêté par l'UNCAM - mais l...",
+      "source": "Pharm'Actus · Caducee.net — Déremboursements en 2027 : les nouvelles bornes sont fixées, les taux restent à décider, Journal officiel du 22 août 2026 — Décrets sur le ticket modérateur (cités dans la source Caducee.net)",
+      "source_url": "https://www.caducee.net/actualite-medicale/16954/deremboursements-en-2027-les-nouvelles-bornes-sont-fixees-les-taux-restent-a-decider.html",
+      "confidence_score": 0.72,
+      "warnings": [
+        "Les taux effectifs de déremboursement post-UNCAM ne sont pas encore publiés : aucun chiffre de taux futur n'a été inventé, l'article reste volontairement qualitatif sur ce point.",
+        "Le contenu exact des quatre décrets du 22 août 2026 n'est pas reproduit dans la source Caducee.net : l'article s'appuie sur le résumé fourni, sans accéder au texte des décrets. En cas de doute sur un article précis, consulter directement legifrance.gouv.fr.",
+        "La part exacte des médicaments remboursés dans le CA officinal moyen n'a pas été chiffrée : la donnée structurelle (majoritaire) est connue mais le pourcentage précis varie selon les sources et les typologies d'officines — non chiffré pour éviter une erreur.",
+        "L'impact sur les dispositifs médicaux et transports sanitaires est présenté qualitativement : les volumes et marges spécifiques à ces segments ne figurent pas dans la source et n'ont pas été inventés.",
+        "Aucune position syndicale (FSPF, USPO, UPGF) n'a été attribuée sur ce sujet spécifique car aucune déclaration publique identifiable n'est disponible dans les sources fournies : conformément à la règle d'équilibre syndical, aucune position n'a été inventée.",
+        "4 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

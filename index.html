@@ -31,7 +31,7 @@
      l'image n'est decouverte qu'apres execution du JS qui construit les cards
      (le <img> n'existe qu'a l'interieur d'un template literal JS, invisible au
      preload scanner) -> LCP non deterministe, cf. sprint perf 2026-07-27. -->
-<link rel="preload" as="image" href="assets/img_actu_2026_09_09_1.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="assets/img_actu_2026_09_10_1.jpg" fetchpriority="high">
 
 <!-- Space Grotesk — self-hosted WOFF2 (remplace Google Fonts, cf. mission perf/RGPD 2026-08-24) -->
 <link rel="preload" href="/assets/fonts/space-grotesk-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -1737,7 +1737,7 @@ body.pa-has-nav #actusHeader {
 </div>
 
 <!-- EXPRESSION DU JOUR (injectée par update_actus.py à chaque run) -->
-<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Ça me tape sur les nerfs</h2><p class="expression-corps">Jusqu'au XVIIe siècle, les médecins croyaient que les nerfs étaient des tubes creux à travers lesquels circulait un « esprit animal » - une sorte de fluide nerveux qui transmettait les sensations. Une stimulation répétée sur les nerfs créait une irritation que les anatomistes décrivaient littéralement comme un choc.</p></aside>
+<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Élixir</h2><p class="expression-corps">De l'arabe <em>al-iksir</em>, lui-même du grec <em>xêrion</em>, poudre sèche pour les plaies. Les alchimistes arabes médiévaux appelaient ainsi leur préparation universelle capable de transformer les métaux et de guérir toutes les maladies. De là, l'élixir de longue vie - et plus généralement, toute préparation liquide concentrée.</p></aside>
 
 <!-- ESPACE PARTENAIRE 1 (entre Expression du jour et Aujourd'hui).
      Statique : reste visible meme si le JS ne s'execute pas. Le 2e emplacement
@@ -1762,12 +1762,12 @@ body.pa-has-nav #actusHeader {
 <div id="articles-container"></div>
 
 <!-- MARQUE_TENDANCE (injectee par le pipeline hebdo, remplacee quotidiennement) -->
-<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">3 sept. au 9 sept. 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie septembre</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 74 100</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Azinc immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 91 000</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Corps de ferme</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 60 300</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Aide à la digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 66 400</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie a la poussiere</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 18 200</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Temps de digestion des aliments</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 58 200</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Fracture de fatigue cheville</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 15 050</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Immunite diplomatique</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 33 800</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Vitamine b₁₂</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 10 250</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Opérations spéciales lioness la douleur </td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 1 850</td></tr>
+<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">4 sept. au 10 sept. 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie septembre</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 75 200</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Immunite adaptative</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 281 400</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Fracture de fatigue cheville</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 11 100</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Pois chiche digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 51 400</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Cure vitamine fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 11 100</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Alka seltzer digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 45 450</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie au piqure de moustique</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 10 650</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Sante-astuces.fr santé connectée</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 8 300</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Vitamine b₁₂</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 8 850</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Gummies sommeil enfant</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 5 850</td></tr>
 </tbody></table></div><p style="margin:10px 0 0;font-size:11px;color:#9ca3af;font-style:italic;">Indice de tendance : intensite de hausse Google Trends (non comparable a un volume absolu).</p><p style="margin:12px 0 0;font-size:11px;color:#9ca3af;text-align:right;">Source&nbsp;: Google Trends France (pytrends) &middot; 7 jours glissants</p></section></div>
 
 <!-- ARCHIVES CTA -->
@@ -1930,6 +1930,90 @@ body.pa-has-nav #actusHeader {
 // Mis a jour automatiquement par n8n chaque semaine
 // ============================================================
 const ARTICLES = [
+{
+    id: "actu_2026_09_10_1",
+    date: "2026-09-10",
+    type: "actu",
+    categorie: "pharma_france",
+    titre: "GLP-1 remboursés : Wegovy et Mounjaro explosent les compteurs",
+    resume: "Depuis leur remboursement le 15 juin, Wegovy et Mounjaro ont vu leurs ventes bondir de 74 % en quelques semaines. Les trois quarts des dispensations passent en remboursement. Le marché du médicament remboursable est en train de se redistribuer sous tes yeux.",
+    source: "Le Quotidien du Pharmacien",
+    source_url: "http://www.lequotidiendupharmacien.fr/exercice-pro/les-analogues-du-glp-1-portent-la-croissance-du-medicament-remboursable",
+    tiktok_url: "",
+    badge_label: "Pharma France",
+    image_url: "assets/img_actu_2026_09_10_1.jpg",
+    tags: ["glp-1", "remboursement", "officine", "dispensation", "marge"]
+  },
+{
+    id: "actu_2026_09_10_2",
+    date: "2026-09-10",
+    type: "actu",
+    categorie: "pharma_monde",
+    titre: "Rougeole en Pennsylvanie : deux nourrissons morts, un signal qui doit nous parler",
+    resume: "Deux bébés sont décédés de la rougeole en Pennsylvanie en août. Le coroner vient de confirmer que le virus lui-même est directement en cause dans l'un des décès. Un rappel brutal que la rougeole tue, y compris dans des pays à haut niveau sanitaire.",
+    source: "STAT News",
+    source_url: "https://www.statnews.com/2026/09/09/coroner-details-infant-deaths-pennsylvania-measles-outbreak/?utm_campaign=rss",
+    tiktok_url: "",
+    badge_label: "Pharma Monde",
+    image_url: "assets/img_actu_2026_09_10_2.jpg",
+    tags: ["vaccination", "rougeole", "pediatrie", "couverture-vaccinale", "sante-publique"]
+  },
+{
+    id: "actu_2026_09_10_3",
+    date: "2026-09-10",
+    type: "actu",
+    categorie: "bonne_nouvelle",
+    titre: "Sanofi, insuline et 400 millions d'euros : l'Europe joue enfin sa souveraineté",
+    resume: "La Commission européenne autorise l'Allemagne à verser 400 millions d'euros à Sanofi pour maintenir son site de production d'insuline à Francfort. Sans ce coup de pouce, il ne resterait plus qu'un seul site de production d'insuline sur tout le continent. Une bonne nouvelle pour la sécurité d'approvisionnement des diabétiques européens.",
+    source: "Le Moniteur des Pharmacies",
+    source_url: "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/sanofi-bruxelles-autorise-400-millions-deuros-daide-pour-securiser-linsuline-en-europe",
+    tiktok_url: "",
+    badge_label: "La bonne nouvelle",
+    image_url: "assets/img_actu_2026_09_10_3.jpg",
+    tags: ["insuline", "rupture", "approvisionnement", "sanofi", "diabete"]
+  },
+{
+    id: "actu_2026_09_10_4",
+    date: "2026-09-10",
+    type: "actu",
+    categorie: "avenir_pharma",
+    titre: "IA et insuffisance cardiaque : 62 millions de dollars pour des bots autonomes de traitement",
+    resume: "ARPA-H, l'agence américaine de recherche en santé de pointe, va investir 62,7 millions de dollars dans des bots d'IA capables de diriger le traitement de l'insuffisance cardiaque de façon autonome. Un programme qui préfigure un bouleversement dans la gestion des maladies chroniques, avec des implications directes pour le rôle du pharmacien.",
+    source: "STAT News",
+    source_url: "https://www.statnews.com/2026/09/09/arpa-h-advocate-program-autonomous-ai-bots-for-heart-failure/?utm_campaign=rss",
+    tiktok_url: "",
+    badge_label: "L'avenir de la pharma",
+    image_url: "assets/img_actu_2026_09_10_4.jpg",
+    tags: ["ia", "insuffisance-cardiaque", "innovation", "numerique", "recherche"]
+  },
+{
+    id: "actu_2026_09_10_5",
+    date: "2026-09-10",
+    type: "actu",
+    categorie: "business_officine",
+    titre: "Déremboursements 2027 : les bornes sont posées, le choc tarifaire reste à chiffrer",
+    resume: "Quatre décrets publiés au Journal officiel du 22 août 2026 redessinant les règles du ticket modérateur sur les médicaments, les dispositifs médicaux, les transports sanitaires et les soins dentaires. Le niveau exact des baisses de taux n'est pas encore arrêté par l'UNCAM - mais l...",
+    source: "Pharm'Actus · Caducee.net — Déremboursements en 2027 : les nouvelles bornes sont fixées, les taux restent à décider, Journal officiel du 22 août 2026 — Décrets sur le ticket modérateur (cités dans la source Caducee.net)",
+    source_url: "https://www.caducee.net/actualite-medicale/16954/deremboursements-en-2027-les-nouvelles-bornes-sont-fixees-les-taux-restent-a-decider.html",
+    tiktok_url: "",
+    badge_label: "Business",
+    image_url: "assets/img_actu_2026_09_10_5.jpg",
+    tags: ["deremboursement", "ticket-moderateur", "lfss-2027", "remuneration-officinale"]
+  },
+{
+    id: "lsv_2026_09_10",
+    date: "2026-09-10",
+    type: "lsv",
+    categorie: "lsv",
+    titre: "Le saviez-vous ? On traitait la goutte royale en buvant du vin de lézard",
+    resume: "Pendant des siècles, la goutte était réservée aux riches et aux rois. Le traitement ? Aussi baroque que la maladie. Entre lézards marinés, sang de bouc et poudre de cloporte, la pharmacopée anti-goutte du XVIIe siècle ferait pâlir n'importe quel rhumatologue.",
+    source: "Pharm'Alpha",
+    source_url: "",
+    tiktok_url: "",
+    badge_label: "Le Saviez-Vous",
+    image_url: "assets/img_lsv_2026_09_10.jpg",
+    tags: ["histoire", "plante", "pharmacopee", "rhumatologie", "poison"]
+  },
 {
     id: "actu_2026_09_09_1",
     date: "2026-09-09",
@@ -2545,90 +2629,6 @@ const ARTICLES = [
     badge_label: "Pharma Monde",
     image_url: "assets/img_actu_2026_09_01_2.jpg",
     tags: ["prix-medicaments", "usa", "industrie-pharma", "rupture", "ceps"]
-  },
-{
-    id: "actu_2026_09_01_3",
-    date: "2026-09-01",
-    type: "actu",
-    categorie: "bonne_nouvelle",
-    titre: "Vaccin ARNm contre le mélanome : la technologie reprend des couleurs",
-    resume: "Un essai clinique sur un vaccin ARNm personnalisé contre le mélanome vient de livrer des résultats encourageants. Après les turbulences politiques autour de l'ARNm, la science reprend le dessus. Et ça, c'est une vraie bonne nouvelle pour tous les patients en oncologie.",
-    source: "STAT News",
-    source_url: "https://www.statnews.com/2026/08/31/mrna-cancer-vaccine-intersects-politics-medicine/?utm_campaign=rss",
-    tiktok_url: "",
-    badge_label: "La bonne nouvelle",
-    image_url: "assets/img_actu_2026_09_01_3.jpg",
-    tags: ["arnm", "vaccin", "oncologie", "innovation", "recherche"]
-  },
-{
-    id: "actu_2026_09_01_4",
-    date: "2026-09-01",
-    type: "actu",
-    categorie: "avenir_pharma",
-    titre: "Hormone de grossesse et coeur : et si la relaxine ouvrait une nouvelle voie cardio ?",
-    resume: "Une hormone produite pendant la grossesse, la relaxine, pourrait orienter de nouveaux traitements cardiovasculaires. Les chercheurs explorent une piste inattendue venue de la physiologie obstétricale. Bienvenue dans l'avenir de la cardiologie.",
-    source: "STAT News",
-    source_url: "https://www.statnews.com/2026/08/31/biotech-news-can-a-pregnancy-hormone-steer-a-cardiovascular-treatment/?utm_campaign=rss",
-    tiktok_url: "",
-    badge_label: "L'avenir de la pharma",
-    image_url: "assets/img_actu_2026_09_01_4.jpg",
-    tags: ["cardiologie", "recherche", "innovation", "pipeline", "biotech"]
-  },
-{
-    id: "actu_2026_09_01_5",
-    date: "2026-09-01",
-    type: "actu",
-    categorie: "business_officine",
-    titre: "PERIMED : 32 000 boîtes analysées, et si le gaspillage médicamenteux était ton prochain levier business ?",
-    resume: "L'étude PERIMED (ANSM / Assurance maladie / Cyclamed, 2025) a passé au crible plus de 32 000 unités de médicaments non utilisés. Ce que révèle cette radiographie du gaspillage devrait changer ta façon d'aborder l'entretien de dispensation.",
-    source: "Pharm'Actus · Le Moniteur des Pharmacies — Médicaments : la fabrique du gaspillage (étude PERIMED), Cyclamed — Rapport d'activité 2022-2023",
-    source_url: "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/medicaments-la-fabrique-du-gaspillage",
-    tiktok_url: "",
-    badge_label: "Business",
-    image_url: "assets/img_actu_2026_09_01_5.jpg",
-    tags: ["gaspillage-medicamenteux", "perimed", "entretiens-pharmaceutiques", "rosp"]
-  },
-{
-    id: "lsv_2026_09_01",
-    date: "2026-09-01",
-    type: "lsv",
-    categorie: "lsv",
-    titre: "Le saviez-vous ? On guérissait l'angine de poitrine en coupant les nerfs du cœur",
-    resume: "Dans les années 1920, les cardiologues avaient une idée lumineuse pour stopper les douleurs thoraciques : couper les nerfs qui transmettent la douleur. Sauf que sans douleur, le cœur peut crever en silence. Une logique imparable... et terrifiante.",
-    source: "Pharm'Alpha",
-    source_url: "",
-    tiktok_url: "",
-    badge_label: "Le Saviez-Vous",
-    image_url: "assets/img_lsv_2026_09_01.jpg",
-    tags: ["histoire", "chirurgie", "cardiologie", "douleur", "anesthesie"]
-  },
-{
-    id: "actu_2026_08_31_1",
-    date: "2026-08-31",
-    type: "actu",
-    categorie: "pharma_france",
-    titre: "Biosimilaires : 150 millions d'euros sur la table, t'es prêt ?",
-    resume: "Le mécanisme « tiers payant contre biosimilaire » entre en vigueur en septembre 2026. Le plafond des remises à 20 % pourrait générer 150 à 160 millions d'euros supplémentaires par an pour le réseau. Mais un quart des officines capte déjà la moitié des volumes : la redistribution ne sera pas automatique.",
-    source: "Le Quotidien du Pharmacien / Le Moniteur des Pharmacies",
-    source_url: "http://www.lequotidiendupharmacien.fr/exercice-pro/en-paca-un-championnat-pour-reviser-la-substitution-des-biosimilaires",
-    tiktok_url: "",
-    badge_label: "Pharma France",
-    image_url: "assets/img_actu_2026_08_31_1.jpg",
-    tags: ["biosimilaires", "substitution", "tiers-payant", "marge", "officine"]
-  },
-{
-    id: "actu_2026_08_31_2",
-    date: "2026-08-31",
-    type: "actu",
-    categorie: "pharma_monde",
-    titre: "FDA approuve Mimrylo : une nouvelle ère pour la polyglobulie de Vaquez",
-    resume: "La FDA vient de donner son feu vert à Mimrylo, développé par Takeda et Protagonist Therapeutics, pour traiter la polyglobulie de Vaquez. Un mécanisme d'action inédit dans cette indication, qui pourrait redéfinir la prise en charge d'une hémopathie chronique souvent sous-estimée. Ce que ça dit du pipeline hématologie à surveiller de près.",
-    source: "STAT News",
-    source_url: "https://www.statnews.com/2026/08/30/fda-approves-mimrylo-takeda-protagonist-treatment-for-polycythemia-vera/",
-    tiktok_url: "",
-    badge_label: "Pharma Monde",
-    image_url: "assets/img_actu_2026_08_31_2.jpg",
-    tags: ["fda", "hematologie", "maladies-rares", "innovation", "pipeline"]
   }
 ];
 
