@@ -31,7 +31,7 @@
      l'image n'est decouverte qu'apres execution du JS qui construit les cards
      (le <img> n'existe qu'a l'interieur d'un template literal JS, invisible au
      preload scanner) -> LCP non deterministe, cf. sprint perf 2026-07-27. -->
-<link rel="preload" as="image" href="assets/img_actu_2026_09_10_1.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="assets/stock/pharma_france_1.jpg" fetchpriority="high">
 
 <!-- Space Grotesk — self-hosted WOFF2 (remplace Google Fonts, cf. mission perf/RGPD 2026-08-24) -->
 <link rel="preload" href="/assets/fonts/space-grotesk-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -1737,7 +1737,7 @@ body.pa-has-nav #actusHeader {
 </div>
 
 <!-- EXPRESSION DU JOUR (injectée par update_actus.py à chaque run) -->
-<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Élixir</h2><p class="expression-corps">De l'arabe <em>al-iksir</em>, lui-même du grec <em>xêrion</em>, poudre sèche pour les plaies. Les alchimistes arabes médiévaux appelaient ainsi leur préparation universelle capable de transformer les métaux et de guérir toutes les maladies. De là, l'élixir de longue vie - et plus généralement, toute préparation liquide concentrée.</p></aside>
+<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Se faire de la bile</h2><p class="expression-corps">La bile jaune était, dans la médecine des humeurs, l'humeur chaude et sèche associée à l'anxiété, à l'agitation et à l'inquiétude. Se faire de la bile, c'était laisser cette humeur s'emballer dans le corps - synonyme de s'angoisser pour des raisons souvent futiles.</p></aside>
 
 <!-- ESPACE PARTENAIRE 1 (entre Expression du jour et Aujourd'hui).
      Statique : reste visible meme si le JS ne s'execute pas. Le 2e emplacement
@@ -1762,12 +1762,12 @@ body.pa-has-nav #actusHeader {
 <div id="articles-container"></div>
 
 <!-- MARQUE_TENDANCE (injectee par le pipeline hebdo, remplacee quotidiennement) -->
-<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">4 sept. au 10 sept. 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie septembre</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 75 200</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Immunite adaptative</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 281 400</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Fracture de fatigue cheville</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 11 100</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Pois chiche digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 51 400</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Cure vitamine fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 11 100</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Alka seltzer digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 45 450</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie au piqure de moustique</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 10 650</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Sante-astuces.fr santé connectée</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 8 300</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Vitamine b₁₂</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 8 850</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Gummies sommeil enfant</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 5 850</td></tr>
+<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">5 sept. au 11 sept. 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Assurance maladie fatigue chronique</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 327 850</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Digestion difficile que faire</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 46 800</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie en septembre</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 18 450</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Booster son immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 45 000</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Seipa allergie</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 16 400</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Comment faciliter la digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 30 450</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Cure vitamine fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 15 300</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Sante-maison.fr santé mentale</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 400</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Pommeau de douche vitamine c</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 14 100</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Sante-maison.fr santé des seniors</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 200</td></tr>
 </tbody></table></div><p style="margin:10px 0 0;font-size:11px;color:#9ca3af;font-style:italic;">Indice de tendance : intensite de hausse Google Trends (non comparable a un volume absolu).</p><p style="margin:12px 0 0;font-size:11px;color:#9ca3af;text-align:right;">Source&nbsp;: Google Trends France (pytrends) &middot; 7 jours glissants</p></section></div>
 
 <!-- ARCHIVES CTA -->
@@ -1930,6 +1930,90 @@ body.pa-has-nav #actusHeader {
 // Mis a jour automatiquement par n8n chaque semaine
 // ============================================================
 const ARTICLES = [
+{
+    id: "actu_2026_09_11_1",
+    date: "2026-09-11",
+    type: "actu",
+    categorie: "pharma_france",
+    titre: "Congrès National des Pharmaciens 2026 à Nantes : le programme, et mon atelier",
+    resume: "Les 26 et 27 septembre 2026, la Cité des Congrès de Nantes accueille le Congrès National des Pharmaciens, organisé par VoxPharma. Débats, conférences et ateliers pratiques au programme. Je serai présent dimanche pour animer un atelier sur les réseaux sociaux en pharmacie.",
+    source: "Congrès National des Pharmaciens",
+    source_url: "https://congresdespharmaciens.org/programme-general/",
+    tiktok_url: "",
+    badge_label: "Pharma France",
+    image_url: "assets/stock/pharma_france_1.jpg",
+    tags: ["cndp-2026", "nantes", "voxpharma", "réseaux-sociaux", "congrès"]
+  },
+{
+    id: "actu_2026_09_11_2",
+    date: "2026-09-11",
+    type: "actu",
+    categorie: "pharma_france",
+    titre: "Désogestrel et méningiome : 1,6 million de femmes vont recevoir un courrier, prépare-toi",
+    resume: "L'ANSM lance en septembre une campagne d'information personnalisée sur le risque de méningiome lié aux contraceptifs à base de désogestrel. 1,6 million de patientes vont recevoir un courrier. Autant de passages au comptoir potentiels : ton équipe doit être prête.",
+    source: "USPO",
+    source_url: "https://uspo.fr/desogestrel-campagne-dinformation-personnalisee-sur-les-risques/",
+    tiktok_url: "",
+    badge_label: "Pharma France",
+    image_url: "assets/img_actu_2026_09_11_2.jpg",
+    tags: ["ansm", "pharmacovigilance", "contraception", "officine", "information-patiente"]
+  },
+{
+    id: "actu_2026_09_11_3",
+    date: "2026-09-11",
+    type: "actu",
+    categorie: "avenir_pharma",
+    titre: "Les CAR-T cells, une révolution qui commence à peine : ce que tu vas voir arriver en officine",
+    resume: "Les thérapies CAR-T transforment déjà la prise en charge de certains cancers du sang. Des patients en rémission après l'échec de tous les autres traitements. Ce n'est que le début, et le rôle du pharmacien d'officine dans le suivi de ces patients va évoluer.",
+    source: "France Info Sante",
+    source_url: "https://www.franceinfo.fr/sante/cancer/le-traitement-par-car-t-cell-une-revolution-contre-le-cancer_8187299.html",
+    tiktok_url: "",
+    badge_label: "L'avenir de la pharma",
+    image_url: "assets/img_actu_2026_09_11_3.jpg",
+    tags: ["car-t", "innovation", "oncologie", "immunotherapie", "recherche"]
+  },
+{
+    id: "actu_2026_09_11_4",
+    date: "2026-09-11",
+    type: "actu",
+    categorie: "bonne_nouvelle",
+    titre: "Wegovy et Mounjaro remboursés : 535 000 boîtes en 11 semaines, le compteur tourne vite",
+    resume: "Depuis le remboursement des GLP-1 anti-obésité, les délivrances ont bondi de 74 % entre juin et fin août 2026. Les officines délivrent maintenant en masse. Mais derrière les chiffres, il y a des enjeux de suivi patient que tu ne peux pas ignorer.",
+    source: "Le Moniteur des Pharmacies",
+    source_url: "https://www.lemoniteurdespharmacies.fr/business/marches/wegovy-et-mounjaro-les-delivrances-bondissent-de-74-depuis-le-remboursement",
+    tiktok_url: "",
+    badge_label: "La bonne nouvelle",
+    image_url: "assets/img_actu_2026_09_11_4.jpg",
+    tags: ["glp-1", "remboursement", "obesite", "delivrance", "officine"]
+  },
+{
+    id: "actu_2026_09_11_5",
+    date: "2026-09-11",
+    type: "actu",
+    categorie: "business_officine",
+    titre: "Dépistage tensionnel à 15 € : vraie mission ou guerre des actes ?",
+    resume: "La FSPF a avancé le chiffre de 15 € pour rémunérer le dépistage tensionnel en pharmacie. Ce chiffre n'est ni négocié ni arrêté à ce jour. Mais la bataille qui s'est ouverte dessine l'enjeu business majeur des prochaines négociations conventionnelles.",
+    source: "Pharm'Actus · Caducee.net — Prise de tension à 15 € en pharmacie : l'UFML relance la bataille de la valeur des actes, Le Quotidien du Pharmacien — Négociations conventionnelles : l'Uspo pose un ultimatum au ministère de la santé",
+    source_url: "https://www.caducee.net/actualite-medicale/16957/prise-de-tension-a-15-en-pharmacie-l-ufml-relance-la-bataille-de-la-valeur-des-actes.html",
+    tiktok_url: "",
+    badge_label: "Business",
+    image_url: "assets/img_actu_2026_09_11_5.jpg",
+    tags: ["negociations-conventionnelles", "missions-officinales", "hypertension", "remuneration-pharmacien"]
+  },
+{
+    id: "lsv_2026_09_11",
+    date: "2026-09-11",
+    type: "lsv",
+    categorie: "lsv",
+    titre: "Le saviez-vous ? On guérissait les infections en mangeant de la moisissure de fromage",
+    resume: "Avant la pénicilline, les paysans européens avaient leur propre antibiotique maison. Du fromage moisi appliqué directement sur les plaies infectées. Et le plus dingue ? La science a fini par leur donner raison.",
+    source: "Pharm'Alpha",
+    source_url: "",
+    tiktok_url: "",
+    badge_label: "Le Saviez-Vous",
+    image_url: "assets/img_lsv_2026_09_11.jpg",
+    tags: ["histoire", "antibiotique", "decouverte", "medecine-populaire", "chimie"]
+  },
 {
     id: "actu_2026_09_10_1",
     date: "2026-09-10",
@@ -2545,90 +2629,6 @@ const ARTICLES = [
     badge_label: "Pharma Monde",
     image_url: "assets/img_actu_2026_09_02_2.jpg",
     tags: ["vih", "injectable", "innovation", "vie-reelle", "dispensation"]
-  },
-{
-    id: "actu_2026_09_02_3",
-    date: "2026-09-02",
-    type: "actu",
-    categorie: "bonne_nouvelle",
-    titre: "Phloroglucinol et grossesse : Epi-Phare rassure (en partie), mais soulève une vraie question d'efficacité",
-    resume: "Une étude publiée en août 2026 par Epi-Phare ne met pas en évidence d'augmentation du risque de malformations congénitales majeures liée au phloroglucinol au premier trimestre. Bonne nouvelle côté sécurité. Mais l'efficacité du médicament pour ses indications habituelles reste mal démontrée. Le débat est relancé.",
-    source: "Le Moniteur des Pharmacies",
-    source_url: "https://www.lemoniteurdespharmacies.fr/therapeutique/vigilances/phloroglucinol-faut-il-continuer-a-le-prescrire-aux-femmes-enceintes",
-    tiktok_url: "",
-    badge_label: "La bonne nouvelle",
-    image_url: "assets/img_actu_2026_09_02_3.jpg",
-    tags: ["phloroglucinol", "grossesse", "pharmacovigilance", "epi-phare", "ansm"]
-  },
-{
-    id: "actu_2026_09_02_4",
-    date: "2026-09-02",
-    type: "actu",
-    categorie: "avenir_pharma",
-    titre: "Lilly mise 2,9 milliards sur Merida Biosciences : une nouvelle plateforme dans le pipeline",
-    resume: "Eli Lilly acquiert Merida Biosciences pour un montant pouvant atteindre 2,875 milliards de dollars. L'opération apporte à Lilly une plateforme technologique inédite dans son pipeline. La finalisation est attendue au quatrième trimestre 2026. Décryptage de ce que ça annonce pour les prochaines années.",
-    source: "ActuLabo",
-    source_url: "https://www.actulabo.com/lilly-debourse-jusqua-2875-md-pour-merida/",
-    tiktok_url: "",
-    badge_label: "L'avenir de la pharma",
-    image_url: "assets/img_actu_2026_09_02_4.jpg",
-    tags: ["pipeline", "acquisition", "innovation", "lilly", "recherche"]
-  },
-{
-    id: "actu_2026_09_02_5",
-    date: "2026-09-02",
-    type: "actu",
-    categorie: "business_officine",
-    titre: "PLFSS 2027 : l'USPO pose 20 propositions - ce que ça change pour ton officine",
-    resume: "L'USPO publie une lettre ouverte à la ministre de la Santé avec 20 propositions d'efficience pour le PLFSS 2027. Derrière le discours collectif, plusieurs mesures touchent directement la rentabilité officinale. Décryptage.",
-    source: "Pharm'Actus · USPO — PLFSS 2027 : nos 20 propositions pour faire de l'efficience un projet collectif",
-    source_url: "https://uspo.fr/plfss-2027-nos-20-propositions-pour-faire-de-lefficience-un-projet-collectif-pour-notre-systeme-de-sante/",
-    tiktok_url: "",
-    badge_label: "Business",
-    image_url: "assets/img_actu_2026_09_02_5.jpg",
-    tags: ["plfss", "officine", "honoraires", "convention-pharmaceutique"]
-  },
-{
-    id: "lsv_2026_09_02",
-    date: "2026-09-02",
-    type: "lsv",
-    categorie: "lsv",
-    titre: "Le saviez-vous ? On mesurait la santé des poumons avec une bougie à souffler",
-    resume: "Avant les spiromètres électroniques, les médecins évaluaient la capacité respiratoire de leurs patients avec une flamme. Une bougie, une règle, et beaucoup d'espoir. La pneumologie du XVIIIe siècle, c'était aussi simple et aussi brutal que ça.",
-    source: "Pharm'Alpha",
-    source_url: "",
-    tiktok_url: "",
-    badge_label: "Le Saviez-Vous",
-    image_url: "assets/img_lsv_2026_09_02.jpg",
-    tags: ["histoire", "instrument", "diagnostic", "poumon", "chirurgie"]
-  },
-{
-    id: "actu_2026_09_01_1",
-    date: "2026-09-01",
-    type: "actu",
-    categorie: "pharma_france",
-    titre: "Tiers payant contre biosimilaire : ce qui change dès aujourd'hui au comptoir",
-    resume: "C'est officiel et c'est maintenant. Dès ce 1er septembre, un patient qui refuse la substitution biosimilaire perd le tiers payant sur le médicament concerné. La règle s'aligne sur les génériques. Tes process doivent être à jour dès l'ouverture.",
-    source: "Le Quotidien du Pharmacien",
-    source_url: "http://www.lequotidiendupharmacien.fr/tiers-payant-contre-biosimilaire-r3c-facturation-electronique-les-evolutions-qui-marquent-la-rentree",
-    tiktok_url: "",
-    badge_label: "Pharma France",
-    image_url: "assets/img_actu_2026_09_01_1.jpg",
-    tags: ["biosimilaire", "tiers-payant", "substitution", "officine", "rentrée"]
-  },
-{
-    id: "actu_2026_09_01_2",
-    date: "2026-09-01",
-    type: "actu",
-    categorie: "pharma_monde",
-    titre: "Trump négocie les prix des médicaments : 9 labos de plus au pied du mur",
-    resume: "Le président américain vient d'annoncer une deuxième vague d'accords sur les prix avec 9 nouveaux laboratoires. La politique du \"Most Favored Nation\" s'accélère outre-Atlantique. Et pour nous en France, ça mérite qu'on lève le nez du comptoir.",
-    source: "STAT News",
-    source_url: "https://www.statnews.com/2026/08/31/trump-most-favored-nation-drug-pricing-new-round-price-cuts-announced/?utm_campaign=rss",
-    tiktok_url: "",
-    badge_label: "Pharma Monde",
-    image_url: "assets/img_actu_2026_09_01_2.jpg",
-    tags: ["prix-medicaments", "usa", "industrie-pharma", "rupture", "ceps"]
   }
 ];
 

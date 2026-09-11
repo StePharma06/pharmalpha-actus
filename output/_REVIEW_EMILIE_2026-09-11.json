@@ -1,0 +1,38 @@
+{
+  "generated_at": "2026-09-11T04:09:10.969888+02:00",
+  "run_date": "2026-09-11",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "avenir_pharma",
+      "titre": "Les CAR-T cells, une révolution qui commence à peine : ce que tu vas voir arriver en officine",
+      "resume": "Les thérapies CAR-T transforment déjà la prise en charge de certains cancers du sang. Des patients en rémission après l'échec de tous les autres traitements. Ce n'est que le début, et le rôle du pharmacien d'officine dans le suivi de ces patients va évoluer.",
+      "source": "France Info Sante",
+      "source_url": "https://www.franceinfo.fr/sante/cancer/le-traitement-par-car-t-cell-une-revolution-contre-le-cancer_8187299.html",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Dépistage tensionnel à 15 € : vraie mission ou guerre des actes ?",
+      "resume": "La FSPF a avancé le chiffre de 15 € pour rémunérer le dépistage tensionnel en pharmacie. Ce chiffre n'est ni négocié ni arrêté à ce jour. Mais la bataille qui s'est ouverte dessine l'enjeu business majeur des prochaines négociations conventionnelles.",
+      "source": "Pharm'Actus · Caducee.net — Prise de tension à 15 € en pharmacie : l'UFML relance la bataille de la valeur des actes, Le Quotidien du Pharmacien — Négociations conventionnelles : l'Uspo pose un ultimatum au ministère de la santé",
+      "source_url": "https://www.caducee.net/actualite-medicale/16957/prise-de-tension-a-15-en-pharmacie-l-ufml-relance-la-bataille-de-la-valeur-des-actes.html",
+      "confidence_score": 0.72,
+      "warnings": [
+        "Le chiffre de 15 € est une proposition syndicale FSPF non négociée et non arrêtée : bien précisé dans l'article, mais à vérifier si une évolution intervient avant publication.",
+        "Le calcul de 90 M€ de potentiel réseau et de 18 750 € par officine sont des projections illustratives basées sur des hypothèses (10 % des 6 M non diagnostiqués, 5 actes/jour, 250 jours) : ils sont présentés comme des ordres de grandeur, pas des prévisions. Vérifier que la formulation est suffisamment prudente.",
+        "Le chiffre de 6 millions d'hypertendus non diagnostiqués (Santé publique France 2023) est une donnée structurelle fiable mais à distinguer des hypertendus traités non contrôlés (~4 M) : distinction faite dans l'article.",
+        "Aucun acte réglementaire (avenant conventionnel, arrêté JORF) n'existe à ce jour pour cette rémunération : bien souligné dans l'article.",
+        "La position de la FSPF sur l'ultimatum de l'USPO n'est pas connue publiquement à ce stade : précisé dans l'article avec prudence.",
+        "L'UFML-S n'est pas un syndicat de pharmaciens : c'est un syndicat médical. Son intervention est rapportée comme un acteur externe, ce qui est correct.",
+        "Le nombre de 19 274 officines est issu d'IQVIA Pharmastat juin 2026 — chiffre de référence utilisé conformément aux règles rédactionnelles.",
+        "5 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}
