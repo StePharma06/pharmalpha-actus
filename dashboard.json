@@ -1,28 +1,28 @@
 {
- "genere_le": "2026-09-10T09:40:05+02:00",
+ "genere_le": "2026-09-11T09:37:13+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1163,
- "nouveaux_7j": 32,
- "nouveaux_cumul": 1156,
+ "abonnes_total": 1169,
+ "nouveaux_7j": 34,
+ "nouveaux_cumul": 1162,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-09-03",
-  "au": "2026-09-10",
-  "delivres": 7369,
-  "ouvertures": 2843,
-  "ouvertures_uniques": 2054,
-  "clics": 3777,
-  "clics_uniques": 674,
+  "du": "2026-09-04",
+  "au": "2026-09-11",
+  "delivres": 7403,
+  "ouvertures": 2838,
+  "ouvertures_uniques": 2062,
+  "clics": 3799,
+  "clics_uniques": 645,
   "taux_ouverture_pct": 27.9,
-  "taux_clic_pct": 9.1,
-  "ctor_pct": 32.8,
+  "taux_clic_pct": 8.7,
+  "ctor_pct": 31.3,
   "top_articles": [
    {
     "id": "actu_2026_09_05_1",
     "titre": "Tiers payant contre biosimilaire : le dispositif est enfin opérationnel",
     "date": "2026-09-05",
     "categorie": "pharma_france",
-    "clics": 138,
+    "clics": 140,
     "lecteurs": 79
    },
    {
@@ -32,14 +32,6 @@
     "categorie": "bonne_nouvelle",
     "clics": 109,
     "lecteurs": 70
-   },
-   {
-    "id": "actu_2026_09_03_1",
-    "titre": "Eliquis générique : le premier AOD substituable débarque en officine",
-    "date": "2026-09-03",
-    "categorie": "pharma_france",
-    "clics": 98,
-    "lecteurs": 66
    },
    {
     "id": "actu_2026_09_04_3",
@@ -54,8 +46,8 @@
     "titre": "PLFSS 2027 : ce que les pharmaciens doivent redouter (et quoi défendre) avant fin septembre",
     "date": "2026-09-05",
     "categorie": "business_officine",
-    "clics": 89,
-    "lecteurs": 55
+    "clics": 93,
+    "lecteurs": 56
    },
    {
     "id": "actu_2026_09_04_4",
@@ -78,7 +70,7 @@
     "titre": "Pfizer rejoint RECYPEN : les stylos préremplis ont désormais leur filière",
     "date": "2026-09-05",
     "categorie": "bonne_nouvelle",
-    "clics": 80,
+    "clics": 82,
     "lecteurs": 46
    },
    {
@@ -88,6 +80,14 @@
     "categorie": "pharma_france",
     "clics": 75,
     "lecteurs": 46
+   },
+   {
+    "id": "actu_2026_09_11_2",
+    "titre": "Désogestrel et méningiome : 1,6 million de femmes vont recevoir un courrier, prépare-toi",
+    "date": "2026-09-11",
+    "categorie": "pharma_france",
+    "clics": 77,
+    "lecteurs": 45
    },
    {
     "id": "actu_2026_09_07_1",
@@ -101,12 +101,12 @@
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-09-10",
-  "delivres": 102828,
-  "ouvertures": 41541,
-  "ouvertures_uniques": 28770,
-  "clics": 43723,
-  "clics_uniques": 7903,
+  "au": "2026-09-11",
+  "delivres": 103864,
+  "ouvertures": 41943,
+  "ouvertures_uniques": 29063,
+  "clics": 44250,
+  "clics_uniques": 7981,
   "taux_ouverture_pct": 28.0,
   "taux_clic_pct": 7.7,
   "ctor_pct": 27.5,
@@ -116,7 +116,7 @@
     "titre": "Tiers payant contre biosimilaire : le dispositif est enfin opérationnel",
     "date": "2026-09-05",
     "categorie": "pharma_france",
-    "clics": 138,
+    "clics": 140,
     "lecteurs": 79
    },
    {
@@ -161,9 +161,9 @@
    },
    {
     "id": "actu_2026_09_01_1",
-    "titre": "Tiers payant contre biosimilaire : ce qui change dès aujourd'hui au comptoir",
-    "date": "2026-09-01",
-    "categorie": "pharma_france",
+    "titre": "actu_2026_09_01_1",
+    "date": "",
+    "categorie": "",
     "clics": 98,
     "lecteurs": 69
    },
