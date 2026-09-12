@@ -1,0 +1,48 @@
+{
+  "generated_at": "2026-09-12T04:07:10.963734+02:00",
+  "run_date": "2026-09-12",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Marge grossiste : 100 millions d'euros en moins pour le réseau",
+      "resume": "Une nouvelle mesure réglementaire abaisse le plancher de la marge grossiste de 0,30 EUR à 0,22 EUR dès le 20 janvier 2027. Concrètement, c'est une perte sèche estimée à 100 millions d'euros pour l'ensemble du réseau officinal. Et ça tombe en pleine négociation conventionnelle, très bon timing.",
+      "source": "Le Pharmacien de France",
+      "source_url": "https://lepharmaciendefrance.fr/revision-de-la-marge-grossiste-une-perte-de-100-millions-deuros-pour-le-reseau/",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "avenir_pharma",
+      "titre": "Maladies auto-immunes : une thérapie génique pour remettre le système immunitaire à zéro",
+      "resume": "Des chercheurs chinois ont mis au point une technique de thérapie génique capable de réinitialiser les cellules immunitaires pour qu'elles cessent d'attaquer le corps. Polyarthrite, lupus, sclérodermie : les maladies auto-immunes sévères pourraient un jour être traitées à la source, pas seulement contrôlées.",
+      "source": "Sciences et Avenir",
+      "source_url": "https://www.sciencesetavenir.fr/sante/cette-therapie-genique-permet-de-lutter-contre-les-maladies-auto-immunes-de-l-interieur_194778?xtor=RSS-16",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Désogestrel et méningiome : 1,5 million de patientes alertées, ton comptoir en première ligne",
+      "resume": "L'ANSM envoie un courrier à 1,5 million de femmes sous désogestrel pour les informer d'un risque de méningiome. Pour l'officine, c'est une vague de questions qui arrive - et une opportunité de conseil à saisir.",
+      "source": "Pharm'Actus · FSPF — Alerte ANSM sur les contraceptifs à base de désogestrel (11/09/2026), Le Monde Santé — Appel à témoignages pilule / contraception (11/09/2026)",
+      "source_url": "https://www.fspf.fr/alerte-de-lansm-sur-les-contraceptifs-a-base-de-desogestrel-consultez-notre-fiche-pratique/",
+      "confidence_score": 0.72,
+      "warnings": [
+        "Le risque absolu de méningiome lié au désogestrel n'est pas chiffré dans les sources disponibles : ne pas inventer de pourcentage de risque dans une version étendue de l'article.",
+        "L'honoraire de dispensation de 1,02 € cité est le montant conventionnel en vigueur au moment de la rédaction — à vérifier si un avenant récent a modifié ce tarif.",
+        "Aucun acte pharmaceutique rémunéré national n'est attaché à la gestion des alertes pharmacovigilance en officine : l'article le précise explicitement, ne pas laisser entendre le contraire.",
+        "La part de marché du désogestrel parmi les microprogestatifs et le volume exact de boîtes délivrées en France ne sont pas sourcés dans les articles disponibles : les 1,5 million de patientes viennent de la source ANSM/FSPF, c'est le seul chiffre solide à utiliser.",
+        "La position de l'USPO et de la FSPF sur ce sujet spécifique : la FSPF a publié une fiche pratique (source utilisée). L'USPO ne s'est pas exprimée publiquement sur ce sujet à ce stade — à mentionner si la rubrique équilibre syndical est invoquée.",
+        "Le désogestrel est commercialisé sous plusieurs spécialités en France (génériques et princeps) par différents laboratoires : ne nommer aucun laboratoire spécifique sans vérification du titulaire AMM français pour éviter toute erreur.",
+        "3 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

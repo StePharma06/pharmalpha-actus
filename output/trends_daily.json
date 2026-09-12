@@ -1,64 +1,64 @@
 {
-  "generated_at": "2026-09-11",
-  "window_label": "5 sept. au 11 sept. 2026",
+  "generated_at": "2026-09-12",
+  "window_label": "6 sept. au 12 sept. 2026",
   "has_history": true,
   "delta_source": "pytrends_rising",
   "pathologies": [
     {
       "display": "Assurance maladie fatigue chronique",
-      "delta_label": "↑ 327 850",
+      "delta_label": "↑ 324 950",
       "trend": "up"
     },
     {
-      "display": "Allergie en septembre",
-      "delta_label": "↑ 18 450",
+      "display": "Allergie du moment",
+      "delta_label": "↑ 21 450",
       "trend": "up"
     },
     {
-      "display": "Seipa allergie",
-      "delta_label": "↑ 16 400",
-      "trend": "up"
-    },
-    {
-      "display": "Cure vitamine fatigue",
-      "delta_label": "↑ 15 300",
+      "display": "Prick test allergie",
+      "delta_label": "↑ 20 650",
       "trend": "up"
     },
     {
       "display": "Pommeau de douche vitamine c",
-      "delta_label": "↑ 14 100",
+      "delta_label": "↑ 13 800",
+      "trend": "up"
+    },
+    {
+      "display": "Vitamine b₁₂",
+      "delta_label": "↑ 9 100",
       "trend": "up"
     }
   ],
   "soins": [
     {
-      "display": "Digestion difficile que faire",
-      "delta_label": "↑ 46 800",
+      "display": "Azinc immunite",
+      "delta_label": "↑ 74 600",
       "trend": "up"
     },
     {
-      "display": "Booster son immunite",
-      "delta_label": "↑ 45 000",
+      "display": "Mauvaise digestion que faire",
+      "delta_label": "↑ 69 500",
       "trend": "up"
     },
     {
-      "display": "Comment faciliter la digestion",
-      "delta_label": "↑ 30 450",
+      "display": "Calmosine digestion bébé",
+      "delta_label": "↑ 40 400",
       "trend": "up"
     },
     {
-      "display": "Sante-maison.fr santé mentale",
-      "delta_label": "↑ 400",
+      "display": "Gummies sommeil enfant",
+      "delta_label": "↑ 5 650",
       "trend": "up"
     },
     {
-      "display": "Sante-maison.fr santé des seniors",
-      "delta_label": "↑ 200",
+      "display": "Stylo anti douleur",
+      "delta_label": "↑ 2 750",
       "trend": "up"
     }
   ],
   "pathologies_stale": false,
-  "pathologies_from": "2026-09-11",
+  "pathologies_from": "2026-09-12",
   "soins_stale": false,
-  "soins_from": "2026-09-11"
+  "soins_from": "2026-09-12"
 }

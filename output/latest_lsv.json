@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? On guérissait les infections en mangeant de la moisissure de fromage",
-  "resume": "Avant la pénicilline, les paysans européens avaient leur propre antibiotique maison. Du fromage moisi appliqué directement sur les plaies infectées. Et le plus dingue ? La science a fini par leur donner raison.",
-  "full_text": "Imagine le tableau : on est en Pologne, au XVIIIe siècle. Un gamin s'est entaillé la main en travaillant aux champs. La plaie rougit, gonfle, la fièvre monte. Le médecin du village est à trois jours de cheval. Alors la grand-mère fait ce qu'elle sait faire : elle va chercher le vieux fromage au fond de la cave, celui qui sent fort et qui bleuît sur les bords. Elle l'applique sur la plaie. Et ça marche.\n\nCe n'est pas une légende locale. Des pratiques similaires sont documentées dans toute l'Europe centrale et orientale, depuis des siècles. En Russie, en Moldavie, en Bohème - on utilisait du pain moisi, du fromage moisi, des crôutes de seigle fermenté sur les plaies purulentes. Les médecins savants riaient. Les gens continuaient quand même.\n\nEt voilà le twist : ces moisissures de fromage contenaient souvent des Penicillium - exactement la même famille de champignons qu'Alexander Fleming allait observer en 1928 sur une boîte de Petri oubliée. La grand-mère polonaise pratiquait une antibiothérapie empirique trois siècles avant que le mot « antibiotique » n'existe.\n\nEn 1897, le médecin français Ernest Duchesne avait même soumis une thèse à Lyon sur l'activité antibactérienne des Penicillium. Il avait testé sur des cobayes, obtenu des résultats nets. L'Institut Pasteur n'a pas daigné répondre. Duchesne est mort de tuberculose en 1912, sans jamais être reconnu. Fleming a eu le Nobel en 1945.\n\nAujourd'hui, la résistance aux antibiotiques oblige les chercheurs à fouiller les vieux remèdes traditionnels à la recherche de nouvelles molécules. Les ethnobotanistes peignent les campagnes d'Europe de l'Est avec des carnets et des écouvillons. La grand-mère au fromage moisi avait peut-être une longueur d'avance sur tous les labos du monde.",
-  "image_keywords": "moldy cheese vintage",
+  "titre": "Le saviez-vous ? On mesurait la dose de morphine... au nombre de cris du patient",
+  "resume": "Avant les seringues graduées et les protocoles douleur, les médecins militaires du XIXe siècle dosaient les opiacés à l'oreille. Littéralement. Une méthode aussi barbare qu'ingénieuse - et terriblement humaine.",
+  "full_text": "C'est 1862, en pleine guerre de Sécession américaine. Les chirurgiens de campagne opèrent dans des granges, sur des portes arrachées, avec du whisky en guise d'anesthésique. La morphine existe depuis 1804, mais personne ne sait vraiment combien en donner.\n\nLa solution du terrain ? Écouter le patient. Un cri continu = pas assez. Silence total = trop. Un gémissement régulier, presque rythmé = dose correcte. Les médecins appelaient ça le « bon seuil » - une expression qui fait froid dans le dos mais qui traduisait une réalité : sans balance, sans seringue graduée, le corps du patient était le seul instrument de mesure disponible.\n\nLe twist qui change tout : cette méthode approximative a paradoxalement engendré la première épidémie d'addiction aux opioïdes de l'histoire moderne. On estime que 400 000 soldats nordistes et sudistes sont rentrés chez eux dépendants à la morphine après la guerre. On appelait ça le « soldier's disease » - la maladie du soldat. Un terme pudique pour une catastrophe sanitaire silencieuse.\n\nCe qui est fascinant, c'est que le problème n'était pas la molécule. C'était l'absence totale de protocole. Personne ne savait quand s'arrêter. Ni les médecins, ni les patients. La morphine était vendue librement en pharmacie jusqu'en 1914, et prescrite pour à peu près tout : douleurs dentaires, règles douloureuses, toux des enfants.\n\nIl a fallu attendre 1898 et l'invention de la seringue hypodermique en verre gradué pour commencer à parler de doses précises. Et les premières échelles de douleur standardisées ? Elles n'arrivent qu'en 1974, avec Margo McCaffery et son fameux « la douleur, c'est ce que le patient dit qu'elle est ».\n\nAujourd'hui, quand tu vérifies une prescription de morphine orale ou que tu conseilles un patch de fentanyl, tu es l'héritier de 160 ans d'erreurs, de corrections et de progrès. La rigueur du comptoir, c'est exactement ce que ces soldats de 1862 n'avaient pas.",
+  "image_keywords": "civil war medicine surgery",
   "tags": [
     "histoire",
-    "antibiotique",
-    "decouverte",
-    "medecine-populaire",
-    "chimie"
+    "morphine",
+    "douleur",
+    "addiction",
+    "chirurgie"
   ],
-  "date": "2026-09-11",
+  "date": "2026-09-12",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",

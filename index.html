@@ -31,7 +31,7 @@
      l'image n'est decouverte qu'apres execution du JS qui construit les cards
      (le <img> n'existe qu'a l'interieur d'un template literal JS, invisible au
      preload scanner) -> LCP non deterministe, cf. sprint perf 2026-07-27. -->
-<link rel="preload" as="image" href="assets/stock/pharma_france_1.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="assets/img_actu_2026_09_12_1.jpg" fetchpriority="high">
 
 <!-- Space Grotesk — self-hosted WOFF2 (remplace Google Fonts, cf. mission perf/RGPD 2026-08-24) -->
 <link rel="preload" href="/assets/fonts/space-grotesk-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -1737,7 +1737,7 @@ body.pa-has-nav #actusHeader {
 </div>
 
 <!-- EXPRESSION DU JOUR (injectée par update_actus.py à chaque run) -->
-<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Se faire de la bile</h2><p class="expression-corps">La bile jaune était, dans la médecine des humeurs, l'humeur chaude et sèche associée à l'anxiété, à l'agitation et à l'inquiétude. Se faire de la bile, c'était laisser cette humeur s'emballer dans le corps - synonyme de s'angoisser pour des raisons souvent futiles.</p></aside>
+<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Antibiotique</h2><p class="expression-corps">Forgé en 1942 par le microbiologiste Selman Waksman à partir du grec <em>anti</em> (contre) et <em>bios</em> (vie). Un antibiotique est donc littéralement « ce qui va contre la vie » - la vie bactérienne en l'occurrence. Le mot est apparu la même année que la streptomycine, premier antibiotique contre la tuberculose.</p></aside>
 
 <!-- ESPACE PARTENAIRE 1 (entre Expression du jour et Aujourd'hui).
      Statique : reste visible meme si le JS ne s'execute pas. Le 2e emplacement
@@ -1762,12 +1762,12 @@ body.pa-has-nav #actusHeader {
 <div id="articles-container"></div>
 
 <!-- MARQUE_TENDANCE (injectee par le pipeline hebdo, remplacee quotidiennement) -->
-<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">5 sept. au 11 sept. 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Assurance maladie fatigue chronique</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 327 850</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Digestion difficile que faire</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 46 800</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie en septembre</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 18 450</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Booster son immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 45 000</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Seipa allergie</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 16 400</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Comment faciliter la digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 30 450</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Cure vitamine fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 15 300</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Sante-maison.fr santé mentale</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 400</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Pommeau de douche vitamine c</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 14 100</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Sante-maison.fr santé des seniors</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 200</td></tr>
+<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">6 sept. au 12 sept. 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Assurance maladie fatigue chronique</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 324 950</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Azinc immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 74 600</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie du moment</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 21 450</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Mauvaise digestion que faire</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 69 500</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Prick test allergie</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 20 650</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Calmosine digestion bébé</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 40 400</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Pommeau de douche vitamine c</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 13 800</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Gummies sommeil enfant</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 5 650</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Vitamine b₁₂</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 9 100</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Stylo anti douleur</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 2 750</td></tr>
 </tbody></table></div><p style="margin:10px 0 0;font-size:11px;color:#9ca3af;font-style:italic;">Indice de tendance : intensite de hausse Google Trends (non comparable a un volume absolu).</p><p style="margin:12px 0 0;font-size:11px;color:#9ca3af;text-align:right;">Source&nbsp;: Google Trends France (pytrends) &middot; 7 jours glissants</p></section></div>
 
 <!-- ARCHIVES CTA -->
@@ -1930,6 +1930,90 @@ body.pa-has-nav #actusHeader {
 // Mis a jour automatiquement par n8n chaque semaine
 // ============================================================
 const ARTICLES = [
+{
+    id: "actu_2026_09_12_1",
+    date: "2026-09-12",
+    type: "actu",
+    categorie: "pharma_france",
+    titre: "Marge grossiste : 100 millions d'euros en moins pour le réseau",
+    resume: "Une nouvelle mesure réglementaire abaisse le plancher de la marge grossiste de 0,30 EUR à 0,22 EUR dès le 20 janvier 2027. Concrètement, c'est une perte sèche estimée à 100 millions d'euros pour l'ensemble du réseau officinal. Et ça tombe en pleine négociation conventionnelle, très bon timing.",
+    source: "Le Pharmacien de France",
+    source_url: "https://lepharmaciendefrance.fr/revision-de-la-marge-grossiste-une-perte-de-100-millions-deuros-pour-le-reseau/",
+    tiktok_url: "",
+    badge_label: "Pharma France",
+    image_url: "assets/img_actu_2026_09_12_1.jpg",
+    tags: ["marge", "grossiste", "remuneration", "officine", "convention"]
+  },
+{
+    id: "actu_2026_09_12_2",
+    date: "2026-09-12",
+    type: "actu",
+    categorie: "pharma_monde",
+    titre: "SMA : la FDA approuve Isembyld, premier médicament ciblant la perte musculaire",
+    resume: "Scholar Rock vient d'obtenir le feu vert de la FDA pour Isembyld, premier traitement ciblant spécifiquement la perte musculaire dans l'amyotrophie spinale. Utilisé en complément des thérapies SMN2, il améliore les compétences motrices des jeunes patients après un an. Une avancée qui change la donne pour une maladie neuromusculaire dévastatrice.",
+    source: "STAT News",
+    source_url: "https://www.statnews.com/2026/09/11/scholar-rock-spinal-muscular-atrophy-isembyld-clinical-trial-fda-approval/?utm_campaign=rss",
+    tiktok_url: "",
+    badge_label: "Pharma Monde",
+    image_url: "assets/img_actu_2026_09_12_2.jpg",
+    tags: ["fda", "sma", "innovation", "amm", "pediatrie"]
+  },
+{
+    id: "actu_2026_09_12_3",
+    date: "2026-09-12",
+    type: "actu",
+    categorie: "bonne_nouvelle",
+    titre: "HPV : l'INCa appelle les pharmaciens à aller chercher les 11-26 ans",
+    resume: "L'Institut national du cancer sort un appel clair aux pharmaciens : sensibilisez les parents et les jeunes jusqu'à 26 ans à la vaccination HPV en officine. La couverture vaccinale progresse, mais reste insuffisante. Et l'officine, c'est le point de contact le plus accessible pour ces populations.",
+    source: "Le Quotidien du Pharmacien",
+    source_url: "http://www.lequotidiendupharmacien.fr/exercice-pro/vaccination-hpv-linca-encourage-les-pharmaciens-aller-vers-les-jeunes",
+    tiktok_url: "",
+    badge_label: "La bonne nouvelle",
+    image_url: "assets/img_actu_2026_09_12_3.jpg",
+    tags: ["vaccination", "hpv", "cancer", "officine", "sante-publique"]
+  },
+{
+    id: "actu_2026_09_12_4",
+    date: "2026-09-12",
+    type: "actu",
+    categorie: "avenir_pharma",
+    titre: "Maladies auto-immunes : une thérapie génique pour remettre le système immunitaire à zéro",
+    resume: "Des chercheurs chinois ont mis au point une technique de thérapie génique capable de réinitialiser les cellules immunitaires pour qu'elles cessent d'attaquer le corps. Polyarthrite, lupus, sclérodermie : les maladies auto-immunes sévères pourraient un jour être traitées à la source, pas seulement contrôlées.",
+    source: "Sciences et Avenir",
+    source_url: "https://www.sciencesetavenir.fr/sante/cette-therapie-genique-permet-de-lutter-contre-les-maladies-auto-immunes-de-l-interieur_194778?xtor=RSS-16",
+    tiktok_url: "",
+    badge_label: "L'avenir de la pharma",
+    image_url: "assets/img_actu_2026_09_12_4.jpg",
+    tags: ["therapie-genique", "auto-immune", "recherche", "innovation", "biotherapie"]
+  },
+{
+    id: "actu_2026_09_12_5",
+    date: "2026-09-12",
+    type: "actu",
+    categorie: "business_officine",
+    titre: "Désogestrel et méningiome : 1,5 million de patientes alertées, ton comptoir en première ligne",
+    resume: "L'ANSM envoie un courrier à 1,5 million de femmes sous désogestrel pour les informer d'un risque de méningiome. Pour l'officine, c'est une vague de questions qui arrive - et une opportunité de conseil à saisir.",
+    source: "Pharm'Actus · FSPF — Alerte ANSM sur les contraceptifs à base de désogestrel (11/09/2026), Le Monde Santé — Appel à témoignages pilule / contraception (11/09/2026)",
+    source_url: "https://www.fspf.fr/alerte-de-lansm-sur-les-contraceptifs-a-base-de-desogestrel-consultez-notre-fiche-pratique/",
+    tiktok_url: "",
+    badge_label: "Business",
+    image_url: "assets/img_actu_2026_09_12_5.jpg",
+    tags: ["desogestrel", "pharmacovigilance", "contraception", "conseil-officinal"]
+  },
+{
+    id: "lsv_2026_09_12",
+    date: "2026-09-12",
+    type: "lsv",
+    categorie: "lsv",
+    titre: "Le saviez-vous ? On mesurait la dose de morphine... au nombre de cris du patient",
+    resume: "Avant les seringues graduées et les protocoles douleur, les médecins militaires du XIXe siècle dosaient les opiacés à l'oreille. Littéralement. Une méthode aussi barbare qu'ingénieuse - et terriblement humaine.",
+    source: "Pharm'Alpha",
+    source_url: "",
+    tiktok_url: "",
+    badge_label: "Le Saviez-Vous",
+    image_url: "assets/img_lsv_2026_09_12.jpg",
+    tags: ["histoire", "morphine", "douleur", "addiction", "chirurgie"]
+  },
 {
     id: "actu_2026_09_11_1",
     date: "2026-09-11",
@@ -2545,90 +2629,6 @@ const ARTICLES = [
     badge_label: "Pharma Monde",
     image_url: "assets/img_actu_2026_09_03_2.jpg",
     tags: ["maladies-rares", "phase3", "neurologie", "recherche", "echec"]
-  },
-{
-    id: "actu_2026_09_03_3",
-    date: "2026-09-03",
-    type: "actu",
-    categorie: "bonne_nouvelle",
-    titre: "Septembre Turquoise : les cancers gynécologiques pelviens, ton comptoir s'engage",
-    resume: "18 000 femmes touchées chaque année en France par un cancer gynécologique pelvien. Trop méconnus, trop souvent diagnostiqués trop tard. Ce mois de septembre, les pharmaciens se mobilisent. Et c'est une vraie bonne nouvelle.",
-    source: "USPO",
-    source_url: "https://uspo.fr/septembre-turquoise-les-pharmaciens-se-mobilisent-contre-les-cancers-gynecologiques-pelviens/",
-    tiktok_url: "",
-    badge_label: "La bonne nouvelle",
-    image_url: "assets/img_actu_2026_09_03_3.jpg",
-    tags: ["prevention", "cancer", "vaccination", "sante-publique", "officine"]
-  },
-{
-    id: "actu_2026_09_03_4",
-    date: "2026-09-03",
-    type: "actu",
-    categorie: "avenir_pharma",
-    titre: "Vaccin anti-moustique : la salive comme cible, une piste sérieuse",
-    resume: "Des chercheurs français ont percé un mécanisme clé : c'est la salive du moustique qui favorise la transmission de la dengue, du Zika ou de la fièvre jaune. Une découverte qui ouvre la voie à un vaccin ciblant directement le vecteur, pas le virus. Les premiers tests sur souris sont encourageants.",
-    source: "France Info Sante",
-    source_url: "https://www.franceinfo.fr/replay-radio/le-billet-vert/une-piste-prometteuse-pour-developper-un-vaccin-contre-les-virus-transmis-par-les-moustiques_8173268.html#xtor=RSS-3-%5Bgeneral%5D",
-    tiktok_url: "",
-    badge_label: "L'avenir de la pharma",
-    image_url: "assets/img_actu_2026_09_03_4.jpg",
-    tags: ["vaccin", "dengue", "recherche", "innovation", "vecteur"]
-  },
-{
-    id: "actu_2026_09_03_5",
-    date: "2026-09-03",
-    type: "actu",
-    categorie: "business_officine",
-    titre: "IJ accident du travail : 555 M€ d'économies qui vont coûter cher à tes adjoints",
-    resume: "À partir du 1er novembre, le plafond des indemnités journalières AT/MP pourrait être drastiquement réduit et les IJ intégralement fiscalisées. Économies projetées : 555 millions d'euros en 2027. Pour tes collaborateurs salariés, l'impact peut être brutal.",
-    source: "Pharm'Actus · Le Quotidien du Pharmacien – Accident du travail : baisse des indemnités journalières à venir",
-    source_url: "http://www.lequotidiendupharmacien.fr/exercice-pro/accident-du-travail-baisse-des-indemnites-journalieres-venir",
-    tiktok_url: "",
-    badge_label: "Business",
-    image_url: "assets/img_actu_2026_09_03_5.jpg",
-    tags: ["rh-officine", "indemnites-journalieres", "accident-du-travail", "prevoyance"]
-  },
-{
-    id: "lsv_2026_09_03",
-    date: "2026-09-03",
-    type: "lsv",
-    categorie: "lsv",
-    titre: "Le saviez-vous ? On mesurait la dose de médicament... avec le pouce du médecin",
-    resume: "Avant les milligrammes et les fioles graduées, la posologie se mesurait avec les doigts. Littéralement. Et ce n'était pas une métaphore - c'était une technique médicale officielle, enseignée dans les universités.",
-    source: "Pharm'Alpha",
-    source_url: "",
-    tiktok_url: "",
-    badge_label: "Le Saviez-Vous",
-    image_url: "assets/img_lsv_2026_09_03.jpg",
-    tags: ["histoire", "posologie", "pharmacopee", "mesure", "apothicaire"]
-  },
-{
-    id: "actu_2026_09_02_1",
-    date: "2026-09-02",
-    type: "actu",
-    categorie: "pharma_france",
-    titre: "Tiers payant contre biosimilaires : ça démarre aujourd'hui, t'es prêt ?",
-    resume: "Depuis ce 1er septembre, le dispositif LFSS 2026 est en vigueur : pas de substitution biosimilaire ou hybride possible, pas de tiers payant pour le patient. C'est le levier de pression le plus direct jamais mis entre les mains du pharmacien au comptoir. Le mode d'emploi, c'est maintenant.",
-    source: "FSPF",
-    source_url: "https://www.fspf.fr/tiers-payant-contre-biosimilaires-et-hybrides-2026-34/",
-    tiktok_url: "",
-    badge_label: "Pharma France",
-    image_url: "assets/img_actu_2026_09_02_1.jpg",
-    tags: ["biosimilaire", "tiers-payant", "substitution", "lfss", "officine"]
-  },
-{
-    id: "actu_2026_09_02_2",
-    date: "2026-09-02",
-    type: "actu",
-    categorie: "pharma_monde",
-    titre: "Anti-VIH injectables longue durée : les données réelles confirment la supériorité sur l'oral",
-    resume: "Au congrès AIDS 2026, ViiV Healthcare a présenté des données en vie réelle sur ses traitements injectables longue durée d'action contre le VIH. Résultat : supérieur aux comprimés quotidiens sur plusieurs critères. Pour les officines françaises, ça soulève une vraie question sur le rôle dans le suivi des patients sous injectable.",
-    source: "Le Quotidien du Pharmacien",
-    source_url: "http://www.lequotidiendupharmacien.fr/exercice-pro/de-nouvelles-donnees-sur-les-traitements-anti-vih-longue-duree-daction-injectables",
-    tiktok_url: "",
-    badge_label: "Pharma Monde",
-    image_url: "assets/img_actu_2026_09_02_2.jpg",
-    tags: ["vih", "injectable", "innovation", "vie-reelle", "dispensation"]
   }
 ];
 
