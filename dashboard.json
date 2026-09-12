@@ -1,21 +1,21 @@
 {
- "genere_le": "2026-09-11T09:37:13+02:00",
+ "genere_le": "2026-09-12T09:28:52+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1169,
- "nouveaux_7j": 34,
- "nouveaux_cumul": 1162,
+ "abonnes_total": 1173,
+ "nouveaux_7j": 29,
+ "nouveaux_cumul": 1166,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-09-04",
-  "au": "2026-09-11",
-  "delivres": 7403,
-  "ouvertures": 2838,
-  "ouvertures_uniques": 2062,
-  "clics": 3799,
-  "clics_uniques": 645,
-  "taux_ouverture_pct": 27.9,
-  "taux_clic_pct": 8.7,
-  "ctor_pct": 31.3,
+  "du": "2026-09-05",
+  "au": "2026-09-12",
+  "delivres": 7437,
+  "ouvertures": 2803,
+  "ouvertures_uniques": 2042,
+  "clics": 3790,
+  "clics_uniques": 642,
+  "taux_ouverture_pct": 27.5,
+  "taux_clic_pct": 8.6,
+  "ctor_pct": 31.4,
   "top_articles": [
    {
     "id": "actu_2026_09_05_1",
@@ -34,28 +34,12 @@
     "lecteurs": 70
    },
    {
-    "id": "actu_2026_09_04_3",
-    "titre": "Septembre Turquoise : tes affiches anti-cancers gynecos sont disponibles, sers-t'en",
-    "date": "2026-09-04",
-    "categorie": "bonne_nouvelle",
-    "clics": 124,
-    "lecteurs": 62
-   },
-   {
     "id": "actu_2026_09_05_5",
     "titre": "PLFSS 2027 : ce que les pharmaciens doivent redouter (et quoi défendre) avant fin septembre",
     "date": "2026-09-05",
     "categorie": "business_officine",
     "clics": 93,
     "lecteurs": 56
-   },
-   {
-    "id": "actu_2026_09_04_4",
-    "titre": "Vaccination HPV : les pharmaciens ont les cartes en main pour faire grimper la couverture",
-    "date": "2026-09-04",
-    "categorie": "avenir_pharma",
-    "clics": 95,
-    "lecteurs": 54
    },
    {
     "id": "actu_2026_09_08_1",
@@ -66,6 +50,14 @@
     "lecteurs": 50
    },
    {
+    "id": "actu_2026_09_11_2",
+    "titre": "Désogestrel et méningiome : 1,6 million de femmes vont recevoir un courrier, prépare-toi",
+    "date": "2026-09-11",
+    "categorie": "pharma_france",
+    "clics": 83,
+    "lecteurs": 48
+   },
+   {
     "id": "actu_2026_09_05_3",
     "titre": "Pfizer rejoint RECYPEN : les stylos préremplis ont désormais leur filière",
     "date": "2026-09-05",
@@ -74,40 +66,48 @@
     "lecteurs": 46
    },
    {
-    "id": "actu_2026_09_04_1",
-    "titre": "Convention pharmaceutique : la lettre de cadrage se fait attendre, la tension monte",
-    "date": "2026-09-04",
-    "categorie": "pharma_france",
-    "clics": 75,
-    "lecteurs": 46
-   },
-   {
-    "id": "actu_2026_09_11_2",
-    "titre": "Désogestrel et méningiome : 1,6 million de femmes vont recevoir un courrier, prépare-toi",
-    "date": "2026-09-11",
-    "categorie": "pharma_france",
-    "clics": 77,
-    "lecteurs": 45
-   },
-   {
     "id": "actu_2026_09_07_1",
     "titre": "Wegovy oral autorisé en Allemagne : la France peut-elle encore attendre ?",
     "date": "2026-09-07",
     "categorie": "pharma_france",
     "clics": 77,
     "lecteurs": 45
+   },
+   {
+    "id": "actu_2026_09_09_1",
+    "titre": "Dépistage HTA en officine : d'où sort ce chiffre de 15 euros ?",
+    "date": "2026-09-09",
+    "categorie": "pharma_france",
+    "clics": 73,
+    "lecteurs": 45
+   },
+   {
+    "id": "actu_2026_09_05_2",
+    "titre": "Novartis prend un coup dur : pelacarsen recale en phase pivot",
+    "date": "2026-09-05",
+    "categorie": "pharma_monde",
+    "clics": 81,
+    "lecteurs": 44
+   },
+   {
+    "id": "actu_2026_09_09_3",
+    "titre": "Vaccination : la Cour des comptes valide le rôle clé des pharmaciens",
+    "date": "2026-09-09",
+    "categorie": "bonne_nouvelle",
+    "clics": 75,
+    "lecteurs": 44
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-09-11",
-  "delivres": 103864,
-  "ouvertures": 41943,
-  "ouvertures_uniques": 29063,
-  "clics": 44250,
-  "clics_uniques": 7981,
-  "taux_ouverture_pct": 28.0,
+  "au": "2026-09-12",
+  "delivres": 104901,
+  "ouvertures": 42282,
+  "ouvertures_uniques": 29300,
+  "clics": 44730,
+  "clics_uniques": 8052,
+  "taux_ouverture_pct": 27.9,
   "taux_clic_pct": 7.7,
   "ctor_pct": 27.5,
   "top_articles": [
