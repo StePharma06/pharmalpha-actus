@@ -2452,6 +2452,14 @@ def _build_expression_email_block(expr):
 def _build_partner_slot_email(slot: str = "haut") -> str:
     """Emplacement partenaire pour l'EMAIL (pub maison tant qu'aucun annonceur).
 
+    MENTION LEGALE : le libelle affiche DOIT rester "Publicite" des lors qu'un
+    annonceur paie. "Espace partenaire" evoque une collaboration editoriale et
+    non une publicite remuneree : c'est le cas type de publicite clandestine,
+    sanctionnable comme pratique commerciale trompeuse par omission
+    (code de la consommation art. L.121-1 + LCEN 2004-575 art. 20).
+    La mention doit etre AVANT le contenu de l'encart, lisible au premier coup
+    d'oeil, jamais reléguee dans un pied de page. Arbitrage Emilie 2026-09-13.
+
     Contraintes email, volontairement differentes du site :
     - AUCUNE animation : Outlook (moteur Word) et la majorite des clients
       ignorent les keyframes CSS. Le bandeau est donc fixe.
@@ -2476,7 +2484,7 @@ def _build_partner_slot_email(slot: str = "haut") -> str:
   <tr><td style="padding:20px 32px 0;">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#14141b;border-radius:10px;">
       <tr><td style="padding:22px 24px;">
-        <p style="margin:0 0 10px;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#ff914d;">Espace partenaire</p>
+        <p style="margin:0 0 10px;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#ff914d;">Publicité</p>
         <p style="margin:0 0 3px;font-size:16px;font-weight:400;color:#ffffff;line-height:1.4;">{line1}</p>
         <p style="margin:0 0 16px;font-size:16px;font-weight:400;color:#8f8f9c;line-height:1.4;">{line2}</p>
         <a href="{url}" style="display:inline-block;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#ffffff;text-decoration:none;border:1px solid #4a4a58;border-radius:100px;padding:11px 22px;">Réserver cet espace</a>

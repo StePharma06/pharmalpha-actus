@@ -27,6 +27,7 @@ SYNC_FILES = [
     "archives.html",
     "dashboard.html",
     "dashboard.json",
+    "media-kit.html",
     "cgu.html",
     "privacy.html",
     "print.html",
@@ -54,6 +55,7 @@ RELATIVE_PATH_FIXES = [
     (re.compile(r'(\b(?:src|href|srcset)=)(["\'])(articles/)'), r'\1\2/actus/\3'),
     (re.compile(r'(image_url\s*:\s*)(["\'])(assets/)'), r'\1\2/actus/\3'),
     (re.compile(r'(fetch\()(["\'])(articles\.json)'), r'\1\2/actus/\3'),
+    (re.compile(r'(fetch\()(["\'])(dashboard\.json)'), r'\1\2/actus/\3'),
     (re.compile(r'(fetch\()(["\'])(output/)'), r'\1\2/actus/\3'),
 ]
 

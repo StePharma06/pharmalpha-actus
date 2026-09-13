@@ -31,6 +31,7 @@ DASHBOARD_HTML = ROOT_DIR / "dashboard.html"
 INDEX_HTML = ROOT_DIR / "index.html"
 
 BREVO_LIST_ID = 5
+BREVO_LIST_HEBDO = 8  # abonnes frequence hebdomadaire (lundi)
 BREVO_API_BASE = "https://api.brevo.com/v3"
 WEEK_DAYS = 7
 CUMUL_START_DATE = "2026-01-01"  # Avant le lancement de Pharm'Actus
@@ -64,10 +65,25 @@ def brevo_api(endpoint, api_key, method="GET", payload=None):
         return {}
 
 
-def get_subscribers_count(api_key):
-    """Get current subscriber count from the list."""
-    data = brevo_api(f"/contacts/lists/{BREVO_LIST_ID}", api_key)
+def get_subscribers_count(api_key, list_id=BREVO_LIST_ID):
+    """Get current subscriber count from a Brevo list (default: daily list)."""
+    data = brevo_api(f"/contacts/lists/{list_id}", api_key)
     return data.get("totalSubscribers", 0)
+
+
+def count_published_articles():
+    """Nombre d'articles publies hors 'Le saviez-vous' (source: articles.json).
+
+    Consomme par le media-kit partenaire : ce chiffre est montre a un annonceur,
+    il doit venir du fichier reel, jamais d'une saisie manuelle.
+    """
+    try:
+        data = json.loads((ROOT_DIR / "articles.json").read_text(encoding="utf-8"))
+        arts = data.get("articles", data) if isinstance(data, dict) else data
+        return sum(1 for a in arts if a.get("type") != "lsv")
+    except Exception as e:
+        print(f"  [ARTICLES] Erreur comptage: {e}")
+        return 0
 
 
 def get_new_subscribers_since(api_key, since_date_str):
@@ -259,7 +275,12 @@ def build_dashboard(api_key):
 
     print("\n[1/6] Abonnes Brevo...")
     subscribers = get_subscribers_count(api_key)
-    print(f"  {subscribers} abonnes dans la liste")
+    print(f"  {subscribers} abonnes dans la liste quotidienne ({BREVO_LIST_ID})")
+    # Liste hebdo : l'encart partenaire apparait AUSSI dans l'email du lundi
+    # (_send_hebdo_brevo reutilise build_newsletter_html), donc la diffusion
+    # reelle vendue a un annonceur = quotidien + hebdo.
+    subscribers_hebdo = get_subscribers_count(api_key, BREVO_LIST_HEBDO)
+    print(f"  {subscribers_hebdo} abonnes dans la liste hebdo ({BREVO_LIST_HEBDO})")
 
     print("\n[2/6] Nouveaux abonnes...")
     new_week, _ = get_new_subscribers_since(api_key, week_start)
@@ -295,6 +316,7 @@ def build_dashboard(api_key):
     # Synchronise vers pharmalpha.fr/actus/dashboard.json par sync_to_vercel.py.
     write_dashboard_json(
         subscribers=subscribers,
+        subscribers_hebdo=subscribers_hebdo,
         new_week=new_week,
         new_cumul=new_cumul,
         week_stats=week_stats,
@@ -335,12 +357,15 @@ def _serialize_period(stats, articles_map, top_n=10):
     }
 
 
-def write_dashboard_json(subscribers, new_week, new_cumul, week_stats, cumul_stats, articles_map):
+def write_dashboard_json(subscribers, new_week, new_cumul, week_stats, cumul_stats, articles_map, subscribers_hebdo=0):
     """Ecrit dashboard.json : memes KPIs que l'ancien email hebdo, consommes par /admin."""
     payload = {
         "genere_le": datetime.now(PARIS_TZ).isoformat(timespec="seconds"),
         "liste_brevo": BREVO_LIST_ID,
         "abonnes_total": subscribers,
+        "abonnes_hebdo": subscribers_hebdo,
+        "abonnes_diffusion": subscribers + subscribers_hebdo,
+        "articles_publies": count_published_articles(),
         "nouveaux_7j": new_week,
         "nouveaux_cumul": new_cumul,
         "cumul_depuis": CUMUL_START_DATE,
