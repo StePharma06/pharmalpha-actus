@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, follow">
+<title>Dossier de partenariat annonceur - Pharm'Actus</title>
+<meta name="description" content="Pharm'Actus, la newsletter quotidienne des pharmaciens : audience, engagement et offre de partenariat pour un encart publicitaire exclusif.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+
+<!--
+  Media kit annonceur Pharm'Actus.
+  Fichier autonome : zero librairie externe, zero CDN, zero police Google.
+  Les chiffres sont charges depuis dashboard.json (chemin relatif) et jamais ecrits en dur.
+  Regenere automatiquement sans intervention : dashboard.json est rafraichi chaque jour a 3h UTC.
+-->
+
+<style>
+  :root {
+    --bg: #ffffff;
+    --bg-alt: #f8f8f8;
+    --border: #e5e5e5;
+    --border-light: #f0f0f0;
+    --ink: #1a1a1a;
+    --ink-soft: #555555;
+    --orange: #ff914d;
+    --orange-hover: #f08236;
+    --orange-light: #fff5ed;
+    --orange-text: #b8541c;
+    --radius: 12px;
+    --radius-sm: 8px;
+    --radius-pill: 100px;
+    --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  }
+
+  * { box-sizing: border-box; }
+  /* Garantit que [hidden] masque toujours l'element, meme si une classe
+     posee sur le meme element definit un display explicite (flex/grid). */
+  [hidden] { display: none !important; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, sans-serif;
+    background: var(--bg-alt);
+    color: var(--ink);
+    line-height: 1.55;
+  }
+  h1, h2, h3 { font-family: inherit; line-height: 1.2; margin: 0; }
+  p { margin: 0; }
+  ul { margin: 0; padding: 0; list-style: none; }
+  a { color: inherit; }
+  img { max-width: 100%; display: block; }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; animation: none !important; }
+  }
+
+  /* === Cibles tactiles et focus visibles (WCAG 2.4.7 / 2.5.5) === */
+  a:focus-visible, button:focus-visible {
+    outline: 3px solid var(--orange-hover);
+    outline-offset: 2px;
+  }
+
+  /* === BARRE OUTIL (ecran uniquement) === */
+  .no-print { }
+  .partner-toolbar {
+    position: sticky; top: 0; z-index: 20;
+    background: var(--ink); color: #fff;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap;
+    padding: 10px 20px;
+  }
+  .partner-toolbar-back {
+    display: inline-flex; align-items: center; gap: 6px;
+    color: #fff; text-decoration: none; font-size: 13px; font-weight: 600;
+    opacity: 0.85; padding: 8px 4px; min-height: 44px; align-items: center;
+  }
+  .partner-toolbar-back:hover { opacity: 1; text-decoration: underline; }
+  .partner-toolbar-right { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+  .partner-toolbar-tip { font-size: 12px; color: #cfcfcf; max-width: 320px; }
+  .btn-export-pdf {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--orange); color: var(--ink);
+    border: none; border-radius: var(--radius-pill);
+    font-family: inherit; font-size: 14px; font-weight: 700;
+    padding: 10px 20px; min-height: 44px; cursor: pointer;
+    transition: background 0.15s;
+  }
+  .btn-export-pdf:hover { background: var(--orange-hover); }
+  .btn-export-pdf svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+  /* === FEUILLE A4 === */
+  .partner-sheet {
+    max-width: 210mm;
+    margin: 24px auto;
+    background: var(--bg);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+  .partner-content { padding: 0 16mm 14mm; }
+
+  /* === BANDEAU DE MARQUE ===
+     Fond blanc + logo en couleurs natives (le fichier logo_pharmactus.png n'a pas
+     de canal alpha : un filtre invert() sur fond sombre produirait un rectangle
+     blanc plein, illisible. On reste sur la convention du header du site reel. */
+  .partner-brandbar {
+    background: #fff;
+    border-bottom: 2px solid var(--ink);
+    padding: 14px 16mm;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap;
+  }
+  .partner-brandbar img { height: 34px; width: auto; }
+  .partner-brandbar-tag {
+    display: inline-block;
+    background: var(--orange-light);
+    color: var(--orange-text);
+    font-size: 11px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 6px 14px; border-radius: var(--radius-pill);
+    border: 1px solid var(--orange);
+  }
+
+  /* === SECTIONS GENERIQUES === */
+  .partner-section { padding: 22px 0; border-bottom: 1px solid var(--border-light); break-inside: avoid; page-break-inside: avoid; }
+  .partner-section:last-of-type { border-bottom: none; }
+  .partner-eyebrow {
+    display: inline-block;
+    background: var(--orange-light); color: var(--orange-text);
+    font-size: 11px; font-weight: 800; letter-spacing: 0.07em; text-transform: uppercase;
+    padding: 4px 12px; border-radius: var(--radius-pill);
+    margin-bottom: 10px;
+  }
+  .partner-h2 { font-size: 21px; font-weight: 800; letter-spacing: -0.2px; margin-bottom: 6px; }
+  .partner-lede { font-size: 14px; color: var(--ink-soft); max-width: 640px; }
+
+  /* === HERO === */
+  .partner-hero { padding-top: 26px; }
+  .partner-hero h1 { font-size: 30px; font-weight: 800; letter-spacing: -0.4px; margin-bottom: 12px; max-width: 620px; }
+  .partner-hero p { font-size: 15px; color: var(--ink-soft); max-width: 600px; }
+
+  /* === DONNEES : bloc dynamique === */
+  .partner-data-grid { display: flex; flex-direction: column; gap: 18px; margin-top: 14px; }
+
+  .partner-audience-row {
+    display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap;
+    background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 16px 20px;
+  }
+  .partner-audience-number { font-size: 40px; font-weight: 900; color: var(--ink); letter-spacing: -1px; }
+  .partner-audience-label { font-size: 14px; color: var(--ink-soft); }
+
+  .partner-engagement { display: grid; grid-template-columns: 1.3fr 1fr; gap: 16px; align-items: stretch; }
+  .partner-ctor-card {
+    background: var(--ink); color: #fff; border-radius: var(--radius);
+    padding: 20px 22px; display: flex; flex-direction: column; justify-content: center; gap: 8px;
+  }
+  .partner-ctor-number { font-size: 52px; font-weight: 900; color: var(--orange); letter-spacing: -1.5px; line-height: 1; }
+  .partner-ctor-caption { font-size: 13px; font-weight: 700; color: #fff; text-transform: uppercase; letter-spacing: 0.04em; }
+  .partner-ctor-explain { font-size: 12.5px; color: #d8d8d8; line-height: 1.5; margin-top: 4px; }
+
+  .partner-secondary-stats { display: flex; flex-direction: column; gap: 12px; }
+  .partner-stat-card {
+    background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius-sm);
+    padding: 12px 16px; flex: 1; display: flex; flex-direction: column; justify-content: center;
+  }
+  .partner-stat-number { font-size: 24px; font-weight: 800; color: var(--ink); }
+  .partner-stat-label { font-size: 12px; color: var(--ink-soft); margin-top: 2px; }
+
+  .partner-regularity {
+    display: flex; flex-wrap: wrap; gap: 10px;
+  }
+  .partner-reg-item {
+    flex: 1 1 200px;
+    background: #fff; border: 1px solid var(--border-light); border-radius: var(--radius-sm);
+    padding: 10px 14px;
+    font-size: 12.5px; color: var(--ink-soft);
+  }
+  .partner-reg-item strong { display: block; font-size: 13.5px; color: var(--ink); font-weight: 800; margin-bottom: 2px; }
+
+  .partner-data-fallback {
+    background: var(--orange-light); border: 1px solid var(--orange); border-radius: var(--radius);
+    padding: 16px 20px; font-size: 13.5px; color: var(--ink); line-height: 1.55;
+  }
+  .partner-data-fallback strong { color: var(--orange-text); }
+
+  /* === OFFRE === */
+  .slot-offer-list { display: flex; flex-direction: column; gap: 10px; margin-top: 14px; }
+  .slot-offer-item {
+    display: flex; align-items: flex-start; gap: 12px;
+    background: var(--bg-alt); border: 1px solid var(--border-light); border-radius: var(--radius-sm);
+    padding: 11px 14px;
+  }
+  .slot-offer-mark {
+    flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%;
+    background: var(--ink); color: var(--orange);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 900;
+  }
+  .slot-offer-text { font-size: 13.5px; color: var(--ink); line-height: 1.5; }
+  .slot-offer-text strong { color: var(--ink); }
+
+  /* === TARIF === */
+  .slot-tarif-box {
+    margin-top: 14px;
+    display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;
+    background: var(--ink); color: #fff; border-radius: var(--radius);
+    padding: 18px 22px;
+  }
+  .slot-tarif-label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #cfcfcf; margin-bottom: 4px; }
+  .slot-tarif-value { font-size: 30px; font-weight: 900; color: var(--orange); letter-spacing: -0.5px; }
+  .slot-tarif-note { font-size: 12.5px; color: #d8d8d8; max-width: 280px; line-height: 1.5; }
+
+  /* === SIGNATURE === */
+  .partner-signature {
+    display: flex; align-items: center; gap: 18px; flex-wrap: wrap;
+    margin-top: 8px;
+  }
+  .partner-signature-photo {
+    width: 66px; height: 66px; border-radius: 50%; overflow: hidden; flex-shrink: 0;
+    border: 2px solid var(--orange);
+  }
+  .partner-signature-photo img { width: 100%; height: 100%; object-fit: cover; }
+  .partner-signature-body { flex: 1; min-width: 240px; }
+  .partner-signature-name { font-size: 15px; font-weight: 800; color: var(--ink); }
+  .partner-signature-role { font-size: 12.5px; font-weight: 700; color: var(--orange-text); margin-bottom: 4px; }
+  .partner-signature-text { font-size: 12.5px; color: var(--ink-soft); line-height: 1.5; max-width: 520px; }
+  .partner-qualiopi { font-size: 11.5px; color: var(--ink-soft); margin-top: 6px; line-height: 1.5; }
+
+  /* === CONTACT / CTA === */
+  .partner-contact {
+    display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+    background: var(--orange-light); border: 1px solid var(--orange); border-radius: var(--radius);
+    padding: 18px 22px;
+  }
+  .partner-contact-text h2 { font-size: 17px; font-weight: 800; margin-bottom: 3px; }
+  .partner-contact-text p { font-size: 12.5px; color: var(--ink-soft); max-width: 380px; }
+  .btn-contact-mail {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--ink); color: #fff; text-decoration: none;
+    border-radius: var(--radius-pill); font-weight: 700; font-size: 13.5px;
+    padding: 12px 20px; min-height: 44px;
+    transition: background 0.15s;
+  }
+  .btn-contact-mail:hover { background: #000; }
+
+  /* === PIED DE PAGE === */
+  .partner-footer {
+    display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap;
+    padding-top: 14px; margin-top: 4px;
+    font-size: 10.5px; color: #999;
+  }
+
+  /* === IMPRESSION === */
+  @media print {
+    @page { size: A4; margin: 12mm 14mm; }
+    body { background: #fff; }
+    .no-print { display: none !important; }
+    .partner-sheet { max-width: 100%; margin: 0; border-radius: 0; box-shadow: none; overflow: visible; }
+    .partner-content { padding: 0; }
+    .partner-brandbar { margin: 0 0 10px; padding: 10px 0; }
+    .partner-hero { padding-top: 10px; }
+    .partner-hero h1 { font-size: 19pt; margin-bottom: 8px; }
+    .partner-hero p { font-size: 10pt; }
+    .partner-section { padding: 12px 0; }
+    .partner-h2 { font-size: 14pt; }
+    .partner-lede { font-size: 9.5pt; }
+    .partner-eyebrow { font-size: 7.5pt; padding: 3px 10px; }
+    .partner-audience-number { font-size: 26pt; }
+    .partner-audience-label { font-size: 9.5pt; }
+    .partner-ctor-number { font-size: 34pt; }
+    .partner-ctor-caption { font-size: 9pt; }
+    .partner-ctor-explain { font-size: 8.5pt; }
+    .partner-stat-number { font-size: 16pt; }
+    .partner-stat-label { font-size: 8pt; }
+    .partner-reg-item { font-size: 8pt; padding: 7px 10px; }
+    .partner-reg-item strong { font-size: 9pt; }
+    .slot-offer-text { font-size: 9pt; }
+    .slot-tarif-value { font-size: 20pt; }
+    .slot-tarif-note { font-size: 8.5pt; }
+    .partner-signature-name { font-size: 10.5pt; }
+    .partner-signature-text, .partner-qualiopi { font-size: 8pt; }
+    .partner-contact-text h2 { font-size: 12pt; }
+    .partner-contact-text p { font-size: 8.5pt; }
+    .partner-footer { font-size: 7.5pt; }
+    a[href^="mailto"]::after { content: ""; }
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color-adjust: exact !important; }
+  }
+
+  @media (max-width: 640px) {
+    .partner-content { padding: 0 5vw 8vw; }
+    .partner-brandbar { padding: 14px 5vw; }
+    .partner-engagement { grid-template-columns: 1fr; }
+    .partner-hero h1 { font-size: 24px; }
+    .partner-toolbar { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<div class="partner-toolbar no-print">
+  <a class="partner-toolbar-back" href="index.html">&larr; Retour a Pharm'Actus</a>
+  <div class="partner-toolbar-right">
+    <span class="partner-toolbar-tip">Astuce : dans la fenêtre d'impression, choisissez la destination "Enregistrer en PDF".</span>
+    <button class="btn-export-pdf" onclick="window.print()" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>
+      Télécharger en PDF
+    </button>
+  </div>
+</div>
+
+<main class="partner-sheet">
+
+  <div class="partner-brandbar">
+    <img src="assets/logo_pharmactus.png" alt="Pharm'Actus">
+    <span class="partner-brandbar-tag">Dossier de partenariat annonceur</span>
+  </div>
+
+  <div class="partner-content">
+
+    <section class="partner-section partner-hero">
+      <span class="partner-eyebrow">Pharm'Actus pour les annonceurs</span>
+      <h1>L'actu pharma que les pharmaciens lisent, et surtout, celle où ils cliquent.</h1>
+      <p>Chaque matin du lundi au vendredi, Pharm'Actus informe les pharmaciens et les professionnels de santé. Une audience qualifiée, très sollicitée, difficile à toucher par les canaux publicitaires classiques.</p>
+    </section>
+
+    <section class="partner-section" aria-labelledby="partner-data-title">
+      <span class="partner-eyebrow">Les chiffres clés</span>
+      <h2 class="partner-h2" id="partner-data-title">Une audience qui ouvre, et qui clique</h2>
+      <p class="partner-lede">Données mesurées sur l'envoi quotidien Pharm'Actus, mises à jour automatiquement chaque jour.</p>
+
+      <div id="partnerDataDynamic" class="partner-data-grid">
+
+        <div class="partner-audience-row">
+          <span class="partner-audience-number" id="heroReachNumber">...</span>
+          <span class="partner-audience-label" id="heroReachLabel">abonnés à la newsletter quotidienne</span>
+        </div>
+
+        <div class="partner-engagement">
+          <div class="partner-ctor-card">
+            <span class="partner-ctor-number" id="statCtor">...</span>
+            <span class="partner-ctor-caption">de CTOR (Click To Open Rate)</span>
+            <p class="partner-ctor-explain">Le CTOR mesure la part des lecteurs qui cliquent sur un lien après avoir ouvert l'email. Concrètement, plus d'un lecteur sur quatre qui ouvre Pharm'Actus clique ensuite sur un contenu de la newsletter.</p>
+          </div>
+          <div class="partner-secondary-stats">
+            <div class="partner-stat-card">
+              <span class="partner-stat-number" id="statOpenRate">...</span>
+              <span class="partner-stat-label">taux d'ouverture</span>
+            </div>
+            <div class="partner-stat-card">
+              <span class="partner-stat-number" id="statClicks">...</span>
+              <span class="partner-stat-label">clics uniques cumulés depuis <span id="statSinceDateB">...</span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="partner-regularity">
+          <div class="partner-reg-item"><strong>Du lundi au vendredi</strong>Publication quotidienne, sans interruption.</div>
+          <div class="partner-reg-item"><strong>+<span id="statNewSubs">...</span> abonnés</strong>Nouveaux inscrits depuis le <span id="statSinceDate">...</span>.</div>
+          <div class="partner-reg-item"><strong><span id="statDelivered">...</span> emails</strong>Délivrés depuis le <span id="statSinceDateC">...</span>.</div>
+          <div class="partner-reg-item" id="statArticlesWrap" hidden><strong><span id="statArticles">...</span> articles</strong>Publiés depuis le <span id="statSinceDateD">...</span>.</div>
+          <div class="partner-reg-item" id="statHebdoWrap" hidden><strong><span id="statHebdo">...</span> abonnés</strong>À la newsletter hebdomadaire.</div>
+        </div>
+
+      </div>
+
+      <div id="partnerDataFallback" class="partner-data-fallback" hidden>
+        <strong>Chiffres temporairement indisponibles.</strong> Nos données sont actualisées chaque jour ; cette page n'a pas pu les charger à l'instant. Écrivez-nous à <a href="mailto:stephen@pharmalpha.fr">stephen@pharmalpha.fr</a>, nous vous les transmettons à jour dans la journée.
+      </div>
+    </section>
+
+    <section class="partner-section" aria-labelledby="partner-offer-title">
+      <span class="partner-eyebrow">L'offre</span>
+      <h2 class="partner-h2" id="partner-offer-title">Un seul emplacement, toute la visibilité</h2>
+      <ul class="slot-offer-list">
+        <li class="slot-offer-item">
+          <span class="slot-offer-mark" aria-hidden="true">1</span>
+          <span class="slot-offer-text"><strong>Emplacement unique et exclusif</strong> : pas de rotation, aucun autre annonceur affiché à côté du vôtre.</span>
+        </li>
+        <li class="slot-offer-item">
+          <span class="slot-offer-mark" aria-hidden="true">2</span>
+          <span class="slot-offer-text">Diffusé dans l'<strong>email quotidien</strong> du lundi au vendredi, dans la <strong>newsletter hebdomadaire</strong> et sur le <strong>site Pharm'Actus</strong>.</span>
+        </li>
+        <li class="slot-offer-item">
+          <span class="slot-offer-mark" aria-hidden="true">3</span>
+          <span class="slot-offer-text">Emplacement suivi par <strong>tracking UTM</strong> : chaque clic est identifiable dans Google Analytics 4.</span>
+        </li>
+        <li class="slot-offer-item">
+          <span class="slot-offer-mark" aria-hidden="true">4</span>
+          <span class="slot-offer-text"><strong>Reporting mensuel</strong> sur demande, avec le détail des clics et de la période de diffusion.</span>
+        </li>
+      </ul>
+
+      <!-- TARIF : modifier ici -->
+      <div class="slot-tarif-box">
+        <div>
+          <div class="slot-tarif-label">Investissement</div>
+          <div class="slot-tarif-value">450 &euro; HT<span style="font-size:15px;font-weight:600;color:#cfcfcf;"> / mois</span></div>
+        </div>
+        <p class="slot-tarif-note">Emplacement unique et exclusif, sans engagement, r&eacute;siliable avec un pr&eacute;avis de 30 jours.<br><strong style="color:#fff;">Offre partenaire fondateur : 300 &euro; HT / mois</strong> pour un engagement de 3 mois. Facturation d'avance, TVA 20 % en sus.</p>
+      </div>
+      <!-- FIN TARIF -->
+    </section>
+
+    <section class="partner-section" aria-labelledby="partner-signature-title">
+      <h2 class="partner-h2" id="partner-signature-title" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0);">Signature et contact</h2>
+      <div class="partner-signature">
+        <div class="partner-signature-photo">
+          <img src="assets/stephen.png" alt="Portrait de Stephen Robert, Docteur en Pharmacie, fondateur de Pharm'Actus">
+        </div>
+        <div class="partner-signature-body">
+          <div class="partner-signature-name">Stephen Robert</div>
+          <div class="partner-signature-role">Docteur en Pharmacie, fondateur de Pharm'Actus</div>
+          <p class="partner-signature-text">Pharm'Actus est édité par Stephen Robert, Docteur en Pharmacie (Poitiers), également fondateur de Pharm'Alpha.</p>
+          <p class="partner-qualiopi">Pharm'Alpha est certifié Qualiopi (certificat n° QUA010161) depuis le 11 septembre 2026, au titre des actions de formation.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="partner-section" style="border-bottom: none;">
+      <div class="partner-contact">
+        <div class="partner-contact-text">
+          <h2>Envie d'en discuter ?</h2>
+          <p>Écrivez-nous, nous vous envoyons les disponibilités et un exemple d'intégration de l'encart.</p>
+        </div>
+        <a class="btn-contact-mail" href="mailto:stephen@pharmalpha.fr?subject=Partenariat%20Pharm%27Actus">
+          stephen@pharmalpha.fr
+        </a>
+      </div>
+
+      <div class="partner-footer">
+        <span id="footerUpdated">Chiffres mis à jour quotidiennement</span>
+        <span>Document non contractuel. Tarifs et disponibilités sur demande.</span>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<script>
+(function () {
+  'use strict';
+
+  var dynamicBlock = document.getElementById('partnerDataDynamic');
+  var fallbackBlock = document.getElementById('partnerDataFallback');
+  var footerUpdated = document.getElementById('footerUpdated');
+
+  function fmtNumber(value) {
+    if (typeof value !== 'number' || !isFinite(value)) { return null; }
+    return value.toLocaleString('fr-FR');
+  }
+
+  function fmtPercent(value) {
+    if (typeof value !== 'number' || !isFinite(value)) { return null; }
+    return value.toLocaleString('fr-FR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %';
+  }
+
+  function fmtDateLong(isoDate) {
+    if (!isoDate || typeof isoDate !== 'string') { return null; }
+    var pieces = isoDate.split('-');
+    if (pieces.length !== 3) { return null; }
+    var year = pieces[0];
+    var monthIndex = parseInt(pieces[1], 10) - 1;
+    var day = parseInt(pieces[2], 10);
+    var months = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
+    if (monthIndex < 0 || monthIndex > 11 || isNaN(day)) { return null; }
+    var dayLabel = (day === 1) ? '1er' : String(day);
+    return dayLabel + ' ' + months[monthIndex] + ' ' + year;
+  }
+
+  function fmtDateTime(isoString) {
+    if (!isoString) { return null; }
+    var d = new Date(isoString);
+    if (isNaN(d.getTime())) { return null; }
+    var datePart = d.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+    var timePart = d.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
+    return datePart + ' à ' + timePart;
+  }
+
+  function setRequiredNumber(id, value) {
+    var el = document.getElementById(id);
+    var formatted = fmtNumber(value);
+    if (formatted === null) { throw new Error('champ requis manquant : ' + id); }
+    if (el) { el.textContent = formatted; }
+  }
+
+  function setRequiredPercent(id, value) {
+    var el = document.getElementById(id);
+    var formatted = fmtPercent(value);
+    if (formatted === null) { throw new Error('champ requis manquant : ' + id); }
+    if (el) { el.textContent = formatted; }
+  }
+
+  function setRequiredText(ids, text) {
+    if (!text) { throw new Error('champ requis manquant : ' + ids.join(',')); }
+    for (var i = 0; i < ids.length; i++) {
+      var el = document.getElementById(ids[i]);
+      if (el) { el.textContent = text; }
+    }
+  }
+
+  function toggleOptionalNumber(wrapperId, valueId, value, dateIds, dateText) {
+    var wrapper = document.getElementById(wrapperId);
+    if (!wrapper) { return; }
+    var formatted = fmtNumber(value);
+    if (formatted === null) {
+      wrapper.hidden = true;
+      return;
+    }
+    var el = document.getElementById(valueId);
+    if (el) { el.textContent = formatted; }
+    if (dateIds && dateText) {
+      for (var i = 0; i < dateIds.length; i++) {
+        var dEl = document.getElementById(dateIds[i]);
+        if (dEl) { dEl.textContent = dateText; }
+      }
+    }
+    wrapper.hidden = false;
+  }
+
+  function showFallback() {
+    if (dynamicBlock) { dynamicBlock.hidden = true; }
+    if (fallbackBlock) { fallbackBlock.hidden = false; }
+  }
+
+  fetch('dashboard.json', { cache: 'no-store' })
+    .then(function (response) {
+      if (!response.ok) { throw new Error('reponse HTTP ' + response.status); }
+      return response.json();
+    })
+    .then(function (data) {
+      if (!data || typeof data !== 'object') { throw new Error('payload JSON vide'); }
+      var cumul = data.cumul || {};
+      var sinceDate = fmtDateLong(data.cumul_depuis);
+      if (!sinceDate) { throw new Error('date de depart manquante'); }
+
+      var reachIsDiffusion = (typeof data.abonnes_diffusion === 'number');
+      var reachValue = reachIsDiffusion ? data.abonnes_diffusion : data.abonnes_total;
+      var reachLabel = reachIsDiffusion
+        ? 'lecteurs touchés par l’encart, tous formats confondus'
+        : 'abonnés à la newsletter quotidienne';
+
+      setRequiredNumber('heroReachNumber', reachValue);
+      setRequiredText(['heroReachLabel'], reachLabel);
+
+      setRequiredPercent('statCtor', cumul.ctor_pct);
+      setRequiredPercent('statOpenRate', cumul.taux_ouverture_pct);
+      setRequiredNumber('statClicks', cumul.clics_uniques);
+      setRequiredNumber('statDelivered', cumul.delivres);
+      setRequiredNumber('statNewSubs', data.nouveaux_cumul);
+      setRequiredText(['statSinceDate', 'statSinceDateB', 'statSinceDateC', 'statSinceDateD'], sinceDate);
+
+      toggleOptionalNumber('statArticlesWrap', 'statArticles', data.articles_publies, ['statSinceDateD'], sinceDate);
+      toggleOptionalNumber('statHebdoWrap', 'statHebdo', data.abonnes_hebdo, null, null);
+
+      if (footerUpdated) {
+        var updatedLabel = fmtDateTime(data.genere_le);
+        footerUpdated.textContent = updatedLabel ? ('Chiffres mis à jour le ' + updatedLabel) : 'Chiffres mis a jour quotidiennement';
+      }
+
+      if (dynamicBlock) { dynamicBlock.hidden = false; }
+      if (fallbackBlock) { fallbackBlock.hidden = true; }
+    })
+    .catch(function () {
+      showFallback();
+    });
+})();
+</script>
+
+</body>
+</html>
