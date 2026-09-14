@@ -580,6 +580,102 @@ def fetch_image_as_base64(url):
         return None
 
 
+def generate_partner_banner_image():
+    """Bandeau publicitaire 1200x220 pour la newsletter LinkedIn du vendredi.
+
+    Reprend la charte du bandeau du site (.spotlight-band) : degrade sombre
+    #14141b -> #1e1e29, liseré orange #ff914d, coins arrondis.
+
+    POURQUOI UNE IMAGE : LinkedIn n'accepte ni HTML ni CSS dans le corps d'une
+    newsletter. Le bandeau anime du site ne peut donc pas y etre reproduit, seule
+    une image collee fonctionne.
+
+    MENTION LEGALE : "PUBLICITE" est ecrit DANS l'image, et pas autour. Sur
+    LinkedIn, Stephen colle une image nue sans pouvoir ajouter de libelle a cote :
+    si la mention n'est pas incrustee, elle n'existe pas. Publicite clandestine
+    sanctionnable des qu'un annonceur paie (code conso L.121-1 + LCEN art. 20).
+    Arbitrage Emilie 2026-09-13. NE JAMAIS retirer ce libelle de l'image.
+
+    Pour basculer sur un vrai annonceur : remplacer LINE1/LINE2/CTA ci-dessous,
+    ou deposer assets/pub_encart_linkedin.png qui sera utilise en priorite.
+    """
+    try:
+        from PIL import Image, ImageDraw, ImageFont
+        import io
+
+        # Un visuel fourni par un annonceur prime sur la pub maison.
+        custom = ROOT_DIR / "assets" / "pub_encart_linkedin.png"
+        if custom.exists():
+            print("  [PUB] visuel annonceur : assets/pub_encart_linkedin.png")
+            return base64.b64encode(custom.read_bytes()).decode("utf-8")
+
+        W, H, R = 1200, 220, 20
+        ORANGE = (255, 145, 77)
+        WHITE = (255, 255, 255)
+        GREY = (178, 178, 190)
+
+        LABEL = "PUBLICITÉ"
+        LINE1 = "Vous avez remarqué cette publicité."
+        LINE2 = "La prochaine pourrait être la vôtre."
+        CTA = "Réserver cet espace"
+
+        # Degrade horizontal identique au site (115deg approxime a l'horizontale)
+        grad = Image.new("RGB", (W, 1))
+        px = grad.load()
+        c0, c1 = (0x14, 0x14, 0x1b), (0x1e, 0x1e, 0x29)
+        for x in range(W):
+            t = x / max(W - 1, 1)
+            k = 1 - abs(t - 0.55) / 0.55 if t <= 0.55 else 1 - (t - 0.55) / 0.45
+            k = max(0.0, min(1.0, k))
+            px[x, 0] = tuple(int(c0[i] + (c1[i] - c0[i]) * k) for i in range(3))
+        card = grad.resize((W, H))
+
+        # Coins arrondis
+        mask = Image.new("L", (W, H), 0)
+        ImageDraw.Draw(mask).rounded_rectangle([(0, 0), (W - 1, H - 1)], radius=R, fill=255)
+        out = Image.new("RGB", (W, H), (255, 255, 255))
+        out.paste(card, (0, 0), mask)
+        d = ImageDraw.Draw(out)
+        d.rounded_rectangle([(0, 0), (W - 1, H - 1)], radius=R, outline=(70, 52, 44), width=2)
+
+        def font(size, bold=False):
+            for f in ("C:/Windows/Fonts/arialbd.ttf" if bold else "C:/Windows/Fonts/arial.ttf",
+                      "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf" if bold else "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+                      "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf" if bold else "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf"):
+                try:
+                    return ImageFont.truetype(f, size)
+                except Exception:
+                    continue
+            return ImageFont.load_default()
+
+        f_label, f1, f2, f_cta = font(17, True), font(34, True), font(25), font(19, True)
+        X = 52
+
+        # Mention legale, espacee a la main (PIL ne gere pas letter-spacing)
+        x = X
+        for ch in LABEL:
+            d.text((x, 42), ch, font=f_label, fill=ORANGE)
+            x += d.textlength(ch, font=f_label) + 3
+
+        d.text((X, 78), LINE1, font=f1, fill=WHITE)
+        d.text((X, 126), LINE2, font=f2, fill=GREY)
+
+        # Bouton, cale a droite
+        tw = d.textlength(CTA, font=f_cta)
+        bw, bh = tw + 56, 52
+        bx, by = W - bw - 52, (H - bh) // 2
+        d.rounded_rectangle([(bx, by), (bx + bw, by + bh)], radius=bh // 2, outline=(90, 90, 104), width=2)
+        d.text((bx + 28, by + (bh - 24) // 2), CTA, font=f_cta, fill=WHITE)
+
+        buf = io.BytesIO()
+        out.save(buf, "PNG", optimize=True)
+        print("  [PUB] bandeau maison genere (1200x220)")
+        return base64.b64encode(buf.getvalue()).decode("utf-8")
+    except Exception as e:
+        print(f"  [PUB-ERR] {e}")
+        return None
+
+
 def build_email_attachments(actus, lsv):
     """Build Brevo email attachments : cover (00) + articles (01-06) + LSV (07)."""
     attachments = []
@@ -588,6 +684,13 @@ def build_email_attachments(actus, lsv):
     if cover_b64:
         attachments.append({"name": "00_cover.png", "content": cover_b64})
         print(f"  [IMG] 00_cover.png")
+    # Bandeau publicitaire : se colle juste apres l intro, donc AVANT l image 01.
+    # Nomme 00b_ pour que le tri des pieces jointes suive l ordre reel de collage
+    # dans LinkedIn (cover, pub, article 1, article 2...).
+    pub_b64 = generate_partner_banner_image()
+    if pub_b64:
+        attachments.append({"name": "00b_publicite.png", "content": pub_b64})
+        print(f"  [IMG] 00b_publicite.png")
     for i, a in enumerate(actus, 1):
         img_url = a.get("image_url", "")
         if not img_url:
@@ -702,6 +805,12 @@ def _extract_newsletter_parts(markdown):
         k += 1
     corps_parts = reordered
 
+    # Encart publicitaire : juste APRES l intro et AVANT le titre 1 (demande
+    # Stephen 2026-09-14). Sur LinkedIn c est une image collee : ni HTML ni CSS
+    # ne passent, le bandeau anime du site ne peut pas y etre reproduit.
+    if corps_parts:
+        corps_parts.insert(1, "[PUB]")
+
     corps = "\n\n".join(p for p in corps_parts if p.strip())
     if not (titre and corps):
         return None
@@ -725,6 +834,13 @@ def _corps_to_html(corps):
             out.append(
                 f'<h2 style="margin:24px 0 10px;font-size:21px;line-height:1.3;'
                 f'font-weight:800;color:#111118;">{t}</h2>')
+            continue
+        if para == "[PUB]":
+            out.append(
+                '<p style="margin:16px 0;padding:10px 14px;background:#1a1a22;'
+                'border:1px solid rgba(255,145,77,.35);border-radius:8px;color:#ff914d;'
+                'font-weight:700;font-size:13px;">\U0001F4E2 Image a inserer ici : '
+                '<span style="color:#fff;">00b_publicite.png</span> (encart publicitaire)</p>')
             continue
         mimg = re.match(r"^\[IMAGE (\d+)\]$", para)
         if mimg:
