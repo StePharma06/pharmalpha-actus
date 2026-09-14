@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? On mesurait la dose de morphine... au nombre de cris du patient",
-  "resume": "Avant les seringues graduées et les protocoles douleur, les médecins militaires du XIXe siècle dosaient les opiacés à l'oreille. Littéralement. Une méthode aussi barbare qu'ingénieuse - et terriblement humaine.",
-  "full_text": "C'est 1862, en pleine guerre de Sécession américaine. Les chirurgiens de campagne opèrent dans des granges, sur des portes arrachées, avec du whisky en guise d'anesthésique. La morphine existe depuis 1804, mais personne ne sait vraiment combien en donner.\n\nLa solution du terrain ? Écouter le patient. Un cri continu = pas assez. Silence total = trop. Un gémissement régulier, presque rythmé = dose correcte. Les médecins appelaient ça le « bon seuil » - une expression qui fait froid dans le dos mais qui traduisait une réalité : sans balance, sans seringue graduée, le corps du patient était le seul instrument de mesure disponible.\n\nLe twist qui change tout : cette méthode approximative a paradoxalement engendré la première épidémie d'addiction aux opioïdes de l'histoire moderne. On estime que 400 000 soldats nordistes et sudistes sont rentrés chez eux dépendants à la morphine après la guerre. On appelait ça le « soldier's disease » - la maladie du soldat. Un terme pudique pour une catastrophe sanitaire silencieuse.\n\nCe qui est fascinant, c'est que le problème n'était pas la molécule. C'était l'absence totale de protocole. Personne ne savait quand s'arrêter. Ni les médecins, ni les patients. La morphine était vendue librement en pharmacie jusqu'en 1914, et prescrite pour à peu près tout : douleurs dentaires, règles douloureuses, toux des enfants.\n\nIl a fallu attendre 1898 et l'invention de la seringue hypodermique en verre gradué pour commencer à parler de doses précises. Et les premières échelles de douleur standardisées ? Elles n'arrivent qu'en 1974, avec Margo McCaffery et son fameux « la douleur, c'est ce que le patient dit qu'elle est ».\n\nAujourd'hui, quand tu vérifies une prescription de morphine orale ou que tu conseilles un patch de fentanyl, tu es l'héritier de 160 ans d'erreurs, de corrections et de progrès. La rigueur du comptoir, c'est exactement ce que ces soldats de 1862 n'avaient pas.",
-  "image_keywords": "civil war medicine surgery",
+  "titre": "Le saviez-vous ? On rangeait les malades par odeur à l'hôpital",
+  "resume": "Avant les analyses de labo, les médecins utilisaient leur nez comme premier outil de diagnostic. L'odeur d'une salle entière guidait le tri des patients. Une pratique qui a duré jusqu'au XIXe siècle - et qui n'était pas si absurde.",
+  "full_text": "Imagine-toi entrer dans un hôpital du XVIIIe siècle. Pas de blouse blanche, pas de bip de monitoring. Juste le médecin-chef qui renifle l'air à l'entrée des salles pour décider où placer les nouveaux arrivants.\n\nC'est exactement ce qui se passait dans les grands hôtels-Dieu d'Europe entre le XVIe et le XIXe siècle. Les médecins avaient cartographié les odeurs pathologiques avec une précision étonnante. L'odeur sucrée et fruitée signalait le diabète avancé - ce qu'on appelait alors la « maladie du miel ». L'odeur de souris fraîche trahissait la typhoïde. Celle de chair pourrie, la gangrène gazeuse. Et une haleine à l'ammoniac indiquait une défaillance rénale sévère.\n\nLe twist ? Ces associations n'étaient pas du charlatanisme. La médecine moderne a confirmé que ces odeurs correspondent à des composés volatils réels : l'acétone pour le diabète céto-acidosique, la triméthylamine pour l'urémie, le diméthylsulfure pour les infections anaérobies. Les médecins de l'époque avaient empiriquement raison - sans jamais comprendre pourquoi.\n\nCertains hôpitaux allaient encore plus loin. À l'Hôtel-Dieu de Paris, les sœurs hospitalières plaçaient les « malades qui puent » dans des ailes séparées - moins par souci diagnostique que pour le confort des autres patients. Une forme de triage olfactif qui, bizarrement, limitait aussi la contagion croisée.\n\nAujourd'hui, les chercheurs y reviennent sérieusement. Des « nez électroniques » et même des chiens entraînés détectent certains cancers, la maladie de Parkinson ou le Covid-19 à partir des odeurs corporelles. Des études publiées dans The Lancet montrent des taux de détection supérieurs à 90 % pour certaines pathologies. Au comptoir, si un patient dégage une odeur d'acétone persistante, pense-y : c'est peut-être un signal que nos ancêtres auraient immédiatement reconnu.",
+  "image_keywords": "hospital ward historical",
   "tags": [
     "histoire",
-    "morphine",
-    "douleur",
-    "addiction",
-    "chirurgie"
+    "diagnostic",
+    "odorat",
+    "medecine",
+    "hopital"
   ],
-  "date": "2026-09-12",
+  "date": "2026-09-14",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",

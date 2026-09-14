@@ -31,7 +31,7 @@
      l'image n'est decouverte qu'apres execution du JS qui construit les cards
      (le <img> n'existe qu'a l'interieur d'un template literal JS, invisible au
      preload scanner) -> LCP non deterministe, cf. sprint perf 2026-07-27. -->
-<link rel="preload" as="image" href="assets/img_actu_2026_09_12_1.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="assets/img_actu_2026_09_14_1.jpg" fetchpriority="high">
 
 <!-- Space Grotesk — self-hosted WOFF2 (remplace Google Fonts, cf. mission perf/RGPD 2026-08-24) -->
 <link rel="preload" href="/assets/fonts/space-grotesk-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -1737,7 +1737,7 @@ body.pa-has-nav #actusHeader {
 </div>
 
 <!-- EXPRESSION DU JOUR (injectée par update_actus.py à chaque run) -->
-<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Antibiotique</h2><p class="expression-corps">Forgé en 1942 par le microbiologiste Selman Waksman à partir du grec <em>anti</em> (contre) et <em>bios</em> (vie). Un antibiotique est donc littéralement « ce qui va contre la vie » - la vie bactérienne en l'occurrence. Le mot est apparu la même année que la streptomycine, premier antibiotique contre la tuberculose.</p></aside>
+<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Drogue</h2><p class="expression-corps">Du néerlandais <em>droog</em>, sec. Les premières « drogues » étaient simplement les plantes et épices séchées vendues par les droguistes - poivre, cannelle, camphre, séné. Le sens actuel, associé aux substances psychoactives, n'est apparu que bien plus tard.</p></aside>
 
 <!-- ESPACE PARTENAIRE 1 (entre Expression du jour et Aujourd'hui).
      Statique : reste visible meme si le JS ne s'execute pas. Le 2e emplacement
@@ -1762,12 +1762,12 @@ body.pa-has-nav #actusHeader {
 <div id="articles-container"></div>
 
 <!-- MARQUE_TENDANCE (injectee par le pipeline hebdo, remplacee quotidiennement) -->
-<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">6 sept. au 12 sept. 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Assurance maladie fatigue chronique</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 324 950</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Azinc immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 74 600</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie du moment</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 21 450</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Mauvaise digestion que faire</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 69 500</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Prick test allergie</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 20 650</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Calmosine digestion bébé</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 40 400</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Pommeau de douche vitamine c</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 13 800</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Gummies sommeil enfant</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 5 650</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Vitamine b₁₂</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 9 100</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Stylo anti douleur</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 2 750</td></tr>
+<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">8 sept. au 14 sept. 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Syndrome de la fatigue chronique</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 31 000</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Immunite adaptative</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 57 000</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Fatigue intense cause</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 12 850</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Digestion lente que faire</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 37 750</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Pommeau de douche vitamine c</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 11 600</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Calmosine digestion bébé</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 36 750</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Désensibilisation allergie chat</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 11 350</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Zen-sante.fr santé auditive</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 11 300</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie figue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 11 100</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Gummies sommeil enfant</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 8 700</td></tr>
 </tbody></table></div><p style="margin:10px 0 0;font-size:11px;color:#9ca3af;font-style:italic;">Indice de tendance : intensite de hausse Google Trends (non comparable a un volume absolu).</p><p style="margin:12px 0 0;font-size:11px;color:#9ca3af;text-align:right;">Source&nbsp;: Google Trends France (pytrends) &middot; 7 jours glissants</p></section></div>
 
 <!-- ARCHIVES CTA -->
@@ -1930,6 +1930,90 @@ body.pa-has-nav #actusHeader {
 // Mis a jour automatiquement par n8n chaque semaine
 // ============================================================
 const ARTICLES = [
+{
+    id: "actu_2026_09_14_1",
+    date: "2026-09-14",
+    type: "actu",
+    categorie: "pharma_france",
+    titre: "Levemir, Victoza, Fiasp : le compte à rebours est lancé pour tes patients Novo",
+    resume: "Novo Nordisk arrête Levemir, Fiasp PumpCart, NovoMix 50 FlexPen et Victoza au 31 décembre 2026. Moins de 4 mois pour switcher tes patients diabétiques sur des alternatives. Le boulot commence maintenant, pas en décembre.",
+    source: "Caducee.net",
+    source_url: "https://www.caducee.net/actualite-medicale/16959/arret-de-levemir-fiasp-pumpcart-et-victoza-fin-2026-comment-preparer-les-alternatives.html",
+    tiktok_url: "",
+    badge_label: "Pharma France",
+    image_url: "assets/img_actu_2026_09_14_1.jpg",
+    tags: ["insuline", "diabete", "rupture", "novo-nordisk", "substitution"]
+  },
+{
+    id: "actu_2026_09_14_2",
+    date: "2026-09-14",
+    type: "actu",
+    categorie: "pharma_monde",
+    titre: "Les deals secrets de Trump qui sabordent sa propre politique sur les prix des médicaments",
+    resume: "La politique \"most-favored nation\" de Trump devait faire baisser les prix des médicaments aux USA. Une nouvelle analyse révèle que des accords confidentiels avec les labos pharma pourraient vider la mesure de sa substance. Cherchez l'erreur.",
+    source: "STAT News",
+    source_url: "https://www.statnews.com/pharmalot/2026/09/13/trump-secretive-pharma-deals-undermine-most-favored-nation-pricing/?utm_campaign=rss",
+    tiktok_url: "",
+    badge_label: "Pharma Monde",
+    image_url: "assets/img_actu_2026_09_14_2.jpg",
+    tags: ["prix-medicaments", "usa", "politique-pharma", "ceps", "industrie"]
+  },
+{
+    id: "actu_2026_09_14_3",
+    date: "2026-09-14",
+    type: "actu",
+    categorie: "bonne_nouvelle",
+    titre: "Santé sexuelle 2030 : la délivrance officinale des abortifs se précise enfin",
+    resume: "La nouvelle feuille de route de la Stratégie nationale de santé sexuelle 2026-2030 ouvre explicitement la voie à la délivrance directe en officine des médicaments abortifs, au-delà de la téléconsultation. Pour la pharmacie d'officine, c'est une vraie reconnaissance de son rôle dans l'accès à l'IVG médicamenteuse en ville.",
+    source: "Caducee.net",
+    source_url: "https://www.caducee.net/actualite-medicale/16960/sante-sexuelle-2026-2030-les-chantiers-de-l-ivg-en-ville-de-la-contraception-et-de-la-consultation-longue.html",
+    tiktok_url: "",
+    badge_label: "La bonne nouvelle",
+    image_url: "assets/img_actu_2026_09_14_3.jpg",
+    tags: ["ivg", "sante-sexuelle", "officine", "contraception", "acces-aux-soins"]
+  },
+{
+    id: "actu_2026_09_14_4",
+    date: "2026-09-14",
+    type: "actu",
+    categorie: "avenir_pharma",
+    titre: "IA multimodale et immunothérapie : la prédiction de réponse change de dimension",
+    resume: "Une étude publiée dans Nature Medicine montre qu'intégrer de nombreux biomarqueurs multimodaux par patient améliore significativement la prédiction de réponse aux immunothérapies anticancéreuses. L'IA ne remplace pas le clinicien, elle lui dit à qui donner sa chance.",
+    source: "Nature Medicine News",
+    source_url: "https://www.nature.com/articles/s41591-026-04587-0",
+    tiktok_url: "",
+    badge_label: "L'avenir de la pharma",
+    image_url: "assets/img_actu_2026_09_14_4.jpg",
+    tags: ["immunotherapie", "ia", "oncologie", "biomarqueur", "recherche"]
+  },
+{
+    id: "actu_2026_09_14_5",
+    date: "2026-09-14",
+    type: "actu",
+    categorie: "business_officine",
+    titre: "Franchises médicales à 140 € : +40 % dès le 1er octobre, ce que ça change au comptoir",
+    resume: "Le décret est paru. Dès le 1er octobre 2026, le plafond annuel des franchises médicales bondit de 100 à 140 euros. Pour l'officine, l'impact sur le flux patients et l'accès aux soins est immédiat et concret.",
+    source: "Pharm'Actus · Le Monde — Franchises médicales : le plafond annuel passe de 100 à 140 euros le 1er octobre, France Info Santé — Franchise médicale : le plafond annuel passera à 140 euros",
+    source_url: "https://www.lemonde.fr/politique/article/2026/09/12/franchises-medicales-le-plafond-annuel-passe-de-100-a-140-euros-le-1-octobre_6771228_823448.html",
+    tiktok_url: "",
+    badge_label: "Business",
+    image_url: "assets/img_actu_2026_09_14_5.jpg",
+    tags: ["franchises-medicales", "reste-a-charge", "reforme-assurance-maladie", "officine"]
+  },
+{
+    id: "lsv_2026_09_14",
+    date: "2026-09-14",
+    type: "lsv",
+    categorie: "lsv",
+    titre: "Le saviez-vous ? On rangeait les malades par odeur à l'hôpital",
+    resume: "Avant les analyses de labo, les médecins utilisaient leur nez comme premier outil de diagnostic. L'odeur d'une salle entière guidait le tri des patients. Une pratique qui a duré jusqu'au XIXe siècle - et qui n'était pas si absurde.",
+    source: "Pharm'Alpha",
+    source_url: "",
+    tiktok_url: "",
+    badge_label: "Le Saviez-Vous",
+    image_url: "assets/img_lsv_2026_09_14.jpg",
+    tags: ["histoire", "diagnostic", "odorat", "medecine", "hopital"]
+  },
 {
     id: "actu_2026_09_12_1",
     date: "2026-09-12",
@@ -2545,90 +2629,6 @@ const ARTICLES = [
     badge_label: "Pharma Monde",
     image_url: "assets/img_actu_2026_09_04_2.jpg",
     tags: ["betabloquant", "cardio", "deprescription", "infarctus", "recherche"]
-  },
-{
-    id: "actu_2026_09_04_3",
-    date: "2026-09-04",
-    type: "actu",
-    categorie: "bonne_nouvelle",
-    titre: "Septembre Turquoise : tes affiches anti-cancers gynecos sont disponibles, sers-t'en",
-    resume: "L'Uspo met à disposition des pharmaciens affiches et plaquettes pour sensibiliser les femmes aux cancers gynécologiques pendant tout le mois de septembre. Un levier de santé publique simple à activer, avec le matériel déjà prêt.",
-    source: "Le Quotidien du Pharmacien",
-    source_url: "http://www.lequotidiendupharmacien.fr/exercice-pro/septembre-turquoise-les-pharmaciens-encourages-sensibiliser-les-femmes-aux-cancers-gynecologiques",
-    tiktok_url: "",
-    badge_label: "La bonne nouvelle",
-    image_url: "assets/img_actu_2026_09_04_3.jpg",
-    tags: ["prevention", "cancer", "depistage", "uspo", "officine"]
-  },
-{
-    id: "actu_2026_09_04_4",
-    date: "2026-09-04",
-    type: "actu",
-    categorie: "avenir_pharma",
-    titre: "Vaccination HPV : les pharmaciens ont les cartes en main pour faire grimper la couverture",
-    resume: "La couverture vaccinale HPV reste insuffisante en France malgré une priorité de santé publique affichée. Les pharmaciens, habilités à vacciner, ont un rôle central à jouer pour combler ce retard. L'enjeu : des cancers évitables, un acte valorisé, une mission qui fait sens.",
-    source: "Le Moniteur des Pharmacies",
-    source_url: "https://www.lemoniteurdespharmacies.fr/nouvelles-missions/vaccination/vaccination-hpv-les-campagnes-et-au-dela",
-    tiktok_url: "",
-    badge_label: "L'avenir de la pharma",
-    image_url: "assets/img_actu_2026_09_04_4.jpg",
-    tags: ["vaccination", "hpv", "prevention", "cancer", "officine"]
-  },
-{
-    id: "actu_2026_09_04_5",
-    date: "2026-09-04",
-    type: "actu",
-    categorie: "business_officine",
-    titre: "Un \"Défenseur de la santé\" indépendant : bonne idée pour qui ?",
-    resume: "Un collectif de scientifiques, dont Irène Frachon, propose une autorité indépendante chargée d'évaluer l'impact sanitaire des lois. Derrière la tribune, un vrai enjeu pour la régulation du médicament et la place des professionnels de santé dans les décisions publiques.",
-    source: "Pharm'Actus · Le Monde Santé – Tribune \"Défenseur de la santé\" (Descola, Frachon, Sujobert), IQVIA Pharmastat – Nombre d'officines en France, juin 2026 (19 274)",
-    source_url: "https://www.lemonde.fr/idees/article/2026/09/03/nous-proposons-la-creation-d-une-autorite-independante-dont-la-mission-sera-d-evaluer-l-impact-sanitaire-des-lois-et-des-politiques-publiques_6765130_3232.html",
-    tiktok_url: "",
-    badge_label: "Business",
-    image_url: "assets/img_actu_2026_09_04_5.jpg",
-    tags: ["gouvernance", "politique-du-medicament", "remboursement", "regulation"]
-  },
-{
-    id: "lsv_2026_09_04",
-    date: "2026-09-04",
-    type: "lsv",
-    categorie: "lsv",
-    titre: "Le saviez-vous ? On guérissait les brûlures d'estomac avec de la craie mâchée",
-    resume: "Avant les IPP et les anti-H2, l'acidité gastrique se combattait avec ce qu'on avait sous la main. Et pendant des siècles, 'sous la main', c'était littéralement du carbonate de calcium brut. L'ancêtre de ton Maalox, c'était du calcaire pilé vendu chez l'apothicaire.",
-    source: "Pharm'Alpha",
-    source_url: "",
-    tiktok_url: "",
-    badge_label: "Le Saviez-Vous",
-    image_url: "assets/img_lsv_2026_09_04.jpg",
-    tags: ["histoire", "medicament", "gastroenterologie", "chimie", "apothicaire"]
-  },
-{
-    id: "actu_2026_09_03_1",
-    date: "2026-09-03",
-    type: "actu",
-    categorie: "pharma_france",
-    titre: "Eliquis générique : le premier AOD substituable débarque en officine",
-    resume: "C'est historique : le premier générique d'apixaban remboursable et substituable est arrivé. L'Eliquis de BMS, l'un des médicaments les plus prescrits en ville, n'est plus seul sur l'étagère. Ce que ça change concrètement pour toi dès demain.",
-    source: "Le Moniteur des Pharmacies",
-    source_url: "https://www.lemoniteurdespharmacies.fr/therapeutique/medicaments/mieux-delivrer/eliquis-le-premier-generique-remboursable-et-substituable",
-    tiktok_url: "",
-    badge_label: "Pharma France",
-    image_url: "assets/img_actu_2026_09_03_1.jpg",
-    tags: ["substitution", "generique", "aod", "anticoagulant", "officine"]
-  },
-{
-    id: "actu_2026_09_03_2",
-    date: "2026-09-03",
-    type: "actu",
-    categorie: "pharma_monde",
-    titre: "Angelman : l'espoir d'Ultragenyx s'effondre en phase 3",
-    resume: "Ultragenyx voulait révolutionner la prise en charge du syndrome d'Angelman. Son traitement expérimental vient de se prendre un mur en phase 3 : aucun bénéfice vs placebo. Une leçon de plus sur la difficulté de cibler le système nerveux central.",
-    source: "STAT News",
-    source_url: "https://www.statnews.com/2026/09/02/ultragenyx-drug-angelman-syndrome-clinical-trial/?utm_campaign=rss",
-    tiktok_url: "",
-    badge_label: "Pharma Monde",
-    image_url: "assets/img_actu_2026_09_03_2.jpg",
-    tags: ["maladies-rares", "phase3", "neurologie", "recherche", "echec"]
   }
 ];
 

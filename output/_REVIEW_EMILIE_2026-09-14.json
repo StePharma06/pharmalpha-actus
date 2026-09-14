@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-09-14T04:07:25.976457+02:00",
+  "run_date": "2026-09-14",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "Santé sexuelle 2030 : la délivrance officinale des abortifs se précise enfin",
+      "resume": "La nouvelle feuille de route de la Stratégie nationale de santé sexuelle 2026-2030 ouvre explicitement la voie à la délivrance directe en officine des médicaments abortifs, au-delà de la téléconsultation. Pour la pharmacie d'officine, c'est une vraie reconnaissance de son rôle dans l'accès à l'IVG médicamenteuse en ville.",
+      "source": "Caducee.net",
+      "source_url": "https://www.caducee.net/actualite-medicale/16960/sante-sexuelle-2026-2030-les-chantiers-de-l-ivg-en-ville-de-la-contraception-et-de-la-consultation-longue.html",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Franchises médicales à 140 € : +40 % dès le 1er octobre, ce que ça change au comptoir",
+      "resume": "Le décret est paru. Dès le 1er octobre 2026, le plafond annuel des franchises médicales bondit de 100 à 140 euros. Pour l'officine, l'impact sur le flux patients et l'accès aux soins est immédiat et concret.",
+      "source": "Pharm'Actus · Le Monde — Franchises médicales : le plafond annuel passe de 100 à 140 euros le 1er octobre, France Info Santé — Franchise médicale : le plafond annuel passera à 140 euros",
+      "source_url": "https://www.lemonde.fr/politique/article/2026/09/12/franchises-medicales-le-plafond-annuel-passe-de-100-a-140-euros-le-1-octobre_6771228_823448.html",
+      "confidence_score": 0.82,
+      "warnings": [
+        "Le montant total du transfert de charge vers les ménages (plusieurs centaines de millions d'euros) est une estimation qualitative : la source officielle publiée (Le Monde, France Info) ne chiffre pas précisément l'économie AM attendue — ne pas reprendre ce chiffre sans source PLFSS ou DREES explicite.",
+        "Le taux de 23 % de renoncement aux soins est issu du Baromètre santé Santé Publique France 2023 : vérifier la mise à jour 2024-2025 si disponible avant publication.",
+        "Le décret est cité via les articles de presse (Le Monde, France Info) mais son numéro exact au JORF n'est pas fourni dans les sources disponibles — à vérifier sur Légifrance avant publication pour citer le texte précis.",
+        "L'honoraire de dispensation à 1,02 € TTC est le montant conventionnel en vigueur à la date de rédaction — vérifier qu'aucun avenant n'a modifié ce montant entre juin et septembre 2026.",
+        "L'exemple de calcul sur l'atteinte du plafond (200 boîtes / 16-17 mois) est illustratif pour un patient générique : ne pas le présenter comme un cas réel sans profil patient précis.",
+        "4 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

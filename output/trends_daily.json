@@ -1,64 +1,64 @@
 {
-  "generated_at": "2026-09-12",
-  "window_label": "6 sept. au 12 sept. 2026",
+  "generated_at": "2026-09-14",
+  "window_label": "8 sept. au 14 sept. 2026",
   "has_history": true,
   "delta_source": "pytrends_rising",
   "pathologies": [
     {
-      "display": "Assurance maladie fatigue chronique",
-      "delta_label": "↑ 324 950",
+      "display": "Syndrome de la fatigue chronique",
+      "delta_label": "↑ 31 000",
       "trend": "up"
     },
     {
-      "display": "Allergie du moment",
-      "delta_label": "↑ 21 450",
-      "trend": "up"
-    },
-    {
-      "display": "Prick test allergie",
-      "delta_label": "↑ 20 650",
+      "display": "Fatigue intense cause",
+      "delta_label": "↑ 12 850",
       "trend": "up"
     },
     {
       "display": "Pommeau de douche vitamine c",
-      "delta_label": "↑ 13 800",
+      "delta_label": "↑ 11 600",
       "trend": "up"
     },
     {
-      "display": "Vitamine b₁₂",
-      "delta_label": "↑ 9 100",
+      "display": "Désensibilisation allergie chat",
+      "delta_label": "↑ 11 350",
+      "trend": "up"
+    },
+    {
+      "display": "Allergie figue",
+      "delta_label": "↑ 11 100",
       "trend": "up"
     }
   ],
   "soins": [
     {
-      "display": "Azinc immunite",
-      "delta_label": "↑ 74 600",
+      "display": "Immunite adaptative",
+      "delta_label": "↑ 57 000",
       "trend": "up"
     },
     {
-      "display": "Mauvaise digestion que faire",
-      "delta_label": "↑ 69 500",
+      "display": "Digestion lente que faire",
+      "delta_label": "↑ 37 750",
       "trend": "up"
     },
     {
       "display": "Calmosine digestion bébé",
-      "delta_label": "↑ 40 400",
+      "delta_label": "↑ 36 750",
+      "trend": "up"
+    },
+    {
+      "display": "Zen-sante.fr santé auditive",
+      "delta_label": "↑ 11 300",
       "trend": "up"
     },
     {
       "display": "Gummies sommeil enfant",
-      "delta_label": "↑ 5 650",
-      "trend": "up"
-    },
-    {
-      "display": "Stylo anti douleur",
-      "delta_label": "↑ 2 750",
+      "delta_label": "↑ 8 700",
       "trend": "up"
     }
   ],
   "pathologies_stale": false,
-  "pathologies_from": "2026-09-12",
+  "pathologies_from": "2026-09-14",
   "soins_stale": false,
-  "soins_from": "2026-09-12"
+  "soins_from": "2026-09-14"
 }
