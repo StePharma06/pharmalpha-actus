@@ -1,64 +1,56 @@
 {
- "genere_le": "2026-09-14T10:21:26+02:00",
+ "genere_le": "2026-09-15T10:12:42+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1184,
- "abonnes_hebdo": 290,
- "abonnes_diffusion": 1474,
- "articles_publies": 663,
- "nouveaux_7j": 33,
- "nouveaux_cumul": 1177,
+ "abonnes_total": 1188,
+ "abonnes_hebdo": 295,
+ "abonnes_diffusion": 1483,
+ "articles_publies": 668,
+ "nouveaux_7j": 34,
+ "nouveaux_cumul": 1181,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-09-07",
-  "au": "2026-09-14",
-  "delivres": 7740,
-  "ouvertures": 3058,
-  "ouvertures_uniques": 2219,
-  "clics": 3952,
-  "clics_uniques": 690,
-  "taux_ouverture_pct": 28.7,
-  "taux_clic_pct": 8.9,
-  "ctor_pct": 31.1,
+  "du": "2026-09-08",
+  "au": "2026-09-15",
+  "delivres": 7495,
+  "ouvertures": 2844,
+  "ouvertures_uniques": 2078,
+  "clics": 3645,
+  "clics_uniques": 622,
+  "taux_ouverture_pct": 27.7,
+  "taux_clic_pct": 8.3,
+  "ctor_pct": 29.9,
   "top_articles": [
-   {
-    "id": "actu_2026_09_07_3",
-    "titre": "Biosimilaires substituables : l'USPO sort la fiche pratique qu'on attendait",
-    "date": "2026-09-07",
-    "categorie": "bonne_nouvelle",
-    "clics": 111,
-    "lecteurs": 70
-   },
    {
     "id": "actu_2026_09_12_5",
     "titre": "Désogestrel et méningiome : 1,5 million de patientes alertées, ton comptoir en première ligne",
     "date": "2026-09-12",
     "categorie": "business_officine",
-    "clics": 97,
-    "lecteurs": 65
+    "clics": 103,
+    "lecteurs": 69
    },
    {
     "id": "actu_2026_09_12_1",
     "titre": "Marge grossiste : 100 millions d'euros en moins pour le réseau",
     "date": "2026-09-12",
     "categorie": "pharma_france",
-    "clics": 120,
-    "lecteurs": 63
+    "clics": 122,
+    "lecteurs": 65
    },
    {
     "id": "actu_2026_09_11_4",
     "titre": "Wegovy et Mounjaro remboursés : 535 000 boîtes en 11 semaines, le compteur tourne vite",
     "date": "2026-09-11",
     "categorie": "bonne_nouvelle",
-    "clics": 97,
-    "lecteurs": 59
+    "clics": 100,
+    "lecteurs": 61
    },
    {
     "id": "actu_2026_09_11_3",
     "titre": "Les CAR-T cells, une révolution qui commence à peine : ce que tu vas voir arriver en officine",
     "date": "2026-09-11",
     "categorie": "avenir_pharma",
-    "clics": 88,
-    "lecteurs": 57
+    "clics": 93,
+    "lecteurs": 61
    },
    {
     "id": "actu_2026_09_08_1",
@@ -73,23 +65,31 @@
     "titre": "Désogestrel et méningiome : 1,6 million de femmes vont recevoir un courrier, prépare-toi",
     "date": "2026-09-11",
     "categorie": "pharma_france",
-    "clics": 83,
-    "lecteurs": 48
-   },
-   {
-    "id": "actu_2026_09_07_1",
-    "titre": "Wegovy oral autorisé en Allemagne : la France peut-elle encore attendre ?",
-    "date": "2026-09-07",
-    "categorie": "pharma_france",
-    "clics": 79,
-    "lecteurs": 45
+    "clics": 84,
+    "lecteurs": 49
    },
    {
     "id": "actu_2026_09_09_1",
     "titre": "Dépistage HTA en officine : d'où sort ce chiffre de 15 euros ?",
     "date": "2026-09-09",
     "categorie": "pharma_france",
+    "clics": 76,
+    "lecteurs": 46
+   },
+   {
+    "id": "actu_2026_09_14_2",
+    "titre": "Les deals secrets de Trump qui sabordent sa propre politique sur les prix des médicaments",
+    "date": "2026-09-14",
+    "categorie": "pharma_monde",
     "clics": 73,
+    "lecteurs": 46
+   },
+   {
+    "id": "actu_2026_09_10_5",
+    "titre": "Déremboursements 2027 : les bornes sont posées, le choc tarifaire reste à chiffrer",
+    "date": "2026-09-10",
+    "categorie": "business_officine",
+    "clics": 70,
     "lecteurs": 45
    },
    {
@@ -97,22 +97,22 @@
     "titre": "Vaccination : la Cour des comptes valide le rôle clé des pharmaciens",
     "date": "2026-09-09",
     "categorie": "bonne_nouvelle",
-    "clics": 75,
+    "clics": 77,
     "lecteurs": 44
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-09-14",
-  "delivres": 106227,
-  "ouvertures": 42921,
-  "ouvertures_uniques": 29725,
-  "clics": 45454,
-  "clics_uniques": 8187,
+  "au": "2026-09-15",
+  "delivres": 107269,
+  "ouvertures": 43347,
+  "ouvertures_uniques": 30006,
+  "clics": 46007,
+  "clics_uniques": 8285,
   "taux_ouverture_pct": 28.0,
   "taux_clic_pct": 7.7,
-  "ctor_pct": 27.5,
+  "ctor_pct": 27.6,
   "top_articles": [
    {
     "id": "actu_2026_09_05_1",
@@ -163,6 +163,14 @@
     "lecteurs": 69
    },
    {
+    "id": "actu_2026_09_12_5",
+    "titre": "Désogestrel et méningiome : 1,5 million de patientes alertées, ton comptoir en première ligne",
+    "date": "2026-09-12",
+    "categorie": "business_officine",
+    "clics": 103,
+    "lecteurs": 69
+   },
+   {
     "id": "actu_2026_09_01_1",
     "titre": "actu_2026_09_01_1",
     "date": "",
@@ -184,14 +192,6 @@
     "date": "",
     "categorie": "",
     "clics": 122,
-    "lecteurs": 66
-   },
-   {
-    "id": "actu_2026_08_28_3",
-    "titre": "actu_2026_08_28_3",
-    "date": "",
-    "categorie": "",
-    "clics": 107,
     "lecteurs": 66
    }
   ]
