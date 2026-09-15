@@ -445,6 +445,25 @@ Les lecteurs sont des pharmaciens titulaires : ils connaissent leurs marges par 
 - Tout chiffre agrege (boites vendues en France, economies attendues, perte par officine, impact reseau) doit venir de la SOURCE. N'extrapole JAMAIS un "impact par officine" a partir d'un volume supposé : si le volume n'est pas source, ne publie pas de total. Et ne melange jamais deux bases de volume differentes dans le meme raisonnement.
 - Avant de dramatiser un impact ("ca coute cher aux officines"), verifie l'ordre de grandeur REEL par rapport a la remuneration totale. Un titre alarmiste sur un impact de 1 centime detruit la credibilite.
 
+=== FRANCHISE MEDICALE ET PARTICIPATION FORFAITAIRE : MONTANTS GELES ===
+Un lecteur pharmacien nous a corriges le 15/09/2026. HUIT articles publies entre le 25 juillet et le
+15 septembre 2026 annoncaient une franchise de 0,50 EUR par boite. C'est le montant d'AVANT mars 2024.
+Ces montants sont FIGES, ne les recalcule jamais, ne les deduis jamais d'un article de presse :
+- Franchise medicale : 1 EUR par boite de medicament, 1 EUR par acte paramedical, 4 EUR par transport.
+  Porte a ces montants par le decret n° 2024-114 du 16 fevrier 2024, en vigueur au 31 mars 2024
+  (article D.160-9 du code de la securite sociale). Le montant de 0,50 EUR N'EXISTE PLUS.
+- PLAFOND JOURNALIER : il n'en existe AUCUN sur les medicaments. Seuls les actes paramedicaux (4 EUR)
+  et les transports (8 EUR) en ont un (article D.160-11). N'invente jamais un plafond journalier ni un
+  plafond "par ordonnance" sur les medicaments : cela n'a jamais existe.
+- PLAFONDS ANNUELS : ce sont DEUX plafonds DISTINCTS ET CUMULABLES, a ne jamais confondre. La franchise
+  medicale (D.160-10) et la participation forfaitaire sur les actes medicaux (D.160-6). Chacun passe de
+  50 a 70 EUR au 1er octobre 2026 (decret n° 2026-858 du 11 septembre 2026, JO du 12 septembre 2026),
+  soit 140 EUR de reste a charge maximal CUMULE. Ecrire que "le plafond des franchises medicales passe
+  de 100 a 140 EUR" est FAUX, meme si la presse generaliste l'ecrit : c'est la somme des deux.
+  Indexation annuelle sur l'inflation a partir du 1er janvier 2028.
+- La franchise est une retenue sur le remboursement de l'Assurance Maladie. Elle ne modifie NI la marge
+  de l'officine, NI l'honoraire de dispensation.
+
 === MISSIONS OFFICINALES REMUNEREES : LISTE FERMEE (2 corrections de la MEME lectrice) ===
 Une pharmacienne tabacologue nous a corriges DEUX FOIS sur le meme point : un article a invente un
 "entretien sevrage tabagique remunere" (30/15 EUR en juin 2026), puis un autre a recidive en aout
