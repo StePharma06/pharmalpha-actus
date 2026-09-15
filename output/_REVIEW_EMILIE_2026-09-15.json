@@ -1,0 +1,51 @@
+{
+  "generated_at": "2026-09-15T04:09:23.878254+02:00",
+  "run_date": "2026-09-15",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Franchises médicales : le reste à charge bondit à 140 euros, et ça va se voir au comptoir",
+      "resume": "Le décret du 11 septembre 2026 relève de 40% les deux plafonds annuels de franchise médicale et de participation forfaitaire. De 50 à 70 euros chacun, soit 140 euros cumulés maximum. Ce sont tes patients chroniques qui trinquent en premier.",
+      "source": "Caducee.net",
+      "source_url": "https://www.caducee.net/actualite-medicale/16965/franchises-medicales-a-140-euros-cumules-la-hausse-se-concentre-sur-les-plus-gros-consommateurs-de-soins.html",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "avenir_pharma",
+      "titre": "Pharmacien correspondant dans le PLFSS 2027 : le chiffre qui change tout",
+      "resume": "L'USPO pousse fort pour valoriser le pharmacien correspondant dans le PLFSS 2027, notamment à la sortie d'hospitalisation. L'enjeu : identifier le pharmacien de proximité dès l'admission et l'intégrer au plan de retour à domicile. Un rôle structurant, avec une rémunération à construire.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/plfss-2027-combien-vaut-lintervention-du-pharmacien-correspondant",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Lovenox cédé par Sanofi : 822 M€ de CA, et l'officine dans la tourmente biosimilaires",
+      "resume": "Sanofi cède la franchise Lovenox à Cheplapharm. Derrière cette transaction industrielle, un signal fort : les biosimilaires d'héparine de bas poids moléculaire ont déjà rogné 14,4 % du CA en un an. Pour les officines, le sujet est leur marge sur un produit hospitalier ET ambulato...",
+      "source": "Pharm'Actus · ActuLabo — Cheplapharm reprend le Lovenox de Sanofi et les usines dédiées",
+      "source_url": "https://www.actulabo.com/cheplapharm-reprend-le-lovenox-de-sanofi-et-les-usines-dediees/",
+      "confidence_score": 0.72,
+      "warnings": [
+        "Le CA de 822 M€ et le recul de 14,4 % sont issus d'ActuLabo et présentés comme des données 2024 : à vérifier dans les rapports financiers Sanofi 2024 si publication disponible.",
+        "Le montant unitaire de la rémunération ROSP biosimilaires (indicateur spécifique à l'énoxaparine) n'a pas été cité car non vérifiable textuellement dans les sources disponibles : la recommandation reste qualitative sur ce point.",
+        "Le statut exact de la substitution biosimilaire de l'énoxaparine (inscription sur la liste L.5125-23-2) est présenté comme acquis sur la base du cadre général LFSS 2014 et des biosimilaires HBPM connus en France — à vérifier que le groupe énoxaparine figure bien dans l'arrêté en vigueur au moment de publication.",
+        "Les conditions commerciales Cheplapharm post-cession sont spéculatives : aucune source publique disponible à ce stade sur les nouvelles conditions tarifaires.",
+        "Aucun chiffre de volume ambulatoire de l'énoxaparine en officine (nombre de boîtes, CA officinal) n'a été cité car absent des sources disponibles — volontairement écarté pour respecter la règle de non-extrapolation.",
+        "FACT-CHECK: 'elle est possible depuis la loi de financement de la Sécurité sociale 2014 (article L.5125-23-2 du CSP)' → L'article L.5125-23-2 du CSP est introuvable sous cette numérotation. La substitution des biologiques par des biosimilaires en officine a été introduite par la LFSS 2014 (article 47), mais la codification exacte dans le CSP est L.5125-23 alinéas spécifiques ou un article distinct selon les versions consolidées. La référence 'L.5125-23-2' doit être vérifiée dans la version en vigueur du CSP avant publication — une mauvaise référence d'article de loi est une erreur factuelle grave.",
+        "FACT-CHECK: 'depuis l'avenant 21 à la convention pharmaceutique' → L'avenant instaurant la rémunération spécifique à l'acte de substitution biosimilaire et les indicateurs ROSP biosimilaires doit être vérifié. L'avenant 21 n'est pas une référence que je peux confirmer avec certitude comme étant celui qui a créé ce dispositif. La convention pharmaceutique a fait l'objet de nombreux avenants ; attribuer la création de la ROSP biosimilaires à l'avenant 21 spécifiquement est une affirmation factuelle précise qui nécessite vérification dans le Journal Officiel ou sur le site de l'Assurance Maladie avant publication. Une erreur de numérotation d'avenant est une inexactitude réglementaire directement vérifiable par les lecteurs.",
+        "FACT-CHECK: 'L'énoxaparine figure dans la liste des groupes substituables' → Cette affirmation doit être vérifiée par la consultation de l'arrêté en vigueur fixant la liste des groupes biologiques similaires substituables (arrêté publié au JO en application de l'article CSP susvisé). Si l'énoxaparine est bien listée, encore faut-il préciser que cette substituabilité est conditionnée au premier traitement ou à la continuité selon les textes applicables — la rédaction actuelle laisse entendre une substituabilité générale sans restriction, ce qui pourrait être inexact ou incomplet au regard des conditions d'inscription dans le groupe.",
+        "FACT-CHECK: 'Selon ActuLabo (14 septembre 2026)' → La date de la source est postérieure à la date de rédaction possible de cet article (2026 est dans le futur au regard de la connaissance disponible). Si l'article est destiné à une publication future, cette source doit exister réellement et être vérifiable. Si elle est fictive ou anticipée, l'article ne peut pas être publié tel quel avec une référence de source datée et nommée précisément.",
+        "3 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

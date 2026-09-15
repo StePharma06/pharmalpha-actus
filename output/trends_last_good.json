@@ -1,58 +1,58 @@
 {
   "pathologies": [
     {
-      "display": "Syndrome de la fatigue chronique",
-      "delta_label": "↑ 31 000",
+      "display": "Corps de ferme",
+      "delta_label": "↑ 58 150",
       "trend": "up"
     },
     {
-      "display": "Fatigue intense cause",
-      "delta_label": "↑ 12 850",
+      "display": "Allergie en septembre",
+      "delta_label": "↑ 28 550",
+      "trend": "up"
+    },
+    {
+      "display": "Allergie pollen septembre",
+      "delta_label": "↑ 18 750",
+      "trend": "up"
+    },
+    {
+      "display": "Cure vitamine fatigue",
+      "delta_label": "↑ 13 400",
       "trend": "up"
     },
     {
       "display": "Pommeau de douche vitamine c",
-      "delta_label": "↑ 11 600",
-      "trend": "up"
-    },
-    {
-      "display": "Désensibilisation allergie chat",
-      "delta_label": "↑ 11 350",
-      "trend": "up"
-    },
-    {
-      "display": "Allergie figue",
-      "delta_label": "↑ 11 100",
+      "delta_label": "↑ 12 350",
       "trend": "up"
     }
   ],
-  "pathologies_from": "2026-09-14",
+  "pathologies_from": "2026-09-15",
   "soins": [
     {
-      "display": "Immunite adaptative",
-      "delta_label": "↑ 57 000",
+      "display": "Temps de digestion d'un repas",
+      "delta_label": "↑ 25 550",
       "trend": "up"
     },
     {
-      "display": "Digestion lente que faire",
-      "delta_label": "↑ 37 750",
-      "trend": "up"
-    },
-    {
-      "display": "Calmosine digestion bébé",
-      "delta_label": "↑ 36 750",
-      "trend": "up"
-    },
-    {
-      "display": "Zen-sante.fr santé auditive",
-      "delta_label": "↑ 11 300",
+      "display": "Temps de digestion chien",
+      "delta_label": "↑ 18 300",
       "trend": "up"
     },
     {
       "display": "Gummies sommeil enfant",
-      "delta_label": "↑ 8 700",
+      "delta_label": "↑ 300",
+      "trend": "up"
+    },
+    {
+      "display": "Zen-sante.fr sommeil et stress",
+      "delta_label": "↑ 250",
+      "trend": "up"
+    },
+    {
+      "display": "Douleur dans le talon",
+      "delta_label": "↑ 50",
       "trend": "up"
     }
   ],
-  "soins_from": "2026-09-14"
+  "soins_from": "2026-09-15"
 }
