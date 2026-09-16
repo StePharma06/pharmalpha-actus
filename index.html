@@ -38,20 +38,39 @@
 <link rel="preload" href="/assets/fonts/space-grotesk-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/fonts/space-grotesk.css?v=20260824a">
 
+<!-- Google Consent Mode v2 : INLINE SYNCHRONE obligatoire. -->
+<!-- Etablit consent 'default' denied AVANT tout script tiers. -->
+<!-- gtag('js') et gtag('config') sont intentionnellement absents ici : -->
+<!-- GA4 est charge dynamiquement par klaro-config.js UNIQUEMENT apres acceptation -->
+<!-- explicite (mode Basic). POURQUOI PAS LE MODE ADVANCED : il envoie a Google des -->
+<!-- pings sans cookie AVANT tout consentement, donc une transmission a un tiers qui -->
+<!-- les reutilise pour son propre compte, avant tout choix libre de l utilisateur. -->
+<!-- Non conforme CNIL. (Le motif -- depot d un cookie _ga malgre le refus -- ecrit -->
+<!-- ici jusqu au 2026-09-16 etait FAUX : verifie et corrige par regulatory.) -->
+<!-- Ref CNIL : https://www.cnil.fr/fr/cookies-et-autres-traceurs/regles/cookies-solutions-pour-les-outils-de-mesure-daudience -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  window.gtag = gtag;
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'functionality_storage': 'granted',
+    'security_storage': 'granted',
+    'personalization_storage': 'denied',
+    'wait_for_update': 500
+  });
+</script>
+
 <!-- Klaro CMP + Google Consent Mode v2 -->
 <link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.css">
+<link rel="stylesheet" href="/assets/klaro-override.css">
+<!-- klaro-config.js : charge GA4 dynamiquement apres consentement (mode Basic CNIL) -->
 <script defer src="/assets/klaro-config.js"></script>
 <script defer src="https://cdn.kiprotect.com/klaro/v0.7/klaro-no-css.js"></script>
-
-<!-- Google Analytics 4 (chargé conditionnellement par Klaro après consent) -->
-<script type="text/plain" data-type="application/javascript" data-name="google-analytics"
-        src="https://www.googletagmanager.com/gtag/js?id=G-K5Z3LG8YFY"></script>
-<script type="text/plain" data-type="application/javascript" data-name="google-analytics">
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-K5Z3LG8YFY', { 'anonymize_ip': true });
-</script>
+<!-- GA4 (gtag/js) : PAS de chargement ici — injecte par loadGA4() dans klaro-config.js -->
 
 <style>
 :root {
