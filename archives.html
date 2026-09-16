@@ -8,6 +8,13 @@
 <meta property="og:title" content="Archives Pharm'Actus">
 <meta property="og:description" content="Toutes les actus pharma publiees depuis le lancement. Recherche et filtres.">
 <meta property="og:image" content="https://actus.pharmalpha.fr/assets/og_image.png">
+<!-- Canonical auto-referente SANS parametre : les filtres ?tag=... generent
+     autant d'URLs que de tags (201 recensees par la Search Console le
+     2026-09-16, toutes classees "page en double sans URL canonique").
+     Le filtrage est fait en JS, le HTML servi est identique quelle que soit
+     la valeur de ?tag : une seule URL canonique est donc legitime.
+     L'URL est reecrite en pharmalpha.fr/actus par sync_to_vercel.py. -->
+<link rel="canonical" href="https://actus.pharmalpha.fr/archives.html">
 <meta property="og:url" content="https://actus.pharmalpha.fr/archives.html">
 <meta property="og:type" content="website">
 <link rel="icon" type="image/png" href="/assets/favicon.png">
