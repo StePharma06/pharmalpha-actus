@@ -1,24 +1,24 @@
 {
- "genere_le": "2026-09-15T10:12:42+02:00",
+ "genere_le": "2026-09-16T10:06:16+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1188,
- "abonnes_hebdo": 295,
- "abonnes_diffusion": 1483,
- "articles_publies": 668,
- "nouveaux_7j": 34,
- "nouveaux_cumul": 1181,
+ "abonnes_total": 1193,
+ "abonnes_hebdo": 298,
+ "abonnes_diffusion": 1491,
+ "articles_publies": 673,
+ "nouveaux_7j": 39,
+ "nouveaux_cumul": 1186,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-09-08",
-  "au": "2026-09-15",
-  "delivres": 7495,
-  "ouvertures": 2844,
-  "ouvertures_uniques": 2078,
-  "clics": 3645,
-  "clics_uniques": 622,
-  "taux_ouverture_pct": 27.7,
-  "taux_clic_pct": 8.3,
-  "ctor_pct": 29.9,
+  "du": "2026-09-09",
+  "au": "2026-09-16",
+  "delivres": 7525,
+  "ouvertures": 2842,
+  "ouvertures_uniques": 2092,
+  "clics": 3640,
+  "clics_uniques": 617,
+  "taux_ouverture_pct": 27.8,
+  "taux_clic_pct": 8.2,
+  "ctor_pct": 29.5,
   "top_articles": [
    {
     "id": "actu_2026_09_12_5",
@@ -37,28 +37,20 @@
     "lecteurs": 65
    },
    {
+    "id": "actu_2026_09_11_3",
+    "titre": "Les CAR-T cells, une révolution qui commence à peine : ce que tu vas voir arriver en officine",
+    "date": "2026-09-11",
+    "categorie": "avenir_pharma",
+    "clics": 94,
+    "lecteurs": 62
+   },
+   {
     "id": "actu_2026_09_11_4",
     "titre": "Wegovy et Mounjaro remboursés : 535 000 boîtes en 11 semaines, le compteur tourne vite",
     "date": "2026-09-11",
     "categorie": "bonne_nouvelle",
     "clics": 100,
     "lecteurs": 61
-   },
-   {
-    "id": "actu_2026_09_11_3",
-    "titre": "Les CAR-T cells, une révolution qui commence à peine : ce que tu vas voir arriver en officine",
-    "date": "2026-09-11",
-    "categorie": "avenir_pharma",
-    "clics": 93,
-    "lecteurs": 61
-   },
-   {
-    "id": "actu_2026_09_08_1",
-    "titre": "Mesure de la tension artérielle : 15 euros pour le pharmacien, et ça fait déjà des jaloux",
-    "date": "2026-09-08",
-    "categorie": "pharma_france",
-    "clics": 80,
-    "lecteurs": 50
    },
    {
     "id": "actu_2026_09_11_2",
@@ -69,19 +61,19 @@
     "lecteurs": 49
    },
    {
+    "id": "actu_2026_09_14_2",
+    "titre": "Les deals secrets de Trump qui sabordent sa propre politique sur les prix des médicaments",
+    "date": "2026-09-14",
+    "categorie": "pharma_monde",
+    "clics": 74,
+    "lecteurs": 47
+   },
+   {
     "id": "actu_2026_09_09_1",
     "titre": "Dépistage HTA en officine : d'où sort ce chiffre de 15 euros ?",
     "date": "2026-09-09",
     "categorie": "pharma_france",
     "clics": 76,
-    "lecteurs": 46
-   },
-   {
-    "id": "actu_2026_09_14_2",
-    "titre": "Les deals secrets de Trump qui sabordent sa propre politique sur les prix des médicaments",
-    "date": "2026-09-14",
-    "categorie": "pharma_monde",
-    "clics": 73,
     "lecteurs": 46
    },
    {
@@ -99,26 +91,34 @@
     "categorie": "bonne_nouvelle",
     "clics": 77,
     "lecteurs": 44
+   },
+   {
+    "id": "actu_2026_09_14_1",
+    "titre": "Levemir, Victoza, Fiasp : le compte à rebours est lancé pour tes patients Novo",
+    "date": "2026-09-14",
+    "categorie": "pharma_france",
+    "clics": 65,
+    "lecteurs": 43
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-09-15",
-  "delivres": 107269,
-  "ouvertures": 43347,
-  "ouvertures_uniques": 30006,
-  "clics": 46007,
-  "clics_uniques": 8285,
+  "au": "2026-09-16",
+  "delivres": 108320,
+  "ouvertures": 43750,
+  "ouvertures_uniques": 30298,
+  "clics": 46476,
+  "clics_uniques": 8370,
   "taux_ouverture_pct": 28.0,
   "taux_clic_pct": 7.7,
   "ctor_pct": 27.6,
   "top_articles": [
    {
     "id": "actu_2026_09_05_1",
-    "titre": "Tiers payant contre biosimilaire : le dispositif est enfin opérationnel",
-    "date": "2026-09-05",
-    "categorie": "pharma_france",
+    "titre": "actu_2026_09_05_1",
+    "date": "",
+    "categorie": "",
     "clics": 140,
     "lecteurs": 79
    },
@@ -148,9 +148,9 @@
    },
    {
     "id": "actu_2026_09_07_3",
-    "titre": "Biosimilaires substituables : l'USPO sort la fiche pratique qu'on attendait",
-    "date": "2026-09-07",
-    "categorie": "bonne_nouvelle",
+    "titre": "actu_2026_09_07_3",
+    "date": "",
+    "categorie": "",
     "clics": 111,
     "lecteurs": 70
    },
