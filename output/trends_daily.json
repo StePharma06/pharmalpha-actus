@@ -1,64 +1,64 @@
 {
-  "generated_at": "2026-09-15",
-  "window_label": "9 sept. au 15 sept. 2026",
+  "generated_at": "2026-09-16",
+  "window_label": "10 sept. au 16 sept. 2026",
   "has_history": true,
   "delta_source": "pytrends_rising",
   "pathologies": [
     {
-      "display": "Corps de ferme",
-      "delta_label": "↑ 58 150",
+      "display": "Maladie fatigue chronique",
+      "delta_label": "↑ 365 400",
       "trend": "up"
     },
     {
-      "display": "Allergie en septembre",
-      "delta_label": "↑ 28 550",
+      "display": "Assurance maladie fatigue chronique",
+      "delta_label": "↑ 323 250",
       "trend": "up"
     },
     {
-      "display": "Allergie pollen septembre",
-      "delta_label": "↑ 18 750",
+      "display": "Allergie à l'ambroisie",
+      "delta_label": "↑ 18 200",
       "trend": "up"
     },
     {
-      "display": "Cure vitamine fatigue",
-      "delta_label": "↑ 13 400",
+      "display": "Allergie au froid",
+      "delta_label": "↑ 17 000",
       "trend": "up"
     },
     {
       "display": "Pommeau de douche vitamine c",
-      "delta_label": "↑ 12 350",
+      "delta_label": "↑ 11 300",
       "trend": "up"
     }
   ],
   "soins": [
     {
-      "display": "Temps de digestion d'un repas",
-      "delta_label": "↑ 25 550",
+      "display": "Digestion rapide",
+      "delta_label": "↑ 81 250",
       "trend": "up"
     },
     {
-      "display": "Temps de digestion chien",
-      "delta_label": "↑ 18 300",
+      "display": "Aide à la digestion",
+      "delta_label": "↑ 58 100",
+      "trend": "up"
+    },
+    {
+      "display": "Azinc immunite",
+      "delta_label": "↑ 52 150",
+      "trend": "up"
+    },
+    {
+      "display": "Immunite adaptative",
+      "delta_label": "↑ 44 100",
       "trend": "up"
     },
     {
       "display": "Gummies sommeil enfant",
-      "delta_label": "↑ 300",
-      "trend": "up"
-    },
-    {
-      "display": "Zen-sante.fr sommeil et stress",
-      "delta_label": "↑ 250",
-      "trend": "up"
-    },
-    {
-      "display": "Douleur dans le talon",
-      "delta_label": "↑ 50",
+      "delta_label": "↑ 11 050",
       "trend": "up"
     }
   ],
   "pathologies_stale": false,
-  "pathologies_from": "2026-09-15",
+  "pathologies_from": "2026-09-16",
   "soins_stale": false,
-  "soins_from": "2026-09-15"
+  "soins_from": "2026-09-16"
 }

@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? On mesurait la guérison des plaies au son d'une cloche",
-  "resume": "Avant les pansements modernes et les bilans biologiques, les chirurgiens médiévaux avaient trouvé une méthode pour évaluer l'état d'une plaie infectée. Elle était aussi étrange qu'ingénieuse. Et franchement, on s'attendait pas à ça.",
-  "full_text": "On est au XIIIe siècle. Un chevalier revient de croisade avec une plaie au flanc qui sent mauvais. Le chirurgien s'approche, inspecte, puis... fait sonner une petite cloche près de la blessure.\n\nC'est pas une blague. C'est la méthode de Théodoric de Cervia, chirurgien bolonais et moine dominicain, qui publie en 1267 son Chirurgia - un traité révolutionnaire pour l'époque. Sa théorie : une plaie en bonne voie de cicatrisation réagit aux vibrations sonores. Il observe que les tissus vivants et irrigués frémissent légèrement autour d'une cloche ou d'un instrument vibrant. Les tissus nécrosés, eux, ne réagissent pas.\n\nLe twist ? Théodoric était aussi en avance sur l'antisepsie de Lister de six siècles. Il prônait déjà le nettoyage des plaies avec du vin, le retrait des corps étrangers et surtout - scandale pour l'époque - il s'opposait à la formation du pus. Ses collègues lui riaient au nez. Le pus, c'était le signe que la plaie « travaillait bien ». Lui disait que c'était le signe qu'elle s'infectait.\n\nLa cloche, évidemment, avait ses limites. Mais l'intuition derrière - évaluer la vitalité des tissus par leur réactivité - est exactement ce que font aujourd'hui les chirurgiens avec le Doppler peropératoire ou les capteurs de perfusion tissulaire.\n\nAujourd'hui, quand tu délivres un pansement hydrocolloïde ou un produit pour plaies chroniques, tu es l'héritier direct de gars comme Théodoric. Des types qui observaient, qui doutaient des dogmes, et qui cherchaient à comprendre pourquoi ça cicatrisait - ou pas. La cloche a changé de forme. L'esprit clinique, lui, est resté.",
-  "image_keywords": "medieval surgery wound",
+  "titre": "Le saviez-vous ? On protégeait les soldats des infections avec des toiles d'araignée",
+  "resume": "Avant la pénicilline, les chirurgiens de guerre avaient une arme secrète : la toile d'araignée. Pas une légende de bonne femme, une pratique documentée sur les champs de bataille européens. Et le plus fou ? La science moderne commence à comprendre pourquoi ça marchait.",
+  "full_text": "On est en 1643. Bataille de Rocroi, Nord de la France. Des milliers de blessés, des plaies ouvertes dans la boue, zéro antiseptique. Le chirurgien militaire sort son arsenal de guerre : de l'alcool, des fers rouges... et des toiles d'araignée soigneusement roulées en boule.\n\nCette pratique ne sort pas de nulle part. Elle remonte à l'Antiquité grecque. Dioscoride, médecin de l'armée romaine au Ier siècle, la recommandait déjà dans son De Materia Medica. Les toiles d'araignée étaient appliquées directement sur les coupures et les plaies pour stopper le saignement et prévenir l'infection. Une thérapie qui a traversé 1 500 ans de médecine militaire sans prendre une ride.\n\nLe twist qui change tout : les araignées tissent leurs toiles avec de la soie protéique recouverte de composés antimicrobiens naturels. Des molécules comme la spidroïne, mais aussi des peptides capables d'inhiber la croissance de certaines bactéries. La toile est aussi un piège physique qui favorise la coagulation en créant un échafaudage pour les plaquettes. En gros, elles faisaient en une seule application ce que nos pansements modernes tentent de reproduire avec trois couches de technologie.\n\nAu XVIIIe siècle, le chirurgien britannique John Hunter mentionnait encore cette technique dans ses carnets. Elle a disparu progressivement avec l'arrivée des pansements industriels au XIXe... et on a failli oublier pourquoi elle fonctionnait.\n\nAujourd'hui, des laboratoires à Cambridge et à l'Université de Wyoming travaillent sur des biomatériaux inspirés de la soie d'araignée pour créer des pansements chirurgicaux de nouvelle génération : biocompatibles, résistants, potentiellement antibactériens. Ce que le chirurgien de Rocroi appliquait à l'instinct, on essaie de le synthétiser en salle blanche. La nature avait trois siècles d'avance.",
+  "image_keywords": "spider web medicine",
   "tags": [
     "histoire",
     "chirurgie",
-    "cicatrisation",
-    "antisepsie",
-    "instrument"
+    "plante",
+    "decouverte",
+    "antisepsie"
   ],
-  "date": "2026-09-15",
+  "date": "2026-09-16",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",

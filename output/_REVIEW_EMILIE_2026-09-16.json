@@ -1,0 +1,47 @@
+{
+  "generated_at": "2026-09-16T04:07:12.450704+02:00",
+  "run_date": "2026-09-16",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "PLFSS 2027 : une pharmacie sur deux perdante dans le nouveau modèle ?",
+      "resume": "Le virage \"expertise contre volumes\" du PLFSS 2027 ne fait pas que des heureux. Selon les simulations de la FSPF, une pharmacie sur deux serait perdante dans le nouveau schéma de rémunération. La diversité économique du réseau officinal transforme une réforme globalement neutre en une redistribution brutale.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/plfss-2027-une-pharmacie-sur-deux-perdante-de-lapres-boite",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "Préservatifs remboursés : trois nouvelles références Eroskin arrivent en officine",
+      "resume": "Fin septembre 2026, trois nouvelles références de préservatifs masculins lubrifiés en latex de la marque Eroskin Classic intègrent la liste des dispositifs médicaux pris en charge par l'Assurance maladie. Boîtes de 6, 12 et 24 : le rayon préservatifs remboursables s'élargit encore. Une bonne nouvelle concrète pour l'accès à la prévention.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/medicament-parapharmacie/dispositifs-medicaux/de-nouveaux-preservatifs-masculins-remboursables-par-lassurance-maladie",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Grippe : couverture vaccinale en berne, l'officine est la pièce manquante",
+      "resume": "Santé publique France vient de publier un rapport qui confirme ce qu'on sait mais qu'on ne résout pas : la couverture vaccinale contre la grippe reste insuffisante chez les personnes âgées et les soignants. Pour l'officine, c'est un angle business et de santé publique à saisir dè...",
+      "source": "Pharm'Actus · Santé publique France – Étude couverture vaccinale grippe, via France Info Santé, Le Monde Santé – Vaccination contre la grippe : une couverture encore trop faible",
+      "source_url": "https://www.franceinfo.fr/sante/maladie/grippe/la-couverture-vaccinale-contre-la-grippe-est-insuffisante-chez-les-personnages-agees-et-les-soignants-selon-une-etude-de-sante-publique-france_8193185.html",
+      "confidence_score": 0.72,
+      "warnings": [
+        "Les taux de couverture vaccinale précis (52-54 % chez les 65+) sont des ordres de grandeur issus de données Santé publique France des campagnes précédentes, non directement extraits du rapport du 15/09/2026 dont le détail chiffré n'est pas disponible dans le résumé fourni. À vérifier sur le rapport complet avant publication.",
+        "La rémunération de l'acte vaccinal par le pharmacien est réelle mais le montant exact de l'honoraire n'a pas été cité dans l'article pour éviter toute erreur : ne pas ajouter de chiffre sans vérifier la convention en vigueur.",
+        "L'article du Monde Santé est dans la liste des sources 'déjà utilisées aujourd'hui' pour d'autres catégories — vérifier en interne qu'il n'a pas déjà été mobilisé dans une autre rubrique du jour. Si oui, s'appuyer uniquement sur France Info Santé.",
+        "Le classement liste I des vaccins grippaux en 2026 est mentionné comme acquis : vérifier la date exacte d'entrée en vigueur de ce classement avant publication.",
+        "IQVIA Pharmastat juin 2026 : 19 274 officines — chiffre structurel utilisé tel quel conformément aux règles internes.",
+        "4 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}
