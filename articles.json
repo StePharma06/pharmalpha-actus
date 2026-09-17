@@ -1,6 +1,131 @@
 {
   "articles": [
     {
+      "id": "actu_2026_09_17_5",
+      "date": "2026-09-17",
+      "type": "actu",
+      "categorie": "business_officine",
+      "titre": "TVA sur les OPCO dès le 1er octobre : ce que ça change pour ta masse salariale formation",
+      "resume": "À partir du 1er octobre 2026, les opérateurs de compétences passent à la TVA. Résultat concret pour ton officine : la subrogation de paiement ne sera plus automatique, et le financement de tes formations salariées va demander plus de gestion.",
+      "source": "Pharm'Actus · FSPF — Formation continue des salariés de la Pharmacie d'officine 2026-35",
+      "source_url": "https://www.fspf.fr/formation-continue-des-salaries-de-la-pharmacie-dofficine-2026-35/",
+      "tiktok_url": "",
+      "badge_label": "Business",
+      "image_url": "assets/img_actu_2026_09_17_5.jpg",
+      "tags": [
+        "formation",
+        "opco",
+        "tresorerie",
+        "fiscalite"
+      ],
+      "full_text": "À partir du 1er octobre 2026, les opérateurs de compétences passent à la TVA. Résultat concret pour ton officine : la subrogation de paiement ne sera plus automatique, et le financement de tes formations salariées va demander plus de gestion.\n\n**Contexte**\n\nDepuis leur création en 2019 (réforme de la loi Avenir Professionnel du 5 septembre 2018, qui a remplacé les OPCA par les OPCO), les opérateurs de compétences bénéficiaient d'une exonération de TVA sur leurs activités de collecte et de financement de la formation professionnelle. Cette exonération prend fin au 1er octobre 2026. L'OPCO compétent pour la pharmacie d'officine est l'OPCO EP (Entreprises de Proximité), qui couvre les branches du commerce de détail, dont la pharmacie. Jusqu'à présent, le mécanisme dit de 'subrogation de paiement' permettait à l'OPCO EP de régler directement l'organisme de formation à ta place, sans que tu aies à avancer les fonds. Avec l'assujettissement à la TVA, ce circuit de paiement ne pourra plus s'appliquer de façon systématique, selon la FSPF qui a publié une note d'alerte le 16 septembre 2026. Toutes les officines employeuses sont concernées, soit la quasi-totalité du réseau : sur 19 274 officines en France (IQVIA Pharmastat, juin 2026), la très grande majorité emploie au moins un salarié.\n\n**Analyse business**\n\nLe sujet peut sembler administratif. Il est en réalité un vrai irritant de trésorerie pour les officines, et potentiellement un frein à la formation continue des équipes.\n\nVoilà le mécanisme qui change. Avant le 1er octobre, ton officine envoie un salarié en formation : l'OPCO EP avance directement le règlement à l'organisme de formation (subrogation). Tu n'avances rien. Après le 1er octobre, avec l'assujettissement à la TVA des OPCO, ce circuit ne sera plus automatique. Deux scénarios probables selon la note FSPF : soit ton officine devra avancer les frais de formation HT + TVA, puis demander un remboursement à l'OPCO EP (le délai réel de remboursement peut varier selon les organismes et les périodes) ; soit une solution de substitution sera mise en place par l'OPCO EP, dont les modalités exactes ne sont pas encore arrêtées à la date de publication.\n\nPourquoi c'est important en termes de trésorerie ? Le coût d'une formation DPC ou d'un module qualifiant pour un préparateur varie selon les organismes, et la TVA vient s'ajouter à ce montant HT. L'impact sur la trésorerie de chaque officine dépend du volume et du type de formations prévues. Sur une officine qui envoie plusieurs salariés en formation à l'automne - période classique de planification des DPC - , l'avance de trésorerie avant remboursement peut représenter une charge significative à anticiper.\n\nDeuxième enjeu : l'éligibilité des formations. Certaines formations DPC pharmaceutiques bénéficient d'un financement distinct via l'ANDPC (Agence nationale du développement professionnel continu), qui n'est pas un OPCO et n'est donc pas directement concerné par cette réforme TVA. Mais les formations non-DPC - management, logiciels de gestion, accompagnement qualité officinale - passent elles intégralement par l'OPCO EP. C'est donc sur ces formations non-DPC que le risque de rupture de financement ou de décalage de trésorerie est le plus fort.\n\nTroisième point à surveiller : la TVA récupérable. Si ton officine est assujettie à la TVA sur une partie de son activité (parapharmacie, certains dispositifs médicaux), la TVA avancée à l'organisme de formation pourrait être partiellement récupérable. Un point à valider avec ton expert-comptable, car le prorata de déduction dépend de ta structure de chiffre d'affaires. À noter : la FSPF est la seule source syndicale à avoir communiqué à ce stade sur ce sujet. À la date de publication, ni l'USPO ni l'UPGF ne se sont exprimées publiquement sur les modalités pratiques pour les officines.\n\n**Recommandations actionnables**\n\n1. Contacter l'OPCO EP avant le 30 septembre - Appelle ou connecte-toi à ton espace employeur OPCO EP pour connaître le circuit de paiement exact applicable dès le 1er octobre. Ne présume pas que la subrogation automatique sera maintenue sous une autre forme sans confirmation écrite.\n\n2. Planifier tes formations avant le 1er octobre si possible - Si des formations salariées sont programmées pour l'automne 2026, vérifie si la prise en charge peut être engagée avant la bascule TVA, en sollicitant un accord de financement OPCO EP daté avant le 1er octobre.\n\n3. Provisionner une avance de trésorerie formation - Identifie le nombre de formations prévues d'ici à décembre, estime le coût TTC à avancer et prévois la ligne de trésorerie correspondante. Préviens ton comptable de cette nouvelle contrainte dès maintenant.\n\n4. Distinguer DPC (ANDPC) et formations hors-DPC (OPCO EP) - Vérifie pour chaque formation planifiée quel financeur est sollicité. Les formations DPC suivent un circuit différent non impacté par cette réforme TVA.\n\n5. Vérifier ton droit à déduction de TVA - Demande à ton expert-comptable si ton prorata d'assujettissement à la TVA te permet de récupérer tout ou partie de la TVA sur les factures de formation que tu avanceras.\n\n**Sources citees**\n\n- FSPF - Formation continue des salariés de la Pharmacie d'officine 2026-35"
+    },
+    {
+      "id": "actu_2026_09_17_4",
+      "date": "2026-09-17",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "Xenogreffes : la France autorise la recherche sur les organes de porc",
+      "resume": "Le Comité consultatif national d'éthique vient d'ouvrir la voie à la recherche sur la transplantation d'organes issus de porcs génétiquement modifiés. Face à la pénurie chronique de greffons, la xénogreffe n'est plus de la science-fiction. Ce que ça implique pour les futurs traitements immunosuppresseurs.",
+      "source": "Sciences et Avenir",
+      "source_url": "https://www.sciencesetavenir.fr/sante/dons-d-organes-en-france-des-pistes-pour-augmenter-les-greffes-et-explorer-les-xenogreffes_194840?xtor=RSS-16",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_09_17_4.jpg",
+      "tags": [
+        "xenogreffe",
+        "transplantation",
+        "immunosuppresseur",
+        "recherche",
+        "innovation"
+      ],
+      "full_text": "Des organes de porc dans des corps humains. Le CCNE vient de dire que la France peut commencer à chercher sérieusement dans cette direction.\n\nDans un avis publié le 15 septembre 2026, le Comité consultatif national d'éthique (CCNE) appelle à renforcer le système de don et de transplantation, mais aussi à ouvrir la voie à la recherche sur la xénogreffe : la transplantation d'organes issus de porcs génétiquement modifiés vers l'homme.\n\nPourquoi c'est une étape importante ? Parce que la pénurie de greffons est une réalité dramatique et chronique en France. Chaque année, des milliers de patients meurent en attente d'un organe compatible. Les leviers classiques, campagnes de sensibilisation au don, optimisation du prélèvement, ont montré leurs limites. La xénogreffe représente une alternative théorique qui permettrait de s'affranchir de la dépendance au donneur humain.\n\nCôté science, ce n'est pas de la pure spéculation. Des équipes américaines ont déjà réalisé des transplantations de reins et de coeurs de porcs génétiquement modifiés chez des patients humains en situation terminale. Les résultats sont encore préliminaires, les durées de survie limitées, mais les preuves de concept existent. L'enjeu de la réponse immunitaire reste le défi majeur : le rejet hyperaigu est violent et rapide quand les protéines porcines rencontrent le système immunitaire humain.\n\nEt c'est là que ça te concerne directement, toi qui dispenses déjà des immunosuppresseurs au quotidien. Si la xénogreffe devient une réalité clinique dans les 10 à 20 prochaines années, elle impliquera des protocoles immunosuppresseurs d'une complexité probablement supérieure aux greffes actuelles. De nouveaux anticorps monoclonaux, des combinaisons thérapeutiques inédites, des suivis thérapeutiques pharmacologiques renforcés. Ce sera un nouveau terrain pour la pharmacie clinique hospitalière, et potentiellement pour le suivi ambulatoire en ville.\n\nL'avis du CCNE ne constitue pas une autorisation de pratiquer des xénogreffes en France. C'est un feu vert éthique pour la recherche, pas pour la clinique. La phase thérapeutique, si elle arrive, passera par des essais cliniques encadrés, des autorisations réglementaires et des adaptations du droit de la bioéthique.\n\nDemain matin au comptoir : rien à changer dans ta pratique. Mais garde ce sujet en tête pour tes entretiens avec des patients greffés ou en attente de greffe, qui te poseront la question dans les prochains jours. La réponse honnête : la recherche s'accélère, l'espoir est réel, mais l'application clinique reste à plusieurs années."
+    },
+    {
+      "id": "actu_2026_09_17_3",
+      "date": "2026-09-17",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "Protections périodiques remboursées : le 1er octobre arrive, la LPP est presque vide",
+      "resume": "À J-15 du lancement du remboursement des protections périodiques réutilisables, seuls quatre codes individuels sont inscrits à la LPP. Une bonne nouvelle pour l'accès aux soins, qui démarre sur les chapeaux de roue... mais avec quasi rien dans le catalogue.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/politique-de-sante/les-groupements-font-entendre-leur-voix",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_09_17_3.jpg",
+      "tags": [
+        "lpp",
+        "remboursement",
+        "protections-periodiques",
+        "officine",
+        "assurance-maladie"
+      ],
+      "full_text": "Le remboursement des protections périodiques réutilisables, c'est une vraie avancée. Pour des millions de femmes, c'est un accès facilité à des produits qu'elles n'achetaient pas faute de budget. Pour les officines, c'est un nouveau flux de patients et une nouvelle ligne à la LPP. C'est la bonne nouvelle du jour.\n\nMaintenant le revers. On est le 17 septembre 2026. Le dispositif entre en vigueur le 1er octobre. Dans moins de deux semaines, les pharmacies pourront délivrer culottes menstruelles et coupes menstruelles remboursées par l'Assurance maladie. Super.\n\nSauf que la LPP, à J-15, ne compte que quatre codes inscrits. Quatre. Alors que le marché regorge de références, que les fabricants sont nombreux et que les patientes ont des attentes précises en termes de confort, de taille, de marque.\n\nL'arrêté du 6 août 2026 a posé le cadre et fixé la date d'entrée en vigueur au 1er octobre. Mais l'inscription des produits à la liste des produits et prestations remboursables (LPP) est un processus distinct, conduit produit par produit, fabricant par fabricant. Et visiblement, ça n'a pas suivi le rythme.\n\nConcrètement, qu'est-ce que ça veut dire pour ton comptoir ? Que tu vas devoir expliquer à des patientes motivées que, oui, c'est remboursé, mais non, tu n'as pas encore grand-chose à leur proposer dans le catalogue remboursable. Un exercice de pédagogie qui va demander de la patience et du tact.\n\nL'autre enjeu : ton approvisionnement. Avec seulement quatre codes LPP disponibles au démarrage, la demande va se concentrer sur un nombre très restreint de références. Anticipe les ruptures potentielles sur ces références précises dès maintenant.\n\nCôté positif, le catalogue va forcément s'étoffer dans les semaines et mois qui suivent le lancement. Des fabricants déposent leurs dossiers, les inscriptions vont s'accélérer. Ce démarrage en sifflet n'est pas une mort annoncée du dispositif, c'est un rodage administratif classique.\n\nDemain matin au comptoir : informe ton équipe du démarrage au 1er octobre, identifie les quatre références LPP disponibles dès maintenant pour les avoir en stock, et prépare un discours clair pour les patientes qui vont débarquer avec leur ordonnance et de grandes espérances."
+    },
+    {
+      "id": "actu_2026_09_17_2",
+      "date": "2026-09-17",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "NIH et liberté d'expression : la recherche sur les financements prend une tournure juridique",
+      "resume": "Une plainte vient d'être déposée contre le NIH américain, accusé de rejeter des demandes de financement sur la base de mots-clés jugés politiquement sensibles. L'ACLU monte au créneau. Un signal d'alarme pour toute la recherche pharmaceutique mondiale.",
+      "source": "STAT News",
+      "source_url": "https://www.statnews.com/2026/09/16/lawsuit-argues-nih-violated-researcher-first-amendment-rights-aclu/?utm_campaign=rss",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/img_actu_2026_09_17_2.jpg",
+      "tags": [
+        "nih",
+        "recherche",
+        "financement",
+        "innovation",
+        "fda"
+      ],
+      "full_text": "Le NIH dans le viseur de la justice américaine. Et ça pourrait faire mal au-delà des frontières.\n\nUne nouvelle plainte, portée notamment par l'ACLU (Union américaine pour les libertés civiles), vient d'être déposée contre le National Institutes of Health. L'accusation : le NIH filtre les demandes de subventions de recherche en scannant les dossiers à la recherche de termes spécifiques, et rejette ceux qui contiennent les mots jugés indésirables. La plainte argue que ce processus viole le Premier Amendement de la Constitution américaine, celui qui garantit la liberté d'expression.\n\nLa procédure demande au tribunal de suspendre ce mécanisme de tri algorithmique des dossiers de financement. En clair : on ne veut plus que la sémantique politique décide du sort d'un projet de recherche scientifique.\n\nPourquoi ça te concerne, toi pharmacien en France ? Parce que le NIH est le premier financeur public de recherche biomédicale au monde, avec un budget annuel qui dépasse les 47 milliards de dollars. Quand le NIH tousse, la R&D mondiale éternue. Les molécules qui atterrissent un jour sur tes rayons ont souvent été financées, en partie ou totalement, par des subventions NIH en amont.\n\nSi des projets de recherche sont écartés non pas sur leur valeur scientifique mais sur leur vocabulaire, c'est tout le pipeline thérapeutique mondial qui peut en pâtir. Des thérapies en oncologie, en maladies rares, en infectiologie... potentiellement retardées ou abandonnées pour des raisons idéologiques.\n\nLe contexte est celui d'une administration Trump 2.0 qui a déjà engagé des coupes significatives dans le financement fédéral de la recherche et imposé des restrictions sur certains domaines d'étude. Ce n'est pas la première plainte liée aux politiques scientifiques de l'administration, mais c'est la première à invoquer explicitement la liberté d'expression dans le processus d'attribution des grants.\n\nL'issue de cette procédure judiciaire pourrait redéfinir les règles du jeu pour l'ensemble des agences fédérales de financement américaines, et par ricochet influencer les partenariats public-privé avec les grands groupes pharmaceutiques qui opèrent aussi en Europe et en France.\n\nDemain matin au comptoir : rien de concret à faire aujourd'hui. Mais garde un oeil sur ce dossier. Si la R&D américaine ralentit sous pression politique, c'est l'accès aux innovations thérapeutiques futures qui se resserre pour tout le monde."
+    },
+    {
+      "id": "actu_2026_09_17_1",
+      "date": "2026-09-17",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "Les kinés prescrivent des antalgiques : ce que ça change au comptoir",
+      "resume": "Depuis le 16 septembre 2026, les masseurs-kinésithérapeutes peuvent prescrire antalgiques de palier 1, myorelaxants et substituts nicotiniques. Une révolution silencieuse qui va créer de nouvelles ordonnances kinés sur ton comptoir. Tu es prêt ?",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/les-kines-peuvent-desormais-prescrire-antalgiques-myorelaxants-et-substituts-nicotiniques",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_09_17_1.jpg",
+      "tags": [
+        "prescription",
+        "kinesitherapie",
+        "antalgique",
+        "ordonnance",
+        "officine"
+      ],
+      "full_text": "Une nouvelle ordonnance débarque dans ta pile. Pas un médecin, pas un dentiste : un kiné.\n\nL'arrêté du 14 septembre 2026, publié au JO le 16 septembre, étend massivement le droit de prescription des masseurs-kinésithérapeutes. Avant, ils pouvaient prescrire 16 catégories de dispositifs médicaux : aides à la déambulation, attelles, ceintures lombaires, fauteuils roulants. Classique, pas de surprise.\n\nMaintenant, on passe à 58 catégories. Et surtout, on sort du seul DM pour entrer dans le médicament. Le texte autorise désormais les kinés à prescrire des antalgiques de palier 1 (paracétamol, ibuprofène...), des myorelaxants et des substituts nicotiniques. Sauf indication contraire du médecin prescripteur, la précision est importante.\n\nConcrètement, un kiné qui traite un lombalgique peut désormais te rédiger une ordo pour du paracétamol et un myorelaxant. C'est légal, c'est remboursable, et ça va arriver sur ton comptoir très vite.\n\nQu'est-ce que ça change pour toi ? D'abord, apprends à identifier ces nouvelles ordonnances. Le cadre juridique est posé mais tous les kinés ne le connaissent pas encore, et toi non plus si tu découvres le texte aujourd'hui. Prépare ton équipe : une ordo kiné sur des médicaments, c'est valide, ne la refuse pas par réflexe.\n\nEnsuite, quelques points de vigilance. La prescription kiné est encadrée dans le périmètre de leurs compétences et subordonnée à l'absence d'indication contraire du médecin. Si un médecin a déjà formulé une contre-indication explicite dans le dossier ou sur une ordo antérieure, le kiné ne peut pas passer outre. En pratique au comptoir, tu n'auras pas forcément accès à cette information : applique les règles habituelles d'analyse pharmaco-clinique.\n\nLes interactions médicamenteuses restent ta responsabilité. Un patient sous anticoagulant qui reçoit une ordo kiné pour de l'ibuprofène, c'est toi qui bloques. Comme toujours.\n\nLe DP va devenir encore plus indispensable dans ce contexte multi-prescripteurs. Consulte-le systématiquement.\n\nDemain matin au comptoir : forme ton équipe dès aujourd'hui. Une ordonnance signée par un kiné mentionnant du paracétamol ou du méthocarbamol, c'est valide depuis le 16 septembre. Ne la renvoie pas à l'expéditeur."
+    },
+    {
+      "id": "lsv_2026_09_17",
+      "date": "2026-09-17",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? On stérilisait les instruments chirurgicaux... à la flamme d'une bougie",
+      "resume": "Avant Pasteur, les chirurgiens opéraient avec des instruments qui n'avaient jamais vu une goutte d'eau chaude. La stérilisation ? Un concept aussi inconnu que le téléphone portable. Et le pire, c'est que les plus propres du bloc étaient... les plus dangereux.",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_09_17.jpg",
+      "tags": [
+        "histoire",
+        "chirurgie",
+        "antisepsie",
+        "instrument",
+        "decouverte"
+      ],
+      "full_text": "En 1850, un chirurgien qui arrivait au bloc opératoire avec les mains propres aurait franchement fait rire la salle. La propreté ? Pas le sujet. Un bon chirurgien se reconnaissait à sa blouse noire, rigide de sang séché accumulé depuis des mois. C'était une marque de métier, presque une médaille.\n\nLes instruments chirurgicaux, eux, vivaient dans des tiroirs en bois, au contact de la poussière et des bactéries. Entre deux opérations ? On essuyait la lame sur le tablier. Parfois on passait le scalpel à la flamme d'une bougie - pas pour tuer les germes, personne ne savait que les germes existaient, mais pour enlever les résidus de chair. Une question d'esthétique, pas d'hygiène.\n\nEt voilà le twist qui retourne le cerveau : les chirurgiens les plus minutieux, ceux qui polissaient leurs instruments au métal brillant, obtenaient les pires résultats. Pourquoi ? Parce qu'une surface lisse et brillante est un terrain de jeu idéal pour les bactéries. Leurs patients mouraient davantage d'infection que ceux opérés en urgence avec des outils mal entretenus.\n\nTout a basculé en 1867. Joseph Lister, chirurgien écossais, lit les travaux de Pasteur sur les micro-organismes et fait le lien. Il commence à pulvériser du phénol - acide carbolique - sur ses instruments, ses mains, et même dans l'air du bloc. Ses collègues le traitent de fou. Ses statistiques, elles, deviennent éloquentes : le taux de mortalité post-opératoire dans son service passe de 46 % à 15 % en deux ans.\n\nAujourd'hui, l'autoclave, les sachets stériles et les gants font partie du décor quotidien au comptoir et en salle d'op'. Quand tu déchires un sachet de compresse stérile machinalement, rappelle-toi que derrière ce geste banal, il y a 150 ans de combat contre l'invisible - et un Écossais qui pulvérisait du phénol pendant que ses confrères ricanaient."
+    },
+    {
       "id": "actu_2026_09_16_5",
       "date": "2026-09-16",
       "type": "actu",
@@ -16810,6 +16935,6 @@
       ]
     }
   ],
-  "count": 810,
-  "updated_at": "2026-09-16T04:07:17.371057+02:00"
+  "count": 816,
+  "updated_at": "2026-09-17T04:07:26.214934+02:00"
 }

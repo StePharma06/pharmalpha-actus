@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? On protégeait les soldats des infections avec des toiles d'araignée",
-  "resume": "Avant la pénicilline, les chirurgiens de guerre avaient une arme secrète : la toile d'araignée. Pas une légende de bonne femme, une pratique documentée sur les champs de bataille européens. Et le plus fou ? La science moderne commence à comprendre pourquoi ça marchait.",
-  "full_text": "On est en 1643. Bataille de Rocroi, Nord de la France. Des milliers de blessés, des plaies ouvertes dans la boue, zéro antiseptique. Le chirurgien militaire sort son arsenal de guerre : de l'alcool, des fers rouges... et des toiles d'araignée soigneusement roulées en boule.\n\nCette pratique ne sort pas de nulle part. Elle remonte à l'Antiquité grecque. Dioscoride, médecin de l'armée romaine au Ier siècle, la recommandait déjà dans son De Materia Medica. Les toiles d'araignée étaient appliquées directement sur les coupures et les plaies pour stopper le saignement et prévenir l'infection. Une thérapie qui a traversé 1 500 ans de médecine militaire sans prendre une ride.\n\nLe twist qui change tout : les araignées tissent leurs toiles avec de la soie protéique recouverte de composés antimicrobiens naturels. Des molécules comme la spidroïne, mais aussi des peptides capables d'inhiber la croissance de certaines bactéries. La toile est aussi un piège physique qui favorise la coagulation en créant un échafaudage pour les plaquettes. En gros, elles faisaient en une seule application ce que nos pansements modernes tentent de reproduire avec trois couches de technologie.\n\nAu XVIIIe siècle, le chirurgien britannique John Hunter mentionnait encore cette technique dans ses carnets. Elle a disparu progressivement avec l'arrivée des pansements industriels au XIXe... et on a failli oublier pourquoi elle fonctionnait.\n\nAujourd'hui, des laboratoires à Cambridge et à l'Université de Wyoming travaillent sur des biomatériaux inspirés de la soie d'araignée pour créer des pansements chirurgicaux de nouvelle génération : biocompatibles, résistants, potentiellement antibactériens. Ce que le chirurgien de Rocroi appliquait à l'instinct, on essaie de le synthétiser en salle blanche. La nature avait trois siècles d'avance.",
-  "image_keywords": "spider web medicine",
+  "titre": "Le saviez-vous ? On stérilisait les instruments chirurgicaux... à la flamme d'une bougie",
+  "resume": "Avant Pasteur, les chirurgiens opéraient avec des instruments qui n'avaient jamais vu une goutte d'eau chaude. La stérilisation ? Un concept aussi inconnu que le téléphone portable. Et le pire, c'est que les plus propres du bloc étaient... les plus dangereux.",
+  "full_text": "En 1850, un chirurgien qui arrivait au bloc opératoire avec les mains propres aurait franchement fait rire la salle. La propreté ? Pas le sujet. Un bon chirurgien se reconnaissait à sa blouse noire, rigide de sang séché accumulé depuis des mois. C'était une marque de métier, presque une médaille.\n\nLes instruments chirurgicaux, eux, vivaient dans des tiroirs en bois, au contact de la poussière et des bactéries. Entre deux opérations ? On essuyait la lame sur le tablier. Parfois on passait le scalpel à la flamme d'une bougie - pas pour tuer les germes, personne ne savait que les germes existaient, mais pour enlever les résidus de chair. Une question d'esthétique, pas d'hygiène.\n\nEt voilà le twist qui retourne le cerveau : les chirurgiens les plus minutieux, ceux qui polissaient leurs instruments au métal brillant, obtenaient les pires résultats. Pourquoi ? Parce qu'une surface lisse et brillante est un terrain de jeu idéal pour les bactéries. Leurs patients mouraient davantage d'infection que ceux opérés en urgence avec des outils mal entretenus.\n\nTout a basculé en 1867. Joseph Lister, chirurgien écossais, lit les travaux de Pasteur sur les micro-organismes et fait le lien. Il commence à pulvériser du phénol - acide carbolique - sur ses instruments, ses mains, et même dans l'air du bloc. Ses collègues le traitent de fou. Ses statistiques, elles, deviennent éloquentes : le taux de mortalité post-opératoire dans son service passe de 46 % à 15 % en deux ans.\n\nAujourd'hui, l'autoclave, les sachets stériles et les gants font partie du décor quotidien au comptoir et en salle d'op'. Quand tu déchires un sachet de compresse stérile machinalement, rappelle-toi que derrière ce geste banal, il y a 150 ans de combat contre l'invisible - et un Écossais qui pulvérisait du phénol pendant que ses confrères ricanaient.",
+  "image_keywords": "surgical instruments sterilization",
   "tags": [
     "histoire",
     "chirurgie",
-    "plante",
-    "decouverte",
-    "antisepsie"
+    "antisepsie",
+    "instrument",
+    "decouverte"
   ],
-  "date": "2026-09-16",
+  "date": "2026-09-17",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",

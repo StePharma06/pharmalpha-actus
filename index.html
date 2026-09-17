@@ -31,7 +31,7 @@
      l'image n'est decouverte qu'apres execution du JS qui construit les cards
      (le <img> n'existe qu'a l'interieur d'un template literal JS, invisible au
      preload scanner) -> LCP non deterministe, cf. sprint perf 2026-07-27. -->
-<link rel="preload" as="image" href="assets/img_actu_2026_09_16_1.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="assets/img_actu_2026_09_17_1.jpg" fetchpriority="high">
 
 <!-- Space Grotesk — self-hosted WOFF2 (remplace Google Fonts, cf. mission perf/RGPD 2026-08-24) -->
 <link rel="preload" href="/assets/fonts/space-grotesk-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -1756,7 +1756,7 @@ body.pa-has-nav #actusHeader {
 </div>
 
 <!-- EXPRESSION DU JOUR (injectée par update_actus.py à chaque run) -->
-<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Sevrage (des écrans, du sucre…)</h2><p class="expression-corps">En médecine, le sevrage désignait à l'origine l'arrêt progressif de l'allaitement pour le nourrisson - un retrait doux mais difficile d'une substance dont on dépendait. La pharmacologie l'a ensuite étendu à l'arrêt de tout produit addictif, et le langage courant l'a adopté pour n'importe quelle dépendance.</p></aside>
+<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Atropine</h2><p class="expression-corps">De <em>Atropos</em>, la plus redoutée des trois Parques grecques - celle qui coupait le fil de la vie. L'atropine est extraite de l'<em>Atropa belladona</em> : une plante dont la toxicité mortelle valait bien le nom de la Parque implacable.</p></aside>
 
 <!-- ESPACE PARTENAIRE 1 (entre Expression du jour et Aujourd'hui).
      Statique : reste visible meme si le JS ne s'execute pas. Le 2e emplacement
@@ -1781,12 +1781,12 @@ body.pa-has-nav #actusHeader {
 <div id="articles-container"></div>
 
 <!-- MARQUE_TENDANCE (injectee par le pipeline hebdo, remplacee quotidiennement) -->
-<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">10 sept. au 16 sept. 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Maladie fatigue chronique</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 365 400</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Digestion rapide</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 81 250</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Assurance maladie fatigue chronique</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 323 250</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Aide à la digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 58 100</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie à l'ambroisie</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 18 200</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Azinc immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 52 150</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie au froid</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 17 000</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Immunite adaptative</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 44 100</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Pommeau de douche vitamine c</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 11 300</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Gummies sommeil enfant</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 11 050</td></tr>
+<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">11 sept. au 17 sept. 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Assurance maladie fatigue chronique</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 311 550</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Oscillo immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 261 350</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Désensibilisation allergie chat</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 16 750</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Banane digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 73 050</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie a l'iode</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 14 600</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Azinc immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 57 750</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Cure vitamine fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 13 850</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Temps de digestion d'un repas</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 24 300</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Ou trouver de la vitamine d</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 130</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Mieux-etre-sante.fr santé visuelle et lu</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 7 050</td></tr>
 </tbody></table></div><p style="margin:10px 0 0;font-size:11px;color:#9ca3af;font-style:italic;">Indice de tendance : intensite de hausse Google Trends (non comparable a un volume absolu).</p><p style="margin:12px 0 0;font-size:11px;color:#9ca3af;text-align:right;">Source&nbsp;: Google Trends France (pytrends) &middot; 7 jours glissants</p></section></div>
 
 <!-- ARCHIVES CTA -->
@@ -1949,6 +1949,90 @@ body.pa-has-nav #actusHeader {
 // Mis a jour automatiquement par n8n chaque semaine
 // ============================================================
 const ARTICLES = [
+{
+    id: "actu_2026_09_17_1",
+    date: "2026-09-17",
+    type: "actu",
+    categorie: "pharma_france",
+    titre: "Les kinés prescrivent des antalgiques : ce que ça change au comptoir",
+    resume: "Depuis le 16 septembre 2026, les masseurs-kinésithérapeutes peuvent prescrire antalgiques de palier 1, myorelaxants et substituts nicotiniques. Une révolution silencieuse qui va créer de nouvelles ordonnances kinés sur ton comptoir. Tu es prêt ?",
+    source: "Le Moniteur des Pharmacies",
+    source_url: "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/les-kines-peuvent-desormais-prescrire-antalgiques-myorelaxants-et-substituts-nicotiniques",
+    tiktok_url: "",
+    badge_label: "Pharma France",
+    image_url: "assets/img_actu_2026_09_17_1.jpg",
+    tags: ["prescription", "kinesitherapie", "antalgique", "ordonnance", "officine"]
+  },
+{
+    id: "actu_2026_09_17_2",
+    date: "2026-09-17",
+    type: "actu",
+    categorie: "pharma_monde",
+    titre: "NIH et liberté d'expression : la recherche sur les financements prend une tournure juridique",
+    resume: "Une plainte vient d'être déposée contre le NIH américain, accusé de rejeter des demandes de financement sur la base de mots-clés jugés politiquement sensibles. L'ACLU monte au créneau. Un signal d'alarme pour toute la recherche pharmaceutique mondiale.",
+    source: "STAT News",
+    source_url: "https://www.statnews.com/2026/09/16/lawsuit-argues-nih-violated-researcher-first-amendment-rights-aclu/?utm_campaign=rss",
+    tiktok_url: "",
+    badge_label: "Pharma Monde",
+    image_url: "assets/img_actu_2026_09_17_2.jpg",
+    tags: ["nih", "recherche", "financement", "innovation", "fda"]
+  },
+{
+    id: "actu_2026_09_17_3",
+    date: "2026-09-17",
+    type: "actu",
+    categorie: "bonne_nouvelle",
+    titre: "Protections périodiques remboursées : le 1er octobre arrive, la LPP est presque vide",
+    resume: "À J-15 du lancement du remboursement des protections périodiques réutilisables, seuls quatre codes individuels sont inscrits à la LPP. Une bonne nouvelle pour l'accès aux soins, qui démarre sur les chapeaux de roue... mais avec quasi rien dans le catalogue.",
+    source: "Le Quotidien du Pharmacien",
+    source_url: "http://www.lequotidiendupharmacien.fr/exercice-pro/politique-de-sante/les-groupements-font-entendre-leur-voix",
+    tiktok_url: "",
+    badge_label: "La bonne nouvelle",
+    image_url: "assets/img_actu_2026_09_17_3.jpg",
+    tags: ["lpp", "remboursement", "protections-periodiques", "officine", "assurance-maladie"]
+  },
+{
+    id: "actu_2026_09_17_4",
+    date: "2026-09-17",
+    type: "actu",
+    categorie: "avenir_pharma",
+    titre: "Xenogreffes : la France autorise la recherche sur les organes de porc",
+    resume: "Le Comité consultatif national d'éthique vient d'ouvrir la voie à la recherche sur la transplantation d'organes issus de porcs génétiquement modifiés. Face à la pénurie chronique de greffons, la xénogreffe n'est plus de la science-fiction. Ce que ça implique pour les futurs traitements immunosuppresseurs.",
+    source: "Sciences et Avenir",
+    source_url: "https://www.sciencesetavenir.fr/sante/dons-d-organes-en-france-des-pistes-pour-augmenter-les-greffes-et-explorer-les-xenogreffes_194840?xtor=RSS-16",
+    tiktok_url: "",
+    badge_label: "L'avenir de la pharma",
+    image_url: "assets/img_actu_2026_09_17_4.jpg",
+    tags: ["xenogreffe", "transplantation", "immunosuppresseur", "recherche", "innovation"]
+  },
+{
+    id: "actu_2026_09_17_5",
+    date: "2026-09-17",
+    type: "actu",
+    categorie: "business_officine",
+    titre: "TVA sur les OPCO dès le 1er octobre : ce que ça change pour ta masse salariale formation",
+    resume: "À partir du 1er octobre 2026, les opérateurs de compétences passent à la TVA. Résultat concret pour ton officine : la subrogation de paiement ne sera plus automatique, et le financement de tes formations salariées va demander plus de gestion.",
+    source: "Pharm'Actus · FSPF — Formation continue des salariés de la Pharmacie d'officine 2026-35",
+    source_url: "https://www.fspf.fr/formation-continue-des-salaries-de-la-pharmacie-dofficine-2026-35/",
+    tiktok_url: "",
+    badge_label: "Business",
+    image_url: "assets/img_actu_2026_09_17_5.jpg",
+    tags: ["formation", "opco", "tresorerie", "fiscalite"]
+  },
+{
+    id: "lsv_2026_09_17",
+    date: "2026-09-17",
+    type: "lsv",
+    categorie: "lsv",
+    titre: "Le saviez-vous ? On stérilisait les instruments chirurgicaux... à la flamme d'une bougie",
+    resume: "Avant Pasteur, les chirurgiens opéraient avec des instruments qui n'avaient jamais vu une goutte d'eau chaude. La stérilisation ? Un concept aussi inconnu que le téléphone portable. Et le pire, c'est que les plus propres du bloc étaient... les plus dangereux.",
+    source: "Pharm'Alpha",
+    source_url: "",
+    tiktok_url: "",
+    badge_label: "Le Saviez-Vous",
+    image_url: "assets/img_lsv_2026_09_17.jpg",
+    tags: ["histoire", "chirurgie", "antisepsie", "instrument", "decouverte"]
+  },
 {
     id: "actu_2026_09_16_1",
     date: "2026-09-16",
@@ -2564,90 +2648,6 @@ const ARTICLES = [
     badge_label: "Pharma Monde",
     image_url: "assets/img_actu_2026_09_08_2.jpg",
     tags: ["novo-nordisk", "cardiovasculaire", "pipeline", "anti-inflammatoire", "essai-clinique"]
-  },
-{
-    id: "actu_2026_09_08_3",
-    date: "2026-09-08",
-    type: "actu",
-    categorie: "bonne_nouvelle",
-    titre: "Shingrix protège aussi le coeur : la balance bénéfice-risque vient de pencher encore plus",
-    resume: "Une étude parue dans Nature Medicine suggère que le vaccin recombinant contre le zona Shingrix offrirait une protection significative contre les maladies cardiovasculaires. Déjà recommandé et remboursé, ce vaccin que tu proposes au comptoir se révèle peut-être encore plus précieux que prévu.",
-    source: "Le Quotidien du Pharmacien",
-    source_url: "http://www.lequotidiendupharmacien.fr/medicament-parapharmacie/le-vaccin-recombinant-shingrix-protege-t-il-aussi-des-maladies-cardiovasculaires",
-    tiktok_url: "",
-    badge_label: "La bonne nouvelle",
-    image_url: "assets/img_actu_2026_09_08_3.jpg",
-    tags: ["vaccination", "shingrix", "zona", "cardiovasculaire", "remboursement"]
-  },
-{
-    id: "actu_2026_09_08_4",
-    date: "2026-09-08",
-    type: "actu",
-    categorie: "avenir_pharma",
-    titre: "GSK paie 110 millions pour une nouvelle classe d'anticancéreux : les ATTC débarquent",
-    resume: "GSK vient d'acquérir un actif de phase 1 développé par Hutchmed pour 110 millions de dollars. La molécule appartient à une toute nouvelle classe thérapeutique : les ATTC, conjugués anticorps-thérapie ciblée qui bloquent deux protéines oncogènes simultanément. Cancers du poumon, colorectal, pancréas : le pipeline s'accélère.",
-    source: "MedCity News",
-    source_url: "https://medcitynews.com/2026/09/gsk-hutchmed-antibody-targeted-therapy-conjugate-attc-lung-colorectal-pancreatic-cancer/",
-    tiktok_url: "",
-    badge_label: "L'avenir de la pharma",
-    image_url: "assets/img_actu_2026_09_08_4.jpg",
-    tags: ["oncologie", "gsk", "anticancereux", "innovation", "pipeline"]
-  },
-{
-    id: "actu_2026_09_08_5",
-    date: "2026-09-08",
-    type: "actu",
-    categorie: "business_officine",
-    titre: "Rapport Cour des comptes : la vaccination, un marché de 500 M€ que l'officine peut capturer",
-    resume: "La Cour des comptes vient de publier un rapport sévère sur la politique vaccinale française depuis 2018. Des millions de Français ne connaissent pas leur statut vaccinal. Pour l'officine, c'est un gisement business concret, pas une abstraction.",
-    source: "Pharm'Actus · Cour des comptes — Rapport sur la politique vaccinale depuis 2018 (via France Info Santé, 07/09/2026), France Info Santé — Alain Fischer sur les carnets papier (07/09/2026)",
-    source_url: "https://www.franceinfo.fr/sante/vaccins/faites-vous-partie-des-francais-qui-ne-savent-pas-s-ils-sont-a-jour-sur-leurs-vaccins_8181002.html",
-    tiktok_url: "",
-    badge_label: "Business",
-    image_url: "assets/img_actu_2026_09_08_5.jpg",
-    tags: ["vaccination", "cour-des-comptes", "missions-officinales", "honoraires"]
-  },
-{
-    id: "lsv_2026_09_08",
-    date: "2026-09-08",
-    type: "lsv",
-    categorie: "lsv",
-    titre: "Le saviez-vous ? On mesurait la qualité de l'air... avec des canaris",
-    resume: "Avant les appareils de mesure, les mineurs descendaient dans les puits avec un oiseau en cage. Si le canari s'évanouissait, il était temps de remonter. Et cette pratique a directement influencé la médecine du travail moderne.",
-    source: "Pharm'Alpha",
-    source_url: "",
-    tiktok_url: "",
-    badge_label: "Le Saviez-Vous",
-    image_url: "assets/img_lsv_2026_09_08.jpg",
-    tags: ["histoire", "medecine-du-travail", "toxicologie", "decouverte", "instrument"]
-  },
-{
-    id: "actu_2026_09_07_1",
-    date: "2026-09-07",
-    type: "actu",
-    categorie: "pharma_france",
-    titre: "Wegovy oral autorisé en Allemagne : la France peut-elle encore attendre ?",
-    resume: "L'Allemagne devient le premier pays de l'UE à autoriser le sémaglutide oral dans l'obésité. En France, on attend encore. Mais la pression réglementaire et commerciale va s'accélérer.",
-    source: "Le Quotidien du Pharmacien",
-    source_url: "http://www.lequotidiendupharmacien.fr/medicament-parapharmacie/dietetique-et-nutrition/la-forme-orale-de-wegovy-autorisee-en-allemagne",
-    tiktok_url: "",
-    badge_label: "Pharma France",
-    image_url: "assets/img_actu_2026_09_07_1.jpg",
-    tags: ["glp-1", "amm", "semaglutide", "officine", "galenique"]
-  },
-{
-    id: "actu_2026_09_07_2",
-    date: "2026-09-07",
-    type: "actu",
-    categorie: "avenir_pharma",
-    titre: "Pelacarsen : l'échec qui rebat les cartes sur la Lp(a) et le risque cardio",
-    resume: "Novartis et Ionis essuient un revers majeur en cardiologie. Leur molécule anti-Lp(a) baisse le biomarqueur mais ne protège pas le coeur. Une leçon qui va bien au-delà de ce seul essai.",
-    source: "BioPharma Dive",
-    source_url: "https://www.biopharmadive.com/news/novartis-ionis-pelacarsen-lpa-horizon-study-results-fail/829736/",
-    tiktok_url: "",
-    badge_label: "L'avenir de la pharma",
-    image_url: "assets/img_actu_2026_09_07_2.jpg",
-    tags: ["cardio", "recherche", "innovation", "essai-clinique", "biomarqueur"]
   }
 ];
 

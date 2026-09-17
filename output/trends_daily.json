@@ -1,64 +1,64 @@
 {
-  "generated_at": "2026-09-16",
-  "window_label": "10 sept. au 16 sept. 2026",
+  "generated_at": "2026-09-17",
+  "window_label": "11 sept. au 17 sept. 2026",
   "has_history": true,
   "delta_source": "pytrends_rising",
   "pathologies": [
     {
-      "display": "Maladie fatigue chronique",
-      "delta_label": "↑ 365 400",
-      "trend": "up"
-    },
-    {
       "display": "Assurance maladie fatigue chronique",
-      "delta_label": "↑ 323 250",
+      "delta_label": "↑ 311 550",
       "trend": "up"
     },
     {
-      "display": "Allergie à l'ambroisie",
-      "delta_label": "↑ 18 200",
+      "display": "Désensibilisation allergie chat",
+      "delta_label": "↑ 16 750",
       "trend": "up"
     },
     {
-      "display": "Allergie au froid",
-      "delta_label": "↑ 17 000",
+      "display": "Allergie a l'iode",
+      "delta_label": "↑ 14 600",
       "trend": "up"
     },
     {
-      "display": "Pommeau de douche vitamine c",
-      "delta_label": "↑ 11 300",
+      "display": "Cure vitamine fatigue",
+      "delta_label": "↑ 13 850",
+      "trend": "up"
+    },
+    {
+      "display": "Ou trouver de la vitamine d",
+      "delta_label": "↑ 130",
       "trend": "up"
     }
   ],
   "soins": [
     {
-      "display": "Digestion rapide",
-      "delta_label": "↑ 81 250",
+      "display": "Oscillo immunite",
+      "delta_label": "↑ 261 350",
       "trend": "up"
     },
     {
-      "display": "Aide à la digestion",
-      "delta_label": "↑ 58 100",
+      "display": "Banane digestion",
+      "delta_label": "↑ 73 050",
       "trend": "up"
     },
     {
       "display": "Azinc immunite",
-      "delta_label": "↑ 52 150",
+      "delta_label": "↑ 57 750",
       "trend": "up"
     },
     {
-      "display": "Immunite adaptative",
-      "delta_label": "↑ 44 100",
+      "display": "Temps de digestion d'un repas",
+      "delta_label": "↑ 24 300",
       "trend": "up"
     },
     {
-      "display": "Gummies sommeil enfant",
-      "delta_label": "↑ 11 050",
+      "display": "Mieux-etre-sante.fr santé visuelle et lu",
+      "delta_label": "↑ 7 050",
       "trend": "up"
     }
   ],
   "pathologies_stale": false,
-  "pathologies_from": "2026-09-16",
+  "pathologies_from": "2026-09-17",
   "soins_stale": false,
-  "soins_from": "2026-09-16"
+  "soins_from": "2026-09-17"
 }

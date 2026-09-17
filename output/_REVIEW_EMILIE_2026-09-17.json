@@ -1,0 +1,26 @@
+{
+  "generated_at": "2026-09-17T04:07:22.035471+02:00",
+  "run_date": "2026-09-17",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "TVA sur les OPCO dès le 1er octobre : ce que ça change pour ta masse salariale formation",
+      "resume": "À partir du 1er octobre 2026, les opérateurs de compétences passent à la TVA. Résultat concret pour ton officine : la subrogation de paiement ne sera plus automatique, et le financement de tes formations salariées va demander plus de gestion.",
+      "source": "Pharm'Actus · FSPF — Formation continue des salariés de la Pharmacie d'officine 2026-35",
+      "source_url": "https://www.fspf.fr/formation-continue-des-salaries-de-la-pharmacie-dofficine-2026-35/",
+      "confidence_score": 0.72,
+      "warnings": [
+        "Les modalités exactes du circuit de remplacement de la subrogation post-1er octobre ne sont pas précisées dans la source FSPF : la note annonce la fin de la subrogation automatique sans détailler le mécanisme de substitution. Ne pas affirmer qu'il n'y aura aucune solution de remplacement.",
+        "Les montants de formation cités (400-800 EUR HT) sont des ordres de grandeur professionnels courants, non sourcés dans cet article : présentés comme fourchette indicative uniquement.",
+        "Le délai de remboursement OPCO EP (4-8 semaines) est une estimation pratique courante, non citée par la source : à mentionner comme ordre de grandeur.",
+        "Le point sur la récupération de TVA pour les officines partiellement assujetties est conditionnel et dépend du prorata individuel : bien signaler que c'est à vérifier avec l'expert-comptable, sans affirmer que c'est systématiquement récupérable.",
+        "Ni l'USPO ni l'UPGF ne se sont exprimées sur ce sujet à la date de rédaction : confirmé par absence dans les sources fournies, mais à vérifier avant publication.",
+        "L'ANDPC n'est pas directement cité dans la source comme non concerné par la réforme : ce point découle d'une analyse de bon sens (l'ANDPC n'est pas un OPCO), mais mérite vérification réglementaire formelle.",
+        "5 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}
