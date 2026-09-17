@@ -2490,7 +2490,7 @@ def _build_partner_slot_email(slot: str = "haut") -> str:
     Les UTM permettent d'isoler les clics de l'emplacement dans GA4, ce qui
     donne a Stephen une preuve de performance a montrer a un annonceur.
     """
-    url = ("https://pharmalpha.fr/#contact"
+    url = ("https://pharmalpha.fr/actus/annonceurs.html"
            f"?utm_source=pharmactus&utm_medium=email"
            f"&utm_campaign=espace_partenaire&utm_content={slot}")
     if slot == "haut":

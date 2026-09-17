@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Annoncer dans Pharm'Actus</title>
+<meta name="description" content="Un emplacement publicitaire unique et exclusif dans Pharm'Actus, la newsletter quotidienne lue par des pharmaciens. Déposez votre demande en ligne.">
+<meta name="robots" content="noindex, nofollow">
+<style>
+  :root {
+    --bg: #ffffff; --bg-alt: #f8f8f8; --border: #e5e5e5; --border-light: #f0f0f0;
+    --ink: #1a1a1a; --ink-soft: #555555; --ink-mute: #8a8a8a;
+    --orange: #ff914d; --orange-hover: #f08236; --orange-light: #fff5ed; --orange-text: #b8541c;
+    --dark: #14141b; --dark-2: #1e1e29;
+    --err: #b91c1c; --err-bg: #fef2f2; --ok: #15803d; --ok-bg: #f0fdf4;
+    --radius: 12px; --radius-sm: 8px; --radius-pill: 100px;
+    --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, sans-serif;
+    background: var(--bg-alt); color: var(--ink); line-height: 1.6; font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--orange-text); }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+
+  /* ---------- En-tete ---------- */
+  .top { background: linear-gradient(115deg, var(--dark) 0%, var(--dark-2) 55%, var(--dark) 100%); color: #fff; padding: 46px 0 52px; }
+  /* Aucun logo Pharm'Actus n'a de fond transparent : pose sur l'en-tete sombre, il
+     formerait un rectangle blanc disgracieux. On l'assume en pastille blanche. */
+  .brand { display: inline-flex; background: #fff; border-radius: 10px;
+    padding: 9px 16px; margin-bottom: 26px; }
+  .brand img { height: 26px; width: auto; display: block; }
+  .eyebrow { display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--orange); border: 1px solid rgba(255,145,77,.35);
+    border-radius: var(--radius-pill); padding: 5px 13px; margin-bottom: 18px; }
+  .top h1 { margin: 0 0 14px; font-size: 34px; line-height: 1.18; font-weight: 800; letter-spacing: -.4px; }
+  .top p { margin: 0; font-size: 17px; color: #cfcfd8; max-width: 620px; }
+  .top .cta { display: inline-block; margin-top: 26px; background: var(--orange); color: var(--dark);
+    font-weight: 800; font-size: 15px; text-decoration: none; padding: 14px 26px; border-radius: var(--radius-pill); }
+  .top .cta:hover { background: var(--orange-hover); }
+
+  /* ---------- Chiffres ---------- */
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; margin: -30px 0 0; }
+  .stat { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 16px; box-shadow: var(--shadow); }
+  .stat b { display: block; font-size: 28px; font-weight: 800; letter-spacing: -.6px; color: var(--ink); }
+  .stat span { display: block; font-size: 12.5px; color: var(--ink-soft); margin-top: 2px; }
+  .stat.hero b { color: var(--orange-text); }
+
+  section { padding: 40px 0 6px; }
+  h2 { font-size: 22px; font-weight: 800; letter-spacing: -.3px; margin: 0 0 6px; }
+  .lede { color: var(--ink-soft); margin: 0 0 20px; font-size: 15px; }
+
+  .points { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  .points li { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-sm);
+    padding: 14px 16px; display: flex; gap: 13px; align-items: flex-start; font-size: 15px; }
+  .points b { color: var(--ink); }
+  .num { flex: 0 0 24px; height: 24px; border-radius: 50%; background: var(--orange-light);
+    color: var(--orange-text); font-size: 12.5px; font-weight: 800; display: flex;
+    align-items: center; justify-content: center; margin-top: 1px; }
+
+  .offers { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .offer { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+  .offer.best { border-color: var(--orange); box-shadow: 0 0 0 3px var(--orange-light); }
+  .offer h3 { margin: 0 0 4px; font-size: 15px; font-weight: 800; }
+  .offer .price { font-size: 30px; font-weight: 800; letter-spacing: -.8px; }
+  .offer .price small { font-size: 14px; font-weight: 600; color: var(--ink-soft); }
+  .offer p { margin: 8px 0 0; font-size: 13.5px; color: var(--ink-soft); }
+  .tag { display: inline-block; background: var(--orange); color: #fff; font-size: 10.5px;
+    font-weight: 800; letter-spacing: .06em; text-transform: uppercase; padding: 3px 9px;
+    border-radius: var(--radius-pill); margin-bottom: 8px; }
+
+  /* ---------- Formulaire ---------- */
+  .form-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 26px; box-shadow: var(--shadow); margin-bottom: 40px; }
+  fieldset { border: 0; padding: 0; margin: 0 0 22px; }
+  legend { font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--orange-text); padding: 0; margin-bottom: 12px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .full { grid-column: 1 / -1; }
+  label { display: block; font-size: 13px; font-weight: 700; margin-bottom: 5px; }
+  .req { color: var(--orange-text); }
+  input[type=text], input[type=email], input[type=tel], input[type=url], input[type=number], select, textarea {
+    width: 100%; font-family: inherit; font-size: 14.5px; color: var(--ink); background: #fff;
+    border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 10px 12px; }
+  input:focus, select:focus, textarea:focus { outline: 2px solid var(--orange); outline-offset: 1px; border-color: var(--orange); }
+  textarea { min-height: 88px; resize: vertical; }
+  .hint { font-size: 12.5px; color: var(--ink-mute); margin-top: 4px; }
+  .honey { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+  .drop { border: 2px dashed var(--border); border-radius: var(--radius-sm); padding: 20px;
+    text-align: center; background: var(--bg-alt); }
+  .drop.ok { border-color: var(--ok); background: var(--ok-bg); }
+  .drop.ko { border-color: var(--err); background: var(--err-bg); }
+  .drop input[type=file] { font-size: 13.5px; }
+  .drop .state { font-size: 13.5px; margin-top: 9px; }
+  .drop .state.ok { color: var(--ok); font-weight: 700; }
+  .drop .state.ko { color: var(--err); font-weight: 700; }
+  .preview { max-width: 100%; height: auto; margin-top: 12px; border-radius: 6px; display: block; }
+
+  .legal { font-size: 12.5px; color: var(--ink-soft); background: var(--bg-alt);
+    border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 13px 15px; margin-bottom: 14px; }
+  .check { display: flex; gap: 10px; align-items: flex-start; font-size: 13.5px; margin-bottom: 16px; font-weight: 400; }
+  .check input { margin-top: 3px; flex: 0 0 auto; width: 16px; height: 16px; accent-color: var(--orange); }
+  .submit { width: 100%; background: var(--orange); color: var(--dark); border: 0; font-family: inherit;
+    font-size: 16px; font-weight: 800; padding: 15px; border-radius: var(--radius-pill); cursor: pointer; }
+  .submit:hover:not(:disabled) { background: var(--orange-hover); }
+  .submit:disabled { opacity: .5; cursor: not-allowed; }
+  .msg { border-radius: var(--radius-sm); padding: 13px 15px; font-size: 14px; margin-top: 14px; font-weight: 600; }
+  .msg.err { background: var(--err-bg); color: var(--err); border: 1px solid #fecaca; }
+  .msg.ok { background: var(--ok-bg); color: var(--ok); border: 1px solid #bbf7d0; }
+
+  footer { border-top: 1px solid var(--border); padding: 22px 0 40px; font-size: 12.5px; color: var(--ink-mute); }
+
+  @media (max-width: 640px) {
+    .top h1 { font-size: 26px; }
+    .grid, .offers { grid-template-columns: 1fr; }
+    .form-card { padding: 18px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <span class="brand"><img src="assets/logo_pharmactus.png" alt="Pharm'Actus"></span>
+    <span class="eyebrow">Espace annonceurs</span>
+    <h1>Parlez aux pharmaciens, chaque matin, dans ce qu'ils lisent déjà.</h1>
+    <p>Pharm'Actus est une newsletter quotidienne d'actualité professionnelle. Un seul emplacement
+       publicitaire y est proposé, sans rotation, sans voisin. Il peut être le vôtre.</p>
+    <a class="cta" href="#demande">Déposer ma demande</a>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="stats" id="stats">
+    <div class="stat hero"><b id="sReach">...</b><span id="sReachLabel">lecteurs touchés</span></div>
+    <div class="stat"><b id="sCtor">...</b><span>de CTOR</span></div>
+    <div class="stat"><b id="sOpen">...</b><span>taux d'ouverture</span></div>
+    <div class="stat"><b id="sClicks">...</b><span>clics uniques cumulés</span></div>
+  </div>
+  <p class="hint" id="statsNote" style="margin-top:10px;">Chiffres mesurés, actualisés chaque jour.</p>
+
+  <section>
+    <h2>Un engagement, pas une impression perdue</h2>
+    <p class="lede">Le chiffre qui compte n'est pas le nombre d'abonnés, c'est le CTOR : la part des
+      lecteurs qui cliquent après avoir ouvert. Sur Pharm'Actus, c'est plus d'un sur quatre.</p>
+    <ul class="points">
+      <li><span class="num">1</span><span><b>Emplacement unique et exclusif.</b> Pas de rotation, aucun autre annonceur affiché à côté du vôtre.</span></li>
+      <li><span class="num">2</span><span><b>Quatre supports.</b> L'email quotidien du lundi au vendredi, la newsletter hebdomadaire, le site Pharm'Actus et la newsletter LinkedIn du vendredi.</span></li>
+      <li><span class="num">3</span><span><b>Clics prouvés.</b> Chaque clic est identifié par un marquage UTM dans Google Analytics 4, avec un point mensuel sur demande.</span></li>
+      <li><span class="num">4</span><span><b>Une signature professionnelle.</b> Pharm'Actus est édité par Stephen Robert, Docteur en Pharmacie.</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Tarifs</h2>
+    <p class="lede">Prix hors taxes, par mois. Facturation d'avance, TVA 20 % en sus.</p>
+    <div class="offers">
+      <div class="offer">
+        <h3>Sans engagement</h3>
+        <div class="price">450 €<small> HT / mois</small></div>
+        <p>Résiliable à tout moment avec un préavis de 30 jours. La souplesse maximale.</p>
+      </div>
+      <div class="offer best">
+        <span class="tag">Partenaire fondateur</span>
+        <h3>Engagement 3 mois</h3>
+        <div class="price">300 €<small> HT / mois</small></div>
+        <p>Trois mois minimum, soit la durée nécessaire pour disposer de vraies données de performance.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="demande">
+    <h2>Déposer votre demande</h2>
+    <p class="lede">Quelques minutes suffisent. Votre dossier est examiné, puis vous recevez un lien de paiement.</p>
+
+    <form class="form-card" id="form" novalidate>
+      <div class="honey"><label>Ne pas remplir<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+
+      <fieldset>
+        <legend>Votre société</legend>
+        <div class="grid">
+          <div class="full"><label for="company_name">Raison sociale <span class="req">*</span></label>
+            <input type="text" id="company_name" name="company_name" required autocomplete="organization"></div>
+          <div><label for="siren">SIREN ou SIRET <span class="req">*</span></label>
+            <input type="text" id="siren" name="siren" required inputmode="numeric" placeholder="9 ou 14 chiffres"></div>
+          <div><label for="billing_country">Pays de facturation <span class="req">*</span></label>
+            <select id="billing_country" name="billing_country">
+              <option value="FR" selected>France</option>
+              <option value="BE">Belgique</option><option value="LU">Luxembourg</option>
+              <option value="DE">Allemagne</option><option value="ES">Espagne</option>
+              <option value="IT">Italie</option><option value="NL">Pays-Bas</option>
+              <option value="AUTRE">Autre</option>
+            </select></div>
+          <div class="full"><label for="vat_number">N° de TVA intracommunautaire <span class="req" id="vatReq" hidden>*</span></label>
+            <input type="text" id="vat_number" name="vat_number" autocomplete="off">
+            <p class="hint" id="vatHint">Facultatif pour une facturation en France.</p></div>
+          <div class="full"><label for="billing_address">Adresse de facturation <span class="req">*</span></label>
+            <input type="text" id="billing_address" name="billing_address" required autocomplete="street-address"></div>
+          <div><label for="billing_postcode">Code postal <span class="req">*</span></label>
+            <input type="text" id="billing_postcode" name="billing_postcode" required autocomplete="postal-code"></div>
+          <div><label for="billing_city">Ville <span class="req">*</span></label>
+            <input type="text" id="billing_city" name="billing_city" required autocomplete="address-level2"></div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Votre contact</legend>
+        <div class="grid">
+          <div><label for="contact_first_name">Prénom <span class="req">*</span></label>
+            <input type="text" id="contact_first_name" name="contact_first_name" required autocomplete="given-name"></div>
+          <div><label for="contact_last_name">Nom <span class="req">*</span></label>
+            <input type="text" id="contact_last_name" name="contact_last_name" required autocomplete="family-name"></div>
+          <div><label for="contact_role">Fonction</label>
+            <input type="text" id="contact_role" name="contact_role" autocomplete="organization-title"></div>
+          <div><label for="contact_phone">Téléphone</label>
+            <input type="tel" id="contact_phone" name="contact_phone" autocomplete="tel"></div>
+          <div class="full"><label for="contact_email">Email professionnel <span class="req">*</span></label>
+            <input type="email" id="contact_email" name="contact_email" required autocomplete="email"></div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Votre campagne</legend>
+        <div class="grid">
+          <div><label for="engagement">Formule <span class="req">*</span></label>
+            <select id="engagement" name="engagement">
+              <option value="sans_engagement" selected>Sans engagement, 450 € HT/mois</option>
+              <option value="engagement_3m">Partenaire fondateur, 3 mois, 300 € HT/mois</option>
+            </select></div>
+          <div><label for="months">Nombre de mois souhaité <span class="req">*</span></label>
+            <input type="number" id="months" name="months" min="1" max="12" value="1" required>
+            <p class="hint" id="monthsHint">De 1 à 12 mois.</p></div>
+          <div class="full"><label for="target_url">URL de destination du clic <span class="req">*</span></label>
+            <input type="url" id="target_url" name="target_url" required placeholder="https://...">
+            <p class="hint">Adresse complète, en https.</p></div>
+          <div class="full"><label for="product_type">Nature de ce que vous annoncez <span class="req">*</span></label>
+            <select id="product_type" name="product_type">
+              <option value="">Choisir...</option>
+              <option value="service">Service, logiciel, solution</option>
+              <option value="recrutement">Recrutement</option>
+              <option value="groupement">Groupement ou centrale d'achat</option>
+              <option value="dispositif_medical">Dispositif médical</option>
+              <option value="complement_alimentaire">Complément alimentaire</option>
+              <option value="cosmetique">Cosmétique</option>
+              <option value="medicament_otc">Médicament sans ordonnance</option>
+              <option value="medicament_rx">Médicament sur ordonnance</option>
+              <option value="autre">Autre</option>
+            </select>
+            <p class="hint">Cette information détermine les justificatifs à fournir.</p></div>
+        </div>
+
+        <div id="complianceWrap" hidden style="margin-top:12px;">
+          <label for="compliance_doc">Justificatif de conformité <span class="req">*</span></label>
+          <div class="legal" id="complianceNote"></div>
+          <input type="file" id="compliance_doc" name="compliance_doc" accept="application/pdf,image/png,image/jpeg">
+          <p class="hint">PDF, PNG ou JPG, 5 Mo maximum.</p>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Votre bannière</legend>
+        <div class="drop" id="drop">
+          <input type="file" id="banner" name="banner" accept="image/png,image/jpeg" required>
+          <p class="state" id="bannerState">Format attendu : 1200 x 220 px, PNG ou JPG, 2 Mo maximum.
+            Une version haute résolution de 2400 x 440 px est également acceptée.</p>
+          <img class="preview" id="preview" alt="Aperçu de la bannière déposée" hidden>
+        </div>
+        <div class="legal" style="margin-top:12px;">
+          En déposant ce fichier, vous garantissez être titulaire des droits nécessaires sur son contenu
+          (image, texte, marque) ou disposer des autorisations requises pour son utilisation et sa diffusion
+          publique, et vous vous engagez à ce qu'il respecte la réglementation en vigueur, notamment en
+          matière de publicité de produits de santé. Vous demeurez seul responsable du contenu de la bannière
+          et garantissez Pharm'Alpha contre tout recours d'un tiers à ce titre.
+        </div>
+        <p class="hint">La mention « Publicité » est apposée par Pharm'Actus au-dessus de l'encart. Elle est obligatoire et non négociable.</p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Un mot pour nous ?</legend>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Calendrier souhaité, questions, contexte..."></textarea>
+      </fieldset>
+
+      <div class="legal">
+        L'envoi de ce formulaire constitue une simple candidature et ne vaut ni offre, ni contrat, ni
+        engagement de publication de la part de Pharm'Alpha. La diffusion de votre bannière sur Pharm'Actus
+        est subordonnée à la validation manuelle de votre dossier, à la conformité du contenu proposé à la
+        réglementation applicable (notamment en matière de publicité de produits de santé) et à la réception
+        du règlement suite à l'envoi d'un lien de paiement. Pharm'Alpha se réserve le droit de refuser toute
+        candidature sans avoir à en justifier le motif.
+      </div>
+
+      <div class="legal">
+        Les données transmises via ce formulaire sont traitées par Stephen ROBERT, exploitant Pharm'Alpha
+        (EI, SIREN 910 877 356), responsable du traitement, aux fins d'instruction de votre candidature à
+        l'encart publicitaire Pharm'Actus (étude du dossier, réponse commerciale et, si le dossier est
+        retenu, gestion du contrat et de la facturation). Base légale : mesures précontractuelles prises à
+        votre demande (article 6.1.b du RGPD). Destinataires : Stephen ROBERT et ses prestataires techniques
+        et comptables strictement nécessaires à cette finalité (hébergement Supabase, UE) ; aucune donnée
+        n'est cédée à un tiers à des fins commerciales. Si votre candidature n'est pas retenue, vos données
+        sont conservées 12 mois puis supprimées. Si elle est retenue, elles sont conservées pendant la durée
+        de la relation contractuelle, les données nécessaires à la facturation étant conservées 10 ans
+        conformément aux obligations comptables légales. Vous disposez de droits d'accès, de rectification,
+        d'effacement, de limitation, d'opposition et de portabilité, exerçables à
+        <a href="mailto:contact@pharmalpha.fr">contact@pharmalpha.fr</a>, ainsi que du droit d'introduire une
+        réclamation auprès de la CNIL (cnil.fr).
+      </div>
+
+      <label class="check">
+        <input type="checkbox" id="accept" required>
+        <span>Je certifie l'exactitude des informations fournies et j'ai pris connaissance des mentions
+          ci-dessus, notamment celle indiquant que l'envoi de ce formulaire ne vaut ni contrat ni
+          engagement de publication.</span>
+      </label>
+
+      <button type="submit" class="submit" id="submit">Envoyer ma demande</button>
+      <div class="msg" id="msg" hidden></div>
+      <p class="hint" style="text-align:center;margin-top:12px;">
+        Après validation de votre dossier, un lien de paiement vous sera envoyé.
+        C'est son règlement qui déclenche la publication dans les parutions suivantes.
+      </p>
+    </form>
+  </section>
+
+  <footer>
+    Pharm'Actus est édité par Stephen Robert, Docteur en Pharmacie.
+    Une question avant de vous lancer ? <a href="mailto:stephen@pharmalpha.fr">stephen@pharmalpha.fr</a><br>
+    Nos conditions générales sont communiquées sur simple demande à tout professionnel qui en fait la requête.
+  </footer>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  var ENDPOINT = "https://ibmqaybmhpzdlgyntzbs.supabase.co/functions/v1/partner-request";
+  var SIZES = [[1200, 220], [2400, 440]];
+  var NEED_DOC = ["medicament_rx", "medicament_otc", "dispositif_medical", "complement_alimentaire"];
+  var DOC_NOTES = {
+    medicament_rx: "Une publicité pour un médicament nommé, adressée à des professionnels de santé, exige un visa de publicité (visa PM) délivré par l'ANSM, en application de l'article L.5122-9 du code de la santé publique. Merci de joindre ce visa.",
+    medicament_otc: "Même sans ordonnance, une publicité pour un médicament nommé adressée à des professionnels de santé exige un visa de publicité (visa PM) délivré par l'ANSM (article L.5122-9 du code de la santé publique). Merci de joindre ce visa.",
+    dispositif_medical: "Merci de joindre l'attestation de marquage CE, ou tout document établissant la conformité des allégations présentées.",
+    complement_alimentaire: "Merci de joindre tout document établissant que les allégations utilisées figurent sur la liste positive européenne."
+  };
+  var $ = function (id) { return document.getElementById(id); };
+  var fmt = function (n) { return Number(n).toLocaleString("fr-FR"); };
+
+  /* ---- Chiffres live, meme source que le dossier partenaire ---- */
+  fetch("dashboard.json", { cache: "no-store" })
+    .then(function (r) { if (!r.ok) throw new Error("http"); return r.json(); })
+    .then(function (d) {
+      var c = d.cumul || {};
+      var reach = (typeof d.abonnes_diffusion === "number") ? d.abonnes_diffusion : d.abonnes_total;
+      if (typeof reach === "number") {
+        $("sReach").textContent = fmt(reach);
+        $("sReachLabel").textContent = (typeof d.abonnes_diffusion === "number")
+          ? "lecteurs touchés par l'encart" : "abonnés à la newsletter";
+      }
+      if (c.ctor_pct != null) $("sCtor").textContent = String(c.ctor_pct).replace(".", ",") + " %";
+      if (c.taux_ouverture_pct != null) $("sOpen").textContent = String(c.taux_ouverture_pct).replace(".", ",") + " %";
+      if (c.clics_uniques != null) $("sClicks").textContent = fmt(c.clics_uniques);
+    })
+    .catch(function () {
+      /* Jamais de "undefined" sur une page commerciale : on retire le bloc. */
+      var s = $("stats"); if (s) s.hidden = true;
+      var n = $("statsNote");
+      if (n) n.textContent = "Nos chiffres d'audience vous sont transmis sur simple demande.";
+    });
+
+  /* ---- TVA obligatoire hors France ---- */
+  var country = $("billing_country"), vat = $("vat_number");
+  function syncVat() {
+    var fr = country.value === "FR";
+    $("vatReq").hidden = fr;
+    vat.required = !fr;
+    $("vatHint").textContent = fr
+      ? "Facultatif pour une facturation en France."
+      : "Obligatoire hors de France : il conditionne l'autoliquidation de la TVA.";
+  }
+  country.addEventListener("change", syncVat); syncVat();
+
+  /* ---- Duree minimale selon la formule ---- */
+  var eng = $("engagement"), months = $("months");
+  function syncMonths() {
+    var three = eng.value === "engagement_3m";
+    months.min = three ? 3 : 1;
+    if (three && Number(months.value) < 3) months.value = 3;
+    $("monthsHint").textContent = three
+      ? "Minimum 3 mois pour l'offre partenaire fondateur."
+      : "De 1 à 12 mois.";
+  }
+  eng.addEventListener("change", syncMonths); syncMonths();
+
+  /* ---- Justificatif conditionnel ---- */
+  var ptype = $("product_type"), doc = $("compliance_doc");
+  ptype.addEventListener("change", function () {
+    var need = NEED_DOC.indexOf(ptype.value) !== -1;
+    $("complianceWrap").hidden = !need;
+    doc.required = need;
+    $("complianceNote").textContent = need ? (DOC_NOTES[ptype.value] || "") : "";
+  });
+
+  /* ---- Controle des dimensions cote navigateur ----
+     Confort pour l'annonceur uniquement : la validation qui fait foi est refaite
+     dans les octets du fichier par la fonction serveur, ce controle se contourne. */
+  var banner = $("banner"), drop = $("drop"), state = $("bannerState"), preview = $("preview");
+  var bannerOk = false;
+  function setState(cls, text) {
+    drop.className = "drop" + (cls ? " " + cls : "");
+    state.className = "state" + (cls ? " " + cls : "");
+    state.textContent = text;
+  }
+  banner.addEventListener("change", function () {
+    bannerOk = false; preview.hidden = true;
+    var f = banner.files && banner.files[0];
+    if (!f) {
+      setState("", "Format attendu : 1200 x 220 px, PNG ou JPG, 2 Mo maximum. Une version haute résolution de 2400 x 440 px est également acceptée.");
+      return;
+    }
+    if (f.size > 2 * 1024 * 1024) {
+      setState("ko", "Fichier trop lourd (" + (f.size / 1048576).toFixed(1) + " Mo). Maximum 2 Mo.");
+      return;
+    }
+    var url = URL.createObjectURL(f);
+    var img = new Image();
+    img.onload = function () {
+      var w = img.naturalWidth, h = img.naturalHeight, ok = false;
+      for (var i = 0; i < SIZES.length; i++) if (SIZES[i][0] === w && SIZES[i][1] === h) ok = true;
+      if (ok) {
+        bannerOk = true;
+        setState("ok", "Bannière conforme : " + w + " x " + h + " px.");
+        preview.src = url; preview.hidden = false;
+      } else {
+        setState("ko", "Dimensions incorrectes : votre image fait " + w + " x " + h
+          + " px. Le format attendu est 1200 x 220 px, ou 2400 x 440 px en haute résolution.");
+        URL.revokeObjectURL(url);
+      }
+    };
+    img.onerror = function () {
+      setState("ko", "Fichier illisible. La bannière doit être une image PNG ou JPG.");
+      URL.revokeObjectURL(url);
+    };
+    img.src = url;
+  });
+
+  /* ---- Envoi ---- */
+  var form = $("form"), btn = $("submit"), msg = $("msg");
+  function show(kind, text) {
+    msg.hidden = false; msg.className = "msg " + kind; msg.textContent = text;
+    msg.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    msg.hidden = true;
+    if (!$("accept").checked) { show("err", "Merci de cocher la case de confirmation avant d'envoyer."); return; }
+    if (!ptype.value) { show("err", "Merci d'indiquer la nature de ce que vous annoncez."); return; }
+    if (doc.required && !doc.files.length) { show("err", "Le justificatif de conformité est obligatoire pour cette catégorie."); return; }
+    if (!banner.files.length) { show("err", "Merci de joindre votre bannière."); return; }
+    if (!bannerOk) { show("err", "La bannière n'est pas au bon format. Corrigez-la avant d'envoyer."); return; }
+    if (!form.checkValidity()) { show("err", "Merci de compléter les champs obligatoires."); form.reportValidity(); return; }
+
+    btn.disabled = true; btn.textContent = "Envoi en cours...";
+    fetch(ENDPOINT, { method: "POST", body: new FormData(form) })
+      .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
+      .then(function (res) {
+        if (!res.ok) throw new Error(res.j && res.j.error ? res.j.error : "Envoi impossible.");
+        var hide = form.querySelectorAll("fieldset, .check, .submit, .legal");
+        for (var i = 0; i < hide.length; i++) hide[i].hidden = true;
+        show("ok", "Votre demande est bien enregistrée. Vous allez recevoir un email de confirmation. "
+          + "Après validation de votre dossier, un lien de paiement vous sera envoyé.");
+      })
+      .catch(function (err) {
+        btn.disabled = false; btn.textContent = "Envoyer ma demande";
+        show("err", err.message || "Envoi impossible. Réessayez, ou écrivez à stephen@pharmalpha.fr.");
+      });
+  });
+})();
+</script>
+</body>
+</html>

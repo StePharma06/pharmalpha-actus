@@ -28,6 +28,7 @@ SYNC_FILES = [
     "dashboard.html",
     "dashboard.json",
     "media-kit.html",
+    "annonceurs.html",
     "cgu.html",
     "privacy.html",
     "print.html",
