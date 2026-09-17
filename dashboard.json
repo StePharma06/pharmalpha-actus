@@ -1,24 +1,24 @@
 {
- "genere_le": "2026-09-16T10:06:16+02:00",
+ "genere_le": "2026-09-17T10:12:23+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1193,
- "abonnes_hebdo": 298,
- "abonnes_diffusion": 1491,
- "articles_publies": 673,
- "nouveaux_7j": 39,
- "nouveaux_cumul": 1186,
+ "abonnes_total": 1196,
+ "abonnes_hebdo": 303,
+ "abonnes_diffusion": 1499,
+ "articles_publies": 678,
+ "nouveaux_7j": 37,
+ "nouveaux_cumul": 1189,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-09-09",
-  "au": "2026-09-16",
-  "delivres": 7525,
-  "ouvertures": 2842,
-  "ouvertures_uniques": 2092,
-  "clics": 3640,
-  "clics_uniques": 617,
-  "taux_ouverture_pct": 27.8,
-  "taux_clic_pct": 8.2,
-  "ctor_pct": 29.5,
+  "du": "2026-09-10",
+  "au": "2026-09-17",
+  "delivres": 7544,
+  "ouvertures": 2907,
+  "ouvertures_uniques": 2123,
+  "clics": 3784,
+  "clics_uniques": 642,
+  "taux_ouverture_pct": 28.1,
+  "taux_clic_pct": 8.5,
+  "ctor_pct": 30.2,
   "top_articles": [
    {
     "id": "actu_2026_09_12_5",
@@ -53,12 +53,28 @@
     "lecteurs": 61
    },
    {
+    "id": "actu_2026_09_16_1",
+    "titre": "PLFSS 2027 : une pharmacie sur deux perdante dans le nouveau modèle ?",
+    "date": "2026-09-16",
+    "categorie": "pharma_france",
+    "clics": 86,
+    "lecteurs": 53
+   },
+   {
     "id": "actu_2026_09_11_2",
     "titre": "Désogestrel et méningiome : 1,6 million de femmes vont recevoir un courrier, prépare-toi",
     "date": "2026-09-11",
     "categorie": "pharma_france",
     "clics": 84,
     "lecteurs": 49
+   },
+   {
+    "id": "actu_2026_09_17_1",
+    "titre": "Les kinés prescrivent des antalgiques : ce que ça change au comptoir",
+    "date": "2026-09-17",
+    "categorie": "pharma_france",
+    "clics": 86,
+    "lecteurs": 48
    },
    {
     "id": "actu_2026_09_14_2",
@@ -69,12 +85,12 @@
     "lecteurs": 47
    },
    {
-    "id": "actu_2026_09_09_1",
-    "titre": "Dépistage HTA en officine : d'où sort ce chiffre de 15 euros ?",
-    "date": "2026-09-09",
-    "categorie": "pharma_france",
-    "clics": 76,
-    "lecteurs": 46
+    "id": "actu_2026_09_17_3",
+    "titre": "Protections périodiques remboursées : le 1er octobre arrive, la LPP est presque vide",
+    "date": "2026-09-17",
+    "categorie": "bonne_nouvelle",
+    "clics": 74,
+    "lecteurs": 45
    },
    {
     "id": "actu_2026_09_10_5",
@@ -83,36 +99,20 @@
     "categorie": "business_officine",
     "clics": 70,
     "lecteurs": 45
-   },
-   {
-    "id": "actu_2026_09_09_3",
-    "titre": "Vaccination : la Cour des comptes valide le rôle clé des pharmaciens",
-    "date": "2026-09-09",
-    "categorie": "bonne_nouvelle",
-    "clics": 77,
-    "lecteurs": 44
-   },
-   {
-    "id": "actu_2026_09_14_1",
-    "titre": "Levemir, Victoza, Fiasp : le compte à rebours est lancé pour tes patients Novo",
-    "date": "2026-09-14",
-    "categorie": "pharma_france",
-    "clics": 65,
-    "lecteurs": 43
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-09-16",
-  "delivres": 108320,
-  "ouvertures": 43750,
-  "ouvertures_uniques": 30298,
-  "clics": 46476,
-  "clics_uniques": 8370,
+  "au": "2026-09-17",
+  "delivres": 109358,
+  "ouvertures": 44197,
+  "ouvertures_uniques": 30593,
+  "clics": 47107,
+  "clics_uniques": 8480,
   "taux_ouverture_pct": 28.0,
-  "taux_clic_pct": 7.7,
-  "ctor_pct": 27.6,
+  "taux_clic_pct": 7.8,
+  "ctor_pct": 27.7,
   "top_articles": [
    {
     "id": "actu_2026_09_05_1",
