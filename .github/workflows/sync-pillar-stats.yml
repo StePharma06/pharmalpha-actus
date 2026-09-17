@@ -1,0 +1,62 @@
+name: Sync Pillar Stats (officines accompagnees)
+
+# Chaque lundi 5h UTC = 7h Paris, avant trends-update (6h UTC) et
+# dashboard.yml (3h UTC quotidien).
+# Relit la RPC Supabase homepage_stats() et recale le chiffre "officines
+# accompagnees" dans le pillar merch (source de verite de ce repo).
+#
+# Le push sur master declenche automatiquement sync-to-vercel.yml (paths:
+# articles/**) qui recopie le fichier corrige vers pharmalpha-site/actus/ en
+# quelques minutes, pas de deuxieme script cote pharmalpha-site necessaire
+# pour ce fichier precis.
+#
+# Le script refuse d'ecrire si la RPC est down (sortie propre, pas d'alerte)
+# ou si le contenu ne correspond plus a ce qu'il attend (echec bruyant) :
+# voir scripts/sync_pillar_stats.py pour le detail des garde-fous.
+
+on:
+  schedule:
+    - cron: '0 5 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync-pillar-stats:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run pillar stats sync
+        run: python scripts/sync_pillar_stats.py
+
+      - name: Commit & push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add articles/merchandising/merchandising-officine-guide-complet-2026.html
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore(stats): sync officines accompagnees from homepage_stats [weekly $(date +%Y-%m-%d)]"
+            # Anti-course : daily-update / sync-to-vercel / dashboard peuvent
+            # pousser sur master pendant ce run. Meme protection que ces workflows.
+            pushed=false
+            for i in 1 2 3 4 5; do
+              if git push; then pushed=true; echo "push OK (tentative $i)"; break; fi
+              echo "push rejete, rebase et nouvelle tentative ($i/5)"
+              git pull --rebase origin master || exit 1
+              sleep 5
+            done
+            if [ "$pushed" != "true" ]; then
+              echo "ERREUR: push impossible apres 5 tentatives"
+              exit 1
+            fi
+          fi
