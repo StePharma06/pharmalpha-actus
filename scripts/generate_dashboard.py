@@ -66,9 +66,17 @@ def brevo_api(endpoint, api_key, method="GET", payload=None):
 
 
 def get_subscribers_count(api_key, list_id=BREVO_LIST_ID):
-    """Get current subscriber count from a Brevo list (default: daily list)."""
+    """Nombre d'abonnes d'une liste Brevo (par defaut la liste quotidienne).
+
+    Utilise uniqueSubscribers (dedoublonne) avec repli sur totalSubscribers :
+    c'est EXACTEMENT ce que fait l'edge function brevo-actus-count qui alimente
+    le compteur live de /admin. Sans cet alignement, la page annonceurs et le
+    back-office affichaient deux chiffres differents pour la meme chose, ce qui
+    est intenable sur un document commercial.
+    """
     data = brevo_api(f"/contacts/lists/{list_id}", api_key)
-    return data.get("totalSubscribers", 0)
+    n = data.get("uniqueSubscribers")
+    return n if isinstance(n, int) else data.get("totalSubscribers", 0)
 
 
 def count_published_articles():

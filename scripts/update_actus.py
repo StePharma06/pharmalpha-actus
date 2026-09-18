@@ -2498,7 +2498,7 @@ def _build_partner_slot_email(slot: str = "haut") -> str:
         line2 = "La prochaine pourrait être la vôtre."
     else:
         line1 = "Vu chaque matin par plus de 1 000 pharmaciens."
-        line2 = "Un seul emplacement, réservé à un partenaire."
+        line2 = "Cet emplacement est réservé aux annonceurs."
     return f'''
   <tr><td style="padding:20px 32px 0;">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#14141b;border-radius:10px;">
