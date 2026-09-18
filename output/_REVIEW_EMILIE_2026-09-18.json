@@ -1,0 +1,49 @@
+{
+  "generated_at": "2026-09-18T04:07:35.414129+02:00",
+  "run_date": "2026-09-18",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_monde",
+      "titre": "IPO biotech a 350 millions de dollars : le financement de l'innovation repart fort en 2026",
+      "resume": "Electra Biosiences leve 350 millions de dollars en bourse. C'est la douzieme biotech en 2026 a franchir la barre des 300 millions en IPO, un niveau qui rappelle le pic de 2021. Le signal est clair : les investisseurs remettent la main a la poche sur la R&D.",
+      "source": "BioPharma Dive",
+      "source_url": "https://www.biopharmadive.com/news/electra-biotech-ipo-price-secondary-hlh/830698/",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "avenir_pharma",
+      "titre": "Des mini-foies injectables : le MIT ouvre une piste serieuse contre la greffe hepatique",
+      "resume": "Des ingenieurs du MIT ont mis au point des mini-foies injectables capables de jouer le role de l'organe defaillant. Une avancee de recherche fondamentale qui pourrait, a terme, bouleverser la prise en charge des insuffisances hepatiques severes.",
+      "source": "France Info Sante",
+      "source_url": "https://www.franceinfo.fr/sciences/des-faux-foies-pour-eviter-les-greffes_8197427.html#xtor=RSS-3-%5Bgeneral%5D",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Kiné prescripteur : ce que l'arrêté du 16 sept. change vraiment pour ton officine",
+      "resume": "Un arrêté paru au JO le 16 septembre 2026 élargit le droit de prescription des masseurs-kinésithérapeutes. Pour l'officine, c'est une nouvelle source d'ordonnances à délivrer - et un arbitrage à ne pas rater sur la relation prescripteur.",
+      "source": "Pharm'Actus · FSPF — Élargissement du droit de prescription des masseurs-kinésithérapeutes, Légifrance — JO du 16 septembre 2026 (arrêté référencé dans la source FSPF)",
+      "source_url": "https://www.fspf.fr/elargissement-du-droit-de-prescription-des-masseurs-kinesitherapeutes/",
+      "confidence_score": 0.62,
+      "warnings": [
+        "Le contenu exact de la liste élargie (références LPPR précises) n'est pas détaillé dans la source FSPF disponible : l'article incite à consulter l'arrêté intégral avant toute affirmation sur les produits concernés.",
+        "Le chiffre '500 000 lignes d'ordonnances supplémentaires par mois' est une estimation d'ordre de grandeur illustrative, explicitement signalée comme telle dans l'article. Ne pas le citer comme donnée officielle.",
+        "Le chiffre '100 000 MK libéraux' est issu des données DREES 2024 (ordre de grandeur connu) mais la répartition libéral/salarié doit être vérifiée pour plus de précision.",
+        "La marge officinale sur les DM LPPR est décrite qualitativement : aucun taux chiffré n'a été avancé, conformément à la règle de prudence sur les marges.",
+        "Positions USPO et UPGF : vérifiées comme absentes sur leurs sites respectifs à la date de rédaction, mais à reconfirmer en publication.",
+        "L'équilibre syndical est partiel car seule la FSPF est source directe. Les deux autres grandes organisations n'ont pas réagi publiquement sur ce texte spécifique à ce jour.",
+        "Vérifier que le lien Légifrance de l'arrêté du 16/09/2026 est bien accessible et correspond au bon JORFTEXT avant publication.",
+        "4 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

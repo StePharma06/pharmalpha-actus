@@ -1,58 +1,58 @@
 {
   "pathologies": [
     {
-      "display": "Assurance maladie fatigue chronique",
-      "delta_label": "↑ 311 550",
+      "display": "Pai allergie alimentaire pdf",
+      "delta_label": "↑ 35 900",
       "trend": "up"
     },
     {
-      "display": "Désensibilisation allergie chat",
-      "delta_label": "↑ 16 750",
+      "display": "Croquette anti allergie chat",
+      "delta_label": "↑ 17 050",
       "trend": "up"
     },
     {
-      "display": "Allergie a l'iode",
-      "delta_label": "↑ 14 600",
+      "display": "Effet de fatigue ou de critique",
+      "delta_label": "↑ 16 650",
       "trend": "up"
     },
     {
-      "display": "Cure vitamine fatigue",
-      "delta_label": "↑ 13 850",
+      "display": "Pommeau de douche vitamine c",
+      "delta_label": "↑ 10 400",
       "trend": "up"
     },
     {
-      "display": "Ou trouver de la vitamine d",
-      "delta_label": "↑ 130",
+      "display": "Saignement de nez et fatigue",
+      "delta_label": "↑ 9 350",
       "trend": "up"
     }
   ],
-  "pathologies_from": "2026-09-17",
+  "pathologies_from": "2026-09-18",
   "soins": [
     {
+      "display": "Immunite innee",
+      "delta_label": "↑ 67 700",
+      "trend": "up"
+    },
+    {
       "display": "Oscillo immunite",
-      "delta_label": "↑ 261 350",
+      "delta_label": "↑ 57 450",
       "trend": "up"
     },
     {
-      "display": "Banane digestion",
-      "delta_label": "↑ 73 050",
+      "display": "Schéma digestion",
+      "delta_label": "↑ 20 150",
       "trend": "up"
     },
     {
-      "display": "Azinc immunite",
-      "delta_label": "↑ 57 750",
+      "display": "Lentilles digestion",
+      "delta_label": "↑ 16 050",
       "trend": "up"
     },
     {
-      "display": "Temps de digestion d'un repas",
-      "delta_label": "↑ 24 300",
-      "trend": "up"
-    },
-    {
-      "display": "Mieux-etre-sante.fr santé visuelle et lu",
-      "delta_label": "↑ 7 050",
+      "display": "Mieux-etre-sante.fr prevention et habitu",
+      "delta_label": "↑ 250",
       "trend": "up"
     }
   ],
-  "soins_from": "2026-09-17"
+  "soins_from": "2026-09-18"
 }

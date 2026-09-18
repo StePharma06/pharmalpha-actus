@@ -31,7 +31,7 @@
      l'image n'est decouverte qu'apres execution du JS qui construit les cards
      (le <img> n'existe qu'a l'interieur d'un template literal JS, invisible au
      preload scanner) -> LCP non deterministe, cf. sprint perf 2026-07-27. -->
-<link rel="preload" as="image" href="assets/img_actu_2026_09_17_1.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="assets/img_actu_2026_09_18_1.jpg" fetchpriority="high">
 
 <!-- Space Grotesk — self-hosted WOFF2 (remplace Google Fonts, cf. mission perf/RGPD 2026-08-24) -->
 <link rel="preload" href="/assets/fonts/space-grotesk-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -1756,7 +1756,7 @@ body.pa-has-nav #actusHeader {
 </div>
 
 <!-- EXPRESSION DU JOUR (injectée par update_actus.py à chaque run) -->
-<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Atropine</h2><p class="expression-corps">De <em>Atropos</em>, la plus redoutée des trois Parques grecques - celle qui coupait le fil de la vie. L'atropine est extraite de l'<em>Atropa belladona</em> : une plante dont la toxicité mortelle valait bien le nom de la Parque implacable.</p></aside>
+<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Avoir les dents longues</h2><p class="expression-corps">Les médecins et vétérinaires de la Renaissance estimaient l'âge et l'état de santé d'un animal - puis d'un homme - à l'usure de ses dents. Des dents longues, peu usées, signalaient un individu jeune et vigoureux, prêt à mordre dans la vie avec appétit.</p></aside>
 
 <!-- ESPACE PARTENAIRE 1 (entre Expression du jour et Aujourd'hui).
      Statique : reste visible meme si le JS ne s'execute pas. Le 2e emplacement
@@ -1781,12 +1781,12 @@ body.pa-has-nav #actusHeader {
 <div id="articles-container"></div>
 
 <!-- MARQUE_TENDANCE (injectee par le pipeline hebdo, remplacee quotidiennement) -->
-<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">11 sept. au 17 sept. 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Assurance maladie fatigue chronique</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 311 550</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Oscillo immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 261 350</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Désensibilisation allergie chat</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 16 750</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Banane digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 73 050</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie a l'iode</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 14 600</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Azinc immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 57 750</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Cure vitamine fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 13 850</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Temps de digestion d'un repas</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 24 300</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Ou trouver de la vitamine d</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 130</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Mieux-etre-sante.fr santé visuelle et lu</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 7 050</td></tr>
+<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">12 sept. au 18 sept. 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Pai allergie alimentaire pdf</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 35 900</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Immunite innee</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 67 700</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Croquette anti allergie chat</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 17 050</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Oscillo immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 57 450</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Effet de fatigue ou de critique</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 16 650</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Schéma digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 20 150</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Pommeau de douche vitamine c</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 10 400</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Lentilles digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 16 050</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Saignement de nez et fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 9 350</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Mieux-etre-sante.fr prevention et habitu</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 250</td></tr>
 </tbody></table></div><p style="margin:10px 0 0;font-size:11px;color:#9ca3af;font-style:italic;">Indice de tendance : intensite de hausse Google Trends (non comparable a un volume absolu).</p><p style="margin:12px 0 0;font-size:11px;color:#9ca3af;text-align:right;">Source&nbsp;: Google Trends France (pytrends) &middot; 7 jours glissants</p></section></div>
 
 <!-- ARCHIVES CTA -->
@@ -1949,6 +1949,90 @@ body.pa-has-nav #actusHeader {
 // Mis a jour automatiquement par n8n chaque semaine
 // ============================================================
 const ARTICLES = [
+{
+    id: "actu_2026_09_18_1",
+    date: "2026-09-18",
+    type: "actu",
+    categorie: "pharma_france",
+    titre: "Beyfortus vs Abrysvo : l'ANSM tire la sonnette d'alarme sur les confusions",
+    resume: "La campagne RSV vient de s'ouvrir et les erreurs medicamenteuses entre Beyfortus et Abrysvo sont deja au rendez-vous. L'ANSM appelle les pros de sante a la vigilance. Au comptoir, c'est toi la derniere ligne de defense.",
+    source: "Le Quotidien du Pharmacien",
+    source_url: "http://www.lequotidiendupharmacien.fr/exercice-pro/beyfortus-et-abrysvo-des-erreurs-medicamenteuses-persistantes",
+    tiktok_url: "",
+    badge_label: "Pharma France",
+    image_url: "assets/img_actu_2026_09_18_1.jpg",
+    tags: ["ansm", "vaccination", "rsv", "securite", "officine"]
+  },
+{
+    id: "actu_2026_09_18_2",
+    date: "2026-09-18",
+    type: "actu",
+    categorie: "pharma_monde",
+    titre: "IPO biotech a 350 millions de dollars : le financement de l'innovation repart fort en 2026",
+    resume: "Electra Biosiences leve 350 millions de dollars en bourse. C'est la douzieme biotech en 2026 a franchir la barre des 300 millions en IPO, un niveau qui rappelle le pic de 2021. Le signal est clair : les investisseurs remettent la main a la poche sur la R&D.",
+    source: "BioPharma Dive",
+    source_url: "https://www.biopharmadive.com/news/electra-biotech-ipo-price-secondary-hlh/830698/",
+    tiktok_url: "",
+    badge_label: "Pharma Monde",
+    image_url: "assets/img_actu_2026_09_18_2.jpg",
+    tags: ["recherche", "innovation", "financement", "ema", "pipeline"]
+  },
+{
+    id: "actu_2026_09_18_3",
+    date: "2026-09-18",
+    type: "actu",
+    categorie: "bonne_nouvelle",
+    titre: "Memo de Vie en officine : ton comptoir peut sauver des vies, litteralement",
+    resume: "L'USPO remet en lumiere le dispositif Memo de Vie, un outil concret pour aider les victimes de violences a conserver des preuves. La pharmacie de proximite, lieu de confiance par excellence, est en premiere ligne pour accueillir et orienter ces personnes.",
+    source: "USPO",
+    source_url: "https://uspo.fr/memo-de-vie-un-outil-pour-conserver-les-traces-de-violences/",
+    tiktok_url: "",
+    badge_label: "La bonne nouvelle",
+    image_url: "assets/img_actu_2026_09_18_3.jpg",
+    tags: ["officine", "proximite", "violences", "sante-publique", "missions"]
+  },
+{
+    id: "actu_2026_09_18_4",
+    date: "2026-09-18",
+    type: "actu",
+    categorie: "avenir_pharma",
+    titre: "Des mini-foies injectables : le MIT ouvre une piste serieuse contre la greffe hepatique",
+    resume: "Des ingenieurs du MIT ont mis au point des mini-foies injectables capables de jouer le role de l'organe defaillant. Une avancee de recherche fondamentale qui pourrait, a terme, bouleverser la prise en charge des insuffisances hepatiques severes.",
+    source: "France Info Sante",
+    source_url: "https://www.franceinfo.fr/sciences/des-faux-foies-pour-eviter-les-greffes_8197427.html#xtor=RSS-3-%5Bgeneral%5D",
+    tiktok_url: "",
+    badge_label: "L'avenir de la pharma",
+    image_url: "assets/img_actu_2026_09_18_4.jpg",
+    tags: ["recherche", "innovation", "hepatologie", "therapeutique", "ia"]
+  },
+{
+    id: "actu_2026_09_18_5",
+    date: "2026-09-18",
+    type: "actu",
+    categorie: "business_officine",
+    titre: "Kiné prescripteur : ce que l'arrêté du 16 sept. change vraiment pour ton officine",
+    resume: "Un arrêté paru au JO le 16 septembre 2026 élargit le droit de prescription des masseurs-kinésithérapeutes. Pour l'officine, c'est une nouvelle source d'ordonnances à délivrer - et un arbitrage à ne pas rater sur la relation prescripteur.",
+    source: "Pharm'Actus · FSPF — Élargissement du droit de prescription des masseurs-kinésithérapeutes, Légifrance — JO du 16 septembre 2026 (arrêté référencé dans la source FSPF)",
+    source_url: "https://www.fspf.fr/elargissement-du-droit-de-prescription-des-masseurs-kinesitherapeutes/",
+    tiktok_url: "",
+    badge_label: "Business",
+    image_url: "assets/img_actu_2026_09_18_5.jpg",
+    tags: ["kinesitherapeute", "prescription", "dispositifs-medicaux", "officine"]
+  },
+{
+    id: "lsv_2026_09_18",
+    date: "2026-09-18",
+    type: "lsv",
+    categorie: "lsv",
+    titre: "Le saviez-vous ? On traitait les crises d'asthme avec du café noir très serré",
+    resume: "Avant les bronchodilatateurs et les inhalateurs, les médecins prescrivaient littéralement du café fort pour calmer les crises d'asthme. Et ce n'était pas du folklore : il y avait une vraie chimie derrière. La caféine et la théophylline, ça joue dans la même cour.",
+    source: "Pharm'Alpha",
+    source_url: "",
+    tiktok_url: "",
+    badge_label: "Le Saviez-Vous",
+    image_url: "assets/img_lsv_2026_09_18.jpg",
+    tags: ["histoire", "pharmacologie", "asthme", "plante", "chimie"]
+  },
 {
     id: "actu_2026_09_17_1",
     date: "2026-09-17",
@@ -2564,90 +2648,6 @@ const ARTICLES = [
     badge_label: "Pharma Monde",
     image_url: "assets/img_actu_2026_09_09_2.jpg",
     tags: ["fda", "ema", "amm", "biosimilaire", "pipeline"]
-  },
-{
-    id: "actu_2026_09_09_3",
-    date: "2026-09-09",
-    type: "actu",
-    categorie: "bonne_nouvelle",
-    titre: "Vaccination : la Cour des comptes valide le rôle clé des pharmaciens",
-    resume: "Le rapport de la Cour des comptes sur la politique vaccinale depuis 2018 est sorti, et c'est une reconnaissance officielle du travail des pharmaciens. Le rôle de l'officine dans la montée en puissance de la couverture vaccinale est salué noir sur blanc. C'est la bonne nouvelle du jour, et elle mérite d'être savourée.",
-    source: "Le Quotidien du Pharmacien",
-    source_url: "http://www.lequotidiendupharmacien.fr/politique-vaccinale-la-cour-des-comptes-reconnait-les-efforts-des-pharmaciens",
-    tiktok_url: "",
-    badge_label: "La bonne nouvelle",
-    image_url: "assets/img_actu_2026_09_09_3.jpg",
-    tags: ["vaccination", "dp", "officine", "couverture-vaccinale", "cour-des-comptes"]
-  },
-{
-    id: "actu_2026_09_09_4",
-    date: "2026-09-09",
-    type: "actu",
-    categorie: "avenir_pharma",
-    titre: "Vapotage et grossesse : la vanilline des e-liquides dans le viseur des chercheurs",
-    resume: "La vanilline, cette molécule aromatique omniprésente dans les e-liquides, pourrait perturber le développement embryonnaire. Une étude pointe un risque spécifique pendant la grossesse. Sujet directement dans ta zone de conseil comptoir, surtout avec les patientes qui ont substitué la cigarette par la vape.",
-    source: "Sciences et Avenir",
-    source_url: "https://www.sciencesetavenir.fr/sante/un-ingredient-dans-les-e-cigarettes-serait-dangereux-chez-les-femmes-enceintes_194697?xtor=RSS-16",
-    tiktok_url: "",
-    badge_label: "L'avenir de la pharma",
-    image_url: "assets/img_actu_2026_09_09_4.jpg",
-    tags: ["vapotage", "grossesse", "sevrage-tabagique", "toxicologie", "conseil-officinal"]
-  },
-{
-    id: "actu_2026_09_09_5",
-    date: "2026-09-09",
-    type: "actu",
-    categorie: "business_officine",
-    titre: "Carte Vitale dès 12 ans : ce que ça change concrètement au comptoir",
-    resume: "Un arrêté publié au JO du 28 août 2026 fixe enfin les modalités de délivrance de la carte Vitale aux mineurs d'au moins 12 ans. Trois ans après l'entrée en vigueur du droit, le cadre opérationnel arrive. Pour toi, c'est une nouvelle procédure à maîtriser - et une opportunité rela...",
-    source: "Pharm'Actus · FSPF – Carte Vitale pour les mineurs : les modalités de délivrance enfin publiées, USPO – Officines Avenir n°37 (avril 2026)",
-    source_url: "https://www.fspf.fr/carte-vitale-pour-les-mineurs-les-modalites-de-delivrance-enfin-publiees/",
-    tiktok_url: "",
-    badge_label: "Business",
-    image_url: "assets/img_actu_2026_09_09_5.jpg",
-    tags: ["carte-vitale", "mineurs", "tiers-payant", "reglementation"]
-  },
-{
-    id: "lsv_2026_09_09",
-    date: "2026-09-09",
-    type: "lsv",
-    categorie: "lsv",
-    titre: "Le saviez-vous ? On soignait les crises d'épilepsie avec du sang de gladiateur",
-    resume: "Dans la Rome antique, le sang d'un gladiateur fraîchement tué était considéré comme le remède suprême contre l'épilepsie. Les patients se ruaient dans l'arène pour boire directement à la blessure. Derrière cette pratique sanglante se cache une logique médicale cohérente... pour l'époque.",
-    source: "Pharm'Alpha",
-    source_url: "",
-    tiktok_url: "",
-    badge_label: "Le Saviez-Vous",
-    image_url: "assets/img_lsv_2026_09_09.jpg",
-    tags: ["histoire", "neurologie", "epilepsie", "pharmacopee", "antiquite"]
-  },
-{
-    id: "actu_2026_09_08_1",
-    date: "2026-09-08",
-    type: "actu",
-    categorie: "pharma_france",
-    titre: "Mesure de la tension artérielle : 15 euros pour le pharmacien, et ça fait déjà des jaloux",
-    resume: "Une rémunération à 15 euros par acte pour la mesure de tension artérielle en officine circule avant même que la négociation soit ouverte. Les syndicats de médecins et d'infirmiers montent au créneau. Le pharmacien, lui, attend que ça se concrétise.",
-    source: "Le Quotidien du Pharmacien",
-    source_url: "http://www.lequotidiendupharmacien.fr/exercice-pro/tension-arterielle-en-attente-de-negociation-la-remuneration-exaspere-deja-medecins-et-infirmiers",
-    tiktok_url: "",
-    badge_label: "Pharma France",
-    image_url: "assets/img_actu_2026_09_08_1.jpg",
-    tags: ["tension-arterielle", "remuneration", "convention", "missions", "officine"]
-  },
-{
-    id: "actu_2026_09_08_2",
-    date: "2026-09-08",
-    type: "actu",
-    categorie: "pharma_monde",
-    titre: "Novo Nordisk lâche deux essais cardiovasculaires : l'inflammation, c'est raté",
-    resume: "Novo Nordisk stoppe deux essais cliniques sur le ziltivekimab, une molécule anti-inflammatoire censée réduire le risque cardiovasculaire. Nouveau revers pour cette stratégie thérapeutique. Pour les pharmaciens français, c'est un signal fort sur l'avenir du pipeline cardio.",
-    source: "STAT News",
-    source_url: "https://www.statnews.com/2026/09/07/novo-nordisk-heart-studies-inflammation-ziltivekimab/?utm_campaign=rss",
-    tiktok_url: "",
-    badge_label: "Pharma Monde",
-    image_url: "assets/img_actu_2026_09_08_2.jpg",
-    tags: ["novo-nordisk", "cardiovasculaire", "pipeline", "anti-inflammatoire", "essai-clinique"]
   }
 ];
 

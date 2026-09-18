@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? On stérilisait les instruments chirurgicaux... à la flamme d'une bougie",
-  "resume": "Avant Pasteur, les chirurgiens opéraient avec des instruments qui n'avaient jamais vu une goutte d'eau chaude. La stérilisation ? Un concept aussi inconnu que le téléphone portable. Et le pire, c'est que les plus propres du bloc étaient... les plus dangereux.",
-  "full_text": "En 1850, un chirurgien qui arrivait au bloc opératoire avec les mains propres aurait franchement fait rire la salle. La propreté ? Pas le sujet. Un bon chirurgien se reconnaissait à sa blouse noire, rigide de sang séché accumulé depuis des mois. C'était une marque de métier, presque une médaille.\n\nLes instruments chirurgicaux, eux, vivaient dans des tiroirs en bois, au contact de la poussière et des bactéries. Entre deux opérations ? On essuyait la lame sur le tablier. Parfois on passait le scalpel à la flamme d'une bougie - pas pour tuer les germes, personne ne savait que les germes existaient, mais pour enlever les résidus de chair. Une question d'esthétique, pas d'hygiène.\n\nEt voilà le twist qui retourne le cerveau : les chirurgiens les plus minutieux, ceux qui polissaient leurs instruments au métal brillant, obtenaient les pires résultats. Pourquoi ? Parce qu'une surface lisse et brillante est un terrain de jeu idéal pour les bactéries. Leurs patients mouraient davantage d'infection que ceux opérés en urgence avec des outils mal entretenus.\n\nTout a basculé en 1867. Joseph Lister, chirurgien écossais, lit les travaux de Pasteur sur les micro-organismes et fait le lien. Il commence à pulvériser du phénol - acide carbolique - sur ses instruments, ses mains, et même dans l'air du bloc. Ses collègues le traitent de fou. Ses statistiques, elles, deviennent éloquentes : le taux de mortalité post-opératoire dans son service passe de 46 % à 15 % en deux ans.\n\nAujourd'hui, l'autoclave, les sachets stériles et les gants font partie du décor quotidien au comptoir et en salle d'op'. Quand tu déchires un sachet de compresse stérile machinalement, rappelle-toi que derrière ce geste banal, il y a 150 ans de combat contre l'invisible - et un Écossais qui pulvérisait du phénol pendant que ses confrères ricanaient.",
-  "image_keywords": "surgical instruments sterilization",
+  "titre": "Le saviez-vous ? On traitait les crises d'asthme avec du café noir très serré",
+  "resume": "Avant les bronchodilatateurs et les inhalateurs, les médecins prescrivaient littéralement du café fort pour calmer les crises d'asthme. Et ce n'était pas du folklore : il y avait une vraie chimie derrière. La caféine et la théophylline, ça joue dans la même cour.",
+  "full_text": "On est en 1859. Un médecin anglais observe que ses patients asthmatiques semblent aller mieux après avoir bu plusieurs tasses de café très fort. Il ne rêve pas. Il note, il compare, il publie. Et la pratique, elle, existait déjà depuis bien avant.\n\nLe lien entre café et asthme remonte au moins au XVIIIe siècle. Hyde Salter, médecin londonien et lui-même asthmatique, le documente avec précision en 1859 dans son traité « On Asthma : Its Pathology and Treatment ». Sa prescription personnelle ? Plusieurs tasses de café corsé dès les premiers signes de crise. Il décrit un soulagement net, quasi immédiat.\n\nEt le twist chimique, il est beau : la caféine est structurellement très proche de la théophylline, une molécule que les pharmaciens ont bien connue. La théophylline est un bronchodilatateur puissant, utilisé massivement dans les années 70-80 contre l'asthme. Elle appartient à la même famille que la caféine : les xanthines. Autrement dit, le café agissait par un mécanisme réellement pharmacologique, pas par suggestion.\n\nDes études des années 1980-90 ont d'ailleurs confirmé que consommer du café améliore modestement la fonction respiratoire pendant 2 à 4 heures. La FDA américaine a même intégré cette donnée dans ses recommandations de dépistage spirométrique : il faut éviter le café avant un test pulmonaire, justement parce qu'il fausse les résultats vers le haut.\n\nLa théophylline, elle, a progressivement cédé sa place aux bêta-2 agonistes et aux corticoïdes inhalés, à cause de sa fenêtre thérapeutique étroite et de ses effets secondaires. Mais elle reste encore prescrite aujourd'hui dans certaines formes sévères d'asthme ou de BPCO.\n\nAlors la prochaine fois qu'un patient asthmatique te dit qu'il boit beaucoup de café, ne ricane pas trop vite. Ses ancêtres du XVIIIe avaient peut-être compris quelque chose que la chimie moderne a juste formalisé.",
+  "image_keywords": "coffee cup steam",
   "tags": [
     "histoire",
-    "chirurgie",
-    "antisepsie",
-    "instrument",
-    "decouverte"
+    "pharmacologie",
+    "asthme",
+    "plante",
+    "chimie"
   ],
-  "date": "2026-09-17",
+  "date": "2026-09-18",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",

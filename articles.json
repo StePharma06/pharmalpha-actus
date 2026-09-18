@@ -1,6 +1,131 @@
 {
   "articles": [
     {
+      "id": "actu_2026_09_18_5",
+      "date": "2026-09-18",
+      "type": "actu",
+      "categorie": "business_officine",
+      "titre": "Kiné prescripteur : ce que l'arrêté du 16 sept. change vraiment pour ton officine",
+      "resume": "Un arrêté paru au JO le 16 septembre 2026 élargit le droit de prescription des masseurs-kinésithérapeutes. Pour l'officine, c'est une nouvelle source d'ordonnances à délivrer - et un arbitrage à ne pas rater sur la relation prescripteur.",
+      "source": "Pharm'Actus · FSPF — Élargissement du droit de prescription des masseurs-kinésithérapeutes, Légifrance — JO du 16 septembre 2026 (arrêté référencé dans la source FSPF)",
+      "source_url": "https://www.fspf.fr/elargissement-du-droit-de-prescription-des-masseurs-kinesitherapeutes/",
+      "tiktok_url": "",
+      "badge_label": "Business",
+      "image_url": "assets/img_actu_2026_09_18_5.jpg",
+      "tags": [
+        "kinesitherapeute",
+        "prescription",
+        "dispositifs-medicaux",
+        "officine"
+      ],
+      "full_text": "Un arrêté paru au JO le 16 septembre 2026 élargit le droit de prescription des masseurs-kinésithérapeutes. Pour l'officine, c'est une nouvelle source d'ordonnances à délivrer - et un arbitrage à ne pas rater sur la relation prescripteur.\n\n**Contexte**\n\nJusqu'à présent, les masseurs-kinésithérapeutes (MK) pouvaient prescrire un périmètre limité de dispositifs médicaux remboursables, principalement des aides à la marche et quelques accessoires de rééducation. L'arrêté du 16 septembre 2026, publié au Journal officiel, élargit significativement cette liste. Concrètement, ces prescriptions ouvrent droit à remboursement par l'Assurance Maladie, ce qui les rend pleinement opposables à l'officine. La France compte un nombre significatif de masseurs-kinésithérapeutes en exercice, dont une très large majorité en libéral. Chaque cabinet libéral génère régulièrement des prescriptions de dispositifs médicaux. L'extension de leur périmètre de prescription crée donc mécaniquement un flux d'ordonnances supplémentaires susceptibles d'arriver au comptoir - ordonnances sur lesquelles le pharmacien a un rôle de dispensation, de conseil et de traçabilité.\n\n**Analyse business**\n\nLe vrai sujet business n'est pas médiatique, il est discret et structurel : quand un professionnel de santé gagne le droit de prescrire, l'officine de proximité de son cabinet capte - ou rate - ce flux.\n\nPremier enjeu : le volume potentiel. Compte tenu du nombre élevé de MK libéraux en France, tout élargissement du périmètre de prescription est susceptible de générer un volume significatif d'ordonnances supplémentaires sur le réseau officinal. L'impact réel dépendra du contenu exact de la liste élargie, que les officines doivent identifier ligne par ligne.\n\nDeuxième enjeu : la marge sur les DM remboursables. Les dispositifs médicaux inscrits à la LPPR (Liste des Produits et Prestations Remboursables) sont tarifés par convention CEPS. La marge officinale sur ces produits est généralement encadrée mais elle s'accompagne souvent d'un acte de dispensation valorisable et d'une fidélisation du patient sur la durée du traitement de rééducation.\n\nTroisième enjeu : la relation prescripteur. Le médecin généraliste reste prescripteur central, mais l'émergence de nouveaux prescripteurs (MK, infirmiers, sages-femmes) fragmente les sources d'ordonnances. L'officine qui ne cultive pas sa relation avec le cabinet kiné du quartier laisse filer ce flux vers la pharmacie concurrente qui, elle, a pris le temps d'aller se présenter.\n\nQuatrième enjeu réglementaire à surveiller : l'arrêté définit la liste des produits prescriptibles et remboursables. Il est impératif de vérifier que ton logiciel de gestion officinale intègre rapidement ces nouvelles références LPPR sous ordonnance MK, pour éviter tout refus de prise en charge à la caisse.\n\nPosition syndicale : la FSPF, qui a relayé l'information sur son site, ne s'est pas encore prononcée sur un éventuel impact tarifaire ou conventionnel pour les officines. À ce jour, l'USPO et l'UPGF n'ont pas publié de réaction sur ce texte spécifique.\n\n**Recommandations actionnables**\n\n1. Télécharger l'arrêté du 16/09/2026 et identifier la liste exacte - Récupère le texte intégral sur Légifrance (lien ci-dessous) et liste les références LPPR nouvellement prescriptibles par les MK. C'est le préalable à tout le reste.\n\n2. Vérifier la mise à jour de ton logiciel officinal - Contacte ton éditeur (PharmaLand, Winpharma, Caducée, Smart Rx…) pour confirmer que les ordonnances MK sur ces nouvelles références sont correctement prises en charge en télétransmission Noemie, sans rejet.\n\n3. Identifier les cabinets kiné de ta zone de chalandise - Fais la liste des 3 à 5 cabinets les plus proches. Un simple passage pour te présenter et leur remettre une fiche pratique sur les produits que tu proposes suffit à ancrer la relation.\n\n4. Former l'équipe au conseil associé - Les dispositifs prescrits par les MK (orthèses, accessoires de rééducation, aides à la posture) se prêtent à un conseil complémentaire OTC (antalgiques topiques, compléments articulaires) : briefer les préparateurs sur les associations pertinentes.\n\n5. Surveiller l'évolution réglementaire - D'autres professions paramédicales (infirmiers en pratique avancée, podologues) voient leur droit de prescription s'élargir par vagues successives. Mets une alerte LegiRSS Pharmacie pour ne pas rater le prochain arrêté.\n\n**Sources citees**\n\n- FSPF - Élargissement du droit de prescription des masseurs-kinésithérapeutes\n- Légifrance - JO du 16 septembre 2026 (arrêté référencé dans la source FSPF)"
+    },
+    {
+      "id": "actu_2026_09_18_4",
+      "date": "2026-09-18",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "Des mini-foies injectables : le MIT ouvre une piste serieuse contre la greffe hepatique",
+      "resume": "Des ingenieurs du MIT ont mis au point des mini-foies injectables capables de jouer le role de l'organe defaillant. Une avancee de recherche fondamentale qui pourrait, a terme, bouleverser la prise en charge des insuffisances hepatiques severes.",
+      "source": "France Info Sante",
+      "source_url": "https://www.franceinfo.fr/sciences/des-faux-foies-pour-eviter-les-greffes_8197427.html#xtor=RSS-3-%5Bgeneral%5D",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_09_18_4.jpg",
+      "tags": [
+        "recherche",
+        "innovation",
+        "hepatologie",
+        "therapeutique",
+        "ia"
+      ],
+      "full_text": "Et si on pouvait injecter un foie ? C'est la piste que des chercheurs du Massachusetts Institute of Technology (MIT) viennent de mettre sur la table.\n\nLeur concept : des structures miniaturisees, injectables, capables de reproduire les fonctions metaboliques du foie. L'objectif a long terme est ambitieux : proposer une alternative a la greffe hepatique pour les patients en insuffisance hepatique severe.\n\nOn en est encore au stade de la recherche fondamentale. Ne va pas expliquer a ton patient sous Methotrexate qu'il va bientot s'injecter un foie de rechange. Mais le principe est scientifiquement solide et l'approche est innovante.\n\nPourquoi c'est important pour la pharmacie ? Les maladies hepatiques representent un fardeau enormement sous-estime. Cirrhose, insuffisance hepatique chronique, maladies metaboliques hepatiques associees (MASLD, anciennement NASH)... Ces pathologies sont en progression constante, largement liees aux comorbidites que tu geres quotidiennement : obesite, diabete de type 2, syndrome metabolique.\n\nA ce jour, la greffe reste la seule option curative pour les formes avancees. Et l'offre de greffons est structurellement insuffisante face a la demande. N'importe quelle technologie capable de reduire ce besoin de greffe, meme partiellement, represente une avancee majeure en sante publique.\n\nLes approches d'organes artificiels ou bio-imprimes font partie d'un ecosysteme de recherche plus large qui comprend aussi la therapie cellulaire, l'impression 3D de tissus et l'ingenierie des organoïdes. Le MIT n'est pas seul sur ce terrain, mais cette annonce illustre la vitesse a laquelle la medecine regenerative avance.\n\nA retenir pour la pratique : reste a l'affut des nouvelles molecules hepatoprotectrices et des biomarqueurs de fibrose hepatique. Dans 5 a 10 ans, la prise en charge des maladies du foie pourrait ressembler a ce qu'on a vu avec l'hepatite C : une revolution therapeutique qui reecrit completement les recommandations."
+    },
+    {
+      "id": "actu_2026_09_18_3",
+      "date": "2026-09-18",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "Memo de Vie en officine : ton comptoir peut sauver des vies, litteralement",
+      "resume": "L'USPO remet en lumiere le dispositif Memo de Vie, un outil concret pour aider les victimes de violences a conserver des preuves. La pharmacie de proximite, lieu de confiance par excellence, est en premiere ligne pour accueillir et orienter ces personnes.",
+      "source": "USPO",
+      "source_url": "https://uspo.fr/memo-de-vie-un-outil-pour-conserver-les-traces-de-violences/",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_09_18_3.jpg",
+      "tags": [
+        "officine",
+        "proximite",
+        "violences",
+        "sante-publique",
+        "missions"
+      ],
+      "full_text": "On parle souvent de ton role de professionnel de sante. Mais parfois, ton comptoir est aussi un espace de parole et de protection.\n\nL'USPO rappelle l'existence du Memo de Vie, un outil concret destine aux victimes de violences, a leurs proches, ou aux temoins. Le principe : permettre de conserver et de tracer des preuves de violences subies, dans un lieu de confiance, accessible sans rendez-vous. Et ce lieu, c'est souvent la pharmacie.\n\nPourquoi la pharmacie en particulier ? Parce que tu es present dans des territoires ou les autres ressources de proximite ont disparu. Deserts medicaux, fermeture de services sociaux, manque de structures d'accueil... L'officine reste ouverte, accessible et sans barriere administrative. Une victime de violences conjugales n'a pas a justifier sa venue chez toi.\n\nLe Memo de Vie est un outil qui existe et qui peut etre mis a disposition en officine. Il s'inscrit dans une demarche plus large de pharmacie engagee dans la lutte contre les violences intra-familiales, un sujet de sante publique majeur.\n\nCa te rappelle quelque chose ? Peut-etre la pharmacie de reference, les entretiens motivationnels, l'accompagnement des patients chroniques. La pharmacie de 2026 n'est plus seulement un point de dispensation : c'est un maillon du parcours humain.\n\nEt c'est une bonne nouvelle a souligner : la profession est reconnue comme acteur de premier recours sur des sujets aussi sensibles. C'est une valorisation concrete du role du pharmacien, au-dela des chiffres de ventes et des taux de substitution.\n\nDemain matin, un petit geste : informe ton equipe de l'existence du Memo de Vie. Une affiche dans l'espace de confidentialite, un reflexe de questionnement doux si une personne semble en detresse. Parfois, c'est tout ce qu'il faut pour que quelqu'un ose parler."
+    },
+    {
+      "id": "actu_2026_09_18_2",
+      "date": "2026-09-18",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "IPO biotech a 350 millions de dollars : le financement de l'innovation repart fort en 2026",
+      "resume": "Electra Biosiences leve 350 millions de dollars en bourse. C'est la douzieme biotech en 2026 a franchir la barre des 300 millions en IPO, un niveau qui rappelle le pic de 2021. Le signal est clair : les investisseurs remettent la main a la poche sur la R&D.",
+      "source": "BioPharma Dive",
+      "source_url": "https://www.biopharmadive.com/news/electra-biotech-ipo-price-secondary-hlh/830698/",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/img_actu_2026_09_18_2.jpg",
+      "tags": [
+        "recherche",
+        "innovation",
+        "financement",
+        "ema",
+        "pipeline"
+      ],
+      "full_text": "Le robinet du financement biotech s'est rouvre. Et pas qu'un peu.\n\nElectra Biosciences vient de lever 350 millions de dollars lors de son introduction en bourse, selon BioPharma Dive. Ce qui est marquant, c'est pas juste le chiffre en lui-meme : c'est le contexte. En 2026, une douzaine de biotechs ont deja leve 300 millions de dollars ou plus via des IPO. Un niveau qu'on n'avait pas vu depuis le pic de 2021, l'annee des licornes ARNm et des pipelines Covid a tout va.\n\nPourquoi c'est important pour toi, pharmacien d'officine en France ? Parce que les molecules qui arriveront sur ton comptoir dans 5 a 10 ans, elles se financent MAINTENANT. Une IPO reussie en 2026, c'est potentiellement un AMM en 2030 ou 2032, avec une mise sur le marche europeen dans la foulee.\n\nCe rebond du financement biotech arrive apres deux ans de vaches maigres. Entre 2022 et 2024, la hausse des taux et la defiance des investisseurs avaient provoque un serieux coup de frein sur les levees de fonds. Beaucoup de programmes avaient ete retardes, voire abandonnes. Le retour des grandes IPO en 2026 signifie que les pipelines vont se regarnir.\n\nEt concretement, les domaines les plus finances en ce moment ? L'oncologie, les maladies rares, les therapeutiques a base d'ARNm et les approches d'immunologie de pointe. Des segments ou les besoins non couverts sont encore enormes et ou les prix de lancement sont historiquement eleves.\n\nCe que ca change pas immediatement au comptoir demain matin ? Rien ou presque. Mais garder un oeil sur ces mouvements de financement, c'est anticiper les grandes tendances therapeutiques de la prochaine decennie. Aujourd'hui, un bailleur de fonds signe un cheque. Dans quelques annees, tu dispenses la molecule."
+    },
+    {
+      "id": "actu_2026_09_18_1",
+      "date": "2026-09-18",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "Beyfortus vs Abrysvo : l'ANSM tire la sonnette d'alarme sur les confusions",
+      "resume": "La campagne RSV vient de s'ouvrir et les erreurs medicamenteuses entre Beyfortus et Abrysvo sont deja au rendez-vous. L'ANSM appelle les pros de sante a la vigilance. Au comptoir, c'est toi la derniere ligne de defense.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/beyfortus-et-abrysvo-des-erreurs-medicamenteuses-persistantes",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_09_18_1.jpg",
+      "tags": [
+        "ansm",
+        "vaccination",
+        "rsv",
+        "securite",
+        "officine"
+      ],
+      "full_text": "La campagne de prevention contre les infections respiratoires syncytiales (VRS) vient de s'ouvrir en metropole. Et l'ANSM sort directement le drapeau rouge.\n\nLe probleme ? Les erreurs medicamenteuses entre Beyfortus (nirsevimab, anticorps monoclonal pour le nourrisson) et Abrysvo (vaccin RSV pour la femme enceinte ou les seniors) sont encore trop nombreuses. Deux produits, deux mecanismes d'action, deux populations cibles. Et pourtant, la confusion persiste.\n\nEt devinez quoi ? Ce n'est pas une premiere. L'ANSM avait deja alerte la saison derniere. Rebelote en 2026. Ca ne rigole pas : administrer le mauvais produit a la mauvaise personne, c'est une erreur medicamenteuse grave avec des consequences directes sur la securite du patient.\n\nConcrètement, Beyfortus est indique chez le nourrisson et le jeune enfant pour une immunisation passive : c'est un anticorps, pas un vaccin. Il ne genere pas de reponse immunitaire active. Abrysvo, lui, est un vaccin : il est indique chez la femme enceinte (pour proteger le nouveau-ne via transfert placentaire) et chez les adultes de 60 ans et plus.\n\nLes sources de confusion sont multiples : noms proches dans les systemes de gestion, conditionnements similaires, prescriptions parfois ambigues. Un cocktail explosif en periode de rush automnal.\n\nTa mission au comptoir : verifier systematiquement l'indication, l'identite du patient et la coherence de l'ordonnance avant toute dispensation. C'est le moment de briefer toute l'equipe, preparateurs inclus. Une fiche memo visible en zone de dispensation, c'est pas du luxe.\n\nL'ANSM met les professionnels de sante devant leurs responsabilites. A toi de relayer le message en interne. La campagne RSV, c'est une opportunite de valoriser le role du pharmacien dans la securisation du parcours vaccinal. Pas la peine de la griller avec une confusion evitable."
+    },
+    {
+      "id": "lsv_2026_09_18",
+      "date": "2026-09-18",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? On traitait les crises d'asthme avec du café noir très serré",
+      "resume": "Avant les bronchodilatateurs et les inhalateurs, les médecins prescrivaient littéralement du café fort pour calmer les crises d'asthme. Et ce n'était pas du folklore : il y avait une vraie chimie derrière. La caféine et la théophylline, ça joue dans la même cour.",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_09_18.jpg",
+      "tags": [
+        "histoire",
+        "pharmacologie",
+        "asthme",
+        "plante",
+        "chimie"
+      ],
+      "full_text": "On est en 1859. Un médecin anglais observe que ses patients asthmatiques semblent aller mieux après avoir bu plusieurs tasses de café très fort. Il ne rêve pas. Il note, il compare, il publie. Et la pratique, elle, existait déjà depuis bien avant.\n\nLe lien entre café et asthme remonte au moins au XVIIIe siècle. Hyde Salter, médecin londonien et lui-même asthmatique, le documente avec précision en 1859 dans son traité « On Asthma : Its Pathology and Treatment ». Sa prescription personnelle ? Plusieurs tasses de café corsé dès les premiers signes de crise. Il décrit un soulagement net, quasi immédiat.\n\nEt le twist chimique, il est beau : la caféine est structurellement très proche de la théophylline, une molécule que les pharmaciens ont bien connue. La théophylline est un bronchodilatateur puissant, utilisé massivement dans les années 70-80 contre l'asthme. Elle appartient à la même famille que la caféine : les xanthines. Autrement dit, le café agissait par un mécanisme réellement pharmacologique, pas par suggestion.\n\nDes études des années 1980-90 ont d'ailleurs confirmé que consommer du café améliore modestement la fonction respiratoire pendant 2 à 4 heures. La FDA américaine a même intégré cette donnée dans ses recommandations de dépistage spirométrique : il faut éviter le café avant un test pulmonaire, justement parce qu'il fausse les résultats vers le haut.\n\nLa théophylline, elle, a progressivement cédé sa place aux bêta-2 agonistes et aux corticoïdes inhalés, à cause de sa fenêtre thérapeutique étroite et de ses effets secondaires. Mais elle reste encore prescrite aujourd'hui dans certaines formes sévères d'asthme ou de BPCO.\n\nAlors la prochaine fois qu'un patient asthmatique te dit qu'il boit beaucoup de café, ne ricane pas trop vite. Ses ancêtres du XVIIIe avaient peut-être compris quelque chose que la chimie moderne a juste formalisé."
+    },
+    {
       "id": "actu_2026_09_17_5",
       "date": "2026-09-17",
       "type": "actu",
@@ -16935,6 +17060,6 @@
       ]
     }
   ],
-  "count": 816,
-  "updated_at": "2026-09-17T04:07:26.214934+02:00"
+  "count": 822,
+  "updated_at": "2026-09-18T04:07:39.206117+02:00"
 }
