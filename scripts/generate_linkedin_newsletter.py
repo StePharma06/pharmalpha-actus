@@ -567,7 +567,16 @@ Genere le post complet, pret a coller sur LinkedIn, en respectant EXACTEMENT la 
         messages=[{"role": "user", "content": prompt}],
     )
 
-    return _strip_emdash(response.content[0].text.strip())
+    post = _strip_emdash(response.content[0].text.strip())
+
+    # Accroche de marque en tete du post, imposee par le CODE et non par le prompt :
+    # une consigne au modele aurait derive d'une semaine sur l'autre, alors que cette
+    # ligne doit etre strictement identique a chaque parution. LinkedIn n'accepte pas
+    # de balises dans le feed : le gras passe donc par les caracteres Unicode gras.
+    accroche = _unicode_bold("Pharm'Actus : notre newsletter Pharma")
+    if not post.startswith(accroche):
+        post = accroche + "\n\n" + post
+    return post
 
 
 def fetch_image_as_base64(url):
@@ -819,6 +828,25 @@ def _extract_newsletter_parts(markdown):
     if not (titre and corps):
         return None
     return {"titre": titre, "soustitre": soustitre, "corps": corps, "hashtags": hashtags}
+
+
+def _unicode_bold(text):
+    """Convertit en gras sans-serif Unicode (le seul 'gras' que LinkedIn accepte).
+
+    Les lettres accentuees n'existent pas dans ce bloc Unicode : elles sont
+    laissees telles quelles, ce qui est le rendu attendu et non un defaut.
+    """
+    out = []
+    for ch in text:
+        if "a" <= ch <= "z":
+            out.append(chr(0x1D5EE + ord(ch) - ord("a")))
+        elif "A" <= ch <= "Z":
+            out.append(chr(0x1D5D4 + ord(ch) - ord("A")))
+        elif "0" <= ch <= "9":
+            out.append(chr(0x1D7EC + ord(ch) - ord("0")))
+        else:
+            out.append(ch)
+    return "".join(out)
 
 
 def _is_bold_heading(line):
