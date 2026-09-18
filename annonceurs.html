@@ -27,24 +27,43 @@
   a { color: var(--orange-text); }
   .wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
 
-  /* ---------- En-tete ---------- */
-  .top { background: linear-gradient(115deg, var(--dark) 0%, var(--dark-2) 55%, var(--dark) 100%); color: #fff; padding: 46px 0 52px; }
-  /* Aucun logo Pharm'Actus n'a de fond transparent : pose sur l'en-tete sombre, il
-     formerait un rectangle blanc disgracieux. On l'assume en pastille blanche. */
-  .brand { display: inline-flex; background: #fff; border-radius: 10px;
-    padding: 9px 16px; margin-bottom: 26px; }
-  .brand img { height: 26px; width: auto; display: block; }
+  /* ---------- Bandeau du site, repris a l'identique d'index.html ----------
+     La page reste dans la continuite visuelle de Pharm'Actus : meme nav noire
+     Pharm'Alpha (injectee par assets/site-nav.js), meme barre blanche avec le
+     logo. Seuls les boutons de droite changent, les actions du fil d'actus
+     (Imprimer, Archives, Partager) n'ayant plus d'objet sur cette page. */
+  .header { background: #fff; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+  body.pa-has-nav #actusHeader { position: sticky !important; top: var(--actus-top, 64px) !important; z-index: 100; }
+  .header-inner { max-width: 1200px; margin: 0 auto; padding: 12px 24px; display: flex;
+    align-items: center; justify-content: space-between; gap: 16px; }
+  .logo-area { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+  .logo-link { display: flex; align-items: center; text-decoration: none; }
+  .logo-area img { height: 50px; width: auto; display: block; }
+  .header-right { display: flex; align-items: center; gap: 8px; }
+  .header-link { display: flex; align-items: center; gap: 6px; color: var(--ink-soft);
+    text-decoration: none; font-size: 13px; font-weight: 500; padding: 7px 14px;
+    border-radius: var(--radius-pill); border: 1px solid var(--border); transition: all .2s;
+    background: #fff; font-family: inherit; cursor: pointer; }
+  .header-link:hover { border-color: var(--orange); color: var(--orange); background: var(--orange-light); }
+  .header-link svg { width: 16px; height: 16px; flex-shrink: 0; }
+  .header-link-primary { background: var(--orange); color: #fff; border-color: var(--orange); font-weight: 600; }
+  .header-link-primary:hover { background: var(--orange-hover); border-color: var(--orange-hover); color: #fff; }
+
+  /* ---------- Accroche ---------- */
+  .top { background: #fff; border-bottom: 1px solid var(--border); padding: 42px 0 46px; }
   .eyebrow { display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: .14em;
-    text-transform: uppercase; color: var(--orange); border: 1px solid rgba(255,145,77,.35);
-    border-radius: var(--radius-pill); padding: 5px 13px; margin-bottom: 18px; }
+    text-transform: uppercase; color: var(--orange-text); background: var(--orange-light);
+    border-radius: var(--radius-pill); padding: 5px 13px; margin-bottom: 16px; }
   .top h1 { margin: 0 0 14px; font-size: 34px; line-height: 1.18; font-weight: 800; letter-spacing: -.4px; }
-  .top p { margin: 0; font-size: 17px; color: #cfcfd8; max-width: 620px; }
-  .top .cta { display: inline-block; margin-top: 26px; background: var(--orange); color: var(--dark);
+  .top p { margin: 0; font-size: 17px; color: var(--ink-soft); max-width: 620px; }
+  .top .cta { display: inline-block; margin-top: 24px; background: var(--orange); color: #fff;
     font-weight: 800; font-size: 15px; text-decoration: none; padding: 14px 26px; border-radius: var(--radius-pill); }
   .top .cta:hover { background: var(--orange-hover); }
 
   /* ---------- Chiffres ---------- */
-  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; margin: -30px 0 0; }
+  /* Le decalage negatif faisait chevaucher les cartes sur l'ancien bandeau sombre.
+     Le bandeau est desormais clair et borde : on les pose simplement dessous. */
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; margin: 28px 0 0; }
   .stat { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 16px; box-shadow: var(--shadow); }
   .stat b { display: block; font-size: 28px; font-weight: 800; letter-spacing: -.6px; color: var(--ink); }
   .stat span { display: block; font-size: 12.5px; color: var(--ink-soft); margin-top: 2px; }
@@ -119,21 +138,46 @@
     .top h1 { font-size: 26px; }
     .grid, .offers { grid-template-columns: 1fr; }
     .form-card { padding: 18px; }
+    /* Meme comportement que sur le fil d'actus : logo centre, boutons dessous. */
+    .header-inner { flex-direction: column; align-items: center; gap: 12px; }
+    .logo-area { width: 100%; justify-content: center; }
+    .logo-area img { height: 44px; }
+    .header-right { width: 100%; justify-content: center; flex-wrap: wrap; gap: 6px; }
+    .header-link { padding: 6px 12px; font-size: 12px; }
   }
 </style>
 </head>
 <body>
 
-<header class="top">
+<header class="header" id="actusHeader">
+  <div class="header-inner">
+    <div class="logo-area">
+      <a href="https://pharmalpha.fr/actus" class="logo-link" aria-label="Pharm'Actus, retour au fil d'actualité">
+        <img src="assets/logo_pharmactus.png" alt="Pharm'Actus">
+      </a>
+    </div>
+    <div class="header-right">
+      <a href="https://pharmalpha.fr/actus" class="header-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Revenir à Pharm'Actus
+      </a>
+      <a href="#demande" class="header-link header-link-primary">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Déposer ma demande
+      </a>
+    </div>
+  </div>
+</header>
+
+<section class="top">
   <div class="wrap">
-    <span class="brand"><img src="assets/logo_pharmactus.png" alt="Pharm'Actus"></span>
     <span class="eyebrow">Espace annonceurs</span>
     <h1>Parlez aux pharmaciens, chaque matin, dans ce qu'ils lisent déjà.</h1>
     <p>Pharm'Actus est une newsletter quotidienne d'actualité professionnelle. Un emplacement
        publicitaire est réservé aux annonceurs, en tête de parution. Il peut être le vôtre.</p>
     <a class="cta" href="#demande">Déposer ma demande</a>
   </div>
-</header>
+</section>
 
 <div class="wrap">
 
@@ -336,6 +380,26 @@
   </footer>
 </div>
 
+<!-- Nav principale pharmalpha.fr, la meme que sur le fil d'actus. -->
+<script defer src="assets/site-nav.js"></script>
+<script>
+(function () {
+  // La nav injectee par site-nav.js est fixe et retrecit au scroll. On reporte sa
+  // hauteur reelle dans --actus-top pour que la barre Pharm'Actus reste collee
+  // juste dessous, exactement comme sur index.html.
+  function syncTop() {
+    var nav = document.getElementById("paSiteNav");
+    var hdr = document.getElementById("actusHeader");
+    if (!nav || !hdr) return;
+    hdr.style.setProperty("--actus-top", Math.round(nav.getBoundingClientRect().height) + "px");
+  }
+  window.addEventListener("scroll", syncTop, { passive: true });
+  window.addEventListener("resize", syncTop);
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", function () { syncTop(); setTimeout(syncTop, 150); });
+  } else { syncTop(); setTimeout(syncTop, 150); }
+})();
+</script>
 <script>
 (function () {
   "use strict";
