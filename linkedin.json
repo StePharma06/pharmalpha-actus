@@ -1,0 +1,5 @@
+{
+  "abonnes": 7790,
+  "maj": "2026-09-18",
+  "_note": "Compteur d'abonnes de la newsletter LinkedIn. NON automatisable : LinkedIn n'expose aucune API publique pour ce chiffre et sert un mur de connexion sur la page publique de la newsletter (verifie le 18/09/2026, reponse HTTP 200 mais aucun compteur dans le HTML). Ce fichier est donc la source unique : mettre a jour 'abonnes' et 'maj' a la main, le site et les pages commerciales suivent automatiquement."
+}
