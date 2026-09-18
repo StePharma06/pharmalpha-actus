@@ -1,5 +1,5 @@
 {
- "genere_le": "2026-09-18T09:24:03+02:00",
+ "genere_le": "2026-09-18T09:40:31+02:00",
  "liste_brevo": 5,
  "abonnes_total": 1201,
  "abonnes_hebdo": 303,
@@ -11,13 +11,15 @@
  "semaine": {
   "du": "2026-09-11",
   "au": "2026-09-18",
+  "envois": 8614,
   "delivres": 7592,
-  "ouvertures": 2975,
-  "ouvertures_uniques": 2125,
-  "clics": 3901,
-  "clics_uniques": 671,
+  "taux_delivrabilite_pct": 88.1,
+  "ouvertures": 2987,
+  "ouvertures_uniques": 2129,
+  "clics": 3907,
+  "clics_uniques": 673,
   "taux_ouverture_pct": 28.0,
-  "taux_clic_pct": 8.8,
+  "taux_clic_pct": 8.9,
   "ctor_pct": 31.6,
   "top_articles": [
    {
@@ -41,7 +43,7 @@
     "titre": "Les kinés prescrivent des antalgiques : ce que ça change au comptoir",
     "date": "2026-09-17",
     "categorie": "pharma_france",
-    "clics": 104,
+    "clics": 105,
     "lecteurs": 63
    },
    {
@@ -105,11 +107,13 @@
  "mois": {
   "du": "2026-08-19",
   "au": "2026-09-18",
+  "envois": 31773,
   "delivres": 28089,
-  "ouvertures": 11526,
-  "ouvertures_uniques": 8153,
-  "clics": 13949,
-  "clics_uniques": 2505,
+  "taux_delivrabilite_pct": 88.4,
+  "ouvertures": 11537,
+  "ouvertures_uniques": 8158,
+  "clics": 13954,
+  "clics_uniques": 2507,
   "taux_ouverture_pct": 29.0,
   "taux_clic_pct": 8.9,
   "ctor_pct": 30.7,
@@ -183,7 +187,7 @@
     "titre": "Les kinés prescrivent des antalgiques : ce que ça change au comptoir",
     "date": "2026-09-17",
     "categorie": "pharma_france",
-    "clics": 104,
+    "clics": 105,
     "lecteurs": 63
    },
    {
@@ -199,12 +203,14 @@
  "cumul": {
   "du": "2026-01-01",
   "au": "2026-09-18",
+  "envois": 121359,
   "delivres": 110421,
-  "ouvertures": 44634,
-  "ouvertures_uniques": 30860,
-  "clics": 47668,
-  "clics_uniques": 8581,
-  "taux_ouverture_pct": 27.9,
+  "taux_delivrabilite_pct": 91.0,
+  "ouvertures": 44645,
+  "ouvertures_uniques": 30864,
+  "clics": 47673,
+  "clics_uniques": 8584,
+  "taux_ouverture_pct": 28.0,
   "taux_clic_pct": 7.8,
   "ctor_pct": 27.8,
   "top_articles": [
