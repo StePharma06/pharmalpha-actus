@@ -182,10 +182,10 @@
 <div class="wrap">
 
   <div class="stats" id="stats">
-    <div class="stat hero"><b id="sReach">...</b><span id="sReachLabel">lecteurs touchés</span></div>
-    <div class="stat"><b id="sOpen">...</b><span>ouvrent la newsletter</span></div>
-    <div class="stat"><b id="sCtor">...</b><span>de ceux-là cliquent ensuite (CTOR)</span></div>
-    <div class="stat"><b id="sClicks">...</b><span id="sClicksLabel">clics uniques</span></div>
+    <div class="stat hero"><b id="sReach">...</b><span id="sReachLabel">inscrits</span></div>
+    <div class="stat"><b id="sDeliv">...</b><span>reçoivent l'email en boîte</span></div>
+    <div class="stat"><b id="sOpen">...</b><span>l'ouvrent</span></div>
+    <div class="stat"><b id="sClickRate">...</b><span id="sClicksLabel">cliquent sur un article</span></div>
   </div>
   <p class="hint" id="statsNote" style="margin-top:10px;">Chiffres mesurés, actualisés chaque jour.</p>
 
@@ -424,20 +424,28 @@
       if (typeof reach === "number") {
         $("sReach").textContent = fmt(reach);
         $("sReachLabel").textContent = (typeof d.abonnes_diffusion === "number")
-          ? "lecteurs touchés par l'encart" : "abonnés à la newsletter";
+          ? "inscrits, touchés par l'encart" : "inscrits à la newsletter";
       }
-      if (c.ctor_pct != null) $("sCtor").textContent = String(c.ctor_pct).replace(".", ",") + " %";
-      if (c.taux_ouverture_pct != null) $("sOpen").textContent = String(c.taux_ouverture_pct).replace(".", ",") + " %";
-      // L'encart se vend au MOIS : un cumul depuis janvier ne dit rien a un
-      // annonceur qui veut estimer ce qu'il achete. On affiche donc la fenetre
-      // 30 jours, avec repli sur le cumul tant que le champ n'existe pas.
-      var m = d.mois;
-      if (m && m.clics_uniques != null) {
-        $("sClicks").textContent = fmt(m.clics_uniques);
-        $("sClicksLabel").textContent = "clics uniques sur 30 jours";
-      } else if (c.clics_uniques != null) {
-        $("sClicks").textContent = fmt(c.clics_uniques);
-        $("sClicksLabel").textContent = "clics uniques depuis le " + (d.cumul_depuis || "1er janvier");
+      // L'encart se vend au MOIS : la fenetre 30 jours parle a un annonceur,
+      // pas un cumul depuis janvier. Repli sur le cumul si le champ manque.
+      var m = (d.mois && d.mois.delivres) ? d.mois : c;
+      var sur30 = (m === d.mois);
+      var pct = function (v) { return String(v).replace(".", ",") + " %"; };
+
+      // La delivrabilite n'apparait qu'au prochain run du dashboard : tant qu'elle
+      // manque, on retire la tuile plutot que d'afficher des points de suspension.
+      if (m.taux_delivrabilite_pct != null) {
+        $("sDeliv").textContent = pct(m.taux_delivrabilite_pct);
+      } else {
+        $("sDeliv").parentNode.hidden = true;
+      }
+      if (m.taux_ouverture_pct != null) $("sOpen").textContent = pct(m.taux_ouverture_pct);
+      if (m.taux_clic_pct != null) {
+        $("sClickRate").textContent = pct(m.taux_clic_pct);
+        $("sClicksLabel").textContent = "cliquent sur un article"
+          + (m.clics_uniques != null
+              ? ", soit " + fmt(m.clics_uniques) + (sur30 ? " clics sur 30 jours" : " clics cumulés")
+              : "");
       }
     })
     .catch(function () {

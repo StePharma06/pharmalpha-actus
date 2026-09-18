@@ -188,12 +188,15 @@ def _iterate_chunks(start_date, end_date, chunk_days=89):
 
 def get_stats_for_period(api_key, start_date, end_date):
     """Fetch all stats over period (chunks by 90j to respect Brevo API limit)."""
-    delivered = opens = unique_opens = clicks = unique_clicks = 0
+    requests = delivered = opens = unique_opens = clicks = unique_clicks = 0
     article_clicks = defaultdict(int)
     article_unique_clickers = defaultdict(set)
 
     for chunk_start, chunk_end in _iterate_chunks(start_date, end_date):
         report = get_aggregated_report(api_key, chunk_start, chunk_end)
+        # "requests" = emails REMIS A Brevo. Le rapport de delivrabilite montre
+        # a un annonceur combien arrivent vraiment en boite, bounces deduits.
+        requests += report.get("requests", 0)
         delivered += report.get("delivered", 0)
         opens += report.get("opens", 0)
         unique_opens += report.get("uniqueOpens", 0)
@@ -218,7 +221,9 @@ def get_stats_for_period(api_key, start_date, end_date):
     )[:15]
 
     return {
+        "requests": requests,
         "delivered": delivered,
+        "delivery_rate": (delivered / requests * 100) if requests else 0,
         "opens": opens,
         "unique_opens": unique_opens,
         "clicks": clicks,
@@ -361,7 +366,9 @@ def _serialize_period(stats, articles_map, top_n=10):
     return {
         "du": stats["start_date"],
         "au": stats["end_date"],
+        "envois": stats.get("requests", 0),
         "delivres": stats["delivered"],
+        "taux_delivrabilite_pct": round(stats.get("delivery_rate", 0), 1),
         "ouvertures": stats["opens"],
         "ouvertures_uniques": stats["unique_opens"],
         "clics": stats["clicks"],
