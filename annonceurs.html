@@ -183,9 +183,9 @@
 
   <div class="stats" id="stats">
     <div class="stat hero"><b id="sReach">...</b><span id="sReachLabel">lecteurs touchés</span></div>
-    <div class="stat"><b id="sCtor">...</b><span>des lecteurs qui ouvrent cliquent ensuite (CTOR)</span></div>
-    <div class="stat"><b id="sOpen">...</b><span>taux d'ouverture</span></div>
-    <div class="stat"><b id="sClicks">...</b><span>clics uniques cumulés</span></div>
+    <div class="stat"><b id="sOpen">...</b><span>ouvrent la newsletter</span></div>
+    <div class="stat"><b id="sCtor">...</b><span>de ceux-là cliquent ensuite (CTOR)</span></div>
+    <div class="stat"><b id="sClicks">...</b><span id="sClicksLabel">clics uniques</span></div>
   </div>
   <p class="hint" id="statsNote" style="margin-top:10px;">Chiffres mesurés, actualisés chaque jour.</p>
 
@@ -428,7 +428,17 @@
       }
       if (c.ctor_pct != null) $("sCtor").textContent = String(c.ctor_pct).replace(".", ",") + " %";
       if (c.taux_ouverture_pct != null) $("sOpen").textContent = String(c.taux_ouverture_pct).replace(".", ",") + " %";
-      if (c.clics_uniques != null) $("sClicks").textContent = fmt(c.clics_uniques);
+      // L'encart se vend au MOIS : un cumul depuis janvier ne dit rien a un
+      // annonceur qui veut estimer ce qu'il achete. On affiche donc la fenetre
+      // 30 jours, avec repli sur le cumul tant que le champ n'existe pas.
+      var m = d.mois;
+      if (m && m.clics_uniques != null) {
+        $("sClicks").textContent = fmt(m.clics_uniques);
+        $("sClicksLabel").textContent = "clics uniques sur 30 jours";
+      } else if (c.clics_uniques != null) {
+        $("sClicks").textContent = fmt(c.clics_uniques);
+        $("sClicksLabel").textContent = "clics uniques depuis le " + (d.cumul_depuis || "1er janvier");
+      }
     })
     .catch(function () {
       /* Jamais de "undefined" sur une page commerciale : on retire le bloc. */

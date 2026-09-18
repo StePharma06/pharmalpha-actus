@@ -348,7 +348,7 @@
             </div>
             <div class="partner-stat-card">
               <span class="partner-stat-number" id="statClicks">...</span>
-              <span class="partner-stat-label">clics uniques cumulés depuis <span id="statSinceDateB">...</span></span>
+              <span class="partner-stat-label" id="statClicksLabel">clics uniques sur 30 jours</span>
             </div>
           </div>
         </div>
@@ -544,10 +544,18 @@
 
       setRequiredPercent('statCtor', cumul.ctor_pct);
       setRequiredPercent('statOpenRate', cumul.taux_ouverture_pct);
-      setRequiredNumber('statClicks', cumul.clics_uniques);
+      // L'encart se vend au MOIS : la fenetre 30 jours parle a un annonceur,
+      // pas un cumul depuis janvier. Repli sur le cumul si le champ manque.
+      var mois = data.mois;
+      if (mois && typeof mois.clics_uniques === 'number') {
+        setRequiredNumber('statClicks', mois.clics_uniques);
+      } else {
+        setRequiredNumber('statClicks', cumul.clics_uniques);
+        setRequiredText(['statClicksLabel'], 'clics uniques depuis le ' + sinceDate);
+      }
       setRequiredNumber('statDelivered', cumul.delivres);
       setRequiredNumber('statNewSubs', data.nouveaux_cumul);
-      setRequiredText(['statSinceDate', 'statSinceDateB', 'statSinceDateC', 'statSinceDateD'], sinceDate);
+      setRequiredText(['statSinceDate', 'statSinceDateC', 'statSinceDateD'], sinceDate);
 
       toggleOptionalNumber('statArticlesWrap', 'statArticles', data.articles_publies, ['statSinceDateD'], sinceDate);
       toggleOptionalNumber('statHebdoWrap', 'statHebdo', data.abonnes_hebdo, null, null);

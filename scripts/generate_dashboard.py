@@ -34,6 +34,7 @@ BREVO_LIST_ID = 5
 BREVO_LIST_HEBDO = 8  # abonnes frequence hebdomadaire (lundi)
 BREVO_API_BASE = "https://api.brevo.com/v3"
 WEEK_DAYS = 7
+MONTH_DAYS = 30  # fenetre glissante 30j : la maille commerciale (abonnement mensuel)
 CUMUL_START_DATE = "2026-01-01"  # Avant le lancement de Pharm'Actus
 
 DASHBOARD_URL = "https://actus.pharmalpha.fr/dashboard.html"
@@ -297,6 +298,12 @@ def build_dashboard(api_key):
 
     print("\n[3/6] Stats semaine passee (7j)...")
     week_stats = get_stats_for_period(api_key, week_start, end_date)
+    # Fenetre 30 jours glissants. Sert au dossier partenaire et a la page
+    # annonceurs : l'encart se vend au MOIS, un cumul depuis janvier ne dit rien
+    # a un annonceur qui veut estimer ce qu'il achete (retour Stephen 18/09).
+    month_start = (today - timedelta(days=MONTH_DAYS)).strftime("%Y-%m-%d")
+    month_stats = get_stats_for_period(api_key, month_start, end_date)
+    print(f"  30 jours : {month_stats['delivered']} delivres, {month_stats['unique_clicks']} clics uniques")
     print(f"  {week_stats['delivered']} delivres, {week_stats['unique_opens']} ouvertures, {week_stats['unique_clicks']} clics")
 
     print("\n[4/6] Stats cumulees (depuis debut)...")
@@ -325,6 +332,7 @@ def build_dashboard(api_key):
     write_dashboard_json(
         subscribers=subscribers,
         subscribers_hebdo=subscribers_hebdo,
+        month_stats=month_stats,
         new_week=new_week,
         new_cumul=new_cumul,
         week_stats=week_stats,
@@ -365,7 +373,7 @@ def _serialize_period(stats, articles_map, top_n=10):
     }
 
 
-def write_dashboard_json(subscribers, new_week, new_cumul, week_stats, cumul_stats, articles_map, subscribers_hebdo=0):
+def write_dashboard_json(subscribers, new_week, new_cumul, week_stats, cumul_stats, articles_map, subscribers_hebdo=0, month_stats=None):
     """Ecrit dashboard.json : memes KPIs que l'ancien email hebdo, consommes par /admin."""
     payload = {
         "genere_le": datetime.now(PARIS_TZ).isoformat(timespec="seconds"),
@@ -378,6 +386,7 @@ def write_dashboard_json(subscribers, new_week, new_cumul, week_stats, cumul_sta
         "nouveaux_cumul": new_cumul,
         "cumul_depuis": CUMUL_START_DATE,
         "semaine": _serialize_period(week_stats, articles_map),
+        "mois": _serialize_period(month_stats, articles_map) if month_stats else None,
         "cumul": _serialize_period(cumul_stats, articles_map),
     }
     DASHBOARD_JSON.write_text(
