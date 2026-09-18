@@ -443,17 +443,21 @@ Histoire complete sur Pharm'Actus : [URL Pharm'Actus du LSV]
 
 𝗧𝘂 𝘃𝗲𝘂𝘅 𝗹'𝗮𝗰𝘁𝘂 𝗽𝗵𝗮𝗿𝗺𝗮 𝗰𝗵𝗮𝗾𝘂𝗲 𝗺𝗮𝘁𝗶𝗻 ?
 
-Pour ne rien manquer chaque jour, abonne-toi a 𝗣𝗵𝗮𝗿𝗺'𝗔𝗰𝘁𝘂𝘀 → 𝗮𝗰𝘁𝘂𝘀.𝗽𝗵𝗮𝗿𝗺𝗮𝗹𝗽𝗵𝗮.𝗳𝗿
+Pour ne rien manquer chaque jour, abonne-toi à 𝗣𝗵𝗮𝗿𝗺'𝗔𝗰𝘁𝘂𝘀 → 𝗮𝗰𝘁𝘂𝘀.𝗽𝗵𝗮𝗿𝗺𝗮𝗹𝗽𝗵𝗮.𝗳𝗿
 
 5 actus pharma + 1 "Saviez-vous ?" tous les matins, en 2 minutes de lecture.
 
-𝗘𝘁 𝘁𝗼𝗶, 𝗾𝘂𝗲𝗹𝗹𝗲 𝗮𝗰𝘁𝘂 𝘁'𝗮 𝗹𝗲 𝗽𝗹𝘂𝘀 𝗶𝗻𝘁𝗲𝗿𝗽𝗲𝗹𝗹𝗲 𝗰𝗲𝘁𝘁𝗲 𝘀𝗲𝗺𝗮𝗶𝗻𝗲 ?
+𝗘𝘁 𝘁𝗼𝗶, 𝗾𝘂𝗲𝗹𝗹𝗲 𝗮𝗰𝘁𝘂 𝘁'𝗮 𝗹𝗲 𝗽𝗹𝘂𝘀 𝗶𝗻𝘁𝗲𝗿𝗽𝗲𝗹𝗹é𝗲 𝗰𝗲𝘁𝘁𝗲 𝘀𝗲𝗺𝗮𝗶𝗻𝗲 ?
 
-Reponds en commentaire, je lis tout.
+Réponds en commentaire, je lis tout.
 
 
-Pharm'Actus est produit quotidiennement avec l'assistance d'outils d'intelligence artificielle, sous la responsabilite editoriale de Stephen Robert, Docteur en Pharmacie. Une erreur ou une imprecision vous saute aux yeux ? Signalez-la a stephen@pharmalpha.fr, elle sera corrigee.
+Pharm'Actus est produit quotidiennement avec l'assistance d'outils d'intelligence artificielle, sous la responsabilité éditoriale de Stephen Robert, Docteur en Pharmacie. Une erreur ou une imprécision vous saute aux yeux ? Signalez-la à stephen@pharmalpha.fr, elle sera corrigée.
 ```
+
+ACCENTS : reproduis TOUS les accents du gabarit tels quels. Le gras Unicode n'a pas
+de lettres accentuees, les accents restent donc en caracteres normaux au milieu du
+gras : c'est voulu, ne les supprime jamais pour "uniformiser".
 
 IMPORTANT : le dernier paragraphe (mention IA + responsabilite editoriale) doit etre
 reproduit MOT POUR MOT, sans le reformuler ni le raccourcir. C'est une mention de
@@ -817,6 +821,30 @@ def _extract_newsletter_parts(markdown):
     return {"titre": titre, "soustitre": soustitre, "corps": corps, "hashtags": hashtags}
 
 
+def _is_bold_heading(line):
+    """Vrai si la ligne est un TITRE de section ecrit en gras Unicode.
+
+    LinkedIn n'accepte pas de balises dans son editeur : les titres sont donc
+    ecrits avec les caracteres mathematiques gras (U+1D400 et U+1D5D4). Une ligne
+    COURTE et majoritairement composee de ces caracteres est un titre de section,
+    pas du corps de texte. Une amorce en gras suivie de texte normal sur la meme
+    ligne ("Demain au comptoir : ...") reste en dessous du seuil et n'est donc
+    jamais promue par erreur.
+    """
+    t = line.strip()
+    if not t or len(t) > 130:
+        return False
+    bold = total = 0
+    for ch in t:
+        o = ord(ch)
+        if 0x1D400 <= o <= 0x1D7FF:          # lettres et chiffres gras/italiques
+            bold += 1
+            total += 1
+        elif ch.isalnum():
+            total += 1
+    return total > 0 and bold / total >= 0.6
+
+
 def _corps_to_html(corps):
     """Rend le corps en paragraphes HTML (sauts de ligne preserves au copier-coller),
     Unicode bold conserve tel quel, **gras** -> <strong>, reperes [IMAGE 0X] stylises."""
@@ -849,9 +877,33 @@ def _corps_to_html(corps):
                 f'border-radius:6px;color:#4338ca;font-weight:700;font-size:13px;">'
                 f'\U0001F4F7 Insère ici l\'IMAGE {mimg.group(1)}</p>')
             continue
-        p = esc(para).replace("\n", "<br>")
-        p = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", p)
-        out.append(f'<p style="margin:0 0 14px;line-height:1.55;">{p}</p>')
+        lines = para.split("\n")
+
+        # Titre de section en gras Unicode (Le Saviez-vous, Ce qu'il faut retenir,
+        # Tu veux l'actu chaque matin, Et toi...) : rendu en vrai <h2> comme les
+        # titres d'actus, pour que LinkedIn applique son style "Titre" au collage.
+        # Les blocs d'actus passent avant par [[H2]], aucun conflit possible.
+        if lines and _is_bold_heading(lines[0]):
+            t = re.sub(r"\*\*([^*]+)\*\*", r"\1", esc(lines[0].strip()))
+            out.append(
+                f'<h2 style="margin:24px 0 10px;font-size:21px;line-height:1.3;'
+                f'font-weight:800;color:#111118;">{t}</h2>')
+            lines = lines[1:]
+            while lines and not lines[0].strip():
+                lines = lines[1:]
+            if not lines:
+                continue
+
+        rendered = []
+        for ln in lines:
+            e = esc(ln)
+            e = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", e)
+            # Mention de source en italique (demande Stephen 18/09) : la
+            # distingue du corps sans la faire disparaitre.
+            if ln.strip().lower().startswith("source :"):
+                e = f'<em style="color:#555;">{e}</em>'
+            rendered.append(e)
+        out.append(f'<p style="margin:0 0 14px;line-height:1.55;">' + "<br>".join(rendered) + "</p>")
     return "\n".join(out)
 
 
