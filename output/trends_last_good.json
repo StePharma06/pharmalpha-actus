@@ -1,58 +1,58 @@
 {
   "pathologies": [
     {
-      "display": "Pai allergie alimentaire pdf",
-      "delta_label": "↑ 35 900",
+      "display": "Assurance maladie fatigue chronique",
+      "delta_label": "↑ 315 300",
       "trend": "up"
     },
     {
-      "display": "Croquette anti allergie chat",
-      "delta_label": "↑ 17 050",
+      "display": "Allergie septembre",
+      "delta_label": "↑ 148 100",
       "trend": "up"
     },
     {
-      "display": "Effet de fatigue ou de critique",
-      "delta_label": "↑ 16 650",
+      "display": "Corps de ferme",
+      "delta_label": "↑ 58 100",
       "trend": "up"
     },
     {
-      "display": "Pommeau de douche vitamine c",
-      "delta_label": "↑ 10 400",
+      "display": "Medicament pour allergie",
+      "delta_label": "↑ 32 650",
       "trend": "up"
     },
     {
-      "display": "Saignement de nez et fatigue",
-      "delta_label": "↑ 9 350",
+      "display": "Carence en vitamine d",
+      "delta_label": "↑ 60",
       "trend": "up"
     }
   ],
-  "pathologies_from": "2026-09-18",
+  "pathologies_from": "2026-09-19",
   "soins": [
     {
-      "display": "Immunite innee",
-      "delta_label": "↑ 67 700",
+      "display": "La digestion cm2",
+      "delta_label": "↑ 51 600",
       "trend": "up"
     },
     {
-      "display": "Oscillo immunite",
-      "delta_label": "↑ 57 450",
+      "display": "Digestion lente que faire",
+      "delta_label": "↑ 33 650",
       "trend": "up"
     },
     {
-      "display": "Schéma digestion",
-      "delta_label": "↑ 20 150",
+      "display": "Gummies sommeil enfant",
+      "delta_label": "↑ 160",
       "trend": "up"
     },
     {
-      "display": "Lentilles digestion",
-      "delta_label": "↑ 16 050",
+      "display": "Marchand de sommeil",
+      "delta_label": "↑ 150",
       "trend": "up"
     },
     {
-      "display": "Mieux-etre-sante.fr prevention et habitu",
-      "delta_label": "↑ 250",
+      "display": "Eva douleur",
+      "delta_label": "↑ 70",
       "trend": "up"
     }
   ],
-  "soins_from": "2026-09-18"
+  "soins_from": "2026-09-19"
 }

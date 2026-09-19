@@ -1,0 +1,26 @@
+{
+  "generated_at": "2026-09-19T04:09:56.418713+02:00",
+  "run_date": "2026-09-19",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Avenant n°3, ticket modérateur, R3C : trois chantiers qui vont remodeler ta trésorerie",
+      "resume": "Convention, hausse du ticket modérateur, réforme du troisième cycle : trois dossiers réglementaires avancent simultanément cet automne. Décryptage de leur impact concret sur la rentabilité et l'organisation de ton officine.",
+      "source": "Pharm'Actus · Le Pharmacien de France – « Je n'ai pas peur de dire les choses » (18/09/2026), Le Pharmacien de France – « En toute franchise » (18/09/2026)",
+      "source_url": "https://lepharmaciendefrance.fr/je-nai-pas-peur-de-dire-les-choses/",
+      "confidence_score": 0.72,
+      "warnings": [
+        "Le contenu exact de l'article 'Je n'ai pas peur de dire les choses' (Le Pharmacien de France) n'est accessible que partiellement via le résumé RSS : le syndicat exact du président interviewé n'est pas explicitement nommé UNPF dans le résumé fourni — il est présenté comme tel par déduction du contexte éditorial de la revue (organe de l'UNPF). À vérifier sur la version complète de l'article.",
+        "La FSPF et l'USPO n'ont pas été citées comme ayant publié de position sur l'avenant n°3 spécifiquement : cette absence de prise de position publique est présentée prudemment ('à ce jour… pas encore accessibles') mais doit être vérifiée sur leurs sites officiels.",
+        "Aucun chiffre de revalorisation de l'honoraire de dispensation n'est disponible à ce stade : l'article ne chiffre volontairement pas d'impact financier hypothétique sur l'avenant n°3, conformément aux règles de rigueur financière.",
+        "Les URLs Legifrance citées sont génériques (domaine principal) car les permaliens exacts des décrets cités ne figurent pas dans les sources fournies : à compléter avec les URLs précises.",
+        "Le résumé de l'article USPO sur la R3C ne détaille pas les montants de rémunération du stagiaire 6e année : l'article recommande de télécharger le modèle sans inventer de chiffre de rémunération.",
+        "L'article 'En toute franchise' mentionne une transmission de 5 projets de décrets au conseil de la CNAM : seul le décret n°2026-858 sur les plafonds annuels est identifié avec certitude via les informations disponibles. Les 4 autres projets ne sont pas détaillés dans le résumé RSS et ne sont donc pas traités.",
+        "1 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}
