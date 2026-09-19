@@ -1,26 +1,26 @@
 {
- "genere_le": "2026-09-18T09:47:34+02:00",
+ "genere_le": "2026-09-19T09:40:28+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1201,
- "abonnes_hebdo": 303,
- "abonnes_diffusion": 1504,
- "articles_publies": 683,
- "nouveaux_7j": 35,
- "nouveaux_cumul": 1194,
+ "abonnes_total": 1204,
+ "abonnes_hebdo": 304,
+ "abonnes_diffusion": 1508,
+ "articles_publies": 688,
+ "nouveaux_7j": 34,
+ "nouveaux_cumul": 1197,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-09-11",
-  "au": "2026-09-18",
-  "envois": 8614,
-  "delivres": 7592,
+  "du": "2026-09-12",
+  "au": "2026-09-19",
+  "envois": 8640,
+  "delivres": 7610,
   "taux_delivrabilite_pct": 88.1,
-  "ouvertures": 2993,
-  "ouvertures_uniques": 2133,
-  "clics": 3910,
-  "clics_uniques": 675,
-  "taux_ouverture_pct": 28.1,
-  "taux_clic_pct": 8.9,
-  "ctor_pct": 31.6,
+  "ouvertures": 2935,
+  "ouvertures_uniques": 2080,
+  "clics": 4037,
+  "clics_uniques": 692,
+  "taux_ouverture_pct": 27.3,
+  "taux_clic_pct": 9.1,
+  "ctor_pct": 33.3,
   "top_articles": [
    {
     "id": "actu_2026_09_12_5",
@@ -43,48 +43,32 @@
     "titre": "Les kinés prescrivent des antalgiques : ce que ça change au comptoir",
     "date": "2026-09-17",
     "categorie": "pharma_france",
-    "clics": 105,
-    "lecteurs": 63
-   },
-   {
-    "id": "actu_2026_09_11_4",
-    "titre": "Wegovy et Mounjaro remboursés : 535 000 boîtes en 11 semaines, le compteur tourne vite",
-    "date": "2026-09-11",
-    "categorie": "bonne_nouvelle",
-    "clics": 102,
-    "lecteurs": 62
-   },
-   {
-    "id": "actu_2026_09_11_3",
-    "titre": "Les CAR-T cells, une révolution qui commence à peine : ce que tu vas voir arriver en officine",
-    "date": "2026-09-11",
-    "categorie": "avenir_pharma",
-    "clics": 94,
-    "lecteurs": 62
+    "clics": 109,
+    "lecteurs": 64
    },
    {
     "id": "actu_2026_09_16_1",
     "titre": "PLFSS 2027 : une pharmacie sur deux perdante dans le nouveau modèle ?",
     "date": "2026-09-16",
     "categorie": "pharma_france",
-    "clics": 87,
-    "lecteurs": 54
+    "clics": 88,
+    "lecteurs": 55
    },
    {
     "id": "actu_2026_09_17_3",
     "titre": "Protections périodiques remboursées : le 1er octobre arrive, la LPP est presque vide",
     "date": "2026-09-17",
     "categorie": "bonne_nouvelle",
-    "clics": 82,
-    "lecteurs": 51
+    "clics": 87,
+    "lecteurs": 54
    },
    {
-    "id": "actu_2026_09_11_2",
-    "titre": "Désogestrel et méningiome : 1,6 million de femmes vont recevoir un courrier, prépare-toi",
-    "date": "2026-09-11",
+    "id": "actu_2026_09_18_1",
+    "titre": "Beyfortus vs Abrysvo : l'ANSM tire la sonnette d'alarme sur les confusions",
+    "date": "2026-09-18",
     "categorie": "pharma_france",
-    "clics": 84,
-    "lecteurs": 49
+    "clics": 88,
+    "lecteurs": 50
    },
    {
     "id": "actu_2026_09_14_2",
@@ -101,22 +85,38 @@
     "categorie": "pharma_france",
     "clics": 73,
     "lecteurs": 44
+   },
+   {
+    "id": "actu_2026_09_18_5",
+    "titre": "Kiné prescripteur : ce que l'arrêté du 16 sept. change vraiment pour ton officine",
+    "date": "2026-09-18",
+    "categorie": "business_officine",
+    "clics": 78,
+    "lecteurs": 43
+   },
+   {
+    "id": "actu_2026_09_19_1",
+    "titre": "Arrêts maladie : deux décrets publiés, ce qui change pour ton officine en octobre",
+    "date": "2026-09-19",
+    "categorie": "pharma_france",
+    "clics": 71,
+    "lecteurs": 43
    }
   ]
  },
  "mois": {
-  "du": "2026-08-19",
-  "au": "2026-09-18",
-  "envois": 31773,
-  "delivres": 28089,
+  "du": "2026-08-20",
+  "au": "2026-09-19",
+  "envois": 31898,
+  "delivres": 28191,
   "taux_delivrabilite_pct": 88.4,
-  "ouvertures": 11543,
-  "ouvertures_uniques": 8162,
-  "clics": 13957,
-  "clics_uniques": 2509,
+  "ouvertures": 11553,
+  "ouvertures_uniques": 8194,
+  "clics": 14240,
+  "clics_uniques": 2527,
   "taux_ouverture_pct": 29.1,
-  "taux_clic_pct": 8.9,
-  "ctor_pct": 30.7,
+  "taux_clic_pct": 9.0,
+  "ctor_pct": 30.8,
   "top_articles": [
    {
     "id": "actu_2026_09_05_1",
@@ -187,8 +187,8 @@
     "titre": "Les kinés prescrivent des antalgiques : ce que ça change au comptoir",
     "date": "2026-09-17",
     "categorie": "pharma_france",
-    "clics": 105,
-    "lecteurs": 63
+    "clics": 109,
+    "lecteurs": 64
    },
    {
     "id": "actu_2026_09_04_3",
@@ -202,17 +202,17 @@
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-09-18",
-  "envois": 121359,
-  "delivres": 110421,
+  "au": "2026-09-19",
+  "envois": 122566,
+  "delivres": 111482,
   "taux_delivrabilite_pct": 91.0,
-  "ouvertures": 44651,
-  "ouvertures_uniques": 30869,
-  "clics": 47676,
-  "clics_uniques": 8586,
-  "taux_ouverture_pct": 28.0,
+  "ouvertures": 45032,
+  "ouvertures_uniques": 31139,
+  "clics": 48313,
+  "clics_uniques": 8678,
+  "taux_ouverture_pct": 27.9,
   "taux_clic_pct": 7.8,
-  "ctor_pct": 27.8,
+  "ctor_pct": 27.9,
   "top_articles": [
    {
     "id": "actu_2026_09_05_1",
