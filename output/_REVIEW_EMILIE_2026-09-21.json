@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-09-21T04:06:58.237965+02:00",
+  "run_date": "2026-09-21",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Combien de pharmacies en 2030 ? Le maillage officinal se réinvente",
+      "resume": "Le modèle économique des officines est en pleine mutation. Nouvelles missions, numérique, désertification : le réseau de demain ne ressemblera pas à celui d'aujourd'hui. Ce que ça change concrètement pour toi.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/combien-de-pharmacies-restera-t-il-en-2030",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Complémentaires santé : +7,5 Md€ de taxes, l'officine dans la ligne de mire",
+      "resume": "Le président de la Mutualité française tire la sonnette d'alarme : les taxes sur les complémentaires santé ont bondi de 400 millions à 7,5 milliards d'euros en vingt ans. Quand les mutuelles toussent, les pharmacies éternuent.",
+      "source": "Pharm'Actus · France Info Santé – Interview Éric Chenut, président de la Mutualité française",
+      "source_url": "https://www.franceinfo.fr/economie/budget/le-president-de-la-mutualite-francaise-appelle-les-parlementaires-a-reduire-les-taxes-sur-les-complementaires-sante-pour-eviter-une-hausse-des-cotisations_8200919.html",
+      "confidence_score": 0.72,
+      "warnings": [
+        "Le chiffre '7,5 milliards d'euros de taxes sur les OCAM' est issu des déclarations d'Éric Chenut sur franceinfo et n'a pas pu être croisé avec une source primaire (DREES, rapport parlementaire) dans cet exercice : à vérifier avant publication.",
+        "La part exacte du CA officinal liée aux remboursements OCAM n'est pas chiffrée dans la source : la formulation retenue dans l'analyse reste qualitative sur ce point précis. Le chiffre '12% de la CSBM financé par les OCAM' est issu des Comptes de la santé DREES 2024 (donnée structurelle), mais n'était pas dans la source fournie : à vérifier.",
+        "Ni la FSPF ni l'USPO n'ont publié de position formelle sur ce dossier à ce jour selon les informations disponibles : la formulation 'à surveiller' est prudente et délibérée — ne pas inventer de prise de position syndicale.",
+        "Le CA moyen officinal de 1,28 M€ est issu des chiffres structurels IQVIA Pharmastat (fournis en instruction) — chiffre validé.",
+        "Le nombre d'officines (19 274) n'a pas été utilisé dans cet article car non pertinent sur ce sujet spécifique.",
+        "2 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? On soignait les fractures avec des toiles de plâtre... de momie",
-  "resume": "Pendant des siècles, les médecins européens ont utilisé de la poudre de momie égyptienne comme médicament universel. Mais ce que peu de gens savent, c'est que les bandages de lin des momies ont aussi inspiré... le plâtre orthopédique moderne.",
-  "full_text": "Accroche-toi bien, parce que celle-là va te surprendre.\n\nAu XVIe siècle, les apothicaires européens vendaient couramment de la *mumia* : de la poudre de momie égyptienne broyée, vendue au gramme comme un médicament de luxe. Cicatrisation des plaies, fractures, hémorragies - on lui prêtait des vertus universelles. Les marchands du Caire exportaient des momies par cargaisons entières. Amboise Paré lui-même, le grand chirurgien de la Renaissance, en contestait l'usage en 1545. Il était largement minoritaire.\n\nMais voilà le twist : c'est justement en observant les bandages de lin rigidifiés par la résine sur les momies que des chirurgiens militaires du XIXe siècle ont eu une idée. Si on peut rigidifier un tissu pour conserver un corps, pourquoi pas pour immobiliser un os ?\n\nEn 1852, le médecin néerlandais Antonius Mathijsen fait le pas décisif. Il imprègne des bandes de lin avec du plâtre de Paris - du sulfate de calcium - et les applique directement sur un membre fracturé. Résultat : sec en quelques minutes, léger, efficace. Le plâtre orthopédique tel qu'on l'a connu pendant 150 ans était né.\n\nAvant lui, on immobilisait les fractures avec des attelles en bois, du cuir durci, des corsets de feuilles d'amidon, voire des coques en carton bouilli. Les résultats étaient... variables, c'est le moins qu'on puisse dire. Les soldats blessés finissaient souvent avec des membres mal consolidés, définitivement raccourcis ou déformés.\n\nAujourd'hui, le plâtre de Paris a largement cédé sa place aux résines synthétiques et aux orthèses thermoformées - plus légères, imperméables, et scanables en IRM. Mais la prochaine fois qu'un patient te rapporte une ordonnance pour une résine de contention, pense à la momie égyptienne qui a, sans le savoir, lancé toute l'aventure.",
-  "image_keywords": "plaster cast bone",
+  "titre": "Le saviez-vous ? On guérissait les maladies de peau en vivant dans un fumier",
+  "resume": "Pendant des siècles, s'enfouir dans un tas de fumier chaud était une prescription médicale sérieuse. Pas une blague, pas une punition : un traitement recommandé par les meilleurs médecins d'Europe. Et certains patients juraient que ça marchait.",
+  "full_text": "En 1650, si tu avais une psoriasis sévère, un eczéma rebelle ou une lèpre débutante, ton médecin ne t'envoyait pas à l'officine. Il t'envoyait à l'écurie.\n\nLa thérapie au fumier - appelée fimothérapie dans les textes médicaux latins - était pratiquée sérieusement du Moyen Âge jusqu'au XVIIIe siècle en Europe. Le principe : s'enfouir jusqu'au cou dans un mélange de paille fermentée, de crottin de cheval et de déchets organiques en décomposition, pendant plusieurs heures par jour. La chaleur dégagée par la fermentation pouvait atteindre 60 à 70°C à cœur, ce qui en faisait, selon les médecins de l'époque, un « bain de vapeur naturel et purificateur ».\n\nLe twist ? Ils n'avaient pas complètement tort sur un point. La fermentation du fumier produit de l'ammoniac et certains composés soufrés qui ont, effectivement, des propriétés antiparasitaires légères. Pas de quoi soigner la lèpre, mais peut-être suffisant pour calmer des démangeaisons parasitaires. Ce qui explique sans doute pourquoi quelques patients témoignaient d'améliorations réelles.\n\nMichel de Montaigne lui-même mentionne dans ses Essais des cures thermales à base de matières fermentées. Et en Russie, les bains de fumier de cheval (parovaya banya au fumier) étaient encore recommandés par certains guérisseurs jusqu'au début du XXe siècle.\n\nCe qui a vraiment mis fin à la pratique ? Pasteur. Quand il a démontré en 1857 que la fermentation n'était pas une réaction chimique abstraite mais le travail de micro-organismes vivants, plonger dans un bouillon bactérien est passé de « thérapeutique » à « suicide lent ».\n\nAujourd'hui, on ne prescrit plus le fumier, mais on reparle sérieusement du microbiome cutané. Les probiotiques topiques, les crèmes microbiote-friendly, les transplantations de flore cutanée pour traiter l'eczéma... Au comptoir, quand un patient te demande pourquoi son dermatite revient dès qu'il change de savon, la réponse n'est peut-être pas si loin de ce que ces vieux médecins pressentaient, confusément, dans leur tas de paille.",
+  "image_keywords": "horse stable straw",
   "tags": [
     "histoire",
-    "chirurgie",
-    "pharmacie",
-    "decouverte",
-    "instrument"
+    "dermatologie",
+    "medecine-ancienne",
+    "microbiome",
+    "traitement"
   ],
-  "date": "2026-09-19",
+  "date": "2026-09-21",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",
