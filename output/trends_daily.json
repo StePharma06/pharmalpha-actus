@@ -1,64 +1,64 @@
 {
-  "generated_at": "2026-09-21",
-  "window_label": "15 sept. au 21 sept. 2026",
+  "generated_at": "2026-09-22",
+  "window_label": "16 sept. au 22 sept. 2026",
   "has_history": true,
   "delta_source": "pytrends_rising",
   "pathologies": [
     {
-      "display": "Allergie septembre",
-      "delta_label": "↑ 159 450",
+      "display": "Allergie de septembre",
+      "delta_label": "↑ 36 400",
       "trend": "up"
     },
     {
-      "display": "Allergie en septembre",
-      "delta_label": "↑ 39 450",
+      "display": "Allergie ambroisie symptômes",
+      "delta_label": "↑ 27 000",
       "trend": "up"
     },
     {
-      "display": "Que peut cacher une grande fatigue",
-      "delta_label": "↑ 9 650",
+      "display": "Cure vitamine fatigue",
+      "delta_label": "↑ 9 800",
       "trend": "up"
     },
     {
-      "display": "Quelle vitamine pour la fatigue",
-      "delta_label": "↑ 9 300",
+      "display": "Orslow fatigue pants",
+      "delta_label": "↑ 8 950",
       "trend": "up"
     },
     {
-      "display": "À quoi sert la vitamine b12",
-      "delta_label": "↑ 9 100",
+      "display": "Surdosage vitamine d",
+      "delta_label": "↑ 160",
       "trend": "up"
     }
   ],
   "soins": [
     {
-      "display": "Charbon digestion",
-      "delta_label": "↑ 59 900",
-      "trend": "up"
-    },
-    {
-      "display": "Calmosine digestion bébé",
-      "delta_label": "↑ 54 350",
+      "display": "Oscillo immunite",
+      "delta_label": "↑ 51 100",
       "trend": "up"
     },
     {
       "display": "Azinc immunite",
-      "delta_label": "↑ 44 400",
+      "delta_label": "↑ 43 950",
       "trend": "up"
     },
     {
-      "display": "Immunite innee",
-      "delta_label": "↑ 37 700",
+      "display": "Temps de digestion des aliments",
+      "delta_label": "↑ 33 400",
       "trend": "up"
     },
     {
-      "display": "Gummies sommeil enfant",
-      "delta_label": "↑ 10 750",
+      "display": "Schéma de la digestion",
+      "delta_label": "↑ 29 000",
+      "trend": "up"
+    },
+    {
+      "display": "Mieux-etre-sante.fr nutrition et énergie",
+      "delta_label": "↑ 1 750",
       "trend": "up"
     }
   ],
   "pathologies_stale": false,
-  "pathologies_from": "2026-09-21",
+  "pathologies_from": "2026-09-22",
   "soins_stale": false,
-  "soins_from": "2026-09-21"
+  "soins_from": "2026-09-22"
 }

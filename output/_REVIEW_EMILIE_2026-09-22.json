@@ -1,0 +1,60 @@
+{
+  "generated_at": "2026-09-22T04:07:12.769782+02:00",
+  "run_date": "2026-09-22",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Vaccin antigrippe et prescription obligatoire : ce que ça change vraiment au comptoir",
+      "resume": "Depuis le 10 juillet 2026, le vaccin antigrippal est soumis à prescription médicale obligatoire. Mais attention : le pharmacien formé reste prescripteur ET vaccinateur pour les 11 ans et plus. Voici les points clés avant le démarrage de la campagne à la mi-octobre.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/vaccins-antigrippaux-ce-que-change-la-prescription-obligatoire",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "Biosimilaires substituables : la liste s'allonge, le pharmacien gagne du terrain",
+      "resume": "Un arrêté du 17 septembre 2026 modifie la liste des groupes biologiques similaires substituables par le pharmacien. C'est une extension de tes prérogatives, avec des conditions précises à respecter. Et c'est publié au JORF, donc c'est applicable maintenant.",
+      "source": "LegiRSS Pharmacie",
+      "source_url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054877278",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "avenir_pharma",
+      "titre": "Novadip leve 10,4 millions d'euros pour sa phase III en medecine regenerative",
+      "resume": "La biotech belge Novadip vient de boucler un tour de table de 10,4 millions d'euros pour financer ses essais de phase III. La médecine régénérative entre dans une phase décisive, avec des implications potentielles pour la prise en charge de demain.",
+      "source": "ActuLabo",
+      "source_url": "https://www.actulabo.com/novadip-leve-104-me-pour-ses-essais-de-phase-iii/",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Réforme des IJ longue durée : ce que le décret du 15 octobre change pour tes patients ALD",
+      "resume": "À partir du 15 octobre 2026, les arrêts longs sans exonération du ticket modérateur seront plafonnés à un an d'indemnisation, contre trois ans aujourd'hui. Un changement réglementaire qui va rebattre les cartes au comptoir, notamment sur la gestion des patients en ALD non exonéra...",
+      "source": "Pharm'Actus · Caducee.net — Arrêts longs et ALD : qui restera indemnisé trois ans et qui passera à un an ?",
+      "source_url": "https://www.caducee.net/actualite-medicale/16975/arrets-longs-et-ald-qui-restera-indemnise-trois-ans-et-qui-passera-a-un-an.html",
+      "confidence_score": 0.72,
+      "warnings": [
+        "Le nombre exact de patients concernés par la catégorie ALD non exonérante (hors liste, sans ticket modérateur supprimé) n'est pas fourni par la source — chiffre non extrapolé volontairement.",
+        "Le décret précis n'est pas cité nommément dans la source Caducee.net (pas de numéro JO, pas de date de signature) — ne pas citer de numéro de décret dans l'article.",
+        "Le chiffre de 17,2 milliards d'euros de dépenses IJ (CNAM rapport charges et produits 2025) est un chiffre de mémoire structurelle : à vérifier avant publication via le rapport charges et produits CNAM le plus récent.",
+        "Le chiffre de 12,3 millions de patients en ALD exonérante (CNAM 2024) est un ordre de grandeur connu mais à confirmer dans les données CNAM publiées.",
+        "Le chiffre de 19 274 officines est issu d'IQVIA Pharmastat juin 2026 — chiffre de référence interne Pharm'Actus, cohérent.",
+        "Aucun syndicat (FSPF, USPO, UPGF) ne s'est exprimé dans la source sur ce décret IJ spécifique — la règle équilibre syndical ne s'applique pas car l'angle n'est pas syndical.",
+        "L'article ne mentionne pas de texte réglementaire opposable publié au JO pour ce décret : présenter la réforme comme 'entrant en vigueur le 15 octobre 2026' conformément à la source, sans affirmer que le décret est déjà paru si la source ne le précise pas explicitement.",
+        "3 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

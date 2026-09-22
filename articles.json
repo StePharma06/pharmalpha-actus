@@ -1,6 +1,131 @@
 {
   "articles": [
     {
+      "id": "actu_2026_09_22_5",
+      "date": "2026-09-22",
+      "type": "actu",
+      "categorie": "business_officine",
+      "titre": "Réforme des IJ longue durée : ce que le décret du 15 octobre change pour tes patients ALD",
+      "resume": "À partir du 15 octobre 2026, les arrêts longs sans exonération du ticket modérateur seront plafonnés à un an d'indemnisation, contre trois ans aujourd'hui. Un changement réglementaire qui va rebattre les cartes au comptoir, notamment sur la gestion des patients en ALD non exonéra...",
+      "source": "Pharm'Actus · Caducee.net — Arrêts longs et ALD : qui restera indemnisé trois ans et qui passera à un an ?",
+      "source_url": "https://www.caducee.net/actualite-medicale/16975/arrets-longs-et-ald-qui-restera-indemnise-trois-ans-et-qui-passera-a-un-an.html",
+      "tiktok_url": "",
+      "badge_label": "Business",
+      "image_url": "assets/img_actu_2026_09_22_5.jpg",
+      "tags": [
+        "ald",
+        "indemnites-journalieres",
+        "reforme-sociale",
+        "observance"
+      ],
+      "full_text": "À partir du 15 octobre 2026, les arrêts longs sans exonération du ticket modérateur seront plafonnés à un an d'indemnisation, contre trois ans aujourd'hui. Un changement réglementaire qui va rebattre les cartes au comptoir, notamment sur la gestion des patients en ALD non exonérante.\n\n**Contexte**\n\nUn décret entrant en vigueur le 15 octobre 2026 instaure une distinction inédite dans le régime général : désormais, la durée maximale d'indemnisation des arrêts de travail de longue durée dépendra du statut de l'affection sous-jacente. Les affections de longue durée exonérantes - celles figurant sur la liste des 30 ALD du régime général, ouvrant droit à la prise en charge à 100 % - restent indemnisables jusqu'à trois ans, comme aujourd'hui. En revanche, les arrêts relevant de la procédure ALD au titre de l'article L.324-1 du Code de la sécurité sociale, mais sans exonération du ticket modérateur (affections dites «hors liste» ou polypathologies sans exonération), seront désormais plafonnés à un an d'indemnisation. Ce décret ne touche pas à la durée médicalement prescriptible d'un arrêt : un médecin peut toujours prescrire un arrêt au-delà d'un an pour ces patients. Mais l'Assurance Maladie cessera de verser des indemnités journalières au-delà du plafond d'un an pour cette catégorie. Concrètement, des milliers de patients en situation précaire sur le plan professionnel sont concernés, et l'officine - point de contact régulier - va se retrouver en première ligne pour expliquer, orienter et accompagner.\n\n**Analyse business**\n\nL'impact business direct sur la marge de l'officine est nul : ce décret modifie le régime des indemnités journalières versées par l'Assurance Maladie au patient, non la prise en charge des médicaments ni les honoraires de dispensation. Mais l'impact indirect sur l'activité officinale mérite une vraie lecture stratégique.\n\n**1. Un risque de rupture d'observance documenté**\nLes patients en arrêt long sont, par construction, des patients chroniques souvent polymédicamentés. Quand les IJ s'arrêtent, la contrainte budgétaire du foyer s'aggrave. Des études sur les ruptures de traitement montrent systématiquement que la précarisation financière est l'un des premiers facteurs de non-renouvellement d'ordonnance ou d'arbitrage entre médicaments et alimentation. Sans chiffre national disponible sur le nombre exact de patients concernés par ce décret - la source ne le précise pas - , l'ordre de grandeur du parc ALD est connu : le nombre d'assurés bénéficiant d'une ALD exonérante représente plusieurs millions de personnes. Le sous-ensemble des patients en ALD «hors liste» sans exonération est structurellement plus petit, mais non négligeable.\n\n**2. Un afflux de questions au comptoir dès le 15 octobre**\nLe pharmacien est statistiquement le professionnel de santé le plus accessible : le réseau officinal français compte plusieurs dizaines de milliers de points de dispensation, ouverts sans rendez-vous. Dès que la CNAM cessera de verser des IJ à ces patients, la pharmacie sera le premier endroit où ils chercheront une explication. L'équipe doit être briefée sur la distinction ALD exonérante / non exonérante avant le 15 octobre.\n\n**3. Une opportunité pour les entretiens pharmaceutiques existants**\nLes patients en ALD exonérante (liste des 30 ALD) restent indemnisés trois ans et sont précisément les cibles des entretiens pharmaceutiques conventionnels rémunérés : AVK/AOD, asthme, anticancereux oraux, bilan partagé de médication. Ce décret ne change rien à leur cadre - mais il rappelle l'importance de recenser et de suivre activement ces patients dans ton logiciel de gestion, pour ne manquer aucune opportunité de facturation légitime.\n\n**4. Un signal sur la trajectoire des dépenses IJ**\nLes indemnités journalières représentent un poste de dépenses majeur et en dérive structurelle pour le régime général. La réforme vise à contenir cette tendance. D'autres mesures d'économies sur les IJ sont à anticiper dans la prochaine LFSS - surveiller les débats parlementaires d'automne 2026.\n\n**Recommandations actionnables**\n\n1. **Briefer l'équipe avant le 15 octobre** - Prépare une fiche synthèse interne de 10 lignes : différence ALD exonérante (liste 30, ticket modérateur à 0 %, IJ jusqu'à 3 ans) vs ALD non exonérante (article L.324-1, ticket modérateur non supprimé, IJ plafonnées à 1 an à compter du 15/10/2026). Le préparateur ou l'étudiant en stage doit pouvoir expliquer la distinction sans hésiter.\n\n2. **Identifier tes patients ALD à risque de rupture d'observance** - Utilise ton logiciel de gestion pour extraire les patients en renouvellement régulier avec des ordonnances ALD. Signal d'alerte : absence de renouvellement 10-15 jours après l'échéance habituelle. Propose un contact proactif (SMS, appel) avant que la rupture ne soit consommée.\n\n3. **Recenser les patients éligibles aux entretiens pharmaceutiques rémunérés** - Les patients en ALD exonérante (AVK/AOD, asthme, anticancereux oraux) restent une cible prioritaire pour les entretiens conventionnels. Vérifie que chaque patient éligible est bien enrôlé dans ton logiciel et que les entretiens sont à jour pour la facturation.\n\n4. **Orienter vers les travailleurs sociaux et la CPAM** - Pour les patients qui vont perdre leurs IJ au-delà d'un an, ton rôle n'est pas de gérer leur dossier social mais de les orienter efficacement : CPAM, assistante sociale de CPTS, maison France Services. Avoir ces coordonnées affichées en back-office.\n\n5. **Surveiller la LFSS 2027 dès l'automne 2026** - Ce décret est un marqueur d'une politique de maîtrise des IJ qui va s'amplifier. Les débats budgétaires de l'automne 2026 pourraient apporter d'autres mesures impactant indirectement l'officine. Abonne-toi aux alertes législatives (LegiRSS Pharmacie, FSPF, USPO).\n\n**Sources citees**\n\n- Caducee.net - Arrêts longs et ALD : qui restera indemnisé trois ans et qui passera à un an ?"
+    },
+    {
+      "id": "actu_2026_09_22_4",
+      "date": "2026-09-22",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "Novadip leve 10,4 millions d'euros pour sa phase III en medecine regenerative",
+      "resume": "La biotech belge Novadip vient de boucler un tour de table de 10,4 millions d'euros pour financer ses essais de phase III. La médecine régénérative entre dans une phase décisive, avec des implications potentielles pour la prise en charge de demain.",
+      "source": "ActuLabo",
+      "source_url": "https://www.actulabo.com/novadip-leve-104-me-pour-ses-essais-de-phase-iii/",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_09_22_4.jpg",
+      "tags": [
+        "medecine-regenerative",
+        "phase-iii",
+        "biotech",
+        "innovation",
+        "ema"
+      ],
+      "full_text": "10,4 millions d'euros. C'est la mise de départ pour tenter de révolutionner la médecine régénérative. La biotech belge Novadip vient d'annoncer le succès d'une levée de fonds sous forme de prêt convertible, menée par le fonds américain New Sciences Ventures. Et cette fois, c'est pour financer des essais de phase III. On est loin des balbutiements de la recherche fondamentale.\n\nLa médecine régénérative, c'est quoi concrètement ? C'est l'ensemble des approches qui visent à réparer, remplacer ou régénérer des tissus ou organes endommagés. Novadip se spécialise dans la reconstruction osseuse et tissulaire, un domaine où les solutions actuelles restent souvent insuffisantes : greffes autologues douloureuses, matériaux synthétiques imparfaits, risques infectieux.\n\nUne phase III, c'est l'étape déterminante. Si les résultats sont positifs, la demande d'AMM auprès de l'EMA peut être déposée. Et si l'EMA valide, on parle de produits qui pourraient arriver en France dans les 3 à 5 ans. Des produits que tu pourrais un jour délivrer en pharmacie de ville ou dans le circuit hospitalier.\n\nPourquoi 10,4 millions ? Les essais de phase III en médecine régénérative sont coûteux : recrutement de patients, suivi long terme, production de biomatériaux complexes, conformité aux bonnes pratiques de fabrication. Ce montant est modeste comparé aux géants de la pharma, mais suffisant pour une biotech spécialisée qui vise un marché de niche à forte valeur ajoutée.\n\nL'angle francais : la reconstruction osseuse concerne des patients post-traumatiques, des oncologiques (après résection tumorale osseuse) et des patients en orthopédie complexe. Ce sont des profils que tu croises en dispensation hospitalière et parfois en rétrocession. Anticiper ces nouvelles thérapies, c'est anticiper les questions de tes patients et de tes collègues hospitaliers.\n\nDemain matin au comptoir : rien d'actionnable immédiatement, c'est encore de la R&D. Mais si tu as des patients suivis pour des pathologies osseuses complexes ou des oncologiques en reconstruction, retiens le nom Novadip. Dans quelques années, ce prêt convertible pourrait se transformer en ordonnance."
+    },
+    {
+      "id": "actu_2026_09_22_3",
+      "date": "2026-09-22",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "Biosimilaires substituables : la liste s'allonge, le pharmacien gagne du terrain",
+      "resume": "Un arrêté du 17 septembre 2026 modifie la liste des groupes biologiques similaires substituables par le pharmacien. C'est une extension de tes prérogatives, avec des conditions précises à respecter. Et c'est publié au JORF, donc c'est applicable maintenant.",
+      "source": "LegiRSS Pharmacie",
+      "source_url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054877278",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_09_22_3.jpg",
+      "tags": [
+        "biosimilaire",
+        "substitution",
+        "arrete",
+        "officine",
+        "ansm"
+      ],
+      "full_text": "La substitution biosimilaire avance. Et cette fois, c'est du concret : l'arrêté du 17 septembre 2026, publié au Journal officiel, modifie la liste des groupes biologiques similaires pouvant donner lieu à substitution par le pharmacien d'officine. C'est en vigueur. C'est maintenant.\n\nPetit rappel de contexte pour ceux qui suivent le dossier de loin. La substitution biosimilaire par le pharmacien a été introduite progressivement, groupe par groupe, via des arrêtés qui précisent les conditions d'information du prescripteur et du patient. Ce n'est pas un blanc-seing général : chaque groupe listé dans l'annexe de l'arrêté est éligible, les autres ne le sont pas.\n\nLes conditions générales restent identiques : le prescripteur informe le patient en amont de la possibilité de substitution. Et de ton côté, tu informes le patient lors de la délivrance et tu notifies au prescripteur via le Dossier Pharmaceutique ou par tout moyen approprié. Pas de substitution silencieuse, la traçabilité est au coeur du dispositif.\n\nPourquoi c'est une bonne nouvelle pour la profession ? Chaque extension de liste, c'est une extension de ton rôle de dispensateur actif, pas de simple exécutant d'ordonnance. Et dans un contexte de tension budgétaire permanente sur le médicament, les biosimilaires sont un levier d'économies que l'Assurance Maladie regarde de très près. Être dans la boucle de la substitution, c'est être dans la boucle des solutions, pas des problèmes.\n\nUn point de vigilance important : la liste exacte des groupes ajoutés par cet arrêté figure dans l'annexe du texte publié au JORF. Consulte-la directement sur Légifrance avant de substituer un biologique. Ne jamais extrapoler : si la molécule n'est pas listée, la substitution n'est pas autorisée, point.\n\nDemain matin au comptoir : si tu délivres des biologiques (insulines, EPO, facteurs de croissance, anticorps monoclonaux inscrits), consulte l'annexe actualisée de l'arrêté sur Légifrance pour vérifier les groupes désormais substituables. Et forme ton équipe sur la procédure d'information patient et de notification prescripteur. C'est là que tout se joue."
+    },
+    {
+      "id": "actu_2026_09_22_2",
+      "date": "2026-09-22",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "La FDA approuve un nouveau combo d'Eli Lilly dans le cancer du sein avance",
+      "resume": "Le régulateur américain vient de donner son feu vert à une association thérapeutique d'Eli Lilly pour les patientes atteintes d'une forme avancée de cancer du sein. Une approbation qui pourrait ouvrir la voie à une AMM européenne dans les mois à venir, et donc atterrir un jour dans tes ordonnances.",
+      "source": "STAT News",
+      "source_url": "https://www.statnews.com/2026/09/21/biotech-news-lilly-breast-cancer-combo-wins-approval/?utm_campaign=rss",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/img_actu_2026_09_22_2.jpg",
+      "tags": [
+        "fda",
+        "oncologie",
+        "cancer-du-sein",
+        "innovation",
+        "ema"
+      ],
+      "full_text": "Quand la FDA valide, l'EMA suit souvent. Et quand l'EMA valide, ça finit dans tes bacs. Donc suis l'actu américaine, même si elle ne te concerne pas encore directement.\n\nLundi 21 septembre 2026, la FDA a accordé son approbation à une nouvelle combinaison thérapeutique développée par Eli Lilly dans le traitement d'une forme avancée de cancer du sein. STAT News confirme l'information, sans détailler à ce stade la totalité des données cliniques rendues publiques.\n\nSur quoi repose cette combo ? La molécule cible une population de patientes atteintes d'un cancer du sein à un stade avancé. L'association combine deux mécanismes d'action complémentaires, un modèle qui est devenu la norme dans l'oncologie moderne pour retarder les résistances et améliorer la survie sans progression.\n\nPourquoi c'est important pour toi, pharmacien français ? D'abord, l'approbation FDA reste la première étape d'un cycle réglementaire qui mène ensuite à l'EMA, puis à l'HAS pour l'évaluation du service médical rendu, puis à la négociation du prix avec le CEPS. De la FDA à l'ordonnance française, il faut compter en général 18 à 36 mois. Rien d'immédiat, donc.\n\nMais c'est le bon moment pour anticiper. Les patientes connectées arrivent déjà au comptoir avec des informations glanées en ligne sur des traitements approuvés aux États-Unis et non encore disponibles en France. Savoir répondre \"oui, je suis au courant, l'EMA n'a pas encore statué\" vaut mille fois mieux qu'un haussement d'épaules.\n\nEnsuite, les combinaisons thérapeutiques en oncologie impliquent souvent des interactions médicamenteuses complexes et des plans de gestion des risques spécifiques. Ton rôle de pharmacien clinicien dans le suivi des anticancéreux oraux est directement concerné dès l'arrivée de ce type de molécule en France.\n\nDemain matin au comptoir : rien à faire immédiatement sur ce dossier. Mais note Eli Lilly et cancer du sein avancé dans un coin de ta tête. Ce combo a de bonnes chances d'atterrir un jour dans tes entretiens pharmaceutiques anticancéreux oraux."
+    },
+    {
+      "id": "actu_2026_09_22_1",
+      "date": "2026-09-22",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "Vaccin antigrippe et prescription obligatoire : ce que ça change vraiment au comptoir",
+      "resume": "Depuis le 10 juillet 2026, le vaccin antigrippal est soumis à prescription médicale obligatoire. Mais attention : le pharmacien formé reste prescripteur ET vaccinateur pour les 11 ans et plus. Voici les points clés avant le démarrage de la campagne à la mi-octobre.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/vaccins-antigrippaux-ce-que-change-la-prescription-obligatoire",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_09_22_1.jpg",
+      "tags": [
+        "vaccination",
+        "grippe",
+        "prescription",
+        "officine",
+        "ansm"
+      ],
+      "full_text": "La grippe est redevenue une affaire d'ordonnance. Depuis le 10 juillet 2026, les vaccins antigrippaux sont classés sur liste I, soumis à prescription médicale obligatoire. Et forcément, ça fait causer au comptoir.\n\nMais accroche-toi : le pharmacien formé à la vaccination ne perd RIEN. Il conserve son droit de prescrire et d'administrer le vaccin antigrippal aux personnes de 11 ans et plus. Arrêté + décret du 08/08/2023, toujours en vigueur. Concrètement ? Tu accueilles le patient, tu rédiges l'ordonnance, tu vaccines. Tout se passe dans ton officine, en une seule visite.\n\nCe qui change, c'est la traçabilité et l'encadrement. Le classement liste I implique une dispensation sur ordonnance. Si un patient arrive sans ordonnance et que tu es formé, tu la rédiges toi-même. Si tu n'es pas formé, le patient doit passer par son médecin ou une sage-femme. Et là, oui, c'est un frein potentiel pour l'accès.\n\nLa seule limite réelle ? Les moins de 11 ans. Pour eux, la prescription ne peut venir que d'un médecin ou d'une sage-femme. Ton rôle devient alors celui d'un relais d'information et de dispensation, pas de vaccination directe.\n\nAutre point qui génère des incompréhensions : les patients à risque ciblés par la campagne (plus de 65 ans, maladies chroniques, femmes enceintes, obèses) peuvent encore bénéficier de la prise en charge à 100% par l'Assurance Maladie, sous réserve de l'ordonnance. Le bon de prise en charge de la CPAM reste valable, il ne disparaît pas avec le classement liste I.\n\nCampagne prévue à la mi-octobre selon les infos du Quotidien du Pharmacien. C'est dans trois semaines. Le moment de briefer ton équipe sur deux points précis : qui peut prescrire (toi si tu es formé, le médecin sinon) et pour qui (11 ans et plus pour le pharmacien vaccinateur).\n\nDemain matin au comptoir : vérifie que ton attestation de formation à la vaccination est bien à jour et accessible. Et si un patient senior arrive en demandant son \"vaccin grippe\" sans ordonnance, ne le renvoie pas chez son médecin par réflexe. Rédige l'ordonnance et vaccine. C'est ton droit, c'est ton rôle."
+    },
+    {
+      "id": "lsv_2026_09_22",
+      "date": "2026-09-22",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? On traitait les fractures du bassin en soudant les patients au lit",
+      "resume": "Avant les vis, les plaques et la chirurgie orthopédique moderne, une fracture du bassin était souvent une sentence de mort lente. La solution des médecins du XIXe siècle ? Immobiliser le patient des semaines entières dans des dispositifs de traction dignes d'un roman de Kafka. Et le pire, c'est que ça ne marchait presque jamais.",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_09_22.jpg",
+      "tags": [
+        "histoire",
+        "chirurgie",
+        "orthopedie",
+        "instrument",
+        "decouverte"
+      ],
+      "full_text": "1847. À l'Hôpital Lariboisière de Paris, un ouvrier de chantier arrive avec le bassin fracassé après une chute de trois mètres. Le chirurgien de garde soupire. Il connaît la sentence : alitement strict, traction au poids, et prières.\n\nLa fracture du bassin était alors considérée comme l'une des blessures les plus mortelles qui soit. Pas à cause de l'os lui-même, mais à cause de ce qui se passait après. Alité pendant 6 à 12 semaines sans pouvoir bouger, le patient développait quasi systématiquement des escarres profondes, des infections urinaires foudroyantes, et des pneumonies d'immobilisation. La mortalité frôlait les 50 % dans les hôpitaux militaires européens.\n\nLe dispositif de traction en vogue à l'époque s'appelait le « cadre de Volkmann », du nom du chirurgien allemand Richard von Volkmann. Le patient était littéralement suspendu dans un hamac de sangles, les jambes tirées par des poids allant jusqu'à 15 kilos. L'idée : réaligner les fragments osseux par la seule force de la pesanteur. Résultat réel : des douleurs insupportables, des contractures musculaires permanentes, et un réalignement osseux aléatoire.\n\nLe grand twist arrive en 1886. Un jeune chirurgien irlandais nommé William Lane remarque quelque chose d'étrange : les fractures qui guérissent le mieux sont celles où les fragments osseux restent immobiles l'un contre l'autre, pas ceux qu'on tire dans tous les sens. Il commence à fixer les os avec des fils d'acier directement sur la fracture. Ses confrères le prennent pour un fou dangereux.\n\nIl avait pourtant inventé l'ostéosynthèse, le principe fondateur de toute la chirurgie orthopédique moderne.\n\nAujourd'hui, une fracture du bassin instable se fixe en 2 heures avec des vis et des plaques titane, le patient remarche en quelques semaines. La prochaine fois qu'un patient revient de bloc ortho en râlant contre sa rééducation, rappelle-lui qu'il y a 150 ans, son seul traitement c'était un hamac de sangles et beaucoup de chance."
+    },
+    {
       "id": "actu_2026_09_21_5",
       "date": "2026-09-21",
       "type": "actu",
@@ -17310,6 +17435,6 @@
       ]
     }
   ],
-  "count": 834,
-  "updated_at": "2026-09-21T04:07:00.970796+02:00"
+  "count": 840,
+  "updated_at": "2026-09-22T04:07:15.890557+02:00"
 }
