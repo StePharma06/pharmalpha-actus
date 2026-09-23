@@ -31,7 +31,7 @@
      l'image n'est decouverte qu'apres execution du JS qui construit les cards
      (le <img> n'existe qu'a l'interieur d'un template literal JS, invisible au
      preload scanner) -> LCP non deterministe, cf. sprint perf 2026-07-27. -->
-<link rel="preload" as="image" href="assets/img_actu_2026_09_22_1.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="assets/img_actu_2026_09_23_1.jpg" fetchpriority="high">
 
 <!-- Space Grotesk — self-hosted WOFF2 (remplace Google Fonts, cf. mission perf/RGPD 2026-08-24) -->
 <link rel="preload" href="/assets/fonts/space-grotesk-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -1793,7 +1793,7 @@ body.pa-has-nav #actusHeader {
 </div>
 
 <!-- EXPRESSION DU JOUR (injectée par update_actus.py à chaque run) -->
-<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Virus</h2><p class="expression-corps">Du latin <em>virus</em>, venin ou poison. Les médecins romains l'utilisaient pour désigner les liquides corporels infectieux. Pasteur et Koch ont repris le terme au XIXe siècle pour les agents infectieux invisibles au microscope. Les informaticiens l'ont emprunté en 1974 pour les programmes auto-réplicants.</p></aside>
+<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Avoir du fiel</h2><p class="expression-corps">Le fiel - ou bile - était perçu depuis l'Antiquité comme une substance amère et corrosive. Une personne « pleine de fiel » était quelqu'un dont les paroles brûlaient comme la bile, dont l'amertume intérieure transparaissait dans chaque mot.</p></aside>
 
 <!-- ESPACE PARTENAIRE 1 (entre Expression du jour et Aujourd'hui).
      Statique : reste visible meme si le JS ne s'execute pas. Le 2e emplacement
@@ -1818,12 +1818,12 @@ body.pa-has-nav #actusHeader {
 <div id="articles-container"></div>
 
 <!-- MARQUE_TENDANCE (injectee par le pipeline hebdo, remplacee quotidiennement) -->
-<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">16 sept. au 22 sept. 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie de septembre</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 36 400</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Oscillo immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 51 100</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie ambroisie symptômes</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 27 000</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Azinc immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 43 950</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Cure vitamine fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 9 800</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Temps de digestion des aliments</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 33 400</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Orslow fatigue pants</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 8 950</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Schéma de la digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 29 000</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Surdosage vitamine d</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 160</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Mieux-etre-sante.fr nutrition et énergie</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 1 750</td></tr>
+<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">17 sept. au 23 sept. 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie de septembre</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 41 000</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Oscillo immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 245 900</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie en septembre</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 30 550</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Azinc immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 50 450</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Fatigue intense cause</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 21 150</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Ail digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 43 500</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Fatigue oculaire que faire</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 14 150</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">La digestion cm2</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 32 500</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Test covid</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 300</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Gummies sommeil enfant</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 250</td></tr>
 </tbody></table></div><p style="margin:10px 0 0;font-size:11px;color:#9ca3af;font-style:italic;">Indice de tendance : intensite de hausse Google Trends (non comparable a un volume absolu).</p><p style="margin:12px 0 0;font-size:11px;color:#9ca3af;text-align:right;">Source&nbsp;: Google Trends France (pytrends) &middot; 7 jours glissants</p></section></div>
 
 <!-- ARCHIVES CTA -->
@@ -1986,6 +1986,90 @@ body.pa-has-nav #actusHeader {
 // Mis a jour automatiquement par n8n chaque semaine
 // ============================================================
 const ARTICLES = [
+{
+    id: "actu_2026_09_23_1",
+    date: "2026-09-23",
+    type: "actu",
+    categorie: "pharma_france",
+    titre: "Biosimilaires substituables : deux nouveaux groupes entrent dans la liste",
+    resume: "L'arrêté du 17 septembre 2026 porte à 13 le nombre de groupes biosimilaires substituables en officine. Le dénosumab (Prolia 60 mg et Xgeva 120 mg) rejoint la liste. Concrètement, ça change quoi au comptoir dès maintenant ?",
+    source: "Le Moniteur des Pharmacies",
+    source_url: "https://www.lemoniteurdespharmacies.fr/legislation/dispensation/le-nombre-de-biosimilaires-substituables-sagrandit",
+    tiktok_url: "",
+    badge_label: "Pharma France",
+    image_url: "assets/img_actu_2026_09_23_1.jpg",
+    tags: ["biosimilaire", "substitution", "denosumab", "ansm", "dispensation"]
+  },
+{
+    id: "actu_2026_09_23_2",
+    date: "2026-09-23",
+    type: "actu",
+    categorie: "pharma_monde",
+    titre: "GLP-1 sans ordonnance : le marché noir explose, l'Europe surveille",
+    resume: "En France et partout en Europe, les GLP-1 alimentent un marché parallèle incontrôlé : fausses ordonnances, vente sur les réseaux sociaux, contrefaçons non détectables à l'oeil nu. 2,4 millions de médicaments saisis en France en 2025. La question qui se pose pour l'officine : comment répondre à la demande sans ouvrir la porte aux dérives ?",
+    source: "France Info Santé",
+    source_url: "https://www.franceinfo.fr/replay-jt/france-2/20-heures/le-marche-parallele-des-medicaments-anti-obesite_8205266.html#xtor=RSS-3-%5Bgeneral%5D",
+    tiktok_url: "",
+    badge_label: "Pharma Monde",
+    image_url: "assets/img_actu_2026_09_23_2.jpg",
+    tags: ["glp-1", "trafic", "contrefacon", "ordonnance", "obesite"]
+  },
+{
+    id: "actu_2026_09_23_3",
+    date: "2026-09-23",
+    type: "actu",
+    categorie: "bonne_nouvelle",
+    titre: "Dépistage HTA en officine : l'expérimentation \"Ta Tension\" est lancée",
+    resume: "Depuis le 14 septembre, des officines participent à l'expérimentation \"Ta Tension\" pour le dépistage de l'hypertension artérielle. Une mission de santé publique concrète, qui valorise le rôle du pharmacien de premier recours. Et 6 millions de français hypertendus qui s'ignorent, ça fait beaucoup de clients potentiellement concernés.",
+    source: "Le Quotidien du Pharmacien",
+    source_url: "http://www.lequotidiendupharmacien.fr/nouvelles-missions/avec-ta-tension-le-depistage-de-lhta-sexperimente-en-pharmacie",
+    tiktok_url: "",
+    badge_label: "La bonne nouvelle",
+    image_url: "assets/img_actu_2026_09_23_3.jpg",
+    tags: ["hta", "depistage", "experimentation", "nouvelles-missions", "officine"]
+  },
+{
+    id: "actu_2026_09_23_4",
+    date: "2026-09-23",
+    type: "actu",
+    categorie: "avenir_pharma",
+    titre: "Négociations conventionnelles : l'avenant 3 démarre en octobre, la refonte de la rémunération en novembre",
+    resume: "La CNAM a enfin ouvert les négociations conventionnelles avec les syndicats de pharmaciens. Avenant 3 (nouvelles missions, OSyS, prise de tension) en octobre, avenant 4 (refonte structurelle de la rémunération) en novembre. Le calendrier est serré - et pour l'officine, les enjeux sont massifs.",
+    source: "FSPF",
+    source_url: "https://www.fspf.fr/lancement-des-negociations-de-lavenant-n-3/",
+    tiktok_url: "",
+    badge_label: "L'avenir de la pharma",
+    image_url: "assets/img_actu_2026_09_23_4.jpg",
+    tags: ["convention", "remuneration", "avenant", "cnam", "missions"]
+  },
+{
+    id: "actu_2026_09_23_5",
+    date: "2026-09-23",
+    type: "actu",
+    categorie: "business_officine",
+    titre: "Trafic de médicaments : 2,4 M de boîtes saisies, ton officine en première ligne",
+    resume: "En 2025, 2,4 millions de médicaments ont été saisis en France. Derrière ce chiffre record, un marché noir qui se professionnalise en ligne - et une officine qui reste le seul rempart crédible de proximité pour le patient tenté par ces circuits parallèles.",
+    source: "Pharm'Actus · France Info Santé — Médicaments : le trafic au plus haut",
+    source_url: "https://www.franceinfo.fr/replay-jt/france-2/20-heures/medicaments-le-trafic-au-plus-haut_8205215.html",
+    tiktok_url: "",
+    badge_label: "Business",
+    image_url: "assets/img_actu_2026_09_23_5.jpg",
+    tags: ["trafic-medicaments", "marche-noir", "officine", "ansm"]
+  },
+{
+    id: "lsv_2026_09_23",
+    date: "2026-09-23",
+    type: "lsv",
+    categorie: "lsv",
+    titre: "Le saviez-vous ? On soignait les calculs biliaires en avalant des anguilles vivantes",
+    resume: "Pendant des siècles, les médecins européens ont prescrit des créatures vivantes par voie orale pour « débloquer » les conduits internes. Et les calculs biliaires avaient leur remède attitré : l'anguille. Vivante, entière, avalée cul sec.",
+    source: "Pharm'Alpha",
+    source_url: "",
+    tiktok_url: "",
+    badge_label: "Le Saviez-Vous",
+    image_url: "assets/img_lsv_2026_09_23.jpg",
+    tags: ["histoire", "medecine", "digestion", "chimie", "pharmacopee"]
+  },
 {
     id: "actu_2026_09_22_1",
     date: "2026-09-22",
@@ -2601,90 +2685,6 @@ const ARTICLES = [
     badge_label: "Pharma Monde",
     image_url: "assets/img_actu_2026_09_14_2.jpg",
     tags: ["prix-medicaments", "usa", "politique-pharma", "ceps", "industrie"]
-  },
-{
-    id: "actu_2026_09_14_3",
-    date: "2026-09-14",
-    type: "actu",
-    categorie: "bonne_nouvelle",
-    titre: "Santé sexuelle 2030 : la délivrance officinale des abortifs se précise enfin",
-    resume: "La nouvelle feuille de route de la Stratégie nationale de santé sexuelle 2026-2030 ouvre explicitement la voie à la délivrance directe en officine des médicaments abortifs, au-delà de la téléconsultation. Pour la pharmacie d'officine, c'est une vraie reconnaissance de son rôle dans l'accès à l'IVG médicamenteuse en ville.",
-    source: "Caducee.net",
-    source_url: "https://www.caducee.net/actualite-medicale/16960/sante-sexuelle-2026-2030-les-chantiers-de-l-ivg-en-ville-de-la-contraception-et-de-la-consultation-longue.html",
-    tiktok_url: "",
-    badge_label: "La bonne nouvelle",
-    image_url: "assets/img_actu_2026_09_14_3.jpg",
-    tags: ["ivg", "sante-sexuelle", "officine", "contraception", "acces-aux-soins"]
-  },
-{
-    id: "actu_2026_09_14_4",
-    date: "2026-09-14",
-    type: "actu",
-    categorie: "avenir_pharma",
-    titre: "IA multimodale et immunothérapie : la prédiction de réponse change de dimension",
-    resume: "Une étude publiée dans Nature Medicine montre qu'intégrer de nombreux biomarqueurs multimodaux par patient améliore significativement la prédiction de réponse aux immunothérapies anticancéreuses. L'IA ne remplace pas le clinicien, elle lui dit à qui donner sa chance.",
-    source: "Nature Medicine News",
-    source_url: "https://www.nature.com/articles/s41591-026-04587-0",
-    tiktok_url: "",
-    badge_label: "L'avenir de la pharma",
-    image_url: "assets/img_actu_2026_09_14_4.jpg",
-    tags: ["immunotherapie", "ia", "oncologie", "biomarqueur", "recherche"]
-  },
-{
-    id: "actu_2026_09_14_5",
-    date: "2026-09-14",
-    type: "actu",
-    categorie: "business_officine",
-    titre: "Reste à charge plafonné à 140 € : +40 % dès le 1er octobre, ce que ça change au comptoir",
-    resume: "Le décret est paru. Dès le 1er octobre 2026, le plafond annuel des franchises médicales bondit de 100 à 140 euros. Pour l'officine, l'impact sur le flux patients et l'accès aux soins est immédiat et concret.",
-    source: "Pharm'Actus · Le Monde — Franchises médicales : le plafond annuel passe de 100 à 140 euros le 1er octobre, France Info Santé — Franchise médicale : le plafond annuel passera à 140 euros",
-    source_url: "https://www.lemonde.fr/politique/article/2026/09/12/franchises-medicales-le-plafond-annuel-passe-de-100-a-140-euros-le-1-octobre_6771228_823448.html",
-    tiktok_url: "",
-    badge_label: "Business",
-    image_url: "assets/img_actu_2026_09_14_5.jpg",
-    tags: ["franchises-medicales", "reste-a-charge", "reforme-assurance-maladie", "officine"]
-  },
-{
-    id: "lsv_2026_09_14",
-    date: "2026-09-14",
-    type: "lsv",
-    categorie: "lsv",
-    titre: "Le saviez-vous ? On rangeait les malades par odeur à l'hôpital",
-    resume: "Avant les analyses de labo, les médecins utilisaient leur nez comme premier outil de diagnostic. L'odeur d'une salle entière guidait le tri des patients. Une pratique qui a duré jusqu'au XIXe siècle - et qui n'était pas si absurde.",
-    source: "Pharm'Alpha",
-    source_url: "",
-    tiktok_url: "",
-    badge_label: "Le Saviez-Vous",
-    image_url: "assets/img_lsv_2026_09_14.jpg",
-    tags: ["histoire", "diagnostic", "odorat", "medecine", "hopital"]
-  },
-{
-    id: "actu_2026_09_12_1",
-    date: "2026-09-12",
-    type: "actu",
-    categorie: "pharma_france",
-    titre: "Marge grossiste : 100 millions d'euros en moins pour le réseau",
-    resume: "Une nouvelle mesure réglementaire abaisse le plancher de la marge grossiste de 0,30 EUR à 0,22 EUR dès le 20 janvier 2027. Concrètement, c'est une perte sèche estimée à 100 millions d'euros pour l'ensemble du réseau officinal. Et ça tombe en pleine négociation conventionnelle, très bon timing.",
-    source: "Le Pharmacien de France",
-    source_url: "https://lepharmaciendefrance.fr/revision-de-la-marge-grossiste-une-perte-de-100-millions-deuros-pour-le-reseau/",
-    tiktok_url: "",
-    badge_label: "Pharma France",
-    image_url: "assets/img_actu_2026_09_12_1.jpg",
-    tags: ["marge", "grossiste", "remuneration", "officine", "convention"]
-  },
-{
-    id: "actu_2026_09_12_2",
-    date: "2026-09-12",
-    type: "actu",
-    categorie: "pharma_monde",
-    titre: "SMA : la FDA approuve Isembyld, premier médicament ciblant la perte musculaire",
-    resume: "Scholar Rock vient d'obtenir le feu vert de la FDA pour Isembyld, premier traitement ciblant spécifiquement la perte musculaire dans l'amyotrophie spinale. Utilisé en complément des thérapies SMN2, il améliore les compétences motrices des jeunes patients après un an. Une avancée qui change la donne pour une maladie neuromusculaire dévastatrice.",
-    source: "STAT News",
-    source_url: "https://www.statnews.com/2026/09/11/scholar-rock-spinal-muscular-atrophy-isembyld-clinical-trial-fda-approval/?utm_campaign=rss",
-    tiktok_url: "",
-    badge_label: "Pharma Monde",
-    image_url: "assets/img_actu_2026_09_12_2.jpg",
-    tags: ["fda", "sma", "innovation", "amm", "pediatrie"]
   }
 ];
 

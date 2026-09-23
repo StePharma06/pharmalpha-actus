@@ -1,0 +1,47 @@
+{
+  "generated_at": "2026-09-23T04:07:32.581223+02:00",
+  "run_date": "2026-09-23",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "Dépistage HTA en officine : l'expérimentation \"Ta Tension\" est lancée",
+      "resume": "Depuis le 14 septembre, des officines participent à l'expérimentation \"Ta Tension\" pour le dépistage de l'hypertension artérielle. Une mission de santé publique concrète, qui valorise le rôle du pharmacien de premier recours. Et 6 millions de français hypertendus qui s'ignorent, ça fait beaucoup de clients potentiellement concernés.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/nouvelles-missions/avec-ta-tension-le-depistage-de-lhta-sexperimente-en-pharmacie",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "avenir_pharma",
+      "titre": "Négociations conventionnelles : l'avenant 3 démarre en octobre, la refonte de la rémunération en novembre",
+      "resume": "La CNAM a enfin ouvert les négociations conventionnelles avec les syndicats de pharmaciens. Avenant 3 (nouvelles missions, OSyS, prise de tension) en octobre, avenant 4 (refonte structurelle de la rémunération) en novembre. Le calendrier est serré - et pour l'officine, les enjeux sont massifs.",
+      "source": "FSPF",
+      "source_url": "https://www.fspf.fr/lancement-des-negociations-de-lavenant-n-3/",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Trafic de médicaments : 2,4 M de boîtes saisies, ton officine en première ligne",
+      "resume": "En 2025, 2,4 millions de médicaments ont été saisis en France. Derrière ce chiffre record, un marché noir qui se professionnalise en ligne - et une officine qui reste le seul rempart crédible de proximité pour le patient tenté par ces circuits parallèles.",
+      "source": "Pharm'Actus · France Info Santé — Médicaments : le trafic au plus haut",
+      "source_url": "https://www.franceinfo.fr/replay-jt/france-2/20-heures/medicaments-le-trafic-au-plus-haut_8205215.html",
+      "confidence_score": 0.62,
+      "warnings": [
+        "Le chiffre de 2,4 millions de saisies en 2025 est issu d'un reportage France 2 relayé par France Info Santé : il n'a pas pu être recoupé avec un rapport ANSM ou douanier publié. À vérifier avant publication sur le site officiel de l'ANSM ou les douanes françaises.",
+        "L'estimation '5 à 10 % des saisies = volume réel' est une convention OMS souvent citée dans la littérature sur la contrefaçon, mais elle n'est pas sourcée dans l'article de France Info. Elle est présentée dans l'analyse comme un ordre de grandeur habituel, pas comme un chiffre vérifié pour la France 2025 — à qualifier avec prudence ou retirer si la rédaction préfère rester strictement factuelle.",
+        "Le chiffre de 3 milliards de boîtes dispensées par an est un ordre de grandeur structurel connu du secteur mais non sourcé dans cet article : à vérifier auprès de l'ANSM ou IQVIA avant publication.",
+        "Le statut OTC du tadalafil (Cialis OTC) et son encadrement exact en France méritent vérification : il peut exister des conditions de dispensation spécifiques. Reformuler si doute.",
+        "L'URL order.pharmacies.fr citée comme site de vente en ligne agréé doit être vérifiée : le site officiel de la liste des pharmacies autorisées à vendre en ligne est géré par l'Ordre des Pharmaciens (ordre.pharmacien.fr). Ne pas publier sans vérification.",
+        "2 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}
