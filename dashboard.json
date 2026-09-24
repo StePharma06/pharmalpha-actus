@@ -1,34 +1,34 @@
 {
- "genere_le": "2026-09-23T10:08:20+02:00",
+ "genere_le": "2026-09-24T09:59:50+02:00",
  "liste_brevo": 5,
  "abonnes_total": 1215,
- "abonnes_hebdo": 309,
- "abonnes_diffusion": 1524,
- "articles_publies": 703,
- "nouveaux_7j": 28,
+ "abonnes_hebdo": 311,
+ "abonnes_diffusion": 1526,
+ "articles_publies": 708,
+ "nouveaux_7j": 24,
  "nouveaux_cumul": 1208,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-09-16",
-  "au": "2026-09-23",
-  "envois": 8741,
-  "delivres": 7701,
-  "taux_delivrabilite_pct": 88.1,
-  "ouvertures": 3121,
-  "ouvertures_uniques": 2218,
-  "clics": 4614,
-  "clics_uniques": 781,
-  "taux_ouverture_pct": 28.8,
-  "taux_clic_pct": 10.1,
-  "ctor_pct": 35.2,
+  "du": "2026-09-17",
+  "au": "2026-09-24",
+  "envois": 8762,
+  "delivres": 7710,
+  "taux_delivrabilite_pct": 88.0,
+  "ouvertures": 3053,
+  "ouvertures_uniques": 2192,
+  "clics": 4773,
+  "clics_uniques": 790,
+  "taux_ouverture_pct": 28.4,
+  "taux_clic_pct": 10.2,
+  "ctor_pct": 36.0,
   "top_articles": [
    {
     "id": "actu_2026_09_22_1",
     "titre": "Vaccin antigrippe et prescription obligatoire : ce que ça change vraiment au comptoir",
     "date": "2026-09-22",
     "categorie": "pharma_france",
-    "clics": 124,
-    "lecteurs": 80
+    "clics": 125,
+    "lecteurs": 81
    },
    {
     "id": "actu_2026_09_19_1",
@@ -43,8 +43,8 @@
     "titre": "Biosimilaires substituables : la liste s'allonge, le pharmacien gagne du terrain",
     "date": "2026-09-22",
     "categorie": "bonne_nouvelle",
-    "clics": 102,
-    "lecteurs": 67
+    "clics": 103,
+    "lecteurs": 68
    },
    {
     "id": "actu_2026_09_17_1",
@@ -75,7 +75,7 @@
     "titre": "Kiné prescripteur : ce que l'arrêté du 16 sept. change vraiment pour ton officine",
     "date": "2026-09-18",
     "categorie": "business_officine",
-    "clics": 115,
+    "clics": 117,
     "lecteurs": 60
    },
    {
@@ -87,44 +87,44 @@
     "lecteurs": 57
    },
    {
-    "id": "actu_2026_09_16_1",
-    "titre": "PLFSS 2027 : une pharmacie sur deux perdante dans le nouveau modèle ?",
-    "date": "2026-09-16",
-    "categorie": "pharma_france",
-    "clics": 89,
-    "lecteurs": 56
-   },
-   {
     "id": "actu_2026_09_17_3",
     "titre": "Protections périodiques remboursées : le 1er octobre arrive, la LPP est presque vide",
     "date": "2026-09-17",
     "categorie": "bonne_nouvelle",
     "clics": 90,
     "lecteurs": 55
+   },
+   {
+    "id": "actu_2026_09_18_1",
+    "titre": "Beyfortus vs Abrysvo : l'ANSM tire la sonnette d'alarme sur les confusions",
+    "date": "2026-09-18",
+    "categorie": "pharma_france",
+    "clics": 93,
+    "lecteurs": 53
    }
   ]
  },
  "mois": {
-  "du": "2026-08-24",
-  "au": "2026-09-23",
-  "envois": 32566,
-  "delivres": 28784,
-  "taux_delivrabilite_pct": 88.4,
-  "ouvertures": 11822,
-  "ouvertures_uniques": 8373,
-  "clics": 15427,
-  "clics_uniques": 2701,
-  "taux_ouverture_pct": 29.1,
+  "du": "2026-08-25",
+  "au": "2026-09-24",
+  "envois": 32476,
+  "delivres": 28670,
+  "taux_delivrabilite_pct": 88.3,
+  "ouvertures": 11626,
+  "ouvertures_uniques": 8234,
+  "clics": 15560,
+  "clics_uniques": 2688,
+  "taux_ouverture_pct": 28.7,
   "taux_clic_pct": 9.4,
-  "ctor_pct": 32.3,
+  "ctor_pct": 32.6,
   "top_articles": [
    {
     "id": "actu_2026_09_22_1",
     "titre": "Vaccin antigrippe et prescription obligatoire : ce que ça change vraiment au comptoir",
     "date": "2026-09-22",
     "categorie": "pharma_france",
-    "clics": 124,
-    "lecteurs": 80
+    "clics": 125,
+    "lecteurs": 81
    },
    {
     "id": "actu_2026_09_05_1",
@@ -179,8 +179,8 @@
     "titre": "Biosimilaires substituables : la liste s'allonge, le pharmacien gagne du terrain",
     "date": "2026-09-22",
     "categorie": "bonne_nouvelle",
-    "clics": 102,
-    "lecteurs": 67
+    "clics": 103,
+    "lecteurs": 68
    },
    {
     "id": "actu_2026_08_28_3",
@@ -202,25 +202,25 @@
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-09-23",
-  "envois": 126506,
-  "delivres": 114972,
-  "taux_delivrabilite_pct": 90.9,
-  "ouvertures": 46569,
-  "ouvertures_uniques": 32206,
-  "clics": 50644,
-  "clics_uniques": 9078,
+  "au": "2026-09-24",
+  "envois": 127719,
+  "delivres": 116030,
+  "taux_delivrabilite_pct": 90.8,
+  "ouvertures": 46941,
+  "ouvertures_uniques": 32484,
+  "clics": 51277,
+  "clics_uniques": 9178,
   "taux_ouverture_pct": 28.0,
   "taux_clic_pct": 7.9,
-  "ctor_pct": 28.2,
+  "ctor_pct": 28.3,
   "top_articles": [
    {
     "id": "actu_2026_09_22_1",
     "titre": "Vaccin antigrippe et prescription obligatoire : ce que ça change vraiment au comptoir",
     "date": "2026-09-22",
     "categorie": "pharma_france",
-    "clics": 124,
-    "lecteurs": 80
+    "clics": 125,
+    "lecteurs": 81
    },
    {
     "id": "actu_2026_09_05_1",
