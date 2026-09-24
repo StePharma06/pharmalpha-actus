@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? On soignait les calculs biliaires en avalant des anguilles vivantes",
-  "resume": "Pendant des siècles, les médecins européens ont prescrit des créatures vivantes par voie orale pour « débloquer » les conduits internes. Et les calculs biliaires avaient leur remède attitré : l'anguille. Vivante, entière, avalée cul sec.",
-  "full_text": "Mets-toi à la place d'un paysan breton en 1640. Tu souffres d'une douleur atroce sous les côtes droites. Le médecin arrive, t'examine, et sort… une anguille d'un seau.\n\nÀ l'époque, la théorie des humeurs gouverne tout. Le foie est considéré comme le grand chef d'orchestre de la digestion. Les calculs biliaires ? Une simple obstruction d'humeur bilieuse épaissie. La solution logique, pour les praticiens du XVIIe siècle : envoyer quelque chose à l'intérieur pour « déboucher » le conduit. Et l'anguille, longue, souple, visqueuse, semblait franchement taillée pour le job.\n\nLa technique était codifiée dans plusieurs traités médicaux européens, notamment dans des ouvrages flamands et français de la Renaissance tardive. On recommandait des anguillettes de 15 à 20 centimètres, vivantes, avalées rapidement avec un peu d'huile d'olive pour faciliter le passage. L'idée étant que l'animal allait « frayer son chemin » à travers les voies biliaires et entraîner les calculs avec lui. Le twist ? Évidemment, l'anguille ne rejoignait jamais la vésicule biliaire. Elle finissait dans l'estomac, y mourait, et était digérée tranquillement. Les calculs, eux, restaient bien en place.\n\nCertains patients signalaient pourtant une amélioration. Probablement parce que l'huile d'olive ingérée pouvait, elle, légèrement stimuler la contraction vésiculaire. L'anguille, c'était le packaging. L'huile, la molécule active. Un effet thérapeutique malgré la bêtise du vecteur - ça, c'est du classique.\n\nAujourd'hui, on traite les calculs biliaires par lithotripsie, par dissolution médicamenteuse à l'acide ursodésoxycholique - que tu as sûrement en stock - ou par cholécystectomie laparoscopique. Plus d'anguille, mais le principe de « faciliter l'évacuation biliaire », lui, est toujours là. Ton Delursan en gélule, c'est le descendant direct de ce seau d'anguilles. La médecine avance. Parfois en frétillant.",
-  "image_keywords": "eel historical medicine",
+  "titre": "Le saviez-vous ? On empoisonnait les malades pour mesurer leur fièvre",
+  "resume": "Avant le thermomètre, mesurer la fièvre était une science approximative... et parfois fatale. Pendant des siècles, les médecins ont utilisé une plante toxique pour \"calibrer\" la chaleur du corps. Le résultat était souvent pire que la maladie.",
+  "full_text": "Imagine le tableau : on est au XVIe siècle, un médecin se penche sur son patient fiévreux, lui tâte le poignet, le front, lui regarde la langue. Puis il sort une petite poudre blanche. Pas pour le soigner. Pour mesurer.\n\nLa plante en question, c'est l'ellébore noir - Helleborus niger. Une belle fleur d'hiver, adorable dans un jardin. Mais à haute dose ? Cardiotoxique, convulsivante, potentiellement mortelle. Et pourtant, des médecins grecs puis arabes puis européens l'utilisaient comme \"réactif biologique\". L'idée : si le patient réagit fort (tremblements, sueurs, accélération du cœur), c'est que la fièvre est \"intense\". Aucune gradation, aucune unité. Juste des symptômes d'empoisonnement qui servaient de jauge.\n\nLe twist ? Cette pratique n'était pas marginale. Galien lui-même, le médecin le plus influent de l'Antiquité, recommandait l'ellébore pour \"purger la fièvre\" et en évaluer la sévérité. Sa doctrine a dominé la médecine pendant 1 400 ans. Autant dire qu'on a empoisonné des générations de patients avec une caution scientifique béton.\n\nC'est finalement Santorio Santorio, médecin padouan, qui va changer les règles en 1612. Il adapte les travaux de Galilée sur la thermoscopie pour créer un proto-thermomètre médical - un tube de verre avec de l'eau et une graduation grossière. Imprécis, encombrant, fragile. Mais pour la première fois, on mesure la fièvre sans toucher au patient, sans le droguer, sans risquer de le tuer avec le remède diagnostique.\n\nL'ellébore, lui, a continué sa carrière. On le retrouve en phytothérapie traditionnelle jusqu'au XIXe siècle. Aujourd'hui, ses alcaloïdes (hellébrine, hellébréine) sont toujours étudiés en oncologie pour leurs propriétés cytotoxiques - le poison devient peut-être médicament.\n\nLa morale au comptoir : la prochaine fois qu'un patient te ramène un thermomètre connecté hyper-précis en te demandant si c'est fiable, dis-lui que l'alternative historique, c'était de l'ellébore. Ça relativise.",
+  "image_keywords": "hellebore black plant",
   "tags": [
     "histoire",
-    "medecine",
-    "digestion",
-    "chimie",
-    "pharmacopee"
+    "diagnostic",
+    "plante",
+    "poison",
+    "fievre"
   ],
-  "date": "2026-09-23",
+  "date": "2026-09-24",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",

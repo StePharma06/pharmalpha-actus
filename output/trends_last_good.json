@@ -1,58 +1,58 @@
 {
   "pathologies": [
     {
-      "display": "Allergie de septembre",
-      "delta_label": "↑ 41 000",
+      "display": "Allergie à l'ambroisie",
+      "delta_label": "↑ 20 900",
       "trend": "up"
     },
     {
-      "display": "Allergie en septembre",
-      "delta_label": "↑ 30 550",
+      "display": "Monocytes élevés et fatigue",
+      "delta_label": "↑ 14 450",
       "trend": "up"
     },
     {
-      "display": "Fatigue intense cause",
-      "delta_label": "↑ 21 150",
+      "display": "Globules blancs bas et fatigue",
+      "delta_label": "↑ 9 550",
       "trend": "up"
     },
     {
-      "display": "Fatigue oculaire que faire",
-      "delta_label": "↑ 14 150",
+      "display": "Allergie mois de septembre",
+      "delta_label": "↑ 7 650",
       "trend": "up"
     },
     {
       "display": "Test covid",
-      "delta_label": "↑ 300",
+      "delta_label": "↑ 350",
       "trend": "up"
     }
   ],
-  "pathologies_from": "2026-09-23",
+  "pathologies_from": "2026-09-24",
   "soins": [
     {
       "display": "Oscillo immunite",
-      "delta_label": "↑ 245 900",
+      "delta_label": "↑ 72 350",
       "trend": "up"
     },
     {
       "display": "Azinc immunite",
-      "delta_label": "↑ 50 450",
+      "delta_label": "↑ 59 800",
       "trend": "up"
     },
     {
-      "display": "Ail digestion",
-      "delta_label": "↑ 43 500",
+      "display": "Calmosine digestion bébé",
+      "delta_label": "↑ 40 500",
       "trend": "up"
     },
     {
-      "display": "La digestion cm2",
-      "delta_label": "↑ 32 500",
+      "display": "Matcha digestion",
+      "delta_label": "↑ 28 200",
       "trend": "up"
     },
     {
-      "display": "Gummies sommeil enfant",
-      "delta_label": "↑ 250",
+      "display": "Mieux-etre-sante.fr santé auditive et éq",
+      "delta_label": "↑ 7 500",
       "trend": "up"
     }
   ],
-  "soins_from": "2026-09-23"
+  "soins_from": "2026-09-24"
 }

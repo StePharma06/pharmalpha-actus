@@ -31,7 +31,7 @@
      l'image n'est decouverte qu'apres execution du JS qui construit les cards
      (le <img> n'existe qu'a l'interieur d'un template literal JS, invisible au
      preload scanner) -> LCP non deterministe, cf. sprint perf 2026-07-27. -->
-<link rel="preload" as="image" href="assets/img_actu_2026_09_23_1.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="assets/img_actu_2026_09_24_1.jpg" fetchpriority="high">
 
 <!-- Space Grotesk — self-hosted WOFF2 (remplace Google Fonts, cf. mission perf/RGPD 2026-08-24) -->
 <link rel="preload" href="/assets/fonts/space-grotesk-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -1793,7 +1793,7 @@ body.pa-has-nav #actusHeader {
 </div>
 
 <!-- EXPRESSION DU JOUR (injectée par update_actus.py à chaque run) -->
-<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Avoir du fiel</h2><p class="expression-corps">Le fiel - ou bile - était perçu depuis l'Antiquité comme une substance amère et corrosive. Une personne « pleine de fiel » était quelqu'un dont les paroles brûlaient comme la bile, dont l'amertume intérieure transparaissait dans chaque mot.</p></aside>
+<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Toxique</h2><p class="expression-corps">Du grec <em>toxikon pharmakon</em>, littéralement « le poison pour les flèches » - <em>toxon</em> signifiant arc. Les archers anciens enduisaient leurs pointes de substances létales. Le terme a ensuite désigné tout poison, puis, dans le langage courant moderne, toute relation ou situation délétère.</p></aside>
 
 <!-- ESPACE PARTENAIRE 1 (entre Expression du jour et Aujourd'hui).
      Statique : reste visible meme si le JS ne s'execute pas. Le 2e emplacement
@@ -1818,12 +1818,12 @@ body.pa-has-nav #actusHeader {
 <div id="articles-container"></div>
 
 <!-- MARQUE_TENDANCE (injectee par le pipeline hebdo, remplacee quotidiennement) -->
-<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">17 sept. au 23 sept. 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie de septembre</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 41 000</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Oscillo immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 245 900</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie en septembre</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 30 550</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Azinc immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 50 450</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Fatigue intense cause</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 21 150</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Ail digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 43 500</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Fatigue oculaire que faire</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 14 150</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">La digestion cm2</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 32 500</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Test covid</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 300</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Gummies sommeil enfant</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 250</td></tr>
+<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">18 sept. au 24 sept. 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie à l'ambroisie</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 20 900</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Oscillo immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 72 350</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Monocytes élevés et fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 14 450</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Azinc immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 59 800</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Globules blancs bas et fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 9 550</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Calmosine digestion bébé</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 40 500</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie mois de septembre</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 7 650</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Matcha digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 28 200</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Test covid</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 350</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Mieux-etre-sante.fr santé auditive et éq</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 7 500</td></tr>
 </tbody></table></div><p style="margin:10px 0 0;font-size:11px;color:#9ca3af;font-style:italic;">Indice de tendance : intensite de hausse Google Trends (non comparable a un volume absolu).</p><p style="margin:12px 0 0;font-size:11px;color:#9ca3af;text-align:right;">Source&nbsp;: Google Trends France (pytrends) &middot; 7 jours glissants</p></section></div>
 
 <!-- ARCHIVES CTA -->
@@ -1986,6 +1986,90 @@ body.pa-has-nav #actusHeader {
 // Mis a jour automatiquement par n8n chaque semaine
 // ============================================================
 const ARTICLES = [
+{
+    id: "actu_2026_09_24_1",
+    date: "2026-09-24",
+    type: "actu",
+    categorie: "pharma_france",
+    titre: "Dénosumab substituable : ce que ça change concrètement au comptoir",
+    resume: "Un arrêté paru au JO du 22 septembre 2026 inscrit le dénosumab 60 mg (Prolia) et 120 mg (Xgeva) sur la liste des groupes biologiques similaires substituables à l'officine. Le compteur passe à 13 groupes. Des conditions spécifiques d'information du patient s'appliquent.",
+    source: "Le Quotidien du Pharmacien",
+    source_url: "http://www.lequotidiendupharmacien.fr/medicament-parapharmacie/medicament/le-denosumab-desormais-substituable",
+    tiktok_url: "",
+    badge_label: "Pharma France",
+    image_url: "assets/img_actu_2026_09_24_1.jpg",
+    tags: ["biosimilaire", "substitution", "denosumab", "ansm", "officine"]
+  },
+{
+    id: "actu_2026_09_24_2",
+    date: "2026-09-24",
+    type: "actu",
+    categorie: "pharma_monde",
+    titre: "GLP-1 : comment les Etats-Unis vivent (et gèrent) le raz-de-marée semaglutide",
+    resume: "Aux Etats-Unis, les GLP-1 transforment non seulement les patients mais toute l'économie de la santé et de la consommation. Ce qui se passe outre-Atlantique annonce ce qui arrive en France. Et côté officine, il vaut mieux être prêt.",
+    source: "France Info Sante",
+    source_url: "https://www.franceinfo.fr/sante/le-medicament-coupe-faim-qui-fait-maigrir-l-amerique_8206604.html#xtor=RSS-3-%5Bgeneral%5D",
+    tiktok_url: "",
+    badge_label: "Pharma Monde",
+    image_url: "assets/img_actu_2026_09_24_2.jpg",
+    tags: ["glp-1", "obesite", "diabete", "innovation", "officine"]
+  },
+{
+    id: "actu_2026_09_24_3",
+    date: "2026-09-24",
+    type: "actu",
+    categorie: "bonne_nouvelle",
+    titre: "Vaccination grippe et Covid dès le 13 octobre : 19 millions de Français à mobiliser",
+    resume: "La campagne de vaccination automnale contre la grippe et le Covid-19 démarre le 13 octobre 2026. Dix-neuf millions de Français des populations prioritaires sont concernés, et la pharmacie d'officine est en première ligne pour vacciner. C'est le moment de préparer ta logistique.",
+    source: "France Info Sante",
+    source_url: "https://www.franceinfo.fr/sante/19-millions-de-francais-vont-pouvoir-se-faire-vacciner-a-partir-du-13-octobre-contre-le-covid-19-et-la-grippe_8206697.html#xtor=RSS-3-%5Bgeneral%5D",
+    tiktok_url: "",
+    badge_label: "La bonne nouvelle",
+    image_url: "assets/img_actu_2026_09_24_3.jpg",
+    tags: ["vaccination", "grippe", "covid", "officine", "campagne"]
+  },
+{
+    id: "actu_2026_09_24_4",
+    date: "2026-09-24",
+    type: "actu",
+    categorie: "avenir_pharma",
+    titre: "Délistage : 33 molécules sur la table, une révolution en cours pour l'officine",
+    resume: "Nères et les syndicats de pharmaciens (FSPF et USPO) ont soumis à l'ANSM une liste commune de 33 principes actifs à délister en priorité. Rabéprazole, fluticasone topique, ibuprofène rectal : des molécules connues, un enjeu de taille pour l'accès aux soins et l'économie officinale.",
+    source: "Le Moniteur des Pharmacies",
+    source_url: "https://www.lemoniteurdespharmacies.fr/therapeutique/medicaments/mieux-delivrer/delistage-de-medicaments-33-molecules-concernees-en-priorite",
+    tiktok_url: "",
+    badge_label: "L'avenir de la pharma",
+    image_url: "assets/img_actu_2026_09_24_4.jpg",
+    tags: ["delistage", "ansm", "otc", "plfss", "acces-aux-soins"]
+  },
+{
+    id: "actu_2026_09_24_5",
+    date: "2026-09-24",
+    type: "actu",
+    categorie: "business_officine",
+    titre: "CSS : 50% de non-recours, un manque à gagner invisible pour ton officine",
+    resume: "Près d'un bénéficiaire potentiel de la Complémentaire Santé Solidaire sur deux ne la demande jamais. Résultat : des patients précaires qui renoncent aux soins ou ne viennent pas chercher leurs médicaments. Un angle business trop souvent ignoré en officine.",
+    source: "Pharm'Actus · Le Monde Santé – Coût des soins : pourquoi la CSS souffre d'un non-recours massif (23/09/2026), IQVIA Pharmastat – Nombre d'officines en France (juin 2026) : 19 274",
+    source_url: "https://www.lemonde.fr/societe/article/2026/09/23/cout-des-soins-pourquoi-la-complementaire-sante-solidaire-censee-proteger-les-plus-precaires-souffre-d-un-non-recours-massif_6780944_3224.html",
+    tiktok_url: "",
+    badge_label: "Business",
+    image_url: "assets/img_actu_2026_09_24_5.jpg",
+    tags: ["complementaire-sante-solidaire", "non-recours", "acces-aux-soins", "franchises-medicales"]
+  },
+{
+    id: "lsv_2026_09_24",
+    date: "2026-09-24",
+    type: "lsv",
+    categorie: "lsv",
+    titre: "Le saviez-vous ? On empoisonnait les malades pour mesurer leur fièvre",
+    resume: "Avant le thermomètre, mesurer la fièvre était une science approximative... et parfois fatale. Pendant des siècles, les médecins ont utilisé une plante toxique pour \"calibrer\" la chaleur du corps. Le résultat était souvent pire que la maladie.",
+    source: "Pharm'Alpha",
+    source_url: "",
+    tiktok_url: "",
+    badge_label: "Le Saviez-Vous",
+    image_url: "assets/img_lsv_2026_09_24.jpg",
+    tags: ["histoire", "diagnostic", "plante", "poison", "fievre"]
+  },
 {
     id: "actu_2026_09_23_1",
     date: "2026-09-23",
@@ -2601,90 +2685,6 @@ const ARTICLES = [
     badge_label: "Pharma France",
     image_url: "assets/img_actu_2026_09_15_2.jpg",
     tags: ["franchise", "reste-a-charge", "assurance-maladie", "patient-chronique", "officine"]
-  },
-{
-    id: "actu_2026_09_15_3",
-    date: "2026-09-15",
-    type: "actu",
-    categorie: "pharma_monde",
-    titre: "Abbott paie 385 millions de dollars pour la crise du lait infantile : ce que ça dit du risque de concentration industrielle",
-    resume: "Abbott a accepté un règlement de 385 millions de dollars lié à la fermeture de sa plus grande usine de lait infantile aux États-Unis en 2022. La pénurie qui a suivi a privé des milliers de nourrissons de leur seule source d'alimentation. Un signal fort sur la fragilité des chaînes d'approvisionnement mondiales.",
-    source: "STAT News",
-    source_url: "https://www.statnews.com/2026/09/14/abbott-settlement-closure-baby-formula-plant-shortages/?utm_campaign=rss",
-    tiktok_url: "",
-    badge_label: "Pharma Monde",
-    image_url: "assets/img_actu_2026_09_15_3.jpg",
-    tags: ["rupture", "dadfms", "approvisionnement", "fda", "lait-infantile"]
-  },
-{
-    id: "actu_2026_09_15_4",
-    date: "2026-09-15",
-    type: "actu",
-    categorie: "avenir_pharma",
-    titre: "Pharmacien correspondant dans le PLFSS 2027 : le chiffre qui change tout",
-    resume: "L'USPO pousse fort pour valoriser le pharmacien correspondant dans le PLFSS 2027, notamment à la sortie d'hospitalisation. L'enjeu : identifier le pharmacien de proximité dès l'admission et l'intégrer au plan de retour à domicile. Un rôle structurant, avec une rémunération à construire.",
-    source: "Le Moniteur des Pharmacies",
-    source_url: "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/plfss-2027-combien-vaut-lintervention-du-pharmacien-correspondant",
-    tiktok_url: "",
-    badge_label: "L'avenir de la pharma",
-    image_url: "assets/img_actu_2026_09_15_4.jpg",
-    tags: ["plfss", "pharmacien-correspondant", "coordination", "hopital", "convention"]
-  },
-{
-    id: "actu_2026_09_15_5",
-    date: "2026-09-15",
-    type: "actu",
-    categorie: "business_officine",
-    titre: "Lovenox cédé par Sanofi : 822 M€ de CA, et l'officine dans la tourmente biosimilaires",
-    resume: "Sanofi cède la franchise Lovenox à Cheplapharm. Derrière cette transaction industrielle, un signal fort : les biosimilaires d'héparine de bas poids moléculaire ont déjà rogné 14,4 % du CA en un an. Pour les officines, le sujet est leur marge sur un produit hospitalier ET ambulato...",
-    source: "Pharm'Actus · ActuLabo — Cheplapharm reprend le Lovenox de Sanofi et les usines dédiées",
-    source_url: "https://www.actulabo.com/cheplapharm-reprend-le-lovenox-de-sanofi-et-les-usines-dediees/",
-    tiktok_url: "",
-    badge_label: "Business",
-    image_url: "assets/img_actu_2026_09_15_5.jpg",
-    tags: ["biosimilaires", "hbpm", "marges-officine", "rosp"]
-  },
-{
-    id: "lsv_2026_09_15",
-    date: "2026-09-15",
-    type: "lsv",
-    categorie: "lsv",
-    titre: "Le saviez-vous ? On mesurait la guérison des plaies au son d'une cloche",
-    resume: "Avant les pansements modernes et les bilans biologiques, les chirurgiens médiévaux avaient trouvé une méthode pour évaluer l'état d'une plaie infectée. Elle était aussi étrange qu'ingénieuse. Et franchement, on s'attendait pas à ça.",
-    source: "Pharm'Alpha",
-    source_url: "",
-    tiktok_url: "",
-    badge_label: "Le Saviez-Vous",
-    image_url: "assets/img_lsv_2026_09_15.jpg",
-    tags: ["histoire", "chirurgie", "cicatrisation", "antisepsie", "instrument"]
-  },
-{
-    id: "actu_2026_09_14_1",
-    date: "2026-09-14",
-    type: "actu",
-    categorie: "pharma_france",
-    titre: "Levemir, Victoza, Fiasp : le compte à rebours est lancé pour tes patients Novo",
-    resume: "Novo Nordisk arrête Levemir, Fiasp PumpCart, NovoMix 50 FlexPen et Victoza au 31 décembre 2026. Moins de 4 mois pour switcher tes patients diabétiques sur des alternatives. Le boulot commence maintenant, pas en décembre.",
-    source: "Caducee.net",
-    source_url: "https://www.caducee.net/actualite-medicale/16959/arret-de-levemir-fiasp-pumpcart-et-victoza-fin-2026-comment-preparer-les-alternatives.html",
-    tiktok_url: "",
-    badge_label: "Pharma France",
-    image_url: "assets/img_actu_2026_09_14_1.jpg",
-    tags: ["insuline", "diabete", "rupture", "novo-nordisk", "substitution"]
-  },
-{
-    id: "actu_2026_09_14_2",
-    date: "2026-09-14",
-    type: "actu",
-    categorie: "pharma_monde",
-    titre: "Les deals secrets de Trump qui sabordent sa propre politique sur les prix des médicaments",
-    resume: "La politique \"most-favored nation\" de Trump devait faire baisser les prix des médicaments aux USA. Une nouvelle analyse révèle que des accords confidentiels avec les labos pharma pourraient vider la mesure de sa substance. Cherchez l'erreur.",
-    source: "STAT News",
-    source_url: "https://www.statnews.com/pharmalot/2026/09/13/trump-secretive-pharma-deals-undermine-most-favored-nation-pricing/?utm_campaign=rss",
-    tiktok_url: "",
-    badge_label: "Pharma Monde",
-    image_url: "assets/img_actu_2026_09_14_2.jpg",
-    tags: ["prix-medicaments", "usa", "politique-pharma", "ceps", "industrie"]
   }
 ];
 

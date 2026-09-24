@@ -1,0 +1,70 @@
+{
+  "generated_at": "2026-09-24T04:07:16.862016+02:00",
+  "run_date": "2026-09-24",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Dénosumab substituable : ce que ça change concrètement au comptoir",
+      "resume": "Un arrêté paru au JO du 22 septembre 2026 inscrit le dénosumab 60 mg (Prolia) et 120 mg (Xgeva) sur la liste des groupes biologiques similaires substituables à l'officine. Le compteur passe à 13 groupes. Des conditions spécifiques d'information du patient s'appliquent.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/medicament-parapharmacie/medicament/le-denosumab-desormais-substituable",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "pharma_monde",
+      "titre": "GLP-1 : comment les Etats-Unis vivent (et gèrent) le raz-de-marée semaglutide",
+      "resume": "Aux Etats-Unis, les GLP-1 transforment non seulement les patients mais toute l'économie de la santé et de la consommation. Ce qui se passe outre-Atlantique annonce ce qui arrive en France. Et côté officine, il vaut mieux être prêt.",
+      "source": "France Info Sante",
+      "source_url": "https://www.franceinfo.fr/sante/le-medicament-coupe-faim-qui-fait-maigrir-l-amerique_8206604.html#xtor=RSS-3-%5Bgeneral%5D",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "Vaccination grippe et Covid dès le 13 octobre : 19 millions de Français à mobiliser",
+      "resume": "La campagne de vaccination automnale contre la grippe et le Covid-19 démarre le 13 octobre 2026. Dix-neuf millions de Français des populations prioritaires sont concernés, et la pharmacie d'officine est en première ligne pour vacciner. C'est le moment de préparer ta logistique.",
+      "source": "France Info Sante",
+      "source_url": "https://www.franceinfo.fr/sante/19-millions-de-francais-vont-pouvoir-se-faire-vacciner-a-partir-du-13-octobre-contre-le-covid-19-et-la-grippe_8206697.html#xtor=RSS-3-%5Bgeneral%5D",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "avenir_pharma",
+      "titre": "Délistage : 33 molécules sur la table, une révolution en cours pour l'officine",
+      "resume": "Nères et les syndicats de pharmaciens (FSPF et USPO) ont soumis à l'ANSM une liste commune de 33 principes actifs à délister en priorité. Rabéprazole, fluticasone topique, ibuprofène rectal : des molécules connues, un enjeu de taille pour l'accès aux soins et l'économie officinale.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/therapeutique/medicaments/mieux-delivrer/delistage-de-medicaments-33-molecules-concernees-en-priorite",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "CSS : 50% de non-recours, un manque à gagner invisible pour ton officine",
+      "resume": "Près d'un bénéficiaire potentiel de la Complémentaire Santé Solidaire sur deux ne la demande jamais. Résultat : des patients précaires qui renoncent aux soins ou ne viennent pas chercher leurs médicaments. Un angle business trop souvent ignoré en officine.",
+      "source": "Pharm'Actus · Le Monde Santé – Coût des soins : pourquoi la CSS souffre d'un non-recours massif (23/09/2026), IQVIA Pharmastat – Nombre d'officines en France (juin 2026) : 19 274",
+      "source_url": "https://www.lemonde.fr/societe/article/2026/09/23/cout-des-soins-pourquoi-la-complementaire-sante-solidaire-censee-proteger-les-plus-precaires-souffre-d-un-non-recours-massif_6780944_3224.html",
+      "confidence_score": 0.72,
+      "warnings": [
+        "Le chiffre '50% de non-recours' est cité par Le Monde (23/09/2026) comme issu de données officielles, mais la source primaire (DREES ou rapport spécifique) n'est pas accessible directement dans le résumé fourni. À vérifier avant publication.",
+        "Le chiffre de 5,5 millions d'éligibles à la CSS est un ordre de grandeur régulièrement cité dans les rapports DREES/Cour des comptes, mais peut fluctuer selon l'année de référence. Ne pas le présenter comme exact.",
+        "La déduction de '2,7 millions de personnes non couvertes' est un calcul éditorial (50% × 5,5 M) : le présenter comme un ordre de grandeur, pas comme un chiffre officiel.",
+        "Le montant du seuil CSS (1 015 EUR/mois pour une personne seule) est une approximation pour 2026 : vérifier le barème actualisé sur ameli.fr avant publication.",
+        "L'honoraire de dispensation à 1,02 EUR TTC par boîte est le montant en vigueur à la rédaction de cet article : vérifier qu'aucun avenant conventionnel ne l'a modifié récemment.",
+        "La mention de l'avenant 11 sur l'orientation CSS est à vérifier : si ce n'est pas l'avenant exact, reformuler sans numéro d'avenant.",
+        "7 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

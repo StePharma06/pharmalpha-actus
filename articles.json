@@ -1,6 +1,131 @@
 {
   "articles": [
     {
+      "id": "actu_2026_09_24_5",
+      "date": "2026-09-24",
+      "type": "actu",
+      "categorie": "business_officine",
+      "titre": "CSS : 50% de non-recours, un manque à gagner invisible pour ton officine",
+      "resume": "Près d'un bénéficiaire potentiel de la Complémentaire Santé Solidaire sur deux ne la demande jamais. Résultat : des patients précaires qui renoncent aux soins ou ne viennent pas chercher leurs médicaments. Un angle business trop souvent ignoré en officine.",
+      "source": "Pharm'Actus · Le Monde Santé – Coût des soins : pourquoi la CSS souffre d'un non-recours massif (23/09/2026), IQVIA Pharmastat – Nombre d'officines en France (juin 2026) : 19 274",
+      "source_url": "https://www.lemonde.fr/societe/article/2026/09/23/cout-des-soins-pourquoi-la-complementaire-sante-solidaire-censee-proteger-les-plus-precaires-souffre-d-un-non-recours-massif_6780944_3224.html",
+      "tiktok_url": "",
+      "badge_label": "Business",
+      "image_url": "assets/img_actu_2026_09_24_5.jpg",
+      "tags": [
+        "complementaire-sante-solidaire",
+        "non-recours",
+        "acces-aux-soins",
+        "franchises-medicales"
+      ],
+      "full_text": "Près d'un bénéficiaire potentiel de la Complémentaire Santé Solidaire sur deux ne la demande jamais. Résultat : des patients précaires qui renoncent aux soins ou ne viennent pas chercher leurs médicaments. Un angle business trop souvent ignoré en officine.\n\n**Contexte**\n\nLa Complémentaire Santé Solidaire (CSS) - fusionnant depuis 2019 l'ancienne CMU-C et l'ACS - est une couverture publique gratuite ou quasi gratuite destinée aux ménages sous le seuil de pauvreté. Elle supprime le reste à charge du patient sur les soins remboursables, donc aussi sur les médicaments délivrés en officine : pas de ticket modérateur, pas de franchise médicale (désormais 1 EUR par boîte depuis mars 2024), pas de dépassement. Or selon les chiffres relayés par Le Monde du 23 septembre 2026 à partir des données de la DREES, près de la moitié des Français éligibles à la CSS ne la sollicitent pas. Le gouvernement, en annonçant la hausse des franchises et forfaits médicaux à l'automne 2026 (plafond annuel de chaque dispositif relevé dès le 1er octobre), a mis en avant la CSS comme filet de sécurité - mais un filet troué de 50 % de non-recours. Pour les 19 274 officines françaises (IQVIA Pharmastat, juin 2026), ce non-recours se traduit directement : des ordonnances non honorées, des renoncements au comptoir, et un volume de dispensation manqué.\n\n**Analyse business**\n\nLe non-recours à la CSS n'est pas un sujet purement social. C'est un sujet business, et voici pourquoi.\n\nPremière donnée structurante : selon les données relayées par la DREES, plusieurs millions de personnes seraient éligibles à la CSS en France sans la demander - souvent les plus précaires, donc les plus exposées aux pathologies chroniques.\n\nDeuxième angle : la CSS est un puissant facilitateur de dispensation en officine. Un bénéficiaire CSS ne paye rien sur les médicaments remboursables (tiers payant intégral, franchise non applicable). À l'inverse, un patient éligible mais non couvert va fuir devant une avance de frais ou une franchise à 1 EUR par boîte - ce qui paraît dérisoire mais est réel pour des ménages aux revenus très modestes. Le renoncement aux soins est documenté : selon Santé publique France, il touche prioritairement les ménages modestes.\n\nTroisième point : la hausse des plafonds annuels de franchises et de participation forfaitaire au 1er octobre 2026 va mécaniquement amplifier le phénomène de renoncement chez les précaires non couverts. Le reste à charge cumulé annuel pour les non-CSS augmente significativement, creusant d'autant le delta entre « avec CSS » et « sans CSS ». Autrement dit, l'écart entre les deux situations vient de s'agrandir d'un coup.\n\nQuatrième point, souvent oublié : depuis l'avenant 11 à la convention pharmaceutique, le pharmacien peut orienter activement un patient vers la CSS et joue un rôle reconnu dans la détection des droits non ouverts. Il ne s'agit pas d'un acte rémunéré nationalement à ce jour, mais c'est une mission de service public qui fidélise, réduit les impayés en tiers payant mal géré, et permet de sécuriser des dispensations qui sinon n'ont pas lieu.\n\nConcrètement : chaque patient précaire remis dans ses droits CSS, c'est une ordonnance honorée en tiers payant intégral, sans reste à charge, sans risque d'impayé patient, et avec la marge et l'honoraire de dispensation qui tombent normalement.\n\n**Recommandations actionnables**\n\n1. Former ton équipe à détecter les signaux de non-recours - Quand un patient hésite à prendre un médicament remboursé, demande une substitution pour réduire le reste à charge, ou évoque des difficultés financières, c'est le bon moment pour parler CSS. Une question directe suffit : « Avez-vous une complémentaire santé ? »\n\n2. Afficher le QR code de simulation CSS en espace d'attente - Ameli.fr propose un simulateur de droits en 5 minutes. Un affichage A5 suffit. Zéro coût, impact potentiel sur des dizaines de patients par mois.\n\n3. Anticiper l'impact de la hausse des franchises au 1er octobre 2026 - Dès cette date, le reste à charge annuel augmente sensiblement pour les non-couverts. Prépare une fiche simple sur les droits CSS à remettre aux patients qui questionnent la hausse.\n\n4. Sécuriser ton tiers payant - Un patient CSS correctement enregistré dans ton LGS, c'est un tiers payant intégral sans rejet. Vérifie que tes paramètres Vitale sont à jour pour les droits CSS : la carte Vitale met parfois du temps à se synchroniser après attribution.\n\n5. Travailler avec la CPTS ou une assistante sociale de secteur - Le repérage actif des droits non ouverts est une mission que certaines CPTS formalisent. Un protocole local de détection et d'orientation peut valoriser le rôle de l'officine dans le parcours de soins - sans rémunération nationale directe, mais avec un impact mesurable sur ton volume de dispensation.\n\n**Sources citees**\n\n- Le Monde Santé - Coût des soins : pourquoi la CSS souffre d'un non-recours massif (23/09/2026)\n- IQVIA Pharmastat - Nombre d'officines en France (juin 2026) : 19 274\n- Décret n° 2024-114 du 16 février 2024 - Montants des franchises médicales (1 EUR/boîte)\n- Décret n° 2026-858 du 11 septembre 2026 - Relèvement des plafonds annuels à 70 EUR"
+    },
+    {
+      "id": "actu_2026_09_24_4",
+      "date": "2026-09-24",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "Délistage : 33 molécules sur la table, une révolution en cours pour l'officine",
+      "resume": "Nères et les syndicats de pharmaciens (FSPF et USPO) ont soumis à l'ANSM une liste commune de 33 principes actifs à délister en priorité. Rabéprazole, fluticasone topique, ibuprofène rectal : des molécules connues, un enjeu de taille pour l'accès aux soins et l'économie officinale.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/therapeutique/medicaments/mieux-delivrer/delistage-de-medicaments-33-molecules-concernees-en-priorite",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_09_24_4.jpg",
+      "tags": [
+        "delistage",
+        "ansm",
+        "otc",
+        "plfss",
+        "acces-aux-soins"
+      ],
+      "full_text": "Trente-trois molécules. C'est la liste commune que Nères (l'association des industriels de produits de santé de premier recours) et les deux syndicats représentatifs des pharmaciens titulaires, la FSPF et l'USPO, viennent de soumettre conjointement à l'ANSM pour un délistage prioritaire.\n\nPour mémoire, délister un médicament, c'est le faire passer du statut de médicament à prescription obligatoire (PMO) ou à prescription médicale facultative remboursé, à celui de médicament accessible sans ordonnance. Ca ne signifie pas forcément sortir du remboursement, mais ça simplifie radicalement l'accès pour le patient et valorise le conseil officinal.\n\nParmi les molécules citées : le rabéprazole par voie orale (un IPP très prescrit), la fluticasone par voie topique (corticoïde local bien connu), ou encore l'ibuprofène par voie rectale. Ce sont des principes actifs dont le profil de sécurité est établi, utilisés depuis des années, et dont la dispensation sans ordonnance est déjà une réalité dans de nombreux pays européens.\n\nL'initiative est significative pour plusieurs raisons. D'abord parce qu'elle réunit industrie ET syndicats pharmaciens dans une démarche commune, ce qui est plus rare qu'on ne le pense. Ensuite parce qu'elle arrive à quelques jours de la présentation du PLFSS 2027, ce qui n'est clairement pas un hasard : le délistage est aussi un argument économique (moins d'ordonnances traitées = moins de charge pour l'AM).\n\nPour l'officine, le délistage, c'est potentiellement du chiffre en parapharmacie et OTC, du conseil valorisé, et une meilleure fluidité au comptoir pour des actes banals. Mais c'est aussi une responsabilité accrue : sans ordonnance, c'est toi qui gères l'évaluation du bon usage, les contre-indications, les interactions.\n\nLa balle est maintenant dans le camp de l'ANSM. L'agence devra évaluer molécule par molécule le rapport bénéfice/risque d'un délistage. Le processus peut prendre plusieurs mois à plusieurs années selon les dossiers.\n\nDemain matin : garde un oeil sur les suites données par l'ANSM. Et si le rabéprazole ou la fluticasone sont déjà dans tes rayons OTC, tu es en avance sur tout le monde."
+    },
+    {
+      "id": "actu_2026_09_24_3",
+      "date": "2026-09-24",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "Vaccination grippe et Covid dès le 13 octobre : 19 millions de Français à mobiliser",
+      "resume": "La campagne de vaccination automnale contre la grippe et le Covid-19 démarre le 13 octobre 2026. Dix-neuf millions de Français des populations prioritaires sont concernés, et la pharmacie d'officine est en première ligne pour vacciner. C'est le moment de préparer ta logistique.",
+      "source": "France Info Sante",
+      "source_url": "https://www.franceinfo.fr/sante/19-millions-de-francais-vont-pouvoir-se-faire-vacciner-a-partir-du-13-octobre-contre-le-covid-19-et-la-grippe_8206697.html#xtor=RSS-3-%5Bgeneral%5D",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_09_24_3.jpg",
+      "tags": [
+        "vaccination",
+        "grippe",
+        "covid",
+        "officine",
+        "campagne"
+      ],
+      "full_text": "Le 13 octobre, ça démarre. Et cette année, la double campagne grippe + Covid se joue en grande partie dans nos officines.\n\nDix-neuf millions de Français des populations prioritaires sont ciblés : personnes âgées de 65 ans et plus, patients avec comorbidités (diabète, insuffisance cardiaque, BPCO, obésité sévère...), femmes enceintes, et entourage des nourrissons de moins de 6 mois. Ces patients, tu les connais. Beaucoup passent régulièrement au comptoir chercher leurs traitements chroniques.\n\nCôté organisation officine, quelques points à verrouiller avant le 13. D'abord, tes stocks de vaccins antigrippaux et anti-Covid. La commande doit être passée maintenant si ce n'est pas encore fait, les tensions d'approvisionnement en début de campagne sont classiques. Ensuite, ton espace de vaccination : vérifier la chaîne du froid, le matériel d'injection et la traçabilité dans le DP-vaccins.\n\nRappel réglementaire : le pharmacien d'officine est compétent pour vacciner les patients de 11 ans et plus contre la grippe et le Covid-19, dès lors qu'il est formé à la vaccination (formation Ordre + gestes d'urgence). Pour les moins de 11 ans, c'est hors périmètre officinal, orienter vers le médecin ou le centre de vaccination.\n\nSur la facturation : la vaccination est rémunérée dans le cadre de la convention pharmaceutique. L'acte de vaccination est facturé à l'Assurance Maladie avec le bon de prise en charge. Le vaccin grippe est remboursé à 100% pour les populations prioritaires sur prescription ou bon de prise en charge AMELI.\n\nL'enjeu pour le réseau officinal, c'est aussi de recapter les patients qui ne pensent pas spontanément à la pharmacie pour se faire vacciner. Un simple message sur ton écran de vitrine ou un affichage en caisse peut suffire à déclencher la démarche.\n\nDemain matin : commande tes vaccins, programme ta communication équipe, et prépare ton planning de créneaux de vaccination. Dans trois semaines, c'est lancé."
+    },
+    {
+      "id": "actu_2026_09_24_2",
+      "date": "2026-09-24",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "GLP-1 : comment les Etats-Unis vivent (et gèrent) le raz-de-marée semaglutide",
+      "resume": "Aux Etats-Unis, les GLP-1 transforment non seulement les patients mais toute l'économie de la santé et de la consommation. Ce qui se passe outre-Atlantique annonce ce qui arrive en France. Et côté officine, il vaut mieux être prêt.",
+      "source": "France Info Sante",
+      "source_url": "https://www.franceinfo.fr/sante/le-medicament-coupe-faim-qui-fait-maigrir-l-amerique_8206604.html#xtor=RSS-3-%5Bgeneral%5D",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/img_actu_2026_09_24_2.jpg",
+      "tags": [
+        "glp-1",
+        "obesite",
+        "diabete",
+        "innovation",
+        "officine"
+      ],
+      "full_text": "Chez nos confrères américains, le comptoir ressemble de moins en moins à une pharmacie et de plus en plus à un centre anti-obésité. Les GLP-1 (sémaglutide, tirzépatide, et consorts) sont devenus le phénomène pharmaceutique de la décennie aux Etats-Unis, et la vague arrive en France.\n\nLes chiffres américains donnent le vertige. Plusieurs dizaines de millions de patients sous GLP-1 outre-Atlantique, des ruptures de stock structurelles pendant deux ans, et des industriels (Novo Nordisk, Eli Lilly) qui investissent des milliards pour augmenter leurs capacités de production. Résultat : l'impact dépasse largement la santé. Les grandes surfaces américaines rapportent une baisse des ventes de snacks et sodas. Les chaînes de restauration rapide ont revu leurs prévisions à la baisse. On parle d'un effet macroéconomique documenté sur la consommation alimentaire.\n\nEt en France, où en est-on ? Le Ozempic (sémaglutide 1 mg, Novo Nordisk) reste remboursé strictement dans le diabète de type 2. Wegovy (sémaglutide 2,4 mg) a obtenu son AMM européenne pour l'obésité, avec une prise en charge très encadrée. Les ruptures d'approvisionnement ont été récurrentes ces deux dernières années, notamment parce que la demande mondiale a explosé bien avant que la production suive.\n\nPour toi au comptoir, les questions pratiques sont déjà là. Les patients diabétiques sous Ozempic, tu les connais. Mais les patients obèses qui cherchent du Wegovy, parfois sans ordonnance, c'est une réalité de plus en plus fréquente. Et derrière, le marché noir des GLP-1 progresse, notamment via des sites étrangers et les réseaux sociaux.\n\nCe que ça implique concrètement : former ton équipe sur l'indication exacte de chaque spécialité, connaître les alternatives disponibles (liraglutide, tirzépatide selon les indications), et surtout savoir orienter vers un médecin les patients qui cherchent ces molécules pour perdre du poids sans diagnostic médical documenté. Ce n'est pas ton rôle de valider une indication, c'est celui du prescripteur.\n\nLa tendance américaine, c'est souvent la tendance française avec 18 à 24 mois de décalage. Autant se préparer maintenant."
+    },
+    {
+      "id": "actu_2026_09_24_1",
+      "date": "2026-09-24",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "Dénosumab substituable : ce que ça change concrètement au comptoir",
+      "resume": "Un arrêté paru au JO du 22 septembre 2026 inscrit le dénosumab 60 mg (Prolia) et 120 mg (Xgeva) sur la liste des groupes biologiques similaires substituables à l'officine. Le compteur passe à 13 groupes. Des conditions spécifiques d'information du patient s'appliquent.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/medicament-parapharmacie/medicament/le-denosumab-desormais-substituable",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_09_24_1.jpg",
+      "tags": [
+        "biosimilaire",
+        "substitution",
+        "denosumab",
+        "ansm",
+        "officine"
+      ],
+      "full_text": "L'arrêté est paru, c'est officiel : le dénosumab entre dans la liste des biosimilaires substituables en officine.\n\nAvec la publication au Journal officiel du 22 septembre 2026, le dénosumab 60 mg (Prolia, référence) et le dénosumab 120 mg (Xgeva) rejoignent la liste prévue à l'article L.5125-23-2 du code de la santé publique. On passe de 12 à 13 groupes biologiques similaires substituables. Pas une révolution, mais une étape de plus dans la montée en puissance des biosimilaires à l'officine.\n\nConcrètement, qu'est-ce que ça change au comptoir ? Tu peux désormais substituer un dénosumab biosimilaire à la spécialité de référence, sans accord préalable du médecin, dans le respect des conditions habituelles : absence d'opposition du prescripteur, information du patient, traçabilité dans le DP.\n\nMais attention, l'arrêté prévoit des conditions spécifiques. Les laboratoires commercialisant les biosimilaires doivent mettre à disposition des professionnels de santé des outils d'information patient. Ce n'est pas optionnel : c'est une obligation du labo, et toi tu t'assures que le patient est bien informé avant de sortir la boîte biosimilaire.\n\nPourquoi c'est important ? Le Prolia, c'est un traitement de fond de l'ostéoporose, souvent chez des patientes âgées déjà multi-traitées. La continuité du traitement et la traçabilité sont critiques. Un switch biosimilaire sans bonne communication, c'est le retour du patient inquiet deux jours plus tard.\n\nSur le plan économique, la substitution biosimilaire, c'est de la marge TFR en moins sur la référence mais du volume potentiel sur le biosimilaire. L'impact net dépend de la politique tarifaire des labos et de ton niveau d'approvisionnement. Reste à voir comment les fabricants de biosimilaires vont positionner leurs prix.\n\nDemain matin au comptoir : si tu vois une ordonnance de Prolia, tu peux proposer le biosimilaire disponible dans ta pharmacie. Vérifie ton stock, prépare ton argumentaire patient, et note la substitution dans le DP comme pour n'importe quel biosimilaire. Simple, propre, traçable."
+    },
+    {
+      "id": "lsv_2026_09_24",
+      "date": "2026-09-24",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? On empoisonnait les malades pour mesurer leur fièvre",
+      "resume": "Avant le thermomètre, mesurer la fièvre était une science approximative... et parfois fatale. Pendant des siècles, les médecins ont utilisé une plante toxique pour \"calibrer\" la chaleur du corps. Le résultat était souvent pire que la maladie.",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_09_24.jpg",
+      "tags": [
+        "histoire",
+        "diagnostic",
+        "plante",
+        "poison",
+        "fievre"
+      ],
+      "full_text": "Imagine le tableau : on est au XVIe siècle, un médecin se penche sur son patient fiévreux, lui tâte le poignet, le front, lui regarde la langue. Puis il sort une petite poudre blanche. Pas pour le soigner. Pour mesurer.\n\nLa plante en question, c'est l'ellébore noir - Helleborus niger. Une belle fleur d'hiver, adorable dans un jardin. Mais à haute dose ? Cardiotoxique, convulsivante, potentiellement mortelle. Et pourtant, des médecins grecs puis arabes puis européens l'utilisaient comme \"réactif biologique\". L'idée : si le patient réagit fort (tremblements, sueurs, accélération du cœur), c'est que la fièvre est \"intense\". Aucune gradation, aucune unité. Juste des symptômes d'empoisonnement qui servaient de jauge.\n\nLe twist ? Cette pratique n'était pas marginale. Galien lui-même, le médecin le plus influent de l'Antiquité, recommandait l'ellébore pour \"purger la fièvre\" et en évaluer la sévérité. Sa doctrine a dominé la médecine pendant 1 400 ans. Autant dire qu'on a empoisonné des générations de patients avec une caution scientifique béton.\n\nC'est finalement Santorio Santorio, médecin padouan, qui va changer les règles en 1612. Il adapte les travaux de Galilée sur la thermoscopie pour créer un proto-thermomètre médical - un tube de verre avec de l'eau et une graduation grossière. Imprécis, encombrant, fragile. Mais pour la première fois, on mesure la fièvre sans toucher au patient, sans le droguer, sans risquer de le tuer avec le remède diagnostique.\n\nL'ellébore, lui, a continué sa carrière. On le retrouve en phytothérapie traditionnelle jusqu'au XIXe siècle. Aujourd'hui, ses alcaloïdes (hellébrine, hellébréine) sont toujours étudiés en oncologie pour leurs propriétés cytotoxiques - le poison devient peut-être médicament.\n\nLa morale au comptoir : la prochaine fois qu'un patient te ramène un thermomètre connecté hyper-précis en te demandant si c'est fiable, dis-lui que l'alternative historique, c'était de l'ellébore. Ça relativise."
+    },
+    {
       "id": "actu_2026_09_23_5",
       "date": "2026-09-23",
       "type": "actu",
@@ -17560,6 +17685,6 @@
       ]
     }
   ],
-  "count": 846,
-  "updated_at": "2026-09-23T04:07:36.572774+02:00"
+  "count": 852,
+  "updated_at": "2026-09-24T04:07:20.053315+02:00"
 }
