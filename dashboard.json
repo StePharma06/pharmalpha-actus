@@ -1,42 +1,42 @@
 {
- "genere_le": "2026-09-24T09:59:50+02:00",
+ "genere_le": "2026-09-25T10:22:16+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1215,
- "abonnes_hebdo": 311,
- "abonnes_diffusion": 1526,
- "articles_publies": 708,
- "nouveaux_7j": 24,
- "nouveaux_cumul": 1208,
+ "abonnes_total": 1218,
+ "abonnes_hebdo": 312,
+ "abonnes_diffusion": 1530,
+ "articles_publies": 713,
+ "nouveaux_7j": 22,
+ "nouveaux_cumul": 1211,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-09-17",
-  "au": "2026-09-24",
-  "envois": 8762,
-  "delivres": 7710,
-  "taux_delivrabilite_pct": 88.0,
-  "ouvertures": 3053,
-  "ouvertures_uniques": 2192,
-  "clics": 4773,
-  "clics_uniques": 790,
-  "taux_ouverture_pct": 28.4,
-  "taux_clic_pct": 10.2,
-  "ctor_pct": 36.0,
+  "du": "2026-09-18",
+  "au": "2026-09-25",
+  "envois": 8782,
+  "delivres": 7741,
+  "taux_delivrabilite_pct": 88.1,
+  "ouvertures": 2998,
+  "ouvertures_uniques": 2175,
+  "clics": 4760,
+  "clics_uniques": 781,
+  "taux_ouverture_pct": 28.1,
+  "taux_clic_pct": 10.1,
+  "ctor_pct": 35.9,
   "top_articles": [
    {
     "id": "actu_2026_09_22_1",
     "titre": "Vaccin antigrippe et prescription obligatoire : ce que ça change vraiment au comptoir",
     "date": "2026-09-22",
     "categorie": "pharma_france",
-    "clics": 125,
-    "lecteurs": 81
+    "clics": 128,
+    "lecteurs": 84
    },
    {
     "id": "actu_2026_09_19_1",
     "titre": "Arrêts maladie : deux décrets publiés, ce qui change pour ton officine en octobre",
     "date": "2026-09-19",
     "categorie": "pharma_france",
-    "clics": 131,
-    "lecteurs": 79
+    "clics": 134,
+    "lecteurs": 80
    },
    {
     "id": "actu_2026_09_22_3",
@@ -47,52 +47,36 @@
     "lecteurs": 68
    },
    {
-    "id": "actu_2026_09_17_1",
-    "titre": "Les kinés prescrivent des antalgiques : ce que ça change au comptoir",
-    "date": "2026-09-17",
-    "categorie": "pharma_france",
-    "clics": 111,
-    "lecteurs": 64
-   },
-   {
     "id": "actu_2026_09_21_1",
     "titre": "Combien de pharmacies en 2030 ? Le maillage officinal se réinvente",
     "date": "2026-09-21",
     "categorie": "pharma_france",
-    "clics": 99,
-    "lecteurs": 64
-   },
-   {
-    "id": "actu_2026_09_19_5",
-    "titre": "Avenant n°3, ticket modérateur, R3C : trois chantiers qui vont remodeler ta trésorerie",
-    "date": "2026-09-19",
-    "categorie": "business_officine",
-    "clics": 106,
-    "lecteurs": 61
+    "clics": 101,
+    "lecteurs": 66
    },
    {
     "id": "actu_2026_09_18_5",
     "titre": "Kiné prescripteur : ce que l'arrêté du 16 sept. change vraiment pour ton officine",
     "date": "2026-09-18",
     "categorie": "business_officine",
-    "clics": 117,
-    "lecteurs": 60
+    "clics": 118,
+    "lecteurs": 61
+   },
+   {
+    "id": "actu_2026_09_19_5",
+    "titre": "Avenant n°3, ticket modérateur, R3C : trois chantiers qui vont remodeler ta trésorerie",
+    "date": "2026-09-19",
+    "categorie": "business_officine",
+    "clics": 108,
+    "lecteurs": 61
    },
    {
     "id": "actu_2026_09_19_4",
     "titre": "Mucoviscidose : les modulateurs CFTR transforment le pronostic, l'officine monte en compétence",
     "date": "2026-09-19",
     "categorie": "avenir_pharma",
-    "clics": 108,
+    "clics": 110,
     "lecteurs": 57
-   },
-   {
-    "id": "actu_2026_09_17_3",
-    "titre": "Protections périodiques remboursées : le 1er octobre arrive, la LPP est presque vide",
-    "date": "2026-09-17",
-    "categorie": "bonne_nouvelle",
-    "clics": 90,
-    "lecteurs": 55
    },
    {
     "id": "actu_2026_09_18_1",
@@ -101,30 +85,54 @@
     "categorie": "pharma_france",
     "clics": 93,
     "lecteurs": 53
+   },
+   {
+    "id": "actu_2026_09_24_4",
+    "titre": "Délistage : 33 molécules sur la table, une révolution en cours pour l'officine",
+    "date": "2026-09-24",
+    "categorie": "avenir_pharma",
+    "clics": 88,
+    "lecteurs": 53
+   },
+   {
+    "id": "actu_2026_09_18_3",
+    "titre": "Memo de Vie en officine : ton comptoir peut sauver des vies, litteralement",
+    "date": "2026-09-18",
+    "categorie": "bonne_nouvelle",
+    "clics": 98,
+    "lecteurs": 49
    }
   ]
  },
  "mois": {
-  "du": "2026-08-25",
-  "au": "2026-09-24",
-  "envois": 32476,
-  "delivres": 28670,
+  "du": "2026-08-26",
+  "au": "2026-09-25",
+  "envois": 32594,
+  "delivres": 28770,
   "taux_delivrabilite_pct": 88.3,
-  "ouvertures": 11626,
-  "ouvertures_uniques": 8234,
-  "clics": 15560,
-  "clics_uniques": 2688,
-  "taux_ouverture_pct": 28.7,
+  "ouvertures": 11607,
+  "ouvertures_uniques": 8232,
+  "clics": 15800,
+  "clics_uniques": 2712,
+  "taux_ouverture_pct": 28.6,
   "taux_clic_pct": 9.4,
-  "ctor_pct": 32.6,
+  "ctor_pct": 32.9,
   "top_articles": [
    {
     "id": "actu_2026_09_22_1",
     "titre": "Vaccin antigrippe et prescription obligatoire : ce que ça change vraiment au comptoir",
     "date": "2026-09-22",
     "categorie": "pharma_france",
-    "clics": 125,
-    "lecteurs": 81
+    "clics": 128,
+    "lecteurs": 84
+   },
+   {
+    "id": "actu_2026_09_19_1",
+    "titre": "Arrêts maladie : deux décrets publiés, ce qui change pour ton officine en octobre",
+    "date": "2026-09-19",
+    "categorie": "pharma_france",
+    "clics": 134,
+    "lecteurs": 80
    },
    {
     "id": "actu_2026_09_05_1",
@@ -132,14 +140,6 @@
     "date": "",
     "categorie": "",
     "clics": 140,
-    "lecteurs": 79
-   },
-   {
-    "id": "actu_2026_09_19_1",
-    "titre": "Arrêts maladie : deux décrets publiés, ce qui change pour ton officine en octobre",
-    "date": "2026-09-19",
-    "categorie": "pharma_france",
-    "clics": 131,
     "lecteurs": 79
    },
    {
@@ -191,25 +191,25 @@
     "lecteurs": 66
    },
    {
-    "id": "actu_2026_09_03_1",
-    "titre": "actu_2026_09_03_1",
-    "date": "",
-    "categorie": "",
-    "clics": 98,
+    "id": "actu_2026_09_21_1",
+    "titre": "Combien de pharmacies en 2030 ? Le maillage officinal se réinvente",
+    "date": "2026-09-21",
+    "categorie": "pharma_france",
+    "clics": 101,
     "lecteurs": 66
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-09-24",
-  "envois": 127719,
-  "delivres": 116030,
+  "au": "2026-09-25",
+  "envois": 128939,
+  "delivres": 117105,
   "taux_delivrabilite_pct": 90.8,
-  "ouvertures": 46941,
-  "ouvertures_uniques": 32484,
-  "clics": 51277,
-  "clics_uniques": 9178,
+  "ouvertures": 47361,
+  "ouvertures_uniques": 32793,
+  "clics": 51924,
+  "clics_uniques": 9284,
   "taux_ouverture_pct": 28.0,
   "taux_clic_pct": 7.9,
   "ctor_pct": 28.3,
@@ -219,8 +219,16 @@
     "titre": "Vaccin antigrippe et prescription obligatoire : ce que ça change vraiment au comptoir",
     "date": "2026-09-22",
     "categorie": "pharma_france",
-    "clics": 125,
-    "lecteurs": 81
+    "clics": 128,
+    "lecteurs": 84
+   },
+   {
+    "id": "actu_2026_09_19_1",
+    "titre": "Arrêts maladie : deux décrets publiés, ce qui change pour ton officine en octobre",
+    "date": "2026-09-19",
+    "categorie": "pharma_france",
+    "clics": 134,
+    "lecteurs": 80
    },
    {
     "id": "actu_2026_09_05_1",
@@ -228,14 +236,6 @@
     "date": "",
     "categorie": "",
     "clics": 140,
-    "lecteurs": 79
-   },
-   {
-    "id": "actu_2026_09_19_1",
-    "titre": "Arrêts maladie : deux décrets publiés, ce qui change pour ton officine en octobre",
-    "date": "2026-09-19",
-    "categorie": "pharma_france",
-    "clics": 131,
     "lecteurs": 79
    },
    {
