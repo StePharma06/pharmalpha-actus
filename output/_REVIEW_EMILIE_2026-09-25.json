@@ -1,0 +1,48 @@
+{
+  "generated_at": "2026-09-25T04:07:31.230393+02:00",
+  "run_date": "2026-09-25",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_monde",
+      "titre": "ADARx lève 446 millions en IPO : le RNAi sort de l'ombre",
+      "resume": "ADARx vient de réussir l'introduction en bourse RNAi la plus importante depuis plus d'une décennie aux États-Unis. 446 millions de dollars levés pour une technologie qui silencieux des gènes responsables de maladies chroniques. Pour toi, c'est le signal que la vague de thérapies ARN ne s'arrête pas à l'ARNm.",
+      "source": "BioPharma Dive",
+      "source_url": "https://www.biopharmadive.com/news/adarx-rnai-biotech-ipo-stock-pricing/831262/",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "Alepsal de retour : tous les dosages disponibles, c'est officiel",
+      "resume": "Après des mois de galère, l'Alepsal est de nouveau accessible dans tous ses dosages : 15, 50, 100 et 150 mg. L'ANSM confirme la disponibilité nationale. Pour tes patients épileptiques sous phénobarbital, c'est un vrai soulagement.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/therapeutique/vigilances/alepsal-tous-les-dosages-sont-de-nouveau-disponibles",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Biosimilaires : un arrêté au JO du 22/09 - ce que ça change pour ta marge",
+      "resume": "Un arrêté publié au Journal officiel le 22 septembre 2026 met à jour la liste des groupes biologiques similaires substituables. Chaque nouveau groupe ouvert, c'est une fenêtre de substitution - et donc un levier de remunération - que l'officine peut activer dès maintenant.",
+      "source": "Pharm'Actus · USPO — Biosimilaires : nouvelle mise à jour septembre 2026, Journal officiel — Arrêté du 22 septembre 2026 (liste groupes biologiques substituables)",
+      "source_url": "https://uspo.fr/biosimilaires-nouvelle-mise-a-jour-septembre-2026/",
+      "confidence_score": 0.72,
+      "warnings": [
+        "L'arrêté du 22/09/2026 est cité par l'USPO mais son contenu exact (quels groupes nouveaux, quelles molécules ajoutées) n'est pas détaillé dans la source disponible : ne pas affirmer de groupes spécifiques nouveaux sans consulter le JO directement.",
+        "Le plafond de remises sur biosimilaires (40,17 % du PFHT) est le plafond génériques : vérifier si le même plafond s'applique strictement aux biosimilaires ou si un régime dérogatoire existe — en cas de doute, reformuler qualitativement.",
+        "Les données LEEM sur le marché des biologiques (5 milliards EUR) sont une estimation publique 2024 : à vérifier dans la dernière publication annuelle LEEM disponible.",
+        "Le taux d'économies AM de 20-30 % sur le passage biosimilaire est une fourchette générale issue du rapport Cour des comptes 2023 : il varie fortement selon la molécule — ne pas le citer comme un chiffre fixe.",
+        "La mention 'non substituable' et son taux d'usage réel par spécialité mériteraient une source CNAM précise : le rapport Charges & Produits 2025 est cité de mémoire, à vérifier avant publication.",
+        "USPO est la seule source syndicale utilisée ici : sujet purement réglementaire (arrêté JO), pas de prise de position syndicale, donc la règle d'équilibre syndical ne s'applique pas — mais à noter si l'angle est reformulé.",
+        "4 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

@@ -1,64 +1,64 @@
 {
-  "generated_at": "2026-09-24",
-  "window_label": "18 sept. au 24 sept. 2026",
+  "generated_at": "2026-09-25",
+  "window_label": "19 sept. au 25 sept. 2026",
   "has_history": true,
   "delta_source": "pytrends_rising",
   "pathologies": [
     {
-      "display": "Allergie à l'ambroisie",
-      "delta_label": "↑ 20 900",
+      "display": "Pai allergie alimentaire pdf",
+      "delta_label": "↑ 40 100",
       "trend": "up"
     },
     {
-      "display": "Monocytes élevés et fatigue",
-      "delta_label": "↑ 14 450",
+      "display": "Allergie en septembre",
+      "delta_label": "↑ 39 300",
       "trend": "up"
     },
     {
-      "display": "Globules blancs bas et fatigue",
-      "delta_label": "↑ 9 550",
+      "display": "Bouffées de chaleur et fatigue intense",
+      "delta_label": "↑ 12 600",
       "trend": "up"
     },
     {
-      "display": "Allergie mois de septembre",
-      "delta_label": "↑ 7 650",
+      "display": "Plaquettes basses et fatigue",
+      "delta_label": "↑ 9 500",
       "trend": "up"
     },
     {
       "display": "Test covid",
-      "delta_label": "↑ 350",
+      "delta_label": "↑ 450",
       "trend": "up"
     }
   ],
   "soins": [
     {
-      "display": "Oscillo immunite",
-      "delta_label": "↑ 72 350",
-      "trend": "up"
-    },
-    {
       "display": "Azinc immunite",
-      "delta_label": "↑ 59 800",
+      "delta_label": "↑ 66 700",
       "trend": "up"
     },
     {
       "display": "Calmosine digestion bébé",
-      "delta_label": "↑ 40 500",
+      "delta_label": "↑ 47 750",
       "trend": "up"
     },
     {
-      "display": "Matcha digestion",
-      "delta_label": "↑ 28 200",
+      "display": "Oscillo immunite",
+      "delta_label": "↑ 47 350",
       "trend": "up"
     },
     {
-      "display": "Mieux-etre-sante.fr santé auditive et éq",
-      "delta_label": "↑ 7 500",
+      "display": "Digestion chimique",
+      "delta_label": "↑ 29 150",
+      "trend": "up"
+    },
+    {
+      "display": "Gummies sommeil enfant",
+      "delta_label": "↑ 300",
       "trend": "up"
     }
   ],
   "pathologies_stale": false,
-  "pathologies_from": "2026-09-24",
+  "pathologies_from": "2026-09-25",
   "soins_stale": false,
-  "soins_from": "2026-09-24"
+  "soins_from": "2026-09-25"
 }

@@ -1,6 +1,131 @@
 {
   "articles": [
     {
+      "id": "actu_2026_09_25_5",
+      "date": "2026-09-25",
+      "type": "actu",
+      "categorie": "business_officine",
+      "titre": "Biosimilaires : un arrêté au JO du 22/09 - ce que ça change pour ta marge",
+      "resume": "Un arrêté publié au Journal officiel le 22 septembre 2026 met à jour la liste des groupes biologiques similaires substituables. Chaque nouveau groupe ouvert, c'est une fenêtre de substitution - et donc un levier de remunération - que l'officine peut activer dès maintenant.",
+      "source": "Pharm'Actus · USPO — Biosimilaires : nouvelle mise à jour septembre 2026, Journal officiel — Arrêté du 22 septembre 2026 (liste groupes biologiques substituables)",
+      "source_url": "https://uspo.fr/biosimilaires-nouvelle-mise-a-jour-septembre-2026/",
+      "tiktok_url": "",
+      "badge_label": "Business",
+      "image_url": "assets/img_actu_2026_09_25_5.jpg",
+      "tags": [
+        "biosimilaires",
+        "substitution",
+        "marge-officine",
+        "reglementation"
+      ],
+      "full_text": "Un arrêté publié au Journal officiel le 22 septembre 2026 met à jour la liste des groupes biologiques similaires substituables. Chaque nouveau groupe ouvert, c'est une fenêtre de substitution - et donc un levier de remunération - que l'officine peut activer dès maintenant.\n\n**Contexte**\n\nDepuis la loi LFSS 2022 (article 66) et le décret n° 2022-1354 du 24 octobre 2022, les pharmaciens d'officine sont autorisés à substituer un biosimilaire à un biologique de référence dans des groupes définis par arrêté, sauf mention « non substituable » portée par le prescripteur. La liste des groupes biologiques similaires substituables est publiée et mise à jour régulièrement au Journal officiel. L'arrêté du 22 septembre 2026 constitue la dernière actualisation en date - la mise à jour dite « septembre 2026 » selon l'USPO. Ce mécanisme concerne des molécules à fort enjeu économique : adalimumab, infliximab, étanercept, insulines, trastuzumab, bevacizumab, rituximab, entre autres. Ces biologiques représentent collectivement plusieurs centaines de millions d'euros de chiffre d'affaires officinal en France. La substitution biosimilaire n'est pas un détail réglementaire : c'est le seul levier de substitution ouvert aux pharmaciens sur des spécialités à prix administré souvent élevé, avec un gain potentiel sur l'achat (remises fournisseurs sur le biosimilaire) tout en délivrant au prix de référence du groupe. L'ensemble des officines françaises est concerné - même si la fréquence de dispensation des biologiques varie fortement selon les typologies de patientèle.\n\n**Analyse business**\n\n**Ce que l'arrêté du 22/09/2026 change concrètement**\n\nLa mise à jour de la liste des groupes biologiques substituables élargit ou précise les périmètres dans lesquels le pharmacien peut exercer son droit de substitution. Chaque nouveau groupe inscrit = une nouvelle molécule ou un nouveau dosage sur lequel la substitution devient légale et opposable.\n\n**Mécanique économique à comprendre**\n\nContrairement aux génériques (où la remunération officinale repose sur la MDL + honoraire de dispensation, avec remises encadrées), la substitution biosimilaire fonctionne sur un prix administré de groupe : le biosimilaire est délivré au prix du groupe de référence. Le gain pour l'officine provient des **remises fournisseurs** consenties par le laboratoire du biosimilaire sur le prix d'achat (PFHT), remises dont le plafond légal applicable aux génériques diffère du régime applicable aux biosimilaires, qui doit être vérifié dans chaque négociation - il n'est pas symétrique.\n\nPour mémoire, l'Assurance Maladie réalise des économies significatives sur le coût d'un traitement biologique lors du passage au biosimilaire. Sur un marché des biologiques représentant des volumes considérables en France, même un taux de pénétration modeste du biosimilaire génère des volumes significatifs en officine.\n\n**Risque de mention « non substituable »**\n\nLe frein principal reste la mention manuscrite « non substituable » que le prescripteur peut apposer. En pratique, certains spécialistes continuent de la systématiser sur les anti-TNF ou les insulines, ce qui neutralise le droit de substitution du pharmacien. Les données CNAM (rapport Charges & Produits 2025) pointaient encore un taux de substitution biosimilaire nettement inférieur au potentiel théorique sur plusieurs groupes. C'est un angle de dialogue à ouvrir avec les prescripteurs locaux, notamment en CPTS.\n\n**Impact sur le réseau**\n\nLa substitution biosimilaire est aujourd'hui l'un des rares leviers de **remunération indirecte** (via les remises d'achat) sur des spécialités à prix administré, sans nécessiter d'acte supplémentaire ni d'honoraire dédié. Pour les officines à patientèle chronique (rhumatologie, oncologie, diabétologie), le potentiel est concret. Pour les officines généralistes, l'impact reste marginal mais croît à chaque mise à jour de liste.\n\n**Recommandations actionnables**\n\n1. **Mettre à jour ton référentiel biosimilaires dès maintenant** - Consulte le tableau mis à jour publié par l'USPO (lien en source) et compare avec ta liste de groupes actifs dans ton logiciel métier. Vérifie que les nouveaux groupes de l'arrêté du 22/09/2026 sont bien paramétrés dans ton LGO pour déclencher l'alerte de substitution au comptoir.\n\n2. **Auditer ta patientèle biologique** - Identifie les patients sous biologiques de référence dans des groupes désormais substituables. Un simple filtre sur 6 mois de dispensation suffit. C'est la base pour estimer ton potentiel réel de substitution et négocier en connaissance de cause avec tes fournisseurs.\n\n3. **Négocier tes conditions d'achat sur les biosimilaires ouverts** - Contacte tes grossistes-répartiteurs et tes laboratoires référencés sur les nouveaux groupes. Les remises sont le vrai levier : chaque point de remise supplémentaire sur un biologique à PFHT élevé pèse significativement. Ne te contente pas des conditions standard.\n\n4. **Documenter les mentions « non substituable »** - Lorsqu'un prescripteur l'appose systématiquement sur un groupe substituable, tu as une base factuelle pour en discuter en CPTS ou lors d'une démarche de conciliation médicament. Ce n'est pas une démarche commerciale, c'est de la pertinence thérapeutique et économique.\n\n5. **Former l'équipe officinale au discours patient** - La substitution biosimilaire inquiète encore certains patients (efficacité, immunogénicité). Un argumentaire court, factuel et rassurant, délivré par tout le comptoir, réduit le taux de refus patient et sécurise l'acte de substitution.\n\n**Sources citees**\n\n- USPO - Biosimilaires : nouvelle mise à jour septembre 2026\n- Journal officiel - Arrêté du 22 septembre 2026 (liste groupes biologiques substituables)\n- LEEM - Les entreprises du médicament, données marché biologiques 2024\n- Cour des comptes - Rapport sur les médicaments biologiques et biosimilaires 2023"
+    },
+    {
+      "id": "actu_2026_09_25_4",
+      "date": "2026-09-25",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "Pharmacie hospitalière : un nouveau code concours pour la pharma polyvalente",
+      "resume": "Un arrêté du 24 septembre 2026 crée un code spécifique pour la \"pharmacie polyvalente\" au concours de praticien hospitalier. La distinction avec la pharmacie hospitalière classique est désormais formalisée dans les textes. Un signal sur l'évolution du métier à l'hôpital.",
+      "source": "LegiRSS Pharmacie",
+      "source_url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054894612",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_09_25_4.jpg",
+      "tags": [
+        "pharmacie-hospitaliere",
+        "concours-ph",
+        "des-pharmacie",
+        "formation",
+        "officine"
+      ],
+      "full_text": "On ne parle pas souvent des PH pharmaciens en officine. Et pourtant, ce qui se passe à l'hôpital a des répercussions directes sur votre quotidien : flux de patients, coopérations, rétrocession, dispensation à l'unité.\n\nUn arrêté du 24 septembre 2026 modifie l'organisation des épreuves du concours de praticien hospitalier. La nouveauté : l'apparition d'un code distinct pour la \"pharmacie polyvalente\", définie explicitement comme la pharmacie hospitalière hors laboratoire de biologie médicale et hors pharmacie à usage intérieur (PUI). L'accès à ce concours nécessite le diplôme d'État de docteur en pharmacie.\n\nEn parallèle, le code 72 \"pharmacie hospitalière\" est réservé aux titulaires du DES de pharmacie hospitalière.\n\nCe que ça traduit concrètement : l'hôpital reconnaît formellement deux profils de pharmaciens distincts dans ses concours. D'un côté, les PH issus du DES hospitalier, très spécialisés PUI/biologie. De l'autre, des pharmaciens docteurs en pharma, potentiellement issus de l'officine ou d'autres cursus, positionnés sur des missions plus transversales de pharmacie polyvalente.\n\nPourquoi c'est intéressant pour l'officine ? Parce que cette \"pharmacie polyvalente\" correspond à des missions qui ressemblent à ce que font les pharmaciens d'officine les plus engagés : conciliation médicamenteuse, éducation thérapeutique, coordination des soins, analyse pharmaceutique clinique. La frontière officine/hôpital continue de se brouiller, dans le bon sens du terme.\n\nLa mobilité entre secteurs reste encore freinée par des statuts très différents, mais cette reconnaissance formelle d'un profil \"pharmacien polyvalent\" à l'hôpital est un signal. Les jeunes pharmaciens qui cherchent à combiner compétences cliniques et polyvalence ont désormais une voie concours identifiée.\n\nÀ surveiller : comment les CHU vont définir les postes ouverts sur ce nouveau code, et si des passerelles ville-hôpital se créent autour de ces profils. La coopération intersectorielle a besoin de gens qui parlent les deux langues."
+    },
+    {
+      "id": "actu_2026_09_25_3",
+      "date": "2026-09-25",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "Alepsal de retour : tous les dosages disponibles, c'est officiel",
+      "resume": "Après des mois de galère, l'Alepsal est de nouveau accessible dans tous ses dosages : 15, 50, 100 et 150 mg. L'ANSM confirme la disponibilité nationale. Pour tes patients épileptiques sous phénobarbital, c'est un vrai soulagement.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/therapeutique/vigilances/alepsal-tous-les-dosages-sont-de-nouveau-disponibles",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_09_25_3.jpg",
+      "tags": [
+        "rupture",
+        "ansm",
+        "epilepsie",
+        "approvisionnement",
+        "officine"
+      ],
+      "full_text": "Bonne nouvelle, et ça fait du bien d'en avoir une. L'Alepsal, cette association phénobarbital + caféine que tu avais du mal à trouver depuis des mois, est de nouveau disponible au niveau national dans tous ses dosages.\n\nL'ANSM le confirme officiellement : les dosages à 15 mg, 50 mg, 100 mg et 150 mg sont disponibles. Les difficultés d'approvisionnement qui duraient depuis plusieurs mois sont levées.\n\nPourquoi c'est une vraie bonne nouvelle et pas juste un retour à la normale banal ? Parce que le phénobarbital, c'est un antiépileptique ancien mais irremplaçable pour certains profils de patients. Les alternatives ne sont pas toujours bien tolérées, le switch n'est jamais anodin chez un épileptique stabilisé, et les ruptures sur cette molécule créaient une vraie détresse : patients inquiets, familles qui appelaient les officines en urgence, ordonnances impossibles à honorer.\n\nLa rupture d'approvisionnement d'un médicament à marge thérapeutique étroite, c'est pas la même chose qu'une rupture sur un antalgique de palier 1. Ici, on parle de patients pour qui un raté de traitement peut déclencher une crise. Le stress était réel, pour eux comme pour toi.\n\nL'Alepsal est classé médicament à prescription obligatoire, liste II. Le phénobarbital est en outre soumis à des règles de prescription spécifiques liées à son appartenance à la liste des substances psychotropes. Rien ne change sur ce plan : la délivrance reste encadrée, ordonnance obligatoire, durée maximale de prescription respectée.\n\nCe qui change concrètement au comptoir demain matin : tu peux honorer les ordonnances sans bidouiller une substitution improbable ou renvoyer le patient aux urgences. Vérifie ton stock, commande selon tes rotations habituelles, et communique la bonne nouvelle à tes patients concernés. Ils attendent ce retour à la normale depuis trop longtemps."
+    },
+    {
+      "id": "actu_2026_09_25_2",
+      "date": "2026-09-25",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "ADARx lève 446 millions en IPO : le RNAi sort de l'ombre",
+      "resume": "ADARx vient de réussir l'introduction en bourse RNAi la plus importante depuis plus d'une décennie aux États-Unis. 446 millions de dollars levés pour une technologie qui silencieux des gènes responsables de maladies chroniques. Pour toi, c'est le signal que la vague de thérapies ARN ne s'arrête pas à l'ARNm.",
+      "source": "BioPharma Dive",
+      "source_url": "https://www.biopharmadive.com/news/adarx-rnai-biotech-ipo-stock-pricing/831262/",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/img_actu_2026_09_25_2.jpg",
+      "tags": [
+        "rnai",
+        "innovation",
+        "pipeline",
+        "arnm",
+        "recherche"
+      ],
+      "full_text": "L'ARNm, tu connais. Depuis les vaccins Covid, tout le monde en parle. Mais le RNAi, l'interférence par ARN, c'est la génération d'après. Et elle vient de frapper fort.\n\nADARx, biotech américaine spécialisée dans les médicaments à base d'ARN double brin, vient de lever 446 millions de dollars lors de son introduction en bourse. C'est la première IPO d'une biotech RNAi aux États-Unis depuis plus d'une décennie. Un signal fort pour tout le secteur.\n\nLe principe du RNAi ? On envoie de petites molécules d'ARN qui viennent \"éteindre\" spécifiquement un gène défaillant, avant même que la protéine pathologique soit produite. Pas de correction génomique permanente comme le CRISPR, mais une action réversible, ciblée, et potentiellement administrable deux à quatre fois par an. Des injections rares pour des maladies chroniques lourdes : cholestérol, pathologies hépatiques, maladies cardiovasculaires, certains troubles métaboliques.\n\nDes acteurs sont déjà sur le marché. Alnylam Pharmaceuticals commercialise plusieurs thérapies RNAi approuvées dont l'inclisiran (Leqvio, commercialisé en Europe par Novartis) pour l'hypercholestérolémie. Ce médicament est déjà remboursé en France dans certaines indications. ADARx arrive avec une plateforme de nouvelle génération qui prétend améliorer la tolérance et élargir les cibles thérapeutiques.\n\nPourquoi c'est important pour toi en tant que pharmacien d'officine ? Parce que ces molécules arrivent dans le pipeline avec des schémas posologiques révolutionnaires : une injection tous les six mois ou une fois par an. Le modèle de la dispensation mensuelle d'un traitement chronique est directement challengé. La relation avec le patient change, la gestion du stock change, et la question de l'administration à l'officine va forcément se poser.\n\nOn n'en est pas encore là pour ADARx : les programmes sont en développement clinique. Mais 446 millions de dollars, c'est la confiance des investisseurs institutionnels dans cette technologie. Ce n'est pas une lubie de chercheur, c'est un secteur industriel qui s'accélère.\n\nA surveiller de près dans les trois à cinq ans. Les AMM RNAi de nouvelle génération arrivent, et avec elles, de nouvelles conversations à avoir au comptoir."
+    },
+    {
+      "id": "actu_2026_09_25_1",
+      "date": "2026-09-25",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "Grippe : ordonnance obligatoire, mais le pharmacien reste prescripteur",
+      "resume": "Depuis le 10 juillet 2026, les vaccins grippe sont classés liste I. Traduction : sans ordonnance, tu ne peux plus délivrer le vaccin seul pour que le patient aille se faire vacciner ailleurs. Mais spoiler : tu peux toujours prescrire ET vacciner toi-même, dès 11 ans.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/nouvelles-missions/vaccination/vaccins-contre-la-grippe-le-pharmacien-peut-il-encore-les-dispenser-sans-ordonnance",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_09_25_1.jpg",
+      "tags": [
+        "vaccination",
+        "grippe",
+        "prescription",
+        "liste-i",
+        "officine"
+      ],
+      "full_text": "Le classement liste I des vaccins antigrippaux depuis le 10 juillet 2026 a semé la panique dans pas mal d'officines. \"Je peux encore vendre les vaccins grippe ?\" On entend ça partout. Remettons les pendules à l'heure.\n\nConcrètement, la délivrance seule du vaccin, sans ordonnance, pour un patient qui prévoit de se faire vacciner chez son médecin ou son infirmière, c'est fini. Le classement liste I impose une prescription. Point.\n\nMais voilà ce que la presse généraliste rate systématiquement : le pharmacien formé à la vaccination reste PRESCRIPTEUR et VACCINATEUR pour les patients à partir de 11 ans. Arrêté + Décret du 08/08/2023, c'est du droit commun national. Tu rédiges l'ordonnance au comptoir, tu vaccines dans ton espace de confidentialité, et l'acte est complet.\n\nDonc concrètement, ce classement liste I ne ferme pas l'accès à la vaccination officinale. Il crée une contrainte administrative supplémentaire, c'est tout. La tracabilité est renforcée, la prescription est obligatoire, mais le pharmacien formé reste dans la boucle de A à Z.\n\nLe seul angle mort réel : les moins de 11 ans. Là, la prescription doit venir d'un médecin. Et les pharmaciens non formés à la vaccination ne peuvent évidemment ni prescrire ni vacciner, quelle que soit la tranche d'âge.\n\nLa campagne 2026/2027 démarre le 13 octobre. Les commandes de vaccins Covid s'ouvrent dès le 28 septembre matin, selon un DGS-Urgent de la Direction générale de la santé. Pour la grippe, les circuits habituels s'appliquent.\n\nCe qui change concrètement au comptoir demain matin : si un patient arrive sans ordonnance pour acheter son vaccin et se faire vacciner \"chez son médecin\", tu ne peux plus délivrer sans prescription. En revanche, si tu es formé, tu lui proposes la consultation prescription + vaccination sur place. C'est ton acte, ta valeur ajoutée. Ne la laisse pas filer."
+    },
+    {
+      "id": "lsv_2026_09_25",
+      "date": "2026-09-25",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? On soignait les maladies de peau avec de la bave d'escargot",
+      "resume": "Avant les crèmes dermatologiques, les médecins grecs prescrivaient de la bave d'escargot pour cicatriser les plaies. Ce qui faisait sourire les chercheurs modernes... jusqu'à ce qu'ils analysent la composition. Spoiler : ils n'ont pas ri longtemps.",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_09_25.jpg",
+      "tags": [
+        "histoire",
+        "plante",
+        "dermatologie",
+        "decouverte",
+        "cosmetique"
+      ],
+      "full_text": "Hippocrate le prescrivait déjà au Ve siècle avant J.-C. Pour les brûlures, les plaies ouvertes, les irritations cutanées : appliquer directement de la bave d'escargot sur la peau. Ça glisse, ça colle, ça sent pas la rose. Mais ça marchait, paraît-il.\n\nPendant des siècles, les médecins arabes, romains, puis européens ont repris la recette. Pline l'Ancien la cite dans son Histoire Naturelle. Les apothicaires médiévaux gardaient des escargots vivants dans leur arrière-boutique, comme d'autres gardaient des sangsues. Clientèle fidèle, peu encombrante.\n\nEt puis la médecine moderne est arrivée. Et la bave d'escargot est devenue une blague de potache. Un truc de bonnes femmes. Une superstition paysanne. On a rangé ça dans le même tiroir que les cataplasmes de bouse et les infusions de crapaud.\n\nSauf que. En 1995, des chercheurs chiliens s'intéressent aux éleveurs d'escargots de la région de Coquimbo. Ces types manipulent des escargots à longueur de journée. Et leurs mains... cicatrisent à une vitesse anormale. Pas de gerçures, pas d'infections. Des mains de bébé sur des travailleurs de force.\n\nL'analyse de la mucine - c'est le nom scientifique de la bave - révèle alors un cocktail impressionnant : allantoïne, glycoprotéines, acide hyaluronique, collagène, élastine, peptides antimicrobiens. En gros, tout ce qu'on met aujourd'hui dans les crèmes anti-âge haut de gamme... réuni naturellement dans le sillage d'un gastéropode.\n\nAujourd'hui, l'extrait de bave d'escargot filtrée est un ingrédient actif breveté, présent dans des dizaines de références cosmétiques et dermatologiques vendues en pharmacie. Alors la prochaine fois qu'un patient lève les yeux au ciel devant votre rayon dermo, tu peux lui dire : Hippocrate avait compris ça il y a 2 500 ans."
+    },
+    {
       "id": "actu_2026_09_24_5",
       "date": "2026-09-24",
       "type": "actu",
@@ -17685,6 +17810,6 @@
       ]
     }
   ],
-  "count": 852,
-  "updated_at": "2026-09-24T04:07:20.053315+02:00"
+  "count": 858,
+  "updated_at": "2026-09-25T04:07:35.010558+02:00"
 }

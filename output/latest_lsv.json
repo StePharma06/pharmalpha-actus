@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? On empoisonnait les malades pour mesurer leur fièvre",
-  "resume": "Avant le thermomètre, mesurer la fièvre était une science approximative... et parfois fatale. Pendant des siècles, les médecins ont utilisé une plante toxique pour \"calibrer\" la chaleur du corps. Le résultat était souvent pire que la maladie.",
-  "full_text": "Imagine le tableau : on est au XVIe siècle, un médecin se penche sur son patient fiévreux, lui tâte le poignet, le front, lui regarde la langue. Puis il sort une petite poudre blanche. Pas pour le soigner. Pour mesurer.\n\nLa plante en question, c'est l'ellébore noir - Helleborus niger. Une belle fleur d'hiver, adorable dans un jardin. Mais à haute dose ? Cardiotoxique, convulsivante, potentiellement mortelle. Et pourtant, des médecins grecs puis arabes puis européens l'utilisaient comme \"réactif biologique\". L'idée : si le patient réagit fort (tremblements, sueurs, accélération du cœur), c'est que la fièvre est \"intense\". Aucune gradation, aucune unité. Juste des symptômes d'empoisonnement qui servaient de jauge.\n\nLe twist ? Cette pratique n'était pas marginale. Galien lui-même, le médecin le plus influent de l'Antiquité, recommandait l'ellébore pour \"purger la fièvre\" et en évaluer la sévérité. Sa doctrine a dominé la médecine pendant 1 400 ans. Autant dire qu'on a empoisonné des générations de patients avec une caution scientifique béton.\n\nC'est finalement Santorio Santorio, médecin padouan, qui va changer les règles en 1612. Il adapte les travaux de Galilée sur la thermoscopie pour créer un proto-thermomètre médical - un tube de verre avec de l'eau et une graduation grossière. Imprécis, encombrant, fragile. Mais pour la première fois, on mesure la fièvre sans toucher au patient, sans le droguer, sans risquer de le tuer avec le remède diagnostique.\n\nL'ellébore, lui, a continué sa carrière. On le retrouve en phytothérapie traditionnelle jusqu'au XIXe siècle. Aujourd'hui, ses alcaloïdes (hellébrine, hellébréine) sont toujours étudiés en oncologie pour leurs propriétés cytotoxiques - le poison devient peut-être médicament.\n\nLa morale au comptoir : la prochaine fois qu'un patient te ramène un thermomètre connecté hyper-précis en te demandant si c'est fiable, dis-lui que l'alternative historique, c'était de l'ellébore. Ça relativise.",
-  "image_keywords": "hellebore black plant",
+  "titre": "Le saviez-vous ? On soignait les maladies de peau avec de la bave d'escargot",
+  "resume": "Avant les crèmes dermatologiques, les médecins grecs prescrivaient de la bave d'escargot pour cicatriser les plaies. Ce qui faisait sourire les chercheurs modernes... jusqu'à ce qu'ils analysent la composition. Spoiler : ils n'ont pas ri longtemps.",
+  "full_text": "Hippocrate le prescrivait déjà au Ve siècle avant J.-C. Pour les brûlures, les plaies ouvertes, les irritations cutanées : appliquer directement de la bave d'escargot sur la peau. Ça glisse, ça colle, ça sent pas la rose. Mais ça marchait, paraît-il.\n\nPendant des siècles, les médecins arabes, romains, puis européens ont repris la recette. Pline l'Ancien la cite dans son Histoire Naturelle. Les apothicaires médiévaux gardaient des escargots vivants dans leur arrière-boutique, comme d'autres gardaient des sangsues. Clientèle fidèle, peu encombrante.\n\nEt puis la médecine moderne est arrivée. Et la bave d'escargot est devenue une blague de potache. Un truc de bonnes femmes. Une superstition paysanne. On a rangé ça dans le même tiroir que les cataplasmes de bouse et les infusions de crapaud.\n\nSauf que. En 1995, des chercheurs chiliens s'intéressent aux éleveurs d'escargots de la région de Coquimbo. Ces types manipulent des escargots à longueur de journée. Et leurs mains... cicatrisent à une vitesse anormale. Pas de gerçures, pas d'infections. Des mains de bébé sur des travailleurs de force.\n\nL'analyse de la mucine - c'est le nom scientifique de la bave - révèle alors un cocktail impressionnant : allantoïne, glycoprotéines, acide hyaluronique, collagène, élastine, peptides antimicrobiens. En gros, tout ce qu'on met aujourd'hui dans les crèmes anti-âge haut de gamme... réuni naturellement dans le sillage d'un gastéropode.\n\nAujourd'hui, l'extrait de bave d'escargot filtrée est un ingrédient actif breveté, présent dans des dizaines de références cosmétiques et dermatologiques vendues en pharmacie. Alors la prochaine fois qu'un patient lève les yeux au ciel devant votre rayon dermo, tu peux lui dire : Hippocrate avait compris ça il y a 2 500 ans.",
+  "image_keywords": "snail skincare cosmetic",
   "tags": [
     "histoire",
-    "diagnostic",
     "plante",
-    "poison",
-    "fievre"
+    "dermatologie",
+    "decouverte",
+    "cosmetique"
   ],
-  "date": "2026-09-24",
+  "date": "2026-09-25",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",
