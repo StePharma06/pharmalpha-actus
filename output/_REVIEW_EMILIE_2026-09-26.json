@@ -1,0 +1,50 @@
+{
+  "generated_at": "2026-09-26T04:08:12.182072+02:00",
+  "run_date": "2026-09-26",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_monde",
+      "titre": "Insuline hebdomadaire : la FDA valide Onswik, le diabète de type 2 change de rythme",
+      "resume": "Eli Lilly vient de décrocher le feu vert de la FDA pour Onswik, une insuline basale en injection une fois par semaine chez les adultes diabétiques de type 2. Fini les piqûres quotidiennes pour une frange de patients. Un signal fort qui va forcément traverser l'Atlantique.",
+      "source": "STAT News",
+      "source_url": "https://www.statnews.com/2026/09/25/biotech-news-lilly-wins-approval-for-weekly-insulin-shot/?utm_campaign=rss",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "Fabrice Camaioni président de la FSPF : un homme de terrain aux commandes",
+      "resume": "C'est officiel depuis le 25 septembre à Nantes : Fabrice Camaioni prend la tête de la FSPF. Il succède à Philippe Besset, parti au CESE. Un titulaire pur jus, 20 ans à la tête du syndicat des Ardennes, qui connaît le comptoir de l'intérieur. Et en bonus, la FSPF ne s'oppose pas à la reconduction de la convention.",
+      "source": "Le Pharmacien de France",
+      "source_url": "https://lepharmaciendefrance.fr/fabrice-camaioni-devient-president-de-la-fede/",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Vaccination Covid automne 2026 : l'USPO monte au créneau, et ton officine est au cœur du jeu",
+      "resume": "L'USPO interpelle directement la ministre sur la prochaine campagne de vaccination anti-Covid. Derrière la lettre ouverte, une question business concrète : les pharmacies seront-elles intégrées comme acteur central, ou reléguées au rang de simple point de dispensation ?",
+      "source": "Pharm'Actus · USPO – Lettre ouverte à la ministre de la santé sur la campagne de vaccination Covid-19 (25/09/2026)",
+      "source_url": "https://uspo.fr/lettre-ouverte-a-madame-la-ministre-de-la-sante-sur-la-prochaine-campagne-de-vaccination-contre-la-covid-19/",
+      "confidence_score": 0.52,
+      "warnings": [
+        "Le contenu détaillé de la lettre ouverte USPO n'est pas disponible dans les sources fournies : seul le titre et la date sont connus. Les enjeux spécifiques soulevés par l'USPO sont inférés du contexte général des campagnes vaccinales, pas cités textuellement — à vérifier à la lecture de la lettre complète.",
+        "L'honoraire de vaccination de 9,60 € est cité comme référence connue de la convention pharmaceutique, mais sa reconduction exacte pour la campagne Covid 2026 devra être confirmée par l'arrêté ministériel à paraître.",
+        "Les chiffres de participation des officines aux campagnes Covid précédentes (5 000 officines, 80 à 150 patients) sont des ordres de grandeur issus de données déclaratives antérieures, non sourcés par un rapport officiel récent : ils doivent être présentés comme indicatifs.",
+        "Le calcul 6 000 officines x 100 patients x 9,60 € est un scénario illustratif, pas une projection officielle : il doit rester présenté comme tel.",
+        "Les positions de la FSPF et de l'UPGF sur CE sujet précis (campagne Covid automne 2026) n'ont pas pu être vérifiées dans les sources disponibles : les formulations prudentes choisies dans l'article reflètent cette incertitude.",
+        "La source LegiRSS (article [3]) sur la Commission de biologie médicale a été délibérément écartée : aucun angle business officinal pertinent et différenciant n'en ressort pour une publication quotidienne titulaire.",
+        "La source ActuLabo sur le LFB (article [2]) a été écartée : impact business officinal indirect et sujet plasma/protéines recombinantes sans lien immédiat avec la rentabilité ou les missions officinales.",
+        "La source Le Monde PME (article [4]) a été écartée : sujet généraliste RH/management PME, non spécifique pharmacie et sans chiffres officinaux vérifiables.",
+        "5 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

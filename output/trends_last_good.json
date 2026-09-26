@@ -1,23 +1,23 @@
 {
   "pathologies": [
     {
-      "display": "Pai allergie alimentaire pdf",
-      "delta_label": "↑ 40 100",
-      "trend": "up"
-    },
-    {
       "display": "Allergie en septembre",
-      "delta_label": "↑ 39 300",
+      "delta_label": "↑ 37 500",
       "trend": "up"
     },
     {
-      "display": "Bouffées de chaleur et fatigue intense",
-      "delta_label": "↑ 12 600",
+      "display": "Allergie ambroisie symptômes",
+      "delta_label": "↑ 20 350",
       "trend": "up"
     },
     {
-      "display": "Plaquettes basses et fatigue",
-      "delta_label": "↑ 9 500",
+      "display": "Orslow fatigue pants",
+      "delta_label": "↑ 12 050",
+      "trend": "up"
+    },
+    {
+      "display": "Qu'est-ce qu'une fracture de fatigue",
+      "delta_label": "↑ 8 050",
       "trend": "up"
     },
     {
@@ -26,33 +26,33 @@
       "trend": "up"
     }
   ],
-  "pathologies_from": "2026-09-25",
+  "pathologies_from": "2026-09-26",
   "soins": [
     {
-      "display": "Azinc immunite",
-      "delta_label": "↑ 66 700",
-      "trend": "up"
-    },
-    {
-      "display": "Calmosine digestion bébé",
-      "delta_label": "↑ 47 750",
-      "trend": "up"
-    },
-    {
       "display": "Oscillo immunite",
-      "delta_label": "↑ 47 350",
+      "delta_label": "↑ 181 400",
       "trend": "up"
     },
     {
-      "display": "Digestion chimique",
-      "delta_label": "↑ 29 150",
+      "display": "Plante digestion",
+      "delta_label": "↑ 58 500",
       "trend": "up"
     },
     {
-      "display": "Gummies sommeil enfant",
-      "delta_label": "↑ 300",
+      "display": "Azinc immunite",
+      "delta_label": "↑ 53 950",
+      "trend": "up"
+    },
+    {
+      "display": "Matcha digestion",
+      "delta_label": "↑ 48 750",
+      "trend": "up"
+    },
+    {
+      "display": "Le-blog-sante.fr sante environnementale",
+      "delta_label": "↑ 8 300",
       "trend": "up"
     }
   ],
-  "soins_from": "2026-09-25"
+  "soins_from": "2026-09-26"
 }

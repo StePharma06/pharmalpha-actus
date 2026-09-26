@@ -1,6 +1,110 @@
 {
   "articles": [
     {
+      "id": "actu_2026_09_26_5",
+      "date": "2026-09-26",
+      "type": "actu",
+      "categorie": "business_officine",
+      "titre": "Vaccination Covid automne 2026 : l'USPO monte au créneau, et ton officine est au cœur du jeu",
+      "resume": "L'USPO interpelle directement la ministre sur la prochaine campagne de vaccination anti-Covid. Derrière la lettre ouverte, une question business concrète : les pharmacies seront-elles intégrées comme acteur central, ou reléguées au rang de simple point de dispensation ?",
+      "source": "Pharm'Actus · USPO – Lettre ouverte à la ministre de la santé sur la campagne de vaccination Covid-19 (25/09/2026)",
+      "source_url": "https://uspo.fr/lettre-ouverte-a-madame-la-ministre-de-la-sante-sur-la-prochaine-campagne-de-vaccination-contre-la-covid-19/",
+      "tiktok_url": "",
+      "badge_label": "Business",
+      "image_url": "assets/img_actu_2026_09_26_5.jpg",
+      "tags": [
+        "vaccination",
+        "covid",
+        "officine",
+        "uspo"
+      ],
+      "full_text": "L'USPO interpelle directement la ministre sur la prochaine campagne de vaccination anti-Covid. Derrière la lettre ouverte, une question business concrète : les pharmacies seront-elles intégrées comme acteur central, ou reléguées au rang de simple point de dispensation ?\n\n**Contexte**\n\nLe 25 septembre 2026, l'USPO publie une lettre ouverte adressée à la ministre de la Santé sur la prochaine campagne de vaccination contre la Covid-19. Le contenu détaillé de cette lettre n'est pas intégralement disponible dans les sources à ce stade, mais la démarche elle-même est un signal fort : les syndicats de pharmaciens entendent peser sur les conditions d'organisation de la campagne avant qu'elles ne soient arrêtées.\n\nDepuis la loi du 26 avril 2021 et son élargissement progressif, les pharmaciens d'officine sont habilités à prescrire et administrer les vaccins contre la Covid-19 aux personnes de 11 ans et plus, sous réserve d'avoir suivi la formation requise. Ce cadre légal reste en vigueur. Un nombre significatif d'officines avaient participé à la vaccination anti-Covid lors des précédentes campagnes - un maillage territorial que ni l'hôpital ni la médecine de ville ne peuvent rivaliser en capillarité. La question qui se pose aujourd'hui : dans quel format, avec quelle rémunération et selon quelles modalités logistiques cette campagne automne 2026 va-t-elle se dérouler ?\n\n**Analyse business**\n\nLe vrai enjeu business derrière cette lettre ouverte, c'est la rémunération et le volume d'actes.\n\n**Ce qu'on sait du cadre actuel :** L'acte de vaccination administré par le pharmacien donne lieu à un honoraire de vaccination défini par la convention pharmaceutique. Le détail chiffré de l'impact sur les recettes dépend du volume de patients vaccinés propre à chaque officine, sans compter la dispensation des vaccins eux-mêmes.\n\n**Mais le vrai levier, c'est l'organisation logistique.** Les campagnes Covid impliquent une chaîne du froid contraignante (entre +2°C et +8°C), des stocks à commander en amont, du matériel de traçabilité (Vaccin@l ou équivalent), et du temps non valorisé au comptoir. Si les doses sont livrées directement aux officines sans dotation logistique dédiée, le coût opérationnel pèse sur la marge.\n\n**Le point d'inquiétude de l'USPO** est vraisemblablement lié aux conditions de réquisition de la campagne : la Covid-19 a historiquement vu des arbitrages ministériels tardifs sur les canaux de vaccination (centres de vaccination, médecins, pharmacies), créant une incertitude opérationnelle difficile à gérer pour une officine qui doit s'organiser plusieurs semaines à l'avance.\n\n**Côté syndicats :** L'USPO prend l'initiative publique. À ce jour, la FSPF ne s'est pas exprimée publiquement sur ce sujet précis dans les mêmes termes - bien que la fédération ait toujours défendu la place centrale de l'officine dans les campagnes vaccinales. L'UPGF n'a pas non plus émis de communiqué identifiable sur ce point à la date de publication de cet article. Ces silences ne valent pas désaccord : ils reflètent simplement que l'USPO a choisi d'ouvrir ce front en premier.\n\n**Le réseau des officines françaises** représente le premier réseau de santé de proximité du pays. Une campagne mobilisant largement les officines vaccinatrices pourrait représenter un volume d'honoraires significatif injecté dans le réseau, loin d'être négligeable dans un contexte de pression sur les marges.\n\n**Recommandations actionnables**\n\n1. **Vérifie ta formation** - Le droit de prescrire et administrer les vaccins Covid (et grippe) aux 11 ans et plus nécessite une formation habilitante. Si tu ne l'as pas encore faite, c'est maintenant qu'il faut t'inscrire, avant le lancement officiel de la campagne. Contacte ton URPS ou ton organisme de DPC.\n\n2. **Anticipe ta chaîne du froid** - Commande ou vérifie ton équipement frigorifique dédié (thermomètre enregistreur, espace séparé). Une défaillance logistique en début de campagne = perte de doses et perte de crédibilité.\n\n3. **Surveille les textes officiels** - La campagne ne sera opérationnelle qu'à la parution des arrêtés ministériels précisant les vaccins éligibles, les populations cibles et les modalités de prescription-dispensation-administration. Suis le JO et les publications ANSM/DGS.\n\n4. **Rejoins ou signale-toi à ta CPTS** - De plus en plus, les campagnes vaccinales sont coordonnées localement via les CPTS. Y être référencé comme officine vaccinatrice peut t'apporter un flux de patients orientés.\n\n5. **Documente chaque acte dans Vaccin@l** - La traçabilité est obligatoire et conditionne le paiement de l'honoraire. Une saisie incomplète = acte non remboursé.\n\n**Sources citees**\n\n- USPO - Lettre ouverte à la ministre de la santé sur la campagne de vaccination Covid-19 (25/09/2026)"
+    },
+    {
+      "id": "actu_2026_09_26_4",
+      "date": "2026-09-26",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "Des médicaments fabriqués dans l'espace : pas du tout de la science-fiction",
+      "resume": "Des entreprises pharmaceutiques misent sur la microgravité orbitale pour produire certaines substances impossibles à fabriquer correctement sur Terre. Après des années d'expériences sur l'ISS, le passage à l'échelle industrielle se profile. L'avenir de la galénique est peut-être à 400 km d'altitude.",
+      "source": "France Info Sante",
+      "source_url": "https://www.franceinfo.fr/replay-radio/le-monde-et-vous/les-mini-usines-a-medicaments-dans-l-espace-deviennent-la-nouvelle-ambition-de-l-industrie-pharmaceutique_8191922.html#xtor=RSS-3-%5Bgeneral%5D",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_09_26_4.jpg",
+      "tags": [
+        "innovation",
+        "galenique",
+        "recherche",
+        "industrie",
+        "ia"
+      ],
+      "full_text": "Accroche ta blouse : les prochaines usines pharmaceutiques pourraient tourner en orbite basse. Ce n'est pas un scénario de film de SF, c'est une tendance industrielle documentée qui prend de l'ampleur en 2026.\n\nLe principe est simple à comprendre : certaines molécules se cristallisent, se structurent ou se purifient différemment en microgravité. Sur Terre, la gravité perturbe certains processus de fabrication (agrégation des protéines, croissance cristalline, séparation membranaire). Dans l'espace, ces contraintes disparaissent. Résultat : des formes galéniques ou des principes actifs de meilleure pureté, ou carrément inaccessibles au sol.\n\nLes cibles ? Principalement les biologiques complexes : protéines thérapeutiques, anticorps monoclonaux, formulations à libération contrôlée ultra-précises. Exactement les classes de médicaments qui explosent en prescription et dont la fabrication terrestre se heurte à des limites structurelles.\n\nPlusieurs entreprises américaines et européennes ont déjà conduit des expériences à bord de l'ISS. L'étape suivante : des modules de production dédiés sur des stations commerciales (Axiom Space, Starlab...) qui prendraient le relais de l'ISS en fin de vie. Matière première lancée, produite en orbite, ramenée sur Terre. Le cycle complet commence à être rodé.\n\nCe n'est pas encore pour demain matin au comptoir, soyons clairs. Mais c'est plus proche qu'on ne le pense : des premières productions commerciales à petite échelle sont envisagées dans les 5 à 10 ans pour des molécules à très haute valeur ajoutée (médicaments orphelins, thérapies ciblées, etc.).\n\nPour un pharmacien d'officine, l'enjeu est double. D'abord, comprendre que les contraintes d'approvisionnement de demain seront encore plus complexes qu'aujourd'hui : des médicaments fabriqués en quantités limitées, en orbite, avec des coûts de production stratosphériques (littéralement), ça ne va pas simplifier la gestion des ruptures. Ensuite, les patients vont en entendre parler dans les médias et te poser des questions. Mieux vaut être au courant.\n\nL'espace comme outil de souveraineté pharmaceutique ? La question mérite d'être posée. Si demain certaines molécules critiques ne peuvent être produites qu'en microgravité, qui contrôle les accès orbitaux contrôle une partie de la chaîne du médicament. Un nouveau terrain de jeu géopolitique pour l'industrie pharma."
+    },
+    {
+      "id": "actu_2026_09_26_3",
+      "date": "2026-09-26",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "Fabrice Camaioni président de la FSPF : un homme de terrain aux commandes",
+      "resume": "C'est officiel depuis le 25 septembre à Nantes : Fabrice Camaioni prend la tête de la FSPF. Il succède à Philippe Besset, parti au CESE. Un titulaire pur jus, 20 ans à la tête du syndicat des Ardennes, qui connaît le comptoir de l'intérieur. Et en bonus, la FSPF ne s'oppose pas à la reconduction de la convention.",
+      "source": "Le Pharmacien de France",
+      "source_url": "https://lepharmaciendefrance.fr/fabrice-camaioni-devient-president-de-la-fede/",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_09_26_3.jpg",
+      "tags": [
+        "fspf",
+        "convention",
+        "syndicat",
+        "officine",
+        "politique-pharma"
+      ],
+      "full_text": "Le boss de la FSPF a un nouveau visage. Fabrice Camaioni a été officiellement élu président de la Fédération des syndicats pharmaceutiques de France lors de l'assemblée générale extraordinaire du 25 septembre, à Nantes, en plein Congrès national des pharmaciens (CNDP 2026).\n\nQui c'est ? Vice-président de la FSPF depuis 2022, il assurait la présidence par intérim depuis le 1er septembre, après la démission de Philippe Besset, élu au Conseil économique, social et environnemental (CESE) le 20 mai 2026. Avant ça, 20 ans à la tête du syndicat des pharmaciens des Ardennes. Un mec de terrain, pas un technocrate parisien.\n\nIl était seul candidat à la succession. Élection sans suspense sur la forme, mais symboliquement forte : la FSPF a choisi la continuité et la stabilité dans un contexte réglementaire et économique particulièrement chargé, à quelques jours de la présentation du PLFSS 2027.\n\nSur la convention : lors de la même journée, les syndicats départementaux réunis ont approuvé quatre motions validant le travail mené par la FSPF sur le modèle conventionnel. La Fédération ne s'oppose pas à la reconduction de la convention pharmaceutique en cours. Message clair envoyé à l'Assurance Maladie et au gouvernement.\n\nQuid des autres syndicats sur ce point ? L'USPO, de son côté, n'a pas encore pris de position publique officielle sur la reconduction conventionnelle à ce stade. La FSPF avance donc ses pions en ordre groupé, sans opposition frontale visible de la place syndicale pour l'instant.\n\nPourquoi ça compte pour toi au comptoir ? Parce que la FSPF négocie directement la convention avec l'Assurance Maladie. Honoraires de dispensation, missions rémunérées, marges, ROSP : tout passe par là. Un nouveau président avec un ancrage terrain fort, c'est potentiellement une ligne de négociation plus proche des réalités du quotidien en officine.\n\nLa suite se joue vite : le PLFSS 2027 arrive dans les jours qui viennent. Camaioni va devoir se positionner immédiatement sur les arbitrages budgétaires. Premier test grandeur nature pour le nouveau patron de la Fédé."
+    },
+    {
+      "id": "actu_2026_09_26_2",
+      "date": "2026-09-26",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "Insuline hebdomadaire : la FDA valide Onswik, le diabète de type 2 change de rythme",
+      "resume": "Eli Lilly vient de décrocher le feu vert de la FDA pour Onswik, une insuline basale en injection une fois par semaine chez les adultes diabétiques de type 2. Fini les piqûres quotidiennes pour une frange de patients. Un signal fort qui va forcément traverser l'Atlantique.",
+      "source": "STAT News",
+      "source_url": "https://www.statnews.com/2026/09/25/biotech-news-lilly-wins-approval-for-weekly-insulin-shot/?utm_campaign=rss",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/img_actu_2026_09_26_2.jpg",
+      "tags": [
+        "diabete",
+        "insuline",
+        "fda",
+        "innovation",
+        "officine"
+      ],
+      "full_text": "Une injection par semaine au lieu d'une par jour. C'est la promesse qu'Eli Lilly vient de faire valider par la FDA pour Onswik, son insuline basale hebdomadaire indiquée dans le diabète de type 2 chez l'adulte. L'approbation américaine vient de tomber, et autant te dire que ça ne va pas rester longtemps qu'un sujet américain.\n\nPourquoi c'est important ? Parce que l'observance de l'insulinothérapie, c'est l'un des grands défis de la prise en charge du DT2. Des patients qui oublient, qui redoutent les injections quotidiennes, qui dérochent du traitement parce que la contrainte est trop lourde. Une insuline hebdomadaire, c'est une révolution potentielle d'adhésion thérapeutique.\n\nOnswik rejoint ainsi efsitora alfa (développé par Eli Lilly également sous un autre nom de code) dans la course aux insulines longue durée ultra-prolongées. La compétition dans ce segment s'intensifie : Novo Nordisk travaille de son côté sur ses propres formulations hebdomadaires (icodec, déjà approuvée dans certains pays). Le marché de l'insuline basale est en train de se réinventer.\n\nEt pour le pharmacien français, c'est quoi l'impact concret ? Pour l'instant : aucun, Onswik n'a pas d'AMM européenne ni de dossier EMA finalisé à ce stade. Mais l'histoire nous apprend que les grandes approbations FDA arrivent en Europe dans les 12 à 24 mois. Autant anticiper.\n\nCe que ça va changer au comptoir quand ça arrivera : une nouvelle éducation thérapeutique à construire (stylo différent, timing d'injection à expliquer, gestion des oublis de dose hebdomadaire), des questions patients sur \"c'est quoi la différence avec mon Toujeo ou mon Tresiba\", et une vigilance sur les interactions avec les autres hypoglycémiants.\n\nCe qu'il faut retenir dès maintenant : l'insuline hebdomadaire n'est plus de la science-fiction. La FDA vient de valider que c'est efficace et sûr. L'EMA sera le prochain épisode. Suis le dossier, forme ton équipe à l'avance.\n\nLe DT2, c'est environ 4 millions de patients traités en France. Même si une fraction bascule sur une insuline hebdomadaire, l'impact sur les ordonnances et le conseil officinal sera massif. C'est maintenant qu'il faut commencer à se préparer, pas le jour où l'AMM européenne tombe."
+    },
+    {
+      "id": "actu_2026_09_26_1",
+      "date": "2026-09-26",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "Fluoxétine 20 mg en tension : l'ANSM sort le drapeau orange",
+      "resume": "Le Prozac et ses génériques en 20 mg sont en galère d'approvisionnement. L'ANSM a prévenu : retour en stock prévu mi-octobre, mais d'ici là, il faudra gérer. Des mesures ont été demandées pour sécuriser les patients sous traitement.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/la-fluoxetine-20-mg-en-tension-dapprovisionnement",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_09_26_1.jpg",
+      "tags": [
+        "rupture",
+        "ansm",
+        "antidepresseur",
+        "approvisionnement",
+        "officine"
+      ],
+      "full_text": "Le Prozac est en mode \"rupture imminente\". L'ANSM a officialisé ce 25 septembre une tension d'approvisionnement sur la fluoxétine 20 mg, toutes formes orales confondues (gélules et comprimés). Cause : des difficultés temporaires de production chez le ou les fabricants.\n\nLa bonne nouvelle, si on peut dire : le retour en rayon est annoncé pour mi-octobre. Soit environ trois semaines à tenir. Court sur le papier, mais long quand t'as des patients chroniques à qui il manque un renouvellement.\n\nPourquoi c'est un sujet sensible ? Parce que la fluoxétine, c'est un antidépresseur de première ligne. Des patients qui en prennent depuis des années, des profils fragiles, des traitements qu'on n'interrompt PAS sans avis médical. Une rupture même courte peut générer une vraie angoisse chez le patient et une pression supplémentaire sur ton équipe.\n\nL'ANSM a demandé des mesures aux grossistes-répartiteurs et aux laboratoires pour sécuriser les stocks disponibles et éviter les comportements de thésaurisation. Traduction : pas de \"je commande 10 boîtes pour être tranquille\". Les contingentements risquent de tomber rapidement.\n\nConcrètement, que faire au comptoir ?\n\nPremier réflexe : vérifier ton stock actuel et identifier les patients concernés. Préviens tes grossistes maintenant pour sécuriser ce que tu peux. Contacte les prescripteurs si un patient est en renouvellement immédiat : ils pourront éventuellement basculer sur une alternative (sertraline, escitalopram selon le profil) mais JAMAIS sans avis médical. Ne substitue pas un antidépresseur de ta propre initiative : ce n'est pas dans ton périmètre de prescription et c'est une classe où la transition nécessite un suivi.\n\nPense aussi à activer la DP : tu verras d'un coup d'oeil les patients multisite et tu éviteras les doubles délivrances parasites qui aggravent la pénurie.\n\nLe message à tes patients : \"Il y a un problème de fabrication temporaire, on gère, revenez dans X jours ou je vous rappelle dès que c'est disponible.\" Simple, rassurant, professionnel. Pas besoin d'en faire un drame, mais pas question de minimiser non plus.\n\nMi-octobre comme horizon. Sur le calendrier, ça tombe pile en pleine campagne vaccinale et montée des pathologies hivernales. Autant dire que le timing n'est pas idéal. Garde un oeil sur les bulletins ANSM : si la situation se dégrade, une liste de mesures renforcées pourrait suivre rapidement."
+    },
+    {
       "id": "actu_2026_09_25_5",
       "date": "2026-09-25",
       "type": "actu",
@@ -17810,6 +17914,6 @@
       ]
     }
   ],
-  "count": 858,
-  "updated_at": "2026-09-25T04:07:35.010558+02:00"
+  "count": 863,
+  "updated_at": "2026-09-26T04:08:14.955191+02:00"
 }
