@@ -1,26 +1,26 @@
 {
- "genere_le": "2026-09-25T10:22:16+02:00",
+ "genere_le": "2026-09-26T10:08:37+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1218,
- "abonnes_hebdo": 312,
- "abonnes_diffusion": 1530,
- "articles_publies": 713,
- "nouveaux_7j": 22,
- "nouveaux_cumul": 1211,
+ "abonnes_total": 1222,
+ "abonnes_hebdo": 316,
+ "abonnes_diffusion": 1538,
+ "articles_publies": 718,
+ "nouveaux_7j": 23,
+ "nouveaux_cumul": 1215,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-09-18",
-  "au": "2026-09-25",
-  "envois": 8782,
-  "delivres": 7741,
-  "taux_delivrabilite_pct": 88.1,
-  "ouvertures": 2998,
-  "ouvertures_uniques": 2175,
-  "clics": 4760,
-  "clics_uniques": 781,
-  "taux_ouverture_pct": 28.1,
-  "taux_clic_pct": 10.1,
-  "ctor_pct": 35.9,
+  "du": "2026-09-19",
+  "au": "2026-09-26",
+  "envois": 8795,
+  "delivres": 7754,
+  "taux_delivrabilite_pct": 88.2,
+  "ouvertures": 2855,
+  "ouvertures_uniques": 2105,
+  "clics": 4785,
+  "clics_uniques": 764,
+  "taux_ouverture_pct": 27.1,
+  "taux_clic_pct": 9.9,
+  "ctor_pct": 36.3,
   "top_articles": [
    {
     "id": "actu_2026_09_22_1",
@@ -35,8 +35,8 @@
     "titre": "Arrêts maladie : deux décrets publiés, ce qui change pour ton officine en octobre",
     "date": "2026-09-19",
     "categorie": "pharma_france",
-    "clics": 134,
-    "lecteurs": 80
+    "clics": 135,
+    "lecteurs": 81
    },
    {
     "id": "actu_2026_09_22_3",
@@ -55,20 +55,12 @@
     "lecteurs": 66
    },
    {
-    "id": "actu_2026_09_18_5",
-    "titre": "Kiné prescripteur : ce que l'arrêté du 16 sept. change vraiment pour ton officine",
-    "date": "2026-09-18",
-    "categorie": "business_officine",
-    "clics": 118,
-    "lecteurs": 61
-   },
-   {
     "id": "actu_2026_09_19_5",
     "titre": "Avenant n°3, ticket modérateur, R3C : trois chantiers qui vont remodeler ta trésorerie",
     "date": "2026-09-19",
     "categorie": "business_officine",
-    "clics": 108,
-    "lecteurs": 61
+    "clics": 109,
+    "lecteurs": 62
    },
    {
     "id": "actu_2026_09_19_4",
@@ -79,44 +71,52 @@
     "lecteurs": 57
    },
    {
-    "id": "actu_2026_09_18_1",
-    "titre": "Beyfortus vs Abrysvo : l'ANSM tire la sonnette d'alarme sur les confusions",
-    "date": "2026-09-18",
-    "categorie": "pharma_france",
-    "clics": 93,
-    "lecteurs": 53
-   },
-   {
     "id": "actu_2026_09_24_4",
     "titre": "Délistage : 33 molécules sur la table, une révolution en cours pour l'officine",
     "date": "2026-09-24",
     "categorie": "avenir_pharma",
-    "clics": 88,
-    "lecteurs": 53
+    "clics": 89,
+    "lecteurs": 54
    },
    {
-    "id": "actu_2026_09_18_3",
-    "titre": "Memo de Vie en officine : ton comptoir peut sauver des vies, litteralement",
-    "date": "2026-09-18",
+    "id": "actu_2026_09_25_1",
+    "titre": "Grippe : ordonnance obligatoire, mais le pharmacien reste prescripteur",
+    "date": "2026-09-25",
+    "categorie": "pharma_france",
+    "clics": 87,
+    "lecteurs": 51
+   },
+   {
+    "id": "actu_2026_09_23_3",
+    "titre": "Dépistage HTA en officine : l'expérimentation \"Ta Tension\" est lancée",
+    "date": "2026-09-23",
     "categorie": "bonne_nouvelle",
-    "clics": 98,
-    "lecteurs": 49
+    "clics": 82,
+    "lecteurs": 51
+   },
+   {
+    "id": "actu_2026_09_24_2",
+    "titre": "GLP-1 : comment les Etats-Unis vivent (et gèrent) le raz-de-marée semaglutide",
+    "date": "2026-09-24",
+    "categorie": "pharma_monde",
+    "clics": 81,
+    "lecteurs": 48
    }
   ]
  },
  "mois": {
-  "du": "2026-08-26",
-  "au": "2026-09-25",
-  "envois": 32594,
-  "delivres": 28770,
+  "du": "2026-08-27",
+  "au": "2026-09-26",
+  "envois": 32707,
+  "delivres": 28869,
   "taux_delivrabilite_pct": 88.3,
-  "ouvertures": 11607,
-  "ouvertures_uniques": 8232,
-  "clics": 15800,
-  "clics_uniques": 2712,
-  "taux_ouverture_pct": 28.6,
+  "ouvertures": 11540,
+  "ouvertures_uniques": 8203,
+  "clics": 15985,
+  "clics_uniques": 2722,
+  "taux_ouverture_pct": 28.4,
   "taux_clic_pct": 9.4,
-  "ctor_pct": 32.9,
+  "ctor_pct": 33.2,
   "top_articles": [
    {
     "id": "actu_2026_09_22_1",
@@ -131,8 +131,8 @@
     "titre": "Arrêts maladie : deux décrets publiés, ce qui change pour ton officine en octobre",
     "date": "2026-09-19",
     "categorie": "pharma_france",
-    "clics": 134,
-    "lecteurs": 80
+    "clics": 135,
+    "lecteurs": 81
    },
    {
     "id": "actu_2026_09_05_1",
@@ -202,17 +202,17 @@
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-09-25",
-  "envois": 128939,
-  "delivres": 117105,
+  "au": "2026-09-26",
+  "envois": 130158,
+  "delivres": 118179,
   "taux_delivrabilite_pct": 90.8,
-  "ouvertures": 47361,
-  "ouvertures_uniques": 32793,
-  "clics": 51924,
-  "clics_uniques": 9284,
-  "taux_ouverture_pct": 28.0,
+  "ouvertures": 47668,
+  "ouvertures_uniques": 33021,
+  "clics": 52513,
+  "clics_uniques": 9365,
+  "taux_ouverture_pct": 27.9,
   "taux_clic_pct": 7.9,
-  "ctor_pct": 28.3,
+  "ctor_pct": 28.4,
   "top_articles": [
    {
     "id": "actu_2026_09_22_1",
@@ -227,8 +227,8 @@
     "titre": "Arrêts maladie : deux décrets publiés, ce qui change pour ton officine en octobre",
     "date": "2026-09-19",
     "categorie": "pharma_france",
-    "clics": 134,
-    "lecteurs": 80
+    "clics": 135,
+    "lecteurs": 81
    },
    {
     "id": "actu_2026_09_05_1",
