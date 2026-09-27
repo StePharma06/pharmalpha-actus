@@ -1,26 +1,26 @@
 {
- "genere_le": "2026-09-26T10:08:37+02:00",
+ "genere_le": "2026-09-27T10:45:02+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1222,
- "abonnes_hebdo": 316,
- "abonnes_diffusion": 1538,
+ "abonnes_total": 1225,
+ "abonnes_hebdo": 320,
+ "abonnes_diffusion": 1545,
  "articles_publies": 718,
- "nouveaux_7j": 23,
- "nouveaux_cumul": 1215,
+ "nouveaux_7j": 24,
+ "nouveaux_cumul": 1218,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-09-19",
-  "au": "2026-09-26",
-  "envois": 8795,
-  "delivres": 7754,
+  "du": "2026-09-20",
+  "au": "2026-09-27",
+  "envois": 7591,
+  "delivres": 6696,
   "taux_delivrabilite_pct": 88.2,
-  "ouvertures": 2855,
-  "ouvertures_uniques": 2105,
-  "clics": 4785,
-  "clics_uniques": 764,
-  "taux_ouverture_pct": 27.1,
-  "taux_clic_pct": 9.9,
-  "ctor_pct": 36.3,
+  "ouvertures": 2628,
+  "ouvertures_uniques": 1929,
+  "clics": 4191,
+  "clics_uniques": 686,
+  "taux_ouverture_pct": 28.8,
+  "taux_clic_pct": 10.2,
+  "ctor_pct": 35.6,
   "top_articles": [
    {
     "id": "actu_2026_09_22_1",
@@ -29,14 +29,6 @@
     "categorie": "pharma_france",
     "clics": 128,
     "lecteurs": 84
-   },
-   {
-    "id": "actu_2026_09_19_1",
-    "titre": "Arrêts maladie : deux décrets publiés, ce qui change pour ton officine en octobre",
-    "date": "2026-09-19",
-    "categorie": "pharma_france",
-    "clics": 135,
-    "lecteurs": 81
    },
    {
     "id": "actu_2026_09_22_3",
@@ -51,24 +43,8 @@
     "titre": "Combien de pharmacies en 2030 ? Le maillage officinal se réinvente",
     "date": "2026-09-21",
     "categorie": "pharma_france",
-    "clics": 101,
+    "clics": 103,
     "lecteurs": 66
-   },
-   {
-    "id": "actu_2026_09_19_5",
-    "titre": "Avenant n°3, ticket modérateur, R3C : trois chantiers qui vont remodeler ta trésorerie",
-    "date": "2026-09-19",
-    "categorie": "business_officine",
-    "clics": 109,
-    "lecteurs": 62
-   },
-   {
-    "id": "actu_2026_09_19_4",
-    "titre": "Mucoviscidose : les modulateurs CFTR transforment le pronostic, l'officine monte en compétence",
-    "date": "2026-09-19",
-    "categorie": "avenir_pharma",
-    "clics": 110,
-    "lecteurs": 57
    },
    {
     "id": "actu_2026_09_24_4",
@@ -101,22 +77,46 @@
     "categorie": "pharma_monde",
     "clics": 81,
     "lecteurs": 48
+   },
+   {
+    "id": "actu_2026_09_23_1",
+    "titre": "Biosimilaires substituables : deux nouveaux groupes entrent dans la liste",
+    "date": "2026-09-23",
+    "categorie": "pharma_france",
+    "clics": 81,
+    "lecteurs": 48
+   },
+   {
+    "id": "actu_2026_09_24_1",
+    "titre": "Dénosumab substituable : ce que ça change concrètement au comptoir",
+    "date": "2026-09-24",
+    "categorie": "pharma_france",
+    "clics": 85,
+    "lecteurs": 46
+   },
+   {
+    "id": "actu_2026_09_26_1",
+    "titre": "Fluoxétine 20 mg en tension : l'ANSM sort le drapeau orange",
+    "date": "2026-09-26",
+    "categorie": "pharma_france",
+    "clics": 83,
+    "lecteurs": 46
    }
   ]
  },
  "mois": {
-  "du": "2026-08-27",
-  "au": "2026-09-26",
-  "envois": 32707,
-  "delivres": 28869,
+  "du": "2026-08-28",
+  "au": "2026-09-27",
+  "envois": 31600,
+  "delivres": 27892,
   "taux_delivrabilite_pct": 88.3,
-  "ouvertures": 11540,
-  "ouvertures_uniques": 8203,
-  "clics": 15985,
-  "clics_uniques": 2722,
-  "taux_ouverture_pct": 28.4,
-  "taux_clic_pct": 9.4,
-  "ctor_pct": 33.2,
+  "ouvertures": 11302,
+  "ouvertures_uniques": 8005,
+  "clics": 15499,
+  "clics_uniques": 2638,
+  "taux_ouverture_pct": 28.7,
+  "taux_clic_pct": 9.5,
+  "ctor_pct": 33.0,
   "top_articles": [
    {
     "id": "actu_2026_09_22_1",
@@ -159,14 +159,6 @@
     "lecteurs": 70
    },
    {
-    "id": "actu_2026_08_27_2",
-    "titre": "actu_2026_08_27_2",
-    "date": "",
-    "categorie": "",
-    "clics": 121,
-    "lecteurs": 69
-   },
-   {
     "id": "actu_2026_09_01_1",
     "titre": "actu_2026_09_01_1",
     "date": "",
@@ -195,24 +187,32 @@
     "titre": "Combien de pharmacies en 2030 ? Le maillage officinal se réinvente",
     "date": "2026-09-21",
     "categorie": "pharma_france",
-    "clics": 101,
+    "clics": 103,
+    "lecteurs": 66
+   },
+   {
+    "id": "actu_2026_09_03_1",
+    "titre": "actu_2026_09_03_1",
+    "date": "",
+    "categorie": "",
+    "clics": 98,
     "lecteurs": 66
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-09-26",
+  "au": "2026-09-27",
   "envois": 130158,
   "delivres": 118179,
   "taux_delivrabilite_pct": 90.8,
-  "ouvertures": 47668,
-  "ouvertures_uniques": 33021,
-  "clics": 52513,
-  "clics_uniques": 9365,
-  "taux_ouverture_pct": 27.9,
+  "ouvertures": 47789,
+  "ouvertures_uniques": 33083,
+  "clics": 52564,
+  "clics_uniques": 9372,
+  "taux_ouverture_pct": 28.0,
   "taux_clic_pct": 7.9,
-  "ctor_pct": 28.4,
+  "ctor_pct": 28.3,
   "top_articles": [
    {
     "id": "actu_2026_09_22_1",
