@@ -1,26 +1,26 @@
 {
- "genere_le": "2026-09-27T10:45:02+02:00",
+ "genere_le": "2026-09-28T11:09:41+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1225,
- "abonnes_hebdo": 320,
- "abonnes_diffusion": 1545,
- "articles_publies": 718,
- "nouveaux_7j": 24,
- "nouveaux_cumul": 1218,
+ "abonnes_total": 1224,
+ "abonnes_hebdo": 325,
+ "abonnes_diffusion": 1549,
+ "articles_publies": 723,
+ "nouveaux_7j": 23,
+ "nouveaux_cumul": 1217,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-09-20",
-  "au": "2026-09-27",
-  "envois": 7591,
-  "delivres": 6696,
-  "taux_delivrabilite_pct": 88.2,
-  "ouvertures": 2628,
-  "ouvertures_uniques": 1929,
-  "clics": 4191,
-  "clics_uniques": 686,
-  "taux_ouverture_pct": 28.8,
-  "taux_clic_pct": 10.2,
-  "ctor_pct": 35.6,
+  "du": "2026-09-21",
+  "au": "2026-09-28",
+  "envois": 9135,
+  "delivres": 8086,
+  "taux_delivrabilite_pct": 88.5,
+  "ouvertures": 3113,
+  "ouvertures_uniques": 2284,
+  "clics": 5014,
+  "clics_uniques": 791,
+  "taux_ouverture_pct": 28.2,
+  "taux_clic_pct": 9.8,
+  "ctor_pct": 34.6,
   "top_articles": [
    {
     "id": "actu_2026_09_22_1",
@@ -47,6 +47,38 @@
     "lecteurs": 66
    },
    {
+    "id": "actu_2026_09_26_1",
+    "titre": "Fluoxétine 20 mg en tension : l'ANSM sort le drapeau orange",
+    "date": "2026-09-26",
+    "categorie": "pharma_france",
+    "clics": 116,
+    "lecteurs": 62
+   },
+   {
+    "id": "actu_2026_09_23_3",
+    "titre": "Dépistage HTA en officine : l'expérimentation \"Ta Tension\" est lancée",
+    "date": "2026-09-23",
+    "categorie": "bonne_nouvelle",
+    "clics": 110,
+    "lecteurs": 62
+   },
+   {
+    "id": "actu_2026_09_24_2",
+    "titre": "GLP-1 : comment les Etats-Unis vivent (et gèrent) le raz-de-marée semaglutide",
+    "date": "2026-09-24",
+    "categorie": "pharma_monde",
+    "clics": 106,
+    "lecteurs": 60
+   },
+   {
+    "id": "actu_2026_09_25_5",
+    "titre": "Biosimilaires : un arrêté au JO du 22/09 - ce que ça change pour ta marge",
+    "date": "2026-09-25",
+    "categorie": "business_officine",
+    "clics": 104,
+    "lecteurs": 55
+   },
+   {
     "id": "actu_2026_09_24_4",
     "titre": "Délistage : 33 molécules sur la table, une révolution en cours pour l'officine",
     "date": "2026-09-24",
@@ -59,63 +91,31 @@
     "titre": "Grippe : ordonnance obligatoire, mais le pharmacien reste prescripteur",
     "date": "2026-09-25",
     "categorie": "pharma_france",
-    "clics": 87,
-    "lecteurs": 51
+    "clics": 88,
+    "lecteurs": 52
    },
    {
-    "id": "actu_2026_09_23_3",
-    "titre": "Dépistage HTA en officine : l'expérimentation \"Ta Tension\" est lancée",
-    "date": "2026-09-23",
-    "categorie": "bonne_nouvelle",
-    "clics": 82,
-    "lecteurs": 51
-   },
-   {
-    "id": "actu_2026_09_24_2",
-    "titre": "GLP-1 : comment les Etats-Unis vivent (et gèrent) le raz-de-marée semaglutide",
-    "date": "2026-09-24",
-    "categorie": "pharma_monde",
-    "clics": 81,
-    "lecteurs": 48
-   },
-   {
-    "id": "actu_2026_09_23_1",
-    "titre": "Biosimilaires substituables : deux nouveaux groupes entrent dans la liste",
-    "date": "2026-09-23",
-    "categorie": "pharma_france",
-    "clics": 81,
-    "lecteurs": 48
-   },
-   {
-    "id": "actu_2026_09_24_1",
-    "titre": "Dénosumab substituable : ce que ça change concrètement au comptoir",
-    "date": "2026-09-24",
-    "categorie": "pharma_france",
-    "clics": 85,
-    "lecteurs": 46
-   },
-   {
-    "id": "actu_2026_09_26_1",
-    "titre": "Fluoxétine 20 mg en tension : l'ANSM sort le drapeau orange",
-    "date": "2026-09-26",
-    "categorie": "pharma_france",
-    "clics": 83,
-    "lecteurs": 46
+    "id": "actu_2026_09_25_4",
+    "titre": "Pharmacie hospitalière : un nouveau code concours pour la pharma polyvalente",
+    "date": "2026-09-25",
+    "categorie": "avenir_pharma",
+    "clics": 97,
+    "lecteurs": 50
    }
   ]
  },
  "mois": {
-  "du": "2026-08-28",
-  "au": "2026-09-27",
-  "envois": 31600,
-  "delivres": 27892,
-  "taux_delivrabilite_pct": 88.3,
-  "ouvertures": 11302,
-  "ouvertures_uniques": 8005,
-  "clics": 15499,
-  "clics_uniques": 2638,
+  "du": "2026-08-29",
+  "au": "2026-09-28",
+  "envois": 32032,
+  "delivres": 28301,
+  "taux_delivrabilite_pct": 88.4,
+  "ouvertures": 11437,
+  "ouvertures_uniques": 8112,
+  "clics": 15917,
+  "clics_uniques": 2673,
   "taux_ouverture_pct": 28.7,
-  "taux_clic_pct": 9.5,
+  "taux_clic_pct": 9.4,
   "ctor_pct": 33.0,
   "top_articles": [
    {
@@ -175,14 +175,6 @@
     "lecteurs": 68
    },
    {
-    "id": "actu_2026_08_28_3",
-    "titre": "actu_2026_08_28_3",
-    "date": "",
-    "categorie": "",
-    "clics": 107,
-    "lecteurs": 66
-   },
-   {
     "id": "actu_2026_09_21_1",
     "titre": "Combien de pharmacies en 2030 ? Le maillage officinal se réinvente",
     "date": "2026-09-21",
@@ -197,19 +189,27 @@
     "categorie": "",
     "clics": 98,
     "lecteurs": 66
+   },
+   {
+    "id": "actu_2026_09_12_1",
+    "titre": "actu_2026_09_12_1",
+    "date": "",
+    "categorie": "",
+    "clics": 124,
+    "lecteurs": 65
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-09-27",
-  "envois": 130158,
-  "delivres": 118179,
+  "au": "2026-09-28",
+  "envois": 131702,
+  "delivres": 119569,
   "taux_delivrabilite_pct": 90.8,
-  "ouvertures": 47789,
-  "ouvertures_uniques": 33083,
-  "clics": 52564,
-  "clics_uniques": 9372,
+  "ouvertures": 48324,
+  "ouvertures_uniques": 33492,
+  "clics": 53416,
+  "clics_uniques": 9485,
   "taux_ouverture_pct": 28.0,
   "taux_clic_pct": 7.9,
   "ctor_pct": 28.3,
