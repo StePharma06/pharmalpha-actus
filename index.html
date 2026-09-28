@@ -31,7 +31,7 @@
      l'image n'est decouverte qu'apres execution du JS qui construit les cards
      (le <img> n'existe qu'a l'interieur d'un template literal JS, invisible au
      preload scanner) -> LCP non deterministe, cf. sprint perf 2026-07-27. -->
-<link rel="preload" as="image" href="assets/img_actu_2026_09_26_1.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="assets/img_actu_2026_09_28_1.jpg" fetchpriority="high">
 
 <!-- Space Grotesk — self-hosted WOFF2 (remplace Google Fonts, cf. mission perf/RGPD 2026-08-24) -->
 <link rel="preload" href="/assets/fonts/space-grotesk-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -1793,7 +1793,7 @@ body.pa-has-nav #actusHeader {
 </div>
 
 <!-- EXPRESSION DU JOUR (injectée par update_actus.py à chaque run) -->
-<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Belladone</h2><p class="expression-corps">De l'italien <em>bella donna</em>, belle femme. À la Renaissance, les aristocrates italiennes instillaient le suc de cette plante dans leurs yeux pour dilater les pupilles - effet jugé séduisant à l'époque. La plante est hautement toxique mais son nom évoque toujours la coquetterie.</p></aside>
+<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Chirurgie</h2><p class="expression-corps">Du grec <em>kheirourgía</em> - <em>kheir</em> (main) et <em>ergon</em> (travail). La chirurgie était littéralement le « travail des mains », par opposition à la médecine qui soignait par des remèdes. Au Moyen Âge, les chirurgiens étaient considérés comme des artisans, bien en dessous des médecins dans la hiérarchie.</p></aside>
 
 <!-- ESPACE PARTENAIRE 1 (entre Expression du jour et Aujourd'hui).
      Statique : reste visible meme si le JS ne s'execute pas. Le 2e emplacement
@@ -1818,12 +1818,12 @@ body.pa-has-nav #actusHeader {
 <div id="articles-container"></div>
 
 <!-- MARQUE_TENDANCE (injectee par le pipeline hebdo, remplacee quotidiennement) -->
-<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">20 sept. au 26 sept. 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie en septembre</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 37 500</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Oscillo immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 181 400</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie ambroisie symptômes</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 20 350</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Plante digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 58 500</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Orslow fatigue pants</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 12 050</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Azinc immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 53 950</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Qu'est-ce qu'une fracture de fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 8 050</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Matcha digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 48 750</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Test covid</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 450</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Le-blog-sante.fr sante environnementale</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 8 300</td></tr>
+<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">22 sept. au 28 sept. 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie en septembre</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 39 750</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Oscillo immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 200 000</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie automne</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 21 450</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Azinc immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 78 100</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Fracture de fatigue pied</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 12 750</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Schoum digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 65 900</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Effet de fatigue ou de critique</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 8 950</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Calmosine digestion bébé</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 46 100</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Test covid</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 600</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Douleur nociceptive</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 5 500</td></tr>
 </tbody></table></div><p style="margin:10px 0 0;font-size:11px;color:#9ca3af;font-style:italic;">Indice de tendance : intensite de hausse Google Trends (non comparable a un volume absolu).</p><p style="margin:12px 0 0;font-size:11px;color:#9ca3af;text-align:right;">Source&nbsp;: Google Trends France (pytrends) &middot; 7 jours glissants</p></section></div>
 
 <!-- ARCHIVES CTA -->
@@ -1986,6 +1986,90 @@ body.pa-has-nav #actusHeader {
 // Mis a jour automatiquement par n8n chaque semaine
 // ============================================================
 const ARTICLES = [
+{
+    id: "actu_2026_09_28_1",
+    date: "2026-09-28",
+    type: "actu",
+    categorie: "pharma_france",
+    titre: "Nouveau président à la FSPF : Camaïoni prend les rênes, et la convention suit",
+    resume: "Fabrice Camaïoni officiellement élu président de la FSPF le 25 septembre à Nantes. Dans la foulée, les syndicats départementaux votent quatre motions et valident la non-opposition à la reconduction de la convention pharmaceutique. Une journée chargée à la veille du Congrès national.",
+    source: "Le Pharmacien de France",
+    source_url: "https://lepharmaciendefrance.fr/la-fspf-ne-soppose-pas-a-la-reconduction-de-la-convention/",
+    tiktok_url: "",
+    badge_label: "Pharma France",
+    image_url: "assets/img_actu_2026_09_28_1.jpg",
+    tags: ["fspf", "convention", "lfss", "syndicat", "officine"]
+  },
+{
+    id: "actu_2026_09_28_2",
+    date: "2026-09-28",
+    type: "actu",
+    categorie: "pharma_monde",
+    titre: "FDA approuve Atebrioz : une pilule contre une maladie qui transforme les muscles en os",
+    resume: "La FDA vient de donner son feu vert à Atebrioz (zilurgisertib) de Mirum Pharmaceuticals pour la fibrodysplasie ossifiante progressive, une maladie ultra-rare où les tissus mous se transforment littéralement en os. Troisième médicament approuvé dans cette indication, il présente des avantages cliniques sur ses prédécesseurs.",
+    source: "MedCity News",
+    source_url: "https://medcitynews.com/2026/09/mirum-pharmaceuticals-incyte-fda-approval-zilurgisertib-atebrioz-ultra-rare-disease-mirm-incy/",
+    tiktok_url: "",
+    badge_label: "Pharma Monde",
+    image_url: "assets/img_actu_2026_09_28_2.jpg",
+    tags: ["fda", "maladie-rare", "innovation", "ema", "acces-precoce"]
+  },
+{
+    id: "actu_2026_09_28_3",
+    date: "2026-09-28",
+    type: "actu",
+    categorie: "bonne_nouvelle",
+    titre: "THM par voie cutanée et thrombose : la science confirme ce qu'on savait déjà",
+    resume: "Une vaste étude danoise confirme que les traitements hormonaux de la ménopause par voie orale augmentent le risque de thrombose veineuse. La voie cutanée, utilisée dans 85 % des cas en France, ne présente pas ce surrisque. Une bonne nouvelle pour tes patientes, et un argument de conseil en béton.",
+    source: "Le Monde Sante",
+    source_url: "https://www.lemonde.fr/sciences/article/2026/09/27/menopause-le-risque-de-thrombose-associe-aux-traitements-hormonaux-oraux-confirme-par-une-vaste-etude_6783761_1650684.html",
+    tiktok_url: "",
+    badge_label: "La bonne nouvelle",
+    image_url: "assets/img_actu_2026_09_28_3.jpg",
+    tags: ["menopause", "thrombose", "thm", "conseil-officinal", "gynecologie"]
+  },
+{
+    id: "actu_2026_09_28_4",
+    date: "2026-09-28",
+    type: "actu",
+    categorie: "avenir_pharma",
+    titre: "Diagnostic de l'infarctus en quelques minutes : BioMérieux change la donne",
+    resume: "Le laboratoire français BioMérieux lance un test capable de diagnostiquer un infarctus en quelques minutes. Une innovation qui illustre le dynamisme de l'industrie française du diagnostic in vitro, avec des tests toujours plus rapides, moins invasifs et plus informatifs.",
+    source: "Le Monde Sante",
+    source_url: "https://www.lemonde.fr/economie/article/2026/09/26/du-diagnostic-ultrarapide-d-un-infarctus-au-pronostic-de-rechute-du-cancer-du-sein-comment-les-entreprises-francaises-innovent-dans-les-tests-medicaux_6783115_3234.html",
+    tiktok_url: "",
+    badge_label: "L'avenir de la pharma",
+    image_url: "assets/img_actu_2026_09_28_4.jpg",
+    tags: ["diagnostic", "innovation", "div", "cardiologie", "biomerieux"]
+  },
+{
+    id: "actu_2026_09_28_5",
+    date: "2026-09-28",
+    type: "actu",
+    categorie: "business_officine",
+    titre: "Transfert AM → complémentaires : ce que le rapport change pour ton officine",
+    resume: "Un rapport remis au gouvernement à quelques jours du PLFSS 2027 propose de basculer optique, audioprothèses et transports vers les complémentaires. Derrière l'arbitrage financier, il y a un vrai enjeu de flux patient et de tiers payant pour les 19 274 officines.",
+    source: "Pharm'Actus · Le Quotidien du Pharmacien — Rapport sur les transferts AM/complémentaires, DREES — Comptes nationaux de la santé 2024 (part des OCAM dans le financement)",
+    source_url: "http://www.lequotidiendupharmacien.fr/exercice-pro/un-rapport-prevoit-des-transferts-de-charges-de-lassurance-maladie-aux-complementaires",
+    tiktok_url: "",
+    badge_label: "Business",
+    image_url: "assets/img_actu_2026_09_28_5.jpg",
+    tags: ["plfss", "complementaires", "tiers-payant", "transfert-charges"]
+  },
+{
+    id: "lsv_2026_09_28",
+    date: "2026-09-28",
+    type: "lsv",
+    categorie: "lsv",
+    titre: "Le saviez-vous ? On testait la stérilité masculine avec du persil",
+    resume: "Pendant des siècles, pour savoir si un homme était fertile, les médecins ne regardaient pas ses spermatozoïdes. Ils regardaient du persil. La recette était précise, codifiée, et prise très au sérieux par les meilleurs médecins d'Europe.",
+    source: "Pharm'Alpha",
+    source_url: "",
+    tiktok_url: "",
+    badge_label: "Le Saviez-Vous",
+    image_url: "assets/img_lsv_2026_09_28.jpg",
+    tags: ["histoire", "diagnostic", "fertilite", "medecine-medievale", "urologie"]
+  },
 {
     id: "actu_2026_09_26_1",
     date: "2026-09-26",
@@ -2601,90 +2685,6 @@ const ARTICLES = [
     badge_label: "La bonne nouvelle",
     image_url: "assets/img_actu_2026_09_18_3.jpg",
     tags: ["officine", "proximite", "violences", "sante-publique", "missions"]
-  },
-{
-    id: "actu_2026_09_18_4",
-    date: "2026-09-18",
-    type: "actu",
-    categorie: "avenir_pharma",
-    titre: "Des mini-foies injectables : le MIT ouvre une piste serieuse contre la greffe hepatique",
-    resume: "Des ingenieurs du MIT ont mis au point des mini-foies injectables capables de jouer le role de l'organe defaillant. Une avancee de recherche fondamentale qui pourrait, a terme, bouleverser la prise en charge des insuffisances hepatiques severes.",
-    source: "France Info Sante",
-    source_url: "https://www.franceinfo.fr/sciences/des-faux-foies-pour-eviter-les-greffes_8197427.html#xtor=RSS-3-%5Bgeneral%5D",
-    tiktok_url: "",
-    badge_label: "L'avenir de la pharma",
-    image_url: "assets/img_actu_2026_09_18_4.jpg",
-    tags: ["recherche", "innovation", "hepatologie", "therapeutique", "ia"]
-  },
-{
-    id: "actu_2026_09_18_5",
-    date: "2026-09-18",
-    type: "actu",
-    categorie: "business_officine",
-    titre: "Kiné prescripteur : ce que l'arrêté du 16 sept. change vraiment pour ton officine",
-    resume: "Un arrêté paru au JO le 16 septembre 2026 élargit le droit de prescription des masseurs-kinésithérapeutes. Pour l'officine, c'est une nouvelle source d'ordonnances à délivrer - et un arbitrage à ne pas rater sur la relation prescripteur.",
-    source: "Pharm'Actus · FSPF — Élargissement du droit de prescription des masseurs-kinésithérapeutes, Légifrance — JO du 16 septembre 2026 (arrêté référencé dans la source FSPF)",
-    source_url: "https://www.fspf.fr/elargissement-du-droit-de-prescription-des-masseurs-kinesitherapeutes/",
-    tiktok_url: "",
-    badge_label: "Business",
-    image_url: "assets/img_actu_2026_09_18_5.jpg",
-    tags: ["kinesitherapeute", "prescription", "dispositifs-medicaux", "officine"]
-  },
-{
-    id: "lsv_2026_09_18",
-    date: "2026-09-18",
-    type: "lsv",
-    categorie: "lsv",
-    titre: "Le saviez-vous ? On traitait les crises d'asthme avec du café noir très serré",
-    resume: "Avant les bronchodilatateurs et les inhalateurs, les médecins prescrivaient littéralement du café fort pour calmer les crises d'asthme. Et ce n'était pas du folklore : il y avait une vraie chimie derrière. La caféine et la théophylline, ça joue dans la même cour.",
-    source: "Pharm'Alpha",
-    source_url: "",
-    tiktok_url: "",
-    badge_label: "Le Saviez-Vous",
-    image_url: "assets/img_lsv_2026_09_18.jpg",
-    tags: ["histoire", "pharmacologie", "asthme", "plante", "chimie"]
-  },
-{
-    id: "actu_2026_09_17_1",
-    date: "2026-09-17",
-    type: "actu",
-    categorie: "pharma_france",
-    titre: "Les kinés prescrivent des antalgiques : ce que ça change au comptoir",
-    resume: "Depuis le 16 septembre 2026, les masseurs-kinésithérapeutes peuvent prescrire antalgiques de palier 1, myorelaxants et substituts nicotiniques. Une révolution silencieuse qui va créer de nouvelles ordonnances kinés sur ton comptoir. Tu es prêt ?",
-    source: "Le Moniteur des Pharmacies",
-    source_url: "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/les-kines-peuvent-desormais-prescrire-antalgiques-myorelaxants-et-substituts-nicotiniques",
-    tiktok_url: "",
-    badge_label: "Pharma France",
-    image_url: "assets/img_actu_2026_09_17_1.jpg",
-    tags: ["prescription", "kinesitherapie", "antalgique", "ordonnance", "officine"]
-  },
-{
-    id: "actu_2026_09_17_2",
-    date: "2026-09-17",
-    type: "actu",
-    categorie: "pharma_monde",
-    titre: "NIH et liberté d'expression : la recherche sur les financements prend une tournure juridique",
-    resume: "Une plainte vient d'être déposée contre le NIH américain, accusé de rejeter des demandes de financement sur la base de mots-clés jugés politiquement sensibles. L'ACLU monte au créneau. Un signal d'alarme pour toute la recherche pharmaceutique mondiale.",
-    source: "STAT News",
-    source_url: "https://www.statnews.com/2026/09/16/lawsuit-argues-nih-violated-researcher-first-amendment-rights-aclu/?utm_campaign=rss",
-    tiktok_url: "",
-    badge_label: "Pharma Monde",
-    image_url: "assets/img_actu_2026_09_17_2.jpg",
-    tags: ["nih", "recherche", "financement", "innovation", "fda"]
-  },
-{
-    id: "actu_2026_09_17_3",
-    date: "2026-09-17",
-    type: "actu",
-    categorie: "bonne_nouvelle",
-    titre: "Protections périodiques remboursées : le 1er octobre arrive, la LPP est presque vide",
-    resume: "À J-15 du lancement du remboursement des protections périodiques réutilisables, seuls quatre codes individuels sont inscrits à la LPP. Une bonne nouvelle pour l'accès aux soins, qui démarre sur les chapeaux de roue... mais avec quasi rien dans le catalogue.",
-    source: "Le Quotidien du Pharmacien",
-    source_url: "http://www.lequotidiendupharmacien.fr/exercice-pro/politique-de-sante/les-groupements-font-entendre-leur-voix",
-    tiktok_url: "",
-    badge_label: "La bonne nouvelle",
-    image_url: "assets/img_actu_2026_09_17_3.jpg",
-    tags: ["lpp", "remboursement", "protections-periodiques", "officine", "assurance-maladie"]
   }
 ];
 

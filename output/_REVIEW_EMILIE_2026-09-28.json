@@ -1,0 +1,58 @@
+{
+  "generated_at": "2026-09-28T04:07:25.600351+02:00",
+  "run_date": "2026-09-28",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Nouveau président à la FSPF : Camaïoni prend les rênes, et la convention suit",
+      "resume": "Fabrice Camaïoni officiellement élu président de la FSPF le 25 septembre à Nantes. Dans la foulée, les syndicats départementaux votent quatre motions et valident la non-opposition à la reconduction de la convention pharmaceutique. Une journée chargée à la veille du Congrès national.",
+      "source": "Le Pharmacien de France",
+      "source_url": "https://lepharmaciendefrance.fr/la-fspf-ne-soppose-pas-a-la-reconduction-de-la-convention/",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "pharma_monde",
+      "titre": "FDA approuve Atebrioz : une pilule contre une maladie qui transforme les muscles en os",
+      "resume": "La FDA vient de donner son feu vert à Atebrioz (zilurgisertib) de Mirum Pharmaceuticals pour la fibrodysplasie ossifiante progressive, une maladie ultra-rare où les tissus mous se transforment littéralement en os. Troisième médicament approuvé dans cette indication, il présente des avantages cliniques sur ses prédécesseurs.",
+      "source": "MedCity News",
+      "source_url": "https://medcitynews.com/2026/09/mirum-pharmaceuticals-incyte-fda-approval-zilurgisertib-atebrioz-ultra-rare-disease-mirm-incy/",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "avenir_pharma",
+      "titre": "Diagnostic de l'infarctus en quelques minutes : BioMérieux change la donne",
+      "resume": "Le laboratoire français BioMérieux lance un test capable de diagnostiquer un infarctus en quelques minutes. Une innovation qui illustre le dynamisme de l'industrie française du diagnostic in vitro, avec des tests toujours plus rapides, moins invasifs et plus informatifs.",
+      "source": "Le Monde Sante",
+      "source_url": "https://www.lemonde.fr/economie/article/2026/09/26/du-diagnostic-ultrarapide-d-un-infarctus-au-pronostic-de-rechute-du-cancer-du-sein-comment-les-entreprises-francaises-innovent-dans-les-tests-medicaux_6783115_3234.html",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Transfert AM → complémentaires : ce que le rapport change pour ton officine",
+      "resume": "Un rapport remis au gouvernement à quelques jours du PLFSS 2027 propose de basculer optique, audioprothèses et transports vers les complémentaires. Derrière l'arbitrage financier, il y a un vrai enjeu de flux patient et de tiers payant pour les 19 274 officines.",
+      "source": "Pharm'Actus · Le Quotidien du Pharmacien — Rapport sur les transferts AM/complémentaires, DREES — Comptes nationaux de la santé 2024 (part des OCAM dans le financement)",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/un-rapport-prevoit-des-transferts-de-charges-de-lassurance-maladie-aux-complementaires",
+      "confidence_score": 0.62,
+      "warnings": [
+        "Le contenu détaillé du rapport n'est accessible que via le résumé du Quotidien du Pharmacien : les postes exacts visés (optique, audio, transports) sont repris du résumé source mais non vérifiés sur le rapport original — à confirmer à la parution du PLFSS 2027.",
+        "La part OCAM de 13 % du financement total de la santé est citée comme donnée DREES 2024 : à vérifier sur le rapport Comptes nationaux de la santé le plus récent disponible — la valeur exacte peut varier légèrement selon le périmètre retenu (soins courants vs dépense courante de santé).",
+        "Aucun chiffre d'impact direct sur les officines (volume MAD, part tiers payant complémentaire) n'est disponible dans la source : l'analyse reste qualitative sur ces points, conformément à la règle de ne pas extrapoler des chiffres non sourcés.",
+        "Le PLFSS 2027 n'est pas encore publié à la date de rédaction : toute mesure reste une proposition de rapport, pas un texte adopté. L'article le précise mais le lecteur doit rester vigilant sur l'évolution du texte.",
+        "La mention du décret n° 2026-858 sur les franchises est exacte (correction intégrée selon les règles rédactionnelles), mais son lien avec le sujet du transfert AM/OCAM est analytique, non explicitement établi par la source.",
+        "2 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

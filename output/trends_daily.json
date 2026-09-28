@@ -1,64 +1,64 @@
 {
-  "generated_at": "2026-09-26",
-  "window_label": "20 sept. au 26 sept. 2026",
+  "generated_at": "2026-09-28",
+  "window_label": "22 sept. au 28 sept. 2026",
   "has_history": true,
   "delta_source": "pytrends_rising",
   "pathologies": [
     {
       "display": "Allergie en septembre",
-      "delta_label": "↑ 37 500",
+      "delta_label": "↑ 39 750",
       "trend": "up"
     },
     {
-      "display": "Allergie ambroisie symptômes",
-      "delta_label": "↑ 20 350",
+      "display": "Allergie automne",
+      "delta_label": "↑ 21 450",
       "trend": "up"
     },
     {
-      "display": "Orslow fatigue pants",
-      "delta_label": "↑ 12 050",
+      "display": "Fracture de fatigue pied",
+      "delta_label": "↑ 12 750",
       "trend": "up"
     },
     {
-      "display": "Qu'est-ce qu'une fracture de fatigue",
-      "delta_label": "↑ 8 050",
+      "display": "Effet de fatigue ou de critique",
+      "delta_label": "↑ 8 950",
       "trend": "up"
     },
     {
       "display": "Test covid",
-      "delta_label": "↑ 450",
+      "delta_label": "↑ 600",
       "trend": "up"
     }
   ],
   "soins": [
     {
       "display": "Oscillo immunite",
-      "delta_label": "↑ 181 400",
-      "trend": "up"
-    },
-    {
-      "display": "Plante digestion",
-      "delta_label": "↑ 58 500",
+      "delta_label": "↑ 200 000",
       "trend": "up"
     },
     {
       "display": "Azinc immunite",
-      "delta_label": "↑ 53 950",
+      "delta_label": "↑ 78 100",
       "trend": "up"
     },
     {
-      "display": "Matcha digestion",
-      "delta_label": "↑ 48 750",
+      "display": "Schoum digestion",
+      "delta_label": "↑ 65 900",
       "trend": "up"
     },
     {
-      "display": "Le-blog-sante.fr sante environnementale",
-      "delta_label": "↑ 8 300",
+      "display": "Calmosine digestion bébé",
+      "delta_label": "↑ 46 100",
+      "trend": "up"
+    },
+    {
+      "display": "Douleur nociceptive",
+      "delta_label": "↑ 5 500",
       "trend": "up"
     }
   ],
   "pathologies_stale": false,
-  "pathologies_from": "2026-09-26",
+  "pathologies_from": "2026-09-28",
   "soins_stale": false,
-  "soins_from": "2026-09-26"
+  "soins_from": "2026-09-28"
 }
