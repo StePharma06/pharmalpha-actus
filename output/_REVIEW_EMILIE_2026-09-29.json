@@ -1,0 +1,48 @@
+{
+  "generated_at": "2026-09-29T04:09:37.015857+02:00",
+  "run_date": "2026-09-29",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "Anti-obésité : 85 600 boîtes vendues en France, le comptoir devient acteur clé",
+      "resume": "Depuis leur mise sur le marché en juin, les médicaments anti-obésité ont généré 85 600 boîtes vendues en France. Des chiffres encore modestes, mais un signal fort que l'officine entre dans une nouvelle ère thérapeutique sur l'obésité.",
+      "source": "France Info Sante",
+      "source_url": "https://www.franceinfo.fr/sante/medicament/enfin-une-chance-d-egalite-therapeutique-depuis-juin-85-600-boites-de-medicaments-anti-obesite-vendues-en-france_8213240.html#xtor=RSS-3-%5Bgeneral%5D",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "avenir_pharma",
+      "titre": "Les kinés peuvent prescrire des antalgiques depuis le 17 septembre. Le remboursement, lui, attend.",
+      "resume": "Depuis le 17 septembre 2026, les masseurs-kinésithérapeutes peuvent prescrire des antalgiques de palier 1 et des myorelaxants hors formes injectables. Mais le droit a devancé le remboursement : le Code de la sécurité sociale ne reconnaît pas encore leur prescription pour le remboursement.",
+      "source": "Caducee.net",
+      "source_url": "https://www.caducee.net/actualite-medicale/16981/prescription-des-kinesitherapeutes-antalgiques-et-myorelaxants-autorises-remboursement-en-attente.html",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Cybersécurité à l'officine : une faille à 5 000 € minimum que 80 % des titulaires ignorent",
+      "resume": "L'officine connectée traite chaque jour des données de santé ultra-sensibles. Une cyberattaque coûte en moyenne 50 000 € à une PME française. Et le secteur santé est la 2e cible mondiale. Ton LGO, ta messagerie sécurisée, ton DMP : autant de portes d'entrée.",
+      "source": "Pharm'Actus · USPO – Officine connectée : quand le gain de temps devient aussi un enjeu de cybersécurité, ANSSI – Rapport sur la menace informatique contre le secteur santé 2023",
+      "source_url": "https://uspo.fr/officine-connectee-quand-le-gain-de-temps-devient-aussi-un-enjeu-de-cybersecurite/",
+      "confidence_score": 0.72,
+      "warnings": [
+        "Le coût médian de 50 000 € par cyberattaque est issu du rapport Hiscox Cyber Readiness 2024 (PME françaises toutes industries confondues) : vérifier si une édition 2025 ou un chiffre santé-spécifique est disponible avant publication.",
+        "Le chiffre de 581 incidents santé ANSSI 2023 est issu du rapport ANSSI 2023 (disponible publiquement) : confirmer qu'il n'a pas été révisé dans le rapport 2024 éventuellement paru.",
+        "Le coût IBM 9,77 M$ est le chiffre mondial toutes industries ; le coût France/santé seul n'est pas cité dans ce rapport : ne pas le confondre avec un chiffre français.",
+        "Le CA moyen journalier calculé (~3 500 €) est une extrapolation du CA moyen annuel de 1,28 M€ fourni dans les consignes : il inclut les week-ends et jours fériés ; le CA/jour ouvré réel est plus élevé (~4 200 €). L'impact d'un arrêt est donc présenté de façon conservatrice, ce qui est acceptable.",
+        "Les positions FSPF et UPGF sur la cybersécurité officinale ont été déclarées non disponibles publiquement à date : à vérifier sur leurs sites avant publication.",
+        "La fourchette de coût cyber-assurance (500-1 500 €/an) est une estimation de marché général PME ; vérifier si des offres spécifiques pharmacies existent chez Groupama, AXA, MACSF ou COVEA.",
+        "5 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

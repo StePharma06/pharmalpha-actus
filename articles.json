@@ -1,6 +1,131 @@
 {
   "articles": [
     {
+      "id": "actu_2026_09_29_5",
+      "date": "2026-09-29",
+      "type": "actu",
+      "categorie": "business_officine",
+      "titre": "Cybersécurité à l'officine : une faille à 5 000 € minimum que 80 % des titulaires ignorent",
+      "resume": "L'officine connectée traite chaque jour des données de santé ultra-sensibles. Une cyberattaque coûte en moyenne 50 000 € à une PME française. Et le secteur santé est la 2e cible mondiale. Ton LGO, ta messagerie sécurisée, ton DMP : autant de portes d'entrée.",
+      "source": "Pharm'Actus · USPO – Officine connectée : quand le gain de temps devient aussi un enjeu de cybersécurité, ANSSI – Rapport sur la menace informatique contre le secteur santé 2023",
+      "source_url": "https://uspo.fr/officine-connectee-quand-le-gain-de-temps-devient-aussi-un-enjeu-de-cybersecurite/",
+      "tiktok_url": "",
+      "badge_label": "Business",
+      "image_url": "assets/img_actu_2026_09_29_5.jpg",
+      "tags": [
+        "cybersecurite",
+        "officine-connectee",
+        "rgpd",
+        "risque-numerique"
+      ],
+      "full_text": "L'officine connectée traite chaque jour des données de santé ultra-sensibles. Une cyberattaque coûte en moyenne 50 000 € à une PME française. Et le secteur santé est la 2e cible mondiale. Ton LGO, ta messagerie sécurisée, ton DMP : autant de portes d'entrée.\n\n**Contexte**\n\nL'USPO tire la sonnette d'alarme cette semaine sur un angle trop souvent négligé : la cybersécurité à l'officine. Dans une publication du 28 septembre 2026, le syndicat rappelle que le comptoir est devenu un nœud numérique dense - ordonnances dématérialisées, dossier pharmaceutique (DP), messageries sécurisées de santé (MSSanté), logiciels de gestion (LGO), terminaux de paiement, objets connectés. Tout ce flux transite par des infrastructures que la majorité des officines n'ont jamais auditées.\n\nLe contexte réglementaire renforce l'urgence : la directive européenne NIS 2, transposée en droit français par la loi n° 2024-449 du 21 mai 2024, étend les obligations de sécurité des systèmes d'information à un périmètre plus large d'entités, dont certains acteurs de santé. L'ANSSI (Agence nationale de la sécurité des systèmes d'information) classe le secteur santé parmi les secteurs critiques depuis 2021, après la vague d'attaques sur les hôpitaux (Dax, Villefranche-sur-Saône, CHU de Rennes). Les officines, maillons du même réseau de santé, ne sont pas hors-jeu : elles partagent des données avec l'Assurance Maladie, les prescripteurs, les établissements de soins. Une compromission peut avoir des conséquences réglementaires directes - RGPD, obligation de notification à la CNIL sous 72 heures - et des conséquences financières immédiates.\n\n**Analyse business**\n\nMettons des chiffres sur la table, parce que le risque abstrait ne fait rien bouger.\n\n**Le coût réel d'une cyberattaque sur une PME française**\nSelon le rapport Hiscox Cyber Readiness 2024, le coût médian d'une cyberattaque pour une PME française atteint 50 000 €. Rapporté au chiffre d'affaires d'une officine, cela représente une part significative du CA annuel envolée sur un seul incident. Et ce chiffre n'intègre pas l'arrêt d'activité : une officine paralysée 48 à 72 heures, c'est un manque à gagner substantiel dont l'impact chiffré dépend du volume propre à chaque officine.\n\n**Le secteur santé, 2e cible mondiale**\nD'après le rapport IBM Cost of a Data Breach 2024, la santé affiche le coût moyen le plus élevé de toutes les industries pour la 14e année consécutive : 9,77 M$ par incident au niveau mondial. À l'échelle française, l'ANSSI a recensé 581 incidents de cybersécurité dans le secteur santé en 2023, soit une hausse de 17 % par rapport à 2022.\n\n**Les vecteurs d'attaque propres à l'officine**\nTrois points d'entrée dominent : le phishing via messagerie (faux e-mail AMELI, fausse facture fournisseur), les LGO non mis à jour (correctifs de sécurité ignorés faute de temps), et les accès distants non sécurisés (télémaintenance des prestataires informatiques). Ce dernier point est critique : un prestataire LGO peut accéder à distance à ton système sans authentification à double facteur - c'est le scénario de l'attaque Supply Chain, qui a compromis des centaines de cabinets médicaux en 2023.\n\n**L'enjeu RGPD, concret et chiffré**\nUne violation de données non notifiée à la CNIL sous 72 heures peut entraîner une sanction allant jusqu'à 4 % du CA mondial ou 20 M€ (article 83 RGPD). Pour une officine, le niveau de risque financier varie selon la gravité de la violation et l'existence d'une récidive ; l'impact sur la marge peut être significatif sans pour autant être uniforme d'une structure à l'autre. La CNIL a prononcé 42 sanctions en 2023, dont plusieurs dans le secteur santé.\n\n**Et la direction syndicale ?**\nL'USPO est à ce jour le seul syndicat à avoir publié un document de sensibilisation structuré sur ce sujet. À ce jour, ni la FSPF ni la UPGF ne se sont exprimées publiquement sur la cybersécurité officinale dans leurs espaces adhérents accessibles. Cela ne signifie pas qu'elles ne travaillent pas le sujet en interne, mais aucune prise de position publique n'est disponible à date.\n\n**Recommandations actionnables**\n\n1. **Audite ton infrastructure maintenant** - Contacte ton prestataire LGO et demande-lui par écrit la liste des accès distants actifs, la date du dernier correctif de sécurité appliqué, et le protocole de sauvegarde. Si tu n'as pas de réponse claire sous 48 h, c'est déjà un signal.\n\n2. **Souscris une cyber-assurance dédiée** - Le marché propose des polices cyber adaptées aux PME à des tarifs accessibles selon les garanties choisies. Elle couvre les frais de remise en état, la perte d'exploitation, l'assistance juridique RGPD et parfois la rançon. Le ratio coût/risque est évident à 50 000 € de coût médian d'incident.\n\n3. **Forme ton équipe au phishing en 1 heure** - L'ANSSI propose gratuitement des kits de sensibilisation (plateforme Cybermalveillance.gouv.fr). Un exercice de faux phishing interne coûte 0 € et détecte les failles humaines avant les pirates.\n\n4. **Vérifie ta conformité RGPD sur le DP et les ordonnances** - Nomme un référent protection des données (même toi-même), documente les traitements, et assure-toi d'avoir une procédure de notification CNIL en moins de 72 h. Le modèle CNIL est téléchargeable gratuitement.\n\n5. **Inscris ce poste dans ton budget 2027** - La cybersécurité n'est plus une option IT, c'est une ligne de charge comme l'assurance multirisque. Le détail chiffré dépend du volume et des choix de chaque officine (audit + formation + assurance), mais le poste reste modeste rapporté au risque financier médian d'un incident.\n\n**Sources citees**\n\n- USPO - Officine connectée : quand le gain de temps devient aussi un enjeu de cybersécurité\n- ANSSI - Rapport sur la menace informatique contre le secteur santé 2023\n- IBM - Cost of a Data Breach Report 2024\n- Hiscox - Cyber Readiness Report 2024\n- CNIL - Rapport d'activité 2023 (sanctions)\n- Cybermalveillance.gouv.fr - Kits de sensibilisation\n- Loi n° 2024-449 du 21 mai 2024 transposant NIS 2"
+    },
+    {
+      "id": "actu_2026_09_29_4",
+      "date": "2026-09-29",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "Les kinés peuvent prescrire des antalgiques depuis le 17 septembre. Le remboursement, lui, attend.",
+      "resume": "Depuis le 17 septembre 2026, les masseurs-kinésithérapeutes peuvent prescrire des antalgiques de palier 1 et des myorelaxants hors formes injectables. Mais le droit a devancé le remboursement : le Code de la sécurité sociale ne reconnaît pas encore leur prescription pour le remboursement.",
+      "source": "Caducee.net",
+      "source_url": "https://www.caducee.net/actualite-medicale/16981/prescription-des-kinesitherapeutes-antalgiques-et-myorelaxants-autorises-remboursement-en-attente.html",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_09_29_4.jpg",
+      "tags": [
+        "kinesitherapeute",
+        "prescription",
+        "antalgique",
+        "remboursement",
+        "nouvelles-missions"
+      ],
+      "full_text": "Un nouveau prescripteur débarque au comptoir. Et il va falloir s'y adapter vite.\n\nDepuis le 17 septembre 2026, l'arrêté du 14 septembre autorise les masseurs-kinésithérapeutes (MK) à prescrire des antalgiques de palier 1 (paracétamol, ibuprofène et autres AINS) et des myorelaxants, hors formes injectables. L'arrêté élargit aussi leur droit de prescription à d'autres médicaments et à une liste étendue de dispositifs médicaux et produits de santé.\n\nC'est une évolution significative. Les MK suivent ainsi une trajectoire similaire à celle des pharmaciens et des infirmières, à qui des droits de prescription ont été progressivement ouverts ces dernières années.\n\nMais voilà le hic : le droit a avancé plus vite que le remboursement. Aujourd'hui, le Code de la sécurité sociale ne reconnaît pas encore la prescription d'un kinésithérapeute comme ouvrant droit au remboursement pour ces médicaments. Concrètement, si un patient te présente une ordonnance d'antalgiques signée par son kiné, tu peux la délivrer, mais la prise en charge par l'Assurance Maladie n'est pas encore opérationnelle pour cette base prescriptive.\n\nCe que tu dois faire maintenant : vérifier que ta LGO gère le prescripteur \"masseur-kinésithérapeute\" pour ces catégories de produits. Identifier comment traiter ces ordonnances en caisse. Et surtout, informer ton équipe pour éviter les erreurs ou les refus injustifiés.\n\nL'impact pour la patientèle est réel : des millions de patients suivis en kinésithérapie pour des douleurs musculo-squelettiques chroniques ou post-opératoires pourront recevoir directement du kiné une prescription d'antalgiques ou de myorelaxants. Plus besoin d'un aller-retour chez le médecin pour une ordonnance d'ibuprofène après une séance.\n\nDemain au comptoir : prépare-toi à voir des ordonnances de kinés sur des produits que tu associais jusqu'ici exclusivement aux prescriptions médicales. Le cadre légal est là. Le remboursement suit. Forme ton équipe maintenant pour ne pas être pris de court."
+    },
+    {
+      "id": "actu_2026_09_29_3",
+      "date": "2026-09-29",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "Anti-obésité : 85 600 boîtes vendues en France, le comptoir devient acteur clé",
+      "resume": "Depuis leur mise sur le marché en juin, les médicaments anti-obésité ont généré 85 600 boîtes vendues en France. Des chiffres encore modestes, mais un signal fort que l'officine entre dans une nouvelle ère thérapeutique sur l'obésité.",
+      "source": "France Info Sante",
+      "source_url": "https://www.franceinfo.fr/sante/medicament/enfin-une-chance-d-egalite-therapeutique-depuis-juin-85-600-boites-de-medicaments-anti-obesite-vendues-en-france_8213240.html#xtor=RSS-3-%5Bgeneral%5D",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_09_29_3.jpg",
+      "tags": [
+        "obesite",
+        "glp-1",
+        "nouvelles-missions",
+        "officine",
+        "remboursement"
+      ],
+      "full_text": "85 600 boîtes. Ce n'est pas un raz-de-marée, mais c'est un démarrage. Et pour une classe thérapeutique qui ouvre enfin une prise en charge sérieuse de l'obésité en France, c'est une bonne nouvelle.\n\nDepuis leur mise sur le marché, les médicaments anti-obésité sont accessibles aux patients français. Le Collectif national des associations d'obèses rappelle que près de 18% des adultes français sont touchés par l'obésité, une pathologie chronique, souvent sous-estimée, souvent stigmatisée. \"Enfin une chance d'égalité thérapeutique\", résume l'une des associations citées par France Info.\n\nPourquoi c'est une bonne nouvelle pour l'officine ? Parce que ces médicaments nécessitent un suivi. Tolérance digestive, observance, adaptation posologique progressive, interactions éventuelles : c'est exactement le terrain des entretiens pharmaceutiques. Même si aucun entretien remunéré spécifique n'existe à ce jour dans la convention nationale pour cette classe, le rôle de conseil et de suivi du pharmacien est central.\n\nL'obésité est une maladie chronique de tissu adipeux, pas un problème de volonté. Ce repositionnement du discours médical est une opportunité pour changer aussi le regard au comptoir. Moins de jugement, plus de protocole.\n\nLes 85 600 boîtes vendues montrent aussi que les prescriptions existent, que les médecins s'approprient ces traitements, et que la demande va croître. Les équipes officinales ont tout intérêt à se former maintenant : mécanisme d'action, effets indésirables fréquents (nausées, vomissements surtout en début de traitement), contre-indications, règles de conservation.\n\nDemain au comptoir : si tu ne l'as pas encore fait, c'est le moment de briefer ton équipe. Les patients vont arriver avec des ordonnances, des questions, des attentes. Être prêt à ce moment, c'est ce qui fait la différence entre délivrer et soigner."
+    },
+    {
+      "id": "actu_2026_09_29_2",
+      "date": "2026-09-29",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "Merck arrête un antibiotique clé contre les superbactéries. On devrait tous s'inquiéter.",
+      "resume": "Merck vient de retirer du marché américain Recarbrio, un antibiotique de dernier recours contre les bactéries multirésistantes. Une décision commerciale aux conséquences potentiellement graves pour la lutte mondiale contre l'antibiorésistance, qui concerne aussi directement les officines françaises.",
+      "source": "STAT News",
+      "source_url": "https://www.statnews.com/pharmalot/2026/09/28/merck-discontinues-antibiotic-recarbrio-in-u-s-despite-superbug-concerns/?utm_campaign=rss",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/img_actu_2026_09_29_2.jpg",
+      "tags": [
+        "antibiotique",
+        "antibioresistance",
+        "rupture",
+        "innovation",
+        "ansm"
+      ],
+      "full_text": "Un labo qui arrête un antibiotique contre les superbactéries par choix commercial. C'est exactement le scénario que les infectiologues redoutent depuis des années.\n\nMerck vient d'annoncer l'arrêt de Recarbrio aux États-Unis. Ce médicament, une association imipénem-cilastatine-relebactam, était l'un des rares antibiotiques disponibles contre les entérobactéries productrices de carbapénémases (EPC) et les bactéries Gram-négatif multirésistantes. Ces souches, c'est le cauchemar des services de réanimation et des infectiologues.\n\nLa décision choque d'autant plus que la résistance aux antibiotiques est en progression constante. L'OMS classe les EPC parmi les pathogènes prioritaires les plus critiques. Et là, un acteur majeur choisit de sortir du marché malgré les alertes répétées sur le vide thérapeutique que ça crée.\n\nPourquoi Merck abandonne ? La source STAT News ne donne pas de détail chiffré, mais le signal est clair : la rentabilité d'un antibiotique de niche hospitalière ne justifie pas, aux yeux du groupe, le maintien de la production. C'est précisément la faille structurelle que les économistes de santé signalent depuis 20 ans : le modèle économique du médicament est incompatible avec le développement d'antibiotiques.\n\nPour un pharmacien français, c'est quoi l'impact ? Recarbrio n'était pas distribué en France sous ce nom. Mais le signal envoyé est universel. En France, les carbapénèmes et autres antibiotiques de dernier recours sont déjà en tension régulière. L'ANSM gère des ruptures d'antibiotiques critiques chaque année. Chaque retrait international fragilise un peu plus la chaîne d'approvisionnement mondiale.\n\nLa vraie question, c'est : qui va investir dans les prochaines molécules si même un géant comme Merck jette l'éponge sur les antibiotiques existants ? Des initiatives existent en Europe, notamment via le règlement HERA et les incitations à la R&D antibiotique, mais elles avancent lentement.\n\nDemain au comptoir : quand ton patient te demande pourquoi son antibiotique est en rupture, cette news résume en une phrase pourquoi c'est structurel, pas conjoncturel. Et ça ne va pas s'arranger tout seul."
+    },
+    {
+      "id": "actu_2026_09_29_1",
+      "date": "2026-09-29",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "ALD et médicaments à 15% : ce qui change dès demain au comptoir",
+      "resume": "Le 1er octobre, c'est demain. Les patients en ALD perdent l'exonération du ticket modérateur sur les médicaments à 15% non liés à leur pathologie. Une bascule réglementaire concrète qui va générer des questions au comptoir dès l'ouverture.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/business/economie/vente/ald-ce-qui-change-le-1er-octobre-pour-les-medicaments-a-15",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_09_29_1.jpg",
+      "tags": [
+        "ald",
+        "remboursement",
+        "ticket-moderateur",
+        "officine",
+        "lfss"
+      ],
+      "full_text": "Demain matin, certains patients vont avoir une mauvaise surprise sur leur ticket de caisse. Et c'est toi qui vas devoir l'expliquer.\n\nDepuis le 1er octobre 2026, les patients en affection de longue durée (ALD) ne bénéficient plus de l'exonération du ticket modérateur sur les médicaments remboursables à 15% qui ne sont pas en lien direct avec leur ALD. Autrement dit, ce qui était pris en charge à 100% via l'exonération ALD ne l'est plus si le médicament n'est pas rattaché à la pathologie exonérante.\n\nLe changement avait été annoncé en avril dernier. Il entre en vigueur maintenant. Pas dans six mois. Maintenant.\n\nCa concerne qui concrètement ? Tous les patients ALD qui se voient prescrire des médicaments à taux de remboursement standard (15%) pour une pathologie distincte de leur ALD. On pense notamment aux prescriptions de médecins généralistes ou spécialistes hors motif ALD : antalgiques banals, certains médicaments de confort, traitements symptomatiques divers.\n\nL'ordonnance va faire la différence. La mention \"ALD\" ou \"exo\" sur l'ordonnance ne suffira plus à déclencher automatiquement l'exonération totale si le médicament est à 15%. Le logiciel de ta LGO doit gérer ça, mais les cas limites vont arriver. Et ce sont tes équipes qui vont devoir gérer les incompréhensions.\n\nCe que tu dois préparer dès ce soir : brief rapide à tes préparateurs et adjoints. Les patients ALD habitués au \"tout gratuit\" vont tiquer. Le message à faire passer : leur ALD reste exonérée pour les médicaments qui lui sont rattachés. C'est sur le reste que le ticket modérateur réapparaît.\n\nQuestion complémentaire : leur mutuelle couvre-t-elle ce ticket modérateur ? Dans la très grande majorité des cas, oui. Oriente-les vers leur complémentaire si besoin.\n\nImpact au comptoir demain matin : prépare des réponses claires, garde le sourire, et vérifie que ta LGO est bien paramétrée pour le 1er octobre. Ce n'est pas une révolution, mais c'est une friction quotidienne à anticiper."
+    },
+    {
+      "id": "lsv_2026_09_29",
+      "date": "2026-09-29",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? On guérissait la dépression en injectant du sang de tuberculeux",
+      "resume": "Dans les années 1920, un psychiatre suisse était convaincu d'avoir trouvé le remède à la folie. Son arme secrète ? Provoquer délibérément la tuberculose chez ses patients. Le pire : ça marchait, parfois.",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_09_29.jpg",
+      "tags": [
+        "histoire",
+        "psychiatrie",
+        "decouverte",
+        "medicament",
+        "epidemie"
+      ],
+      "full_text": "En 1917, un neurologue autrichien nommé Julius Wagner-Jauregg reçoit le prix Nobel de médecine. Pas pour avoir soigné des gens en douceur. Pour avoir inoculé le paludisme à des patients syphilitiques. L'idée : la fièvre violente détruirait la bactérie. Et ça fonctionnait.\n\nCette logique de « guérir le mal par un autre mal » a fait des émules. Dans les années 1920-1930, des psychiatres européens vont pousser le concept encore plus loin. Certains injectent à leurs patients dépressifs ou schizophrènes du sang prélevé sur des tuberculeux. L'objectif affiché : déclencher une fièvre intense pour « réinitialiser » le cerveau malade. Une sorte de reboot biologique, si tu veux.\n\nLe twist ? Des médecins publiaient des résultats « encourageants ». Quelques patients semblaient effectivement aller mieux après les épisodes fébriles. Ce qu'on ignorait alors : c'était probablement dû à l'attention médicale accrue, pas à la tuberculose. Le biais de confirmation à son apogée.\n\nÉvidemment, des patients mouraient. De tuberculose. Injectée par leur médecin. Dans un hôpital psychiatrique. Ces décès étaient souvent classés comme « complications naturelles de l'état mental ».\n\nCette pratique a disparu avec l'arrivée des premiers psychotropes dans les années 1950. La chlorpromazine, synthétisée en 1950 par les laboratoires Rhône-Poulenc, a révolutionné la psychiatrie en offrant enfin une alternative chimique au barbarisme thérapeutique.\n\nAujourd'hui, quand un patient vient te demander si son antidépresseur est « vraiment nécessaire », tu peux lui répondre avec le sourire : très clairement, oui. Et lui épargner les détails."
+    },
+    {
       "id": "actu_2026_09_28_5",
       "date": "2026-09-28",
       "type": "actu",
@@ -18039,6 +18164,6 @@
       ]
     }
   ],
-  "count": 869,
-  "updated_at": "2026-09-28T04:07:29.661989+02:00"
+  "count": 875,
+  "updated_at": "2026-09-29T04:09:40.476755+02:00"
 }

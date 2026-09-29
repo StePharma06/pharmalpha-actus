@@ -2,57 +2,57 @@
   "pathologies": [
     {
       "display": "Allergie en septembre",
-      "delta_label": "↑ 39 750",
+      "delta_label": "↑ 54 700",
       "trend": "up"
     },
     {
-      "display": "Allergie automne",
-      "delta_label": "↑ 21 450",
+      "display": "Allergie de septembre",
+      "delta_label": "↑ 53 700",
       "trend": "up"
     },
     {
-      "display": "Fracture de fatigue pied",
-      "delta_label": "↑ 12 750",
+      "display": "Fatigue chronique que faire",
+      "delta_label": "↑ 16 800",
       "trend": "up"
     },
     {
-      "display": "Effet de fatigue ou de critique",
-      "delta_label": "↑ 8 950",
+      "display": "Orslow fatigue pants",
+      "delta_label": "↑ 12 300",
       "trend": "up"
     },
     {
-      "display": "Test covid",
-      "delta_label": "↑ 600",
+      "display": "Solutricine vitamine c",
+      "delta_label": "↑ 1 700",
       "trend": "up"
     }
   ],
-  "pathologies_from": "2026-09-28",
+  "pathologies_from": "2026-09-29",
   "soins": [
     {
-      "display": "Oscillo immunite",
-      "delta_label": "↑ 200 000",
-      "trend": "up"
-    },
-    {
       "display": "Azinc immunite",
-      "delta_label": "↑ 78 100",
+      "delta_label": "↑ 74 650",
       "trend": "up"
     },
     {
-      "display": "Schoum digestion",
-      "delta_label": "↑ 65 900",
+      "display": "Schéma digestion",
+      "delta_label": "↑ 45 000",
       "trend": "up"
     },
     {
       "display": "Calmosine digestion bébé",
-      "delta_label": "↑ 46 100",
+      "delta_label": "↑ 44 200",
       "trend": "up"
     },
     {
-      "display": "Douleur nociceptive",
-      "delta_label": "↑ 5 500",
+      "display": "Immunite familiale",
+      "delta_label": "↑ 36 050",
+      "trend": "up"
+    },
+    {
+      "display": "Gummies sommeil enfant",
+      "delta_label": "↑ 8 300",
       "trend": "up"
     }
   ],
-  "soins_from": "2026-09-28"
+  "soins_from": "2026-09-29"
 }
