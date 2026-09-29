@@ -1,26 +1,26 @@
 {
- "genere_le": "2026-09-28T11:09:41+02:00",
+ "genere_le": "2026-09-29T11:19:35+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1224,
- "abonnes_hebdo": 325,
- "abonnes_diffusion": 1549,
- "articles_publies": 723,
- "nouveaux_7j": 23,
- "nouveaux_cumul": 1217,
+ "abonnes_total": 1231,
+ "abonnes_hebdo": 327,
+ "abonnes_diffusion": 1558,
+ "articles_publies": 728,
+ "nouveaux_7j": 24,
+ "nouveaux_cumul": 1224,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-09-21",
-  "au": "2026-09-28",
-  "envois": 9135,
-  "delivres": 8086,
-  "taux_delivrabilite_pct": 88.5,
-  "ouvertures": 3113,
-  "ouvertures_uniques": 2284,
-  "clics": 5014,
-  "clics_uniques": 791,
-  "taux_ouverture_pct": 28.2,
-  "taux_clic_pct": 9.8,
-  "ctor_pct": 34.6,
+  "du": "2026-09-22",
+  "au": "2026-09-29",
+  "envois": 8847,
+  "delivres": 7802,
+  "taux_delivrabilite_pct": 88.2,
+  "ouvertures": 2973,
+  "ouvertures_uniques": 2190,
+  "clics": 4632,
+  "clics_uniques": 739,
+  "taux_ouverture_pct": 28.1,
+  "taux_clic_pct": 9.5,
+  "ctor_pct": 33.7,
   "top_articles": [
    {
     "id": "actu_2026_09_22_1",
@@ -39,12 +39,12 @@
     "lecteurs": 68
    },
    {
-    "id": "actu_2026_09_21_1",
-    "titre": "Combien de pharmacies en 2030 ? Le maillage officinal se réinvente",
-    "date": "2026-09-21",
-    "categorie": "pharma_france",
-    "clics": 103,
-    "lecteurs": 66
+    "id": "actu_2026_09_23_3",
+    "titre": "Dépistage HTA en officine : l'expérimentation \"Ta Tension\" est lancée",
+    "date": "2026-09-23",
+    "categorie": "bonne_nouvelle",
+    "clics": 115,
+    "lecteurs": 64
    },
    {
     "id": "actu_2026_09_26_1",
@@ -55,28 +55,20 @@
     "lecteurs": 62
    },
    {
-    "id": "actu_2026_09_23_3",
-    "titre": "Dépistage HTA en officine : l'expérimentation \"Ta Tension\" est lancée",
-    "date": "2026-09-23",
-    "categorie": "bonne_nouvelle",
-    "clics": 110,
-    "lecteurs": 62
-   },
-   {
     "id": "actu_2026_09_24_2",
     "titre": "GLP-1 : comment les Etats-Unis vivent (et gèrent) le raz-de-marée semaglutide",
     "date": "2026-09-24",
     "categorie": "pharma_monde",
-    "clics": 106,
-    "lecteurs": 60
+    "clics": 109,
+    "lecteurs": 62
    },
    {
     "id": "actu_2026_09_25_5",
     "titre": "Biosimilaires : un arrêté au JO du 22/09 - ce que ça change pour ta marge",
     "date": "2026-09-25",
     "categorie": "business_officine",
-    "clics": 104,
-    "lecteurs": 55
+    "clics": 105,
+    "lecteurs": 56
    },
    {
     "id": "actu_2026_09_24_4",
@@ -95,28 +87,36 @@
     "lecteurs": 52
    },
    {
+    "id": "actu_2026_09_29_1",
+    "titre": "ALD et médicaments à 15% : ce qui change dès demain au comptoir",
+    "date": "2026-09-29",
+    "categorie": "pharma_france",
+    "clics": 86,
+    "lecteurs": 52
+   },
+   {
     "id": "actu_2026_09_25_4",
     "titre": "Pharmacie hospitalière : un nouveau code concours pour la pharma polyvalente",
     "date": "2026-09-25",
     "categorie": "avenir_pharma",
-    "clics": 97,
-    "lecteurs": 50
+    "clics": 98,
+    "lecteurs": 51
    }
   ]
  },
  "mois": {
-  "du": "2026-08-29",
-  "au": "2026-09-28",
-  "envois": 32032,
-  "delivres": 28301,
-  "taux_delivrabilite_pct": 88.4,
-  "ouvertures": 11437,
-  "ouvertures_uniques": 8112,
-  "clics": 15917,
-  "clics_uniques": 2673,
-  "taux_ouverture_pct": 28.7,
-  "taux_clic_pct": 9.4,
-  "ctor_pct": 33.0,
+  "du": "2026-08-30",
+  "au": "2026-09-29",
+  "envois": 32145,
+  "delivres": 28400,
+  "taux_delivrabilite_pct": 88.3,
+  "ouvertures": 11591,
+  "ouvertures_uniques": 8196,
+  "clics": 16012,
+  "clics_uniques": 2713,
+  "taux_ouverture_pct": 28.9,
+  "taux_clic_pct": 9.6,
+  "ctor_pct": 33.1,
   "top_articles": [
    {
     "id": "actu_2026_09_22_1",
@@ -202,17 +202,17 @@
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-09-28",
-  "envois": 131702,
-  "delivres": 119569,
+  "au": "2026-09-29",
+  "envois": 132928,
+  "delivres": 120647,
   "taux_delivrabilite_pct": 90.8,
-  "ouvertures": 48324,
-  "ouvertures_uniques": 33492,
-  "clics": 53416,
-  "clics_uniques": 9485,
+  "ouvertures": 48773,
+  "ouvertures_uniques": 33804,
+  "clics": 53994,
+  "clics_uniques": 9588,
   "taux_ouverture_pct": 28.0,
   "taux_clic_pct": 7.9,
-  "ctor_pct": 28.3,
+  "ctor_pct": 28.4,
   "top_articles": [
    {
     "id": "actu_2026_09_22_1",
