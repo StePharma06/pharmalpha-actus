@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? On guérissait la dépression en injectant du sang de tuberculeux",
-  "resume": "Dans les années 1920, un psychiatre suisse était convaincu d'avoir trouvé le remède à la folie. Son arme secrète ? Provoquer délibérément la tuberculose chez ses patients. Le pire : ça marchait, parfois.",
-  "full_text": "En 1917, un neurologue autrichien nommé Julius Wagner-Jauregg reçoit le prix Nobel de médecine. Pas pour avoir soigné des gens en douceur. Pour avoir inoculé le paludisme à des patients syphilitiques. L'idée : la fièvre violente détruirait la bactérie. Et ça fonctionnait.\n\nCette logique de « guérir le mal par un autre mal » a fait des émules. Dans les années 1920-1930, des psychiatres européens vont pousser le concept encore plus loin. Certains injectent à leurs patients dépressifs ou schizophrènes du sang prélevé sur des tuberculeux. L'objectif affiché : déclencher une fièvre intense pour « réinitialiser » le cerveau malade. Une sorte de reboot biologique, si tu veux.\n\nLe twist ? Des médecins publiaient des résultats « encourageants ». Quelques patients semblaient effectivement aller mieux après les épisodes fébriles. Ce qu'on ignorait alors : c'était probablement dû à l'attention médicale accrue, pas à la tuberculose. Le biais de confirmation à son apogée.\n\nÉvidemment, des patients mouraient. De tuberculose. Injectée par leur médecin. Dans un hôpital psychiatrique. Ces décès étaient souvent classés comme « complications naturelles de l'état mental ».\n\nCette pratique a disparu avec l'arrivée des premiers psychotropes dans les années 1950. La chlorpromazine, synthétisée en 1950 par les laboratoires Rhône-Poulenc, a révolutionné la psychiatrie en offrant enfin une alternative chimique au barbarisme thérapeutique.\n\nAujourd'hui, quand un patient vient te demander si son antidépresseur est « vraiment nécessaire », tu peux lui répondre avec le sourire : très clairement, oui. Et lui épargner les détails.",
-  "image_keywords": "psychiatry vintage hospital",
+  "titre": "Le saviez-vous ? Le premier groupe sanguin a été découvert grâce à des morts",
+  "resume": "Début du XXe siècle. Les transfusions tuaient une fois sur deux. Un médecin viennois décide de mélanger le sang de ses collègues dans des tubes à essai - et change la médecine pour toujours.",
+  "full_text": "On est en 1900. Vienna. Un jeune médecin de 32 ans, Karl Landsteiner, fait quelque chose d'apparemment anodin : il prélève du sang sur ses six collègues du laboratoire, puis il mélange les sérums et les globules rouges dans tous les sens.\n\nRésultat ? Certains mélanges coagulent. D'autres restent fluides. Landsteiner comprend immédiatement qu'il existe des catégories de sang incompatibles. En 1901, il publie ses travaux et décrit trois groupes : A, B et C - ce qu'on appellera plus tard O. Le groupe AB sera découvert l'année suivante par deux de ses étudiants.\n\nVoilà le twist que peu de gens connaissent : avant cette découverte, les transfusions sanguines étaient une loterie mortelle. On transfusait à l'aveugle depuis le XVIIe siècle - souvent du sang animal, parfois humain. Le taux de mortalité était si élevé que plusieurs pays avaient purement et simplement interdit la pratique. Personne ne comprenait pourquoi ça marchait un coup sur deux et tuait le reste du temps.\n\nLandsteiner vient de résoudre le mystère. Sauf que... personne ne s'en fout vraiment pendant 20 ans. Ses travaux sont ignorés, jugés trop théoriques. Ce n'est qu'avec la Première Guerre mondiale et ses milliers de blessés hémorragiques qu'on réalise l'urgence d'appliquer la compatibilité sanguine. Les groupes ABO deviennent alors un outil militaire de survie.\n\nEn 1930, Karl Landsteiner reçoit le Prix Nobel de physiologie. En 1940, il co-découvrira le facteur Rhésus - oui, le fameux + ou - sur ta carte de groupe sanguin.\n\nAujourd'hui, au comptoir, quand un patient te montre son carnet de groupe sanguin avant une chirurgie ou te demande si son bébé à naître risque une incompatibilité Rhésus, c'est l'héritage direct de ce médecin viennois qui mélangeait le sang de ses collègues dans des tubes il y a 125 ans.",
+  "image_keywords": "blood group laboratory",
   "tags": [
     "histoire",
-    "psychiatrie",
     "decouverte",
-    "medicament",
-    "epidemie"
+    "biologie",
+    "transfusion",
+    "chimie"
   ],
-  "date": "2026-09-29",
+  "date": "2026-09-30",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",

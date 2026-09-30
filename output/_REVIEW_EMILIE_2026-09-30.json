@@ -1,0 +1,37 @@
+{
+  "generated_at": "2026-09-30T04:07:18.695677+02:00",
+  "run_date": "2026-09-30",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "USPO contre infirmiers et médecins : la guerre des compétences est déclarée",
+      "resume": "L'USPO dépose des plaintes ordinales contre Convergence Infirmière et l'UFML-Syndicat, qui avaient violemment attaqué les nouvelles missions des pharmaciens. Un recours inédit au CNOP pour défendre le périmètre officinal. La bataille interpro entre dans une nouvelle dimension.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/attaque-des-medecins-et-infirmiers-en-reponse-la-profession-depose-plainte",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Giphar rachète PharmaPlatinum : la consolidation des groupements s'accélère",
+      "resume": "Giphar vient de prendre une participation majoritaire dans PharmaPlatinum, un groupement régional de 80 pharmacies. Première opération de croissance externe pour la coopérative. Le marché des groupements est en train de se recomposer - et ça te concerne directement.",
+      "source": "Pharm'Actus · Le Moniteur des Pharmacies — Giphar ouvre le chapitre de la croissance externe, IQVIA Pharmastat — Nombre d'officines en France (juin 2026)",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/business/groupements/giphar-ouvre-le-chapitre-de-la-croissance-externe",
+      "confidence_score": 0.72,
+      "warnings": [
+        "Le chiffre exact du nombre d'officines adhérentes à Giphar n'est pas fourni par la source : ne pas l'inventer ni l'extrapoler.",
+        "Le 'seuil de viabilité autour de 10 %' est cité dans la source mais sans précision de sa base de calcul (10 % de quoi exactement ? du marché national ? du panier achats ?) : utilisé tel quel, de façon prudente.",
+        "Les 19 274 officines (IQVIA Pharmastat, juin 2026) sont la référence officielle utilisée pour l'extrapolation du seuil de 10 % : cette extrapolation est de l'auteur, pas de la source — la présenter comme telle.",
+        "Les chiffres de remises groupements (2 à 3 points) sont des ordres de grandeur professionnellement connus mais non sourcés dans l'article du Moniteur : les présenter comme illustratifs, pas comme des données vérifiées.",
+        "Le CA moyen de 1,28 M€ est issu des données IQVIA Pharmastat juin 2026 — vérifier la date de mise à jour si cet article est publié après octobre 2026.",
+        "Aucune position syndicale (FSPF, USPO, UPGF) n'est citée car le sujet porte sur la stratégie commerciale d'une coopérative privée, pas sur une prise de position syndicale — la règle d'équilibre syndical ne s'applique donc pas ici.",
+        "5 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}
