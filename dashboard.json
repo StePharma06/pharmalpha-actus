@@ -1,43 +1,27 @@
 {
- "genere_le": "2026-09-29T11:19:35+02:00",
+ "genere_le": "2026-09-30T11:10:11+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1231,
- "abonnes_hebdo": 327,
- "abonnes_diffusion": 1558,
- "articles_publies": 728,
- "nouveaux_7j": 24,
- "nouveaux_cumul": 1224,
+ "abonnes_total": 1234,
+ "abonnes_hebdo": 329,
+ "abonnes_diffusion": 1563,
+ "articles_publies": 733,
+ "nouveaux_7j": 25,
+ "nouveaux_cumul": 1227,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-09-22",
-  "au": "2026-09-29",
-  "envois": 8847,
-  "delivres": 7802,
+  "du": "2026-09-23",
+  "au": "2026-09-30",
+  "envois": 8865,
+  "delivres": 7817,
   "taux_delivrabilite_pct": 88.2,
-  "ouvertures": 2973,
-  "ouvertures_uniques": 2190,
-  "clics": 4632,
-  "clics_uniques": 739,
-  "taux_ouverture_pct": 28.1,
-  "taux_clic_pct": 9.5,
-  "ctor_pct": 33.7,
+  "ouvertures": 2932,
+  "ouvertures_uniques": 2175,
+  "clics": 4496,
+  "clics_uniques": 708,
+  "taux_ouverture_pct": 27.8,
+  "taux_clic_pct": 9.1,
+  "ctor_pct": 32.6,
   "top_articles": [
-   {
-    "id": "actu_2026_09_22_1",
-    "titre": "Vaccin antigrippe et prescription obligatoire : ce que ça change vraiment au comptoir",
-    "date": "2026-09-22",
-    "categorie": "pharma_france",
-    "clics": 128,
-    "lecteurs": 84
-   },
-   {
-    "id": "actu_2026_09_22_3",
-    "titre": "Biosimilaires substituables : la liste s'allonge, le pharmacien gagne du terrain",
-    "date": "2026-09-22",
-    "categorie": "bonne_nouvelle",
-    "clics": 103,
-    "lecteurs": 68
-   },
    {
     "id": "actu_2026_09_23_3",
     "titre": "Dépistage HTA en officine : l'expérimentation \"Ta Tension\" est lancée",
@@ -51,31 +35,39 @@
     "titre": "Fluoxétine 20 mg en tension : l'ANSM sort le drapeau orange",
     "date": "2026-09-26",
     "categorie": "pharma_france",
-    "clics": 116,
-    "lecteurs": 62
+    "clics": 117,
+    "lecteurs": 63
    },
    {
     "id": "actu_2026_09_24_2",
     "titre": "GLP-1 : comment les Etats-Unis vivent (et gèrent) le raz-de-marée semaglutide",
     "date": "2026-09-24",
     "categorie": "pharma_monde",
-    "clics": 109,
-    "lecteurs": 62
+    "clics": 112,
+    "lecteurs": 63
    },
    {
     "id": "actu_2026_09_25_5",
     "titre": "Biosimilaires : un arrêté au JO du 22/09 - ce que ça change pour ta marge",
     "date": "2026-09-25",
     "categorie": "business_officine",
-    "clics": 105,
-    "lecteurs": 56
+    "clics": 106,
+    "lecteurs": 57
+   },
+   {
+    "id": "actu_2026_09_29_1",
+    "titre": "ALD et médicaments à 15% : ce qui change dès demain au comptoir",
+    "date": "2026-09-29",
+    "categorie": "pharma_france",
+    "clics": 91,
+    "lecteurs": 57
    },
    {
     "id": "actu_2026_09_24_4",
     "titre": "Délistage : 33 molécules sur la table, une révolution en cours pour l'officine",
     "date": "2026-09-24",
     "categorie": "avenir_pharma",
-    "clics": 89,
+    "clics": 91,
     "lecteurs": 54
    },
    {
@@ -83,39 +75,47 @@
     "titre": "Grippe : ordonnance obligatoire, mais le pharmacien reste prescripteur",
     "date": "2026-09-25",
     "categorie": "pharma_france",
-    "clics": 88,
-    "lecteurs": 52
-   },
-   {
-    "id": "actu_2026_09_29_1",
-    "titre": "ALD et médicaments à 15% : ce qui change dès demain au comptoir",
-    "date": "2026-09-29",
-    "categorie": "pharma_france",
-    "clics": 86,
-    "lecteurs": 52
+    "clics": 89,
+    "lecteurs": 53
    },
    {
     "id": "actu_2026_09_25_4",
     "titre": "Pharmacie hospitalière : un nouveau code concours pour la pharma polyvalente",
     "date": "2026-09-25",
     "categorie": "avenir_pharma",
-    "clics": 98,
+    "clics": 99,
+    "lecteurs": 52
+   },
+   {
+    "id": "actu_2026_09_29_2",
+    "titre": "Merck arrête un antibiotique clé contre les superbactéries. On devrait tous s'inquiéter.",
+    "date": "2026-09-29",
+    "categorie": "pharma_monde",
+    "clics": 81,
     "lecteurs": 51
+   },
+   {
+    "id": "actu_2026_09_26_5",
+    "titre": "Vaccination Covid automne 2026 : l'USPO monte au créneau, et ton officine est au cœur du jeu",
+    "date": "2026-09-26",
+    "categorie": "business_officine",
+    "clics": 91,
+    "lecteurs": 50
    }
   ]
  },
  "mois": {
-  "du": "2026-08-30",
-  "au": "2026-09-29",
-  "envois": 32145,
-  "delivres": 28400,
+  "du": "2026-08-31",
+  "au": "2026-09-30",
+  "envois": 33376,
+  "delivres": 29475,
   "taux_delivrabilite_pct": 88.3,
-  "ouvertures": 11591,
-  "ouvertures_uniques": 8196,
-  "clics": 16012,
-  "clics_uniques": 2713,
-  "taux_ouverture_pct": 28.9,
-  "taux_clic_pct": 9.6,
+  "ouvertures": 11939,
+  "ouvertures_uniques": 8463,
+  "clics": 16534,
+  "clics_uniques": 2802,
+  "taux_ouverture_pct": 28.7,
+  "taux_clic_pct": 9.5,
   "ctor_pct": 33.1,
   "top_articles": [
    {
@@ -128,9 +128,9 @@
    },
    {
     "id": "actu_2026_09_19_1",
-    "titre": "Arrêts maladie : deux décrets publiés, ce qui change pour ton officine en octobre",
-    "date": "2026-09-19",
-    "categorie": "pharma_france",
+    "titre": "actu_2026_09_19_1",
+    "date": "",
+    "categorie": "",
     "clics": 135,
     "lecteurs": 81
    },
@@ -202,16 +202,16 @@
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-09-29",
-  "envois": 132928,
-  "delivres": 120647,
-  "taux_delivrabilite_pct": 90.8,
-  "ouvertures": 48773,
-  "ouvertures_uniques": 33804,
-  "clics": 53994,
-  "clics_uniques": 9588,
+  "au": "2026-09-30",
+  "envois": 134159,
+  "delivres": 121722,
+  "taux_delivrabilite_pct": 90.7,
+  "ouvertures": 49188,
+  "ouvertures_uniques": 34118,
+  "clics": 54521,
+  "clics_uniques": 9682,
   "taux_ouverture_pct": 28.0,
-  "taux_clic_pct": 7.9,
+  "taux_clic_pct": 8.0,
   "ctor_pct": 28.4,
   "top_articles": [
    {
@@ -224,9 +224,9 @@
    },
    {
     "id": "actu_2026_09_19_1",
-    "titre": "Arrêts maladie : deux décrets publiés, ce qui change pour ton officine en octobre",
-    "date": "2026-09-19",
-    "categorie": "pharma_france",
+    "titre": "actu_2026_09_19_1",
+    "date": "",
+    "categorie": "",
     "clics": 135,
     "lecteurs": 81
    },
