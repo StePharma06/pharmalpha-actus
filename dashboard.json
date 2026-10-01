@@ -1,33 +1,33 @@
 {
- "genere_le": "2026-09-30T11:10:11+02:00",
+ "genere_le": "2026-10-01T11:38:17+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1234,
- "abonnes_hebdo": 329,
- "abonnes_diffusion": 1563,
- "articles_publies": 733,
- "nouveaux_7j": 25,
- "nouveaux_cumul": 1227,
+ "abonnes_total": 1241,
+ "abonnes_hebdo": 331,
+ "abonnes_diffusion": 1572,
+ "articles_publies": 738,
+ "nouveaux_7j": 30,
+ "nouveaux_cumul": 1234,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-09-23",
-  "au": "2026-09-30",
-  "envois": 8865,
-  "delivres": 7817,
+  "du": "2026-09-24",
+  "au": "2026-10-01",
+  "envois": 8889,
+  "delivres": 7836,
   "taux_delivrabilite_pct": 88.2,
-  "ouvertures": 2932,
-  "ouvertures_uniques": 2175,
-  "clics": 4496,
-  "clics_uniques": 708,
-  "taux_ouverture_pct": 27.8,
-  "taux_clic_pct": 9.1,
-  "ctor_pct": 32.6,
+  "ouvertures": 2945,
+  "ouvertures_uniques": 2170,
+  "clics": 4417,
+  "clics_uniques": 696,
+  "taux_ouverture_pct": 27.7,
+  "taux_clic_pct": 8.9,
+  "ctor_pct": 32.1,
   "top_articles": [
    {
-    "id": "actu_2026_09_23_3",
-    "titre": "Dépistage HTA en officine : l'expérimentation \"Ta Tension\" est lancée",
-    "date": "2026-09-23",
-    "categorie": "bonne_nouvelle",
-    "clics": 115,
+    "id": "actu_2026_10_01_1",
+    "titre": "1er octobre : ce qui change vraiment au comptoir aujourd'hui",
+    "date": "2026-10-01",
+    "categorie": "pharma_france",
+    "clics": 100,
     "lecteurs": 64
    },
    {
@@ -47,19 +47,19 @@
     "lecteurs": 63
    },
    {
-    "id": "actu_2026_09_25_5",
-    "titre": "Biosimilaires : un arrêté au JO du 22/09 - ce que ça change pour ta marge",
-    "date": "2026-09-25",
-    "categorie": "business_officine",
-    "clics": 106,
-    "lecteurs": 57
-   },
-   {
     "id": "actu_2026_09_29_1",
     "titre": "ALD et médicaments à 15% : ce qui change dès demain au comptoir",
     "date": "2026-09-29",
     "categorie": "pharma_france",
-    "clics": 91,
+    "clics": 93,
+    "lecteurs": 58
+   },
+   {
+    "id": "actu_2026_09_25_5",
+    "titre": "Biosimilaires : un arrêté au JO du 22/09 - ce que ça change pour ta marge",
+    "date": "2026-09-25",
+    "categorie": "business_officine",
+    "clics": 108,
     "lecteurs": 57
    },
    {
@@ -75,7 +75,7 @@
     "titre": "Grippe : ordonnance obligatoire, mais le pharmacien reste prescripteur",
     "date": "2026-09-25",
     "categorie": "pharma_france",
-    "clics": 89,
+    "clics": 91,
     "lecteurs": 53
    },
    {
@@ -83,7 +83,7 @@
     "titre": "Pharmacie hospitalière : un nouveau code concours pour la pharma polyvalente",
     "date": "2026-09-25",
     "categorie": "avenir_pharma",
-    "clics": 99,
+    "clics": 101,
     "lecteurs": 52
    },
    {
@@ -91,8 +91,8 @@
     "titre": "Merck arrête un antibiotique clé contre les superbactéries. On devrait tous s'inquiéter.",
     "date": "2026-09-29",
     "categorie": "pharma_monde",
-    "clics": 81,
-    "lecteurs": 51
+    "clics": 82,
+    "lecteurs": 52
    },
    {
     "id": "actu_2026_09_26_5",
@@ -105,18 +105,18 @@
   ]
  },
  "mois": {
-  "du": "2026-08-31",
-  "au": "2026-09-30",
-  "envois": 33376,
-  "delivres": 29475,
-  "taux_delivrabilite_pct": 88.3,
-  "ouvertures": 11939,
-  "ouvertures_uniques": 8463,
-  "clics": 16534,
-  "clics_uniques": 2802,
-  "taux_ouverture_pct": 28.7,
-  "taux_clic_pct": 9.5,
-  "ctor_pct": 33.1,
+  "du": "2026-09-01",
+  "au": "2026-10-01",
+  "envois": 33253,
+  "delivres": 29342,
+  "taux_delivrabilite_pct": 88.2,
+  "ouvertures": 11798,
+  "ouvertures_uniques": 8342,
+  "clics": 16411,
+  "clics_uniques": 2748,
+  "taux_ouverture_pct": 28.4,
+  "taux_clic_pct": 9.4,
+  "ctor_pct": 32.9,
   "top_articles": [
    {
     "id": "actu_2026_09_22_1",
@@ -176,9 +176,9 @@
    },
    {
     "id": "actu_2026_09_21_1",
-    "titre": "Combien de pharmacies en 2030 ? Le maillage officinal se réinvente",
-    "date": "2026-09-21",
-    "categorie": "pharma_france",
+    "titre": "actu_2026_09_21_1",
+    "date": "",
+    "categorie": "",
     "clics": 103,
     "lecteurs": 66
    },
@@ -202,14 +202,14 @@
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-09-30",
-  "envois": 134159,
-  "delivres": 121722,
+  "au": "2026-10-01",
+  "envois": 135395,
+  "delivres": 122808,
   "taux_delivrabilite_pct": 90.7,
-  "ouvertures": 49188,
-  "ouvertures_uniques": 34118,
-  "clics": 54521,
-  "clics_uniques": 9682,
+  "ouvertures": 49605,
+  "ouvertures_uniques": 34425,
+  "clics": 55094,
+  "clics_uniques": 9774,
   "taux_ouverture_pct": 28.0,
   "taux_clic_pct": 8.0,
   "ctor_pct": 28.4,
