@@ -1,58 +1,58 @@
 {
   "pathologies": [
     {
-      "display": "Allergie de septembre",
-      "delta_label": "↑ 60 300",
+      "display": "Fatigue psychologique",
+      "delta_label": "↑ 19 900",
       "trend": "up"
     },
     {
-      "display": "Croquette anti allergie chat",
-      "delta_label": "↑ 27 550",
+      "display": "Allergie ambroisie symptômes",
+      "delta_label": "↑ 18 150",
       "trend": "up"
     },
     {
-      "display": "Amoxicilline fatigue",
-      "delta_label": "↑ 9 450",
+      "display": "Allergie crevette",
+      "delta_label": "↑ 18 050",
       "trend": "up"
     },
     {
-      "display": "Bouffées de chaleur et fatigue intense",
-      "delta_label": "↑ 9 150",
+      "display": "Cure de vitamines fatigue",
+      "delta_label": "↑ 11 250",
       "trend": "up"
     },
     {
       "display": "Test covid",
-      "delta_label": "↑ 550",
+      "delta_label": "↑ 500",
       "trend": "up"
     }
   ],
-  "pathologies_from": "2026-09-30",
+  "pathologies_from": "2026-10-01",
   "soins": [
     {
-      "display": "Azinc immunite",
-      "delta_label": "↑ 69 600",
+      "display": "Immunite diplomatique",
+      "delta_label": "↑ 361 650",
       "trend": "up"
     },
     {
       "display": "Oscillo immunite",
-      "delta_label": "↑ 69 150",
+      "delta_label": "↑ 192 750",
       "trend": "up"
     },
     {
-      "display": "Schéma digestion",
-      "delta_label": "↑ 52 950",
+      "display": "Medicament pour la digestion",
+      "delta_label": "↑ 53 350",
       "trend": "up"
     },
     {
       "display": "Calmosine digestion bébé",
-      "delta_label": "↑ 41 450",
+      "delta_label": "↑ 47 750",
       "trend": "up"
     },
     {
-      "display": "Mieux-etre-sante.fr santé auditive et éq",
-      "delta_label": "↑ 4 800",
+      "display": "Douleur pelvienne grossesse",
+      "delta_label": "↑ 350",
       "trend": "up"
     }
   ],
-  "soins_from": "2026-09-30"
+  "soins_from": "2026-10-01"
 }

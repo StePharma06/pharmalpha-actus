@@ -1,16 +1,16 @@
 {
-  "titre": "Le saviez-vous ? Le premier groupe sanguin a été découvert grâce à des morts",
-  "resume": "Début du XXe siècle. Les transfusions tuaient une fois sur deux. Un médecin viennois décide de mélanger le sang de ses collègues dans des tubes à essai - et change la médecine pour toujours.",
-  "full_text": "On est en 1900. Vienna. Un jeune médecin de 32 ans, Karl Landsteiner, fait quelque chose d'apparemment anodin : il prélève du sang sur ses six collègues du laboratoire, puis il mélange les sérums et les globules rouges dans tous les sens.\n\nRésultat ? Certains mélanges coagulent. D'autres restent fluides. Landsteiner comprend immédiatement qu'il existe des catégories de sang incompatibles. En 1901, il publie ses travaux et décrit trois groupes : A, B et C - ce qu'on appellera plus tard O. Le groupe AB sera découvert l'année suivante par deux de ses étudiants.\n\nVoilà le twist que peu de gens connaissent : avant cette découverte, les transfusions sanguines étaient une loterie mortelle. On transfusait à l'aveugle depuis le XVIIe siècle - souvent du sang animal, parfois humain. Le taux de mortalité était si élevé que plusieurs pays avaient purement et simplement interdit la pratique. Personne ne comprenait pourquoi ça marchait un coup sur deux et tuait le reste du temps.\n\nLandsteiner vient de résoudre le mystère. Sauf que... personne ne s'en fout vraiment pendant 20 ans. Ses travaux sont ignorés, jugés trop théoriques. Ce n'est qu'avec la Première Guerre mondiale et ses milliers de blessés hémorragiques qu'on réalise l'urgence d'appliquer la compatibilité sanguine. Les groupes ABO deviennent alors un outil militaire de survie.\n\nEn 1930, Karl Landsteiner reçoit le Prix Nobel de physiologie. En 1940, il co-découvrira le facteur Rhésus - oui, le fameux + ou - sur ta carte de groupe sanguin.\n\nAujourd'hui, au comptoir, quand un patient te montre son carnet de groupe sanguin avant une chirurgie ou te demande si son bébé à naître risque une incompatibilité Rhésus, c'est l'héritage direct de ce médecin viennois qui mélangeait le sang de ses collègues dans des tubes il y a 125 ans.",
-  "image_keywords": "blood group laboratory",
+  "titre": "Le saviez-vous ? On opérait les yeux avec une aiguille à coudre",
+  "resume": "Pendant des siècles, les chirurgiens oculaires sillonnaient les marchés comme des saltimbanques. Leur outil : une simple aiguille. Leur technique : pousser la cataracte vers le fond de l'œil. Et ça marchait... environ une fois sur trois.",
+  "full_text": "Imagine-toi au XVIIe siècle, sur une place de marché à Lyon. Un homme s'installe, sort une petite aiguille effilée, et propose de te rendre la vue pour quelques sous. C'est le « coucher de la cataracte » - et ce bonhomme, on l'appelle un oculiste itinérant.\n\nLa technique, elle date de l'Antiquité indienne. Vers l'an 600 avant J.-C., le chirurgien Sushruta décrivait déjà la manœuvre dans ses textes. Le principe est brutal dans sa simplicité : on plante l'aiguille à travers le blanc de l'œil, et on pousse le cristallin opacifié vers le bas, dans la cavité vitreuse. La cataracte ne disparaît pas - elle tombe juste hors du champ visuel.\n\nLe twist ? Ces oculistes itinérants étaient souvent considérés comme des charlatans par la médecine officielle. Et pourtant, certains étaient d'une habileté redoutable. Jacques Daviel, chirurgien français, les observa pendant des années avant de claquer la porte de cette tradition en 1745. Il fut le premier à extraire chirurgicalement le cristallin plutôt que de le repousser. Une révolution. Sauf que son taux de succès initial était... aussi catastrophique que ses prédécesseurs.\n\nLe vrai problème, c'était l'infection. Sans antisepsie, sans antibiotiques, un œil opéré était un œil souvent perdu en deux semaines. Le coucher de cataracte avait un avantage inattendu : l'aiguille traversait une zone relativement avascularisée, limitant un peu le risque. Une barbarie qui avait sa logique.\n\nAujourd'hui, la chirurgie de la cataracte dure 15 minutes, se fait sous anesthésie locale, avec un laser de précision au micron. C'est l'intervention chirurgicale la plus pratiquée au monde - près de 800 000 par an en France. La prochaine fois qu'un patient te demande des gouttes post-op après sa cata, pense à l'aiguille à coudre sur la place du marché. Le chemin parcouru est proprement vertigineux.",
+  "image_keywords": "eye surgery historical",
   "tags": [
     "histoire",
-    "decouverte",
-    "biologie",
-    "transfusion",
-    "chimie"
+    "chirurgie",
+    "ophtalmologie",
+    "instrument",
+    "cataracte"
   ],
-  "date": "2026-09-30",
+  "date": "2026-10-01",
   "categorie": "lsv",
   "badge_label": "Le Saviez-Vous",
   "source": "Pharm'Alpha",

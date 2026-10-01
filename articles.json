@@ -1,6 +1,131 @@
 {
   "articles": [
     {
+      "id": "actu_2026_10_01_5",
+      "date": "2026-10-01",
+      "type": "actu",
+      "categorie": "business_officine",
+      "titre": "SMR faible en ALD : au 1er octobre, le ticket modérateur revient, et l'officine doit s'adapter",
+      "resume": "Fini le remboursement à 100 % pour les médicaments à SMR faible prescrits en ALD. Depuis le 1er octobre 2026, le ticket modérateur s'applique. Concrètement : davantage de reste à charge patient, des questions au comptoir, et un vrai enjeu de gestion des impayés tiers payant.",
+      "source": "Pharm'Actus · FSPF – Médicaments à SMR faible : fin de l'exonération du ticket modérateur pour les patients en ALD, Décret n° 2026-285 du 16 avril 2026 (référencé dans la source FSPF)",
+      "source_url": "https://www.fspf.fr/medicaments-a-smr-faible-fin-de-lexoneration-du-ticket-moderateur-pour-les-patients-en-ald/",
+      "tiktok_url": "",
+      "badge_label": "Business",
+      "image_url": "assets/img_actu_2026_10_01_5.jpg",
+      "tags": [
+        "smr-faible",
+        "ald",
+        "tiers-payant",
+        "remboursement"
+      ],
+      "full_text": "Fini le remboursement à 100 % pour les médicaments à SMR faible prescrits en ALD. Depuis le 1er octobre 2026, le ticket modérateur s'applique. Concrètement : davantage de reste à charge patient, des questions au comptoir, et un vrai enjeu de gestion des impayés tiers payant.\n\n**Contexte**\n\nLe décret n° 2026-285 du 16 avril 2026 met fin à une dérogation historique : jusqu'au 30 septembre 2026, un médicament à service médical rendu (SMR) faible prescrit dans le cadre d'une ALD (affection de longue durée) était remboursé à 100 % au titre de l'exonération du ticket modérateur propre aux ALD. La logique était simple : tout ce qui figure sur l'ordonnance ALD passe en exonération. Ce n'est plus le cas. À compter du 1er octobre 2026, seuls les médicaments à SMR modéré, important ou majeur - c'est-à-dire ceux dont la prise en charge est directement liée à l'ALD - bénéficient de l'exonération. Les produits à SMR faible retombent dans le régime commun : taux de remboursement à 15 %, avec ticket modérateur à la charge du patient (ou de sa mutuelle). Sont concernés tous les patients en ALD, soit environ 13,4 millions d'assurés en France (données CNAM 2024), qui cumulent souvent plusieurs lignes d'ordonnance longue durée. Cette mesure est portée dans le cadre des efforts de régulation des dépenses de l'Assurance Maladie, dont le déficit 2026 est attendu autour de 17 milliards d'euros selon les projections gouvernementales.\n\n**Analyse business**\n\nL'impact comptoir est immédiat et multidimensionnel.\n\n**1. Identification et tri au logiciel : un travail réel, souvent sous-estimé**\nLes médicaments à SMR faible ne sont pas marginaux. La HAS en recense plusieurs dizaines, notamment parmi les veinotoniques, certains antispasmodiques, des mucolytiques, ou encore quelques spécialités à base de plantes remboursables. Jusqu'ici, l'ordonnance ALD les entraînait automatiquement en exonération. Désormais, le pharmacien et son logiciel de tiers payant doivent appliquer le bon code de dérogation - ou plutôt, l'absence de dérogation - pour ces lignes. Le risque : des rejets de l'Assurance Maladie sur des FSE mal codées si l'exonération ALD est appliquée à tort. L'impact financier de ce type de rejet peut être significatif par ordonnance concernée, et s'il n'est pas rattrapé dans les délais de contestation réglementaires, c'est une perte sèche.\n\n**2. Reste à charge patient : de 0 à 85 % du ticket modérateur**\nLes médicaments à SMR faible sont remboursés à 15 % en régime de droit commun. Le ticket modérateur est donc de 85 % du tarif de responsabilité - avant toute intervention de la mutuelle. Pour un patient en ALD sans complémentaire santé, c'est un reste à charge réel qui apparaît là où il n'existait pas. Pour les patients couverts par une CMU-C / CSS (environ 7,7 millions de bénéficiaires), le ticket modérateur reste pris en charge : pas d'impact pour eux.\n\n**3. Tiers payant intégral ALD : attention aux flux AMO**\nBeaucoup d'officines pratiquent le tiers payant intégral sur les ordonnances ALD par automatisme. Si le logiciel n'est pas paramétré pour distinguer les lignes SMR faible des lignes exonérées, l'officine avancera le ticket modérateur sans le récupérer - ni auprès de l'AMO (qui ne le prend plus en charge), ni auprès de l'AMC si le patient n'a pas de mutuelle ou si la mutuelle n'est pas intégrée dans le flux.\n\n**4. Volume concerné : difficile à chiffrer sans données CNAM publiques**\nLa FSPF ne publie pas de volume de boîtes concernées par cette mesure. Les médicaments à SMR faible représentaient une part non négligeable des dépenses remboursées de ville selon le rapport CNAM 2024, sans que la fraction portant spécifiquement sur des patients ALD soit connue publiquement : tout calcul d'impact par officine serait spéculatif et sera donc évité ici.\n\n**Recommandations actionnables**\n\n1. **Vérifier le paramétrage logiciel dès aujourd'hui** - Contacte ton éditeur (Lgpi, Winpharma, Pharmavitale, etc.) pour confirmer que la règle de dérogation ALD n'est plus appliquée automatiquement aux médicaments à SMR faible. Un test sur une spécialité veinotonique connue (SMR faible historique) est un bon indicateur.\n\n2. **Former l'équipe à la question patient** - Les patients en ALD vont se retrouver avec un reste à charge inattendu sur certaines lignes. Prépare une réponse courte et claire : \"Ce médicament n'est plus exonéré dans le cadre de votre ALD depuis le 1er octobre, votre mutuelle peut le prendre en charge.\" Évite de laisser le patient face à une mauvaise surprise en caisse sans explication.\n\n3. **Anticiper les rejets FSE** - Mets en place une veille sur tes retours AMO des 4 prochaines semaines. Un pic de rejets sur des codes de dérogation ALD signalera un problème de paramétrage à corriger rapidement, avant que les montants ne s'accumulent.\n\n4. **Identifier les patients sans complémentaire** - Pour tes patients ALD connus sans mutuelle (repères dans ton logiciel : absence de carte AMC), anticipe la question du reste à charge au moment de la dispensation, pas après. Oriente-les vers la CSS si ce n'est pas déjà fait.\n\n5. **Surveiller la liste HAS des SMR faibles** - La HAS publie et met à jour la liste des spécialités concernées. Télécharge-la et épingle-la dans ton espace de travail : elle évolue régulièrement lors des réévaluations de service médical rendu.\n\n**Sources citees**\n\n- FSPF - Médicaments à SMR faible : fin de l'exonération du ticket modérateur pour les patients en ALD\n- Décret n° 2026-285 du 16 avril 2026 (référencé dans la source FSPF)\n- CNAM - Rapport Charges et Produits 2024 (données dépenses ville et ALD)\n- DREES - Enquête santé et protection sociale 2023 (taux de non-couverture complémentaire)"
+    },
+    {
+      "id": "actu_2026_10_01_4",
+      "date": "2026-10-01",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "IA et essais cliniques : les USA accélèrent, et ça va changer nos pipelines",
+      "resume": "Le HHS américain annonce un programme d'accélération des essais cliniques par l'IA, sous l'impulsion d'ARPA-H. L'objectif affiché : rattraper la Chine sur la vitesse de recherche clinique. Ce que ça implique concrètement pour le pipeline des molécules qui arriveront un jour sur nos comptoirs.",
+      "source": "STAT News",
+      "source_url": "https://www.statnews.com/2026/09/30/hhs-arpa-h-clinical-trials-artificial-intelligence-surpass-program/?utm_campaign=rss",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_10_01_4.jpg",
+      "tags": [
+        "ia",
+        "essais-cliniques",
+        "recherche",
+        "innovation",
+        "pipeline"
+      ],
+      "full_text": "La course à l'innovation clinique prend un nouveau virage. Le Department of Health and Human Services américain (HHS) vient d'annoncer le programme SURPASS, piloté par ARPA-H, son agence de recherche biomédicale à hauts risques. L'objectif est direct : utiliser l'intelligence artificielle pour accélérer et élargir les essais cliniques, dans une logique de compétition assumée avec la Chine sur la vitesse de production de preuves scientifiques.\n\nConcrètement, que vise SURPASS ? Réduire les délais de recrutement des patients dans les essais, identifier plus vite les sous-populations répondeuses, optimiser les designs d'étude et réduire les abandons en cours de trial. Tout ce qui ralentit le passage de la molécule prometteuse au dossier d'AMM.\n\nPourquoi c'est ton affaire, même si tu n'es pas chercheur ? Parce que les délais des essais cliniques américains ont un impact direct sur les dossiers EMA et les AMM européennes. Une molécule qui sort de Phase 3 aux USA deux ans plus tôt, c'est une AMM potentielle en Europe deux ans plus tôt, et une inscription sur la liste remboursable qui arrive d'autant plus vite. Le pipeline que tu verras arriver en officine dans 5 à 8 ans commence à s'écrire dans des data centers aujourd'hui.\n\nL'angle IA mérite attention. Les outils d'IA dans les essais cliniques, c'est déjà une réalité partielle : tri des données patients, détection des signaux d'efficacité intermédiaire, simulation de cohortes. Ce que SURPASS ambitionne, c'est de systématiser ces outils à l'échelle fédérale, avec des financements publics. Un modèle qui rappelle en miroir ce que l'Union Européenne tente avec l'European Health Data Space.\n\nLe point de friction ? La vitesse ne doit pas sacrifier la rigueur. Des essais accélérés par IA, c'est formidable si les biais algorithmiques sont contrôlés. L'histoire récente du développement de certains médicaments approuvés en procédure accélérée (et retirés ensuite) invite à la prudence.\n\nCe que ça change au comptoir demain matin ? Pas grand-chose d'immédiat. Mais dans 5 ans, quand une nouvelle molécule arrive avec un dossier clinique généré pour partie par IA, tu devras peut-être en lire les limites différemment. Se former à la lecture critique des études IA-augmentées, c'est la prochaine frontière de notre culture scientifique officinale."
+    },
+    {
+      "id": "actu_2026_10_01_3",
+      "date": "2026-10-01",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "Dépistage cancer du sein : l'INCa facilite la prise de RDV, le pharmacien peut faire le lien",
+      "resume": "L'INCa lance une campagne digitale jusqu'au 13 décembre 2026 et améliore jefaismondepistage.fr pour trouver un radiologue agréé et prendre RDV directement. Avec seulement 46,3% de participation en 2023-2024, chaque orientation compte. Et tu es en première ligne.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/nouvelles-missions/depistage/depistage-du-cancer-du-sein-comment-trouver-plus-facilement-un-rendez-vous",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_10_01_3.jpg",
+      "tags": [
+        "depistage",
+        "cancer-sein",
+        "prevention",
+        "inca",
+        "officine"
+      ],
+      "full_text": "C'est la bonne nouvelle du jour, et elle est concrète. L'INCa (Institut National du Cancer) frappe fort sur le dépistage du cancer du sein avec une campagne d'information digitale qui court du 24 septembre au 13 décembre 2026.\n\nLe vrai plus cette année : le site jefaismondepistage.fr s'est musclé. Un module permet désormais de rechercher un radiologue agréé à partir d'un simple code postal, et de prendre directement rendez-vous par téléphone. Plus d'excuse du 'je ne savais pas où appeler', plus de patient qui repart avec une vague intention.\n\nLes chiffres de départ sont parlants. En 2023-2024, seulement 46,3% des femmes concernées ont participé au dépistage organisé. Presque une femme éligible sur deux qui passe à travers les mailles. C'est le genre de chiffre qui devrait nous faire tous tiquer.\n\nEt toi dans tout ça ? Tu reçois chaque jour des femmes entre 50 et 74 ans au comptoir. Certaines viennent chercher leur renouvellement, d'autres une boite de Doliprane. En trente secondes, tu peux glisser : 'Vous avez reçu votre bon de dépistage mammo cette année ? Non ? Le site jefaismondepistage.fr vous trouve un radiologue agréé près de chez vous et vous permet de prendre RDV directement.' C'est court, c'est utile, c'est dans ton rôle de prévention.\n\nAucune rémunération spécifique n'est prévue pour cet acte d'orientation, on ne va pas se mentir. Mais c'est exactement le genre de mission qui construit la légitimité de l'officine comme acteur de premier recours, dont la Cour des comptes parle en ce moment dans son rapport sur le médecin traitant.\n\nCe que ça change au comptoir demain matin ? Colle le lien jefaismondepistage.fr sur ton bureau, brief ton équipe en deux minutes. Et si tu imprimes un petit mémo avec le QR code du site pour le poser en comptoir ce mois-ci, tu auras peut-être contribué à rattraper quelques-uns de ces 53,7% qui passent à côté."
+    },
+    {
+      "id": "actu_2026_10_01_2",
+      "date": "2026-10-01",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "Medicare, négo de prix : Trump signe une règle qui économise... presque rien",
+      "resume": "La règle finale américaine sur la négociation des prix Medicare pour les médicaments injectés en cabinet médical s'applique à seulement 4 laboratoires et économise 96% de moins que la proposition initiale. Un signal fort pour comprendre où en est le débat mondial sur la régulation du prix du médicament.",
+      "source": "STAT News",
+      "source_url": "https://www.statnews.com/2026/09/30/trump-final-globe-rule-will-save-medicare-much-less-money-on-drugs/?utm_campaign=rss",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/img_actu_2026_10_01_2.jpg",
+      "tags": [
+        "prix-medicament",
+        "regulation",
+        "medicare",
+        "leem",
+        "international"
+      ],
+      "full_text": "On surveille toujours ce qui se passe outre-Atlantique sur la régulation des prix du médicament. Et là, le résultat est saignant.\n\nL'administration Trump vient de publier sa règle finale sur le programme dit 'Global Benchmark' (GLOBE), censé aligner les prix Medicare des médicaments administrés en cabinet médical sur des références internationales. L'idée de départ : faire pression sur les industriels en comparant les prix américains à ceux payés dans d'autres pays développés, dont la France. Ambitieux sur le papier.\n\nLa réalité ? La règle finale ne s'applique qu'à quatre laboratoires. Et les économies attendues pour Medicare chutent de 96% par rapport à la proposition initiale. On est passé d'une réforme structurelle à un symbole politique.\n\nPourquoi c'est important pour toi, pharmacien français ? Plusieurs raisons. D'abord, le débat sur la 'référence internationale' des prix est exactement le modèle inversé de ce qu'on vit en France avec les accords-cadres LEEM-CEPS : là-bas, ils essaient de s'aligner vers le bas sur nos prix ; ici, on négocie pour que les industriels maintiennent leur accès marché. Ensuite, les industriels du médicament, qui viennent d'accueillir 'prudemment' leur nouvel accord-cadre en France, jouent sur les deux tableaux : pression réglementaire US allégée + maintien des prix européens négociés. Un équilibre délicat.\n\nEt le signal pour l'avenir ? Quand une réforme de régulation perd 96% de son ambition entre la proposition et la règle finale, ça dit quelque chose sur le rapport de forces entre les industriels et les régulateurs, même sous une administration qui avait pourtant promis de 's'attaquer aux Big Pharma'. En France, le CEPS n'a pas ce problème de façade : il négocie discrètement mais fermement, et les remises confidentielles font le vrai travail.\n\nCe que ça change au comptoir ? Rien d'immédiat. Mais quand ton patient t'explique que 'aux États-Unis les médicaments sont hors de prix, c'est le marché libre', tu as maintenant un exemple concret que même le régulateur américain n'arrive pas vraiment à changer la donne. Notre modèle conventionnel, avec tous ses défauts, reste une architecture solide."
+    },
+    {
+      "id": "actu_2026_10_01_1",
+      "date": "2026-10-01",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "1er octobre : ce qui change vraiment au comptoir aujourd'hui",
+      "resume": "Franchises à 140 EUR de plafond cumulé, SMR faible hors ALD non exonéré, protections menstruelles remboursables... Le 1er octobre 2026, c'est une vraie journée de bascule réglementaire. Fais le point avant d'ouvrir le rideau.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/politique-de-sante/deremboursements-et-protections-periodiques-ce-qui-change-au-1er-octobre",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_10_01_1.jpg",
+      "tags": [
+        "remboursement",
+        "franchise",
+        "ald",
+        "officine",
+        "protections-menstruelles"
+      ],
+      "full_text": "Le réveil ce matin, c'est pas comme d'hab. Plusieurs mesures entrent en vigueur aujourd'hui, simultanément, et tes patients vont avoir des questions. Autant être prêt.\n\nPremière bascule : les franchises médicales et la participation forfaitaire. Leurs plafonds annuels passent chacun de 50 à 70 EUR, soit 140 EUR de reste à charge maximal cumulé. Attention au raccourci que tu vas entendre toute la journée dans les médias : on ne passe pas 'le plafond des franchises de 100 à 140 EUR'. Ce sont DEUX plafonds distincts et cumulables. Le décret n° 2026-858 du 11 septembre 2026 est clair là-dessus. Le montant de la franchise reste 1 EUR par boite de médicament. Ce qui change, c'est le plafond annuel. Et rappel pour ceux qui auraient lu la presse généraliste : 0,50 EUR par boite, c'est enterré depuis mars 2024.\n\nDeuxième bascule : les médicaments à SMR faible prescrits en ALD ne sont plus exonérés du ticket modérateur. Jusqu'à hier, un patient ALD se voyait rembourser à 100% ses médicaments, même ceux à SMR faible. Fini. En application du décret n° 2026-285 du 16 avril 2026, ces médicaments retrouvent leur taux de remboursement de droit commun. Concrètement, ton patient ALD va sortir de la monnaie pour ses antivertigineux, ses veinotoniques ou ses mucolytics qui trainaient depuis dix ans sur l'ordo.\n\nTroisième bascule, plus sympa celle-là : le remboursement des protections menstruelles réutilisables. Culottes menstruelles et coupes menstruelles entrent dans la liste des produits pris en charge. Le téléservice Adac dans amelipro sera enrichi pour contrôler l'historique de délivrance, mais la fonctionnalité ne sera disponible qu'en novembre. En attendant, tu bosses sans filet de contrôle temps réel : sois rigoureux sur la traçabilité de ton côté.\n\nCe qui change au comptoir demain matin ? Anticipe les questions des patients ALD qui vont 'découvrir' qu'ils paient quelque chose sur leurs médicaments à SMR faible. Prépare une explication courte et bienveillante. Pour les franchises, reste factuel sur les montants exacts. Et pour les protections menstruelles, commence à former ton équipe sur les produits éligibles : le flux de demandes va monter."
+    },
+    {
+      "id": "lsv_2026_10_01",
+      "date": "2026-10-01",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? On opérait les yeux avec une aiguille à coudre",
+      "resume": "Pendant des siècles, les chirurgiens oculaires sillonnaient les marchés comme des saltimbanques. Leur outil : une simple aiguille. Leur technique : pousser la cataracte vers le fond de l'œil. Et ça marchait... environ une fois sur trois.",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_10_01.jpg",
+      "tags": [
+        "histoire",
+        "chirurgie",
+        "ophtalmologie",
+        "instrument",
+        "cataracte"
+      ],
+      "full_text": "Imagine-toi au XVIIe siècle, sur une place de marché à Lyon. Un homme s'installe, sort une petite aiguille effilée, et propose de te rendre la vue pour quelques sous. C'est le « coucher de la cataracte » - et ce bonhomme, on l'appelle un oculiste itinérant.\n\nLa technique, elle date de l'Antiquité indienne. Vers l'an 600 avant J.-C., le chirurgien Sushruta décrivait déjà la manœuvre dans ses textes. Le principe est brutal dans sa simplicité : on plante l'aiguille à travers le blanc de l'œil, et on pousse le cristallin opacifié vers le bas, dans la cavité vitreuse. La cataracte ne disparaît pas - elle tombe juste hors du champ visuel.\n\nLe twist ? Ces oculistes itinérants étaient souvent considérés comme des charlatans par la médecine officielle. Et pourtant, certains étaient d'une habileté redoutable. Jacques Daviel, chirurgien français, les observa pendant des années avant de claquer la porte de cette tradition en 1745. Il fut le premier à extraire chirurgicalement le cristallin plutôt que de le repousser. Une révolution. Sauf que son taux de succès initial était... aussi catastrophique que ses prédécesseurs.\n\nLe vrai problème, c'était l'infection. Sans antisepsie, sans antibiotiques, un œil opéré était un œil souvent perdu en deux semaines. Le coucher de cataracte avait un avantage inattendu : l'aiguille traversait une zone relativement avascularisée, limitant un peu le risque. Une barbarie qui avait sa logique.\n\nAujourd'hui, la chirurgie de la cataracte dure 15 minutes, se fait sous anesthésie locale, avec un laser de précision au micron. C'est l'intervention chirurgicale la plus pratiquée au monde - près de 800 000 par an en France. La prochaine fois qu'un patient te demande des gouttes post-op après sa cata, pense à l'aiguille à coudre sur la place du marché. Le chemin parcouru est proprement vertigineux."
+    },
+    {
       "id": "actu_2026_09_30_5",
       "date": "2026-09-30",
       "type": "actu",
@@ -18289,6 +18414,6 @@
       ]
     }
   ],
-  "count": 881,
-  "updated_at": "2026-09-30T04:07:21.597772+02:00"
+  "count": 887,
+  "updated_at": "2026-10-01T04:11:00.841571+02:00"
 }

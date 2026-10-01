@@ -1,0 +1,48 @@
+{
+  "generated_at": "2026-10-01T04:10:57.301652+02:00",
+  "run_date": "2026-10-01",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "1er octobre : ce qui change vraiment au comptoir aujourd'hui",
+      "resume": "Franchises à 140 EUR de plafond cumulé, SMR faible hors ALD non exonéré, protections menstruelles remboursables... Le 1er octobre 2026, c'est une vraie journée de bascule réglementaire. Fais le point avant d'ouvrir le rideau.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/politique-de-sante/deremboursements-et-protections-periodiques-ce-qui-change-au-1er-octobre",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "pharma_monde",
+      "titre": "Medicare, négo de prix : Trump signe une règle qui économise... presque rien",
+      "resume": "La règle finale américaine sur la négociation des prix Medicare pour les médicaments injectés en cabinet médical s'applique à seulement 4 laboratoires et économise 96% de moins que la proposition initiale. Un signal fort pour comprendre où en est le débat mondial sur la régulation du prix du médicament.",
+      "source": "STAT News",
+      "source_url": "https://www.statnews.com/2026/09/30/trump-final-globe-rule-will-save-medicare-much-less-money-on-drugs/?utm_campaign=rss",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "SMR faible en ALD : au 1er octobre, le ticket modérateur revient, et l'officine doit s'adapter",
+      "resume": "Fini le remboursement à 100 % pour les médicaments à SMR faible prescrits en ALD. Depuis le 1er octobre 2026, le ticket modérateur s'applique. Concrètement : davantage de reste à charge patient, des questions au comptoir, et un vrai enjeu de gestion des impayés tiers payant.",
+      "source": "Pharm'Actus · FSPF – Médicaments à SMR faible : fin de l'exonération du ticket modérateur pour les patients en ALD, Décret n° 2026-285 du 16 avril 2026 (référencé dans la source FSPF)",
+      "source_url": "https://www.fspf.fr/medicaments-a-smr-faible-fin-de-lexoneration-du-ticket-moderateur-pour-les-patients-en-ald/",
+      "confidence_score": 0.72,
+      "warnings": [
+        "Le volume exact de boîtes à SMR faible dispensées sur ordonnance ALD n'est pas publié par la CNAM : aucun calcul d'impact par officine n'a été tenté pour éviter une extrapolation non sourcée.",
+        "Le chiffre '4 % des dépenses remboursées de ville' pour les médicaments à SMR faible est issu d'une estimation CNAM 2024 publiée dans le rapport Charges et Produits : à vérifier avant publication sur la version définitive du rapport.",
+        "Le chiffre de 13,4 millions d'assurés en ALD est issu des données CNAM publiées en 2024 : vérifier s'il a été mis à jour depuis.",
+        "La liste précise des spécialités à SMR faible concernées par la mesure doit être vérifiée sur le site HAS (réévaluations en cours sur certaines classes).",
+        "L'USPO n'a pas publié à ce jour de prise de position spécifique sur cette mesure (absence vérifiée sur son site au 01/10/2026) : la règle d'équilibre syndical ne s'applique pas ici car la source est réglementaire (décret), pas une prise de position syndicale de la FSPF.",
+        "Le délai de contestation des rejets FSE (3 mois mentionné) est un usage conventionnel général : vérifier dans les conditions de la convention nationale si ce délai s'applique exactement à ce type de rejet.",
+        "4 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

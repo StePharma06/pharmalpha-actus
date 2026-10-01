@@ -31,7 +31,7 @@
      l'image n'est decouverte qu'apres execution du JS qui construit les cards
      (le <img> n'existe qu'a l'interieur d'un template literal JS, invisible au
      preload scanner) -> LCP non deterministe, cf. sprint perf 2026-07-27. -->
-<link rel="preload" as="image" href="assets/img_actu_2026_09_30_1.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="assets/img_actu_2026_10_01_1.jpg" fetchpriority="high">
 
 <!-- Space Grotesk — self-hosted WOFF2 (remplace Google Fonts, cf. mission perf/RGPD 2026-08-24) -->
 <link rel="preload" href="/assets/fonts/space-grotesk-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -1793,7 +1793,7 @@ body.pa-has-nav #actusHeader {
 </div>
 
 <!-- EXPRESSION DU JOUR (injectée par update_actus.py à chaque run) -->
-<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Anesthésie</h2><p class="expression-corps">Forgé en 1846 par Oliver Wendell Holmes à partir du grec <em>an-</em> (sans) et <em>aisthêsis</em> (sensation). Le terme fut proposé au médecin Morton qui venait de réussir la première opération sous éther. Avant ce mot, il n'existait pas de concept pour désigner l'absence totale de douleur - parce que cela n'existait pas.</p></aside>
+<aside class="expression-du-jour" aria-label="Expression du jour : étymologie"><div class="expression-label"><svg class="expression-label-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="7" cy="5" r="3.2" stroke="#4f46e5" stroke-width="1.3"/><path d="M5.2 8.2 C4.2 9.8 4.8 12 7 12 C9.2 12 9.8 9.8 8.8 8.2" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="7" y1="1" x2="7" y2="2.1" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="1.8" x2="8.7" y2="2.7" stroke="#4f46e5" stroke-width="1.3" stroke-linecap="round"/></svg>Expression du jour</div><h2 class="expression-titre">Épidémie (de rires, de grippe des réseaux…)</h2><p class="expression-corps">Du grec <em>epi</em> (sur) et <em>dêmos</em> (peuple). Une épidémie est littéralement ce qui « tombe sur le peuple » - une maladie qui se pose sur une population entière. Hippocrate utilisait déjà le terme au Ve siècle avant J.-C. pour décrire les maladies saisonnières à large diffusion.</p></aside>
 
 <!-- ESPACE PARTENAIRE 1 (entre Expression du jour et Aujourd'hui).
      Statique : reste visible meme si le JS ne s'execute pas. Le 2e emplacement
@@ -1818,12 +1818,12 @@ body.pa-has-nav #actusHeader {
 <div id="articles-container"></div>
 
 <!-- MARQUE_TENDANCE (injectee par le pipeline hebdo, remplacee quotidiennement) -->
-<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">24 sept. au 30 sept. 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie de septembre</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 60 300</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Azinc immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 69 600</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Croquette anti allergie chat</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 27 550</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Oscillo immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 69 150</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Amoxicilline fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 9 450</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Schéma digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 52 950</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Bouffées de chaleur et fatigue intense</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 9 150</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Calmosine digestion bébé</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 41 450</td></tr>
-<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Test covid</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 550</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Mieux-etre-sante.fr santé auditive et éq</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 4 800</td></tr>
+<div class="radar-wrap" style="max-width:1200px;margin:0 auto;padding:0 24px;"><section class="radar-pharmacien" aria-labelledby="rp-titre" style="margin:24px 0;padding:24px;background:#fff;border-radius:12px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.06);"><div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;"><span style="display:inline-block;background:#0ea5e9;color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em;">&#128225; Radar</span><h2 id="rp-titre" style="margin:0;font-size:17px;font-weight:700;color:#111118;">Radar pharmacien<span style="font-size:13px;font-weight:400;color:#6b7280;margin-left:8px;">25 sept. au 1 oct. 2026</span></h2></div><p style="margin:0 0 16px;font-size:12px;color:#9ca3af;">Requetes en forte hausse cette semaine en France &middot; Decouverte automatique &middot; Mise a jour quotidienne</p><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;min-width:400px;"><thead><tr style="border-bottom:2px solid #e5e7eb;background:#f9fafb;"><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;">Pathologie / Symptôme</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th><th style="padding:8px 14px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:left;border-left:2px solid #e5e7eb;">Soin & Bien-être</th><th style="padding:8px 10px;font-size:11px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.07em;text-align:right;">Tendance</th></tr></thead><tbody>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Fatigue psychologique</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 19 900</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Immunite diplomatique</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 361 650</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie ambroisie symptômes</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 18 150</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Oscillo immunite</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 192 750</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Allergie crevette</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 18 050</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Medicament pour la digestion</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 53 350</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Cure de vitamines fatigue</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 11 250</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Calmosine digestion bébé</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 47 750</td></tr>
+<tr style="border-bottom:1px solid #f3f4f6;"><td style="padding:10px 14px;font-size:14px;color:#374151;">Test covid</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 500</td><td style="padding:10px 14px;font-size:14px;color:#374151;border-left:2px solid #f3f4f6;">Douleur pelvienne grossesse</td><td style="padding:10px 10px;font-size:13px;text-align:right;color:#15803d;font-weight:700;white-space:nowrap;">↑ 350</td></tr>
 </tbody></table></div><p style="margin:10px 0 0;font-size:11px;color:#9ca3af;font-style:italic;">Indice de tendance : intensite de hausse Google Trends (non comparable a un volume absolu).</p><p style="margin:12px 0 0;font-size:11px;color:#9ca3af;text-align:right;">Source&nbsp;: Google Trends France (pytrends) &middot; 7 jours glissants</p></section></div>
 
 <!-- ARCHIVES CTA -->
@@ -1986,6 +1986,90 @@ body.pa-has-nav #actusHeader {
 // Mis a jour automatiquement par n8n chaque semaine
 // ============================================================
 const ARTICLES = [
+{
+    id: "actu_2026_10_01_1",
+    date: "2026-10-01",
+    type: "actu",
+    categorie: "pharma_france",
+    titre: "1er octobre : ce qui change vraiment au comptoir aujourd'hui",
+    resume: "Franchises à 140 EUR de plafond cumulé, SMR faible hors ALD non exonéré, protections menstruelles remboursables... Le 1er octobre 2026, c'est une vraie journée de bascule réglementaire. Fais le point avant d'ouvrir le rideau.",
+    source: "Le Quotidien du Pharmacien",
+    source_url: "http://www.lequotidiendupharmacien.fr/exercice-pro/politique-de-sante/deremboursements-et-protections-periodiques-ce-qui-change-au-1er-octobre",
+    tiktok_url: "",
+    badge_label: "Pharma France",
+    image_url: "assets/img_actu_2026_10_01_1.jpg",
+    tags: ["remboursement", "franchise", "ald", "officine", "protections-menstruelles"]
+  },
+{
+    id: "actu_2026_10_01_2",
+    date: "2026-10-01",
+    type: "actu",
+    categorie: "pharma_monde",
+    titre: "Medicare, négo de prix : Trump signe une règle qui économise... presque rien",
+    resume: "La règle finale américaine sur la négociation des prix Medicare pour les médicaments injectés en cabinet médical s'applique à seulement 4 laboratoires et économise 96% de moins que la proposition initiale. Un signal fort pour comprendre où en est le débat mondial sur la régulation du prix du médicament.",
+    source: "STAT News",
+    source_url: "https://www.statnews.com/2026/09/30/trump-final-globe-rule-will-save-medicare-much-less-money-on-drugs/?utm_campaign=rss",
+    tiktok_url: "",
+    badge_label: "Pharma Monde",
+    image_url: "assets/img_actu_2026_10_01_2.jpg",
+    tags: ["prix-medicament", "regulation", "medicare", "leem", "international"]
+  },
+{
+    id: "actu_2026_10_01_3",
+    date: "2026-10-01",
+    type: "actu",
+    categorie: "bonne_nouvelle",
+    titre: "Dépistage cancer du sein : l'INCa facilite la prise de RDV, le pharmacien peut faire le lien",
+    resume: "L'INCa lance une campagne digitale jusqu'au 13 décembre 2026 et améliore jefaismondepistage.fr pour trouver un radiologue agréé et prendre RDV directement. Avec seulement 46,3% de participation en 2023-2024, chaque orientation compte. Et tu es en première ligne.",
+    source: "Le Moniteur des Pharmacies",
+    source_url: "https://www.lemoniteurdespharmacies.fr/nouvelles-missions/depistage/depistage-du-cancer-du-sein-comment-trouver-plus-facilement-un-rendez-vous",
+    tiktok_url: "",
+    badge_label: "La bonne nouvelle",
+    image_url: "assets/img_actu_2026_10_01_3.jpg",
+    tags: ["depistage", "cancer-sein", "prevention", "inca", "officine"]
+  },
+{
+    id: "actu_2026_10_01_4",
+    date: "2026-10-01",
+    type: "actu",
+    categorie: "avenir_pharma",
+    titre: "IA et essais cliniques : les USA accélèrent, et ça va changer nos pipelines",
+    resume: "Le HHS américain annonce un programme d'accélération des essais cliniques par l'IA, sous l'impulsion d'ARPA-H. L'objectif affiché : rattraper la Chine sur la vitesse de recherche clinique. Ce que ça implique concrètement pour le pipeline des molécules qui arriveront un jour sur nos comptoirs.",
+    source: "STAT News",
+    source_url: "https://www.statnews.com/2026/09/30/hhs-arpa-h-clinical-trials-artificial-intelligence-surpass-program/?utm_campaign=rss",
+    tiktok_url: "",
+    badge_label: "L'avenir de la pharma",
+    image_url: "assets/img_actu_2026_10_01_4.jpg",
+    tags: ["ia", "essais-cliniques", "recherche", "innovation", "pipeline"]
+  },
+{
+    id: "actu_2026_10_01_5",
+    date: "2026-10-01",
+    type: "actu",
+    categorie: "business_officine",
+    titre: "SMR faible en ALD : au 1er octobre, le ticket modérateur revient, et l'officine doit s'adapter",
+    resume: "Fini le remboursement à 100 % pour les médicaments à SMR faible prescrits en ALD. Depuis le 1er octobre 2026, le ticket modérateur s'applique. Concrètement : davantage de reste à charge patient, des questions au comptoir, et un vrai enjeu de gestion des impayés tiers payant.",
+    source: "Pharm'Actus · FSPF – Médicaments à SMR faible : fin de l'exonération du ticket modérateur pour les patients en ALD, Décret n° 2026-285 du 16 avril 2026 (référencé dans la source FSPF)",
+    source_url: "https://www.fspf.fr/medicaments-a-smr-faible-fin-de-lexoneration-du-ticket-moderateur-pour-les-patients-en-ald/",
+    tiktok_url: "",
+    badge_label: "Business",
+    image_url: "assets/img_actu_2026_10_01_5.jpg",
+    tags: ["smr-faible", "ald", "tiers-payant", "remboursement"]
+  },
+{
+    id: "lsv_2026_10_01",
+    date: "2026-10-01",
+    type: "lsv",
+    categorie: "lsv",
+    titre: "Le saviez-vous ? On opérait les yeux avec une aiguille à coudre",
+    resume: "Pendant des siècles, les chirurgiens oculaires sillonnaient les marchés comme des saltimbanques. Leur outil : une simple aiguille. Leur technique : pousser la cataracte vers le fond de l'œil. Et ça marchait... environ une fois sur trois.",
+    source: "Pharm'Alpha",
+    source_url: "",
+    tiktok_url: "",
+    badge_label: "Le Saviez-Vous",
+    image_url: "assets/img_lsv_2026_10_01.jpg",
+    tags: ["histoire", "chirurgie", "ophtalmologie", "instrument", "cataracte"]
+  },
 {
     id: "actu_2026_09_30_1",
     date: "2026-09-30",
@@ -2601,90 +2685,6 @@ const ARTICLES = [
     badge_label: "La bonne nouvelle",
     image_url: "assets/img_actu_2026_09_22_3.jpg",
     tags: ["biosimilaire", "substitution", "arrete", "officine", "ansm"]
-  },
-{
-    id: "actu_2026_09_22_4",
-    date: "2026-09-22",
-    type: "actu",
-    categorie: "avenir_pharma",
-    titre: "Novadip leve 10,4 millions d'euros pour sa phase III en medecine regenerative",
-    resume: "La biotech belge Novadip vient de boucler un tour de table de 10,4 millions d'euros pour financer ses essais de phase III. La médecine régénérative entre dans une phase décisive, avec des implications potentielles pour la prise en charge de demain.",
-    source: "ActuLabo",
-    source_url: "https://www.actulabo.com/novadip-leve-104-me-pour-ses-essais-de-phase-iii/",
-    tiktok_url: "",
-    badge_label: "L'avenir de la pharma",
-    image_url: "assets/img_actu_2026_09_22_4.jpg",
-    tags: ["medecine-regenerative", "phase-iii", "biotech", "innovation", "ema"]
-  },
-{
-    id: "actu_2026_09_22_5",
-    date: "2026-09-22",
-    type: "actu",
-    categorie: "business_officine",
-    titre: "Réforme des IJ longue durée : ce que le décret du 15 octobre change pour tes patients ALD",
-    resume: "À partir du 15 octobre 2026, les arrêts longs sans exonération du ticket modérateur seront plafonnés à un an d'indemnisation, contre trois ans aujourd'hui. Un changement réglementaire qui va rebattre les cartes au comptoir, notamment sur la gestion des patients en ALD non exonéra...",
-    source: "Pharm'Actus · Caducee.net — Arrêts longs et ALD : qui restera indemnisé trois ans et qui passera à un an ?",
-    source_url: "https://www.caducee.net/actualite-medicale/16975/arrets-longs-et-ald-qui-restera-indemnise-trois-ans-et-qui-passera-a-un-an.html",
-    tiktok_url: "",
-    badge_label: "Business",
-    image_url: "assets/img_actu_2026_09_22_5.jpg",
-    tags: ["ald", "indemnites-journalieres", "reforme-sociale", "observance"]
-  },
-{
-    id: "lsv_2026_09_22",
-    date: "2026-09-22",
-    type: "lsv",
-    categorie: "lsv",
-    titre: "Le saviez-vous ? On traitait les fractures du bassin en soudant les patients au lit",
-    resume: "Avant les vis, les plaques et la chirurgie orthopédique moderne, une fracture du bassin était souvent une sentence de mort lente. La solution des médecins du XIXe siècle ? Immobiliser le patient des semaines entières dans des dispositifs de traction dignes d'un roman de Kafka. Et le pire, c'est que ça ne marchait presque jamais.",
-    source: "Pharm'Alpha",
-    source_url: "",
-    tiktok_url: "",
-    badge_label: "Le Saviez-Vous",
-    image_url: "assets/img_lsv_2026_09_22.jpg",
-    tags: ["histoire", "chirurgie", "orthopedie", "instrument", "decouverte"]
-  },
-{
-    id: "actu_2026_09_21_1",
-    date: "2026-09-21",
-    type: "actu",
-    categorie: "pharma_france",
-    titre: "Combien de pharmacies en 2030 ? Le maillage officinal se réinvente",
-    resume: "Le modèle économique des officines est en pleine mutation. Nouvelles missions, numérique, désertification : le réseau de demain ne ressemblera pas à celui d'aujourd'hui. Ce que ça change concrètement pour toi.",
-    source: "Le Moniteur des Pharmacies",
-    source_url: "https://www.lemoniteurdespharmacies.fr/profession/socio-professionnel/combien-de-pharmacies-restera-t-il-en-2030",
-    tiktok_url: "",
-    badge_label: "Pharma France",
-    image_url: "assets/stock/pharma_france_1.jpg",
-    tags: ["officine", "maillage", "missions", "remuneration", "numerique"]
-  },
-{
-    id: "actu_2026_09_21_2",
-    date: "2026-09-21",
-    type: "actu",
-    categorie: "pharma_monde",
-    titre: "Fusion ITM-Telix : les radiopharmaceutiques entrent dans la cour des grands",
-    resume: "ITM Isotope Technologies Munich et Telix Pharmaceuticals fusionnent pour créer un géant des radiopharmaceutiques. Un secteur en ébullition qui va changer la donne en oncologie. Ce que ça signifie pour les pharmaciens hospitaliers et officinaux de demain.",
-    source: "STAT News",
-    source_url: "https://www.statnews.com/2026/09/20/radiopharma-companies-itm-telix-merger/?utm_campaign=rss",
-    tiktok_url: "",
-    badge_label: "Pharma Monde",
-    image_url: "assets/img_actu_2026_09_21_2.jpg",
-    tags: ["radiopharmaceutique", "oncologie", "fusion", "fda", "ema"]
-  },
-{
-    id: "actu_2026_09_21_3",
-    date: "2026-09-21",
-    type: "actu",
-    categorie: "bonne_nouvelle",
-    titre: "Enflonsia arrive en officine : la bronchiolite a maintenant deux boucliers",
-    resume: "Clesrovimab (Enflonsia) débarque en pharmacie de ville pour la prévention du VRS chez le nourrisson. Aux côtés de Beyfortus, un deuxième anticorps monoclonal est désormais disponible. La saison VRS s'aborde avec un arsenal renforcé.",
-    source: "Le Moniteur des Pharmacies",
-    source_url: "https://www.lemoniteurdespharmacies.fr/therapeutique/medicaments/fiches-medicaments/enflonsia-la-nouvelle-option-dans-la-prevention-de-la-bronchiolite",
-    tiktok_url: "",
-    badge_label: "La bonne nouvelle",
-    image_url: "assets/img_actu_2026_09_21_3.jpg",
-    tags: ["vrs", "bronchiolite", "nourrisson", "anticorps", "officine"]
   }
 ];
 
