@@ -203,6 +203,34 @@ body {
   line-height: 1.5;
 }
 
+.byline {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 16px;
+}
+
+.byline-photo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.byline .article-meta {
+  margin: 0;
+  min-width: 0;
+}
+
+.byline .article-meta a {
+  color: var(--orange);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.byline-dates { display: block; }
+
 /* Preview banner */
 .preview-banner {
   background: #fef3c7;
@@ -448,13 +476,15 @@ body {
       <header class="article-header">
         <a class="article-category" href="/actus">Audit & Consulting Officine</a>
         <h1>Audit de gestion et de performance officinal : méthode et étapes 2026</h1>
-        <p class="article-meta">Par <a href="https://pharmalpha.fr/stephen-robert" style="color:var(--orange);text-decoration:none;font-weight:600">Stephen Robert, Docteur en Pharmacie</a>, fondateur de Pharm'Alpha. Publié le 13 mai 2026.</p>
+        <div class="byline">
+          <img class="byline-photo" src="/assets/stephen-portrait-byline.webp" width="48" height="48" alt="Portrait de Stephen Robert" decoding="async">
+          <p class="article-meta">Par <a href="https://pharmalpha.fr/stephen-robert" rel="author">Stephen Robert, Docteur en Pharmacie</a>, fondateur de Pharm'Alpha.
+            <span class="byline-dates">Publié le <time datetime="2026-05-13">13 mai 2026</time></span></p>
+        </div>
       </header>
 
       <div class="article-body">
         <h1>Audit de gestion et de performance officinal : méthode et étapes 2026</h1>
-        <p><em>Par Stephen Robert, Docteur en Pharmacie, fondateur de Pharm'Alpha. Mis à jour le 13 mai 2026.</em></p>
-        <hr />
         <h2>En bref</h2>
         <p>Un audit de gestion et de performance officinal, c'est une analyse complète de ta pharmacie : économique, clientèle, stocks, génériques, numérique, merchandising. Pas un audit pharmaceutique au sens de l'inspection. Un audit de gestion et de performance, externe et objectif. La méthode &quot;Audit 360 Pharm'Alpha&quot; couvre 10 axes sur données réelles (LGO et OSPHARM), avec un rapport Word de 4 à 60 pages et un plan d'action chiffré. Sur les pharmacies que j'ai auditées depuis début 2026, les gains potentiels vont de 25 000 à plus de 250 000 euros de CA sur 12 mois selon le profil. Le ROI est systématiquement positif dès la première année au vue du cout de l'audit : 1 800 € HT. La durée d'intervention : 2 à 3 jours de production active, sur données que tu fournis avant. La FAQ en bas de cet article répond aux questions les plus fréquentes.</p>
         <hr />

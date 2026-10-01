@@ -203,6 +203,34 @@ body {
   line-height: 1.5;
 }
 
+.byline {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 16px;
+}
+
+.byline-photo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.byline .article-meta {
+  margin: 0;
+  min-width: 0;
+}
+
+.byline .article-meta a {
+  color: var(--orange);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.byline-dates { display: block; }
+
 /* Preview banner */
 .preview-banner {
   background: #fef3c7;
@@ -448,12 +476,14 @@ body {
       <header class="article-header">
         <a class="article-category" href="/actus">Merchandising Officine</a>
         <h1>Merchandising pharmacie : planogramme, plan merch et zones OTC (guide complet 2026)</h1>
-        <p class="article-meta">Par <a href="https://pharmalpha.fr/stephen-robert" style="color:var(--orange);text-decoration:none;font-weight:600">Stephen Robert, Docteur en Pharmacie</a>, fondateur de Pharm'Alpha. Publié le 14 mai 2026.</p>
+        <div class="byline">
+          <img class="byline-photo" src="/assets/stephen-portrait-byline.webp" width="48" height="48" alt="Portrait de Stephen Robert" decoding="async">
+          <p class="article-meta">Par <a href="https://pharmalpha.fr/stephen-robert" rel="author">Stephen Robert, Docteur en Pharmacie</a>, fondateur de Pharm'Alpha.
+            <span class="byline-dates">Publié le <time datetime="2026-05-14">14 mai 2026</time> · Mis à jour le <time datetime="2026-07-28">28 juillet 2026</time></span></p>
+        </div>
       </header>
 
       <div class="article-body">
-        <p><em>Par Stephen Robert, Docteur en Pharmacie, fondateur de Pharm'Alpha. Mis à jour le 28 juillet 2026.</em></p>
-        <hr />
         <h2>En bref</h2>
         <p>Le merchandising pharmacie, aussi appelé merchandising officinal, c'est l'organisation délibérée de l'espace de vente pour maximiser le CA OTC et parapharmacie. 76% des décisions d'achat se prennent en magasin (POPAI 2012). Un rayon mal organisé te coûte de l'argent chaque jour, pas parfois. Les outils : le zoning (qui va où), le planogramme (quel produit à quel niveau), la méthode MLD Idéal Pharm'Alpha (quelle surface chaque produit mérite selon ses ventes réelles) et la Grille Pharm'Alpha 4 niveaux (comment répartir par étagère). L'investissement s'amortit en moins d'un an dans tous les cas que j'observe sur le terrain. Souvent en moins de 6 mois quand la pharmacie a des invendus dormants.</p>
         <hr />
