@@ -195,6 +195,32 @@ class StaticPages(unittest.TestCase):
             css = re.search(r"\.modal-overlay \{(.*?)\}", page_text(name), re.S).group(1)
             self.assertGreater(int(re.search(r"z-index:\s*(\d+)", css).group(1)), 900, name)
 
+    # Pages dont la fenetre de lecture porte AUSSI les lignes "Editeur et directeur de la publication" et "Signalez-la"
+    # (information complete a chaque exposition, point 143 des lignes directrices). Le hub s'y ajoute avec son prochain push.
+    FULL_WINDOW_PAGES = ("archives.html",)
+
+    def test_reading_window_carries_the_editor_and_report_lines_of_the_article_footer(self):
+        foot = ua._ai_disclosure("actu_1970_01_01_1", "", "", "")["footer_html"]
+        paras = [plain(p) for p in re.findall(r"<p>(.*?)</p>", foot, re.S)]
+        editor = next(p for p in paras if p.startswith("Éditeur et directeur de la publication"))
+        report = next(p for p in paras if p.startswith("Une erreur ou une imprécision"))
+        for name in self.FULL_WINDOW_PAGES:
+            m = re.search(r'<p id="modal-ia-info">.*?</p>\s*<p>(.*?)</p>\s*<p>(.*?)</p>\s*</div>', page_text(name), re.S)
+            self.assertIsNotNone(m, name)
+            self.assertEqual(plain(m.group(1)), editor, name)
+            self.assertEqual(plain(m.group(2)), report, name)
+
+    def test_archives_carry_the_banner_before_the_hero_and_a_label_right_above_the_list(self):
+        t = page_text("archives.html")
+        m = re.search(r'<div class="ia-banner" role="note">\s*<p>(.*?)</p>', t, re.S)
+        self.assertIsNotNone(m)
+        self.assertEqual(plain(m.group(1)), "Pharm'Actus est généré par une intelligence artificielle et publié automatiquement, sans relecture humaine préalable. "
+                                             "Éditeur et directeur de la publication : Stephen Robert. Une erreur ? Signalez-la.")
+        self.assertLess(t.index('class="ia-banner"'), t.index('<section class="hero">'))
+        m = re.search(r'<p class="ia-list-label">(.*?)</p>\s*<main class="articles-grid"', t, re.S)
+        self.assertIsNotNone(m)
+        self.assertEqual(plain(m.group(1)), "Textes générés par une intelligence artificielle et publiés automatiquement.")
+
     def test_the_information_paragraph_sits_above_the_share_row(self):
         for name in ("index.html", "archives.html"):
             t = page_text(name)
@@ -229,6 +255,33 @@ class StaticPages(unittest.TestCase):
             for block in re.findall(r'<p class="ia-label">.*?</p>|<p id="modal-ia-info">.*?</p>|ia-notice\\">.*?</p>', page_text(name), re.S):
                 self.assertNotIn(EM, block)
                 self.assertNotIn(EN, block)
+
+
+class OtherSurfaces(unittest.TestCase):
+    """Pages vendues aux annonceurs, preferences, feuille imprimable : textes de l'avis d'Emilie (8.6 et 8.7), sans signature humaine."""
+    IA = "Les textes sont générés par une intelligence artificielle et publiés automatiquement, sans relecture humaine préalable."
+
+    def test_advertiser_page_identifies_the_editor_and_says_the_texts_are_generated(self):
+        t = plain(page_text("annonceurs.html"))
+        self.assertIn("Un éditeur identifié. Pharm'Actus est édité par Stephen Robert, Docteur en Pharmacie. " + self.IA, t)
+        self.assertNotIn("Une signature professionnelle", t)
+
+    def test_media_kit_says_the_texts_are_generated(self):
+        self.assertIn("Pharm'Actus est édité par Stephen Robert, Docteur en Pharmacie (Poitiers), également fondateur de Pharm'Alpha. " + self.IA,
+                      plain(page_text("media-kit.html")))
+
+    def test_preferences_footer_says_edited_by_not_by(self):
+        t = plain(page_text("preferences.html"))
+        self.assertIn("· édité par Stephen Robert, Pharm'Alpha", t)
+        self.assertNotIn("· par Stephen", t)
+
+    def test_print_card_identifies_the_editor_and_does_not_describe_a_human_daily_work(self):
+        t = plain(page_text("print.html"))
+        self.assertIn("Docteur en Pharmacie, diplômé d'un Mastère Marketing & Management des Industries de Santé. Éditeur et directeur de la publication de Pharm'Actus.", t)
+        self.assertNotIn("Je décrypte", t)
+
+    def test_unserved_email_preview_does_not_bring_the_old_claim_back(self):
+        self.assertNotIn("par un pharmacien", page_text("email_template_preview.html"))
 
 
 if __name__ == "__main__":

@@ -407,6 +407,12 @@ a { color: inherit; text-decoration: none; }
 .pagination button.active { background: var(--orange); border-color: var(--orange); color: #fff; }
 .pagination button:disabled { opacity: 0.4; cursor: not-allowed; }
 
+/* === TRANSPARENCE IA (AI Act art. 50, avis Emilie 2026-10-02) : texte natif dans le HTML source, 14 px, contraste > 4,5:1, jamais replie === */
+.ia-banner { background: var(--orange-light); border-bottom: 1px solid #fed7aa; }
+.ia-banner p { max-width: 1200px; margin: 0 auto; padding: 12px 24px; font-size: 14px; line-height: 1.5; color: var(--text); }
+.ia-banner a { color: var(--text); font-weight: 700; text-decoration: underline; }
+.ia-list-label { max-width: 1200px; margin: 0 auto; padding: 10px 24px; font-size: 14px; font-weight: 700; line-height: 1.5; color: var(--text); }
+
 /* MODAL */
 .modal-overlay {
   position: fixed;
@@ -533,6 +539,11 @@ a { color: inherit; text-decoration: none; }
   </div>
 </header>
 
+<!-- TRANSPARENCE IA (AI Act art. 50) : bandeau ecrit en dur dans le HTML, jamais injecte en JavaScript -->
+<div class="ia-banner" role="note">
+  <p>Pharm'Actus est g&eacute;n&eacute;r&eacute; par une intelligence artificielle et publi&eacute; automatiquement, sans relecture humaine pr&eacute;alable. &Eacute;diteur et directeur de la publication&nbsp;: Stephen Robert. Une erreur&nbsp;? <a href="mailto:stephen@pharmalpha.fr?subject=Signalement%20Pharm'Actus">Signalez-la</a>.</p>
+</div>
+
 <section class="hero">
   <h1>Archives</h1>
   <p id="hero-subtitle">Toutes les actus publi&eacute;es sur Pharm'Actus. Recherche, filtres et tags th&eacute;matiques.</p>
@@ -582,6 +593,8 @@ a { color: inherit; text-decoration: none; }
   <button class="reset-filters hidden" id="reset-filters">R&eacute;initialiser les filtres</button>
 </div>
 
+<p class="ia-list-label">Textes g&eacute;n&eacute;r&eacute;s par une intelligence artificielle et publi&eacute;s automatiquement.</p>
+
 <main class="articles-grid" id="articles-grid"></main>
 
 <nav class="pagination" id="pagination"></nav>
@@ -602,6 +615,8 @@ a { color: inherit; text-decoration: none; }
     <div class="modal-footer modal-ia" id="modal-footer" role="note">
       <p class="modal-ia-source" id="modal-source"></p>
       <p id="modal-ia-info">Ce texte a été généré par une intelligence artificielle, puis publié automatiquement, sans relecture humaine préalable. Il peut contenir des erreurs : pour toute information réglementaire ou chiffrée, reportez-vous à la source officielle. Il ne constitue ni un avis médical ou pharmaceutique, ni un conseil juridique ou fiscal.</p>
+      <p>Éditeur et directeur de la publication : Stephen Robert, Docteur en Pharmacie (entreprise individuelle Pharm'Alpha, SIREN 910 877 356), <a href="mailto:stephen@pharmalpha.fr">stephen@pharmalpha.fr</a>, <a href="https://pharmalpha.fr/mentions-legales">mentions légales</a>.</p>
+      <p>Une erreur ou une imprécision ? Signalez-la à <a href="mailto:stephen@pharmalpha.fr">stephen@pharmalpha.fr</a>.</p>
     </div>
     <div class="modal-share" id="modal-share"></div>
   </div>
