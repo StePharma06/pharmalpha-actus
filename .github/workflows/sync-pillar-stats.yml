@@ -34,6 +34,13 @@ jobs:
         with:
           python-version: '3.12'
 
+      # Sans reseau ni ecriture : si le motif ou les garde-fous regressent, le job
+      # echoue ici, avant de toucher le pillar. Fichier nomme explicitement : un
+      # `discover` ramasserait aussi test_image_quality.py, qui importe anthropic
+      # et feedparser, non installes dans ce job.
+      - name: Test sync pattern
+        run: python scripts/test_sync_pillar_stats.py
+
       - name: Run pillar stats sync
         run: python scripts/sync_pillar_stats.py
 
