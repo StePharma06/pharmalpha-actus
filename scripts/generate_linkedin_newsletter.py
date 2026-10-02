@@ -93,37 +93,44 @@ def _strip_emdash(s):
     return s
 
 
-# Mention de transparence de la newsletter (reglement UE 2024/1689, art. 50). Texte valide par Emilie
-# (avis du 2026-10-02, bloc E), a reproduire MOT POUR MOT. Elle est imposee par le code
-# (_enforce_ai_notice) et non laissee au prompt : une consigne au modele derive d'une semaine sur
-# l'autre, alors que cette phrase doit etre strictement identique a chaque parution.
+# Mentions de transparence de la newsletter (reglement UE 2024/1689, art. 50). Textes valides par Emilie (avis du
+# 2026-10-02, bloc E, corrige en section 8.3 : ni "automatiquement" ni "sans relecture", Stephen lit le brouillon et le publie
+# lui-meme), a reproduire MOT POUR MOT. Elles sont imposees par le code (_enforce_ai_notice) et non laissees au prompt :
+# une consigne au modele derive d'une semaine sur l'autre, alors que ces phrases doivent etre strictement identiques a
+# chaque parution. Deux placements : la fin d'une newsletter longue peut ne pas etre lue (lignes directrices, point 143).
+AI_NOTICE_HEAD = "Texte généré par une intelligence artificielle à partir de flux de presse (titres et résumés)."
 AI_NOTICE = (
     "Cette newsletter est générée par une intelligence artificielle à partir de flux de presse "
-    "(titres et résumés) et publiée automatiquement. Éditeur : Stephen Robert, Docteur en Pharmacie. "
+    "(titres et résumés). Éditeur : Stephen Robert, Docteur en Pharmacie. "
     "Une erreur ? Écrivez à stephen@pharmalpha.fr."
 )
 
 
 def _enforce_ai_notice(markdown):
-    """Place AI_NOTICE, mot pour mot et une seule fois, en dernier paragraphe du dernier bloc de corps.
+    """Place les DEUX mentions de transparence, mot pour mot et chacune une seule fois : AI_NOTICE_HEAD en premiere ligne du
+    premier bloc de corps, AI_NOTICE en dernier paragraphe du dernier bloc.
 
-    La mention ecrite par le modele (ancienne, reformulee, absente ou en double) est remplacee, pas
-    corrigee. Leve RuntimeError si la garantie n'est pas tenue : pas de brouillon plutot qu'une
-    newsletter sans mention.
+    Ce que le modele a ecrit (ancienne mention, reformulation, doublon, oubli) est remplace, pas corrige. Leve RuntimeError si
+    la garantie n'est pas tenue : pas de brouillon plutot qu'une newsletter sans mention.
     """
     text = (markdown or "").rstrip()
-    text = "\n".join(ln for ln in text.split("\n") if ln.strip() != AI_NOTICE).replace(AI_NOTICE, "")
+    for notice in (AI_NOTICE_HEAD, AI_NOTICE):
+        text = "\n".join(ln for ln in text.split("\n") if ln.strip() != notice).replace(notice, "")
     lines = text.split("\n")
 
+    def fence_of(bloc_index):
+        opened = next((j for j in range(bloc_index + 1, len(lines)) if lines[j].strip().startswith("```")), None)
+        if opened is None:
+            return None, None
+        return opened, next((j for j in range(opened + 1, len(lines)) if lines[j].strip() == "```"), len(lines))
+
     blocs = [i for i, ln in enumerate(lines) if ln.strip().startswith("### Bloc")]
-    opened = None
-    if blocs:
-        opened = next((j for j in range(blocs[-1] + 1, len(lines)) if lines[j].strip().startswith("```")), None)
+
+    # FIN : dernier paragraphe du dernier bloc (on commence par la fin pour ne pas decaler les indices du debut)
+    opened, closed = fence_of(blocs[-1]) if blocs else (None, None)
     if opened is None:
-        # Structure inattendue : la mention reste garantie en fin de texte.
-        lines += ["", "", AI_NOTICE]
+        lines += ["", "", AI_NOTICE]  # structure inattendue : la mention reste garantie en fin de texte
     else:
-        closed = next((j for j in range(opened + 1, len(lines)) if lines[j].strip() == "```"), len(lines))
         body = lines[opened + 1:closed]
         while body and not body[-1].strip():
             body.pop()
@@ -131,16 +138,38 @@ def _enforce_ai_notice(markdown):
         while start > 0 and body[start - 1].strip():
             start -= 1
         last = " ".join(body[start:]).lower()
-        if "intelligence artificielle" in last or "stephen@pharmalpha.fr" in last:
+        if "intelligence artificielle" in last or "stephen@pharmalpha.fr" in last:  # la mention du modele
             body = body[:start]
             while body and not body[-1].strip():
                 body.pop()
         lines = lines[:opened + 1] + body + ["", "", AI_NOTICE] + lines[closed:]
 
+    # TETE : premiere ligne du premier bloc (le hook du modele reste juste dessous)
+    opened, _ = fence_of(blocs[0]) if blocs else (None, None)
+    if opened is None:
+        lines = [AI_NOTICE_HEAD, ""] + lines
+    else:
+        first = opened + 1
+        while first < len(lines) and not lines[first].strip():
+            first += 1
+        end = first
+        while end < len(lines) and lines[end].strip() and lines[end].strip() != "```":
+            end += 1
+        par = " ".join(lines[first:end]).lower()
+        if par.startswith(("texte généré", "texte genere", "cette newsletter est g")) or ("flux de presse" in par and "intelligence artificielle" in par):
+            first = end  # mention de tete ecrite par le modele : remplacee
+            while first < len(lines) and not lines[first].strip():
+                first += 1
+        lines = lines[:opened + 1] + [AI_NOTICE_HEAD, ""] + lines[first:]
+
     out = "\n".join(lines)
     parts = _extract_newsletter_parts(out)
-    if out.count(AI_NOTICE) != 1 or (parts is not None and AI_NOTICE not in parts["corps"]):
-        raise RuntimeError("Mention IA (bloc E) non garantie dans la newsletter LinkedIn : brouillon non envoyé.")
+    ok = out.count(AI_NOTICE) == 1 and out.count(AI_NOTICE_HEAD) == 1
+    if parts is not None:
+        paragraphs = [p.strip() for p in parts["corps"].split("\n\n") if p.strip() and not re.match(r"^\[(?:IMAGE \d+|PUB)\]$", p.strip())]
+        ok = ok and bool(paragraphs) and paragraphs[0] == AI_NOTICE_HEAD and AI_NOTICE in parts["corps"]
+    if not ok:
+        raise RuntimeError("Mentions IA (bloc E) non garanties dans la newsletter LinkedIn : brouillon non envoyé.")
     return out
 
 
@@ -331,7 +360,7 @@ def generate_newsletter_content(actus, lsv):
         if lsv_data else "(pas de LSV cette semaine)"
     )
 
-    prompt = f"""Tu es Stephen ROBERT, pharmacien consultant, redacteur en chef de Pharm'Actus, influenceur LinkedIn (24K+ abonnes, ~6200 abonnes a la newsletter LinkedIn Pharm'Actus).
+    prompt = f"""Tu es Stephen ROBERT, Docteur en Pharmacie et consultant, redacteur en chef de Pharm'Actus, influenceur LinkedIn (~6200 abonnes a la newsletter LinkedIn Pharm'Actus).
 
 Tu rediges la newsletter LinkedIn HEBDOMADAIRE "Pharm'Actus" qui sera publiee le LUNDI matin.
 
@@ -351,6 +380,7 @@ Caracteres Unicode bold (mathematical sans-serif bold) :
 - Phrases courtes, percutantes
 - Decontracte mais expert
 - Public : pharmaciens titulaires + adjoints + preparateurs
+- N'ecris jamais "en tant que pharmacien" (son titre est Docteur en Pharmacie), n'invente aucune experience d'officine ni anecdote vecue : Stephen n'exerce pas en officine.
 - Pas d'emoji 📰 🔗 dans les blocs (juste "Lire sur Pharm'Actus" et "Source")
 
 === REGLE LEGALE CRITIQUE (L.5122 - publicite Rx interdite) ===
@@ -424,6 +454,8 @@ Retourne le markdown complet ci-dessous. Le format est aere, SANS separateurs �
 ### Bloc 1 — Intro (à coller AVANT toute image)
 
 ```
+{AI_NOTICE_HEAD}
+
 [Hook puissant en Unicode bold, 1 phrase]
 
 [2-3 phrases courtes qui presentent les sujets de la semaine, mots cles en Unicode bold].
@@ -510,11 +542,11 @@ ACCENTS : reproduis TOUS les accents du gabarit tels quels. Le gras Unicode n'a 
 de lettres accentuees, les accents restent donc en caracteres normaux au milieu du
 gras : c'est voulu, ne les supprime jamais pour "uniformiser".
 
-IMPORTANT : le dernier paragraphe (mention de transparence sur l'intelligence artificielle)
-doit etre reproduit MOT POUR MOT, sans le reformuler ni le raccourcir, et rester le TOUT
-DERNIER paragraphe du dernier bloc. C'est une mention de conformite (reglement europeen
-sur l'IA, article 50). Sur LinkedIn le lien mailto ne fonctionne pas : l'adresse est donc
-ecrite en clair, c'est voulu.
+IMPORTANT : les deux mentions de transparence sur l'intelligence artificielle (la PREMIERE
+ligne du Bloc 1 et le DERNIER paragraphe du dernier bloc) doivent etre reproduites MOT POUR
+MOT, sans les reformuler ni les raccourcir, chacune UNE SEULE FOIS. Ce sont des mentions de
+conformite (reglement europeen sur l'IA, article 50). Sur LinkedIn le lien mailto ne
+fonctionne pas : l'adresse est donc ecrite en clair, c'est voulu.
 
 ## Hashtags (commentaire 1 min apres publication)
 
@@ -578,12 +610,13 @@ def generate_companion_post(actus):
     )
 
     n_autres = max(0, len(actus) - 3)
-    prompt = f"""Tu es Stephen ROBERT, pharmacien consultant + influenceur LinkedIn (24K abonnes, ~6200 abonnes newsletter Pharm'Actus).
+    prompt = f"""Tu es Stephen ROBERT, Docteur en Pharmacie et consultant + influenceur LinkedIn (~6200 abonnes newsletter Pharm'Actus).
 
 Tu rediges le POST LinkedIn FEED court qui ANNONCE la newsletter Pharm'Actus (PAS la newsletter elle-meme). Il est publie juste apres la newsletter pour driver trafic + abonnements.
 
 === STYLE STEPHEN (post feed) ===
 - Tutoiement, direct, percutant.
+- N'ecris jamais "en tant que pharmacien" (son titre est Docteur en Pharmacie), n'invente aucune experience d'officine ni anecdote vecue : Stephen n'exerce pas en officine.
 - AUCUN tiret cadratin (—) ni demi-cadratin. AUCUN hashtag dans le corps (ils iront en 1er commentaire).
 - Chiffres EXACTS issus des actus fournies, jamais inventes (respecte la regle finances officine : remises sur ACHATS pas sur CA, pas d'extrapolation).
 - Pas d'Unicode bold ici : texte normal, ce sont les emojis chiffres 1️⃣2️⃣3️⃣ qui structurent.
