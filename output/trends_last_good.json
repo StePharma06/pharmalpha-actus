@@ -1,58 +1,58 @@
 {
   "pathologies": [
     {
-      "display": "Fatigue psychologique",
-      "delta_label": "↑ 19 900",
+      "display": "Allergie à l'iode",
+      "delta_label": "↑ 18 750",
       "trend": "up"
     },
     {
-      "display": "Allergie ambroisie symptômes",
-      "delta_label": "↑ 18 150",
+      "display": "Allergie acariens symptômes",
+      "delta_label": "↑ 16 600",
       "trend": "up"
     },
     {
-      "display": "Allergie crevette",
-      "delta_label": "↑ 18 050",
+      "display": "Mal de tête tous les jours et fatigue",
+      "delta_label": "↑ 11 100",
       "trend": "up"
     },
     {
-      "display": "Cure de vitamines fatigue",
-      "delta_label": "↑ 11 250",
+      "display": "Urine foncée et grosse fatigue",
+      "delta_label": "↑ 9 500",
       "trend": "up"
     },
     {
       "display": "Test covid",
-      "delta_label": "↑ 500",
+      "delta_label": "↑ 600",
       "trend": "up"
     }
   ],
-  "pathologies_from": "2026-10-01",
+  "pathologies_from": "2026-10-02",
   "soins": [
     {
+      "display": "Immunite familiale",
+      "delta_label": "↑ 66 750",
+      "trend": "up"
+    },
+    {
+      "display": "Digestion pois chiche",
+      "delta_label": "↑ 48 700",
+      "trend": "up"
+    },
+    {
+      "display": "Quinoa digestion",
+      "delta_label": "↑ 46 050",
+      "trend": "up"
+    },
+    {
       "display": "Immunite diplomatique",
-      "delta_label": "↑ 361 650",
+      "delta_label": "↑ 28 100",
       "trend": "up"
     },
     {
-      "display": "Oscillo immunite",
-      "delta_label": "↑ 192 750",
-      "trend": "up"
-    },
-    {
-      "display": "Medicament pour la digestion",
-      "delta_label": "↑ 53 350",
-      "trend": "up"
-    },
-    {
-      "display": "Calmosine digestion bébé",
-      "delta_label": "↑ 47 750",
-      "trend": "up"
-    },
-    {
-      "display": "Douleur pelvienne grossesse",
-      "delta_label": "↑ 350",
+      "display": "Mieux-etre-sante.fr nutrition et énergie",
+      "delta_label": "↑ 11 350",
       "trend": "up"
     }
   ],
-  "soins_from": "2026-10-01"
+  "soins_from": "2026-10-02"
 }

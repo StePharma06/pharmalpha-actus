@@ -1,0 +1,69 @@
+{
+  "generated_at": "2026-10-02T04:07:06.269115+02:00",
+  "run_date": "2026-10-02",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "PLFSS 2027 : 100 millions sur les groupements, les pharmaciens en ligne de mire",
+      "resume": "Le gouvernement a presenté son PLFSS 2027 ce 1er octobre. Parmi les mesures : une contribution forcée de 100 millions d'euros imposée aux groupements de pharmaciens pour reduire le deficit de la branche maladie. La financiarisation de l'officine, ca a du bon... jusqu'à ce que Bercy s'en souvienne.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/plfss-2027-les-groupements-taxes-hauteur-de-100-millions-deuros",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "pharma_monde",
+      "titre": "Protections menstruelles remboursées : la France à la traîne ou pionnière ?",
+      "resume": "Au 1er octobre, la prise en charge des protections periodiques reutilisables entre en vigueur en France pour les moins de 26 ans et les beneficiaires de la C2S. Un signal fort sur le plan de sante publique, mais les autres pays europeens ont-ils déjà emprunté ce chemin ? Spoiler : oui, et certains vont plus loin.",
+      "source": "Pharmaceutical Journal / European Pharmaceutical Review",
+      "source_url": "https://www.fspf.fr/protections-periodiques-reutilisables/",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "Culottes menstruelles remboursées : l'officine devient le seul point de delivrance, et c'est une vraie opportunite",
+      "resume": "Depuis ce 1er octobre, les protections periodiques reutilisables sont prises en charge par l'Assurance Maladie pour les moins de 26 ans et les beneficiaires de la C2S. L'officine est le canal exclusif. C'est certes complexe à demarrer, mais c'est une nouvelle preuve de la valeur du reseau.",
+      "source": "USPO",
+      "source_url": "https://uspo.fr/protections-periodiques-reutilisables-fiche-pratique/",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "avenir_pharma",
+      "titre": "Des tumeurs sur puce : l'Institut Curie teste les therapies du futur en temps reel",
+      "resume": "Des chercheurs de l'Institut Curie ont developpé des puces microfluidiques capables d'accueillir des fragments de tumeurs humaines pour tester en temps reel les therapies les plus adaptées à chaque patiente. Une médecine de precision qui pourrait transformer la prise en charge du cancer du sein dans les prochaines années.",
+      "source": "France Info Sante",
+      "source_url": "https://www.franceinfo.fr/replay-radio/le-tour-de-la-question/des-tumeurs-implantees-dans-des-puces-pour-trouver-le-traitement-le-plus-efficace-contre-le-cancer-du-sein_8217697.html",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Franchises médicales à 140 € max : ce que le 1er octobre change vraiment pour l'officine",
+      "resume": "Depuis le 1er octobre 2026, les plafonds annuels de la franchise médicale et de la participation forfaitaire passent chacun de 50 à 70 euros. Un reste à charge patient qui grimpe - mais un impact sur la marge officinale qui, lui, est rigoureusement nul.",
+      "source": "Pharm'Actus · Le Monde Santé — Ce qui change pour votre budget en octobre, Décret n° 2026-858 du 11 septembre 2026, JO du 12 septembre 2026 (articles D.160-6 et D.160-10 CSS)",
+      "source_url": "https://www.lemonde.fr/argent/article/2026/10/01/budget-des-menages-ce-qui-change-le-1-octobre_6786470_1657007.html",
+      "confidence_score": 0.82,
+      "warnings": [
+        "Le décret n° 2026-858 est cité conformément à la règle interne Pharm'Actus sur les franchises (correction lecteur 15/09/2026) — vérifier la référence exacte au JO avant publication.",
+        "Le chiffre '8 millions de bénéficiaires C2S' est issu de la DREES 2025 citée de mémoire — à confirmer sur data.drees.solidarites-sante.gouv.fr avant publication.",
+        "Le calcul illustratif sur le nombre de mois pour atteindre le plafond est qualitatif et indicatif — aucun chiffre précis n'a été avancé pour éviter toute extrapolation non sourcée.",
+        "L'indexation 2028 à ~2% est une illustration pédagogique, pas une prévision : bien signalée comme telle dans le texte.",
+        "Aucune position syndicale (FSPF, USPO, UPGF) n'est mobilisée sur cet angle réglementaire pur — la règle d'équilibre syndical ne s'applique donc pas ici.",
+        "3 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

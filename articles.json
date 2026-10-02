@@ -1,6 +1,131 @@
 {
   "articles": [
     {
+      "id": "actu_2026_10_02_5",
+      "date": "2026-10-02",
+      "type": "actu",
+      "categorie": "business_officine",
+      "titre": "Franchises médicales à 140 € max : ce que le 1er octobre change vraiment pour l'officine",
+      "resume": "Depuis le 1er octobre 2026, les plafonds annuels de la franchise médicale et de la participation forfaitaire passent chacun de 50 à 70 euros. Un reste à charge patient qui grimpe - mais un impact sur la marge officinale qui, lui, est rigoureusement nul.",
+      "source": "Pharm'Actus · Le Monde Santé — Ce qui change pour votre budget en octobre, Décret n° 2026-858 du 11 septembre 2026, JO du 12 septembre 2026 (articles D.160-6 et D.160-10 CSS)",
+      "source_url": "https://www.lemonde.fr/argent/article/2026/10/01/budget-des-menages-ce-qui-change-le-1-octobre_6786470_1657007.html",
+      "tiktok_url": "",
+      "badge_label": "Business",
+      "image_url": "assets/img_actu_2026_10_02_5.jpg",
+      "tags": [
+        "franchise-medicale",
+        "reste-a-charge",
+        "budget-officine",
+        "plfss"
+      ],
+      "full_text": "Depuis le 1er octobre 2026, les plafonds annuels de la franchise médicale et de la participation forfaitaire passent chacun de 50 à 70 euros. Un reste à charge patient qui grimpe - mais un impact sur la marge officinale qui, lui, est rigoureusement nul.\n\n**Contexte**\n\nLe décret n° 2026-858 du 11 septembre 2026 (JO du 12 septembre 2026) relève de 50 à 70 euros le plafond annuel de la franchise médicale (article D.160-10 du code de la sécurité sociale) ET le plafond annuel de la participation forfaitaire sur les actes médicaux (article D.160-6), avec entrée en vigueur au 1er octobre 2026. Ces deux plafonds sont distincts et cumulables : un assuré peut donc théoriquement atteindre 140 euros de reste à charge maximal annuel cumulé, contre 100 euros auparavant. À ne pas confondre : la franchise médicale (1 euro par boîte de médicament, par acte paramédical, 4 euros par transport) reste inchangée dans ses montants unitaires depuis le décret n° 2024-114 du 16 février 2024, en vigueur au 31 mars 2024. Sont exclus de la franchise : les bénéficiaires de la C2S, les mineurs, les femmes enceintes au-delà du 6e mois, les victimes d'AT/MP. Par ailleurs, une indexation annuelle sur l'inflation est prévue à compter du 1er janvier 2028, ce qui rend ce plafond structurellement évolutif - une première.\n\n**Analyse business**\n\nCommençons par ce qui ne change PAS pour toi, titulaire : la franchise est une retenue opérée sur le remboursement de l'Assurance Maladie. Elle ne touche ni ta marge MDL, ni ton honoraire de dispensation. Ce que tu perçois reste strictement identique le 1er octobre 2026 au matin.\n\nCe qui change, c'est l'exposition de ton patient - et donc, indirectement, la pression comptoir.\n\n**Mécanique concrète :** un assuré sous traitement chronique lourd (par exemple une trithérapie antihypertensive associée à une statine) atteint son plafond de franchise médicale plus tôt dans l'année que la moyenne des assurés. Avec un plafond à 70 euros (+40 %), ce seuil est repoussé de quelques semaines. En clair : il paie la franchise 1 euro/boîte plus longtemps dans l'année.\n\n**L'enjeu comptoir :** Le Monde Santé (01/10/2026) souligne que cette hausse s'inscrit dans un paquet de mesures d'octobre (prix du gaz, arrêts maladie) qui accentuent la pression budget des ménages. Résultat ? Tu vas absorber des questions - et des tensions - sur les restes à charge. Prépare tes équipes à expliquer clairement : \"Ce n'est pas le pharmacien qui retient 1 euro de plus, c'est l'Assurance Maladie qui rembourse moins.\"\n\n**Population fragile à surveiller :** Les bénéficiaires de la C2S (environ 8 millions de personnes en France, source DREES 2025) restent exonérés de franchise. C'est un filet de sécurité, mais il exige que ton logiciel de tiers payant soit à jour pour tagger correctement ces bénéficiaires et ne pas générer d'avance de frais injustifiée.\n\n**Signal de fond :** L'indexation sur l'inflation prévue dès janvier 2028 transforme ce plafond en variable glissante. C'est structurellement nouveau dans la logique de la franchise depuis sa création en 2008. À horizon 3 ans, le plafond pourrait progresser au-delà de son niveau actuel sans nouveau décret, selon l'évolution de l'inflation. La maîtrise médicalisée se déplace progressivement vers le reste à charge patient - une tendance lourde qui redessinera la relation officine-patient sur le tiers payant.\n\n**Recommandations actionnables**\n\n1. **Brief équipe dès aujourd'hui** - Envoie un message interne ou tiens un point de 5 minutes en fin de journée : expliquer clairement à chaque préparateur et pharmacien adjoint que la franchise reste 1 euro/boîte, que c'est le plafond annuel qui monte, et que l'officine n'est PAS responsable de cette retenue. Objectif : zéro malentendu au comptoir.\n\n2. **Vérifier le paramétrage LGO C2S** - Confirme que ton logiciel de gestion officinale identifie correctement les bénéficiaires de la Complémentaire santé solidaire (exonérés de franchise) pour éviter toute retenue injustifiée qui génèrerait un litige ou une avance de frais non due.\n\n3. **Cibler les patients polypathologiques** - Les patients sous traitement chronique lourd (3 boîtes/mois et plus) sont ceux qui ressentiront le plus l'allongement de la période de franchise. Anticipe leurs questions avec une fiche simple : montant unitaire inchangé (1 €/boîte), plafond annuel relevé à 70 €, exonération C2S maintenue.\n\n4. **Surveiller l'avenant sur l'indexation 2028** - Note dans ton agenda professionnel : janvier 2028, premier réajustement automatique. Anticipe une mise à jour de communication patient et un contrôle LGO.\n\n5. **Opportunité services** - Le contexte de hausse du RAC patient est un argument légitime pour valoriser tes missions de BPM ou d'entretiens pharmaceutiques remboursés (AVK/AOD, asthme, anticancéreux oraux) : elles n'engendrent aucun reste à charge supplémentaire pour le patient, et renforcent la valeur perçue de l'officine.\n\n**Sources citees**\n\n- Le Monde Santé - Ce qui change pour votre budget en octobre\n- Décret n° 2026-858 du 11 septembre 2026, JO du 12 septembre 2026 (articles D.160-6 et D.160-10 CSS)\n- Décret n° 2024-114 du 16 février 2024 - montants unitaires franchise médicale"
+    },
+    {
+      "id": "actu_2026_10_02_4",
+      "date": "2026-10-02",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "Des tumeurs sur puce : l'Institut Curie teste les therapies du futur en temps reel",
+      "resume": "Des chercheurs de l'Institut Curie ont developpé des puces microfluidiques capables d'accueillir des fragments de tumeurs humaines pour tester en temps reel les therapies les plus adaptées à chaque patiente. Une médecine de precision qui pourrait transformer la prise en charge du cancer du sein dans les prochaines années.",
+      "source": "France Info Sante",
+      "source_url": "https://www.franceinfo.fr/replay-radio/le-tour-de-la-question/des-tumeurs-implantees-dans-des-puces-pour-trouver-le-traitement-le-plus-efficace-contre-le-cancer-du-sein_8217697.html",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_10_02_4.jpg",
+      "tags": [
+        "oncologie",
+        "recherche",
+        "medecine-precision",
+        "cancer",
+        "innovation"
+      ],
+      "full_text": "Imagine qu'on puisse tester le traitement le plus efficace pour ta patiente avant meme de lui prescrire. Pas sur un modèle animal. Pas sur une lignée cellulaire. Sur ses propres cellules tumorales. C'est exactement ce que des chercheurs de l'Institut Curie sont en train de mettre au point à Paris.\n\nLe principe : des fragments de tumeurs prélevés lors d'une biopsie sont implantés sur des puces microfluidiques, des structures miniaturisées qui reproduisent l'environnement tissulaire. On teste ensuite différents agents therapeutiques directement sur ces echantillons, en observant en temps reel les reponses cellulaires.\n\nL'objectif est clair : sortir de l'essai-erreur therapeutique. Aujourd'hui, la selection du protocole de chimiotherapie ou de thérapie ciblée repose sur des marqueurs moléculaires (HER2, RH, BRCA...) et des referentiels de pratique. Ces marqueurs sont précieux mais pas infaillibles. La puce tumorale vient en couche supplementaire de precision.\n\nPourquoi ca te concerne en tant que pharmacien ? Parce que si cette technologie se developpe et s'integre au parcours de soin, elle va modifier en profondeur les schemas therapeutiques des patientes atteintes de cancer du sein. Plus de personnalisation = moins de protocoles standardisés = plus de besoins en information et en suivi officinal. L'entretien pharmaceutique pour les patientes sous anticancereux oraux prend tout son sens dans ce contexte.\n\nOn est encore au stade de la recherche active, pas d'un dispositif deployé en routine. Mais l'Institut Curie figure parmi les centres de reference mondiale en oncologie mammaire : quand ils testent quelque chose, ca a tendance à sortir du labo.\n\nEt ce n'est pas un hasard si cette info émerge en ouverture d'Octobre Rose. Le cancer du sein touche plus de 60 000 nouvelles patientes par an en France. La médecine de précision, c'est l'avenir de leur prise en charge. Et l'officine sera un maillon essentiel de ce futur, notamment pour le suivi observance des traitements oraux.\n\nAu comptoir demain matin ? Si tu n'as pas encore mis en place les entretiens pharmaceutiques pour tes patientes sous anticancereux oraux, c'est le bon moment d'y penser. Ce type d'innovation renforce l'argument : ces patientes auront des traitements de plus en plus complexes et personnalisés. Elles ont besoin de toi."
+    },
+    {
+      "id": "actu_2026_10_02_3",
+      "date": "2026-10-02",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "Culottes menstruelles remboursées : l'officine devient le seul point de delivrance, et c'est une vraie opportunite",
+      "resume": "Depuis ce 1er octobre, les protections periodiques reutilisables sont prises en charge par l'Assurance Maladie pour les moins de 26 ans et les beneficiaires de la C2S. L'officine est le canal exclusif. C'est certes complexe à demarrer, mais c'est une nouvelle preuve de la valeur du reseau.",
+      "source": "USPO",
+      "source_url": "https://uspo.fr/protections-periodiques-reutilisables-fiche-pratique/",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_10_02_3.jpg",
+      "tags": [
+        "remboursement",
+        "officine",
+        "c2s",
+        "dispensation",
+        "protection-periodique"
+      ],
+      "full_text": "On va positiver. Parce que oui, les premiers jours vont etre compliqués : stocks limités, LGO pas tous à jour, patientes qui arrivent sans savoir exactement ce à quoi elles ont droit. Mais zoomons sur ce que ca signifie structurellement.\n\nDepuis le 1er octobre 2026, les personnes menstruées de moins de 26 ans et les beneficiaires de la Complementaire sante solidaire (C2S) peuvent bénéficier chaque année de la prise en charge de deux protections periodiques reutilisables, delivrées exclusivement en pharmacie d'officine. L'Assurance Maladie rembourse, l'officine delivre.\n\nPas Amazon. Pas Leclerc. L'officine.\n\nC'est la bonne nouvelle du jour. À une époque où chaque nouveau marche tend à échapper au reseau officinal au profit de la grande distribution ou du e-commerce, là, le legislateur a choisi le canal de sante. Avec traçabilité, conseil, et mission de dispensation.\n\nL'USPO a publié une fiche pratique detaillée pour accompagner les équipes. La FSPF aussi. Les deux syndicats sont alignés sur l'importance de la montée en charge progressive et sur la nécessité de bien identifier les references eligibles (attention : toutes les culottes menstruelles du marche ne seront pas forcement prises en charge, seules les references inscrites sur la liste seront remboursables).\n\nEt ce n'est pas anodin en termes de flux comptoir : les moins de 26 ans et les beneficiaires C2S représentent une patientèle jeune, souvent peu habituée à frequenter l'officine pour autre chose que l'urgence. C'est une porte d'entrée vers un conseil global, une fidélisation, un lien de soin.\n\nAu comptoir demain matin ? Affiche l'information clairement en zone d'attente, forme toute l'équipe sur les deux critères d'eligibilité, et prépare une reponse simple pour les patientes qui arrivent sans ordonnance (la delivrance n'en nécessite pas). C'est une nouvelle mission. Traite-la comme telle."
+    },
+    {
+      "id": "actu_2026_10_02_2",
+      "date": "2026-10-02",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "Protections menstruelles remboursées : la France à la traîne ou pionnière ?",
+      "resume": "Au 1er octobre, la prise en charge des protections periodiques reutilisables entre en vigueur en France pour les moins de 26 ans et les beneficiaires de la C2S. Un signal fort sur le plan de sante publique, mais les autres pays europeens ont-ils déjà emprunté ce chemin ? Spoiler : oui, et certains vont plus loin.",
+      "source": "Pharmaceutical Journal / European Pharmaceutical Review",
+      "source_url": "https://www.fspf.fr/protections-periodiques-reutilisables/",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/img_actu_2026_10_02_2.jpg",
+      "tags": [
+        "remboursement",
+        "c2s",
+        "officine",
+        "dispensation",
+        "sante-publique"
+      ],
+      "full_text": "La France officialise ce 1er octobre le remboursement des protections periodiques reutilisables. Cibles : les personnes menstruées de moins de 26 ans et les beneficiaires de la Complementaire sante solidaire (C2S). Deux protections par an, delivrées en officine, prises en charge par l'Assurance Maladie.\n\nMais qu'est-ce que ca donne à l'echelle europeenne et mondiale ? Tour d'horizon rapide de ce qui se fait ailleurs, parce que c'est exactement ce contexte international que tes patientes vont avoir lu sur leurs reseaux avant d'arriver au comptoir.\n\nL'Ecosse a été la premiere au monde à rendre les protections menstruelles gratuites et universelles en 2022, via le Period Products Act, sans conditions d'age ni de revenus. Le Royaume-Uni a un programme ciblé en milieu scolaire. L'Allemagne a abaissé la TVA sur ces produits à 7% en 2020, sans aller jusqu'au remboursement. L'Espagne a introduit la gratuité en lycee et université en 2023.\n\nLa France, avec son ciblage sante publique via l'officine, choisit donc un modèle hybride : remboursement conditionné, delivrance officinale, traçabilité via la carte Vitale. C'est moins universel que l'Ecosse, mais plus structuré que la majorité des pays voisins.\n\nPourquoi c'est important pour toi ? Parce que l'officine est le point d'entrée unique de ce dispositif. Pas la GMS, pas internet : l'officine. C'est une nouvelle mission de dispensation, et selon la FSPF et l'USPO qui ont toutes deux publié des fiches pratiques au 1er octobre, la mise en oeuvre terrain va prendre quelques semaines à se stabiliser (stocks, referencement, teleservices).\n\nLes premiers retours de terrain signalent des references encore incomplètes dans les logiciels de gestion et des stocks limités chez les grossistes. Normal pour un J+1 de dispositif inédit.\n\nAu comptoir demain matin ? Forme ton equipe sur les deux critères d'eligibilité (age et/ou C2S), verifie que tes references sont bien chargées dans ton LGO, et anticipe les questions : les patientes arrivent avec l'info mais rarement avec l'ordonnance. Bonne nouvelle : selon les textes en vigueur, la delivrance ne necessite pas d'ordonnance medicale."
+    },
+    {
+      "id": "actu_2026_10_02_1",
+      "date": "2026-10-02",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "PLFSS 2027 : 100 millions sur les groupements, les pharmaciens en ligne de mire",
+      "resume": "Le gouvernement a presenté son PLFSS 2027 ce 1er octobre. Parmi les mesures : une contribution forcée de 100 millions d'euros imposée aux groupements de pharmaciens pour reduire le deficit de la branche maladie. La financiarisation de l'officine, ca a du bon... jusqu'à ce que Bercy s'en souvienne.",
+      "source": "Le Quotidien du Pharmacien",
+      "source_url": "http://www.lequotidiendupharmacien.fr/exercice-pro/plfss-2027-les-groupements-taxes-hauteur-de-100-millions-deuros",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_10_02_1.jpg",
+      "tags": [
+        "lfss",
+        "groupements",
+        "financement",
+        "officine",
+        "plfss"
+      ],
+      "full_text": "Bercy a sorti le grand livre des comptes ce 1er octobre. Objectif : faire passer le deficit de la branche maladie de 12,5 à 7,8 milliards d'euros. Et pour y arriver, le gouvernement a decidé de taper là où ca consolide depuis quelques années : les groupements de pharmaciens.\n\nLa mesure, telle qu'elle figure dans le PLFSS 2027, prevoit une contribution de 100 millions d'euros mise à la charge des groupements. Pas des officines isolées. Pas du reseau diffus. Les structures capitalisées, celles dont les recents travaux de l'IGF et de l'IGAS sur la financiarisation avaient documenté la montée en puissance.\n\nCa te rappelle quelque chose ? Oui. C'est exactement l'argument que certains syndicats agitaient depuis 2024 : la concentration du reseau officinal dans des mains financières allait finir par attirer l'oeil du legislateur. Acte.\n\nPour autant, attention à ne pas confondre \"groupement\" au sens économique du terme et \"centrale d'achat\" ou \"cooperative\". La redaction du texte va etre scrutée ligne par ligne par les juristes des federations. La FSPF et l'USPO n'avaient pas encore rendu leur analyse complète à l'heure où ces lignes sont ecrites, mais nul doute que les deux syndicats representatifs vont se positionner rapidement.\n\nLe contexte global du PLFSS 2027 est celui d'un effort generalisé : retraités, assurés, et oui, professionnels de santé. Les pharmaciens ne sont pas les seuls visés, mais ils ne sont clairement pas épargnés non plus.\n\nCe qui est structurellement nouveau ici, c'est que la contribution vise la forme juridique et financière du regroupement, pas directement l'acte de dispensation. C'est une logique fiscale, pas conventionnelle. Ca change tout sur le plan des leviers de negociation syndicale.\n\nAu comptoir demain matin ? Si tu es titulaire affilié à un groupement, poses la question à ta tete de reseau : qui supporte la contribution, comment elle est repartie, et est-ce que ca va impacter tes conditions d'achat ou tes services mutualisés. Le diable sera dans les details du texte definitif après passage au Parlement."
+    },
+    {
+      "id": "lsv_2026_10_02",
+      "date": "2026-10-02",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? On traitait les crises de nerfs avec des odeurs de cadavre",
+      "resume": "Pendant des siècles, les médecins ont prescrit aux femmes « hystériques » d'inhaler des fumées de corne brûlée, de poils carbonisés ou carrément de plumes roussies. La théorie ? L'utérus fuirait les mauvaises odeurs et retrouverait sa place. Aussi absurde que ça en a l'air.",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_10_02.jpg",
+      "tags": [
+        "histoire",
+        "psychiatrie",
+        "diagnostic",
+        "pharmacopee",
+        "femmes"
+      ],
+      "full_text": "Paris, XVIIe siècle. Une femme s'effondre, crise de larmes, convulsions, paralysie partielle. Le médecin arrive, sort son arsenal thérapeutique... et fait brûler une corne de cerf sous le nez de la patiente.\n\nBienvenue dans l'ère du traitement par fumigations. La théorie médicale dominante depuis Hippocrate - soit depuis 400 ans avant J.-C. - posait que l'utérus était un organe mobile, capable de « voyager » dans le corps. Quand il remontait vers le cerveau ou le cœur, il provoquait ce qu'on appelait l'hystérie, du grec hystera, « utérus ».\n\nLe remède logique ? Faire fuir l'utérus vers le bas avec des odeurs repoussantes au niveau du visage - corne brûlée, soufre, poils roussis, voire excréments séchés - et attirer vers le bas avec des parfums agréables placés près du bas-ventre. Lavande, musc, rose. Un vrai jeu de chasse-croisé olfactif.\n\nMais voilà le twist : ce traitement a traversé l'Antiquité, le Moyen Âge et la Renaissance pratiquement intact. Galien le prescrivait. Ambroise Paré aussi. Et même au XVIIIe siècle, certains apothicaires vendaient encore des « sels volatils » à inhaler en cas de crise - ancêtres directs de nos sels d'ammoniaque.\n\nL'hystérie féminine n'a officiellement disparu du DSM qu'en 1980. Trois millénaires de diagnostic inventé de toutes pièces, basé sur une anatomie imaginaire.\n\nCe qui est fascinant, c'est que derrière ces délires thérapeutiques se cachaient probablement des crises d'épilepsie, des attaques de panique, des conversions dissociatives. Des pathologies réelles, mal comprises, traitées avec des fumées de cadavre.\n\nAujourd'hui, quand un patient te demande pourquoi son anxiolytique met deux semaines à agir, rappelle-toi : on a mis deux mille ans à comprendre que le problème n'était pas dans l'utérus."
+    },
+    {
       "id": "actu_2026_10_01_5",
       "date": "2026-10-01",
       "type": "actu",
@@ -18414,6 +18539,6 @@
       ]
     }
   ],
-  "count": 887,
-  "updated_at": "2026-10-01T04:11:00.841571+02:00"
+  "count": 893,
+  "updated_at": "2026-10-02T04:07:09.843499+02:00"
 }
