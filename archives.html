@@ -452,6 +452,14 @@ a { color: inherit; text-decoration: none; }
 .modal-text p { margin-bottom: 14px; }
 .modal-footer { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--border-light); font-size: 13px; }
 .modal-footer a { color: var(--orange); font-weight: 600; }
+/* Transparence IA dans la fenetre de lecture (AI Act art. 50, avis Emilie 2026-10-02, 8.5 C1) :
+   texte natif, 14 px au moins, contraste > 4,5:1, jamais replie. */
+.modal-content .ia-label { font-size: 15px; font-weight: 700; line-height: 1.4; color: var(--text); margin: -4px 0 16px; }
+.modal-footer.modal-ia { font-size: 14px; line-height: 1.55; color: var(--text); }
+.modal-footer.modal-ia p { margin: 0 0 8px; }
+.modal-footer.modal-ia p:last-child { margin-bottom: 0; }
+.modal-footer.modal-ia .modal-ia-source:empty { display: none; }
+.modal-footer.modal-ia a { color: var(--text); font-weight: 700; text-decoration: underline; }
 .modal-tags { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 6px; }
 .modal-tags .mini-tag { font-size: 11px; padding: 3px 10px; background: var(--bg-alt); border-radius: 100px; color: var(--text-secondary); border: 1px solid var(--border-light); cursor: pointer; }
 .modal-tags .mini-tag:hover { border-color: var(--orange); color: var(--orange); }
@@ -511,6 +519,7 @@ a { color: inherit; text-decoration: none; }
 </script>
 
 <script defer src="assets/site-nav.js"></script>
+<script defer src="assets/ia-disclosure.js"></script>
 </head>
 <body>
 
@@ -586,10 +595,14 @@ a { color: inherit; text-decoration: none; }
       <span class="modal-date" id="modal-date"></span>
     </div>
     <h2 id="modal-title"></h2>
+    <p class="ia-label"><strong>Texte généré par une intelligence artificielle et publié automatiquement.</strong></p>
     <div id="modal-img-wrap"></div>
     <div class="modal-text" id="modal-text"></div>
     <div class="modal-tags" id="modal-tags"></div>
-    <div class="modal-footer" id="modal-footer"></div>
+    <div class="modal-footer modal-ia" id="modal-footer" role="note">
+      <p class="modal-ia-source" id="modal-source"></p>
+      <p id="modal-ia-info">Ce texte a été généré par une intelligence artificielle, puis publié automatiquement, sans relecture humaine préalable. Il peut contenir des erreurs : pour toute information réglementaire ou chiffrée, reportez-vous à la source officielle. Il ne constitue ni un avis médical ou pharmaceutique, ni un conseil juridique ou fiscal.</p>
+    </div>
     <div class="modal-share" id="modal-share"></div>
   </div>
 </div>
@@ -826,10 +839,11 @@ function openModal(id) {
     tagsDiv.innerHTML = '';
   }
 
-  const footer = document.getElementById('modal-footer');
-  footer.innerHTML = a.source_url
-    ? `Source : <a href="${a.source_url}" target="_blank" rel="noopener">${a.source} &rarr;</a>`
-    : `Source : ${a.source || ''}`;
+  // Transparence IA (avis Emilie 2026-10-02, 8.5 C1) : voir assets/ia-disclosure.js (miroir de update_actus._ai_disclosure).
+  // Si le script n'est pas charge, le paragraphe generique ecrit dans le HTML reste affiche : il est toujours exact.
+  if (window.iaDisclosure) {
+    window.iaDisclosure.render(a, document.getElementById('modal-source'), document.getElementById('modal-ia-info'));
+  }
 
   // Boutons de partage
   const articleUrl = 'https://actus.pharmalpha.fr/articles/' + a.id + '.html';

@@ -1014,19 +1014,28 @@ body.pa-has-nav #actusHeader {
   flex-wrap: wrap;
   gap: 12px;
 }
-.modal-source {
-  font-size: 11px;
-  color: var(--text-dim);
+/* Transparence IA dans la fenetre de lecture (AI Act art. 50, avis Emilie 2026-10-02, 8.5 C1) :
+   texte natif, 14 px au moins, contraste > 4,5:1, jamais replie. */
+.modal-body .ia-label {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--text);
+  margin: -4px 0 16px;
 }
-.modal-source a {
-  font-size: 11px;
-  color: var(--text-dim);
-  text-decoration: none;
-  font-weight: 400;
+.modal-ia {
+  flex: 1 1 100%;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text);
 }
-.modal-source a:hover { text-decoration: underline; color: var(--text-muted); }
+.modal-ia p { margin: 0 0 8px; }
+.modal-ia p:last-child { margin-bottom: 0; }
+.modal-ia .modal-ia-source:empty { display: none; }
+.modal-ia a { color: var(--text); font-weight: 700; text-decoration: underline; }
 .modal-share-row {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
 }
 .modal-share-row a, .modal-share-row button {
@@ -1554,6 +1563,7 @@ body.pa-has-nav #actusHeader {
 }
 </style>
 <script defer src="assets/site-nav.js"></script>
+<script defer src="assets/ia-disclosure.js"></script>
 <script>
 (function(){
   // Garde le header Pharm'Actus collé juste SOUS la nav principale fixe (site-nav.js).
@@ -1926,11 +1936,15 @@ body.pa-has-nav #actusHeader {
         <span class="card-date" id="modal-date"></span>
       </div>
       <h2 id="modal-title"></h2>
+      <p class="ia-label"><strong>Texte généré par une intelligence artificielle et publié automatiquement.</strong></p>
       <div id="modal-img-wrap"></div>
       <div class="modal-text" id="modal-text"></div>
     </div>
     <div class="modal-footer">
-      <div class="modal-source" id="modal-source"></div>
+      <div class="modal-ia" role="note">
+        <p class="modal-ia-source" id="modal-source"></p>
+        <p id="modal-ia-info">Ce texte a été généré par une intelligence artificielle, puis publié automatiquement, sans relecture humaine préalable. Il peut contenir des erreurs : pour toute information réglementaire ou chiffrée, reportez-vous à la source officielle. Il ne constitue ni un avis médical ou pharmaceutique, ni un conseil juridique ou fiscal.</p>
+      </div>
       <div class="modal-share-row" id="modal-share"></div>
     </div>
   </div>
@@ -2962,11 +2976,14 @@ function openModal(id) {
     imgWrap.innerHTML = '<div class="modal-visual cat-' + cat + '">' + (CAT_ICONS[cat] || CAT_ICONS.pharma_france) + '</div>';
   }
 
-  // Source
-  const src = document.getElementById('modal-source');
-  src.innerHTML = a.source_url
-    ? `Source : <a href="${a.source_url}" target="_blank" onclick="track('select_content',{content_type:'source',item_id:'${a.id}',source:'${(a.source||'').replace(/'/g,'')}'})">${a.source} &rarr;</a>`
-    : `Source : ${a.source}`;
+  // Transparence IA (avis Emilie 2026-10-02, 8.5 C1) : ligne de source et paragraphe d'information de la variante de l'article,
+  // calcules par assets/ia-disclosure.js (miroir de update_actus._ai_disclosure). Si le script n'est pas charge, le paragraphe
+  // generique ecrit dans le HTML reste affiche : il est toujours exact.
+  if (window.iaDisclosure) {
+    window.iaDisclosure.render(a, document.getElementById('modal-source'), document.getElementById('modal-ia-info'), function () {
+      track('select_content', { content_type: 'source', item_id: a.id, source: (a.source || '').replace(/'/g, '') });
+    });
+  }
 
   // Share buttons — use individual article page for proper og:tags
   const articleUrl = 'https://actus.pharmalpha.fr/articles/' + a.id + '.html';

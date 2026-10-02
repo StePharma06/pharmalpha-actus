@@ -74,6 +74,13 @@
   .print-meta { text-align: right; font-size: 8.5pt; color: #666; line-height: 1.5; }
   .print-meta .date-label { font-size: 11pt; font-weight: 700; color: #1a1a1a; }
 
+  /* --- Transparence IA (AI Act art. 50, avis Emilie 2026-10-02, point 10) : noir sur blanc, 10 pt, jamais masque a l'impression --- */
+  .ia-notice {
+    color: #000; background: #fff; border: 1px solid #000; border-radius: 6px;
+    padding: 5px 10px; margin-bottom: 12px; font-size: 10pt; line-height: 1.35;
+    break-inside: avoid; page-break-inside: avoid;
+  }
+
   /* --- Expression du jour (tout en haut, bulle indigo) --- */
   .expr-box {
     background: var(--indigo-light);
@@ -185,12 +192,21 @@
 
   /* === PRINT MEDIA === */
   @media print {
-    @page { size: A4 portrait; margin: 8mm 9mm; }
+    @page { size: A4 portrait; margin: 6mm 9mm; }
     body { background: #fff; font-size: 10pt; }
     .header, .print-tip { display: none !important; }
     .page-wrapper { max-width: 100%; margin: 0; border-radius: 0; box-shadow: none; overflow: visible; }
     .content { padding: 0; }
-    .brand-strip { margin: -8mm -9mm 12px; padding: 12px 0; }
+    /* Espacement compacte a l'impression : la mention IA (10 pt, 3 lignes) a fait passer la feuille de 1 a 2 pages A4,
+       alors qu'elle tenait a moins de 10 px pres. Marge retrouvee : environ 50 px. L'ecran n'est pas touche. */
+    .brand-strip { margin: -6mm -9mm 8px; padding: 9px 0; }
+    .print-header { padding-bottom: 6px; margin-bottom: 8px; }
+    .ia-notice { margin-bottom: 8px; padding: 4px 9px; }
+    .expr-box { padding: 8px 12px; margin-bottom: 8px; }
+    .articles-grid { gap: 8px; margin-bottom: 8px; }
+    .article-card { padding: 8px 10px; }
+    .lsv-box { padding: 8px 12px; margin-bottom: 10px; }
+    .signature-card { padding: 10px 16px; }
     a { color: inherit; text-decoration: none; }
     * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color-adjust: exact !important; }
   }
@@ -274,6 +290,9 @@ function buildHtml(articles, lsv, expr, displayDate) {
   html += "<img src=\"assets/logo_pharmactus.png\" alt=\"Pharm'Actus\" class=\"print-logo-actus\">";
   html += "<div class=\"print-meta\"><div class=\"date-label\">"+esc(fmtDate(displayDate))+"</div><div>pharmalpha.fr/actus</div></div>";
   html += "</div>";
+
+  // Transparence IA : juste sous l'en-tete, avant l'expression du jour (avis Emilie 2026-10-02, point 10)
+  html += "<p class=\"ia-notice\">Pharm'Actus est g&eacute;n&eacute;r&eacute; par une intelligence artificielle et publi&eacute; automatiquement, sans relecture humaine pr&eacute;alable. &Eacute;diteur et directeur de la publication&nbsp;: Stephen Robert. Une erreur&nbsp;? &Eacute;crivez &agrave; stephen@pharmalpha.fr.</p>";
 
   // Expression du jour TOUT EN HAUT
   var hasExpr = !!(expr && expr.expression);
