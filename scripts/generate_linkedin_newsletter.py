@@ -93,6 +93,57 @@ def _strip_emdash(s):
     return s
 
 
+# Mention de transparence de la newsletter (reglement UE 2024/1689, art. 50). Texte valide par Emilie
+# (avis du 2026-10-02, bloc E), a reproduire MOT POUR MOT. Elle est imposee par le code
+# (_enforce_ai_notice) et non laissee au prompt : une consigne au modele derive d'une semaine sur
+# l'autre, alors que cette phrase doit etre strictement identique a chaque parution.
+AI_NOTICE = (
+    "Cette newsletter est générée par une intelligence artificielle à partir de flux de presse "
+    "(titres et résumés) et publiée automatiquement. Éditeur : Stephen Robert, Docteur en Pharmacie. "
+    "Une erreur ? Écrivez à stephen@pharmalpha.fr."
+)
+
+
+def _enforce_ai_notice(markdown):
+    """Place AI_NOTICE, mot pour mot et une seule fois, en dernier paragraphe du dernier bloc de corps.
+
+    La mention ecrite par le modele (ancienne, reformulee, absente ou en double) est remplacee, pas
+    corrigee. Leve RuntimeError si la garantie n'est pas tenue : pas de brouillon plutot qu'une
+    newsletter sans mention.
+    """
+    text = (markdown or "").rstrip()
+    text = "\n".join(ln for ln in text.split("\n") if ln.strip() != AI_NOTICE).replace(AI_NOTICE, "")
+    lines = text.split("\n")
+
+    blocs = [i for i, ln in enumerate(lines) if ln.strip().startswith("### Bloc")]
+    opened = None
+    if blocs:
+        opened = next((j for j in range(blocs[-1] + 1, len(lines)) if lines[j].strip().startswith("```")), None)
+    if opened is None:
+        # Structure inattendue : la mention reste garantie en fin de texte.
+        lines += ["", "", AI_NOTICE]
+    else:
+        closed = next((j for j in range(opened + 1, len(lines)) if lines[j].strip() == "```"), len(lines))
+        body = lines[opened + 1:closed]
+        while body and not body[-1].strip():
+            body.pop()
+        start = len(body)
+        while start > 0 and body[start - 1].strip():
+            start -= 1
+        last = " ".join(body[start:]).lower()
+        if "intelligence artificielle" in last or "stephen@pharmalpha.fr" in last:
+            body = body[:start]
+            while body and not body[-1].strip():
+                body.pop()
+        lines = lines[:opened + 1] + body + ["", "", AI_NOTICE] + lines[closed:]
+
+    out = "\n".join(lines)
+    parts = _extract_newsletter_parts(out)
+    if out.count(AI_NOTICE) != 1 or (parts is not None and AI_NOTICE not in parts["corps"]):
+        raise RuntimeError("Mention IA (bloc E) non garantie dans la newsletter LinkedIn : brouillon non envoyé.")
+    return out
+
+
 def format_date_range_fr(start, end):
     """Formate une plage de dates en français: 'X au Y Mois YYYY' ou 'X Mois au Y Mois YYYY'."""
     if start.month == end.month:
@@ -452,17 +503,18 @@ Pour ne rien manquer chaque jour, abonne-toi à 𝗣𝗵𝗮𝗿𝗺'𝗔𝗰�
 Réponds en commentaire, je lis tout.
 
 
-Pharm'Actus est produit quotidiennement avec l'assistance d'outils d'intelligence artificielle, sous la responsabilité éditoriale de Stephen Robert, Docteur en Pharmacie. Une erreur ou une imprécision vous saute aux yeux ? Signalez-la à stephen@pharmalpha.fr, elle sera corrigée.
+{AI_NOTICE}
 ```
 
 ACCENTS : reproduis TOUS les accents du gabarit tels quels. Le gras Unicode n'a pas
 de lettres accentuees, les accents restent donc en caracteres normaux au milieu du
 gras : c'est voulu, ne les supprime jamais pour "uniformiser".
 
-IMPORTANT : le dernier paragraphe (mention IA + responsabilite editoriale) doit etre
-reproduit MOT POUR MOT, sans le reformuler ni le raccourcir. C'est une mention de
-conformite (reglement europeen sur l'IA, article 50). Sur LinkedIn le lien mailto ne
-fonctionne pas : l'adresse est donc ecrite en clair, c'est voulu.
+IMPORTANT : le dernier paragraphe (mention de transparence sur l'intelligence artificielle)
+doit etre reproduit MOT POUR MOT, sans le reformuler ni le raccourcir, et rester le TOUT
+DERNIER paragraphe du dernier bloc. C'est une mention de conformite (reglement europeen
+sur l'IA, article 50). Sur LinkedIn le lien mailto ne fonctionne pas : l'adresse est donc
+ecrite en clair, c'est voulu.
 
 ## Hashtags (commentaire 1 min apres publication)
 
@@ -502,7 +554,7 @@ Retourne UNIQUEMENT le markdown complet, rien d'autre."""
 
     text_blocks = [b.text for b in response.content if getattr(b, "type", None) == "text"]
     raw = ("\n".join(text_blocks)).strip() if text_blocks else response.content[0].text.strip()
-    return _strip_emdash(raw)
+    return _enforce_ai_notice(_strip_emdash(raw))
 
 
 def generate_companion_post(actus):
