@@ -11,6 +11,7 @@ import time
 import urllib.parse
 import urllib.request
 from datetime import datetime, timedelta, timezone
+from html import escape as _html_escape
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -2021,6 +2022,92 @@ def generate_articles_json(index_html, full_text_by_id=None):
     print(f"  articles-count.json genere (count: {pubs_count})")
 
 
+# -- AI Act art. 50 : etiquette, pied d'article et JSON-LD des pages du pipeline --
+# Textes VERBATIM de l'avis d'Emilie du 2026-10-02 (PROJETS/SEO/AVIS_REGULATORY_AEO_2026-10-02.md,
+# sujet 1, blocs A, B et C). Ne pas les reformuler sans elle. Le texte est genere par une IA a
+# partir du titre et du resume RSS et publie sans relecture humaine : la page ne doit donc JAMAIS
+# nommer une personne comme auteur ("redige par", Person/editor/reviewedBy en JSON-LD,
+# <meta property="article:author">) ni dire "relu" ou "valide".
+# Deux liens du bloc d'Emilie sont ABSENTS a dessein, pour ne faire ni lien mort ni promesse
+# fausse : "Comment Pharm'Actus est produit" (bloc A) et "journal des corrections" (bloc B).
+# A ajouter avec la page ou le journal, jamais avant. Le journal ne doit pas etre publie avant la
+# correction des erreurs encore en ligne (avis Emilie, question 4).
+AI_LABEL = "Texte généré par une intelligence artificielle et publié automatiquement."
+
+
+def _ai_source_label(source_name: str) -> str:
+    """Nom du media a mettre dans {source} (blocs B et C de l'avis d'Emilie).
+
+    Les articles Business ont une source COMPOSITE, fabriquee par le pipeline :
+    "Pharm'Actus · <media> <tiret long> <titre>, <media> <tiret long> <titre>" (les deux premieres
+    sources citees par le modele). On garde le PREMIER media, celui de source_url ; le prefixe
+    "Pharm'Actus" est retire (ce n'est pas lui qui a publie le titre et le resume). Un nom simple est
+    garde tel quel, coupe au premier tiret long ou court s'il en contient (page sans tiret).
+    Retourne "" si aucun media n'est nomme.
+    """
+    s = (source_name or "").strip()
+    composite = s.startswith("Pharm'Actus")
+    if composite:
+        s = re.sub(r"^Pharm'Actus\s*[·:\u2013\u2014-]*\s*", "", s)
+    parts = re.split(r"\s*[\u2013\u2014]\s*|\s+-\s+", s, maxsplit=1)
+    s = parts[0]
+    if len(parts) == 2 and re.match(r"(?i)(décret|arrêté|loi|ordonnance|circulaire)\b", s):
+        s = parts[1]  # "Décret n° ... <tiret> Légifrance" : ici le media est apres le tiret
+    if composite:
+        s = s.split(", ")[0]
+    s = re.sub(r"\s+", " ", s).strip(" .;:")
+    return s if len(s) <= 90 else s[:90].rsplit(" ", 1)[0]
+
+
+def _ai_disclosure(is_lsv: bool, source_name: str = "", source_url: str = "") -> dict:
+    """Etiquette HTML (bloc A), pied d'article HTML (bloc B) et champs JSON-LD (bloc C).
+
+    Sans media nomme, variante "Le Saviez-Vous" : ni "Point de depart" ni isBasedOn. Les LSV
+    gardent le texte d'Emilie a la lettre ; un article Business sans aucune source n'a que sa
+    premiere phrase (les faits historiques ne le concernent pas).
+    creditText et isBasedOn reprennent exactement le texte visible (condition iii d'Emilie).
+    """
+    name = _ai_source_label(source_name)
+    url = (source_url or "").strip()
+    if not url.startswith(("http://", "https://")):
+        url = ""  # "#" ou vide : ni lien mort, ni isBasedOn
+    if is_lsv or not name:
+        start_html = ""
+        generated = ("Ce texte a été généré par une intelligence artificielle sans source de presse unique, "
+                     "puis publié automatiquement, sans relecture humaine préalable.")
+        if is_lsv:
+            generated += " Les faits historiques sont à vérifier avant d'être cités."
+        credit_text = "Texte généré par une intelligence artificielle sans source de presse unique"
+        based_on = ""
+    else:
+        name_html = _html_escape(name)
+        source_html = (f'<a href="{_html_escape(url, quote=True)}" rel="nofollow noopener">{name_html}</a>'
+                       if url else name_html)
+        start_html = f"<p><strong>Point de départ :</strong> {source_html} (titre et résumé).</p>\n    "
+        generated = ("Ce texte a été généré par une intelligence artificielle à partir du titre et du résumé "
+                     f"publiés par {name_html}, puis publié automatiquement, sans relecture humaine préalable.")
+        credit_text = f"Texte généré par une intelligence artificielle à partir du titre et du résumé publiés par {name}"
+        based_on = url
+    footer_html = (
+        f"{start_html}<p>{generated} Il peut contenir des erreurs : pour toute information réglementaire "
+        "ou chiffrée, reportez-vous à la source officielle. Il ne constitue ni un avis médical ou "
+        "pharmaceutique, ni un conseil juridique ou fiscal.</p>\n"
+        "    <p>Éditeur et directeur de la publication : Stephen Robert, Docteur en Pharmacie "
+        "(entreprise individuelle Pharm'Alpha, SIREN 910 877 356), "
+        '<a href="mailto:stephen@pharmalpha.fr">stephen@pharmalpha.fr</a>, '
+        '<a href="https://pharmalpha.fr/mentions-legales">mentions légales</a>.</p>\n'
+        "    <p>Une erreur ou une imprécision ? Signalez-la à "
+        '<a href="mailto:stephen@pharmalpha.fr">stephen@pharmalpha.fr</a>.</p>\n'
+        '    <p><a href="https://pharmalpha.fr/formations">Découvrir les formations Pharm\'Alpha</a></p>'
+    )
+    return {
+        "label_html": f'<p class="ia-label"><strong>{AI_LABEL}</strong></p>',
+        "footer_html": footer_html,
+        "credit_text": credit_text,
+        "based_on": based_on,
+    }
+
+
 def _build_article_page_html(article_id: str, titre_raw: str, resume_raw: str, image_url: str, date_str: str, categorie: str, full_text_raw: str = "", source_url: str = "", source_name: str = "", date_modified_str: str = "") -> str:
     """Build a single article stub HTML with full SEO metadata.
 
@@ -2076,6 +2163,9 @@ def _build_article_page_html(article_id: str, titre_raw: str, resume_raw: str, i
     }
     article_section = section_map.get(categorie, "Pharmacie")
 
+    # AI Act art. 50 : etiquette sous le titre, pied d'article et champs JSON-LD.
+    ai = _ai_disclosure(categorie == "lsv" or article_id.startswith("lsv_"), source_name, source_url)
+
     schema = {
         "@context": "https://schema.org",
         "@type": "Article",
@@ -2083,8 +2173,10 @@ def _build_article_page_html(article_id: str, titre_raw: str, resume_raw: str, i
         "description": resume_raw[:200],
         "datePublished": date_published,
         "dateModified": date_modified,
-        "author": { "@id": "https://pharmalpha.fr/#stephen" },
+        "author": { "@type": "Organization", "name": "Pharm'Actus", "url": "https://pharmalpha.fr/actus" },
         "publisher": { "@id": "https://pharmalpha.fr/#org" },
+        "creditText": ai["credit_text"],
+        **({ "isBasedOn": ai["based_on"] } if ai["based_on"] else {}),
         "image": og_image,
         "articleSection": article_section,
         "mainEntityOfPage": {
@@ -2130,10 +2222,6 @@ def _build_article_page_html(article_id: str, titre_raw: str, resume_raw: str, i
     else:
         body_html = ""
 
-    # Source link for footer attribution
-    source_url_attr = source_url or "#"
-    source_label = source_name or "Source"
-
     return f'''<!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -2150,7 +2238,6 @@ def _build_article_page_html(article_id: str, titre_raw: str, resume_raw: str, i
 <meta property="og:locale" content="fr_FR" />
 <meta property="og:site_name" content="Pharm'Actus" />
 <meta property="article:published_time" content="{date_published}" />
-<meta property="article:author" content="https://pharmalpha.fr/stephen-robert" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="{titre}" />
 <meta name="twitter:description" content="{meta_desc}" />
@@ -2162,12 +2249,11 @@ def _build_article_page_html(article_id: str, titre_raw: str, resume_raw: str, i
 <body>
 <article>
   <h1>{titre}</h1>
+  {ai["label_html"]}
   <p class="article-lead">{resume}</p>
   {body_html}
-  <p><strong>Source :</strong> <a href="{source_url_attr}" rel="nofollow noopener">{source_label}</a></p>
   <footer class="article-footer">
-    <p>Article redige par <a href="https://pharmalpha.fr/stephen-robert">Stephen Robert, Docteur en Pharmacie</a>.</p>
-    <p>Decouvrir <a href="https://pharmalpha.fr/formations">les formations Pharm'Alpha</a>.</p>
+    {ai["footer_html"]}
   </footer>
 </article>
 <script>(function(){{
@@ -2320,7 +2406,7 @@ def _send_hebdo_brevo():
     )
 
     html_content = build_newsletter_html(selected, custom_intro=custom_intro)
-    subject = f"Pharm'Actus — Résumé semaine du {week_start} au {week_end}"
+    subject = f"Pharm'Actus : Résumé semaine du {week_start} au {week_end}"
 
     # Recuperer les abonnes de la liste hebdo (liste 8)
     all_contacts = []
@@ -2598,6 +2684,9 @@ def build_newsletter_html(articles, custom_intro=None):
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f4f4f5;">
 <tr><td align="center" style="padding:24px 16px;">
 <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+  <tr><td style="background:#fff7ed;padding:12px 32px;border-bottom:1px solid #fed7aa;font-size:13px;line-height:1.5;color:#1a1a1a;text-align:left;">
+    Pharm'Actus est g&eacute;n&eacute;r&eacute; par une intelligence artificielle et publi&eacute; automatiquement, sans relecture humaine pr&eacute;alable. &Eacute;diteur et directeur de la publication&nbsp;: Stephen Robert. Une erreur&nbsp;? <a href="mailto:stephen@pharmalpha.fr?subject=Signalement%20Pharm'Actus" style="color:#1a1a1a;font-weight:700;text-decoration:underline;">Signalez-la</a>.
+  </td></tr>
   <tr><td style="background:#ffffff;padding:28px 32px 16px;text-align:center;border-bottom:2px solid #f97316;">
     <a href="https://pharmalpha.fr/actus" style="text-decoration:none;display:inline-block;"><img src="https://pharmalpha.fr/actus/assets/logo_pharmactus.png" alt="Pharm'Actus" width="280" style="max-width:280px;height:auto;display:block;border:0;margin:0 auto;" /></a>
     <div style="margin-top:10px;"><span style="font-size:13px;color:#888;letter-spacing:0.3px;">Chaque matin, retrouve l'actus pharma &agrave; lire entre deux ordo.</span></div>
@@ -2661,12 +2750,6 @@ def build_newsletter_html(articles, custom_intro=None):
         <a href="https://pharmalpha.fr/actus/preferences?email={{{{ contact.EMAIL }}}}&amp;freq=daily" style="color:#888;">Fr&eacute;quence emails</a> &bull;
         <a href="{{{{ unsubscribe }}}}" style="color:#888;">Se d&eacute;sinscrire</a> &bull;
         <a href="https://pharmalpha.fr/actus" style="color:#888;">Voir en ligne</a>
-      </p>
-      <p style="margin:12px 0 0;font-size:10px;color:#bbb;line-height:1.5;font-style:italic;">
-        Pharm'Actus est produit quotidiennement avec l'assistance d'outils d'intelligence artificielle,
-        sous la responsabilit&eacute; &eacute;ditoriale de Stephen Robert, Docteur en Pharmacie.
-        Une erreur ou une impr&eacute;cision vous saute aux yeux&nbsp;?
-        <a href="mailto:stephen@pharmalpha.fr?subject=Signalement%20Pharm'Actus" style="color:#999;text-decoration:underline;">Signalez-la</a>, elle sera corrig&eacute;e.
       </p>
     </div>
   </td></tr>

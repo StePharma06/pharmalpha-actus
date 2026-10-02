@@ -136,6 +136,26 @@ body {
   .caduceus-bg { display: none; }
 }
 
+/* === TRANSPARENCE IA (AI Act art. 50, avis Emilie 2026-10-02) ===
+   Texte natif present dans le HTML source, 14 px, contraste > 4,5:1, jamais replie. */
+.ia-banner {
+  background: var(--orange-light);
+  border-bottom: 1px solid #fed7aa;
+}
+.ia-banner p {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text);
+}
+.ia-banner a {
+  color: var(--text);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
 /* === HEADER === */
 .header {
   background: var(--bg);
@@ -1619,6 +1639,11 @@ body.pa-has-nav #actusHeader {
   </div>
 </header>
 
+<!-- TRANSPARENCE IA (AI Act art. 50) : bandeau ecrit en dur dans le HTML, jamais injecte en JavaScript -->
+<div class="ia-banner" role="note">
+  <p>Pharm'Actus est g&eacute;n&eacute;r&eacute; par une intelligence artificielle et publi&eacute; automatiquement, sans relecture humaine pr&eacute;alable. &Eacute;diteur et directeur de la publication&nbsp;: Stephen Robert. Une erreur&nbsp;? <a href="mailto:stephen@pharmalpha.fr?subject=Signalement%20Pharm'Actus">Signalez-la</a>.</p>
+</div>
+
 <!-- HERO -->
 <section class="hero">
   <h1>Pharm'Actus : toute l'actualit&eacute; pharmacie r&eacute;sum&eacute;e</h1>
@@ -1971,10 +1996,9 @@ body.pa-has-nav #actusHeader {
   </p>
   <div style="margin-top:20px;padding-top:16px;border-top:1px solid #333;font-size:0.75em;color:#777;line-height:1.6;max-width:600px;margin-left:auto;margin-right:auto;">
     <p style="margin:0 0 6px;"><strong style="color:#999;">Mentions l&eacute;gales</strong></p>
-    <p style="margin:0 0 4px;">&Eacute;diteur : Stephen ROBERT, Pharmacien &amp; Consultant · EI Pharm'Alpha · SIREN 910 877 356</p>
+    <p style="margin:0 0 4px;">&Eacute;diteur : Stephen ROBERT, Docteur en Pharmacie &amp; Consultant · EI Pharm'Alpha · SIREN 910 877 356</p>
     <p style="margin:0 0 4px;">Contact : <a href="mailto:stephen.pharmacien@gmail.com" style="color:#f97316;">stephen.pharmacien@gmail.com</a></p>
-    <p style="margin:0 0 4px;">H&eacute;bergement : GitHub Pages (GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA)</p>
-    <p style="margin:0 0 4px;">Pharm'Actus est produit quotidiennement avec l'assistance d'outils d'intelligence artificielle, sous la responsabilit&eacute; &eacute;ditoriale de Stephen Robert, Docteur en Pharmacie. Une erreur ou une impr&eacute;cision vous saute aux yeux&nbsp;? <a href="mailto:stephen@pharmalpha.fr?subject=Signalement%20Pharm'Actus" style="color:#f97316;">Signalez-la</a>, elle sera corrig&eacute;e.</p>
+    <p style="margin:0 0 4px;">H&eacute;bergeur : Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA</p>
     <p style="margin:0 0 4px;">Les articles sont r&eacute;dig&eacute;s &agrave; titre informatif et ne constituent pas un avis m&eacute;dical ou pharmaceutique.</p>
     <p style="margin:0;">Donn&eacute;es personnelles : seule l'adresse email est collect&eacute;e pour l'envoi de la newsletter (Brevo). D&eacute;sabonnement en 1 clic. Aucune donn&eacute;e n'est revendue &agrave; des tiers.</p>
   </div>
