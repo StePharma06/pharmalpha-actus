@@ -2035,6 +2035,9 @@ def generate_articles_json(index_html, full_text_by_id=None):
 AI_LABEL = "Texte généré par une intelligence artificielle et publié automatiquement."
 
 
+_NOT_A_MEDIA_RE = re.compile("^pharm['" + chr(0x2019) + "]?\\s*(?:alpha|actus)\\b", re.I)
+
+
 def _ai_source_label(source_name: str) -> str:
     """Nom du media a mettre dans {source} (blocs B et C de l'avis d'Emilie).
 
@@ -2056,42 +2059,70 @@ def _ai_source_label(source_name: str) -> str:
     if composite:
         s = s.split(", ")[0]
     s = re.sub(r"\s+", " ", s).strip(" .;:")
-    return s if len(s) <= 90 else s[:90].rsplit(" ", 1)[0]
+    s = s if len(s) <= 90 else s[:90].rsplit(" ", 1)[0]
+    # Ni Pharm'Alpha ni Pharm'Actus ne sont un media de presse. "Pharm'Alpha" est la source par defaut des contenus
+    # injectes a la main (load_pending_actus) : sans cette exclusion la page afficherait "Point de depart :
+    # Pharm'Alpha (titre et resume)", ce qui est faux (avis d'Emilie, section 8.2).
+    return "" if _NOT_A_MEDIA_RE.match(s) else s
 
 
-def _ai_disclosure(is_lsv: bool, source_name: str = "", source_url: str = "") -> dict:
-    """Etiquette HTML (bloc A), pied d'article HTML (bloc B) et champs JSON-LD (bloc C).
+# Fin commune des paragraphes d'information (variantes standard, LSV et generique).
+_AI_TAIL = ("Il peut contenir des erreurs : pour toute information réglementaire ou chiffrée, reportez-vous à la "
+            "source officielle. Il ne constitue ni un avis médical ou pharmaceutique, ni un conseil juridique ou fiscal.")
+# Variante Business (avis d'Emilie, section 8.2, points 1 et 2). Le generateur Business recoit jusqu'a 30 elements RSS
+# et renvoie lui-meme la liste "sources", que rien ne compare a ce qu'il a recu : on ne peut donc PAS ecrire "a partir du
+# titre et du resume publies par <media>" (provenance non etablie). Le selecteur est la CATEGORIE, pas la presence d'un media.
+_AI_BUSINESS = ("Ce texte est une synthèse générée par une intelligence artificielle à partir de titres et de résumés "
+                "d'articles de presse, puis publiée automatiquement, sans relecture humaine préalable. Il peut contenir des "
+                "informations qui ne figurent dans aucune de ces sources, y compris des chiffres et des références, et les "
+                "sources citées en fin de texte ont été indiquées par l'intelligence artificielle sans avoir été vérifiées. "
+                "Pour toute information réglementaire, chiffrée ou financière, reportez-vous à la source officielle. Il ne "
+                "constitue ni un avis médical ou pharmaceutique, ni un conseil juridique, fiscal ou de gestion.")
 
-    Sans media nomme, variante "Le Saviez-Vous" : ni "Point de depart" ni isBasedOn. Les LSV
-    gardent le texte d'Emilie a la lettre ; un article Business sans aucune source n'a que sa
-    premiere phrase (les faits historiques ne le concernent pas).
-    creditText et isBasedOn reprennent exactement le texte visible (condition iii d'Emilie).
+
+def _ai_disclosure(article_id: str, categorie: str = "", source_name: str = "", source_url: str = "") -> dict:
+    """Etiquette HTML (bloc A), pied d'article HTML (bloc B et variantes) et champs JSON-LD (bloc C).
+
+    Variante choisie dans l'ordre EXACT de l'avis d'Emilie (section 8.2), pour que rien ne tombe dans la mauvaise :
+      1. LSV : categorie "lsv" ou identifiant "lsv_"          -> "sans source de presse", ni point de depart ni isBasedOn
+      2. Business : categorie "business_officine"            -> synthese multi-sources, source NON verifiee, pas d'isBasedOn
+      3. media nomme, Pharm'Alpha et Pharm'Actus exclus      -> bloc B standard (point de depart, isBasedOn)
+      4. tout le reste, orphelines comprises                  -> variante generique : ne dit rien de la provenance
+    creditText reprend la premiere phrase visible, sans rien ajouter (ni "relu", ni nom de personne, ni "redige").
+    Aucun parentOrganization, legalName, taxID, NewsMediaOrganization ni publishingPrinciples (avis, point 6).
     """
     name = _ai_source_label(source_name)
     url = (source_url or "").strip()
     if not url.startswith(("http://", "https://")):
         url = ""  # "#" ou vide : ni lien mort, ni isBasedOn
-    if is_lsv or not name:
-        start_html = ""
-        generated = ("Ce texte a été généré par une intelligence artificielle sans source de presse unique, "
-                     "puis publié automatiquement, sans relecture humaine préalable.")
-        if is_lsv:
-            generated += " Les faits historiques sont à vérifier avant d'être cités."
-        credit_text = "Texte généré par une intelligence artificielle sans source de presse unique"
-        based_on = ""
-    else:
+    start_html = ""
+    based_on = ""
+    if categorie == "lsv" or article_id.startswith("lsv_"):
+        paragraph = ("Ce texte a été généré par une intelligence artificielle, sans source de presse, puis publié "
+                     "automatiquement, sans relecture humaine préalable. Les faits historiques sont à vérifier avant "
+                     "d'être cités. " + _AI_TAIL)
+        credit_text = "Texte généré par une intelligence artificielle, sans source de presse"
+    elif categorie == "business_officine":
+        if name and url:  # la ligne n'existe que si un media ET une URL existent
+            start_html = ("<p><strong>Première source indiquée par l'intelligence artificielle :</strong> "
+                          f'<a href="{_html_escape(url, quote=True)}" rel="nofollow noopener">{_html_escape(name)}</a>.</p>\n    ')
+        paragraph = _AI_BUSINESS
+        credit_text = "Texte généré par une intelligence artificielle à partir de titres et de résumés d'articles de presse"
+    elif name:
         name_html = _html_escape(name)
         source_html = (f'<a href="{_html_escape(url, quote=True)}" rel="nofollow noopener">{name_html}</a>'
                        if url else name_html)
         start_html = f"<p><strong>Point de départ :</strong> {source_html} (titre et résumé).</p>\n    "
-        generated = ("Ce texte a été généré par une intelligence artificielle à partir du titre et du résumé "
-                     f"publiés par {name_html}, puis publié automatiquement, sans relecture humaine préalable.")
+        paragraph = ("Ce texte a été généré par une intelligence artificielle à partir du titre et du résumé "
+                     f"publiés par {name_html}, puis publié automatiquement, sans relecture humaine préalable. " + _AI_TAIL)
         credit_text = f"Texte généré par une intelligence artificielle à partir du titre et du résumé publiés par {name}"
         based_on = url
+    else:
+        paragraph = ("Ce texte a été généré par une intelligence artificielle, puis publié automatiquement, sans "
+                     "relecture humaine préalable. " + _AI_TAIL)
+        credit_text = "Texte généré par une intelligence artificielle"
     footer_html = (
-        f"{start_html}<p>{generated} Il peut contenir des erreurs : pour toute information réglementaire "
-        "ou chiffrée, reportez-vous à la source officielle. Il ne constitue ni un avis médical ou "
-        "pharmaceutique, ni un conseil juridique ou fiscal.</p>\n"
+        f"{start_html}<p>{paragraph}</p>\n"
         "    <p>Éditeur et directeur de la publication : Stephen Robert, Docteur en Pharmacie "
         "(entreprise individuelle Pharm'Alpha, SIREN 910 877 356), "
         '<a href="mailto:stephen@pharmalpha.fr">stephen@pharmalpha.fr</a>, '
@@ -2164,7 +2195,7 @@ def _build_article_page_html(article_id: str, titre_raw: str, resume_raw: str, i
     article_section = section_map.get(categorie, "Pharmacie")
 
     # AI Act art. 50 : etiquette sous le titre, pied d'article et champs JSON-LD.
-    ai = _ai_disclosure(categorie == "lsv" or article_id.startswith("lsv_"), source_name, source_url)
+    ai = _ai_disclosure(article_id, categorie, source_name, source_url)
 
     schema = {
         "@context": "https://schema.org",
