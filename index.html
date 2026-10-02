@@ -878,7 +878,9 @@ body.pa-has-nav #actusHeader {
   inset: 0;
   background: rgba(0,0,0,0.4);
   backdrop-filter: blur(4px);
-  z-index: 200;
+  /* 1000 : au-dessus de la carte cookies Klaro (890) et de la nav (900), sinon la carte recouvre le titre et l'etiquette IA
+     de la fenetre de lecture a la premiere visite (avis Emilie 2026-10-02, 8.5). */
+  z-index: 1000;
   display: none;
   justify-content: center;
   align-items: flex-start;

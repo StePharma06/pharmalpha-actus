@@ -188,6 +188,13 @@ class StaticPages(unittest.TestCase):
             # les cartes de la liste gardent leur ligne "Source" (constat C4 de l'avis, echeance 30 jours) ; la fenetre de lecture, non
             self.assertFalse("Source :" in window, name + " : l'ancien rendu 'Source : <media>' est encore dans la fenetre de lecture")
 
+    def test_reading_windows_sit_above_the_cookie_card_and_the_nav(self):
+        # klaro-override.css (depot du site) : carte cookies a 890, nav a 900. En dessous, la carte recouvre le titre et l'etiquette
+        # IA de la fenetre a la premiere visite (mesure sur la production le 2026-10-02 : 10 points sur 10 recouverts).
+        for name in ("index.html", "archives.html"):
+            css = re.search(r"\.modal-overlay \{(.*?)\}", page_text(name), re.S).group(1)
+            self.assertGreater(int(re.search(r"z-index:\s*(\d+)", css).group(1)), 900, name)
+
     def test_the_information_paragraph_sits_above_the_share_row(self):
         for name in ("index.html", "archives.html"):
             t = page_text(name)
