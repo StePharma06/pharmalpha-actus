@@ -1,0 +1,52 @@
+name: Tests
+
+# Tests sans reseau ni secret, a chaque push qui touche le code ou les pages concernees.
+# Ils ne bloquent PAS le pipeline quotidien (celui-ci a son propre pre-vol dans daily-update.yml) : ils signalent
+# une derive le jour du commit, par un echec visible sur GitHub. Cas typique : le miroir JavaScript de la
+# transparence IA (assets/ia-disclosure.js, fenetres de lecture) qui ne dit plus comme update_actus.py (pieds de page).
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'scripts/**'
+      - 'assets/ia-disclosure.js'
+      - 'index.html'
+      - 'archives.html'
+      - 'print.html'
+      - 'articles.json'
+      - '.github/workflows/tests.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # Node sert a executer assets/ia-disclosure.js tel que le navigateur le recoit
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Install dependencies
+        run: pip install anthropic feedparser pytrends "urllib3<2" pillow
+
+      - name: Article template and AI Act transparency
+        run: python scripts/test_article_template.py
+
+      - name: Reading windows, print sheet and JavaScript mirror
+        run: python scripts/test_ia_disclosure.py
+
+      - name: LinkedIn newsletter notice
+        run: python scripts/test_linkedin_newsletter.py
+
+      - name: Pillar stats sync pattern
+        run: python scripts/test_sync_pillar_stats.py
