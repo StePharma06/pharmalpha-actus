@@ -41,6 +41,12 @@ jobs:
       - name: Install dependencies
         run: pip install anthropic feedparser pytrends "urllib3<2"
 
+      # Pre-vol : si le gabarit ne respecte plus les mentions de transparence IA (AI Act art. 50), le job
+      # s'arrete ICI. Aucune etape suivante ne s'execute : rien n'est genere, rien n'est envoye aux abonnes
+      # (l'email part depuis update_actus.py), rien n'est commite ni synchronise sur le site.
+      - name: Pre-flight (article template, AI Act transparency)
+        run: python scripts/test_article_template.py
+
       - name: Radar pharmacien (Google News 7j glissants)
         continue-on-error: true  # Ne jamais bloquer la pipeline si pytrends rate-limite
         run: python scripts/daily_trends.py
