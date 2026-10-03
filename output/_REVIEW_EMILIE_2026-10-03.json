@@ -1,0 +1,47 @@
+{
+  "generated_at": "2026-10-03T04:07:04.581326+02:00",
+  "run_date": "2026-10-03",
+  "instructions": "Ces articles contiennent des affirmations sur le cadre officinal francais (financement, remuneration, convention, TROD, marge...). Verifier chaque fait avant publication ou envoyer la newsletter. En cas d'erreur detectee : corriger dans output/pending_actu.json ou notifier Stephen immediatement.",
+  "articles_to_review": [
+    {
+      "id": "",
+      "categorie": "pharma_france",
+      "titre": "Vaccins grippe sans ordonnance : le flou est levé, voilà ce que tu peux faire",
+      "resume": "Classés liste I en juillet, les vaccins antigrippaux semaient le doute au comptoir. L'ANSM a clarifié le 28 septembre : tu peux dispenser sans ordonnance, même si tu n'administres pas. Le point réglementaire s'impose avant le 13 octobre.",
+      "source": "Le Pharmacien de France",
+      "source_url": "https://lepharmaciendefrance.fr/campagne-de-vaccination-antigrippale-en-approche/",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "bonne_nouvelle",
+      "titre": "Protections périodiques remboursées : le comptoir devient un acte militant",
+      "resume": "Depuis le 1er octobre, les femmes de moins de 26 ans et les bénéficiaires de la C2S ont droit à deux protections périodiques réutilisables remboursées par an. La procédure de facturation est calée, les références aussi. Une vraie bonne nouvelle, et un vrai rôle de conseil pour l'équipe.",
+      "source": "Le Pharmacien de France",
+      "source_url": "https://lepharmaciendefrance.fr/protections-periodiques-reutilisables-mode-demploi/",
+      "confidence_score": null,
+      "warnings": [],
+      "flag_reason": "keyword_match"
+    },
+    {
+      "id": "",
+      "categorie": "business_officine",
+      "titre": "Officine été 2026 : +5 % de CA mais la marge reste sous pression",
+      "resume": "La FSPF publie son bilan économique de juillet-août 2026 : le chiffre d'affaires des officines progresse de 5 %, dans la moyenne annuelle. Mais derrière ce chiffre rassurant, la structure de la croissance révèle une réalité plus inconfortable.",
+      "source": "Pharm'Actus · FSPF — Économie de l'officine : un été conforme aux prévisions, UPGF — Connivences et taxation : les ingrédients d'une amère potion",
+      "source_url": "https://www.fspf.fr/economie-de-lofficine-un-ete-conforme-aux-previsions/",
+      "confidence_score": 0.72,
+      "warnings": [
+        "La FSPF indique que 'la marge sur le champ conventionnel a augmenté' sans donner de chiffre absolu ni de montant par officine : impossible de chiffrer le gain réel sans cet élément, l'analyse reste donc qualitative sur ce point.",
+        "Le +5 % de CA est une donnée FSPF non encore confirmée par d'autres sources syndicales ou institutionnelles (USPO silencieuse, pas de données IQVIA publiées sur cette période dans les articles disponibles).",
+        "La tribune UPGF sur la 'taxation' est volontairement alarmiste et ne cite pas de mesure LFSS précise : l'article la mentionne comme signal d'alerte, pas comme fait acquis.",
+        "Le chiffre de 19 274 officines est issu d'IQVIA Pharmastat juin 2026 — donnée structurelle stable, mais à vérifier si une mise à jour plus récente est disponible.",
+        "L'honoraire de dispensation à 1,02 € TTC est le montant conventionnel en vigueur : à vérifier si un avenant récent l'a modifié.",
+        "5 chiffre(s) non source retire(s) par l'audit auto"
+      ],
+      "flag_reason": "business_officine"
+    }
+  ]
+}

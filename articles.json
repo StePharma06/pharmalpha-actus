@@ -1,6 +1,131 @@
 {
   "articles": [
     {
+      "id": "actu_2026_10_03_5",
+      "date": "2026-10-03",
+      "type": "actu",
+      "categorie": "business_officine",
+      "titre": "Officine été 2026 : +5 % de CA mais la marge reste sous pression",
+      "resume": "La FSPF publie son bilan économique de juillet-août 2026 : le chiffre d'affaires des officines progresse de 5 %, dans la moyenne annuelle. Mais derrière ce chiffre rassurant, la structure de la croissance révèle une réalité plus inconfortable.",
+      "source": "Pharm'Actus · FSPF — Économie de l'officine : un été conforme aux prévisions, UPGF — Connivences et taxation : les ingrédients d'une amère potion",
+      "source_url": "https://www.fspf.fr/economie-de-lofficine-un-ete-conforme-aux-previsions/",
+      "tiktok_url": "",
+      "badge_label": "Business",
+      "image_url": "assets/img_actu_2026_10_03_5.jpg",
+      "tags": [
+        "economie-officinale",
+        "marge",
+        "ca-officine",
+        "lfss"
+      ],
+      "full_text": "La FSPF publie son bilan économique de juillet-août 2026 : le chiffre d'affaires des officines progresse de 5 %, dans la moyenne annuelle. Mais derrière ce chiffre rassurant, la structure de la croissance révèle une réalité plus inconfortable.\n\n**Contexte**\n\nLe 2 octobre 2026, la FSPF a publié son analyse de l'économie officinale pour les mois de juillet et août 2026. Le CA des officines progresse de 5 % sur ces deux mois par rapport à la même période 2025 - ce qui est, selon le syndicat, \"conforme à l'évolution moyenne annuelle\". La nuance est importante : cette progression n'est pas portée par une hausse des volumes dispensés ou par une augmentation des honoraires, mais \"guidée essentiellement par la part grandissante des médicaments onéreux\". En clair, le CA gonfle parce que les prix unitaires des médicaments remboursés augmentent - notamment sous l'effet des biomédicaments et des anticancéreux - pas parce que l'officine vend plus ou mieux. La FSPF précise également que la marge sur le champ conventionnel a augmenté. Mais cette formulation mérite un décryptage attentif, car la structure de rémunération de l'officine - MDL + honoraires fixes - implique que la croissance du CA en valeur n'entraîne pas mécaniquement une croissance proportionnelle de la marge.\n\n**Analyse business**\n\nLe +5 % de CA en juillet-août 2026 mérite d'être décomposé froidement.\n\n**La croissance est structurellement portée par les médicaments chers, pas par le volume.** La MDL (marge dégressive lissée) est par construction anti-inflationniste : plus le PFHT est élevé, plus le taux de marge s'effondre progressivement jusqu'à devenir nul au-delà d'un certain seuil réglementaire. Un anticancéreux à prix très élevé génère ainsi une MDL nulle ou quasi nulle pour l'officine. La seule rémunération fixe est l'honoraire de dispensation conventionnel par boîte, dont le montant dépend du cadre tarifaire en vigueur. Autrement dit, la croissance du CA liée aux médicaments onéreux enrichit l'Assurance Maladie en dépenses, sans enrichir proportionnellement l'officine.\n\n**La marge sur le champ conventionnel a certes \"augmenté\" selon la FSPF**, mais le syndicat ne chiffre pas le gain absolu ni le gain par officine. Sur 19 274 officines (IQVIA Pharmastat, juin 2026), une progression globale de la masse de marge conventionnelle peut masquer des disparités selon le mix produit local.\n\n**Le vrai moteur de rentabilité reste hors conventionnel.** L'OTC, la parapharmacie, les compléments alimentaires et les services (vaccination, entretiens pharmaceutiques) sont les seuls leviers où la marge n'est pas plafonnée réglementairement. Un titulaire dont le CA croît à +5 % grâce aux biosimilaires ou aux onéreux ne voit pas forcément sa trésorerie s'améliorer dans les mêmes proportions.\n\n**La taxation en embuscade.** L'UPGF, dans sa tribune du même jour, pointe les risques d'une nouvelle taxation sur le secteur, dans un contexte de LFSS sous tension. Si le CA officinal progresse de 5 % visible, c'est précisément ce chiffre que Bercy regarde pour calibrer une éventuelle taxe sur le chiffre d'affaires ou un écrêtement des remises. L'été \"conforme aux prévisions\" peut donc devenir le justificatif d'une mesure défavorable en PLF/LFSS 2027.\n\n**À noter :** à ce jour, l'USPO n'a pas publié d'analyse économique propre sur cette période estivale. La FSPF est donc la seule source syndicale disponible sur ce bilan. Ces données sont à prendre comme un indicateur sectoriel partiel, non comme un consensus représentatif de l'ensemble des syndicats.\n\n**Recommandations actionnables**\n\n1. **Analyser ton propre mix CA** - Ne te contente pas du +5 % global. Calcule la part de ton CA portée par les médicaments à PFHT élevé : ta MDL y est fortement réduite, voire nulle selon les tranches réglementaires applicables. Si cette part progresse, ton CA croît mais ta marge unitaire stagne. C'est le diagnostic à faire avant la fin d'année.\n\n2. **Renforcer le CA hors conventionnel** - OTC, parapharmacie, compléments alimentaires, dermo-cosmétique : ce sont les seuls segments où la marge n'est pas plafonnée par la MDL. Un gain de 2 points de CA sur le hors-remboursement génère plus de marge qu'un gain de 5 % sur le conventionnel onéreux.\n\n3. **Documenter tes missions pour la négociation LFSS** - Si Bercy cite le +5 % de CA pour justifier une mesure d'économies, tu dois pouvoir démontrer que ta masse salariale, tes charges de garde et tes missions de service public (garde, urgences, accès aux soins) ont progressé au moins autant. Garde tes indicateurs RH à jour.\n\n4. **Suivre de près le PLFSS 2027** - L'UPGF alerte sur une taxation potentielle. La FSPF n'y fait pas référence dans ce communiqué. Lis les deux syndicats en parallèle et identifie les mesures d'économies qui pourraient cibler le réseau officinal dès janvier 2027.\n\n**Sources citees**\n\n- FSPF - Économie de l'officine : un été conforme aux prévisions\n- UPGF - Connivences et taxation : les ingrédients d'une amère potion\n- IQVIA Pharmastat - Nombre d'officines en France (juin 2026) : 19 274"
+    },
+    {
+      "id": "actu_2026_10_03_4",
+      "date": "2026-10-03",
+      "type": "actu",
+      "categorie": "avenir_pharma",
+      "titre": "Santé des femmes : l'EMA veut reécrire les règles du développement du médicament",
+      "resume": "L'Agence européenne des médicaments publie une feuille de route en 10 points pour mieux intégrer les femmes dans les essais cliniques. Des femmes enceintes aux femmes ménopausées, le chantier est immense. Et il a des conséquences directes sur les AMM de demain.",
+      "source": "Le Moniteur des Pharmacies",
+      "source_url": "https://www.lemoniteurdespharmacies.fr/therapeutique/medicaments/recherche-et-innovation/sante-des-femmes-leurope-veut-faire-evoluer-le-developpement-des-medicaments",
+      "tiktok_url": "",
+      "badge_label": "L'avenir de la pharma",
+      "image_url": "assets/img_actu_2026_10_03_4.jpg",
+      "tags": [
+        "ema",
+        "amm",
+        "sante-femmes",
+        "recherche",
+        "innovation"
+      ],
+      "full_text": "Les femmes représentent plus de 50 % de la population et sont sous-représentées dans la majorité des essais cliniques. Ce n'est pas une opinion, c'est un constat que l'EMA vient de formaliser noir sur blanc.\n\nL'Agence européenne des médicaments vient de présenter une feuille de route structurée autour de 10 pistes d'action pour mieux prendre en compte les spécificités féminines dans le développement des médicaments. L'objectif : couvrir les femmes à toutes les étapes de leur vie, y compris les femmes enceintes et allaitantes, trop souvent exclues des protocoles.\n\nPourquoi c'est un enjeu clinique majeur ? Parce que les données de pharmacocinétique et de pharmacodynamie varient selon le sexe. Les hormones modifient l'absorption, la distribution, le métabolisme et l'élimination des médicaments. Une dose validée sur une population majoritairement masculine peut être sous- ou sur-optimale chez une femme. Et au comptoir, tu gères ces patients tous les jours.\n\nDix pistes, c'est ambitieux. Parmi les axes identifiés : renforcer l'inclusion des femmes à chaque phase d'essai, développer des données spécifiques sur la grossesse et l'allaitement, et améliorer la représentativité des données post-AMM. Ce dernier point touche directement à la pharmacovigilance, où le genre est encore peu systématiquement analysé.\n\nPour les pharmaciens d'officine, l'enjeu est double. À court terme, c'est une meilleure base de données pour conseiller les patientes, notamment sur les médicaments utilisés hors AMM en contexte de grossesse. À long terme, des AMM plus solides, des notices plus précises, des posologies mieux adaptées.\n\nLe Moniteur des Pharmacies souligne que ce chantier s'inscrit dans un contexte plus large : la table ronde à l'Assemblée nationale sur les maladies cardiovasculaires féminines rappelle que la santé des femmes est systématiquement sous-dépistée et sous-traitée.\n\nDemain matin au comptoir : pas d'impact immédiat sur tes délivrances. Mais garde en tête que les AMM que tu utilises aujourd'hui reposent sur des données qui sous-représentent tes patientes. C'est un angle de conseil précieux, notamment pour les femmes en âge de procréer sous traitement chronique."
+    },
+    {
+      "id": "actu_2026_10_03_3",
+      "date": "2026-10-03",
+      "type": "actu",
+      "categorie": "bonne_nouvelle",
+      "titre": "Protections périodiques remboursées : le comptoir devient un acte militant",
+      "resume": "Depuis le 1er octobre, les femmes de moins de 26 ans et les bénéficiaires de la C2S ont droit à deux protections périodiques réutilisables remboursées par an. La procédure de facturation est calée, les références aussi. Une vraie bonne nouvelle, et un vrai rôle de conseil pour l'équipe.",
+      "source": "Le Pharmacien de France",
+      "source_url": "https://lepharmaciendefrance.fr/protections-periodiques-reutilisables-mode-demploi/",
+      "tiktok_url": "",
+      "badge_label": "La bonne nouvelle",
+      "image_url": "assets/img_actu_2026_10_03_3.jpg",
+      "tags": [
+        "remboursement",
+        "c2s",
+        "officine",
+        "sante-femmes",
+        "facturation"
+      ],
+      "full_text": "C'est une mesure concrète, sociale, et qui arrive directement dans ton lineaire. Depuis le 1er octobre 2026, deux protections périodiques réutilisables par an sont prises en charge pour deux populations cibles.\n\nPremière cible : les femmes de moins de 26 ans, assurées du régime général. Deuxième cible : les bénéficiaires de la Complémentaire santé solidaire (C2S), quel que soit leur âge. C'est l'Assurance Maladie elle-même qui a clarifié la procédure de facturation, levant les dernières incertitudes opérationnelles côté officine.\n\nDe quoi parle-t-on concrètement ? Coupes menstruelles, culottes menstruelles, disques lavables... Des produits que tu as déjà probablement en rayon parapharmacie, mais qui étaient jusqu'ici achetés sans remboursement. Là, ça change. Et ça change la conversation au comptoir.\n\nPourquoi c'est une bonne nouvelle au-delà du symbole ? Parce que ça amène en pharmacie une population qui n'y venait pas forcément pour ces produits. Les moins de 26 ans en C2S, c'est souvent un public précaire, étudiantes, femmes en situation de vulnérabilité. Le pharmacien devient un point d'accès à des produits de santé essentiels, avec un conseil possible sur l'entretien, l'hygiène, l'usage.\n\nLa FSPF a détaillé le dispositif lors de son Live du 2 octobre. Les catégories de produits éligibles sont définies, et la mécanique de facturation est en place. Pas de suspense là-dessus.\n\nUn point d'attention tout de même : vérifie que ton logiciel de caisse est à jour pour la prise en charge, et que ton équipe est briefée. Parce qu'une patiente de 24 ans qui arrive sans savoir comment ça marche, tu as 30 secondes pour lui expliquer simplement.\n\nDemain matin au comptoir : forme l'équipe sur les deux critères d'éligibilité, vérifie le paramétrage facturation, et identifie les références que tu as en stock. C'est une mission de santé publique qui ne dit pas son nom."
+    },
+    {
+      "id": "actu_2026_10_03_2",
+      "date": "2026-10-03",
+      "type": "actu",
+      "categorie": "pharma_monde",
+      "titre": "Le NIH refait son site : ce que ca dit de la crise d'acces a l'info scientifique mondiale",
+      "resume": "Le National Institutes of Health américain lance une refonte totale de son site web pour simplifier l'accès à l'information de santé. Derrière l'anecdote tech, une question que les pharmaciens français connaissent bien : comment rendre l'info scientifique vraiment utilisable ?",
+      "source": "STAT News",
+      "source_url": "https://www.statnews.com/2026/10/02/nih-launching-streamlined-website-to-help-public-find-information/?utm_campaign=rss",
+      "tiktok_url": "",
+      "badge_label": "Pharma Monde",
+      "image_url": "assets/img_actu_2026_10_03_2.jpg",
+      "tags": [
+        "information",
+        "numerique",
+        "sante-publique",
+        "nih",
+        "ia"
+      ],
+      "full_text": "Le NIH, c'est le plus gros financeur de recherche biomédicale de la planète. Des dizaines de milliards de dollars de budget annuel, 27 instituts spécialisés, des milliers de publications. Et jusqu'à présent, un site web tellement éclaté que même les chercheurs s'y perdaient.\n\nSTAT News révèle que le NIH déploie une refonte majeure de son portail. L'objectif affiché : créer un écosystème d'information unifié, compréhensible sans avoir à décoder l'organigramme interne de l'institution. En clair, que le grand public ET les professionnels puissent enfin trouver ce qu'ils cherchent sans passer par trois sous-domaines différents.\n\nPourquoi ça intéresse un pharmacien français ? Parce que c'est exactement le même problème qu'on vit au comptoir. Combien de fois as-tu vu un patient arriver avec une info glanée sur un site mal sourcé, parce que PubMed c'est en anglais, parce que l'ANSM c'est jargonneux, parce que Has-sante.fr c'est austère ?\n\nL'accessibilité de l'information scientifique fiable est un enjeu de santé publique direct. Quand les patients ne trouvent pas l'info officielle, ils trouvent l'info alternative. Et c'est toi qui gères les dégâts au comptoir.\n\nDeuxième angle : les outils d'information professionnelle en France sont dans le même état. La base de données publique des médicaments est utile mais peu ergonomique. Thériaque est robuste mais payant. Vidal est devenu un abonnement premium. La démocratisation de l'accès à l'info médicament reste un chantier.\n\nLa refonte du NIH, c'est aussi un signal fort sur la tendance globale : les grandes institutions de santé comprennent qu'un contenu de qualité mal présenté ne sert à rien. L'UX de l'information médicale devient un enjeu stratégique, pas une option.\n\nDemain matin au comptoir : rien de concret à changer dans l'immédiat. Mais garde en tête que l'info patient que tu relayais était souvent meilleure que celle qu'il trouvait seul en ligne. Avec des portails mieux construits, ton rôle de filtre et de traducteur reste entier. Et il le restera encore longtemps."
+    },
+    {
+      "id": "actu_2026_10_03_1",
+      "date": "2026-10-03",
+      "type": "actu",
+      "categorie": "pharma_france",
+      "titre": "Vaccins grippe sans ordonnance : le flou est levé, voilà ce que tu peux faire",
+      "resume": "Classés liste I en juillet, les vaccins antigrippaux semaient le doute au comptoir. L'ANSM a clarifié le 28 septembre : tu peux dispenser sans ordonnance, même si tu n'administres pas. Le point réglementaire s'impose avant le 13 octobre.",
+      "source": "Le Pharmacien de France",
+      "source_url": "https://lepharmaciendefrance.fr/campagne-de-vaccination-antigrippale-en-approche/",
+      "tiktok_url": "",
+      "badge_label": "Pharma France",
+      "image_url": "assets/img_actu_2026_10_03_1.jpg",
+      "tags": [
+        "vaccination",
+        "grippe",
+        "ansm",
+        "liste-i",
+        "officine"
+      ],
+      "full_text": "Le 13 octobre, la campagne antigrippale 2026-2027 démarre en métropole. Et jusqu'à il y a quelques jours, personne ne savait exactement ce qu'on avait le droit de faire.\n\nRetour rapide sur la séquence. Le 7 juillet, l'ANSM inscrit les vaccins contre la grippe sur la liste I des substances vénéneuses. Résultat : un beau flottement réglementaire. Est-ce qu'on peut encore dispenser sans ordonnance ? Est-ce qu'on peut encore vacciner directement ?\n\nLa réponse est venue le 28 septembre, via un complément de l'ANSM. Et elle est claire : oui, tu peux dispenser les vaccins antigrippaux sans ordonnance, même si tu ne les administres pas toi-même. Le classement liste I ne remet pas en cause le droit de dispensation officinale.\n\nPour la vaccination directe en pharmacie, le cadre reste celui fixé par l'arrêté et le décret du 8 août 2023 : le pharmacien formé peut prescrire ET administrer aux patients de 11 ans et plus. Le classement liste I ne change pas cette autorisation. Il introduit des exigences de traçabilité, pas une fermeture d'accès.\n\nLe seul vrai frein résiduel : les moins de 11 ans, et les pharmaciens non formés à la vaccination. Pour eux, rien de nouveau sous le soleil.\n\nCôté campagne, rappel des fondamentaux. Elle est conjointe grippe et Covid-19 cette année. À tout patient éligible aux deux vaccinations, il est recommandé de proposer la double immunisation. C'est une opportunité de conseil forte, surtout pour les plus de 65 ans et les patients à risque.\n\nDemain matin au comptoir : pas de panique si un patient arrive sans ordonnance pour son Vaxigrip ou son Influvac. Tu peux le dispenser. Si tu es formé à la vaccination, tu peux aussi piquer. Vérifie juste que ton stock est calé avant le 13 octobre, parce que les premiers jours, ça va défiler."
+    },
+    {
+      "id": "lsv_2026_10_03",
+      "date": "2026-10-03",
+      "type": "lsv",
+      "categorie": "lsv",
+      "titre": "Le saviez-vous ? On reconstituait les nez coupés avec un morceau de bras",
+      "resume": "Avant les blocs opératoires stériles et les greffes modernes, un chirurgien italien du XVe siècle reconstituait des nez dévorés par la syphilis... en découpant un lambeau de peau dans le bras du patient. Et ça marchait. Plutôt bien, même.",
+      "source": "Pharm'Alpha",
+      "source_url": "",
+      "tiktok_url": "",
+      "badge_label": "Le Saviez-Vous",
+      "image_url": "assets/img_lsv_2026_10_03.jpg",
+      "tags": [
+        "histoire",
+        "chirurgie",
+        "anatomie",
+        "decouverte",
+        "peau"
+      ],
+      "full_text": "En Italie, à la fin du XVe siècle, perdre son nez n'était pas qu'une métaphore. La syphilis venait de débarquer en Europe - certains l'appellent le « mal napolitain » - et elle dévorait littéralement les visages de ses victimes. Nez effondrés, cartilages rongés, cicatrices béantes. Être défiguré, c'était aussi être marqué socialement. Un stigmate visible, permanent, dévastateur.\n\nC'est là qu'entre en scène Gaspare Tagliacozzi, chirurgien à Bologne, né en 1545. Cet homme va inventer quelque chose d'absolument fou pour l'époque : la rhinoplastie pédiculée. Principe : il découpait un lambeau de peau sur l'avant-bras du patient, sans jamais le détacher complètement - pour maintenir la vascularisation. Ensuite, il fixait ce lambeau encore relié au bras... directement sur le visage.\n\nLe patient devait rester dans cette position grotesque, bras attaché à la tête, pendant environ trois semaines. Trois semaines immobile, le temps que la peau prenne sur le nouveau site. Puis Tagliacozzi sectionnait le pédicule. Le nez recevait son propre apport sanguin. La reconstruction était faite.\n\nLe twist ? L'Église a tenté de faire condamner sa technique. Des théologiens ont argué qu'il « trafiquait l'œuvre de Dieu ». Certains ont même demandé que son corps soit déterré après sa mort en 1599. On a retrouvé une gravure le montrant fièrement brandissant... un nez artificiel. L'homme assumait complètement.\n\nSa technique est décrite dans son traité « De Curtorum Chirurgia per Insitionem » publié en 1597 - un des premiers ouvrages illustrés de chirurgie reconstructrice de l'histoire.\n\nAujourd'hui, le principe du lambeau pédiculé est toujours utilisé en chirurgie reconstructrice, après des cancers, des brûlures, des traumatismes. On parle de microchirurgie, de lambeaux libres anastomosés. Les outils ont changé. La logique, elle, est restée la même depuis 500 ans."
+    },
+    {
       "id": "actu_2026_10_02_5",
       "date": "2026-10-02",
       "type": "actu",
@@ -18539,6 +18664,6 @@
       ]
     }
   ],
-  "count": 893,
-  "updated_at": "2026-10-02T04:07:09.843499+02:00"
+  "count": 899,
+  "updated_at": "2026-10-03T04:07:08.775737+02:00"
 }

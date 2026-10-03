@@ -1,58 +1,58 @@
 {
   "pathologies": [
     {
-      "display": "Allergie à l'iode",
-      "delta_label": "↑ 18 750",
+      "display": "Allergie à l'ambroisie",
+      "delta_label": "↑ 36 000",
       "trend": "up"
     },
     {
-      "display": "Allergie acariens symptômes",
-      "delta_label": "↑ 16 600",
+      "display": "Allergie automne",
+      "delta_label": "↑ 19 100",
       "trend": "up"
     },
     {
-      "display": "Mal de tête tous les jours et fatigue",
-      "delta_label": "↑ 11 100",
+      "display": "Fatigue oculaire symptômes",
+      "delta_label": "↑ 10 050",
       "trend": "up"
     },
     {
-      "display": "Urine foncée et grosse fatigue",
-      "delta_label": "↑ 9 500",
+      "display": "Fracture de fatigue pied",
+      "delta_label": "↑ 8 550",
       "trend": "up"
     },
     {
-      "display": "Test covid",
-      "delta_label": "↑ 600",
+      "display": "Où trouve-t-on la vitamine b12",
+      "delta_label": "↑ 5 550",
       "trend": "up"
     }
   ],
-  "pathologies_from": "2026-10-02",
+  "pathologies_from": "2026-10-03",
   "soins": [
     {
+      "display": "Immunite covid",
+      "delta_label": "↑ 322 000",
+      "trend": "up"
+    },
+    {
       "display": "Immunite familiale",
-      "delta_label": "↑ 66 750",
+      "delta_label": "↑ 232 650",
       "trend": "up"
     },
     {
-      "display": "Digestion pois chiche",
-      "delta_label": "↑ 48 700",
+      "display": "Calmosine digestion bébé",
+      "delta_label": "↑ 47 700",
       "trend": "up"
     },
     {
-      "display": "Quinoa digestion",
-      "delta_label": "↑ 46 050",
+      "display": "La digestion cm1",
+      "delta_label": "↑ 30 150",
       "trend": "up"
     },
     {
-      "display": "Immunite diplomatique",
-      "delta_label": "↑ 28 100",
-      "trend": "up"
-    },
-    {
-      "display": "Mieux-etre-sante.fr nutrition et énergie",
-      "delta_label": "↑ 11 350",
+      "display": "Sante-astuces.fr santé connectée",
+      "delta_label": "↑ 8 300",
       "trend": "up"
     }
   ],
-  "soins_from": "2026-10-02"
+  "soins_from": "2026-10-03"
 }
