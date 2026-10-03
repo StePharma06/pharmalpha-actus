@@ -1,34 +1,42 @@
 {
- "genere_le": "2026-10-02T11:11:18+02:00",
+ "genere_le": "2026-10-03T10:44:44+02:00",
  "liste_brevo": 5,
- "abonnes_total": 1249,
- "abonnes_hebdo": 335,
- "abonnes_diffusion": 1584,
- "articles_publies": 743,
- "nouveaux_7j": 34,
- "nouveaux_cumul": 1242,
+ "abonnes_total": 1251,
+ "abonnes_hebdo": 341,
+ "abonnes_diffusion": 1592,
+ "articles_publies": 748,
+ "nouveaux_7j": 35,
+ "nouveaux_cumul": 1244,
  "cumul_depuis": "2026-01-01",
  "semaine": {
-  "du": "2026-09-25",
-  "au": "2026-10-02",
-  "envois": 8924,
-  "delivres": 7858,
+  "du": "2026-09-26",
+  "au": "2026-10-03",
+  "envois": 8956,
+  "delivres": 7893,
   "taux_delivrabilite_pct": 88.1,
-  "ouvertures": 2973,
-  "ouvertures_uniques": 2180,
-  "clics": 4413,
-  "clics_uniques": 676,
-  "taux_ouverture_pct": 27.7,
-  "taux_clic_pct": 8.6,
-  "ctor_pct": 31.0,
+  "ouvertures": 3015,
+  "ouvertures_uniques": 2207,
+  "clics": 4409,
+  "clics_uniques": 690,
+  "taux_ouverture_pct": 28.0,
+  "taux_clic_pct": 8.7,
+  "ctor_pct": 31.3,
   "top_articles": [
    {
     "id": "actu_2026_10_01_1",
     "titre": "1er octobre : ce qui change vraiment au comptoir aujourd'hui",
     "date": "2026-10-01",
     "categorie": "pharma_france",
-    "clics": 108,
-    "lecteurs": 70
+    "clics": 109,
+    "lecteurs": 71
+   },
+   {
+    "id": "actu_2026_10_03_1",
+    "titre": "Vaccins grippe sans ordonnance : le flou est levé, voilà ce que tu peux faire",
+    "date": "2026-10-03",
+    "categorie": "pharma_france",
+    "clics": 103,
+    "lecteurs": 66
    },
    {
     "id": "actu_2026_09_26_1",
@@ -43,40 +51,16 @@
     "titre": "ALD et médicaments à 15% : ce qui change dès demain au comptoir",
     "date": "2026-09-29",
     "categorie": "pharma_france",
-    "clics": 93,
-    "lecteurs": 58
-   },
-   {
-    "id": "actu_2026_09_25_5",
-    "titre": "Biosimilaires : un arrêté au JO du 22/09 - ce que ça change pour ta marge",
-    "date": "2026-09-25",
-    "categorie": "business_officine",
-    "clics": 108,
-    "lecteurs": 57
-   },
-   {
-    "id": "actu_2026_09_25_1",
-    "titre": "Grippe : ordonnance obligatoire, mais le pharmacien reste prescripteur",
-    "date": "2026-09-25",
-    "categorie": "pharma_france",
-    "clics": 92,
-    "lecteurs": 54
-   },
-   {
-    "id": "actu_2026_09_25_4",
-    "titre": "Pharmacie hospitalière : un nouveau code concours pour la pharma polyvalente",
-    "date": "2026-09-25",
-    "categorie": "avenir_pharma",
-    "clics": 101,
-    "lecteurs": 52
+    "clics": 94,
+    "lecteurs": 59
    },
    {
     "id": "actu_2026_09_29_2",
     "titre": "Merck arrête un antibiotique clé contre les superbactéries. On devrait tous s'inquiéter.",
     "date": "2026-09-29",
     "categorie": "pharma_monde",
-    "clics": 82,
-    "lecteurs": 52
+    "clics": 83,
+    "lecteurs": 53
    },
    {
     "id": "actu_2026_09_26_5",
@@ -91,32 +75,48 @@
     "titre": "PLFSS 2027 : 100 millions sur les groupements, les pharmaciens en ligne de mire",
     "date": "2026-10-02",
     "categorie": "pharma_france",
-    "clics": 87,
-    "lecteurs": 45
+    "clics": 96,
+    "lecteurs": 49
    },
    {
     "id": "actu_2026_10_02_3",
     "titre": "Culottes menstruelles remboursées : l'officine devient le seul point de delivrance, et c'est une vraie opportunite",
     "date": "2026-10-02",
     "categorie": "bonne_nouvelle",
-    "clics": 77,
+    "clics": 80,
+    "lecteurs": 45
+   },
+   {
+    "id": "actu_2026_10_02_2",
+    "titre": "Protections menstruelles remboursées : la France à la traîne ou pionnière ?",
+    "date": "2026-10-02",
+    "categorie": "pharma_monde",
+    "clics": 79,
+    "lecteurs": 45
+   },
+   {
+    "id": "actu_2026_09_30_1",
+    "titre": "USPO contre infirmiers et médecins : la guerre des compétences est déclarée",
+    "date": "2026-09-30",
+    "categorie": "pharma_france",
+    "clics": 72,
     "lecteurs": 44
    }
   ]
  },
  "mois": {
-  "du": "2026-09-02",
-  "au": "2026-10-02",
-  "envois": 33373,
-  "delivres": 29438,
+  "du": "2026-09-03",
+  "au": "2026-10-03",
+  "envois": 33492,
+  "delivres": 29540,
   "taux_delivrabilite_pct": 88.2,
-  "ouvertures": 11796,
-  "ouvertures_uniques": 8323,
-  "clics": 16470,
-  "clics_uniques": 2733,
-  "taux_ouverture_pct": 28.3,
+  "ouvertures": 11758,
+  "ouvertures_uniques": 8292,
+  "clics": 16435,
+  "clics_uniques": 2748,
+  "taux_ouverture_pct": 28.1,
   "taux_clic_pct": 9.3,
-  "ctor_pct": 32.8,
+  "ctor_pct": 33.1,
   "top_articles": [
    {
     "id": "actu_2026_09_22_1",
@@ -143,19 +143,19 @@
     "lecteurs": 79
    },
    {
+    "id": "actu_2026_10_01_1",
+    "titre": "1er octobre : ce qui change vraiment au comptoir aujourd'hui",
+    "date": "2026-10-01",
+    "categorie": "pharma_france",
+    "clics": 109,
+    "lecteurs": 71
+   },
+   {
     "id": "actu_2026_09_07_3",
     "titre": "actu_2026_09_07_3",
     "date": "",
     "categorie": "",
     "clics": 111,
-    "lecteurs": 70
-   },
-   {
-    "id": "actu_2026_10_01_1",
-    "titre": "1er octobre : ce qui change vraiment au comptoir aujourd'hui",
-    "date": "2026-10-01",
-    "categorie": "pharma_france",
-    "clics": 108,
     "lecteurs": 70
    },
    {
@@ -175,6 +175,14 @@
     "lecteurs": 68
    },
    {
+    "id": "actu_2026_10_03_1",
+    "titre": "Vaccins grippe sans ordonnance : le flou est levé, voilà ce que tu peux faire",
+    "date": "2026-10-03",
+    "categorie": "pharma_france",
+    "clics": 103,
+    "lecteurs": 66
+   },
+   {
     "id": "actu_2026_09_21_1",
     "titre": "actu_2026_09_21_1",
     "date": "",
@@ -189,30 +197,22 @@
     "categorie": "",
     "clics": 98,
     "lecteurs": 66
-   },
-   {
-    "id": "actu_2026_09_04_3",
-    "titre": "actu_2026_09_04_3",
-    "date": "",
-    "categorie": "",
-    "clics": 129,
-    "lecteurs": 65
    }
   ]
  },
  "cumul": {
   "du": "2026-01-01",
-  "au": "2026-10-02",
-  "envois": 136644,
-  "delivres": 123898,
-  "taux_delivrabilite_pct": 90.7,
-  "ouvertures": 50063,
-  "ouvertures_uniques": 34755,
-  "clics": 55748,
-  "clics_uniques": 9869,
-  "taux_ouverture_pct": 28.1,
+  "au": "2026-10-03",
+  "envois": 137896,
+  "delivres": 124999,
+  "taux_delivrabilite_pct": 90.6,
+  "ouvertures": 50457,
+  "ouvertures_uniques": 35046,
+  "clics": 56381,
+  "clics_uniques": 9982,
+  "taux_ouverture_pct": 28.0,
   "taux_clic_pct": 8.0,
-  "ctor_pct": 28.4,
+  "ctor_pct": 28.5,
   "top_articles": [
    {
     "id": "actu_2026_09_22_1",
@@ -263,19 +263,19 @@
     "lecteurs": 73
    },
    {
+    "id": "actu_2026_10_01_1",
+    "titre": "1er octobre : ce qui change vraiment au comptoir aujourd'hui",
+    "date": "2026-10-01",
+    "categorie": "pharma_france",
+    "clics": 109,
+    "lecteurs": 71
+   },
+   {
     "id": "actu_2026_09_07_3",
     "titre": "actu_2026_09_07_3",
     "date": "",
     "categorie": "",
     "clics": 111,
-    "lecteurs": 70
-   },
-   {
-    "id": "actu_2026_10_01_1",
-    "titre": "1er octobre : ce qui change vraiment au comptoir aujourd'hui",
-    "date": "2026-10-01",
-    "categorie": "pharma_france",
-    "clics": 108,
     "lecteurs": 70
    },
    {
